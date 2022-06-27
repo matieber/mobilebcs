@@ -1,0 +1,183 @@
+{
+    "title": "Hello",    
+    "UI" : {
+        "Shared" : {
+            "continuar": "¿Desea continuar?",
+          "seguro" :  "¿Está seguro?",
+          "logout" : "¿Realmente quiere salir?",
+          "yes": "Sí",
+          "no" : "No"
+        },
+        "LoginView" : 
+            {"bienvenida": "¡Bienvenido!",
+            "instrucciones": "Ingrese email y clave para comenzar",
+            "email": "Email",
+            "clave": "Clave",
+            "olvidoclave": "¿Olvidó la clave?",
+            "ingresar": "INGRESAR",
+            "notienecuenta": "¿No tiene cuenta?",
+            "crearcuenta": "Crear cuenta",
+            "o": "o"
+
+            },
+
+        "CreateAccountView" : 
+            {"bienvenida": "¡Bienvenido!",
+            "instrucciones": "Complete el formulario para registrarse",
+            "name": "Nombre y apellido",
+            "email": "Email",
+            "clave": "Clave",
+            "claveConf": "Confirme clave",
+            "claveNoCoincide": "Las claves no coinciden",
+            
+            "ingresar": "REGISTRARSE",
+            "condiciones_aceptadas" : "Registrándose acepta todos los términos, condiciones y política de privacidad de Mercado Salud"
+            
+            
+            },
+        "CalendarView"  :   {
+            "desplazar_remover": "Desplazar para remover",
+            "guardar": "Guardar",
+            "cancelar": "Cancelar",
+            "elegir_fraccion_hora": "Elegir fracción",
+            "elegir_hora": "Elegir hora",
+            "elegir_consultorio": "Elegir consultorio",
+            "agregar_turno": "Agregar turno",
+            "agregar_turnos": "Replicar planificación",
+            "element_exists": "Ya existe un evento para el rango horario seleccionado",
+            "errorGralConexion": "Se produjo un error inesperado de conexión",
+            "turnoTomado": "El turno ha sido tomado. ¿Está seguro?",
+            "error": "Error",
+            "reservar_turno": "Reserva de turno",
+            "confirma_reserva_turno": "Está a punto de reservar un turno para:",
+            "edicion_faltante": "Edición de eventos no soportada aún",
+            "info": "Información",
+            "turno_libre": "Libre",
+            "turno_ocupado": "Ocupado"
+        } ,
+        "CalendarTemplateView"  :   {
+            "guardar": "Crear turnos",
+            "agregar_turnos": "Agregar turnos",
+            "guardar_template": "Guardar semana",
+            "template_vacio": "Debe ingresar al menos un turno para la semana",
+            "templateSavedOk": "Planificación horaria guardada exitosamente",
+            "templateEmpty": "El horario predefinido esta vacío",
+            "enterPrice": "Ingrese precio"
+        },
+        "RecoverPassView"  :   {
+            "bienvenida": "Recuperación de clave",
+            "instrucciones": "Ingrese su email para recuperar la clave",
+            "recover": "RECUPERAR"
+        } ,
+        "AddressSelectionView"  :   {
+            "bienvenida": "Información personal",
+            "instrucciones": "Complete o modifique para actualizar sus datos",
+            "guardar": "GUARDAR",
+            "calle" : "Calle",
+            "numero" : "Número",
+            "piso_depto" : "Piso/Puerta",
+            "ciudad" : "Ciudad",            
+            "telefono" : "Celular",
+            "errorTelefono": "Número de celular inválido",
+            "paistelefono" : "Busque por nombre de pais o codigo de discado",
+            "paisbuscar" : "Buscar",
+            "foto" : "Selfie",
+            "identidad" : "DNI",
+            "sexo" : "Sexo"
+
+        } ,
+
+
+        "DoctorSettingsView"  :   {
+            "bienvenida": "Datos Profesionales",
+            "instrucciones": "Complete o modifique para actualizar su perfil profesional",
+            "guardar": "Guardar",
+            "matricula_nro" : "Número de Matricula",
+            "duracion_turno" : "Minutos del turno",
+            "especialidades" : "Especialidades",
+            "tituloFile" : "Escaneo del Titulo" ,
+            "tituloError" : "Debe adjuntar escaneo del título" 
+            
+        } ,
+        "DoctorInsuranceView"  :   {
+            "bienvenida": "Mi seguro",
+            "instrucciones": "Complete o modifique para actualizar su seguro",
+            "guardar": "Guardar",
+            "valid_date" : "Periodo de validez",
+            "seguroFile" : "Escaneo del Seguro",
+            "seguroError" : "Debe adjuntar escaneo del seguro" 
+        } ,
+        "SearchFormView": {
+            "mi_direccion" : "Mi dirección",
+            "mi_ubicacion" : "Mi ubicación",
+            "titulo" : "Encontrá tu turno",
+            "especialidad" : "Especialidad",
+            "zona" : "Zona de atención",
+            "zona_amplia" : "Zona más amplia"
+
+        },
+        
+        "DrawerView"  :   {
+            "titulo": "Mercado Salud",
+            "direccion": "Información de Contacto",
+            "hogar": "Inicio",
+            "profesional": "Mis datos profesionales",
+            "personasACargo": "Personas a Cargo",
+            "favoritos": "Mis médicos",
+            "seguro": "Mi seguro",
+            "salir": "Salir"
+
+            
+        } ,
+        "StartUpView"  :   {
+            "instrucciones": "Presione continuar para completar la registracion e ingresar",
+            "novalidado": "Usuario no validado. Aguarde a que el administrador valide su matricula y sus datos profesionales. Puede demorar varios minutos",
+            "continuar": "CONTINUAR (valida el usuario - lo haria administrador)",
+            "desactivado": "Usuario Desactivado. Comuníquese con Mercado Salud"
+            
+            
+        } ,
+        "HomeView"  :   {
+            "turnos": "TURNOS",
+            "horarios": "HORARIOS",
+            "cuenta": "CUENTA"
+                       
+        } ,
+        
+        "AccountView"  :   {
+            "salir": "Salir",
+            "cuenta": "CUENTA"
+                       
+        }  ,      
+
+        "FamiltyView"  :   {
+            "bienvenida": "Personas a Cargo",
+            "cuenta": "CUENTA",
+            "bienvenida_crear" : "Personas a Cargo",
+            "name": "Nombre y apellido",
+            "relationship": "Relación"
+                       
+        },
+        "FavouriteView"  :   {
+            "bienvenida": "Mis médicos",
+            "borrado": "Está por eliminar el médico de su lista de preferidos"
+
+        },
+        "MyAppointmentsView": {
+            "va_a_cancelar":"Está a punto de cancelar el turno. ¿Desea continuar?",
+            "cancelacion_turno": "Cancelación de turno",
+            "desplazar_para_cancelar": "Desplazar para cancelar",
+            "sin_reservas": "Sin turnos reservados",
+            "sin_historicos": "Sin turnos pasados para mostrar"
+        }
+
+    },
+    "API" : {
+        "email_no_validado" : "Email no validado. Revise su casilla y reintente nuevamente",
+        "cannot_login" : "No se pudo ingresar a su cuenta en este momento. Por favor intente nuevamente."
+    }
+    
+} 
+            
+            
+             

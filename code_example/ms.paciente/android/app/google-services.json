@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "630992138584",
+    "firebase_url": "https://mercado-salud-68892-default-rtdb.firebaseio.com",
+    "project_id": "mercado-salud-68892",
+    "storage_bucket": "mercado-salud-68892.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630992138584:android:73280e83bbb03e8662352d",
+        "android_client_info": {
+          "package_name": "com.mercadosalud.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630992138584-rn5saatk87ohbfjbq5vpi91pnol1tm8o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mercadosalud.admin",
+            "certificate_hash": "72874e1c276525de157e7cd2015514cecde719f0"
+          }
+        },
+        {
+          "client_id": "630992138584-7j2actgrstl2l54ak77fqio7qb7authn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDldbQYnzMHX5RCrM_0nfBdyIZYILGEV3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630992138584-7j2actgrstl2l54ak77fqio7qb7authn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630992138584:android:21296db492ef8a3b62352d",
+        "android_client_info": {
+          "package_name": "com.mercadosalud.doctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630992138584-700rfe1j7s0oik3v8b3i6jrl8o0ta7g2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mercadosalud.doctor",
+            "certificate_hash": "72874e1c276525de157e7cd2015514cecde719f0"
+          }
+        },
+        {
+          "client_id": "630992138584-7j2actgrstl2l54ak77fqio7qb7authn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDldbQYnzMHX5RCrM_0nfBdyIZYILGEV3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630992138584-7j2actgrstl2l54ak77fqio7qb7authn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630992138584:android:e0f9cd6eba34103662352d",
+        "android_client_info": {
+          "package_name": "com.mercadosalud.paciente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630992138584-48rpj17auc6e3fqpu54pqr1hlqircnsp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mercadosalud.paciente",
+            "certificate_hash": "72874e1c276525de157e7cd2015514cecde719f0"
+          }
+        },
+        {
+          "client_id": "630992138584-7j2actgrstl2l54ak77fqio7qb7authn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDldbQYnzMHX5RCrM_0nfBdyIZYILGEV3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630992138584-7j2actgrstl2l54ak77fqio7qb7authn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
