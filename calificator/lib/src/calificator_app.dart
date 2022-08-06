@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:calificator/src/client.dart';
 import 'package:calificator/src/current_page.dart';
 import 'package:calificator/src/menu/side_menu.dart';
 import 'package:calificator/src/ui_model/custom_exit_button.dart';
@@ -30,12 +33,25 @@ class _CalificatorAppState extends State<CalificatorApp> {
 
   double _width = 0;
   double _height = 0;
+  String _serverIp="";
+  int _serverPort=0;
   
   String _title = 'Calificador';
 
 
   @override
   Widget build(BuildContext context) {
+
+    DefaultAssetBundle.of(context).loadString('assets/my_config.json')
+        .then((jsonString){
+        dynamic jsonMap=jsonDecode(jsonString);
+        _serverIp=jsonMap['serverIp'];
+        _serverPort=jsonMap['serverPort'];
+      }
+    );
+
+
+
     _currentPage=CurrentPage(
         (){changePage(0,'Calificador');},
         (){changePage(1,'Calificador - Configuración');},
@@ -47,7 +63,7 @@ class _CalificatorAppState extends State<CalificatorApp> {
                 appBar: buildAppBar(),
                 drawer: SideMenu(_currentPage),
                 body:
-                _width == 0 ?
+                _width == 0 && _serverIp== "" && _serverPort==0 ?
                 buildLoading(): buildBody()
     );
   }
@@ -133,7 +149,7 @@ class _CalificatorAppState extends State<CalificatorApp> {
         child= buildSettingPage();
         break;
       case 2:
-        child= LoginUser(_width);
+        child= LoginUser(_width,ClientHttp(_serverIp,_serverPort));
         break;
       case 3:
         child= RegisterUser(_width);
