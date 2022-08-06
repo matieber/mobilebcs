@@ -1,0 +1,6 @@
+activemq:
+  username: admin
+  password: admin
+  brokerUrl: tcp://localhost:61616
+topic:
+  name: "image.topic"

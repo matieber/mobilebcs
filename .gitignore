@@ -1,0 +1,9 @@
+/.settings/
+*.classpath
+/.factorypath
+*.project
+**/target/
+*.iml
+.idea/*
+build/*
+calificator/local.properties
