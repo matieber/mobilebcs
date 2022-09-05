@@ -1,19 +1,17 @@
 import 'dart:convert';
 
-import 'package:calificator/src/client.dart';
+import 'package:calificator/src/qualifier/qualifier.dart';
+import 'package:calificator/src/qualifier/qualifierClient.dart';
+import 'package:calificator/src/user/userClient.dart';
 import 'package:calificator/src/current_page.dart';
 import 'package:calificator/src/menu/side_menu.dart';
 import 'package:calificator/src/ui_model/custom_exit_button.dart';
-import 'package:calificator/src/ui_model/custom_icon_text_button.dart';
-import 'package:calificator/src/ui_model/icon_button.dart';
-import 'package:calificator/src/ui_model/input_text.dart';
 import 'package:calificator/src/ui_model/custom_text_button.dart';
 import 'package:calificator/src/user/login_user.dart';
 import 'package:calificator/src/user/register_user.dart';
+import 'package:calificator/src/user/user.dart';
 import 'package:calificator/src/user/user_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'dart:io';
 /// The Widget that configures your application.
 class CalificatorApp extends StatefulWidget {
 
@@ -35,8 +33,12 @@ class _CalificatorAppState extends State<CalificatorApp> {
   double _height = 0;
   String _serverIp="";
   int _serverPort=0;
-  
+  User user=User();
   String _title = 'Calificador';
+
+
+
+
 
 
   @override
@@ -56,10 +58,11 @@ class _CalificatorAppState extends State<CalificatorApp> {
         (){changePage(0,'Calificador');},
         (){changePage(1,'Calificador - Configuración');},
         (){changePage(2,'Calificador - Ingresar usuario');},
-        (){changePage(3,'Calificador - Registrar usuario');}
+        (){changePage(3,'Calificador - Registrar usuario');},
+        (){changePage(4,'Calificador');}
 
     );
-    return Scaffold(
+    return  Scaffold(
                 appBar: buildAppBar(),
                 drawer: SideMenu(_currentPage),
                 body:
@@ -69,11 +72,13 @@ class _CalificatorAppState extends State<CalificatorApp> {
   }
 
   void changePage(int index,String title){
-      setState(() {
-        _currentIndex=index;
-        _title=title;
-      });
-    }
+    setState(() {
+      _currentIndex=index;
+      _title=title;
+    });
+  }
+
+
 
 
   Container buildLoading() {
@@ -149,11 +154,16 @@ class _CalificatorAppState extends State<CalificatorApp> {
         child= buildSettingPage();
         break;
       case 2:
-        child= LoginUser(_width,ClientHttp(_serverIp,_serverPort));
+        child= LoginUser(_width,UserHttp(_serverIp,_serverPort),_currentPage,user);
         break;
       case 3:
         child= RegisterUser(_width);
         break;
+      case 4:
+        {
+          child = Qualifier(QualifierHttp(_serverIp, _serverPort), user);
+          break;
+        }
       default:
         throw Exception('Invalid index page');
     }

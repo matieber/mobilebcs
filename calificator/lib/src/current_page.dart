@@ -8,9 +8,13 @@ class CurrentPage{
   final VoidCallback _settingFunction;
   final VoidCallback _loginUserFunction;
   final VoidCallback _registerUserFunction;
+  final VoidCallback _qualifierPage;
+  String? username="";
 
-  CurrentPage(this._homeFunction,this._settingFunction,this._loginUserFunction,this._registerUserFunction);
-  
+  CurrentPage(this._homeFunction,this._settingFunction,this._loginUserFunction,this._registerUserFunction,this._qualifierPage);
+
+
+
   toHome(){
     _homeFunction();
   }
@@ -26,5 +30,11 @@ class CurrentPage{
   toRegisterUser(){
     _registerUserFunction();
   }
+
+  toQualifierPage() {
+    _qualifierPage();
+  }
+
+
 
 }
