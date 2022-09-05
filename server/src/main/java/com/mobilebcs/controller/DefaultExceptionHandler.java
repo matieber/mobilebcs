@@ -1,5 +1,6 @@
 package com.mobilebcs.controller;
 
+import com.mobilebcs.domain.InvalidOperationException;
 import com.mobilebcs.domain.UserNonexistentException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -13,6 +14,12 @@ public class DefaultExceptionHandler {
     public ResponseEntity<String> notFound(UserNonexistentException exception){
         return ResponseEntity.status(404).body(exception.getMessage());
     }
+
+    @ExceptionHandler(InvalidOperationException.class)
+    public ResponseEntity<String> notFound(InvalidOperationException exception){
+        return ResponseEntity.status(400).body(exception.getMessage());
+    }
+
     @ExceptionHandler({Exception.class})
     public ResponseEntity<String> unknownError(Exception error) {
 

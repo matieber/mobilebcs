@@ -44,12 +44,12 @@ public class GetHttpITCase  {
   }
 
     @Test
-    public void testTopicSubsriptionName() throws InterruptedException, JMSException {
-        String name="calificator1";
-        testCalificator(name, 2);
+    public void testQueue() throws InterruptedException, JMSException {
+        String name="qualifier1";
+        testQualifier(name, 2);
     }
 
-    private List<NextCaravanMessage> testCalificator(String name, int expectedMessages) throws InterruptedException {
+    private List<NextCaravanMessage> testQualifier(String name, int expectedMessages) throws InterruptedException {
         List<NextCaravanMessage> list=new ArrayList<>();
         Semaphore semaphore =new Semaphore(0);
         call(name, nextCaravanMessage -> {
@@ -62,7 +62,7 @@ public class GetHttpITCase  {
     }
 
     private void call(String name, Consumer<NextCaravanMessage> consumer) throws InterruptedException {
-        Mono<ResponseEntity<Flux<NextCaravanMessage>>> responseEntityMono = client.get().uri("/calificator/" + name + "/next-animal")
+        Mono<ResponseEntity<Flux<NextCaravanMessage>>> responseEntityMono = client.get().uri("/qualifier/" + name + "/next-animal")
                 .accept(MediaType.TEXT_EVENT_STREAM)
                 .retrieve()
                 .toEntityFlux(NextCaravanMessage.class);

@@ -4,6 +4,11 @@
 Iniciar cola de mensajería con docker
     docker run -p 61616:61616 -e AMQ_USER=admin -e AMQ_PASSWORD=admin quay.io/artemiscloud/activemq-artemis-broker
 
+Iniciar base de datos:
+    docker run --name=mysql-db -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 mysql:8.0
+    docker exec -it mysql-db mysql -p
+    create schema server;
+
 Iniciar aplicación: java -jar server.jar
 
 La aplicación inicia en el puerto 8080
@@ -11,7 +16,7 @@ La aplicación inicia en el puerto 8080
 
 # Registrar calificador
 
-## Implementación del commit 489f71c330c44e1324a8db593a3362c324a4f07f
+## Implementación del commit b3345ea2ea0029c63897d11c8b6b33c4d258f8d2
 
 La clase CalificatorController posee el endpoint get /calificator/{name}/next-animal encargado de devolver las imagenes según el usuario. 
 

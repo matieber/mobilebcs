@@ -1,10 +1,10 @@
-package com.mobilebcs.controller.calificator;
+package com.mobilebcs.controller.qualifier;
 
-public class Calificator {
+public class Qualifier {
 
     private String name;
 
-    public Calificator(String name) {
+    public Qualifier(String name) {
         this.name = name;
     }
 

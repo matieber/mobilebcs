@@ -10,20 +10,23 @@ import com.mobilebcs.domain.UserNonexistentException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
-@AutoConfigureMockMvc
-@ActiveProfiles({"test"})
-@SpringBootTest(classes = ServerApp.class)
+
+@ExtendWith(SpringExtension.class)
+@WebMvcTest(controllers = UserController.class)
 class UserControllerTest  {
 
 
@@ -51,11 +54,11 @@ class UserControllerTest  {
     public void testCreateUser() throws Exception {
         Mockito.doNothing().when(userCreatorService).create(userArgumentCaptor.capture());
         String name = "Pedro";
-        MockHttpServletResponse response = controllerTestCaller.post("/user", new User(name));
+        MockHttpServletResponse response = controllerTestCaller.post("/user", new User(name,UserType.QUALIFIER));
 
         Assertions.assertEquals(201,response.getStatus());
         Assertions.assertNotNull(userArgumentCaptor.getValue());
-        Assertions.assertEquals(name,userArgumentCaptor.getValue().getCalificatorUser());
+        Assertions.assertEquals(name,userArgumentCaptor.getValue().getUsername());
 
     }
 
@@ -63,7 +66,7 @@ class UserControllerTest  {
     public void testCreateUserThatFailed() throws Exception {
         Mockito.doThrow(new RuntimeException("Hubo un error en la creación del usuario")).when(userCreatorService).create(userArgumentCaptor.capture());
         String name = "Pedro";
-        MockHttpServletResponse response = controllerTestCaller.post("/user", new User(name));
+        MockHttpServletResponse response = controllerTestCaller.post("/user", new User(name,UserType.QUALIFIER));
 
         Assertions.assertEquals(500,response.getStatus());
 
@@ -73,14 +76,14 @@ class UserControllerTest  {
     public void testStarUserSession() throws Exception {
 
         String name = "Pedro";
-        Mockito.when(startUserSession.startUserSession(Mockito.eq(name))).thenReturn(new User(name));
+        Mockito.when(startUserSession.startUserSession(Mockito.eq(name))).thenReturn(new User(name,UserType.QUALIFIER));
         MockHttpServletResponse response = controllerTestCaller.getResponse("/user/{name}", name);
 
         Assertions.assertEquals(200,response.getStatus());
         User user = objectMapper
                 .readValue(response.getContentAsByteArray(), User.class);
         Assertions.assertNotNull(user);
-        Assertions.assertEquals(name,user.getCalificatorUser());
+        Assertions.assertEquals(name,user.getUsername());
     }
 
 

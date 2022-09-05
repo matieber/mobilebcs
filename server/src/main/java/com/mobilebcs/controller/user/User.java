@@ -2,18 +2,29 @@ package com.mobilebcs.controller.user;
 
 public class User {
 
-    private  String calificatorUser;
+    private String username;
+    public UserType userType;
 
     public User(){}
-    public User(String calificatorUser) {
-        this.calificatorUser = calificatorUser;
+
+    public User(String username, UserType userType) {
+        this.username = username;
+        this.userType = userType;
     }
 
-    public void setCalificatorUser(String calificatorUser) {
-        this.calificatorUser = calificatorUser;
+    public String getUsername() {
+        return username;
     }
 
-    public String getCalificatorUser() {
-        return calificatorUser;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public UserType getUserType() {
+        return userType;
+    }
+
+    public void setUserType(UserType userType) {
+        this.userType = userType;
     }
 }

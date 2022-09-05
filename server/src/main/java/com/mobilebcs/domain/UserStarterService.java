@@ -1,27 +1,21 @@
 package com.mobilebcs.domain;
 
-import com.mobilebcs.configuration.PublisherFactory;
 import com.mobilebcs.controller.user.User;
 import org.springframework.stereotype.Service;
+
+import javax.jms.JMSException;
 
 @Service
 public class UserStarterService {
 
-    private final UserLookupService userLookupService;
-    private final PublisherFactory publisherFactory;
 
-    public UserStarterService(UserLookupService userLookupService, PublisherFactory publisherFactory) {
-        this.userLookupService = userLookupService;
+    private final QualifierQueueFactory publisherFactory;
+
+    public UserStarterService(QualifierQueueFactory publisherFactory) {
         this.publisherFactory = publisherFactory;
     }
 
-    public User startUserSession(String name) throws UserNonexistentException {
-        User user=userLookupService.lookup(name);
-        if(user!=null){
-            publisherFactory.addPublisher(user);
-        }else{
-            throw new UserNonexistentException("Usuario con nombre "+name+" no existe");
-        }
-        return user;
+    public User startUserSession(String name) throws UserNonexistentException, InvalidOperationException, JMSException {
+            return publisherFactory.addQualifier(name);
     }
 }
