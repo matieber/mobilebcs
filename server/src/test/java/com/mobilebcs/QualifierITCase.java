@@ -1,11 +1,12 @@
 package com.mobilebcs;
 
-import com.mobilebcs.controller.user.User;
-import com.mobilebcs.domain.NextCaravanMessage;
+import com.mobilebcs.controller.user.UserResponse;
+import com.mobilebcs.domain.qualifier.NextCaravanMessage;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -13,7 +14,12 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jms.core.JmsTemplate;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
+
+import java.io.File;
+
+import java.util.UUID;
 
 
 @ActiveProfiles("test")
@@ -38,53 +44,63 @@ public class QualifierITCase extends AbstractITCase {
 
 
 
+    private String locationCode;
+
+    @TempDir
+    private File path;
+    @BeforeEach
+    public void init(){
+        locationCode ="DEFAULT";
+    }
 
     @Test
+    @DirtiesContext(methodMode = DirtiesContext.MethodMode.AFTER_METHOD)
     public void testMultipleQualifiers() {
 
-        int position1 = 1;
-        int position2 = 2;
+
         String name1="qualifier1";
         String name2="qualifier2";
         String name3="qualifier3";
-        startUserSession(name1);
-        startUserSession(name2);
-        sendMessage(position1, queueName);
-        sendMessage(position2, queueName);
-
-
+        long qualificationSession = startQualificationSession(name1, null);
+        startQualificationSession(name2,qualificationSession);
+        for(int position= 0;position < 10; position++){
+            sendMessage(position, queueName);
+        }
 
         System.out.println("Llamada 1");
-        testNextJob(name1,1);
-        testNextJob(name1,2);
+        for(int position= 0;position < 10; position++){
+            testNextJob(name1,position);
+        }
         testNextJob(name1,null);
 
 
-        testNextJob(name2,1);
-        testNextJob(name2,2);
+        for(int position= 0;position < 10; position++){
+            testNextJob(name2,position);
+        }
         testNextJob(name2,null);
 
 
-        int position3 = 3;
-        startUserSession(name3);
-        sendMessage(position3, queueName);
-        testNextJob(name1,position3);
+        int position10 = 10;
+        startQualificationSession(name3,qualificationSession);
+        sendMessage(position10, queueName);
+        testNextJob(name1,position10);
         testNextJob(name1,null);
-        testNextJob(name2,position3);
+        testNextJob(name2,position10);
         testNextJob(name2,null);
 
-        testNextJob(name3,position3);
+        testNextJob(name3,position10);
         testNextJob(name3,null);
     }
 
     private void sendMessage(int position, String destinationName) {
-        jmsTemplate.convertAndSend(destinationName,new NextCaravanMessage(position));
+        jmsTemplate.convertAndSend(destinationName,new NextCaravanMessage(position,UUID.randomUUID(), locationCode));
     }
 
     @Test
+    @DirtiesContext(methodMode = DirtiesContext.MethodMode.AFTER_METHOD)
     public void testQualifier() {
         String name="qualifier1";
-        startUserSession(name);
+        startQualificationSession(name,null);
         sendMessage(1, queueName);
         sendMessage(2, queueName);
 
@@ -105,7 +121,7 @@ public class QualifierITCase extends AbstractITCase {
             Assertions.assertEquals(200,entity.getStatusCodeValue());
             NextCaravanMessage nextCaravanMessage = entity.getBody();
             Assertions.assertNotNull(nextCaravanMessage);
-            Assertions.assertEquals(nextCaravanMessage.getPosition(), position);
+            Assertions.assertEquals(position,nextCaravanMessage.getPosition());
         }else{
             Assertions.assertEquals(204,entity.getStatusCodeValue());
             NextCaravanMessage nextCaravanMessage = entity.getBody();
@@ -114,12 +130,18 @@ public class QualifierITCase extends AbstractITCase {
     }
 
 
-    private void startUserSession(String name) {
-        ResponseEntity<User> entity = restTemplate.getForEntity("/user/" + name, User.class);
+    private long startQualificationSession(String name, Long qualificationSession) {
+        ResponseEntity<UserResponse> entity;
+        if(qualificationSession==null) {
+            entity = restTemplate.postForEntity("/user/" + name + "/qualificationSession",null, UserResponse.class);
+        }else{
+            entity = restTemplate.postForEntity("/user/" + name + "/qualificationSession?qualificationSession="+qualificationSession,null, UserResponse.class);
+        }
         Assertions.assertEquals(200,entity.getStatusCodeValue());
-        User user = entity.getBody();
+        UserResponse user = entity.getBody();
         Assertions.assertNotNull(user);
         Assertions.assertEquals(name,user.getUsername());
+        return user.getQualificationSession();
     }
 
 }

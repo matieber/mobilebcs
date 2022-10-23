@@ -4,8 +4,11 @@ package com.mobilebcs.controller.user;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mobilebcs.controller.ControllerTestCaller;
 import com.mobilebcs.domain.exception.InvalidRequestExeption;
+import com.mobilebcs.domain.exception.UserNonexistentException;
 import com.mobilebcs.domain.user.User;
 import com.mobilebcs.domain.user.UserCreatorService;
+import com.mobilebcs.domain.user.UserQualificationSessionService;
+import com.mobilebcs.domain.user.UserRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,17 +23,19 @@ import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.mockito.ArgumentMatchers.eq;
-
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(controllers = UserController.class)
-class UserControllerTest  {
+class UserCreationControllerTest {
 
 
+    public static final String LOCATION_CODE = "DEFAULT";
     private ControllerTestCaller controllerTestCaller;
     @MockBean
     private UserCreatorService userCreatorService;
+    @MockBean
+    private UserQualificationSessionService startUserSession;
+
 
     @Autowired
     private MockMvc mockMvc;
@@ -56,5 +61,17 @@ class UserControllerTest  {
         Assertions.assertEquals(name,userArgumentCaptor.getValue().getUsername());
 
     }
+
+    @Test
+    public void testCreateUserThatFailed() throws Exception, InvalidRequestExeption {
+        Mockito.doThrow(new RuntimeException("Hubo un error en la creación del usuario")).when(userCreatorService).create(userArgumentCaptor.capture());
+        String name = "Pedro";
+        MockHttpServletResponse response = controllerTestCaller.post("/user", new User(name,UserType.QUALIFIER));
+
+        Assertions.assertEquals(500,response.getStatus());
+
+    }
+
+
 
 }

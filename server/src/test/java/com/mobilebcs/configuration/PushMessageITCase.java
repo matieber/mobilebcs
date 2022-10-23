@@ -1,18 +1,27 @@
 package com.mobilebcs.configuration;
 
-import com.mobilebcs.ServerApp;
-import com.mobilebcs.domain.NextCaravanMessage;
+import com.mobilebcs.domain.qualifier.NextCaravanMessage;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.api.io.TempDir;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jms.core.JmsTemplate;;
-import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@ActiveProfiles("test")
-@SpringBootTest(classes = {ServerApp.class}, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+import java.io.File;
+
+import java.util.UUID;
+
+@ExtendWith(SpringExtension.class)
+@ContextConfiguration(classes = {JmsProperties.class, JmsAutoConfiguration.class})
+@TestPropertySource(properties = {"activemq.username=admin",
+        "activemq.password=admin",
+        "activemq.brokerUrl=tcp://localhost:61616",
+        "activemq.receive-timeout=10000","images.queue.name=IMAGE_QUEUE"})
 @Disabled
 public class PushMessageITCase {
 
@@ -22,16 +31,23 @@ public class PushMessageITCase {
     @Value("${images.queue.name}")
     private String queueName;
 
+    @TempDir
+    private File path;
+
+    private String locationCode="DEFAULT";
+
     @Test
     public void testSendImagesToQueue()  {
-        Integer position1 = 1;
-
-        jmsTemplate.convertAndSend(queueName,new NextCaravanMessage(position1));
-        Integer position2 = 2;
-        jmsTemplate.convertAndSend(queueName,new NextCaravanMessage(position2));
-
+        for(int i=0;i<10;i++) {
+           sendMessage(i,queueName);
+        }
 
     }
+
+    private void sendMessage(int position, String destinationName) {
+        jmsTemplate.convertAndSend(destinationName,new NextCaravanMessage(position, UUID.randomUUID(),locationCode));
+    }
+
 
 
 }

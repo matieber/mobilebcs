@@ -1,4 +1,4 @@
-package com.mobilebcs.domain;
+package com.mobilebcs.domain.exception;
 
 public class InvalidOperationException extends Exception {
 

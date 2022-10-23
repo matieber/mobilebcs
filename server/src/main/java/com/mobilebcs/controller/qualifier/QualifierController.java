@@ -1,10 +1,10 @@
 package com.mobilebcs.controller.qualifier;
 
 
-import com.mobilebcs.domain.InvalidOperationException;
-import com.mobilebcs.domain.JobConsumerService;
-import com.mobilebcs.domain.NextCaravanMessage;
-import com.mobilebcs.domain.UserNonexistentException;
+import com.mobilebcs.domain.exception.InvalidOperationException;
+import com.mobilebcs.domain.qualifier.JobConsumerService;
+import com.mobilebcs.domain.qualifier.NextCaravanMessage;
+import com.mobilebcs.domain.exception.UserNonexistentException;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,7 +30,7 @@ public class QualifierController {
         NextCaravanMessage job = jobConsumerService.nextJob(identificationName);
         ResponseEntity<NextCaravanMessage> responseEntity;
         if(job!=null){
-            System.out.println("Next animal for "+identificationName+" is "+job.getPosition());
+            System.out.println("Next animal for "+identificationName+" is "+job.getSetId());
             responseEntity= ResponseEntity.ok(job);
         }else {
             System.out.println("Next animal for "+identificationName+" is empty");

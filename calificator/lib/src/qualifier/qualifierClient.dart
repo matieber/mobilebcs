@@ -13,7 +13,7 @@ class QualifierHttp  {
 
   Future<Map<String,dynamic>?> nextJob(String userName) async{
 
-
+   print("getting next job");
     Uri uri=Uri(scheme: 'http',host: _serverIp,port: _serverPort,path: '/qualifier/'+userName+"/next-animal");
     final response = await http.get(uri);
     if (response.statusCode == 200) {

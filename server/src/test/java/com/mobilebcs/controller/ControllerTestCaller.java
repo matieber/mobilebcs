@@ -10,6 +10,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
+
 public class ControllerTestCaller {
 
     private final MockMvc mockMvc;
@@ -54,5 +55,16 @@ public class ControllerTestCaller {
         } catch (JsonProcessingException var4) {
             throw new RuntimeException(var4);
         }
+    }
+
+    public MockHttpServletResponse put(String path,Object body, Object... uriVariables) throws Exception {
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put(path, uriVariables).contentType(MediaType.APPLICATION_JSON).accept(new MediaType[]{MediaType.APPLICATION_JSON});
+
+        if (body != null) {
+            builder.content(this.convertToJson(body));
+        }
+
+        return this.mockMvc.perform(builder).andReturn().getResponse();
+
     }
 }

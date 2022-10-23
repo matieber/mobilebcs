@@ -14,7 +14,7 @@ Iniciar aplicación: java -jar server.jar
 La aplicación inicia en el puerto 8080
 
 
-# Registrar calificador
+# Registrar calificador versión descartada
 
 ## Implementación del commit b3345ea2ea0029c63897d11c8b6b33c4d258f8d2
 
