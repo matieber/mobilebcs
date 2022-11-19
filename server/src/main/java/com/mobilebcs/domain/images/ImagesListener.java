@@ -1,4 +1,4 @@
-package com.mobilebcs.controller.images;
+package com.mobilebcs.domain.images;
 
 import com.mobilebcs.domain.qualifier.NextCaravanMessage;
 import com.mobilebcs.domain.session.QueueProviderService;

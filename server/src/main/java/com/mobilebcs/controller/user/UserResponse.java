@@ -6,11 +6,12 @@ public class UserResponse {
     private String username;
     private UserType userType;
 
-    private long qualificationSession;
+    private Long qualificationSession;
 
-    public UserResponse(){}
+    public UserResponse() {
+    }
 
-    public UserResponse(String username, UserType userType, long qualificationSession) {
+    public UserResponse(String username, UserType userType, Long qualificationSession) {
         this.username = username;
         this.userType = userType;
         this.qualificationSession = qualificationSession;
@@ -32,11 +33,11 @@ public class UserResponse {
         this.userType = userType;
     }
 
-    public long getQualificationSession() {
+    public Long getQualificationSession() {
         return qualificationSession;
     }
 
-    public void setQualificationSession(long qualificationSession) {
+    public void setQualificationSession(Long qualificationSession) {
         this.qualificationSession = qualificationSession;
     }
 }

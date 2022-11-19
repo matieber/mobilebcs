@@ -4,11 +4,9 @@ package com.mobilebcs.controller.user;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mobilebcs.controller.ControllerTestCaller;
 import com.mobilebcs.domain.exception.InvalidRequestExeption;
-import com.mobilebcs.domain.exception.UserNonexistentException;
-import com.mobilebcs.domain.user.User;
 import com.mobilebcs.domain.user.UserCreatorService;
 import com.mobilebcs.domain.user.UserQualificationSessionService;
-import com.mobilebcs.domain.user.UserRepository;
+import com.mobilebcs.domain.user.UserSessionService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -35,6 +33,8 @@ class UserCreationControllerTest {
     private UserCreatorService userCreatorService;
     @MockBean
     private UserQualificationSessionService startUserSession;
+    @MockBean
+    private UserSessionService userSessionService;
 
 
     @Autowired
@@ -44,9 +44,9 @@ class UserCreationControllerTest {
     private ObjectMapper objectMapper;
 
     @BeforeEach
-    public void init(){
+    public void init() {
         objectMapper = new ObjectMapper();
-        controllerTestCaller=new ControllerTestCaller(mockMvc, objectMapper);
+        controllerTestCaller = new ControllerTestCaller(mockMvc, objectMapper);
     }
 
 
@@ -54,11 +54,11 @@ class UserCreationControllerTest {
     public void testCreateUser() throws Exception, InvalidRequestExeption {
         Mockito.doNothing().when(userCreatorService).create(userArgumentCaptor.capture());
         String name = "Pedro";
-        MockHttpServletResponse response = controllerTestCaller.post("/user", new User(name,UserType.QUALIFIER));
+        MockHttpServletResponse response = controllerTestCaller.post("/user", new UserRequest(name, UserType.QUALIFIER.name()));
 
-        Assertions.assertEquals(201,response.getStatus());
+        Assertions.assertEquals(201, response.getStatus());
         Assertions.assertNotNull(userArgumentCaptor.getValue());
-        Assertions.assertEquals(name,userArgumentCaptor.getValue().getUsername());
+        Assertions.assertEquals(name, userArgumentCaptor.getValue().getUserName());
 
     }
 
@@ -66,12 +66,11 @@ class UserCreationControllerTest {
     public void testCreateUserThatFailed() throws Exception, InvalidRequestExeption {
         Mockito.doThrow(new RuntimeException("Hubo un error en la creación del usuario")).when(userCreatorService).create(userArgumentCaptor.capture());
         String name = "Pedro";
-        MockHttpServletResponse response = controllerTestCaller.post("/user", new User(name,UserType.QUALIFIER));
+        MockHttpServletResponse response = controllerTestCaller.post("/user", new UserRequest(name, UserType.QUALIFIER.name()));
 
-        Assertions.assertEquals(500,response.getStatus());
+        Assertions.assertEquals(500, response.getStatus());
 
     }
-
 
 
 }

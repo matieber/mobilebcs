@@ -1,10 +1,10 @@
 package com.mobilebcs.controller.user;
 
-import com.mobilebcs.domain.exception.InvalidOperationException;
 import com.mobilebcs.domain.exception.DuplicatedUsernameException;
+import com.mobilebcs.domain.exception.InvalidOperationException;
 import com.mobilebcs.domain.exception.InvalidRequestExeption;
-import com.mobilebcs.domain.user.UserCreatorService;
 import com.mobilebcs.domain.exception.UserNonexistentException;
+import com.mobilebcs.domain.user.UserCreatorService;
 import com.mobilebcs.domain.user.UserSessionService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ import java.sql.SQLException;
 public class UserController {
 
     private final UserCreatorService userCreatorService;
-    private final UserSessionService  userSessionService;
+    private final UserSessionService userSessionService;
 
     public UserController(UserCreatorService userCreatorService, UserSessionService userSessionService) {
         this.userCreatorService = userCreatorService;
@@ -30,7 +30,7 @@ public class UserController {
 
     @PostMapping(value = "/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<UserResponse> startUserSession(@PathVariable("name") String username) throws UserNonexistentException, InvalidOperationException {
-        UserResponse userResponse= userSessionService.starUserSession(username);
+        UserResponse userResponse = userSessionService.starUserSession(username);
         return ResponseEntity.status(201).body(userResponse);
     }
 

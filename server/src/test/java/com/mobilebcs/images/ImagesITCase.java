@@ -17,17 +17,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.test.context.ActiveProfiles;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
-
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -57,61 +54,49 @@ public class ImagesITCase extends AbstractITCase {
     public void init() throws IOException {
         FileUtils.deleteDirectory(new File(Paths.get(imagePath).toString()));
     }
+
     @Test
     public void testSaveImages() throws IOException {
 
-        String locationCode="DEFAULT";
+        String locationCode = "DEFAULT";
         UUID setCode = UUID.randomUUID();
-        List<CaravanImage> list=new ArrayList<>();
-        byte[] content = getImage();
-        list.add(new CaravanImage(content,IMAGE_NAME+"."+ IMAGE_EXTENSION));
+        List<CaravanImage> list = new ArrayList<>();
+        byte[] content = ImageEncoder.getImage(IMAGE_NAME, IMAGE_EXTENSION);
+        list.add(new CaravanImage(content, IMAGE_NAME + "." + IMAGE_EXTENSION));
         int position = 1;
 
 
         ResponseEntity<Void> response = restTemplate.postForEntity("/location/" + locationCode + "/caravan", new CaravanRequest(position, list, setCode), Void.class);
-        Assertions.assertEquals(204,response.getStatusCodeValue());
+        Assertions.assertEquals(204, response.getStatusCodeValue());
 
-        String path = jdbcTemplate.getJdbcTemplate().queryForObject(SELECT_PATH, String.class,locationCode,setCode.toString(),position);
+        String path = jdbcTemplate.getJdbcTemplate().queryForObject(SELECT_PATH, String.class, locationCode, setCode.toString(), position);
         assertNotNull(path);
-        byte[] actualBytes = FileUtils.readFileToByteArray(new File(Paths.get(imagePath,path).toString()));
-        Assertions.assertArrayEquals(content,actualBytes);
+        byte[] actualBytes = FileUtils.readFileToByteArray(new File(Paths.get(imagePath, path).toString()));
+        Assertions.assertArrayEquals(content, actualBytes);
+
+        Map<String, Object> paramMap = new HashMap<>();
+        paramMap.put("locationId", 1);
+        jdbcTemplate.update("DELETE FROM IMAGE_SET_LOCATION WHERE LOCATION_ID = :locationId", paramMap);
+
 
     }
 
     @Test
     public void testSaveImagesWithInvalidLocationCode() throws IOException {
 
-        String locationCode="INVALID";
+        String locationCode = "INVALID";
         UUID setCode = UUID.randomUUID();
-        List<CaravanImage> list=new ArrayList<>();
-        byte[] content = getImage();
-        list.add(new CaravanImage(content,IMAGE_NAME+"."+ IMAGE_EXTENSION));
+        List<CaravanImage> list = new ArrayList<>();
+        byte[] content = ImageEncoder.getImage(IMAGE_NAME, IMAGE_EXTENSION);
+        list.add(new CaravanImage(content, IMAGE_NAME + "." + IMAGE_EXTENSION));
         int position = 1;
 
 
         ResponseEntity<Void> response = restTemplate.postForEntity("/location/" + locationCode + "/caravan", new CaravanRequest(position, list, setCode), Void.class);
-        Assertions.assertEquals(400,response.getStatusCodeValue());
+        Assertions.assertEquals(404, response.getStatusCodeValue());
 
 
     }
 
-    public byte[] getImage() throws IOException {
-        String resourceName= "images/" + IMAGE_NAME + "." + IMAGE_EXTENSION;
 
-        ClassLoader classLoader = this.getClass().getClassLoader();
-
-        URL resource = classLoader.getResource(resourceName);
-        BufferedImage img = ImageIO.read(resource);
-        return encode(img, IMAGE_EXTENSION);
-    }
-
-    public static byte[] encode(BufferedImage image, String extension) throws IOException {
-
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        ImageIO.write(image, extension, bos);
-        byte[] imageBytes = bos.toByteArray();
-        bos.close();
-        return imageBytes;
-
-    }
 }

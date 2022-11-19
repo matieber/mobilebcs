@@ -1,7 +1,6 @@
 package com.mobilebcs.domain.user;
 
 import com.mobilebcs.controller.user.UserType;
-import com.mobilebcs.domain.exception.UserNonexistentException;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,11 +12,12 @@ public class UserLookupService {
         this.userRepository = userRepository;
     }
 
-    public User lookup(String name) throws UserNonexistentException {
+    public User lookup(String name) {
         UserEntity user = userRepository.get(name);
-        if(user==null){
-            throw new UserNonexistentException("Usuario "+name+" no existe");
+        if (user != null) {
+            return new User(user.getUserName(), UserType.valueFrom(user.getType()));
+        } else {
+            return null;
         }
-        return new User(user.getUserName(),UserType.valueFrom(user.getType()));
     }
 }

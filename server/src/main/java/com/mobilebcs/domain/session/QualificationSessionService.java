@@ -25,7 +25,7 @@ public class QualificationSessionService {
     public static final String SELECT_LOCATION = "SELECT ID FROM LOCATION WHERE CODE = :locationCode";
     private final static String INSERT_QUALIFICATION_SESSION = "INSERT INTO `QUALIFICATION_SESSION`(LOCATION_ID) VALUES (:locationId)";
 
-    private final static String INSERT_LOCATION_QUALIFICATION_SESSION ="INSERT INTO `LOCATION_QUALIFICATION_SESSION`(QUALIFICATION_SESSION_ID,LOCATION_ID) VALUES(:qualificationSessionId," +
+    private final static String INSERT_LOCATION_QUALIFICATION_SESSION = "INSERT INTO `LOCATION_QUALIFICATION_SESSION`(QUALIFICATION_SESSION_ID,LOCATION_ID) VALUES(:qualificationSessionId," +
             "(" + SELECT_LOCATION + "))";
 
     public QualificationSessionService(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
@@ -33,18 +33,18 @@ public class QualificationSessionService {
     }
 
     public long startNewSession(String locationCode) throws SQLException, DuplicatedSessionForLocationException, InvalidLocalizationException {
-        int locationId=getLocalizationId(locationCode);
+        int locationId = getLocalizationId(locationCode);
         long qualificationSessionId = createQualificationSession(locationId);
-        validateUniqueSessionForLocation(locationCode,qualificationSessionId);
+        validateUniqueSessionForLocation(locationCode, qualificationSessionId);
         return qualificationSessionId;
     }
 
     private Integer getLocalizationId(String locationCode) throws InvalidLocalizationException {
         HashMap<String, Object> paramMap = new HashMap<>();
-        paramMap.put("locationCode",locationCode);
+        paramMap.put("locationCode", locationCode);
         try {
             return namedParameterJdbcTemplate.queryForObject(SELECT_LOCATION, paramMap, Integer.class);
-        }catch (EmptyResultDataAccessException e) {
+        } catch (EmptyResultDataAccessException e) {
             throw new InvalidLocalizationException("Localización es inválida");
         }
 
@@ -55,12 +55,12 @@ public class QualificationSessionService {
         paramMap.addValue("locationId", locationId);
 
 
-            GeneratedKeyHolder holder = new GeneratedKeyHolder();
-            int inserted = namedParameterJdbcTemplate.update(INSERT_QUALIFICATION_SESSION, paramMap,holder);
-            if(inserted==0){
-                throw new SQLException("Error creando sesión");
-            }
-            return Objects.requireNonNull(holder.getKey()).longValue();
+        GeneratedKeyHolder holder = new GeneratedKeyHolder();
+        int inserted = namedParameterJdbcTemplate.update(INSERT_QUALIFICATION_SESSION, paramMap, holder);
+        if (inserted == 0) {
+            throw new SQLException("Error creando sesión");
+        }
+        return Objects.requireNonNull(holder.getKey()).longValue();
 
     }
 
@@ -74,10 +74,10 @@ public class QualificationSessionService {
             if (inserted == 0) {
                 throw new SQLException("Error creado sesión");
             }
-        }catch (DuplicateKeyException exception){
-            if(exception.getLocalizedMessage().contains("LOCATION_QUALIFICATION_SESSION.PRIMARY")) {
-                String cause = "Ya existe sessión en la locación con código "+locationCode;
-                LOG.error("Error validando sesión en locación con código "+locationCode+": "+cause);
+        } catch (DuplicateKeyException exception) {
+            if (exception.getLocalizedMessage().contains("LOCATION_QUALIFICATION_SESSION.PRIMARY")) {
+                String cause = "Ya existe sessión en la locación con código " + locationCode;
+                LOG.error("Error validando sesión en locación con código " + locationCode + ": " + cause);
                 throw new DuplicatedSessionForLocationException("Error guardando usuario. Usuario ya existe. ");
             }
             throw exception;
@@ -89,19 +89,23 @@ public class QualificationSessionService {
 
         Integer localizationId = getLocalizationId(locationCode);
 
-        Long qualificationSessionId=getCurrentQualificationSessionInSession(localizationId);
-        if(qualificationSessionId!=null) {
+        Long qualificationSessionId = getCurrentQualificationSessionInSession(localizationId);
+        if (qualificationSessionId != null) {
             HashMap<String, Object> paramMap = new HashMap<>();
             paramMap.put("qualificationSessionId", qualificationSessionId);
-            int deleted=namedParameterJdbcTemplate.update("DELETE FROM USER_LOCATION_QUALIFICATION_SESSION WHERE QUALIFICATION_SESSION_ID = :qualificationSessionId", paramMap);
-            if(deleted==0){
+            int deleted = namedParameterJdbcTemplate.update("DELETE FROM USER_LOCATION_QUALIFICATION_SESSION WHERE QUALIFICATION_SESSION_ID = :qualificationSessionId", paramMap);
+            if (deleted == 0) {
                 throw new SQLException("Error terminando sesión de calificador");
             }
 
-            deleted=namedParameterJdbcTemplate.update("DELETE FROM LOCATION_QUALIFICATION_SESSION WHERE QUALIFICATION_SESSION_ID = :qualificationSessionId", paramMap);
-            if(deleted==0){
+            deleted = namedParameterJdbcTemplate.update("DELETE FROM LOCATION_QUALIFICATION_SESSION WHERE QUALIFICATION_SESSION_ID = :qualificationSessionId", paramMap);
+            if (deleted == 0) {
                 throw new SQLException("Error terminando sesión de calificador");
             }
+
+            paramMap = new HashMap<>();
+            paramMap.put("locationId", localizationId);
+            namedParameterJdbcTemplate.update("DELETE FROM IMAGE_SET_LOCATION WHERE LOCATION_ID = :locationId", paramMap);
         }
     }
 
@@ -109,18 +113,12 @@ public class QualificationSessionService {
         Long qualificationSessionId;
         try {
             HashMap<String, Object> paramMap = new HashMap<>();
-            paramMap.put("locationId",locationId);
-            qualificationSessionId= namedParameterJdbcTemplate.queryForObject("SELECT QUALIFICATION_SESSION_ID FROM LOCATION_QUALIFICATION_SESSION where LOCATION_ID = :locationId", paramMap, Long.class);
-        }catch(EmptyResultDataAccessException e){
-            qualificationSessionId=null;
+            paramMap.put("locationId", locationId);
+            qualificationSessionId = namedParameterJdbcTemplate.queryForObject("SELECT QUALIFICATION_SESSION_ID FROM LOCATION_QUALIFICATION_SESSION where LOCATION_ID = :locationId", paramMap, Long.class);
+        } catch (EmptyResultDataAccessException e) {
+            qualificationSessionId = null;
         }
         return qualificationSessionId;
     }
-
-
-    public long getQualificationSessionByUser(String name) {
-        return 0;
-    }
-
 
 }

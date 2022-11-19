@@ -5,14 +5,15 @@ public class UserRequest {
     public String userName;
     private String userType;
 
-    public UserRequest(){}
+    public UserRequest() {
+    }
 
     public UserRequest(String userName, String userType) {
         this.userName = userName;
         this.userType = userType;
     }
 
-    public String getUsername() {
+    public String getUserName() {
         return userName;
     }
 
