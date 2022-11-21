@@ -22,14 +22,17 @@ public class QualificationSessionService {
     private static final Logger LOG = LoggerFactory.getLogger(UserRepository.class);
     private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
+    private final QueueSessionService queueSessionService;
+
     public static final String SELECT_LOCATION = "SELECT ID FROM LOCATION WHERE CODE = :locationCode";
     private final static String INSERT_QUALIFICATION_SESSION = "INSERT INTO `QUALIFICATION_SESSION`(LOCATION_ID) VALUES (:locationId)";
 
     private final static String INSERT_LOCATION_QUALIFICATION_SESSION = "INSERT INTO `LOCATION_QUALIFICATION_SESSION`(QUALIFICATION_SESSION_ID,LOCATION_ID) VALUES(:qualificationSessionId," +
             "(" + SELECT_LOCATION + "))";
 
-    public QualificationSessionService(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
+    public QualificationSessionService(NamedParameterJdbcTemplate namedParameterJdbcTemplate, QueueSessionService queueSessionService) {
         this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
+        this.queueSessionService = queueSessionService;
     }
 
     public long startNewSession(String locationCode) throws SQLException, DuplicatedSessionForLocationException, InvalidLocalizationException {
@@ -90,6 +93,7 @@ public class QualificationSessionService {
         Integer localizationId = getLocalizationId(locationCode);
 
         Long qualificationSessionId = getCurrentQualificationSessionInSession(localizationId);
+
         if (qualificationSessionId != null) {
             HashMap<String, Object> paramMap = new HashMap<>();
             paramMap.put("qualificationSessionId", qualificationSessionId);

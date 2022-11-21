@@ -23,6 +23,7 @@
         <flyway-mysql.version>8.5.10</flyway-mysql.version>
     </properties>
 
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -97,7 +98,7 @@
             <version>${testcontainers.version}</version>
             <scope>test</scope>
         </dependency>
-    
+
         <dependency>
             <groupId>org.testcontainers</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -137,7 +138,6 @@
             </plugin>
         </plugins>
     </build>
-
 
 
 </project>
