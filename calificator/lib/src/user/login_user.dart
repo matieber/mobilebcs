@@ -1,45 +1,88 @@
+import 'package:calificator/src/qualifier/qualifier_page.dart';
+import 'package:calificator/src/user/login_user_http.dart';
 import 'package:calificator/src/user/user.dart';
-import 'package:calificator/src/user/userClient.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:calificator/src/current_page.dart';
 import '../ui_model/input_text.dart';
 
-class LoginUser extends StatefulWidget{
-
-  final double _width;
-  final UserHttp _client;
-  final CurrentPage _currentPage;
-  final User user;
+class LoginUser extends MaterialPageRoute {
 
 
-  LoginUser(this._width, this._client,this._currentPage, this.user);
 
-  @override
-  State<LoginUser> createState() => _LoginUserState();
-}
+  LoginUser(String serverUrl) : super(
 
-class _LoginUserState extends State<LoginUser> {
-  @override
-  Widget build(BuildContext context) {
-    var onSubmitted = (String userName){
-      print('Usuario Ingresado: '+userName);
+      builder: (context) =>
+      scaffold(LoginUserHttp(serverUrl),context,serverUrl)
+  );
 
-      widget._client.login(userName).then((response) => {
-        if(response!=null && response.isNotEmpty){
-          redirect(userName)
+  static Scaffold scaffold(LoginUserHttp loginUserHttp, BuildContext context, String serverUrl) {
+    return Scaffold(
+        appBar: buildAppBar("Ingresar usuario"),
+        body: UserNameInputText('Nombre de usuario', (String userName) {
+    if(userName==""){
+      showAlertDialog(context,"Se debe ingresar un nombre de usuario","Error al ingresar usuario");
+    }else{
+      Future<User> future=loginUserHttp.login(userName);
+      future.then((user) {
+      print('Usuario Ingresado: ${user}');
+      return user;})
+          .then((user) {
+      Navigator.of(context).pop();
+      return user;
+      }).then((user) => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>QualifierPage(serverUrl,user))))
+          .onError((error, stackTrace) => showAlertDialog(context,error!,"Error al ingresar usuario"));
+    }
         }
-      });
-    };
-    return Column(
-      children: [
-        UserNameInputText(widget._width,'Nombre de usuario', onSubmitted),
-      ],
+        )
     );
   }
 
+  static void showAlertDialog(BuildContext context, Object error,String text) {
+
+    // set up the button
+    Widget okButton = TextButton(
+      child: Text("OK"),
+      onPressed: () {
+        Navigator.of(context).pop();
+
+        },
+    );
+
+    // set up the AlertDialog
+    AlertDialog alert = AlertDialog(
+      title: Text(text),
+      content: Text(error.toString()),
+      actions: [
+        okButton,
+      ],
+    );
+
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
+  }
+
+  static AppBar buildAppBar(String title) {
+    return AppBar(
+      title: Text(title),
+      backgroundColor: Colors.green,
+
+    );
+  }
+
+
+}
+
+
+
+  /*
   redirect(String userName) {
     widget.user.username=userName;
     widget._currentPage.toQualifierPage();
   }
-}
+  */
+

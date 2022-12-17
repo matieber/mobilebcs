@@ -21,7 +21,7 @@ class CustomTextButton extends StatelessWidget{
         textAlign: TextAlign.center),
         style: ElevatedButton.styleFrom(
             primary: Colors.green,
-            fixedSize: const Size.fromWidth(150)
+            fixedSize: const Size.fromHeight(150)
         )
     );
   }

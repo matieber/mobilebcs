@@ -4,6 +4,7 @@ import com.mobilebcs.controller.user.UserResponse;
 import com.mobilebcs.domain.exception.DuplicatedSessionForLocationException;
 import com.mobilebcs.domain.exception.InvalidLocalizationException;
 import com.mobilebcs.domain.exception.InvalidOperationException;
+import com.mobilebcs.domain.exception.SessionNotStartedException;
 import com.mobilebcs.domain.exception.UserNonexistentException;
 import com.mobilebcs.domain.qualifier.QualifierQueueFactory;
 import org.springframework.stereotype.Service;
@@ -40,7 +41,7 @@ public class UserQualificationSessionService {
         return new UserResponse(user.getUsername(), user.getUserType(), qualificationSession);
     }
 
-    public void endQualificationSession(String locationCode) throws InvalidLocalizationException, SQLException {
+    public void endQualificationSession(String locationCode) throws InvalidLocalizationException, SQLException, SessionNotStartedException {
         qualificationSessionService.endQualificationSession(locationCode);
     }
 }

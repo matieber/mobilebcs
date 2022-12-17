@@ -1,25 +1,49 @@
-import 'package:calificator/src/current_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../ui_model/custom_exit_button.dart';
 import '../ui_model/custom_icon_text_button.dart';
 
-class SideMenu extends StatefulWidget{
+class HomeSideMenu extends StatefulWidget{
 
 
-  CurrentPage currentPage;
 
-  SideMenu(this.currentPage,{Key? key}) : super(key: key);
+  HomeSideMenu({Key? key}) : super(key: key);
 
   @override
-  State<SideMenu> createState() => _SideMenuState(currentPage);
+  State<HomeSideMenu> createState() => _HomeSideMenuState();
 }
 
-class _SideMenuState extends State<SideMenu> {
+class _HomeSideMenuState extends State<HomeSideMenu> {
 
-  CurrentPage currentPage;
+  static AppBar buildAppBar(String title) {
+    return AppBar(
+      title: Text(title),
+      backgroundColor: Colors.green,
 
-  _SideMenuState(this.currentPage);
+    );
+  }
+
+  MaterialPageRoute buildSettingPage() {
+    return MaterialPageRoute(builder:
+        (context) => Scaffold(
+          appBar: buildAppBar("Configuración"),
+          body: Container(
+            color: Colors.lightGreen.shade100,
+            width: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                CustomExitButton()
+              ],
+            ),
+          ),
+        )
+    );
+  }
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -50,23 +74,11 @@ class _SideMenuState extends State<SideMenu> {
               )
           ),
           CustomIconTextButton(
-              const Icon(Icons.home),
-              'Inicio',
-              voidCallback: (){
-                setState(() {
-                  currentPage.toHome();
-                });
-                Navigator.of(context).pop();
-              },
-            ),
-          CustomIconTextButton(
               const Icon(Icons.settings),
               'Configuración',
             voidCallback: (){
-              setState(() {
-                currentPage.toSetting();
-              });
               Navigator.of(context).pop();
+                Navigator.of(context).push(buildSettingPage());
             },
           ),
         ],

@@ -3,8 +3,8 @@ package com.mobilebcs.controller.user;
 import com.mobilebcs.domain.exception.DuplicatedSessionForLocationException;
 import com.mobilebcs.domain.exception.InvalidLocalizationException;
 import com.mobilebcs.domain.exception.InvalidOperationException;
+import com.mobilebcs.domain.exception.SessionNotStartedException;
 import com.mobilebcs.domain.exception.UserNonexistentException;
-import com.mobilebcs.domain.user.UserCreatorService;
 import com.mobilebcs.domain.user.UserQualificationSessionService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -30,20 +30,20 @@ public class QualificationSessionController {
     }
 
     @PostMapping(value = "/{locationCode}/user/{name}/qualificationSession", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<UserResponse> startQualificationSession(@PathVariable("name") String name,@PathVariable("locationCode") String locationCode) throws UserNonexistentException, InvalidOperationException, SQLException, DuplicatedSessionForLocationException, InvalidLocalizationException {
-        UserResponse userResponse= startUserSession.startQualificationSession(name,locationCode);
+    public ResponseEntity<UserResponse> startQualificationSession(@PathVariable("name") String name, @PathVariable("locationCode") String locationCode) throws UserNonexistentException, InvalidOperationException, SQLException, DuplicatedSessionForLocationException, InvalidLocalizationException {
+        UserResponse userResponse = startUserSession.startQualificationSession(name, locationCode);
         return ResponseEntity.ok(userResponse);
     }
 
     @DeleteMapping(value = "/{locationCode}/qualificationSession", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Void> endQualificationSession(@PathVariable(name = "locationCode") String locationCode) throws InvalidLocalizationException, SQLException {
+    public ResponseEntity<Void> endQualificationSession(@PathVariable(name = "locationCode") String locationCode) throws InvalidLocalizationException, SQLException, SessionNotStartedException {
         startUserSession.endQualificationSession(locationCode);
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping(value = "/{locationCode}/user/{name}/qualificationSession/{qualificationSession}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<UserResponse> joinQualificationSession(@PathVariable("name") String name, @PathVariable(name = "qualificationSession") long qualificationSession) throws UserNonexistentException, InvalidOperationException {
-        UserResponse userResponse= startUserSession.joinQualificationSession(name,qualificationSession);
+        UserResponse userResponse = startUserSession.joinQualificationSession(name, qualificationSession);
         return ResponseEntity.ok(userResponse);
     }
 

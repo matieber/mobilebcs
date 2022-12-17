@@ -117,6 +117,19 @@ public class QualificationSessionITCase extends AbstractITCase {
     }
 
     @Test
+    public void testCreateNewQualificationSessionAndEndingItTwice() throws IOException {
+
+        String userName = "user" + UUID.randomUUID();
+
+        createUser(userName, UserType.QUALIFIER);
+
+        long qualificationSessionId = createNewSession(userName, LOCATION_CODE);
+
+        endSessionTwice(qualificationSessionId);
+
+    }
+
+    @Test
     public void testJoinToAQualificationSession() {
 
         String userName = "user" + UUID.randomUUID();
@@ -140,6 +153,17 @@ public class QualificationSessionITCase extends AbstractITCase {
         List<UserQualificationSessionEntity> userQualificationSessionEntities = getUserQualificationSessionEntities(LOCATION_CODE, qualificationSessionId);
         Assertions.assertNotNull(userQualificationSessionEntities);
         Assertions.assertEquals(0, userQualificationSessionEntities.size());
+    }
+
+    private void endSessionTwice(long qualificationSessionId) {
+        ResponseEntity<Void> endResponse = restTemplate.exchange("/location/{locationCode}/qualificationSession", HttpMethod.DELETE, new HttpEntity<>(null, null), Void.class, LOCATION_CODE);
+        Assertions.assertEquals(204, endResponse.getStatusCodeValue());
+        List<UserQualificationSessionEntity> userQualificationSessionEntities = getUserQualificationSessionEntities(LOCATION_CODE, qualificationSessionId);
+        Assertions.assertNotNull(userQualificationSessionEntities);
+        Assertions.assertEquals(0, userQualificationSessionEntities.size());
+
+        ResponseEntity<String> failEndingResponse = restTemplate.exchange("/location/{locationCode}/qualificationSession", HttpMethod.DELETE, new HttpEntity<>(null, null), String.class, LOCATION_CODE);
+        Assertions.assertEquals(400, failEndingResponse.getStatusCodeValue());
     }
 
     private void joinSession(String userName, long qualificationSession) {

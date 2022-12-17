@@ -2,6 +2,7 @@ package com.mobilebcs.domain.session;
 
 import com.mobilebcs.domain.exception.DuplicatedSessionForLocationException;
 import com.mobilebcs.domain.exception.InvalidLocalizationException;
+import com.mobilebcs.domain.exception.SessionNotStartedException;
 import com.mobilebcs.domain.user.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -81,14 +82,14 @@ public class QualificationSessionService {
             if (exception.getLocalizedMessage().contains("LOCATION_QUALIFICATION_SESSION.PRIMARY")) {
                 String cause = "Ya existe sessión en la locación con código " + locationCode;
                 LOG.error("Error validando sesión en locación con código " + locationCode + ": " + cause);
-                throw new DuplicatedSessionForLocationException("Error guardando usuario. Usuario ya existe. ");
+                throw new DuplicatedSessionForLocationException("Error creando sesión. Ya se ha iniciado sesión en la locación dada");
             }
             throw exception;
         }
 
     }
 
-    public void endQualificationSession(String locationCode) throws InvalidLocalizationException, SQLException {
+    public void endQualificationSession(String locationCode) throws InvalidLocalizationException, SQLException, SessionNotStartedException {
 
         Integer localizationId = getLocalizationId(locationCode);
 
@@ -110,6 +111,8 @@ public class QualificationSessionService {
             paramMap = new HashMap<>();
             paramMap.put("locationId", localizationId);
             namedParameterJdbcTemplate.update("DELETE FROM IMAGE_SET_LOCATION WHERE LOCATION_ID = :locationId", paramMap);
+        } else {
+            throw new SessionNotStartedException("No existe sesión de calificación iniciada en la locación dada");
         }
     }
 

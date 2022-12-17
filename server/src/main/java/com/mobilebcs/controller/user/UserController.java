@@ -1,7 +1,6 @@
 package com.mobilebcs.controller.user;
 
 import com.mobilebcs.domain.exception.DuplicatedUsernameException;
-import com.mobilebcs.domain.exception.InvalidOperationException;
 import com.mobilebcs.domain.exception.InvalidRequestExeption;
 import com.mobilebcs.domain.exception.UserNonexistentException;
 import com.mobilebcs.domain.user.UserCreatorService;
@@ -29,7 +28,7 @@ public class UserController {
     }
 
     @PostMapping(value = "/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<UserResponse> startUserSession(@PathVariable("name") String username) throws UserNonexistentException, InvalidOperationException {
+    public ResponseEntity<UserResponse> startUserSession(@PathVariable("name") String username) throws UserNonexistentException {
         UserResponse userResponse = userSessionService.starUserSession(username);
         return ResponseEntity.status(201).body(userResponse);
     }

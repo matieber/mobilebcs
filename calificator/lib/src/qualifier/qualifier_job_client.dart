@@ -2,19 +2,19 @@ import 'dart:convert';
 import 'dart:async';
 import 'package:http/http.dart' as http;
 
-class QualifierHttp  {
+class QualifierJobClientHttp  {
 
 
-  final String _serverIp;
-  final int _serverPort;
+  final String _serverUrl;
 
 
-  QualifierHttp(this._serverIp, this._serverPort);
+  QualifierJobClientHttp(this._serverUrl);
 
   Future<Map<String,dynamic>?> nextJob(String userName) async{
 
    print("getting next job");
-    Uri uri=Uri(scheme: 'http',host: _serverIp,port: _serverPort,path: '/qualifier/'+userName+"/next-animal");
+   String endpointUrl=_serverUrl+"/qualifier/"+userName+"/next-animal";
+    Uri uri=Uri.parse(endpointUrl);
     final response = await http.get(uri);
     if (response.statusCode == 200) {
       final responseBody=json.decode(response.body);

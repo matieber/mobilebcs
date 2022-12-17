@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 class UserNameInputText extends StatefulWidget{
 
 
-  final double width;
+
   final ValueChanged<String> onSubmitted;
 
   final labelText;
 
 
-  const UserNameInputText(this.width,this.labelText,this.onSubmitted,{Key? key}) : super(key: key);
+  const UserNameInputText(this.labelText,this.onSubmitted,{Key? key}) : super(key: key);
 
 
 
@@ -35,7 +35,7 @@ class _UserNameInputTextState extends State<UserNameInputText> {
   Widget build(BuildContext context) {
       return
         SizedBox(
-            width: widget.width/2,
+          //  width: widget.width/2,
             child:
             TextField(
               controller: _controller,

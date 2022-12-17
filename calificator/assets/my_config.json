@@ -1,4 +1,3 @@
 {
-  "serverIp": "192.168.0.6",
-  "serverPort": 8080
+  "serverUrl":""
 }

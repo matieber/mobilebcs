@@ -1,56 +1,62 @@
 
-import 'package:calificator/src/current_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../menu/home_side_menu.dart';
 import '../ui_model/custom_text_button.dart';
-import '../ui_model/icon_button.dart';
-import '../ui_model/input_text.dart';
-
+import 'package:calificator/src/user/login_user.dart';
+import 'package:calificator/src/user/register_user.dart';
 
 
 class UserPage extends StatelessWidget{
 
 
-  final CurrentPage currentPage;
-  final double _width;
-  final double _height;
+  final String serverUrl;
 
-  const UserPage(this._width,this._height,this.currentPage,{Key? key}) : super(key: key);
+  UserPage(this.serverUrl,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+      appBar: buildAppBar(),
+      drawer: HomeSideMenu(),
+      body: Container(
       color: Colors.lightGreen.shade100,
       width: double.infinity,
       child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
           Container(
-            width: _width/2,
-            height: _height/4,
-            child: CustomTextButton('Ingresar usuario',voidFunction: (){_toLoginUser();})
+
+            child: CustomTextButton('Ingresar usuario',voidFunction: (){_toLoginUser(context,serverUrl);})
           ),
-            Container(
-                width: _width/2,
-                height: _height/8,
-            ),
+            const SizedBox(height: 100),
           Container(
-            width: _width/2,
-            height: _height/4,
-            child: CustomTextButton('Registrar usuario',voidFunction: (){_toRegisterUser();})
+            child: CustomTextButton('Registrar usuario',voidFunction: (){_toRegisterUser(context,serverUrl);})
           )
     ]
 
       ),
+    )
     );
   }
 
- void _toLoginUser(){
-    currentPage.toLoginUser();
+ void _toLoginUser(BuildContext context,String serverUrl){
+
+   Navigator.of(context)
+       .push(LoginUser(serverUrl));
+  }
+
+ void _toRegisterUser(BuildContext context, String serverUrl){
+   Navigator.of(context)
+       .push(RegisterUser(serverUrl));
  }
 
- void _toRegisterUser(){
-    currentPage.toRegisterUser();
- }
+  static AppBar buildAppBar() {
+    return AppBar(
+      title: Text('Calificador'),
+      backgroundColor: Colors.green,
+
+    );
+  }
 }
