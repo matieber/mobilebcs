@@ -4,15 +4,29 @@ import com.mobilebcs.controller.user.UserType;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.messaging.converter.MappingJackson2MessageConverter;
+import org.springframework.messaging.simp.stomp.StompHeaders;
+import org.springframework.messaging.simp.stomp.StompSession;
+import org.springframework.messaging.simp.stomp.StompSessionHandler;
+import org.springframework.messaging.simp.stomp.StompSessionHandlerAdapter;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.util.concurrent.ListenableFuture;
+import org.springframework.web.socket.client.WebSocketClient;
+import org.springframework.web.socket.messaging.WebSocketStompClient;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.nio.file.Paths;
 import java.util.UUID;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 
 @ActiveProfiles("test")
@@ -22,6 +36,7 @@ public class QualifierITCase extends AbstractITCase {
 
     private static final String LOCATION_CODE = "DEFAULT";
 
+
     @LocalServerPort
     private int port;
 
@@ -30,12 +45,42 @@ public class QualifierITCase extends AbstractITCase {
     @Value("${images.path}")
     private String imagePath;
 
+    @Autowired
+    @Qualifier("clientStompSessionHandler")
+    private StompSessionHandler clientStompSessionHandler;
+
+    private StompSession stompSession;
+
+    @Autowired
+    private WebSocketClient webSocketClient;
+
+
     @BeforeEach
-    public void init() throws IOException {
+    public void init() throws IOException, ExecutionException, InterruptedException, TimeoutException {
 
 
         FileUtils.deleteDirectory(new File(Paths.get(imagePath).toString()));
         restCaller = new RestCaller(port);
+
+        stompSession = clientStompSession(clientStompSessionHandler, webSocketClient, port);
+    }
+
+
+    public StompSession clientStompSession(
+            StompSessionHandler clientStompSessionHandler,
+            WebSocketClient webSocketClient,
+            Integer port
+    ) throws InterruptedException, ExecutionException, TimeoutException {
+        final WebSocketStompClient stompClient = new WebSocketStompClient(webSocketClient);
+        stompClient.setMessageConverter(new MappingJackson2MessageConverter());
+        StompSessionHandlerAdapter handler = new StompSessionHandlerAdapter() {
+            @Override
+            public Type getPayloadType(StompHeaders headers) {
+                return super.getPayloadType(headers);
+            }
+        };
+        ListenableFuture<StompSession> connect = stompClient.connect("ws://localhost:" + port + "/nextjob", handler);
+        return connect.get(60, TimeUnit.SECONDS);
     }
 
     @Test
@@ -48,8 +93,12 @@ public class QualifierITCase extends AbstractITCase {
         restCaller.createUser(name1, UserType.QUALIFIER);
         restCaller.createUser(name2, UserType.QUALIFIER);
         restCaller.createUser(name3, UserType.QUALIFIER);
+
+        stompSession.subscribe("/topic/notifications", clientStompSessionHandler);
+
         long qualificationSession = restCaller.joinQualificationSession(name1, null, LOCATION_CODE);
         restCaller.joinQualificationSession(name2, qualificationSession, LOCATION_CODE);
+
         for (int position = 0; position < 10; position++) {
             restCaller.sendImage(position, LOCATION_CODE);
         }

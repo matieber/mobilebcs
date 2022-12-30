@@ -18,16 +18,32 @@ public class ImagesListener {
 
     private final QueueProviderService queueProviderService;
 
+    //private final StompSession stompSession;
 
-    public ImagesListener(JmsTemplate jmsTemplate, QueueProviderService queueProviderService) {
+
+    public ImagesListener(JmsTemplate jmsTemplate, QueueProviderService queueProviderService/*, @Qualifier("serverStompSession") StompSession stompSession*/) {
         this.jmsTemplate = jmsTemplate;
         this.queueProviderService = queueProviderService;
+        //      this.stompSession = stompSession;
     }
 
     @JmsListener(destination = "${images.queue.name}", containerFactory = "jmsListenerContainerFactory")
     public void listener(Message message) throws JMSException {
 
         NextCaravanMessage nextCaravanMessage = (NextCaravanMessage) jmsTemplate.getMessageConverter().fromMessage(message);
+        sentJobToViewers(nextCaravanMessage);
+        sentJobToQualifier(message, nextCaravanMessage);
+        message.acknowledge();
+        System.out.println("There are not qualifier to receive the job");
+    }
+
+    private void sentJobToViewers(NextCaravanMessage nextCaravanMessage) {
+        Long qualificationSession = queueProviderService.getQualificationSession(nextCaravanMessage.getLocationCode());
+        //    stompSession.send("/app/nextjob", new JobNotification(qualificationSession, nextCaravanMessage.getPosition()));
+
+    }
+
+    private void sentJobToQualifier(Message message, NextCaravanMessage nextCaravanMessage) {
         Set<UserQueue> queues = queueProviderService.getQueues(nextCaravanMessage.getLocationCode());
         for (UserQueue userQueue : queues) {
             try {
@@ -38,8 +54,6 @@ public class ImagesListener {
                 throw new RuntimeException(e);
             }
         }
-        message.acknowledge();
-        System.out.println("There are not qualifier to receive the job");
     }
 
 

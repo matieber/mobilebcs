@@ -1,5 +1,7 @@
 package com.mobilebcs.configuration;
 
+import com.mobilebcs.configuration.jms.JmsAutoConfiguration;
+import com.mobilebcs.configuration.jms.JmsProperties;
 import com.mobilebcs.domain.qualifier.NextCaravanMessage;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
