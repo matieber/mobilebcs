@@ -34,8 +34,8 @@ public class ImagesITCase extends AbstractITCase {
 
     @Value("${images.path}")
     private String imagePath;
-    public static final String IMAGE_NAME = "primer-plano-lateral-vaca-raza-hereford";
-    public static final String IMAGE_EXTENSION = "jpg";
+    public static final String IMAGE_NAME = "cow_images.1";
+    public static final String IMAGE_EXTENSION = "png";
     public static final String SELECT_PATH = "SELECT i.PATH FROM " +
             "IMAGE i INNER JOIN IMAGE_SET iset ON iset.ID = i.IMAGE_SET_ID INNER JOIN " +
             "IMAGE_SET_LOCATION isl ON iset.ID = isl.IMAGE_SET_ID INNER JOIN " +

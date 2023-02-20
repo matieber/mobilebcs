@@ -22,8 +22,8 @@ import java.util.UUID;
 
 public class RestCaller {
 
-    private static final String IMAGE_NAME = "primer-plano-lateral-vaca-raza-hereford";
-    private static final String IMAGE_EXTENSION = "jpg";
+    private static final String IMAGE_NAME = "cow_images.";
+    private static final String IMAGE_EXTENSION = "png";
 
 
     private RestTemplate restTemplate;
@@ -36,8 +36,9 @@ public class RestCaller {
 
         UUID setCode = UUID.randomUUID();
         List<CaravanImage> list = new ArrayList<>();
-        byte[] content = ImageEncoder.getImage(IMAGE_NAME, IMAGE_EXTENSION);
-        list.add(new CaravanImage(content, IMAGE_NAME + "." + IMAGE_EXTENSION));
+        String imageName = IMAGE_NAME + position;
+        byte[] content = ImageEncoder.getImage(imageName, IMAGE_EXTENSION);
+        list.add(new CaravanImage(content, IMAGE_NAME +position+ "." + IMAGE_EXTENSION));
 
         ResponseEntity<Void> response = restTemplate.postForEntity("/location/" + locationCode + "/caravan", new CaravanRequest(position, list, setCode), Void.class);
         Assertions.assertEquals(204, response.getStatusCodeValue());

@@ -112,12 +112,13 @@ public class ViewerITCase extends AbstractITCase {
 
         long qualificationSession = restCaller.joinQualificationSession(name1, null, LOCATION_CODE);
         ClientSocketStompSessionHandler clientSocketStompSessionHandler = new ClientSocketStompSessionHandler(stompSessionHandler);
-        StompSession.Subscription subscribe = stompSession.subscribe("/topic/notifications/" + qualificationSession, clientSocketStompSessionHandler);
+        //StompSession.Subscription subscribe = stompSession.subscribe("/topic/notifications/" + qualificationSession, clientSocketStompSessionHandler);
+        StompSession.Subscription subscribe = stompSession.subscribe("/topic/notifications", clientSocketStompSessionHandler);
 
 
 
 
-        for (int position = 0; position < 10; position++) {
+        for (int position = 1; position <= 10; position++) {
             restCaller.sendImage(position, LOCATION_CODE);
         }
 

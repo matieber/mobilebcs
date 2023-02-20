@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:typed_data';
 
 import 'package:calificator/src/qualifier/qualifier_job_client.dart';
 import 'package:calificator/src/qualifier/viewer_caravan_message.dart';
@@ -11,6 +12,7 @@ import 'package:stomp_dart_client/stomp.dart';
 import '../menu/qualificator_side_menu.dart';
 import 'package:stomp_dart_client/stomp_config.dart';
 import 'package:stomp_dart_client/stomp_frame.dart';
+import 'image.dart';
 import 'viewer_stomp_client.dart';
 
 class ViewerPage extends StatefulWidget {
@@ -36,12 +38,13 @@ class _ViewerPageState extends State<ViewerPage> {
 
 
 
+  ImageProvider? imageProvider;
+
   refresh(ViewerCaravanMessage message) {
     setState(() {
       position = message.position.toString();
       if(message.byteImages.isNotEmpty) {
-             boxDecoration = BoxDecoration(image: DecorationImage(
-            image: MemoryImage(message.byteImages.first)));
+            imageProvider=MemoryImage(message.byteImages.first);
       }
     });
   }
@@ -63,9 +66,7 @@ class _ViewerPageState extends State<ViewerPage> {
     return Column(
         children: [
           Text(position),
-          Container(
-          decoration: boxDecoration,
-          )
+           MyImage(imageProvider),
         ],
       );
   }
