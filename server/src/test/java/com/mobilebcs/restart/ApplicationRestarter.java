@@ -23,7 +23,7 @@ public class ApplicationRestarter {
 
     private static Semaphore semaphore = new Semaphore(0);
 
-    public static void start() {
+    public static void start(int port) {
         ContainerStarter.startActiveMq();
         JdbcDatabaseContainer mysql = ContainerStarter.startMysql();
         SpringApplicationBuilder builder1 = new SpringApplicationBuilder(new Class[]{ServerApp.class});
@@ -32,6 +32,7 @@ public class ApplicationRestarter {
         properties.put("images.path", TMP_IMAGES_TESTDATA);
         properties.put("activemq.brokerUrl", ContainerStarter.getBrokerUrl());
         properties.put("spring.datasource.url", mysql.getJdbcUrl());
+        properties.put("server.port", port);
 
         
         String[] arguments = new String[0];

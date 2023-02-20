@@ -37,13 +37,6 @@ class _CalificatorAppState extends State<CalificatorApp> {
         )
     );
 
-   /* return  Scaffold(
-                appBar: buildAppBar(),
-                drawer: SideMenu(_currentPage),
-                body:
-                _width == 0 && _serverIp== "" && _serverPort==0 ?
-                buildLoading(): buildBody()
-    );*/
   }
 
   Future<String> getServerUrl(BuildContext context) {
@@ -64,37 +57,11 @@ class _CalificatorAppState extends State<CalificatorApp> {
   }
 
   Container buildLoading() {
-    getWidth(context).then((double value) => setState(
-        () {
-
-
-        }
-    ));
-    getHeight(context).then((double value) => setState(
-            () {
-
-
-        }
-    ));
     return Container(
         child: Center(
           child: Text("Cargando..."),
         ),
       );
   }
-  
-  Future<double> getWidth(BuildContext context) async {
-    await MediaQuery.of(context).size.width > 0;
-    print('Obtenido '+MediaQuery.of(context).size.width.toString());
-    return MediaQuery.of(context).size.width;
-  }
-
-  Future<double> getHeight(BuildContext context) async {
-    await MediaQuery.of(context).size.height > 0;
-    print('Obtenido '+MediaQuery.of(context).size.height.toString());
-    return MediaQuery.of(context).size.height;
-  }
-
-
 
 }

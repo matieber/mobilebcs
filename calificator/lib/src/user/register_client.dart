@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:async';
+import 'package:calificator/src/user/user_type.dart';
 import 'package:http/http.dart' as http;
 
 class RegisterUserHttp  {
@@ -10,11 +11,12 @@ class RegisterUserHttp  {
 
   RegisterUserHttp(this._serverUrl);
 
-  Future register(String userName) async{
+  Future register(String userName,UserType userType) async{
 
 
+    String userTypeValue=userType.name.toUpperCase();
     String endpointUrl=_serverUrl+"/user";
-    final request = '{"userType": "QUALIFIER", "userName": "$userName"}';
+    final request = '{"userType": "$userTypeValue", "userName": "$userName"}';
     Uri uri=Uri.parse(endpointUrl);
     print("url "+uri.toString());
 

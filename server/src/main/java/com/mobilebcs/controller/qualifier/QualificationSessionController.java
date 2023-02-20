@@ -1,11 +1,13 @@
-package com.mobilebcs.controller.user;
+package com.mobilebcs.controller.qualifier;
 
+import com.mobilebcs.controller.user.UserResponse;
 import com.mobilebcs.domain.exception.DuplicatedSessionForLocationException;
 import com.mobilebcs.domain.exception.InvalidLocalizationException;
 import com.mobilebcs.domain.exception.InvalidOperationException;
 import com.mobilebcs.domain.exception.SessionNotStartedException;
 import com.mobilebcs.domain.exception.UserNonexistentException;
 import com.mobilebcs.domain.user.UserQualificationSessionService;
+import org.springframework.context.MessageSource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;

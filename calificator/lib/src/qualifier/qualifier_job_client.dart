@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'dart:async';
 import 'package:http/http.dart' as http;
 
+import 'next_caravan_message.dart';
+
 class QualifierJobClientHttp  {
 
 
@@ -10,7 +12,7 @@ class QualifierJobClientHttp  {
 
   QualifierJobClientHttp(this._serverUrl);
 
-  Future<Map<String,dynamic>?> nextJob(String userName) async{
+  Future<CaravanMessage?> nextJob(String userName) async{
 
    print("getting next job");
    String endpointUrl=_serverUrl+"/qualifier/"+userName+"/next-animal";
@@ -19,7 +21,7 @@ class QualifierJobClientHttp  {
     if (response.statusCode == 200) {
       final responseBody=json.decode(response.body);
       print(responseBody);
-      return responseBody;
+      return CaravanMessage.fromJson(responseBody);
     }else{
       if(response.statusCode == 204){
         return null;

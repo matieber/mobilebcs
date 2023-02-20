@@ -1,6 +1,8 @@
-import 'package:calificator/src/qualifier/qualifier_page.dart';
+import 'package:calificator/src/qualifier/qualifier_session_page.dart';
+import 'package:calificator/src/qualifier/viewer_page.dart';
 import 'package:calificator/src/user/login_user_http.dart';
 import 'package:calificator/src/user/user.dart';
+import 'package:calificator/src/user/user_type.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../ui_model/input_text.dart';
@@ -29,7 +31,21 @@ class LoginUser extends MaterialPageRoute {
           .then((user) {
       Navigator.of(context).pop();
       return user;
-      }).then((user) => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>QualifierPage(serverUrl,user))))
+      }).then((user)=>
+
+           Navigator.of(context)
+              .pushReplacement(
+              MaterialPageRoute(builder:
+              (context) {
+                if (user.userType == UserType.qualifier) {
+                  return QualifierSessionPage(serverUrl, user);
+                }else{
+                  return ViewerPage(user, serverUrl);
+                }
+              }
+          )
+          )
+      )
           .onError((error, stackTrace) => showAlertDialog(context,error!,"Error al ingresar usuario"));
     }
         }

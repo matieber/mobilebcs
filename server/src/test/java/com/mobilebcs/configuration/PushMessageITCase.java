@@ -1,6 +1,10 @@
 package com.mobilebcs.configuration;
 
+import com.mobilebcs.configuration.jms.JmsAutoConfiguration;
+import com.mobilebcs.configuration.jms.JmsProperties;
+import com.mobilebcs.controller.images.CaravanImage;
 import com.mobilebcs.domain.qualifier.NextCaravanMessage;
+import com.mobilebcs.images.ImageEncoder;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,6 +18,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.io.File;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @ExtendWith(SpringExtension.class)
@@ -22,9 +29,10 @@ import java.util.UUID;
         "activemq.password=admin",
         "activemq.brokerUrl=tcp://localhost:61616",
         "activemq.receive-timeout=10000","images.queue.name=IMAGE_QUEUE"})
-@Disabled
 public class PushMessageITCase {
 
+    public static final String IMAGE_NAME = "primer-plano-lateral-vaca-raza-hereford";
+    public static final String IMAGE_EXTENSION = "jpg";
     @Autowired
     private JmsTemplate jmsTemplate;
 
@@ -36,16 +44,21 @@ public class PushMessageITCase {
 
     private String locationCode="DEFAULT";
 
+
+
     @Test
-    public void testSendImagesToQueue()  {
+    public void testSendImagesToQueue() throws InterruptedException, IOException {
         for(int i=0;i<10;i++) {
            sendMessage(i,queueName);
+           Thread.sleep(3000L);
         }
 
     }
 
-    private void sendMessage(int position, String destinationName) {
-        jmsTemplate.convertAndSend(destinationName,new NextCaravanMessage(position, UUID.randomUUID(),locationCode));
+    private void sendMessage(int position, String destinationName) throws IOException {
+        List<byte[]> list = new ArrayList<>();
+        list.add(ImageEncoder.getImage(IMAGE_NAME, IMAGE_EXTENSION));
+        jmsTemplate.convertAndSend(destinationName,new NextCaravanMessage(position, UUID.randomUUID(),locationCode,list));
     }
 
 

@@ -3,12 +3,12 @@ package com.mobilebcs;
 import com.mobilebcs.controller.user.UserType;
 import com.mobilebcs.restart.ApplicationRestarter;
 import org.apache.commons.io.FileUtils;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.ServerSocket;
 import java.nio.file.Paths;
 import java.util.UUID;
 
@@ -17,31 +17,30 @@ public class TestAfterRestartITCase {
 
 
     private static final String LOCATION_CODE = "DEFAULT";
-
+    private int port;
 
     private RestCaller restCaller;
 
 
-    private ApplicationRestarter applicationRestarter;
-
-
-    @BeforeAll
-    public static void start() {
-
-        ApplicationRestarter.start();
-    }
-
     @BeforeEach
     public void init() throws IOException {
 
-
+        port = getOpenPort();
         FileUtils.deleteDirectory(new File(Paths.get(ApplicationRestarter.getImagePath()).toString()));
-        restCaller = new RestCaller(8080);
+        restCaller = new RestCaller(port);
+    }
+
+    private static int getOpenPort() throws IOException {
+        ServerSocket s = new ServerSocket(0);
+        int port = s.getLocalPort();
+        s.close();
+        return port;
     }
 
 
     @Test
     public void testQualifierWithRestart() throws IOException, InterruptedException {
+        ApplicationRestarter.start(port);
         String name = "qualifier1" + UUID.randomUUID();
         restCaller.createUser(name, UserType.QUALIFIER);
 

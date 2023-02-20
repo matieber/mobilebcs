@@ -65,4 +65,8 @@ public class QueueProviderService {
             throw new UserNonexistentException("Usuario " + userName + " no existe");
         }
     }
+
+    public Long getQualificationSession(String locationCode) {
+        return userQualificationSessionRepository.getQualificationSessionByLocation(locationCode);
+    }
 }

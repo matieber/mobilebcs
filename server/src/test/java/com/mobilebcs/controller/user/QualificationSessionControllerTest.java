@@ -3,6 +3,7 @@ package com.mobilebcs.controller.user;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mobilebcs.controller.ControllerTestCaller;
+import com.mobilebcs.controller.qualifier.QualificationSessionController;
 import com.mobilebcs.domain.exception.UserNonexistentException;
 import com.mobilebcs.domain.user.UserQualificationSessionService;
 import org.junit.jupiter.api.Assertions;

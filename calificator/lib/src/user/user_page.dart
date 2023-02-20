@@ -17,6 +17,7 @@ class UserPage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    var registerUser = RegisterUser(serverUrl);
     return Scaffold(
       appBar: buildAppBar(),
       drawer: HomeSideMenu(),
@@ -32,7 +33,9 @@ class UserPage extends StatelessWidget{
           ),
             const SizedBox(height: 100),
           Container(
-            child: CustomTextButton('Registrar usuario',voidFunction: (){_toRegisterUser(context,serverUrl);})
+            child: CustomTextButton('Registrar usuario',voidFunction: (){
+
+_toRegisterUser(context,registerUser);})
           )
     ]
 
@@ -47,9 +50,9 @@ class UserPage extends StatelessWidget{
        .push(LoginUser(serverUrl));
   }
 
- void _toRegisterUser(BuildContext context, String serverUrl){
+ void _toRegisterUser(BuildContext context, RegisterUser registerUser){
    Navigator.of(context)
-       .push(RegisterUser(serverUrl));
+       .push(MaterialPageRoute(builder: (context)=> registerUser ));
  }
 
   static AppBar buildAppBar() {

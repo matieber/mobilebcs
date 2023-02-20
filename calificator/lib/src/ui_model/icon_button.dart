@@ -15,7 +15,7 @@ class CustomIconButton extends StatelessWidget{
         onPressed:onPressed ?? (){},
         child: icon,
         style: ElevatedButton.styleFrom(
-            primary: Colors.green,
+            backgroundColor: Colors.green,
             fixedSize: const Size.fromWidth(50)
         )
     );

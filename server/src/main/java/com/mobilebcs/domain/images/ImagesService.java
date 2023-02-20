@@ -15,7 +15,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Component
@@ -53,7 +55,12 @@ public class ImagesService {
         for (Map.Entry<Path, CaravanImage> caravanImage : caravanImages.entrySet()) {
             fileService.save(imageParentPath, caravanImage.getValue().getFileName(), caravanImage.getValue().getContent());
         }
-        jmsTemplate.convertAndSend(imageQueueName, new NextCaravanMessage(caravanRequest.getPosition(), caravanRequest.getSetId(), locationCode));
+        CaravanImage caravanImage = caravanRequest.getImages().get(0);
+        List<byte[]> list=new ArrayList<>();
+        if(caravanImage!=null){
+            list.add(caravanImage.getContent());
+        }
+        jmsTemplate.convertAndSend(imageQueueName, new NextCaravanMessage(caravanRequest.getPosition(), caravanRequest.getSetId(), locationCode,list));
 
     }
 }
