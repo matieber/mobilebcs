@@ -23,6 +23,7 @@ import org.springframework.messaging.simp.stomp.StompHeaders;
 import org.springframework.messaging.simp.stomp.StompSession;
 import org.springframework.messaging.simp.stomp.StompSessionHandler;
 import org.springframework.messaging.simp.stomp.StompSessionHandlerAdapter;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.web.socket.client.WebSocketClient;
@@ -105,7 +106,6 @@ public class ViewerITCase extends AbstractITCase {
         //StompSession.Subscription subscribe = stompSession.subscribe("/topic/notifications/" + qualificationSession, clientSocketStompSessionHandler);
         StompSession.Subscription subscribe = stompSession.subscribe("/topic/notifications/"+LOCATION_CODE, clientSocketStompSessionHandler);
 
-
         for (int position = 1; position <= 10; position++) {
             restCaller.sendImage(position, LOCATION_CODE);
         }
@@ -114,6 +114,7 @@ public class ViewerITCase extends AbstractITCase {
         Mockito.verify(stompSessionHandler,timeout(10000L).times(10)).handleFrame(Mockito.any(),objectArgumentCaptor.capture());
 
         List<Object> allValues = objectArgumentCaptor.getAllValues();
+        Assertions.assertEquals(10,allValues.size());
         int index=1;
         for (Object value : allValues) {
             Assertions.assertNotNull(value);

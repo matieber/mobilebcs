@@ -3,8 +3,11 @@ package com.mobilebcs;
 import com.mobilebcs.controller.user.UserType;
 import com.mobilebcs.restart.ApplicationRestarter;
 import org.apache.commons.io.FileUtils;
+import org.junit.AfterClass;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestClassOrder;
+import org.springframework.test.annotation.DirtiesContext;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,6 +16,7 @@ import java.nio.file.Paths;
 import java.util.UUID;
 
 
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
 public class QualificationWithImageAfterRestartITCase {
 
 

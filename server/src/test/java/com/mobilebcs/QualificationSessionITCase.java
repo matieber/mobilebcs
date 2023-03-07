@@ -4,6 +4,7 @@ import com.mobilebcs.controller.user.UserRequest;
 import com.mobilebcs.controller.user.UserResponse;
 import com.mobilebcs.controller.user.UserType;
 import org.apache.commons.io.FileUtils;
+import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.messaging.simp.stomp.StompSession;
 import org.springframework.test.context.ActiveProfiles;
 
 import java.io.File;
@@ -46,6 +49,8 @@ public class QualificationSessionITCase extends AbstractITCase {
 
     @Autowired
     private NamedParameterJdbcTemplate jdbcTemplate;
+
+    private SimpMessagingTemplate simpMessagingTemplate;
 
     @BeforeEach
     public void init() throws IOException {

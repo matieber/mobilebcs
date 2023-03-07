@@ -7,6 +7,7 @@ import org.springframework.messaging.simp.stomp.StompSession;
 import org.springframework.messaging.simp.stomp.StompSessionHandler;
 
 import java.lang.reflect.Type;
+import java.util.List;
 
 public class ClientSocketStompSessionHandler implements StompSessionHandler {
 
@@ -38,8 +39,12 @@ public class ClientSocketStompSessionHandler implements StompSessionHandler {
 
     @Override
     public void handleFrame(StompHeaders headers, Object payload) {
-        System.out.println("Receive ");
-        JobNotificationOutput jobNotificationOutput = (JobNotificationOutput) payload;
+
+        if(payload instanceof List){
+            System.out.println("Receive list");
+        }else{
+            System.out.println("Receive element");
+        }
         stompSessionHandler.handleFrame(headers,payload);
     }
 }
