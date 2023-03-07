@@ -47,13 +47,14 @@ public class ImagesListener {
         message.acknowledge();
     }
 
-    private void sentJobToViewers(NextCaravanMessage nextCaravanMessage) throws ExecutionException, InterruptedException, TimeoutException {
-        Long qualificationSession = queueProviderService.getQualificationSession(nextCaravanMessage.getLocationCode());
+    private void sentJobToViewers(NextCaravanMessage nextCaravanMessage){
+        String locationCode = nextCaravanMessage.getLocationCode();
+        Long qualificationSession = queueProviderService.getQualificationSession(locationCode);
         JobNotificationOutput jobNotificationOutput = new JobNotificationOutput(nextCaravanMessage.getPosition(),nextCaravanMessage.getImages());
 
         //this.simpMessagingTemplate.convertAndSend("/topic/notifications/"+qualificationSession, jobNotificationOutput);
         System.out.println("sending to queue viewers: " + jobNotificationOutput);
-        this.simpMessagingTemplate.convertAndSend("/topic/notifications", jobNotificationOutput);
+        this.simpMessagingTemplate.convertAndSend("/topic/notifications/"+locationCode, jobNotificationOutput);
 
     }
 
@@ -62,7 +63,8 @@ public class ImagesListener {
         for (UserQueue userQueue : queues) {
             try {
                 String queueName = userQueue.getQueueName();
-                System.out.println("sending to queue " + queueName + " from topic with body: " + message.getBody(String.class));
+                String body = message.getBody(String.class);
+                //System.out.println("sending to queue " + queueName + " from topic with body: " + body);
                 jmsTemplate.convertAndSend(queueName, nextCaravanMessage);
             } catch (JMSException e) {
                 throw new RuntimeException(e);

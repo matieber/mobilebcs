@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.jms.core.JmsTemplate;
 import org.springframework.lang.Nullable;
 import org.springframework.messaging.converter.MappingJackson2MessageConverter;
 import org.springframework.messaging.simp.stomp.StompHeaders;
@@ -46,36 +47,19 @@ public class QualifierITCase extends AbstractITCase {
     @Value("${images.path}")
     private String imagePath;
 
+    @Value("${images.queue.name}")
+    private String imageQueueName;
 
+    @Autowired
+    private JmsTemplate jmsTemplate;
     @BeforeEach
-    public void init() throws IOException, ExecutionException, InterruptedException, TimeoutException {
+    public void init() throws IOException {
 
 
         FileUtils.deleteDirectory(new File(Paths.get(imagePath).toString()));
         restCaller = new RestCaller(port);
-
     }
 
-
-    public StompSession clientStompSession(
-            WebSocketClient webSocketClient,
-            Integer port
-    ) throws InterruptedException, ExecutionException, TimeoutException {
-        final WebSocketStompClient stompClient = new WebSocketStompClient(webSocketClient);
-        stompClient.setMessageConverter(new MappingJackson2MessageConverter());
-        StompSessionHandlerAdapter handler = new StompSessionHandlerAdapter() {
-            @Override
-            public Type getPayloadType(StompHeaders headers) {
-                return super.getPayloadType(headers);
-            }
-
-            public void handleFrame(StompHeaders headers, @Nullable Object payload) {
-                System.out.println("Received in Adapter client");
-            }
-        };
-        ListenableFuture<StompSession> connect = stompClient.connect("ws://localhost:" + port + "/nextjob", handler);
-        return connect.get(60, TimeUnit.SECONDS);
-    }
 
     @Test
     public void testMultipleQualifiers() throws IOException, InterruptedException {
@@ -94,6 +78,7 @@ public class QualifierITCase extends AbstractITCase {
 
         for (int position = 0; position < 10; position++) {
             restCaller.sendImage(position, LOCATION_CODE);
+            Thread.sleep(1000L);
         }
 
         System.out.println("Llamada 1");

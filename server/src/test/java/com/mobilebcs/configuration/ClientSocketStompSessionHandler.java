@@ -28,7 +28,7 @@ public class ClientSocketStompSessionHandler implements StompSessionHandler {
 
     @Override
     public void handleTransportError(StompSession session, Throwable exception) {
-        System.out.println("subscription transport error");
+        System.out.println("subscription transport error "+exception.getMessage());
     }
 
     @Override
@@ -38,8 +38,8 @@ public class ClientSocketStompSessionHandler implements StompSessionHandler {
 
     @Override
     public void handleFrame(StompHeaders headers, Object payload) {
+        System.out.println("Receive ");
         JobNotificationOutput jobNotificationOutput = (JobNotificationOutput) payload;
-        System.out.println("Receive " + jobNotificationOutput.getPosition());
         stompSessionHandler.handleFrame(headers,payload);
     }
 }

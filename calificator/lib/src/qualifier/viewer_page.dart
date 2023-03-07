@@ -18,7 +18,6 @@ import 'viewer_stomp_client.dart';
 class ViewerPage extends StatefulWidget {
   final User user;
 
-  final socketUrl = 'ws://10.0.2.2:8080/nextjob';
 
   final QualifierJobClientHttp _client;
 

@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 import java.util.UUID;
 
 
-public class TestAfterRestartITCase {
+public class QualificationWithImageAfterRestartITCase {
 
 
     private static final String LOCATION_CODE = "DEFAULT";
@@ -41,7 +41,7 @@ public class TestAfterRestartITCase {
     @Test
     public void testQualifierWithRestart() throws IOException, InterruptedException {
         ApplicationRestarter.start(port);
-        String name = "qualifier1" + UUID.randomUUID();
+        String name = UUID.randomUUID().toString();
         restCaller.createUser(name, UserType.QUALIFIER);
 
 
