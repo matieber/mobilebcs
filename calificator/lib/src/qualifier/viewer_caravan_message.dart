@@ -1,6 +1,5 @@
 import 'dart:typed_data';
 import 'dart:convert';
-import 'package:flutter/widgets.dart';
 
 class ViewerCaravanMessage{
 
@@ -30,8 +29,5 @@ class ViewerCaravanMessage{
     }else{
       return List.empty();
     }
-
-
-
   }
 }

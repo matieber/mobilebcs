@@ -5,6 +5,7 @@ import com.mobilebcs.ServerApp;
 import com.mobilebcs.controller.images.CaravanImage;
 import com.mobilebcs.controller.images.CaravanRequest;
 import org.apache.commons.io.FileUtils;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,6 +26,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeoutException;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -35,7 +38,7 @@ public class ImagesITCase extends AbstractITCase {
     @Value("${images.path}")
     private String imagePath;
     public static final String IMAGE_NAME = "primer-plano-lateral-vaca-raza-hereford";
-    public static final String IMAGE_EXTENSION = "jpg";
+    public static final String IMAGE_EXTENSION = "png";
     public static final String SELECT_PATH = "SELECT i.PATH FROM " +
             "IMAGE i INNER JOIN IMAGE_SET iset ON iset.ID = i.IMAGE_SET_ID INNER JOIN " +
             "IMAGE_SET_LOCATION isl ON iset.ID = isl.IMAGE_SET_ID INNER JOIN " +
@@ -46,13 +49,14 @@ public class ImagesITCase extends AbstractITCase {
 
     @Autowired
     private TestRestTemplate restTemplate;
-
+    
     @Autowired
     private NamedParameterJdbcTemplate jdbcTemplate;
 
     @BeforeEach
     public void init() throws IOException {
         FileUtils.deleteDirectory(new File(Paths.get(imagePath).toString()));
+
     }
 
     @Test
@@ -74,9 +78,6 @@ public class ImagesITCase extends AbstractITCase {
         byte[] actualBytes = FileUtils.readFileToByteArray(new File(Paths.get(imagePath, path).toString()));
         Assertions.assertArrayEquals(content, actualBytes);
 
-        Map<String, Object> paramMap = new HashMap<>();
-        paramMap.put("locationId", 1);
-        jdbcTemplate.update("DELETE FROM IMAGE_SET_LOCATION WHERE LOCATION_ID = :locationId", paramMap);
 
 
     }
@@ -96,6 +97,13 @@ public class ImagesITCase extends AbstractITCase {
         Assertions.assertEquals(404, response.getStatusCodeValue());
 
 
+    }
+
+    @AfterEach
+    public void clean() throws IOException, ExecutionException, InterruptedException, TimeoutException {
+        Map<String, Object> paramMap = new HashMap<>();
+
+        jdbcTemplate.update("TRUNCATE TABLE IMAGE_SET_LOCATION", paramMap);
     }
 
 

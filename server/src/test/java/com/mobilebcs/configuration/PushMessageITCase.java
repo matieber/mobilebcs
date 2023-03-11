@@ -2,7 +2,6 @@ package com.mobilebcs.configuration;
 
 import com.mobilebcs.configuration.jms.JmsAutoConfiguration;
 import com.mobilebcs.configuration.jms.JmsProperties;
-import com.mobilebcs.controller.images.CaravanImage;
 import com.mobilebcs.domain.qualifier.NextCaravanMessage;
 import com.mobilebcs.images.ImageEncoder;
 import org.junit.jupiter.api.Disabled;
@@ -31,8 +30,8 @@ import java.util.UUID;
         "activemq.receive-timeout=10000","images.queue.name=IMAGE_QUEUE"})
 public class PushMessageITCase {
 
-    public static final String IMAGE_NAME = "primer-plano-lateral-vaca-raza-hereford";
-    public static final String IMAGE_EXTENSION = "jpg";
+    public static final String IMAGE_PREFIX = "cow_images.";
+    public static final String IMAGE_EXTENSION = "png";
     @Autowired
     private JmsTemplate jmsTemplate;
 
@@ -48,7 +47,7 @@ public class PushMessageITCase {
 
     @Test
     public void testSendImagesToQueue() throws InterruptedException, IOException {
-        for(int i=0;i<10;i++) {
+        for(int i=1;i<=15;i++) {
            sendMessage(i,queueName);
            Thread.sleep(3000L);
         }
@@ -57,7 +56,8 @@ public class PushMessageITCase {
 
     private void sendMessage(int position, String destinationName) throws IOException {
         List<byte[]> list = new ArrayList<>();
-        list.add(ImageEncoder.getImage(IMAGE_NAME, IMAGE_EXTENSION));
+        String imageName = IMAGE_PREFIX + position;
+        list.add(ImageEncoder.getImage(imageName, IMAGE_EXTENSION));
         jmsTemplate.convertAndSend(destinationName,new NextCaravanMessage(position, UUID.randomUUID(),locationCode,list));
     }
 

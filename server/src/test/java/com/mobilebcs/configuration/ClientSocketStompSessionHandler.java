@@ -7,6 +7,7 @@ import org.springframework.messaging.simp.stomp.StompSession;
 import org.springframework.messaging.simp.stomp.StompSessionHandler;
 
 import java.lang.reflect.Type;
+import java.util.List;
 
 public class ClientSocketStompSessionHandler implements StompSessionHandler {
 
@@ -28,7 +29,7 @@ public class ClientSocketStompSessionHandler implements StompSessionHandler {
 
     @Override
     public void handleTransportError(StompSession session, Throwable exception) {
-        System.out.println("subscription transport error");
+        System.out.println("subscription transport error "+exception.getMessage());
     }
 
     @Override
@@ -38,8 +39,12 @@ public class ClientSocketStompSessionHandler implements StompSessionHandler {
 
     @Override
     public void handleFrame(StompHeaders headers, Object payload) {
-        JobNotificationOutput jobNotificationOutput = (JobNotificationOutput) payload;
-        System.out.println("Receive " + jobNotificationOutput.getPosition());
+
+        if(payload instanceof List){
+            System.out.println("Receive list");
+        }else{
+            System.out.println("Receive element");
+        }
         stompSessionHandler.handleFrame(headers,payload);
     }
 }

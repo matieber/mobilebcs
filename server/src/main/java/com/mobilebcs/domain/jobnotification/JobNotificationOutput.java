@@ -32,4 +32,11 @@ public class JobNotificationOutput {
     public List<byte[]> getImages() {
         return images;
     }
+
+    @Override
+    public String toString() {
+        return "JobNotificationOutput{" +
+                "position=" + position +
+                '}';
+    }
 }

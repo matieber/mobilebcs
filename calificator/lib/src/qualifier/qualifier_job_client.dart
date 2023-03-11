@@ -20,7 +20,6 @@ class QualifierJobClientHttp  {
     final response = await http.get(uri);
     if (response.statusCode == 200) {
       final responseBody=json.decode(response.body);
-      print(responseBody);
       return CaravanMessage.fromJson(responseBody);
     }else{
       if(response.statusCode == 204){

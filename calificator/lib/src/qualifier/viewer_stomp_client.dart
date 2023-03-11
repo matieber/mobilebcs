@@ -8,6 +8,8 @@ import 'package:stomp_dart_client/stomp_frame.dart';
 
 class ViewerStompClient {
 
+  static const String defaultLocation="DEFAULT";
+
   Function(ViewerCaravanMessage) notifyParent;
 
   StompClient? stompClient;
@@ -34,7 +36,7 @@ class ViewerStompClient {
 
   void onConnect(StompFrame frame) {
     stompClient?.subscribe(
-      destination: '/topic/notifications',
+      destination: '/topic/notifications/$defaultLocation',
       callback: (frame) {
         var responseBody = json.decode(frame.body!);
         ViewerCaravanMessage message = ViewerCaravanMessage.fromJson(

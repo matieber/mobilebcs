@@ -4,6 +4,7 @@ import com.mobilebcs.domain.jobnotification.JobNotificationOutput;
 import com.mobilebcs.domain.qualifier.NextCaravanMessage;
 import com.mobilebcs.domain.session.QueueProviderService;
 import com.mobilebcs.domain.user.UserQueue;
+import org.springframework.context.annotation.Scope;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -13,6 +14,7 @@ import org.springframework.util.CollectionUtils;
 
 import javax.jms.JMSException;
 import javax.jms.Message;
+import java.time.Instant;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
@@ -30,15 +32,16 @@ public class ImagesListener {
     private SimpMessagingTemplate simpMessagingTemplate;
 
 
+    private final Instant id=Instant.now();
 
     public ImagesListener(JmsTemplate jmsTemplate, QueueProviderService queueProviderService, SimpMessagingTemplate simpMessagingTemplate) {
         this.jmsTemplate = jmsTemplate;
         this.queueProviderService = queueProviderService;
-
         this.simpMessagingTemplate = simpMessagingTemplate;
+        System.out.println("id "+id.toEpochMilli());
     }
 
-    @JmsListener(destination = "${images.queue.name}", containerFactory = "jmsListenerContainerFactory")
+    @JmsListener(id="image-listener",destination = "${images.queue.name}", containerFactory = "jmsListenerContainerFactory", concurrency = "1")
     public void listener(Message message) throws JMSException, ExecutionException, InterruptedException, TimeoutException {
 
         NextCaravanMessage nextCaravanMessage = (NextCaravanMessage) jmsTemplate.getMessageConverter().fromMessage(message);
@@ -47,13 +50,14 @@ public class ImagesListener {
         message.acknowledge();
     }
 
-    private void sentJobToViewers(NextCaravanMessage nextCaravanMessage) throws ExecutionException, InterruptedException, TimeoutException {
-        Long qualificationSession = queueProviderService.getQualificationSession(nextCaravanMessage.getLocationCode());
+    private void sentJobToViewers(NextCaravanMessage nextCaravanMessage){
+        String locationCode = nextCaravanMessage.getLocationCode();
+        Long qualificationSession = queueProviderService.getQualificationSession(locationCode);
         JobNotificationOutput jobNotificationOutput = new JobNotificationOutput(nextCaravanMessage.getPosition(),nextCaravanMessage.getImages());
 
         //this.simpMessagingTemplate.convertAndSend("/topic/notifications/"+qualificationSession, jobNotificationOutput);
-        System.out.println("sending to queue viewers: " + jobNotificationOutput);
-        this.simpMessagingTemplate.convertAndSend("/topic/notifications", jobNotificationOutput);
+        System.out.println(id.toEpochMilli()+" sending to queue viewers: " + jobNotificationOutput);
+        this.simpMessagingTemplate.convertAndSend("/topic/notifications/"+locationCode, jobNotificationOutput);
 
     }
 
@@ -62,7 +66,8 @@ public class ImagesListener {
         for (UserQueue userQueue : queues) {
             try {
                 String queueName = userQueue.getQueueName();
-                System.out.println("sending to queue " + queueName + " from topic with body: " + message.getBody(String.class));
+                String body = message.getBody(String.class);
+                //System.out.println("sending to queue " + queueName + " from topic with body: " + body);
                 jmsTemplate.convertAndSend(queueName, nextCaravanMessage);
             } catch (JMSException e) {
                 throw new RuntimeException(e);

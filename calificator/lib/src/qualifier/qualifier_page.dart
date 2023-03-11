@@ -8,6 +8,7 @@ import 'package:calificator/src/ui_model/extension.dart';
 import '../menu/qualificator_side_menu.dart';
 import '../ui_model/alert.dart';
 import '../ui_model/custom_text_button.dart';
+import 'image.dart';
 
 
 class QualifierPage extends StatefulWidget{
@@ -31,14 +32,19 @@ class _QualifierPageState extends State<QualifierPage> {
 
   int position = -1;
 
+  ImageProvider? imageProvider;
+
   void _nextJob(BuildContext context) {
     widget._client.nextJob(widget.user.username).then((value) =>
         setState(
-                ()=> {
+                () {
                   if(value != null){
-                    position = value.position
+                    position = value.position;
+                    if(value.byteImages.isNotEmpty) {
+                      imageProvider=MemoryImage(value.byteImages.first);
+                    }
                   }else{
-                    showAlertDialog(context,"No hay nuevas caravanas")
+                    showAlertDialog(context,"No hay nuevas caravanas");
                   }
               }
       )
@@ -51,6 +57,7 @@ class _QualifierPageState extends State<QualifierPage> {
         body:  Column(
           children: [
             Text(position.toString()),
+            MyImage(imageProvider),
             CustomTextButton(
               "Siguiente",
               voidFunction: () => _nextJob(context),)
@@ -69,29 +76,6 @@ class _QualifierPageState extends State<QualifierPage> {
       backgroundColor: Colors.green,
 
     );
-  }
-  _QualifierPageState() {
-    const duration = Duration(seconds: 10);
-
-/*
-    Timer.periodic(duration, (Timer timer) {
-      widget._client.nextJob(widget.user.username.toString()).then((response) =>
-      {
-        if(response != null && response.isNotEmpty){
-          setState(() {
-            if (response.containsKey("position")) {
-              widget._position = response.remove("position");
-            }
-          })
-        }
-      });
-      /*setState(() {
-        widget._position++;
-        print(widget.user.username.toString()+" "+widget._position.toString());
-      });*/
-
-    });
-    */
   }
 
 }

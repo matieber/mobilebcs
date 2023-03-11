@@ -3,8 +3,11 @@ package com.mobilebcs;
 import com.mobilebcs.controller.user.UserType;
 import com.mobilebcs.restart.ApplicationRestarter;
 import org.apache.commons.io.FileUtils;
+import org.junit.AfterClass;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestClassOrder;
+import org.springframework.test.annotation.DirtiesContext;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +16,8 @@ import java.nio.file.Paths;
 import java.util.UUID;
 
 
-public class TestAfterRestartITCase {
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
+public class QualificationWithImageAfterRestartITCase {
 
 
     private static final String LOCATION_CODE = "DEFAULT";
@@ -41,7 +45,7 @@ public class TestAfterRestartITCase {
     @Test
     public void testQualifierWithRestart() throws IOException, InterruptedException {
         ApplicationRestarter.start(port);
-        String name = "qualifier1" + UUID.randomUUID();
+        String name = UUID.randomUUID().toString();
         restCaller.createUser(name, UserType.QUALIFIER);
 
 
