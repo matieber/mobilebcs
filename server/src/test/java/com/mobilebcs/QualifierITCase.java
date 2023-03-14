@@ -2,33 +2,25 @@ package com.mobilebcs;
 
 import com.mobilebcs.controller.user.UserType;
 import org.apache.commons.io.FileUtils;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jms.core.JmsTemplate;
-import org.springframework.lang.Nullable;
-import org.springframework.messaging.converter.MappingJackson2MessageConverter;
-import org.springframework.messaging.simp.stomp.StompHeaders;
-import org.springframework.messaging.simp.stomp.StompSession;
-import org.springframework.messaging.simp.stomp.StompSessionHandler;
-import org.springframework.messaging.simp.stomp.StompSessionHandlerAdapter;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.util.concurrent.ListenableFuture;
-import org.springframework.web.socket.client.WebSocketClient;
-import org.springframework.web.socket.messaging.WebSocketStompClient;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.UUID;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 
 
 @ActiveProfiles("test")
@@ -52,6 +44,9 @@ public class QualifierITCase extends AbstractITCase {
 
     @Autowired
     private JmsTemplate jmsTemplate;
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
     @BeforeEach
     public void init() throws IOException {
 
@@ -114,16 +109,35 @@ public class QualifierITCase extends AbstractITCase {
         restCaller.createUser(name, UserType.QUALIFIER);
 
         restCaller.joinQualificationSession(name, null, LOCATION_CODE);
-        restCaller.sendImage(1, LOCATION_CODE);
-        restCaller.sendImage(2, LOCATION_CODE);
+        UUID setCode1 = restCaller.sendImage(1, LOCATION_CODE);
+        UUID setCode2 = restCaller.sendImage(2, LOCATION_CODE);
 
 
         restCaller.testNextJob(name, 1);
+        restCaller.testQualify(name,setCode1,2);
+        assertScore(name,setCode1,2);
         restCaller.testNextJob(name, 2);
+        restCaller.testQualify(name,setCode2,3);
+        assertScore(name,setCode2,3);
         restCaller.testNextJob(name, null);
         restCaller.endSession(LOCATION_CODE);
 
 
+    }
+
+    private void assertScore(String userName, UUID setCode,int score) {
+
+        Integer actualScore = jdbcTemplate.queryForObject(
+                "SELECT qs.SCORE from QUALIFIED_SCORE qs " +
+                        "LEFT JOIN USER_QUALIFICATION_SESSION usq ON qs.USER_ID = usq.USER_ID AND qs.QUALIFICATION_SESSION_ID = usq.QUALIFICATION_SESSION_ID " +
+                        "LEFT JOIN USER_LOCATION_QUALIFICATION_SESSION ulqs ON usq.USER_ID = usq.USER_ID AND ulsq.QUALIFICATION_SESSION_ID = usq.QUALIFICATION_SESSION_ID " +
+                        "LEFT JOIN QUALIFICATION_SESSION qsession ON ulqs.QUALIFICATION_SESSION_ID = qsession.ID " +
+                        "LEFT JOIN USER u ON u.ID = ulqs.USER_ID "+
+                        "LEFT JOIN IMAGE_SET_QUALIFICATION_SESSION isql ON qs.IMAGE_SET_ID = isql.IMAGE_SET_ID AND isql.QUALIFICATION_SESSION_ID = qsession.ID "+
+                        "LEFT JOIN IMAGE_SET iset ON iset.ID = isql.IMAGE_SET_ID "+
+                        "WHERE u.USER_NAME = '"+userName+"' AND iset.SET_CODE = '"+setCode.toString()+"'", Integer.class);
+        Assertions.assertNotNull(actualScore);
+        Assertions.assertEquals(score,actualScore);
     }
 
 
