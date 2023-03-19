@@ -127,12 +127,42 @@ public class QualifierITCase extends AbstractITCase {
 
     private void assertScore(String userName, UUID setCode,int score) {
 
+
+
+        Integer integer1 = jdbcTemplate.queryForObject(
+            "SELECT COUNT(qs.SCORE) from QUALIFIED_SCORE qs " +
+                //"LEFT JOIN USER_QUALIFICATION_SESSION usq ON qs.USER_ID = usq.USER_ID AND qs.QUALIFICATION_SESSION_ID = usq.QUALIFICATION_SESSION_ID " +
+                //"LEFT JOIN USER_LOCATION_QUALIFICATION_SESSION ulsq ON usq.USER_ID = usq.USER_ID AND ulsq.QUALIFICATION_SESSION_ID = usq.QUALIFICATION_SESSION_ID " +
+                //"LEFT JOIN QUALIFICATION_SESSION qsession ON ulsq.QUALIFICATION_SESSION_ID = qsession.ID " +
+                //"LEFT JOIN USER u ON u.ID = ulsq.USER_ID "+
+                "LEFT JOIN IMAGE_SET_QUALIFICATION_SESSION isql ON qs.IMAGE_SET_ID = isql.IMAGE_SET_ID " +
+                //"AND isql.QUALIFICATION_SESSION_ID = qsession.ID "+
+                "LEFT JOIN IMAGE_SET iset ON iset.ID = isql.IMAGE_SET_ID " +
+                //"WHERE u.USER_NAME = '"+userName+"' " +
+                "AND iset.SET_CODE = '" + setCode.toString() + "'", Integer.class);
+
+        Assertions.assertTrue(integer1>0);
+
+        Integer integer = jdbcTemplate.queryForObject(
+            "SELECT COUNT(qs.SCORE) from QUALIFIED_SCORE qs " +
+                "LEFT JOIN USER_QUALIFICATION_SESSION usq ON qs.USER_ID = usq.USER_ID AND qs.QUALIFICATION_SESSION_ID = usq.QUALIFICATION_SESSION_ID " +
+                //"LEFT JOIN USER_LOCATION_QUALIFICATION_SESSION ulsq ON usq.USER_ID = usq.USER_ID AND ulsq.QUALIFICATION_SESSION_ID = usq.QUALIFICATION_SESSION_ID " +
+                //"LEFT JOIN QUALIFICATION_SESSION qsession ON ulsq.QUALIFICATION_SESSION_ID = qsession.ID " +
+                "LEFT JOIN QUALIFICATION_SESSION qsession ON usq.QUALIFICATION_SESSION_ID = qsession.ID " +
+                //"LEFT JOIN USER u ON u.ID = ulsq.USER_ID "+
+                "LEFT JOIN USER u ON u.ID = usq.USER_ID "+
+                "LEFT JOIN IMAGE_SET_QUALIFICATION_SESSION isql ON qs.IMAGE_SET_ID = isql.IMAGE_SET_ID AND isql.QUALIFICATION_SESSION_ID = qsession.ID " +
+                "LEFT JOIN IMAGE_SET iset ON iset.ID = isql.IMAGE_SET_ID " +
+                "WHERE u.USER_NAME = '"+userName+"' " +
+                "AND iset.SET_CODE = '" + setCode.toString() + "'", Integer.class);
+        Assertions.assertTrue(integer>0);
+
         Integer actualScore = jdbcTemplate.queryForObject(
                 "SELECT qs.SCORE from QUALIFIED_SCORE qs " +
                         "LEFT JOIN USER_QUALIFICATION_SESSION usq ON qs.USER_ID = usq.USER_ID AND qs.QUALIFICATION_SESSION_ID = usq.QUALIFICATION_SESSION_ID " +
-                        "LEFT JOIN USER_LOCATION_QUALIFICATION_SESSION ulqs ON usq.USER_ID = usq.USER_ID AND ulsq.QUALIFICATION_SESSION_ID = usq.QUALIFICATION_SESSION_ID " +
-                        "LEFT JOIN QUALIFICATION_SESSION qsession ON ulqs.QUALIFICATION_SESSION_ID = qsession.ID " +
-                        "LEFT JOIN USER u ON u.ID = ulqs.USER_ID "+
+                        "LEFT JOIN USER_LOCATION_QUALIFICATION_SESSION ulsq ON usq.USER_ID = usq.USER_ID AND ulsq.QUALIFICATION_SESSION_ID = usq.QUALIFICATION_SESSION_ID " +
+                        "LEFT JOIN QUALIFICATION_SESSION qsession ON ulsq.QUALIFICATION_SESSION_ID = qsession.ID " +
+                        "LEFT JOIN USER u ON u.ID = ulsq.USER_ID "+
                         "LEFT JOIN IMAGE_SET_QUALIFICATION_SESSION isql ON qs.IMAGE_SET_ID = isql.IMAGE_SET_ID AND isql.QUALIFICATION_SESSION_ID = qsession.ID "+
                         "LEFT JOIN IMAGE_SET iset ON iset.ID = isql.IMAGE_SET_ID "+
                         "WHERE u.USER_NAME = '"+userName+"' AND iset.SET_CODE = '"+setCode.toString()+"'", Integer.class);
