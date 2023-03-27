@@ -24,15 +24,12 @@ import java.util.Map;
 public class ImagesService {
 
     private String imageQueueName;
-    private final QualificationSessionService qualificationSessionService;
-
     private final ImageRepository imageRepository;
     private final FileService fileService;
 
     private final JmsTemplate jmsTemplate;
 
-    public ImagesService(QualificationSessionService qualificationSessionService, ImageRepository imageRepository, FileService fileService, JmsTemplate jmsTemplate, @Value("${images.queue.name}") String imageQueueName) {
-        this.qualificationSessionService = qualificationSessionService;
+    public ImagesService(ImageRepository imageRepository, FileService fileService, JmsTemplate jmsTemplate, @Value("${images.queue.name}") String imageQueueName) {
         this.imageRepository = imageRepository;
         this.fileService = fileService;
         this.jmsTemplate = jmsTemplate;

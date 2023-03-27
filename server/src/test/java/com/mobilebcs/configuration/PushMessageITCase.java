@@ -1,5 +1,6 @@
 package com.mobilebcs.configuration;
 
+import com.mobilebcs.RestCaller;
 import com.mobilebcs.configuration.jms.JmsAutoConfiguration;
 import com.mobilebcs.configuration.jms.JmsProperties;
 import com.mobilebcs.domain.qualifier.NextCaravanMessage;
@@ -35,6 +36,8 @@ public class PushMessageITCase {
     @Autowired
     private JmsTemplate jmsTemplate;
 
+    private RestCaller restCaller;
+
     @Value("${images.queue.name}")
     private String queueName;
 
@@ -47,8 +50,9 @@ public class PushMessageITCase {
 
     @Test
     public void testSendImagesToQueue() throws InterruptedException, IOException {
-        for(int i=1;i<=15;i++) {
-           sendMessage(i,queueName);
+        restCaller=new RestCaller(8080);
+        for(int i=1;i<=2;i++) {
+            restCaller.sendRealImage(i,locationCode);
            Thread.sleep(3000L);
         }
 

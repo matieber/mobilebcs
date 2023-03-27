@@ -4,6 +4,8 @@ import java.util.Objects;
 
 public class UserEntity {
 
+    private int id;
+
     private String userName;
     private String type;
 
@@ -12,6 +14,19 @@ public class UserEntity {
     public UserEntity(String userName, String type) {
         this.userName = userName;
         this.type = type;
+    }
+    public UserEntity(int id,String userName, String type) {
+        this.id = id;
+        this.userName = userName;
+        this.type = type;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUserName() {
@@ -30,16 +45,17 @@ public class UserEntity {
         this.type = type;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        UserEntity user = (UserEntity) o;
-        return Objects.equals(userName, user.userName) && type == user.type;
+        UserEntity that = (UserEntity) o;
+        return id == that.id && Objects.equals(userName, that.userName) && Objects.equals(type, that.type);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userName, type);
+        return Objects.hash(id, userName, type);
     }
 }

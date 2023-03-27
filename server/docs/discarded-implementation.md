@@ -31,3 +31,7 @@ Si hay dos aplicaciones va a haber dos ImageListener. Esto producirá:
 
 Si la aplicación móvil pierde su estado (por ejemplo si se fuerza la salida de la aplicación o si se reinicia el móvil), No se podrá finalizar la sesión de calificación
 
+## Persistencia de imágenes
+
+* Las imágenes no quedarán asociadas a una sesión de calificación debido a que pueden recibirse imágenes donde no se ha comenzado la sessión. Las imágenes quedarán asociadas a una locación en una fecha dada. Si la sessión ha comenzado, cuando el clasificador califique la imágen, quedará asociada a una sesión de clasificación.
+* Las imágenes que lleguen para clasificar por el calificador serán aquellas que arriben al server una vez comenzada la calificación. Pero la predicción automática será realizada y el observador podrá visualizarla.  

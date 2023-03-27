@@ -43,6 +43,33 @@ public class QualificationSessionService {
         return qualificationSessionId;
     }
 
+    public void endQualificationSession(String locationCode) throws InvalidLocalizationException, SQLException, SessionNotStartedException {
+
+        Integer localizationId = getLocalizationId(locationCode);
+
+        Long qualificationSessionId = getCurrentQualificationSessionInSession(localizationId);
+
+        if (qualificationSessionId != null) {
+            HashMap<String, Object> paramMap = new HashMap<>();
+            paramMap.put("qualificationSessionId", qualificationSessionId);
+            int deleted = namedParameterJdbcTemplate.update("DELETE FROM USER_LOCATION_QUALIFICATION_SESSION WHERE QUALIFICATION_SESSION_ID = :qualificationSessionId", paramMap);
+            if (deleted == 0) {
+                throw new SQLException("Error terminando sesión de calificador");
+            }
+
+            deleted = namedParameterJdbcTemplate.update("DELETE FROM LOCATION_QUALIFICATION_SESSION WHERE QUALIFICATION_SESSION_ID = :qualificationSessionId", paramMap);
+            if (deleted == 0) {
+                throw new SQLException("Error terminando sesión de calificador");
+            }
+
+            paramMap = new HashMap<>();
+            paramMap.put("locationId", localizationId);
+            namedParameterJdbcTemplate.update("DELETE FROM IMAGE_SET_LOCATION WHERE LOCATION_ID = :locationId", paramMap);
+        } else {
+            throw new SessionNotStartedException("No existe sesión de calificación iniciada en la locación dada");
+        }
+    }
+
     private Integer getLocalizationId(String locationCode) throws InvalidLocalizationException {
         HashMap<String, Object> paramMap = new HashMap<>();
         paramMap.put("locationCode", locationCode);
@@ -87,33 +114,6 @@ public class QualificationSessionService {
             throw exception;
         }
 
-    }
-
-    public void endQualificationSession(String locationCode) throws InvalidLocalizationException, SQLException, SessionNotStartedException {
-
-        Integer localizationId = getLocalizationId(locationCode);
-
-        Long qualificationSessionId = getCurrentQualificationSessionInSession(localizationId);
-
-        if (qualificationSessionId != null) {
-            HashMap<String, Object> paramMap = new HashMap<>();
-            paramMap.put("qualificationSessionId", qualificationSessionId);
-            int deleted = namedParameterJdbcTemplate.update("DELETE FROM USER_LOCATION_QUALIFICATION_SESSION WHERE QUALIFICATION_SESSION_ID = :qualificationSessionId", paramMap);
-            if (deleted == 0) {
-                throw new SQLException("Error terminando sesión de calificador");
-            }
-
-            deleted = namedParameterJdbcTemplate.update("DELETE FROM LOCATION_QUALIFICATION_SESSION WHERE QUALIFICATION_SESSION_ID = :qualificationSessionId", paramMap);
-            if (deleted == 0) {
-                throw new SQLException("Error terminando sesión de calificador");
-            }
-
-            paramMap = new HashMap<>();
-            paramMap.put("locationId", localizationId);
-            namedParameterJdbcTemplate.update("DELETE FROM IMAGE_SET_LOCATION WHERE LOCATION_ID = :locationId", paramMap);
-        } else {
-            throw new SessionNotStartedException("No existe sesión de calificación iniciada en la locación dada");
-        }
     }
 
     private Long getCurrentQualificationSessionInSession(Integer locationId) {

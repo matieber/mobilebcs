@@ -78,45 +78,6 @@ class QualifierSessionPage extends StatelessWidget{
     );
   }
 
-  /*
-class _QualifierPageState extends State<QualifierPage> {
-
-
-
-  @override
-  Widget build(BuildContext context) {
-    
-    return Column(
-      children: [
-        Text(widget._position.toString()),
-
-      ],
-    );
-  }
-
-  _QualifierPageState(){
-    const duration = Duration(seconds: 10);
-
-
-    Timer.periodic(duration, (Timer timer) {
-      widget._client.nextJob(widget.user.username.toString()).then((response) => {
-        if(response!=null && response.isNotEmpty){
-          setState(() {
-            if(response.containsKey("position")){
-              widget._position=response.remove("position");
-            }
-          })
-        }
-      });
-      /*setState(() {
-        widget._position++;
-        print(widget.user.username.toString()+" "+widget._position.toString());
-      });*/
-
-    });
-  }
-  */
-
 
    Future<User> _startQualificationSession(BuildContext context,String serverUrl,String userName) {
     var client=QualificationSessionHttp(serverUrl);

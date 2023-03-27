@@ -18,7 +18,7 @@ public class UserRepository {
     private static final Logger LOG = LoggerFactory.getLogger(UserRepository.class);
 
     private static final String INSERT_USER_QUERY = "INSERT INTO `USER`(USER_NAME,TYPE) VALUES(:userName,:type)";
-    private static final String USER_QUERY = "SELECT USER_NAME, TYPE FROM `USER` WHERE USER_NAME = :userName";
+    private static final String USER_QUERY = "SELECT ID, USER_NAME, TYPE FROM `USER` WHERE USER_NAME = :userName";
 
 
     private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;

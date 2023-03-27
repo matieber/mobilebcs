@@ -16,6 +16,8 @@ dependencies:
     sdk: flutter
   http: ^0.13.4
   stomp_dart_client: ^0.4.4
+  horizontal_picker: ^1.2.0
+  loading_animation_widget:
 
 dev_dependencies:
   flutter_test:

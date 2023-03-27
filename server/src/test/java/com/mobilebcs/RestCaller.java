@@ -2,22 +2,25 @@ package com.mobilebcs;
 
 import com.mobilebcs.controller.images.CaravanImage;
 import com.mobilebcs.controller.images.CaravanRequest;
+import com.mobilebcs.controller.qualifier.QualificationRequest;
 import com.mobilebcs.controller.user.UserRequest;
 import com.mobilebcs.controller.user.UserResponse;
 import com.mobilebcs.controller.user.UserType;
 import com.mobilebcs.domain.qualifier.NextCaravanMessage;
 import com.mobilebcs.images.ImageEncoder;
 import org.junit.jupiter.api.Assertions;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 
 public class RestCaller {
@@ -27,12 +30,13 @@ public class RestCaller {
 
 
     private RestTemplate restTemplate;
+    private NamedParameterJdbcTemplate jdbcTemplate;
 
     public RestCaller(int port) {
         restTemplate = new RestTemplateBuilder().rootUri("http://localhost:" + port).build();
     }
 
-    void sendImage(int position, String locationCode) throws IOException {
+    public UUID sendImage(int position, String locationCode) throws IOException {
 
         UUID setCode = UUID.randomUUID();
         List<CaravanImage> list = new ArrayList<>();
@@ -42,6 +46,22 @@ public class RestCaller {
 
         ResponseEntity<Void> response = restTemplate.postForEntity("/location/" + locationCode + "/caravan", new CaravanRequest(position, list, setCode), Void.class);
         Assertions.assertEquals(204, response.getStatusCodeValue());
+        return setCode;
+
+
+    }
+
+    public UUID sendRealImage(int position, String locationCode) throws IOException {
+
+        UUID setCode = UUID.randomUUID();
+        List<CaravanImage> list = new ArrayList<>();
+        String imageName = "cow_images."+position;
+        byte[] content = ImageEncoder.getImage(imageName, IMAGE_EXTENSION);
+        list.add(new CaravanImage(content, IMAGE_NAME+ "." + IMAGE_EXTENSION));
+
+        ResponseEntity<Void> response = restTemplate.postForEntity("/location/" + locationCode + "/caravan", new CaravanRequest(position, list, setCode), Void.class);
+        Assertions.assertEquals(204, response.getStatusCodeValue());
+        return setCode;
 
 
     }
@@ -85,5 +105,11 @@ public class RestCaller {
         UserRequest userRequest = new UserRequest(userName, qualifier.name());
         ResponseEntity<Void> creationResponse = restTemplate.exchange("/user", HttpMethod.POST, new HttpEntity<>(userRequest, null), Void.class);
         Assertions.assertEquals(201, creationResponse.getStatusCodeValue());
+    }
+
+    void testQualify(String userName, UUID setId, int score){
+        ResponseEntity<Void> response = restTemplate.exchange("/qualifier/" + userName + "/setCode/" + setId, HttpMethod.PUT, new HttpEntity<>(new QualificationRequest(score), new LinkedMultiValueMap<>()), Void.class);
+        Assertions.assertEquals(204,response.getStatusCodeValue());
+
     }
 }

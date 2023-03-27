@@ -38,6 +38,9 @@ class _MyImageState extends State<MyImage> {
         oldImageStream?.removeListener(listener);
         _imageStream!.addListener(listener);
       }
+    }else{
+      _imageStream=null;
+      _imageInfo=null;
     }
   }
 
