@@ -35,3 +35,9 @@ flutter:
     # Add assets from the images directory to the application.
     - assets/images/
     - assets/my_config.json
+    - flutter_assets/bcs_classifier_preProcDE-channels.tflite
+    - flutter_assets/bcslabel.txt
+    - flutter_assets/detect.tflite
+    - flutter_assets/kite.jpg
+    - flutter_assets/labelmap.txt
+    - flutter_assets/transfer.txt

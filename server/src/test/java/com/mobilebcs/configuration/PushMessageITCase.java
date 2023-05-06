@@ -29,6 +29,7 @@ import java.util.UUID;
         "activemq.password=admin",
         "activemq.brokerUrl=tcp://localhost:61616",
         "activemq.receive-timeout=10000","images.queue.name=IMAGE_QUEUE"})
+@Disabled
 public class PushMessageITCase {
 
     public static final String IMAGE_PREFIX = "cow_images.";

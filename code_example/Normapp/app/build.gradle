@@ -17,7 +17,7 @@ android {
             abiFilters "armeabi-v7a", "arm64-v8a"
         }
         python {
-            buildPython "/home/mhirsch/miniconda3/envs/py38/bin/python"
+            buildPython "$System.env.PYTHON_3_8_HOME/python3.8"
             pip {
                 install "opencv-python"
                 install "imageio==2.13.3"
