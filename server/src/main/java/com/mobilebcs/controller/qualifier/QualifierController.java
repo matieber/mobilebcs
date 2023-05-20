@@ -34,10 +34,8 @@ public class QualifierController {
         NextCaravanMessage job = jobConsumerService.nextJob(identificationName);
         ResponseEntity<NextCaravanMessage> responseEntity;
         if(job!=null){
-            System.out.println("Next animal for "+identificationName+" is "+job.getSetId());
             responseEntity= ResponseEntity.ok(job);
         }else {
-            System.out.println("Next animal for "+identificationName+" is empty");
             responseEntity=ResponseEntity.noContent().build();
         }
         return responseEntity;

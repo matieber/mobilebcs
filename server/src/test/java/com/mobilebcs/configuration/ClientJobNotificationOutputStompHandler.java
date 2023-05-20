@@ -1,20 +1,26 @@
 package com.mobilebcs.configuration;
 
 import com.mobilebcs.domain.jobnotification.JobNotificationOutput;
+import com.mobilebcs.domain.jobnotification.ScoreJobNotification;
 import org.springframework.messaging.simp.stomp.StompCommand;
 import org.springframework.messaging.simp.stomp.StompHeaders;
 import org.springframework.messaging.simp.stomp.StompSession;
 import org.springframework.messaging.simp.stomp.StompSessionHandler;
 
 import java.lang.reflect.Type;
-import java.util.List;
 
-public class ClientSocketStompSessionHandler implements StompSessionHandler {
+public class ClientJobNotificationOutputStompHandler implements StompSessionHandler {
 
     private final StompSessionHandler stompSessionHandler;
+    private final StompSession stompSession;
+    private final String location;
+    private String viewerName;
 
-    public ClientSocketStompSessionHandler(StompSessionHandler stompSessionHandler) {
+    public ClientJobNotificationOutputStompHandler(StompSessionHandler stompSessionHandler, StompSession stompSession, String location, String viewerName) {
         this.stompSessionHandler=stompSessionHandler;
+        this.stompSession = stompSession;
+        this.location = location;
+        this.viewerName = viewerName;
     }
 
     @Override
@@ -39,12 +45,17 @@ public class ClientSocketStompSessionHandler implements StompSessionHandler {
 
     @Override
     public void handleFrame(StompHeaders headers, Object payload) {
+        if(payload instanceof JobNotificationOutput) {
+            System.out.println("Handle message "+this.viewerName+" "+(((JobNotificationOutput) payload).getPosition()));
+            stompSessionHandler.handleFrame(headers,payload);
+            JobNotificationOutput jobNotificationOutput = (JobNotificationOutput) payload;
+            if (jobNotificationOutput.getPredictor().equals(viewerName)) {
+                double score = 3;
+                ScoreJobNotification scoreJobNotification = new ScoreJobNotification(jobNotificationOutput.getPosition(), location, score, viewerName);
 
-        if(payload instanceof List){
-            System.out.println("Receive list");
-        }else{
-            System.out.println("Receive element");
+                stompSession.send("/app/score", scoreJobNotification);
+
+            }
         }
-        stompSessionHandler.handleFrame(headers,payload);
     }
 }

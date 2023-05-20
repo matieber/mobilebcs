@@ -8,6 +8,7 @@ public class JobNotificationOutput {
 
     List<byte[]> images;
 
+    private String predictor;
 
     private JobNotificationOutput() {
     }
@@ -15,6 +16,7 @@ public class JobNotificationOutput {
     public JobNotificationOutput(Integer position,List<byte[]> images) {
         this.position = position;
         this.images=images;
+        this.predictor=predictor;
     }
 
     public Integer getPosition() {
@@ -31,6 +33,14 @@ public class JobNotificationOutput {
 
     public List<byte[]> getImages() {
         return images;
+    }
+
+    public String getPredictor() {
+        return predictor;
+    }
+
+    public void setPredictor(String predictor) {
+        this.predictor = predictor;
     }
 
     @Override

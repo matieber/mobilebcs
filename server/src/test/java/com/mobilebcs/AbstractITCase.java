@@ -10,7 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 
 
 @ContextConfiguration(initializers = AbstractITCase.Initializer.class)
-@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 public abstract class AbstractITCase {
 
 
