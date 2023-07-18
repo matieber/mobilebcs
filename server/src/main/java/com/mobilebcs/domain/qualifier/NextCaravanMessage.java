@@ -5,8 +5,9 @@ import java.util.UUID;
 
 public class NextCaravanMessage {
 
+    private String identification;
     private Integer position;
-    private UUID setId;
+    private UUID setCode;
 
     private String locationCode;
 
@@ -14,11 +15,12 @@ public class NextCaravanMessage {
 
     private NextCaravanMessage(){}
 
-    public NextCaravanMessage(Integer position, UUID setId, String locationCode, List<byte[]> images) {
+    public NextCaravanMessage(Integer position, UUID setCode, String locationCode, List<byte[]> images,String identification) {
         this.position=position;
-        this.setId = setId;
+        this.setCode = setCode;
         this.locationCode =locationCode;
         this.images=images;
+        this.identification =identification;
     }
 
     public Integer getPosition() {
@@ -29,12 +31,12 @@ public class NextCaravanMessage {
         this.position = position;
     }
 
-    public UUID getSetId() {
-        return setId;
+    public UUID getSetCode() {
+        return setCode;
     }
 
-    public void setSetId(UUID setId) {
-        this.setId = setId;
+    public void setSetCode(UUID setCode) {
+        this.setCode = setCode;
     }
 
 
@@ -52,5 +54,13 @@ public class NextCaravanMessage {
 
     public void setImages(List<byte[]> images) {
         this.images = images;
+    }
+
+    public String getIdentification() {
+        return identification;
+    }
+
+    public void setIdentification(String identification) {
+        this.identification = identification;
     }
 }

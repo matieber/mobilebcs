@@ -4,15 +4,17 @@ import 'dart:convert';
 class CaravanMessage{
 
     final int position;
-    final String? setId;
+    final String identification;
+    final String? setCode;
     final String? locationCode;
     final List<Uint8List> byteImages;
 
-  CaravanMessage(this.position, this.setId, this.locationCode,this.byteImages);
+  CaravanMessage(this.position, this.identification, this.setCode, this.locationCode,this.byteImages);
 
   CaravanMessage.fromJson(Map<String,dynamic> json):
           position = json['position'],
-          setId = json['setId'],
+          identification = json['identification'],
+          setCode = json['setCode'],
           locationCode =  json['locationCode'],
           byteImages = convert(json);
 

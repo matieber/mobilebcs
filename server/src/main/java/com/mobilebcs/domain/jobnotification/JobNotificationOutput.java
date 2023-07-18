@@ -1,22 +1,27 @@
 package com.mobilebcs.domain.jobnotification;
 
 import java.util.List;
+import java.util.UUID;
 
 public class JobNotificationOutput {
 
+    private UUID setCode;
     private Integer position;
 
     List<byte[]> images;
 
     private String predictor;
 
+    private String identification;
+
     private JobNotificationOutput() {
     }
 
-    public JobNotificationOutput(Integer position,List<byte[]> images) {
+    public JobNotificationOutput(UUID setCode, Integer position, List<byte[]> images, String identification) {
+        this.setCode = setCode;
         this.position = position;
         this.images=images;
-        this.predictor=predictor;
+        this.identification = identification;
     }
 
     public Integer getPosition() {
@@ -31,6 +36,10 @@ public class JobNotificationOutput {
         this.images=images;
     }
 
+    public UUID getSetCode() {
+        return setCode;
+    }
+
     public List<byte[]> getImages() {
         return images;
     }
@@ -41,6 +50,14 @@ public class JobNotificationOutput {
 
     public void setPredictor(String predictor) {
         this.predictor = predictor;
+    }
+
+    public String getIdentification() {
+        return identification;
+    }
+
+    public void setIdentification(String identification) {
+        this.identification = identification;
     }
 
     @Override

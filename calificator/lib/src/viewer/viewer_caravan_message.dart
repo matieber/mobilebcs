@@ -6,17 +6,21 @@ class ViewerCaravanMessage{
     final int position;
     final List<Uint8List> byteImages;
     final String predictor;
+    final String setCode;
+    final String identification;
 
-  ViewerCaravanMessage(this.position,this.byteImages,this.predictor);
+  ViewerCaravanMessage(this.position,this.identification,this.byteImages,this.predictor,this.setCode);
 
   ViewerCaravanMessage.fromJson(Map<String,dynamic> json):
           position = json['position'],
           predictor = json['predictor'],
+          identification=json['identification'],
+          setCode = json['setCode'],
           byteImages=convert(json);
 
     @override
     String toString() {
-      return "($position,$predictor,$byteImages)";
+      return "($position,$predictor,$byteImages,$setCode)";
     }
 
   static List<Uint8List> convert(Map<String,dynamic> json) {

@@ -23,6 +23,7 @@ public class ViewerService  {
 
 
     public void addViewer(ViewerInfo viewerInfo) {
+        System.out.println("adding viewer "+viewerInfo.getName());
         mapByLocationCode.putIfAbsent(viewerInfo.getLocationCode(), new ViewerPerLocation(simpMessagingTemplate,viewerInfo.getLocationCode(),2));
         mapByLocationCode.get(viewerInfo.getLocationCode()).add(viewerInfo);
         mapBySessionId.put(viewerInfo.getSessionId(), viewerInfo);
@@ -35,6 +36,8 @@ public class ViewerService  {
             if (viewerInfos != null) {
                 viewerInfos.remove(sessionId);
             }
+        }else{
+            System.out.println("map by session is null");
         }
     }
 

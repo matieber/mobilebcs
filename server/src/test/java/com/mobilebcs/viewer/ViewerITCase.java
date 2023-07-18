@@ -1,18 +1,25 @@
-package com.mobilebcs;
+package com.mobilebcs.viewer;
 
+import com.mobilebcs.AbstractITCase;
+import com.mobilebcs.RestCaller;
+import com.mobilebcs.ServerApp;
 import com.mobilebcs.configuration.ClientJobNotificationOutputStompHandler;
 import com.mobilebcs.configuration.ClientScoreJobNotificationStompHandler;
+import com.mobilebcs.controller.prediction.SearchType;
 import com.mobilebcs.controller.user.UserType;
 import com.mobilebcs.domain.jobnotification.JobNotificationOutput;
 import com.mobilebcs.domain.jobnotification.ScoreJobNotification;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
@@ -39,6 +46,7 @@ import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+import org.testcontainers.shaded.org.apache.commons.lang.RandomStringUtils;
 
 import static org.mockito.Mockito.timeout;
 
@@ -46,15 +54,12 @@ import static org.mockito.Mockito.timeout;
 @ActiveProfiles("test")
 @SpringBootTest(classes = {ServerApp.class},webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @ExtendWith(MockitoExtension.class)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ViewerITCase extends AbstractITCase {
 
-
     private static final String LOCATION_CODE = "DEFAULT";
-
-
     @LocalServerPort
     private int port;
-
     private RestCaller restCaller;
 
     @Value("${images.path}")
@@ -63,7 +68,6 @@ public class ViewerITCase extends AbstractITCase {
 
     @Autowired
     private WebSocketClient webSocketClient;
-
     @Mock
     private StompSessionHandler stompSessionHandler;
     @Mock
@@ -74,12 +78,19 @@ public class ViewerITCase extends AbstractITCase {
     private ArgumentCaptor<Object> objectArgumentCaptor2;
     @Captor
     private ArgumentCaptor<Object> objectArgumentCaptor3;
-    @BeforeEach
-    public void init() throws IOException, ExecutionException, InterruptedException, TimeoutException {
+    @Autowired
+    private ViewerAssertion viewerAssertion;
 
+    private SearchPredictionUtil searchPredictionUtil;
+
+    @BeforeEach
+    public void init() throws IOException {
 
         FileUtils.deleteDirectory(new File(Paths.get(imagePath).toString()));
         restCaller = new RestCaller(port);
+        searchPredictionUtil=new SearchPredictionUtil(restCaller);
+        Mockito.reset(stompSessionHandler,stompSessionHandler2);
+
 
     }
 
@@ -95,11 +106,30 @@ public class ViewerITCase extends AbstractITCase {
     }
 
     @Test
-    public void predictAndSent() throws IOException, InterruptedException, ExecutionException, TimeoutException {
+    @Order(1)
+    public void predictionInASessionWithReceptorValidation() throws IOException, InterruptedException, ExecutionException, TimeoutException {
+        searchPredictionUtil.testSearchPredictionNoContent(SearchType.LAST_QUALIFICATION);
+        searchPredictionUtil.testSearchPredictionNoContent(SearchType.CURRENT_QUALIFICATION);
+        LocalDateTime beforeQualification = LocalDateTime.now();
+        Thread.sleep(1000L);
+        long qualificationSessionId = testPredictionWithSession();
+        Thread.sleep(1000L);
+        LocalDateTime afterQualification = LocalDateTime.now();
+        searchPredictionUtil.testSearchPredictionNoContent(SearchType.CURRENT_QUALIFICATION);
+        searchPredictionUtil.testSearchDiagram(SearchType.LAST_QUALIFICATION,1,qualificationSessionId,beforeQualification,afterQualification);
+
+
+    }
+
+    private long testPredictionWithSession() throws ExecutionException, InterruptedException, TimeoutException, IOException {
         Mockito.doNothing().when(stompSessionHandler).handleFrame(Mockito.any(),objectArgumentCaptor.capture());
         Mockito.doNothing().when(stompSessionHandler2).handleFrame(Mockito.any(),objectArgumentCaptor2.capture());
+        String qualifier = "qualifier1" + UUID.randomUUID();
+        restCaller.createUser(qualifier, UserType.QUALIFIER);
+        long qualificationSession = restCaller.joinQualificationSession(qualifier, null, LOCATION_CODE);
         List<SubscribedViewer> viewers = getSubscribedViewer();
-        restCaller.sendImage(1, LOCATION_CODE);
+        String identification = RandomStringUtils.randomAlphanumeric(6).toUpperCase();
+        UUID uuid = restCaller.sendImage(1, LOCATION_CODE, identification);
 
         Mockito.verify(stompSessionHandler,timeout(10000L).times(1)).handleFrame(Mockito.any(),Mockito.any(JobNotificationOutput.class));
         Mockito.verify(stompSessionHandler2,timeout(10000L).times(1)).handleFrame(Mockito.any(),Mockito.any(JobNotificationOutput.class));
@@ -117,42 +147,54 @@ public class ViewerITCase extends AbstractITCase {
             Mockito.verify(stompSessionHandler2,Mockito.times(1)).handleFrame(
                 Mockito.any(),Mockito.any(ScoreJobNotification.class)
             );
-            validateScore(objectArgumentCaptor2);
+            viewerAssertion.assertScore(objectArgumentCaptor2,LOCATION_CODE,3d);
         }else{
             Assertions.assertEquals(viewers.get(1).viewer,predictor);
             Mockito.verify(stompSessionHandler,Mockito.times(1)).handleFrame(
                 Mockito.any(),Mockito.any(ScoreJobNotification.class)
             );
-            validateScore(objectArgumentCaptor);
+            viewerAssertion.assertScore(objectArgumentCaptor,LOCATION_CODE,3d);
 
         }
+        Assertions.assertEquals(identification,jobNotificationOutput1.get().getIdentification());
+        Assertions.assertEquals(identification,jobNotificationOutput2.get().getIdentification());
         Mockito.verifyNoMoreInteractions(stompSessionHandler,stompSessionHandler2);
 
         viewers.get(0).stompSession.disconnect();
         viewers.get(1).stompSession.disconnect();
 
         restCaller.endSession(LOCATION_CODE);
-
-
-    }
-
-    private void validateScore(ArgumentCaptor<Object> argumentCaptor) {
-        Optional<ScoreJobNotification> scoreJobNotification = argumentCaptor.getAllValues().stream().filter(object -> object instanceof ScoreJobNotification).map(o->(ScoreJobNotification)o).findAny();
-        Assertions.assertTrue(scoreJobNotification.isPresent());
-        Assertions.assertEquals(3,scoreJobNotification.get().getScore());
-        Assertions.assertEquals(LOCATION_CODE,scoreJobNotification.get().getLocation());
+        viewerAssertion.assertPersistedPredictionScore(List.of(uuid),qualificationSession,3d);
+        return qualificationSession;
     }
 
     @Test
-    public void testViewer() throws IOException, InterruptedException, ExecutionException, TimeoutException {
+    @Order(2)
+    public void testPredictionMultipleViewers() throws IOException, InterruptedException, ExecutionException, TimeoutException {
+        searchPredictionUtil.testSearchPredictionNoContent(SearchType.CURRENT_QUALIFICATION);
+        List<UUID> imageSetIds = testPredictionWithoutASession();
+        searchPredictionUtil.testSearchDiagram(SearchType.CURRENT_QUALIFICATION,imageSetIds.size());
 
+        LocalDateTime beforeStartDate = LocalDateTime.now();
+        Thread.sleep(1000);
+        long qualificationSessionAssignItToPrediction = createAQualificationSessionAssignItToPrediction(imageSetIds);
+        searchPredictionUtil.testSearchDiagram(SearchType.CURRENT_QUALIFICATION,imageSetIds.size(),qualificationSessionAssignItToPrediction,beforeStartDate,null);
+        restCaller.endSession(LOCATION_CODE);
+        Thread.sleep(1000);
+        LocalDateTime afterEndDate = LocalDateTime.now();
+        searchPredictionUtil.testSearchDiagram(SearchType.LAST_QUALIFICATION,imageSetIds.size(),qualificationSessionAssignItToPrediction,beforeStartDate,afterEndDate);
+        searchPredictionUtil.testSearchPredictionNoContent(SearchType.CURRENT_QUALIFICATION);
+    }
+
+    private List<UUID> testPredictionWithoutASession() throws ExecutionException, InterruptedException, TimeoutException, IOException {
         Mockito.doNothing().when(stompSessionHandler).handleFrame(Mockito.any(),objectArgumentCaptor.capture());
         Mockito.doNothing().when(stompSessionHandler2).handleFrame(Mockito.any(),objectArgumentCaptor2.capture());
         List<SubscribedViewer> viewers = getSubscribedViewer();
 
         Thread.sleep(1000);
+        List<UUID> imageSetIds=new ArrayList<>();
         for (int position = 1; position <= 10; position++) {
-            restCaller.sendImage(position, LOCATION_CODE);
+            imageSetIds.add(restCaller.sendImage(position, LOCATION_CODE, RandomStringUtils.randomAlphanumeric(6).toUpperCase()));
         }
 
 
@@ -167,24 +209,29 @@ public class ViewerITCase extends AbstractITCase {
         viewers.get(0).subscribe.unsubscribe();
         viewers.get(0).subscribeScore.unsubscribe();
         Thread.sleep(1000);
-        restCaller.sendImage(11, LOCATION_CODE);
-
         Mockito.reset(stompSessionHandler2);
+        restCaller.sendImage(11, LOCATION_CODE, RandomStringUtils.randomAlphanumeric(6).toUpperCase());
+
         Mockito.verify(stompSessionHandler2,timeout(10000L).times(1)).handleFrame(Mockito.any(),objectArgumentCaptor3.capture());
         testNotification(objectArgumentCaptor3,1, 1, 11, viewers.get(1).viewer);
         viewers.get(0).stompSession.disconnect();
         viewers.get(1).stompSession.disconnect();
-        restCaller.endSession(LOCATION_CODE);
         Mockito.verifyNoMoreInteractions(stompSessionHandler);
+        viewerAssertion.assertPersistedPredictionScore(imageSetIds,null,3d);
+        return imageSetIds;
     }
 
-    private List<SubscribedViewer> getSubscribedViewer() throws ExecutionException, InterruptedException, TimeoutException {
+    private long createAQualificationSessionAssignItToPrediction(List<UUID> imageSetIds) {
         String qualifier = "qualifier1" + UUID.randomUUID();
         restCaller.createUser(qualifier, UserType.QUALIFIER);
         long qualificationSession = restCaller.joinQualificationSession(qualifier, null, LOCATION_CODE);
+        viewerAssertion.assertPersistedPredictionScore(imageSetIds,qualificationSession,3d);
+        return qualificationSession;
+    }
+
+    private List<SubscribedViewer> getSubscribedViewer() throws ExecutionException, InterruptedException, TimeoutException {
 
         SubscribedViewer viewers1 = getViewer("viewer1", stompSessionHandler);
-
         SubscribedViewer viewers2 = getViewer("viewer2", stompSessionHandler2);
         return List.of(viewers1,viewers2);
     }
@@ -203,19 +250,6 @@ public class ViewerITCase extends AbstractITCase {
         return viewers1;
     }
 
-    private static class SubscribedViewer {
-        public final StompSession.Subscription subscribe;
-        public final String viewer;
-        public final StompSession.Subscription subscribeScore;
-        public final StompSession stompSession;
-
-        public SubscribedViewer(StompSession.Subscription subscribe, String viewer, StompSession.Subscription subscribeScore, StompSession stompSession) {
-            this.subscribe = subscribe;
-            this.viewer = viewer;
-            this.subscribeScore = subscribeScore;
-            this.stompSession=stompSession;
-        }
-    }
 
     private void testNotification(ArgumentCaptor<Object> argumentCaptor, int amountViewer, int imageSize, int startedIndex, String viewer) {
         List<JobNotificationOutput> allValues = argumentCaptor.getAllValues().stream().filter(o->o instanceof JobNotificationOutput).map(o->(JobNotificationOutput)o).collect(Collectors.toList());

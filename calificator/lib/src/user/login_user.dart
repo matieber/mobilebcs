@@ -1,5 +1,5 @@
 import 'package:calificator/src/qualifier/qualifier_session_page.dart';
-import 'package:calificator/src/qualifier/viewer_page.dart';
+import 'package:calificator/src/viewer/viewer_page.dart';
 import 'package:calificator/src/user/login_user_http.dart';
 import 'package:calificator/src/user/user.dart';
 import 'package:calificator/src/user/user_type.dart';
@@ -40,7 +40,9 @@ class LoginUser extends MaterialPageRoute {
                 if (user.userType == UserType.qualifier) {
                   return QualifierSessionPage(serverUrl, user);
                 }else{
-                  return ViewerPage(user, serverUrl);
+                  var newPage = ViewerPage.newPage(serverUrl);
+                  newPage.user=user;
+                  return newPage;
                 }
               }
           )

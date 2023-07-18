@@ -33,13 +33,13 @@ public class ViewerPerLocation {
     public void add(@NotNull ViewerInfo viewerInfo){
         set.add(viewerInfo);
         map.put(viewerInfo.getSessionId(),viewerInfo);
-        System.out.println("added "+viewerInfo.getSessionId()+" "+viewerInfo.getName());
     }
 
     public void remove(@NotNull String sessionId){
-        set.removeIf(viewerInfo -> sessionId.equals(viewerInfo.getSessionId()));
-        map.remove(sessionId);
-        System.out.println("removed "+sessionId);
+        boolean removedFromSet = set.removeIf(viewerInfo ->
+            sessionId.equals(viewerInfo.getSessionId()));
+        ViewerInfo removedFromMap = map.remove(sessionId);
+        System.out.println("removed from set "+removedFromSet+ " and removed from map "+removedFromMap);
     }
 
     public boolean send(JobNotificationOutput jobNotificationOutput) throws InterruptedException {
@@ -48,12 +48,12 @@ public class ViewerPerLocation {
             if(predictedJob!=null) {
                 set.add(predictedJob);
                 jobNotificationOutput.setPredictor(predictedJob.getName());
-                System.out.println("sending to predictor "+predictedJob.getName()+" job with position"+jobNotificationOutput.getPosition());
+                System.out.println("sending to predict "+predictedJob.getName());
                 this.simpMessagingTemplate.convertAndSend("/topic/notifications/" + locationCode + "/" + predictedJob.getName(), jobNotificationOutput);;
                 sent=true;
                 for(ViewerInfo viewerInfo:map.values()){
                     if(!viewerInfo.getSessionId().equals(predictedJob.getSessionId())){
-                        System.out.println("sending to  "+viewerInfo.getName()+" job with position "+jobNotificationOutput.getPosition());
+                        System.out.println("sending to not predict "+ viewerInfo.getName());
                         this.simpMessagingTemplate.convertAndSend("/topic/notifications/" + locationCode + "/" + viewerInfo.getName(), jobNotificationOutput);
                     }
                 }
@@ -64,7 +64,6 @@ public class ViewerPerLocation {
     public void sendScore(ScoreJobNotification scoreJobNotification) {
         for(ViewerInfo viewerInfo:map.values()){
             if(!viewerInfo.getName().equals(scoreJobNotification.getPredictor())){
-                System.out.println("sending score to  "+viewerInfo.getName()+" job with position "+scoreJobNotification.getPosition());
                 this.simpMessagingTemplate.convertAndSend("/topic/notifications/score/" + locationCode + "/" + viewerInfo.getName(), scoreJobNotification);
             }
         }

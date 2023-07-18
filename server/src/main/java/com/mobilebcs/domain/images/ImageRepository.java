@@ -10,6 +10,6 @@ import java.util.Set;
 import java.util.UUID;
 
 public interface ImageRepository {
-    void saveImages(UUID setId, String locationCode, Integer position, Set<Path> imagePaths) throws SQLException, InvalidLocalizationException;
+    void saveImages(UUID setId, String locationCode, Integer position, Set<Path> imagePaths, String name) throws SQLException, InvalidLocalizationException;
 
 }

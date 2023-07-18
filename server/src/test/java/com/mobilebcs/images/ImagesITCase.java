@@ -4,6 +4,8 @@ import com.mobilebcs.AbstractITCase;
 import com.mobilebcs.ServerApp;
 import com.mobilebcs.controller.images.CaravanImage;
 import com.mobilebcs.controller.images.CaravanRequest;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -15,6 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.test.context.ActiveProfiles;
 
@@ -28,7 +31,9 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
+import org.testcontainers.shaded.org.apache.commons.lang.RandomStringUtils;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @ActiveProfiles("test")
@@ -39,7 +44,7 @@ public class ImagesITCase extends AbstractITCase {
     private String imagePath;
     public static final String IMAGE_NAME = "primer-plano-lateral-vaca-raza-hereford";
     public static final String IMAGE_EXTENSION = "png";
-    public static final String SELECT_PATH = "SELECT i.PATH FROM " +
+    public static final String SELECT_PATH = "SELECT i.PATH, iset.IDENTIFICATION FROM " +
             "IMAGE i INNER JOIN IMAGE_SET iset ON iset.ID = i.IMAGE_SET_ID INNER JOIN " +
             "IMAGE_SET_LOCATION isl ON iset.ID = isl.IMAGE_SET_ID INNER JOIN " +
             "LOCATION l ON l.ID = isl.LOCATION_ID " +
@@ -70,12 +75,19 @@ public class ImagesITCase extends AbstractITCase {
         int position = 1;
 
 
-        ResponseEntity<Void> response = restTemplate.postForEntity("/location/" + locationCode + "/caravan", new CaravanRequest(position, list, setCode), Void.class);
+        String identification = RandomStringUtils.randomAlphanumeric(6).toUpperCase();
+        ResponseEntity<Void> response = restTemplate.postForEntity("/location/" + locationCode + "/caravan", new CaravanRequest(position, identification, list, setCode), Void.class);
         Assertions.assertEquals(204, response.getStatusCodeValue());
 
-        String path = jdbcTemplate.getJdbcTemplate().queryForObject(SELECT_PATH, String.class, locationCode, setCode.toString(), position);
-        assertNotNull(path);
-        byte[] actualBytes = FileUtils.readFileToByteArray(new File(Paths.get(imagePath, path).toString()));
+        ImageEntity imageEntity = jdbcTemplate.getJdbcTemplate().queryForObject(SELECT_PATH, (rs, rowNum) -> {
+            String path = rs.getString("PATH");
+            String identification1 = rs.getString("IDENTIFICATION");
+            return new ImageEntity(path, identification1);
+        }, locationCode, setCode.toString(),position);
+        assertNotNull(imageEntity);
+        assertNotNull(imageEntity.getIdentification());
+        assertEquals(identification,imageEntity.getIdentification());
+        byte[] actualBytes = FileUtils.readFileToByteArray(new File(Paths.get(imagePath, imageEntity.getPath()).toString()));
         Assertions.assertArrayEquals(content, actualBytes);
 
 
@@ -93,14 +105,15 @@ public class ImagesITCase extends AbstractITCase {
         int position = 1;
 
 
-        ResponseEntity<Void> response = restTemplate.postForEntity("/location/" + locationCode + "/caravan", new CaravanRequest(position, list, setCode), Void.class);
+        String name = RandomStringUtils.randomAlphanumeric(6).toUpperCase();
+        ResponseEntity<Void> response = restTemplate.postForEntity("/location/" + locationCode + "/caravan", new CaravanRequest(position, name, list, setCode), Void.class);
         Assertions.assertEquals(404, response.getStatusCodeValue());
 
 
     }
 
     @AfterEach
-    public void clean() throws IOException, ExecutionException, InterruptedException, TimeoutException {
+    public void clean() {
         Map<String, Object> paramMap = new HashMap<>();
 
         jdbcTemplate.update("TRUNCATE TABLE IMAGE_SET_LOCATION", paramMap);

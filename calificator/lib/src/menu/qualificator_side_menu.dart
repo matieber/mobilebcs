@@ -15,7 +15,8 @@ class QualificationSideMenu extends StatefulWidget{
 
   final bool endSession;
   final User? user;
-  const QualificationSideMenu(this.serverUrl,{Key? key,this.endSession=false,this.user}) : super(key: key);
+  final Function()? closeFunction;
+  const QualificationSideMenu(this.serverUrl, {Key? key,this.closeFunction,this.endSession=false,this.user}) : super(key: key);
 
   @override
   State<QualificationSideMenu> createState() => _QualificationSideMenuState();
@@ -80,6 +81,9 @@ class _QualificationSideMenuState extends State<QualificationSideMenu> {
             const Icon(Icons.logout),
             'Cerrar',
           voidCallback: (){
+            if(widget.closeFunction!=null){
+              widget.closeFunction?.call();
+            }
             Navigator.of(context).pop();
               Navigator.of(context).pushReplacement(
                   MaterialPageRoute(builder: (context)=> UserPage(widget.serverUrl))

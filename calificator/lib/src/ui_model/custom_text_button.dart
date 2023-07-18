@@ -9,7 +9,7 @@ class CustomTextButton extends StatelessWidget{
   final double height;
   final double fontSize;
   final bool disabled;
-  const CustomTextButton(this.text,{this.voidFunction, this.height=150,this.fontSize=30, this.disabled=false,Key? key}) : super(key: key);
+  const CustomTextButton(this.text,{this.voidFunction, this.height=100,this.fontSize=30, this.disabled=false,Key? key}) : super(key: key);
 
 
 

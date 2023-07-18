@@ -28,17 +28,16 @@ public class WebSocketEventListener {
 
     @EventListener
     private void handleDisconnection(SessionDisconnectEvent event) {
-        Map map = (Map) event.getMessage().getHeaders().get("nativeHeaders");
-        if(map!=null) {
-            String id= (String) event.getMessage().getHeaders().get("simpSessionId");
-            viewerService.removeViewer(id);
-        }
+        System.out.println("removing viewer "+event.getSessionId());
+        viewerService.removeViewer(event.getSessionId());
     }
 
     @EventListener
     private void handleSessionSubscribe(SessionSubscribeEvent event) {
+        System.out.println("adding viewer ");
         String simpDestination = (String) event.getMessage().getHeaders().get("simpDestination");
         String id= (String) event.getMessage().getHeaders().get("simpSessionId");
+        System.out.println("adding viewer with session id "+id);
         if(simpDestination.startsWith("/topic/notifications/")&&!simpDestination.contains("score")){
             String[] split = simpDestination.split("/");
             viewerService.addViewer(new ViewerInfo(id,split[3],split[4]));

@@ -4,22 +4,15 @@ import com.mobilebcs.domain.jobnotification.JobNotificationOutput;
 import com.mobilebcs.domain.qualifier.NextCaravanMessage;
 import com.mobilebcs.domain.session.QueueProviderService;
 import com.mobilebcs.domain.user.UserQueue;
-import com.mobilebcs.domain.viewer.ViewerInfo;
 import com.mobilebcs.domain.viewer.ViewerPerLocation;
 import com.mobilebcs.domain.viewer.ViewerService;
-import java.util.Iterator;
-import java.util.Queue;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.jms.core.JmsTemplate;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Component;
 
 import javax.jms.JMSException;
 import javax.jms.Message;
-import java.time.Instant;
 import java.util.Set;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeoutException;
 
 @Component
 public class ImagesListener {
@@ -48,7 +41,8 @@ public class ImagesListener {
     private void sentJobToViewers(NextCaravanMessage nextCaravanMessage) throws InterruptedException {
         String locationCode = nextCaravanMessage.getLocationCode();
 
-        JobNotificationOutput jobNotificationOutput = new JobNotificationOutput(nextCaravanMessage.getPosition(),nextCaravanMessage.getImages());
+        JobNotificationOutput jobNotificationOutput = new JobNotificationOutput(nextCaravanMessage.getSetCode(),nextCaravanMessage.getPosition(),nextCaravanMessage.getImages(),
+                nextCaravanMessage.getIdentification());
 
         sendToViewer(locationCode, jobNotificationOutput);
 

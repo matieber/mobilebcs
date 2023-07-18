@@ -6,6 +6,8 @@ import java.util.UUID;
 public class CaravanRequest {
 
     private Integer position;
+
+    private String identification;
     private List<CaravanImage> images;
 
     private UUID setId;
@@ -13,8 +15,9 @@ public class CaravanRequest {
 
     public CaravanRequest(){}
 
-    public CaravanRequest(Integer position,List<CaravanImage> images, UUID setId) {
+    public CaravanRequest(Integer position, String identification, List<CaravanImage> images, UUID setId) {
         this.position=position;
+        this.identification = identification;
         this.images = images;
         this.setId = setId;
     }
@@ -41,5 +44,13 @@ public class CaravanRequest {
 
     public void setPosition(Integer position) {
         this.position = position;
+    }
+
+    public String getIdentification() {
+        return identification;
+    }
+
+    public void setIdentification(String identification) {
+        this.identification = identification;
     }
 }

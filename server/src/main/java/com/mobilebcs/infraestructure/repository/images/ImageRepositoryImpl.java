@@ -1,11 +1,9 @@
 package com.mobilebcs.infraestructure.repository.images;
 
-import com.mobilebcs.controller.DefaultExceptionHandler;
 import com.mobilebcs.domain.exception.InvalidLocalizationException;
 import com.mobilebcs.domain.images.ImageRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jdbc.UncategorizedSQLException;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -21,31 +19,32 @@ import java.util.UUID;
 public class ImageRepositoryImpl implements ImageRepository {
 
     private static final Logger LOG = LoggerFactory.getLogger(ImageRepositoryImpl.class);
-    private final String INSERT_SET_QUERY ="INSERT INTO `IMAGE_SET`(SET_CODE) VALUES(:setCode)";
+    private final String INSERT_SET_QUERY ="INSERT INTO `IMAGE_SET`(SET_CODE,IDENTIFICATION) VALUES(:setCode,:identification)";
     private final String INSERT_SET_LOCATION_QUERY ="INSERT INTO `IMAGE_SET_LOCATION`(IMAGE_SET_ID,LOCATION_ID,`POSITION`) VALUES(:id," +
             "(SELECT ID FROM LOCATION WHERE CODE = :locationCode)," +
             ":position)";
     private final String INSERT_IMAGE_QUERY ="INSERT INTO IMAGE(IMAGE_SET_ID, PATH) VALUES(:id,:path)";
-    private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-    private final String schema;
 
-    public ImageRepositoryImpl(NamedParameterJdbcTemplate namedParameterJdbcTemplate, @Value("${spring.datasource.schema}") String schema) {
+
+    private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+
+    public ImageRepositoryImpl(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
         this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
-        this.schema=schema;
     }
 
     @Override
-    public void saveImages(UUID setCode, String locationCode, Integer position, Set<Path> imagePaths) throws SQLException, InvalidLocalizationException {
-        long id = saveImageSet(setCode);
+    public void saveImages(UUID setCode, String locationCode, Integer position, Set<Path> imagePaths, String identification) throws SQLException, InvalidLocalizationException {
+        long id = saveImageSet(setCode,identification);
         saveImageSetLocationId(id, locationCode, position);
         for(Path path:imagePaths) {
             saveImage(id,path);
         }
     }
 
-    private long saveImageSet(UUID setId) throws SQLException {
+    private long saveImageSet(UUID setId, String identification) throws SQLException {
         MapSqlParameterSource paramMap = new MapSqlParameterSource();
         paramMap.addValue("setCode", setId.toString());
+        paramMap.addValue("identification",identification);
 
         GeneratedKeyHolder holder = new GeneratedKeyHolder();
         int update = namedParameterJdbcTemplate.update(INSERT_SET_QUERY, paramMap, holder);
@@ -60,6 +59,7 @@ public class ImageRepositoryImpl implements ImageRepository {
         paramMap.addValue("id", id);
         paramMap.addValue("locationCode", locationCode);
         paramMap.addValue("position", position);
+
 
         try {
             int update = namedParameterJdbcTemplate.update(INSERT_SET_LOCATION_QUERY, paramMap);

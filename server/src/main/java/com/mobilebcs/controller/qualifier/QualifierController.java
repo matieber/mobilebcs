@@ -44,6 +44,7 @@ public class QualifierController {
 
     @PutMapping(value = "/{name}/setCode/{setCode}")
     public ResponseEntity<Void> qualify(@PathVariable("name") String identificationName, @PathVariable("setCode") UUID setCode,@RequestBody QualificationRequest qualificationRequest) throws InvalidOperationException, UserNonexistentException, SQLException {
+        System.out.println("score "+qualificationRequest.getScore());
         qualificationService.qualify(identificationName,setCode,qualificationRequest.getScore());
         return ResponseEntity.noContent().build();
     }

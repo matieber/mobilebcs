@@ -4,8 +4,9 @@ Calificator App.
 
 ## Assets
 
-Posee la configuración de la aplicación server en la variable serverUrl
-Si está vacía por defecto se usa el valor http://localhost:8080 si es para ios o http://10.0.2.2:8080 si es para andriod. De esta manera se usa los default para que funcione por defecto en un ambiente de desarrollo para los emuladores de ios y android
+Posee la configuración de la aplicación server en la variable serverHost y serverPort.
+Si serverHost est vacio se usa el valor localhost si es para ios o 10.0.2.2 si es para andriod. De esta manera se usa los default para que funcione por defecto en un ambiente de desarrollo para los emuladores de ios y android. 
+Si serverPOrt esta vacio se usa el valor 8080
 
 ## Usuarios
 

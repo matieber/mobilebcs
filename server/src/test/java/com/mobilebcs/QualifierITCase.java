@@ -18,6 +18,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.*;
+import org.testcontainers.shaded.org.apache.commons.lang.RandomStringUtils;
 
 
 @ActiveProfiles("test")
@@ -68,9 +69,13 @@ public class QualifierITCase extends AbstractITCase {
 
         restCaller.joinQualificationSession(name2, qualificationSession, LOCATION_CODE);
 
+        List<String> identifications = new ArrayList<>();
         List<UUID> imagesIds=new ArrayList<>();
         for (int position = 0; position < 10; position++) {
-            imagesIds.add(restCaller.sendImage(position, LOCATION_CODE));
+            String identification = RandomStringUtils.randomAlphanumeric(6).toUpperCase();
+            UUID imageId = restCaller.sendImage(position, LOCATION_CODE, identification);
+            identifications.add(identification);
+            imagesIds.add(imageId);
             Thread.sleep(1000L);
         }
 
@@ -79,44 +84,44 @@ public class QualifierITCase extends AbstractITCase {
         int min = 1;
 
         for (int position = 0; position < 10; position++) {
-            restCaller.testNextJob(name1, position);
+            restCaller.testNextJob(name1, position,identifications.get(position));
             int score = random.nextInt(max - min + 1) + min;
             restCaller.testQualify(name1,imagesIds.get(position),score);
             assertScore(name1,imagesIds.get(position),score,qualificationSession);
 
         }
-        restCaller.testNextJob(name1, null);
+        restCaller.testNextJob(name1, null, null);
 
 
         for (int position = 0; position < 10; position++) {
-            System.out.println("position"+position);
-            restCaller.testNextJob(name2, position);
+            restCaller.testNextJob(name2, position, identifications.get(position));
             int score = random.nextInt(max - min + 1) + min;
             restCaller.testQualify(name2,imagesIds.get(position),score);
             assertScore(name2,imagesIds.get(position),score, qualificationSession);
         }
-        restCaller.testNextJob(name2, null);
+        restCaller.testNextJob(name2, null, null);
 
 
         int position10 = 10;
         restCaller.joinQualificationSession(name3, qualificationSession, LOCATION_CODE);
-        UUID uuid = restCaller.sendImage(position10, LOCATION_CODE);
-        restCaller.testNextJob(name1, position10);
+        String identification10 = RandomStringUtils.randomAlphanumeric(6).toUpperCase();
+        UUID uuid = restCaller.sendImage(position10, LOCATION_CODE, identification10);
+        restCaller.testNextJob(name1, position10, identification10);
         int score = random.nextInt(max - min + 1) + min;
         restCaller.testQualify(name1,uuid,score);
         assertScore(name1,uuid,score, qualificationSession);
-        restCaller.testNextJob(name1, null);
-        restCaller.testNextJob(name2, position10);
+        restCaller.testNextJob(name1, null, null);
+        restCaller.testNextJob(name2, position10, identification10);
         score = random.nextInt(max - min + 1) + min;
         restCaller.testQualify(name2,uuid,score);
         assertScore(name2,uuid,score, qualificationSession);
-        restCaller.testNextJob(name2, null);
+        restCaller.testNextJob(name2, null, null);
 
-        restCaller.testNextJob(name3, position10);
+        restCaller.testNextJob(name3, position10, identification10);
         score = random.nextInt(max - min + 1) + min;
         restCaller.testQualify(name3,uuid,score);
         assertScore(name3,uuid,score, qualificationSession);
-        restCaller.testNextJob(name3, null);
+        restCaller.testNextJob(name3, null, null);
 
         restCaller.endSession(LOCATION_CODE);
     }
@@ -127,17 +132,19 @@ public class QualifierITCase extends AbstractITCase {
         restCaller.createUser(name, UserType.QUALIFIER);
 
         long qualificationSession = restCaller.joinQualificationSession(name, null, LOCATION_CODE);
-        UUID setCode1 = restCaller.sendImage(1, LOCATION_CODE);
-        UUID setCode2 = restCaller.sendImage(2, LOCATION_CODE);
+        String identification1 = RandomStringUtils.randomAlphanumeric(6).toUpperCase();
+        UUID setCode1 = restCaller.sendImage(1, LOCATION_CODE, identification1);
+        String identification2 = RandomStringUtils.randomAlphanumeric(6).toUpperCase();
+        UUID setCode2 = restCaller.sendImage(2, LOCATION_CODE, identification2);
 
 
-        restCaller.testNextJob(name, 1);
+        restCaller.testNextJob(name, 1, identification1);
         restCaller.testQualify(name,setCode1,2);
         assertScore(name,setCode1,2, qualificationSession);
-        restCaller.testNextJob(name, 2);
+        restCaller.testNextJob(name, 2, identification2);
         restCaller.testQualify(name,setCode2,3);
         assertScore(name,setCode2,3, qualificationSession);
-        restCaller.testNextJob(name, null);
+        restCaller.testNextJob(name, null, null);
         restCaller.endSession(LOCATION_CODE);
 
 

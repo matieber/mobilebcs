@@ -3,10 +3,8 @@ package com.mobilebcs;
 import com.mobilebcs.controller.user.UserType;
 import com.mobilebcs.restart.ApplicationRestarter;
 import org.apache.commons.io.FileUtils;
-import org.junit.AfterClass;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestClassOrder;
 import org.springframework.test.annotation.DirtiesContext;
 
 import java.io.File;
@@ -14,6 +12,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.nio.file.Paths;
 import java.util.UUID;
+import org.testcontainers.shaded.org.apache.commons.lang.RandomStringUtils;
 
 
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
@@ -51,15 +50,17 @@ public class QualificationWithImageAfterRestartITCase {
 
         restCaller.joinQualificationSession(name, null, LOCATION_CODE);
         ApplicationRestarter.restart();
-        restCaller.sendImage(1, LOCATION_CODE);
-        restCaller.sendImage(2, LOCATION_CODE);
+        String identification1 = RandomStringUtils.randomAlphanumeric(6).toUpperCase();
+        restCaller.sendImage(1, LOCATION_CODE, identification1);
+        String identification2 = RandomStringUtils.randomAlphanumeric(6).toUpperCase();
+        restCaller.sendImage(2, LOCATION_CODE, identification2);
         ApplicationRestarter.restart();
-        restCaller.testNextJob(name, 1);
-        restCaller.testNextJob(name, 2);
+        restCaller.testNextJob(name, 1, identification1);
+        restCaller.testNextJob(name, 2, identification2);
 
 
         ApplicationRestarter.restart();
-        restCaller.testNextJob(name, null);
+        restCaller.testNextJob(name, null, null);
         ApplicationRestarter.restart();
         restCaller.endSession(LOCATION_CODE);
     }

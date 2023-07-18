@@ -4,7 +4,6 @@ import com.mobilebcs.controller.images.CaravanImage;
 import com.mobilebcs.controller.images.CaravanRequest;
 import com.mobilebcs.domain.exception.InvalidLocalizationException;
 import com.mobilebcs.domain.qualifier.NextCaravanMessage;
-import com.mobilebcs.domain.session.QualificationSessionService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
@@ -48,7 +47,7 @@ public class ImagesService {
             Path imagePath = Paths.get(imageParentPath.toString(), fileName);
             caravanImages.put(imagePath, caravanImage);
         }
-        imageRepository.saveImages(caravanRequest.getSetId(), locationCode, caravanRequest.getPosition(), caravanImages.keySet());
+        imageRepository.saveImages(caravanRequest.getSetId(), locationCode, caravanRequest.getPosition(), caravanImages.keySet(),caravanRequest.getIdentification());
         for (Map.Entry<Path, CaravanImage> caravanImage : caravanImages.entrySet()) {
             fileService.save(imageParentPath, caravanImage.getValue().getFileName(), caravanImage.getValue().getContent());
         }
@@ -57,7 +56,8 @@ public class ImagesService {
         if(caravanImage!=null){
             list.add(caravanImage.getContent());
         }
-        jmsTemplate.convertAndSend(imageQueueName, new NextCaravanMessage(caravanRequest.getPosition(), caravanRequest.getSetId(), locationCode,list));
+        jmsTemplate.convertAndSend(imageQueueName, new NextCaravanMessage(caravanRequest.getPosition(), caravanRequest.getSetId(), locationCode,list,
+                caravanRequest.getIdentification()));
 
     }
 }

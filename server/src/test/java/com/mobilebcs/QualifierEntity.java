@@ -1,3 +1,4 @@
+
 package com.mobilebcs;
 
 public class QualifierEntity {

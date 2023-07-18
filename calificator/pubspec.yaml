@@ -18,6 +18,9 @@ dependencies:
   stomp_dart_client: ^0.4.4
   horizontal_picker: ^1.2.0
   loading_animation_widget:
+  circular_chart_flutter: ^0.0.2
+  fl_chart: ^0.62.0
+  time_machine: ^0.9.17
 
 dev_dependencies:
   flutter_test:

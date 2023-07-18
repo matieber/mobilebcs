@@ -8,7 +8,6 @@ import com.mobilebcs.domain.viewer.ViewerPerLocation;
 import com.mobilebcs.domain.viewer.ViewerService;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -17,14 +16,12 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.ArgumentCaptor;
-import org.mockito.ArgumentMatcher;
-import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.internal.verification.Times;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.testcontainers.shaded.org.apache.commons.lang.RandomStringUtils;
+
 @ExtendWith(MockitoExtension.class)
 public class ViewerServiceTest {
 
@@ -107,13 +104,13 @@ public class ViewerServiceTest {
 
         ViewerPerLocation set1 = viewerService.getViewerByLocation(location1);
         Assertions.assertNotNull(set1);
-        Assertions.assertFalse(set1.send(new JobNotificationOutput(2,new ArrayList<>())));
+        Assertions.assertFalse(set1.send(new JobNotificationOutput(UUID.randomUUID(),2,new ArrayList<>(), createIdentification())));
         ViewerPerLocation set2 = viewerService.getViewerByLocation(location2);
         Assertions.assertNotNull(set2);
-        Assertions.assertFalse(set2.send(new JobNotificationOutput(2,new ArrayList<>())));
+        Assertions.assertFalse(set2.send(new JobNotificationOutput(UUID.randomUUID(),2,new ArrayList<>(), createIdentification())));
         ViewerPerLocation set3 = viewerService.getViewerByLocation(location3);
         Assertions.assertNotNull(set3);
-        Assertions.assertFalse(set3.send(new JobNotificationOutput(2,new ArrayList<>())));
+        Assertions.assertFalse(set3.send(new JobNotificationOutput(UUID.randomUUID(),2,new ArrayList<>(), createIdentification())));
 
     }
 
@@ -121,9 +118,13 @@ public class ViewerServiceTest {
         List<ViewerInfo> expectedLocation1 = viewerInfos;
         ViewerPerLocation set1 = viewerService.getViewerByLocation(location1);
         Mockito.doNothing().when(simpMessagingTemplate).convertAndSend(Mockito.any(),Mockito.any(JobNotificationOutput.class));
-        boolean sent = set1.send(new JobNotificationOutput(1, new ArrayList<>()));
+        boolean sent = set1.send(new JobNotificationOutput(UUID.randomUUID(),1, new ArrayList<>(), createIdentification()));
         Assertions.assertTrue(sent);
         assertViewers(expectedLocation1);
+    }
+
+    private String createIdentification() {
+        return RandomStringUtils.randomAlphanumeric(6).toUpperCase();
     }
 
     private void assertViewers(List<ViewerInfo> expectedLocation) {

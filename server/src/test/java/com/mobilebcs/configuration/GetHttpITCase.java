@@ -67,7 +67,7 @@ public class GetHttpITCase  {
             Assertions.assertEquals(200,entity.getStatusCodeValue());
             NextCaravanMessage nextCaravanMessage = entity.getBody();
             Assertions.assertNotNull(nextCaravanMessage);
-            Assertions.assertEquals(nextCaravanMessage.getSetId(), position);
+            Assertions.assertEquals(nextCaravanMessage.getSetCode(), position);
         }else{
             Assertions.assertEquals(204,entity.getStatusCodeValue());
             NextCaravanMessage nextCaravanMessage = entity.getBody();

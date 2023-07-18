@@ -25,17 +25,17 @@ public class ClientJobNotificationOutputStompHandler implements StompSessionHand
 
     @Override
     public void afterConnected(StompSession session, StompHeaders connectedHeaders) {
-        System.out.println("subscription connected");
+
     }
 
     @Override
     public void handleException(StompSession session, StompCommand command, StompHeaders headers, byte[] payload, Throwable exception) {
-        System.out.println("subscription exception");
+
     }
 
     @Override
     public void handleTransportError(StompSession session, Throwable exception) {
-        System.out.println("subscription transport error "+exception.getMessage());
+
     }
 
     @Override
@@ -46,12 +46,12 @@ public class ClientJobNotificationOutputStompHandler implements StompSessionHand
     @Override
     public void handleFrame(StompHeaders headers, Object payload) {
         if(payload instanceof JobNotificationOutput) {
-            System.out.println("Handle message "+this.viewerName+" "+(((JobNotificationOutput) payload).getPosition()));
+
             stompSessionHandler.handleFrame(headers,payload);
             JobNotificationOutput jobNotificationOutput = (JobNotificationOutput) payload;
             if (jobNotificationOutput.getPredictor().equals(viewerName)) {
                 double score = 3;
-                ScoreJobNotification scoreJobNotification = new ScoreJobNotification(jobNotificationOutput.getPosition(), location, score, viewerName);
+                ScoreJobNotification scoreJobNotification = new ScoreJobNotification(jobNotificationOutput.getSetCode(), jobNotificationOutput.getPosition(), location, score, viewerName);
 
                 stompSession.send("/app/score", scoreJobNotification);
 
