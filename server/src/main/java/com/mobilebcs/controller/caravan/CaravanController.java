@@ -25,6 +25,7 @@ public class CaravanController {
         if(caravanInfoResponse==null || CollectionUtils.isEmpty(caravanInfoResponse.getList())){
             return ResponseEntity.noContent().build();
         }else{
+            System.out.println(caravanInfoResponse);
             return ResponseEntity.ok(caravanInfoResponse);
         }
     }

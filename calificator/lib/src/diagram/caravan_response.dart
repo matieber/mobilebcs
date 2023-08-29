@@ -33,11 +33,13 @@ class CaravanInfoResponse{
 class CaravanQualificationResponse{
 
   double score;
-  int qualificationSessionId;
+  int? qualificationSessionId;
+  String setCode;
 
-  CaravanQualificationResponse(this.score,this.qualificationSessionId);
+  CaravanQualificationResponse(this.score,this.qualificationSessionId,this.setCode);
 
   CaravanQualificationResponse.fromJson(Map<String, dynamic> json):
         score=json["score"],
-        qualificationSessionId=json["qualificationSessionId"];
+        qualificationSessionId=json["qualificationSessionId"],
+        setCode=json["setCode"];
 }

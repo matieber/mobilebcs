@@ -18,7 +18,6 @@ List<PieChartSectionData> showingSections(DiagramResponse? diagramResponse) {
 
       var length = values.first.caravanSize;
       int scoreLength= values.first.scores.length;
-      print("score length "+scoreLength.toString());
       switch (i) {
         case 0:
           return createSection(map[0]!*100/length,Colors.blue);

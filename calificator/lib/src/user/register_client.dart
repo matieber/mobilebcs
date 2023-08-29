@@ -18,7 +18,6 @@ class RegisterUserHttp  {
     String endpointUrl=_serverUrl+"/user";
     final request = '{"userType": "$userTypeValue", "userName": "$userName"}';
     Uri uri=Uri.parse(endpointUrl);
-    print("url "+uri.toString());
 
     Map<String,String> map={};
     map.putIfAbsent("Content-Type", () => "application/json");

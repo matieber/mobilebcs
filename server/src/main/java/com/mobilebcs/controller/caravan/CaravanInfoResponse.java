@@ -1,6 +1,7 @@
 package com.mobilebcs.controller.caravan;
 
 import java.util.List;
+import java.util.StringJoiner;
 
 public class CaravanInfoResponse {
 
@@ -17,5 +18,12 @@ public class CaravanInfoResponse {
 
     public void setList(List<CaravanQualificationResponse> list) {
         this.list = list;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", CaravanInfoResponse.class.getSimpleName() + "[", "]")
+                .add("list=" + list)
+                .toString();
     }
 }

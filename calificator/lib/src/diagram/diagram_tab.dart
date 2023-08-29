@@ -34,6 +34,13 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
   DiagramResponse? diagramResponse;
   String caravanSize="";
   String date="";
+  bool callSetDiagram=true;
+
+  @override
+  void initState() {
+    super.initState();
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +48,10 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
       CustomDropdownText("CURRENT_QUALIFICATION", "Sessión en curso"),
       CustomDropdownText("LAST_QUALIFICATION", "Última sesión finalizada")],
         setDiagram);
-  setDiagram();
+    if(callSetDiagram) {
+      callSetDiagram=false;
+      setDiagram();
+    }
     return Column(
       children: [
         customDropdownButton!,
@@ -79,7 +89,6 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
               buildSizedBox(),
               buildIndicator(Colors.orange, '1 a 1.99',),
               buildSizedBox(),
-              buildIndicator(Colors.purple, '2 a 2.99'),
               buildIndicator(Colors.purple, '2 a 2.99'),
               buildSizedBox(),
               buildIndicator( Colors.green, '3 a 3.99'),

@@ -16,7 +16,6 @@ class QualificationSessionHttp  {
 
     String endpointUrl=_serverUrl+'/location/${location}/user/${userName}/qualificationSession';
     Uri uri=Uri.parse(endpointUrl);
-    print("url "+uri.toString());
     final response = await http.post(uri);
     if (response.statusCode == 200) {
       final responseBody=json.decode(response.body);
@@ -43,7 +42,6 @@ class QualificationSessionHttp  {
 
     String endpointUrl=_serverUrl+'/location/${location}/qualificationSession';
     Uri uri=Uri.parse(endpointUrl);
-    print("url "+uri.toString());
     final response = await http.delete(uri);
     if (response.statusCode == 204) {
       return Future.value(null);

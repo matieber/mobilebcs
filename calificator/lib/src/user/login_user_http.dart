@@ -16,7 +16,6 @@ class LoginUserHttp  {
 
     String endpointUrl=_serverUrl+'/user/${userName}';
     Uri uri=Uri.parse(endpointUrl);
-    print("url "+uri.toString());
     final response = await http.post(uri);
     if (response.statusCode == 201) {
       final responseBody=json.decode(response.body);

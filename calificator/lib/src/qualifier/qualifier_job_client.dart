@@ -24,7 +24,6 @@ class QualifierJobClientHttp  {
 
   void qualify(String userName,String setCode, int score) async{
 
-    print("Calificando");
     String endpointUrl=_serverUrl+"/qualifier/"+userName+"/setCode/"+setCode;
     Uri uri=Uri.parse(endpointUrl);
     final body = '{"score": $score}';
@@ -46,7 +45,6 @@ class QualifierJobClientHttp  {
 
   Future<CaravanMessage?> nextJob(String userName) async{
 
-   print("getting next job");
    String endpointUrl=_serverUrl+"/qualifier/"+userName+"/next-animal";
     Uri uri=Uri.parse(endpointUrl);
     final response = await http.get(uri);

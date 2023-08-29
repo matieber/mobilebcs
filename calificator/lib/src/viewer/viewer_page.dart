@@ -1,78 +1,45 @@
 
 import 'dart:io';
 import 'dart:typed_data';
-
-import 'package:calificator/src/diagram/diagram_response.dart';
-import 'package:calificator/src/qualifier/qualifier_job_client.dart';
+import 'package:calificator/src/diagram/diagram_tab.dart';
 import 'package:calificator/src/viewer/viewer_caravan_message.dart';
 import 'package:calificator/src/viewer/viewer_caravan_score_message.dart';
 import 'package:calificator/src/user/user.dart';
-import 'package:calificator/src/user/user_type.dart';
-import 'package:fl_chart/fl_chart.dart';
+import 'package:calificator/src/viewer/viewer_page_main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:calificator/src/ui_model/extension.dart';
-import '../diagram/caravan_response.dart';
 import '../diagram/diagram_client.dart';
-import '../diagram/diagram_tab.dart';
-import '../diagram/diagrams.dart';
-import '../diagram/indicator.dart';
 import '../diagram/line_chart.dart';
-import '../menu/qualificator_side_menu.dart';
 import '../image/image.dart';
-import '../ui_model/dropdown.dart';
 import 'viewer_stomp_client.dart';
 import 'package:flutter/services.dart';
 
 class ViewerPage extends StatefulWidget {
 
-  static ViewerPage? page;
-  bool first=false;
 
-  User? _user;
   final DiagramClientHttp _diagramClientHttp;
+  User? _user;
 
+  GlobalKey<CaravanLineChartState> caravanDiagramKey= GlobalKey<CaravanLineChartState>();
+  final GlobalKey<DiagramViewerTabState> diagramKey;
 
   var serverUrl;
+  ViewerStompClient viewerStompClient;
+  GlobalKey<ViewerPageMainState> mainKey;
+  ViewerPage(this.mainKey,this.viewerStompClient,this._diagramClientHttp,this._user, this.diagramKey);
 
-  final GlobalKey<DiagramViewerTabState> diagramKey = GlobalKey<DiagramViewerTabState>();
-
-  ViewerPage( this.serverUrl, {Key? key})
-      : _diagramClientHttp = DiagramClientHttp(),
-        super(key: key);
-
-  set user(User user) {
-    _user=user;
-    first=true;
-  }
 
   @override
-  State<ViewerPage> createState() => _ViewerPageState();
+  State<ViewerPage> createState() => ViewerPageState();
 
-  static ViewerPage newPage(String serverUrl) {
-    page ??= ViewerPage(serverUrl);
-    return page!;
-
-  }
 
 }
 
-class _ViewerPageState extends State<ViewerPage> {
+class ViewerPageState extends State<ViewerPage> {
 
   static const platform = const MethodChannel('io.flutter.calificator/calificator');
 
 
-  String identification = "";
-  String _score="";
-  String setCode="";
-  ImageProvider? imageProvider;
-
-
-
-  ViewerStompClient? viewerStompClient;
-
-
-  CaravanInfoResponse? caravanInfoResponse;
 
 
   Future<String> _getScore(Uint8List body,int position,String setCode,ViewerStompClient viewerStompClient) async {
@@ -81,7 +48,7 @@ class _ViewerPageState extends State<ViewerPage> {
       final double result = await platform.invokeMethod('calculateScore',body);
       score = 'El puntaje es calculado $result.';
       viewerStompClient.publish(result, position,setCode);
-
+      widget.caravanDiagramKey.currentState?.addNewSetCode(setCode, result);
     } on PlatformException catch (e) {
       score = "Error al calcular el puntaje: '${e.message}'.";
     }
@@ -91,55 +58,111 @@ class _ViewerPageState extends State<ViewerPage> {
 
   }
   refreshCalculatedScore(ViewerCaravanMessage message, ViewerStompClient viewerStompClient) {
-    setState(() {
       if(message.predictor==widget._user?.username) {
-        _score = "Calculando puntaje";
+        setScore("Calculando puntaje");
       }else{
-        _score = "Esperando Puntaje";
+        setScore("Esperando Puntaje");
       }
 
     if(message.byteImages.isNotEmpty && message.predictor==widget._user?.username) {
       _getScore(message.byteImages.first,message.position,message.setCode,viewerStompClient).then((value)
           {
-            setState(() {
-              _score = value;
-            });
+              setScore(value);
           }
       );
     }
-    
-      setCode = message.setCode;
-      identification = message.identification;
-      setCaravans(3);
-      if(message.byteImages.isNotEmpty) {
-            imageProvider=MemoryImage(message.byteImages.first);
+
+      setCode(message);
+      setIdentification(message.identification);
+      if(mounted) {
+        setCaravans(3);
       }
-      widget.diagramKey.currentState?.setDiagram();
-    });
+      if(message.byteImages.isNotEmpty) {
+        setImageProviderWith(message);
+      }
+     widget.diagramKey.currentState?.setDiagram();
 
 
+
+  }
+
+  void setImageProviderWith(ViewerCaravanMessage message) {
+    if(mounted){
+      setState(() {
+        widget.mainKey.currentState!.imageProvider=MemoryImage(message.byteImages.first);
+      });
+    }else{
+      widget.mainKey.currentState!.imageProvider=MemoryImage(message.byteImages.first);
+    }
+  }
+
+  void setImageProvider(ImageProvider? imageProvider) {
+    if(mounted){
+      setState(() {
+        widget.mainKey.currentState!.imageProvider=imageProvider;
+      });
+    }else{
+      widget.mainKey.currentState!.imageProvider=imageProvider;
+    }
+  }
+
+  void setIdentification(String identification) {
+    if(mounted){
+      setState(() {
+        widget.mainKey.currentState!.identification = identification;
+      });
+    }else{
+      widget.mainKey.currentState!.identification = identification;
+    }
+
+  }
+
+  void setCode(ViewerCaravanMessage message) {
+    if(mounted){
+      setState(() {
+        widget.mainKey.currentState!.setCode = message.setCode;
+      });
+    }else{
+      widget.mainKey.currentState!.setCode = message.setCode;
+    }
+
+  }
+
+  void setScore(String text) {
+    if(mounted){
+      setState(() {
+        widget.mainKey.currentState!.score = text;
+      });
+    }else{
+      widget.mainKey.currentState!.score = text;
+    }
   }
 
   refreshReceivedScore(ViewerCaravanScoreMessage message){
     setState(() {
-      if(message.setCode==setCode){
-        _score="El puntaje recibido es "+message.score.toString();
+      if(message.setCode==widget.mainKey.currentState!.setCode){
+        setScore("El puntaje recibido es "+message.score.toString());
+        widget.caravanDiagramKey.currentState?.addNewSetCode(widget.mainKey.currentState!.setCode, message.score);
+
 
       }
     });
-    setCaravans(3);
+    if(mounted) {
+      setCaravans(3);
+    }
   }
 
   void setCaravans(int retry) {
     if(retry>0) {
-      widget._diagramClientHttp.getCaravanChart(this.context,identification).then((value) =>
-          setState(() {
-            caravanInfoResponse = value;
-            if (caravanInfoResponse == null) {
-              sleep(const Duration(milliseconds: 300));
+      widget._diagramClientHttp.getCaravanChart(context,widget.mainKey.currentState!.identification).then((value)
+          {
+            if (value == null) {
+              sleep(const Duration(milliseconds: 1000));
               setCaravans(retry - 1);
+            }else{
+              widget.caravanDiagramKey.currentState?.setCaravanDiagram(widget.mainKey.currentState!.setCode,value);
             }
-          })
+        }
       );
     }
   }
@@ -150,54 +173,21 @@ class _ViewerPageState extends State<ViewerPage> {
 
   @override
   Widget build(BuildContext context) {
-
-
-
-    String username= "";
-    if(widget.first&&widget._user!=null){
-      widget.first=false;
-      User? user = widget._user;
-      String? name = user?.username;
-      username=name!;
-      viewerStompClient= ViewerStompClient(refreshCalculatedScore,refreshReceivedScore, username);
-      viewerStompClient?.activate(context);
-    }
-    return
-      DefaultTabController(
-        length:2,
-        child: Scaffold(
-          drawer: QualificationSideMenu(widget.serverUrl,closeFunction:
-              (){
-              viewerStompClient?.deactivate();
-              viewerStompClient=null;
-              widget._user=null;
-              widget.first=true;
-            }),
-          appBar: buildAppBar("Observador"),
-          body: TabBarView(children:[
-            buildViewerBody(),
-            DiagramViewerTab(widget.diagramKey)
-          ])
-      )
-      );
-  }
-
-
-
-  Column buildViewerBody() {
+    widget.viewerStompClient.refreshCalculatedScore=refreshCalculatedScore;
+    widget.viewerStompClient.refreshReceivedScore=refreshReceivedScore;
     return Column(
         children: [
-          Text(identification),
+          Text(widget.mainKey.currentState!.identification),
           Container(
-            height: 280,
-            width: 280,
+            height: 250,
+            width: 250,
             child: FittedBox(
-              child: MyImage(imageProvider),
+              child: MyImage(widget.mainKey.currentState!.imageProvider),
               fit: BoxFit.fill,
             )
           ),
-          Text(_score),
-          CaravanLineChart(caravanInfoResponse),
+          Text(widget.mainKey.currentState!.score),
+          CaravanLineChart(widget.caravanDiagramKey,widget.mainKey),
         ],
       );
   }
@@ -210,15 +200,18 @@ class _ViewerPageState extends State<ViewerPage> {
   @override
   void initState() {
     super.initState();
+   setScore(widget.mainKey.currentState!.score);
+    setIdentification(widget.mainKey.currentState!.identification);
+    setImageProvider(widget.mainKey.currentState!.imageProvider);
+    setScore(widget.mainKey.currentState!.score);
+    setCaravans(3);
+
   }
 
   @override
   void dispose() {
-    if (viewerStompClient != null) {
-      viewerStompClient?.deactivate();
-    }
-
     super.dispose();
+
   }
 
 

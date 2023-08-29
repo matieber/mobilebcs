@@ -31,7 +31,18 @@ public class WebSocketEventListener {
         System.out.println("removing viewer "+event.getSessionId());
         viewerService.removeViewer(event.getSessionId());
     }
-
+/*
+    @EventListener
+    private void handleSessionUnsubscribe(SessionUnsubscribeEvent event) {
+        System.out.println("removing viewer ");
+        String simpDestination = (String) event.getMessage().getHeaders().get("simpDestination");
+        String id= (String) event.getMessage().getHeaders().get("simpSessionId");
+        System.out.println("adding viewer with session id "+id);
+        if(simpDestination.startsWith("/topic/notifications/")&&!simpDestination.contains("score")){
+            viewerService.removeViewer(id);
+        }
+    }
+*/
     @EventListener
     private void handleSessionSubscribe(SessionSubscribeEvent event) {
         System.out.println("adding viewer ");

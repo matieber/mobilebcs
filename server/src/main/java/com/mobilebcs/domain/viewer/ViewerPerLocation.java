@@ -31,8 +31,11 @@ public class ViewerPerLocation {
     }
 
     public void add(@NotNull ViewerInfo viewerInfo){
-        set.add(viewerInfo);
-        map.put(viewerInfo.getSessionId(),viewerInfo);
+        ViewerInfo oldValue = map.put(viewerInfo.getSessionId(), viewerInfo);
+        boolean isNewViewer = oldValue == null;
+        if(isNewViewer){
+            set.add(viewerInfo);
+        }
     }
 
     public void remove(@NotNull String sessionId){

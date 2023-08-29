@@ -6,6 +6,7 @@ import 'package:calificator/src/user/user_type.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../ui_model/input_text.dart';
+import '../viewer/viewer_page_main.dart';
 
 class LoginUser extends MaterialPageRoute {
 
@@ -40,7 +41,7 @@ class LoginUser extends MaterialPageRoute {
                 if (user.userType == UserType.qualifier) {
                   return QualifierSessionPage(serverUrl, user);
                 }else{
-                  var newPage = ViewerPage.newPage(serverUrl);
+                  var newPage = ViewerPageMain.newPage(serverUrl);
                   newPage.user=user;
                   return newPage;
                 }

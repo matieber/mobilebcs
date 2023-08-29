@@ -14,6 +14,7 @@ public class JobNotificationOutput {
 
     private String identification;
 
+
     private JobNotificationOutput() {
     }
 

@@ -19,5 +19,5 @@ Ingresar usuario muestra en el login si se encontró el usuario o no.
 ##
 
 * Definir path de paython 3.8
-* copiar archivo vacio en sdcard
+* copiar archivo de code_example/cow_images/empty_image.png al directorio sdcard/Download/ del emulador o celular
 * dar acceso a la aplicacion a los archivos desde setting

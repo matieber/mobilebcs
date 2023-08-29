@@ -11,7 +11,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class CaravanService {
 
-    private static final String SELECT_CARAVAN= "SELECT ps.SCORE, ps.QUALIFICATION_SESSION_ID FROM PREDICTED_SCORE ps LEFT JOIN IMAGE_SET is2 ON ps.IMAGE_SET_ID = is2 .ID where is2.IDENTIFICATION = :identification ORDER BY ps.QUALIFICATION_SESSION_ID";
+    private static final String SELECT_CARAVAN= "SELECT ps.SCORE, ps.QUALIFICATION_SESSION_ID, is2.SET_CODE FROM PREDICTED_SCORE ps " +
+            "LEFT JOIN IMAGE_SET is2 ON ps.IMAGE_SET_ID = is2 .ID where is2.IDENTIFICATION = :identification" +
+            " ORDER BY ps.QUALIFICATION_SESSION_ID";
 
     private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
     private BeanPropertyRowMapper rowMapper;

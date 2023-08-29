@@ -17,55 +17,53 @@ class ViewerStompClient {
   Function(ViewerCaravanMessage,ViewerStompClient)? refreshCalculatedScore;
   Function(ViewerCaravanScoreMessage)? refreshReceivedScore;
 
-  StompClient? stompClient;
+  static StompClient? stompClient;
 
   String username;
 
-  bool activated=false;
+  static bool activated=false;
 
   StompUnsubscribe? notificationUnsubscription;
   StompUnsubscribe? scoreNotificationUnsubscription;
 
-  ViewerStompClient(this.refreshCalculatedScore,this.refreshReceivedScore,this.username);
+  ViewerStompClient(this.username);
 
   void activate(BuildContext context) {
-
-    if(!activated) {
+    if(activated){
       if(stompClient!=null){
-        stompClient?.deactivate();
+       deactivate();
       }
-      Properties.getWSServerUrl(context).then((url) {
-        stompClient = StompClient(
-          config: StompConfig(
-              url: url,
-              onConnect: onConnect,
-              onWebSocketError: (dynamic error) {
-                activated = false;
-                print(error.toString());
-              },
-              onDisconnect: (StompFrame frame)
-              {
-                activated = false;
-                removeSubscription();
-              }
-          ),
-        );
-
-        print("activating");
-        stompClient?.activate();
-        print("activated to"+url);
-      });
+    }else {
+      internalActivation(context);
     }
+
+  }
+
+
+
+  void internalActivation(BuildContext context) {
+    Properties.getWSServerUrl(context).then((url) {
+      stompClient = StompClient(
+        config: StompConfig(
+            url: url,
+            onConnect: onConnect,
+            onWebSocketError: (dynamic error) {
+              print(error.toString());
+              deactivate();
+            },
+        ),
+      );
+
+      stompClient?.activate();
   }
 
 
   void removeSubscription() {
-    print("Remove subscription");
     if(notificationUnsubscription!=null){
-      notificationUnsubscription?.call();
+      notificationUnsubscription!(unsubscribeHeaders: {});
     }
     if(scoreNotificationUnsubscription!=null){
-      scoreNotificationUnsubscription?.call();
+      scoreNotificationUnsubscription!(unsubscribeHeaders: {});
     }
   }
 
@@ -73,41 +71,51 @@ class ViewerStompClient {
     if(!activated && stompClient!=null) {
       print("subscribing");
       activated = true;
-      if (refreshCalculatedScore != null) {
-        notificationUnsubscription = stompClient?.subscribe(
-          destination: '/topic/notifications/$defaultLocation/$username',
-          callback: (frame) {
-            var responseBody = json.decode(frame.body!);
-            ViewerCaravanMessage message = ViewerCaravanMessage.fromJson(
-                responseBody);
-            if (responseBody != null) {
-              refreshCalculatedScore!(message, this);
-              print(message);
-            }
-          },
-        );
-      }
+      calculatedScoreSubscription();
+      refreshScoreSubscription();
+    }
+  }
 
-      if (refreshReceivedScore != null) {
-        scoreNotificationUnsubscription = stompClient?.subscribe(
-          destination: '/topic/notifications/score/$defaultLocation/$username',
-          callback: (frame) {
-            var responseBody = json.decode(frame.body!);
-            ViewerCaravanScoreMessage message = ViewerCaravanScoreMessage
-                .fromJson(
-                responseBody);
-            print("score message arrive " + message.position.toString());
-            refreshReceivedScore!(message);
+  void refreshScoreSubscription() {
+    if (refreshReceivedScore != null) {
+      print("subscribing /topic/notifications/score/$defaultLocation/$username");
+      scoreNotificationUnsubscription = stompClient?.subscribe(
+        destination: '/topic/notifications/score/$defaultLocation/$username',
+        callback: (frame) {
+          var responseBody = json.decode(frame.body!);
+          ViewerCaravanScoreMessage message = ViewerCaravanScoreMessage
+              .fromJson(
+              responseBody);
+          refreshReceivedScore!(message);
+          print(message);
+        },
+      );
+      print("subscribed");
+    }
+  }
+
+  void calculatedScoreSubscription() {
+     if (refreshCalculatedScore != null) {
+      print("subscribing /topic/notifications/$defaultLocation/$username");
+      notificationUnsubscription = stompClient?.subscribe(
+        destination: '/topic/notifications/$defaultLocation/$username',
+        callback: (frame) {
+          print("notification arrive to /topic/notifications/$defaultLocation/$username");
+          var responseBody = json.decode(frame.body!);
+          ViewerCaravanMessage message = ViewerCaravanMessage.fromJson(
+              responseBody);
+          if (responseBody != null) {
+            refreshCalculatedScore!(message, this);
             print(message);
-          },
-        );
-        print("subscribed");
-      }
+          }
+        },
+      );
     }
   }
 
   void publish(double score,int position,String setCode){
 
+    print("sending to publish");
     stompClient?.send(destination: "/app/score",body: '''{
     "location": "$defaultLocation",
     "position": $position,

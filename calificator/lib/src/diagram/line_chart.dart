@@ -1,3 +1,4 @@
+import 'package:calificator/src/viewer/viewer_page_main.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -5,25 +6,18 @@ import 'caravan_response.dart';
 
 class CaravanLineChart extends StatefulWidget {
 
-  final CaravanInfoResponse? caravans;
-  final List<int> _qualifications;
-  CaravanLineChart(this.caravans,{key}): _qualifications=getQualifications(caravans);
+  GlobalKey<ViewerPageMainState> mainKey;
+  CaravanLineChart(key,this.mainKey ): super(key: key);
 
   @override
-  State<CaravanLineChart> createState() => _CaravanLineChartState();
+  State<CaravanLineChart> createState() => CaravanLineChartState();
 
-  static List<int> getQualifications(CaravanInfoResponse? caravans) {
-    List<int> list=<int>[];
-    if(caravans!=null){
-      for(CaravanQualificationResponse caravanQualificationResponse in caravans.list){
-        list.add(caravanQualificationResponse.qualificationSessionId);
-      }
-    }
-    return list;
-  }
+
 }
 
-class _CaravanLineChartState extends State<CaravanLineChart> {
+class CaravanLineChartState extends State<CaravanLineChart> {
+
+
   List<Color> gradientColors = [
     Colors.cyan,
     Colors.blue,
@@ -31,33 +25,133 @@ class _CaravanLineChartState extends State<CaravanLineChart> {
 
   bool showAvg = false;
 
+    setCaravanDiagram(String currentSetCode,CaravanInfoResponse? newCaravans) {
+        List<String> list=<String>[];
+        List<String> setCodes=<String>[];
+        if(newCaravans!=null){
+          if(newCaravans.list.isEmpty){
+            setText("No hay historial de caravanas");
+          }else{
+            if(newCaravans.list.length==1 && newCaravans.list.first.setCode==currentSetCode){
+              setText("No hay historial de caravanas");
+            }else{
+              setCaravans(newCaravans);
+              for(CaravanQualificationResponse caravanQualificationResponse in widget.mainKey.currentState!.caravans!.list){
+                list.add("N${caravanQualificationResponse.qualificationSessionId}");
+                setCodes.add(caravanQualificationResponse.setCode);
+              }
+            }
+          }
+        }else{
+          setText("No hay historial de caravanas");
+
+        }
+
+        setQualifications(list);
+
+
+  }
+
+    void setCaravans(CaravanInfoResponse newCaravans) {
+      if(mounted){
+        setState(() {
+          widget.mainKey.currentState!.caravans=newCaravans;
+        });
+      }else{
+        widget.mainKey.currentState!.caravans=newCaravans;
+      }
+    }
+
+    void setQualifications(List<String> list) {
+      if(mounted){
+        setState(() {
+          widget.mainKey.currentState!.qualifications=list;
+        });
+      }else{
+        widget.mainKey.currentState!.qualifications=list;
+      }
+
+    }
+
+    void setText(String text) {
+      if(mounted) {
+       setState(() {
+         widget.mainKey.currentState!.text = text;
+       });
+      }else{
+        widget.mainKey.currentState!.text = text;
+      }
+    }
+
+  addNewSetCode(String newSetCode,double newScore){
+        var viewerPageMainState = widget.mainKey.currentState;
+        if(viewerPageMainState!.caravans!=null && viewerPageMainState.caravans!.list.isNotEmpty) {
+          if(!viewerPageMainState.qualifications.contains("Actual")) {
+            addCaravan(viewerPageMainState, newScore, newSetCode);
+            addQualification(viewerPageMainState);
+          }
+        }
+
+  }
+
+  void addQualification(ViewerPageMainState viewerPageMainState) {
+
+        if(mounted){
+          setState(() {
+            viewerPageMainState.qualifications.add("Actual");
+          });
+        }else{
+          viewerPageMainState.qualifications.add("Actual");
+        }
+
+  }
+
+  void addCaravan(ViewerPageMainState viewerPageMainState, double newScore, String newSetCode) {
+    var caravanQualificationResponse = CaravanQualificationResponse(
+        newScore, null, newSetCode);
+    if(mounted){
+      setState(() {
+        viewerPageMainState.caravans!.list.add(caravanQualificationResponse);
+      });
+    }else{
+      viewerPageMainState.caravans!.list.add(caravanQualificationResponse);
+    }
+
+  }
+
   @override
   Widget build(BuildContext context) {
-    if(widget.caravans==null) {
-      print("caravana esta vacia");
-      return Container();
-    }if(widget.caravans!.list.length<=1){
-      return const Text("No hay historial de caravanas");
-    }else {
-      return Stack(
-        children: <Widget>[
-          AspectRatio(
-            aspectRatio: 1.70,
-            child: Padding(
-              padding: const EdgeInsets.only(
-                right: 18,
-                left: 12,
-                top: 34,
-                bottom: 102,
-              ),
-              child: LineChart(
-                 mainData(),
-              ),
-            ),
-          ),
+      return  Column(
+        children: [
+          Stack(
+          children: <Widget>[
+          buildAspectRatio(),
+        ],
+        ),
+          Text(widget.mainKey.currentState!.text),
         ],
       );
-    }
+  }
+
+  Widget buildAspectRatio() {
+      if(widget.mainKey.currentState!.caravans!=null && widget.mainKey.currentState!.caravans!.list.length>1) {
+        return AspectRatio(
+          aspectRatio: 1.70,
+          child: Padding(
+            padding: const EdgeInsets.only(
+              right: 18,
+              left: 12,
+              top: 34,
+              bottom: 102,
+            ),
+            child: LineChart(
+              mainData(),
+            ),
+          ),
+        );
+      }else{
+        return Container();
+      }
   }
 
   Widget bottomTitleWidgets(double value, TitleMeta meta) {
@@ -67,12 +161,13 @@ class _CaravanLineChartState extends State<CaravanLineChart> {
     );
 
 
-    int qualificationSessionId = value.toInt();
     String text="";
-    if(widget._qualifications.contains(qualificationSessionId)){
-      text="N"+qualificationSessionId.toString();
+    int position = value.toInt();
+    if(widget.mainKey.currentState!.qualifications.length>position) {
+      text = widget.mainKey.currentState!.qualifications.elementAt(position);
     }
-    return SideTitleWidget(
+
+   return SideTitleWidget(
     axisSide: meta.axisSide,
     child: Text(text,style: style),
     );
@@ -90,8 +185,8 @@ class _CaravanLineChartState extends State<CaravanLineChart> {
   }
 
   LineChartData mainData() {
-    double weight = 5;
-    double qualificationSize = widget.caravans!.list.length.toDouble();
+    double qualificationSize = widget.mainKey.currentState!.caravans!=null? widget.mainKey.currentState!.caravans!.list.length.toDouble():0;
+    double weight = widget.mainKey.currentState!.caravans!=null? 5:0;
     return LineChartData(
       gridData: FlGridData(
         show: true,
@@ -174,11 +269,13 @@ class _CaravanLineChartState extends State<CaravanLineChart> {
 
   List<FlSpot> spots() {
     var list = <FlSpot>[];
-    for (var element in widget.caravans!.list) {
-      print("id " + element.qualificationSessionId.toString() + " score " +
-          element.score.toString());
-      list.add(caravanScoreValue(
-          element.qualificationSessionId.toDouble(), element.score));
+    double x=0;
+    if(widget.mainKey.currentState!.caravans!=null) {
+      for (var element in widget.mainKey.currentState!.caravans!.list) {
+
+        list.add(caravanScoreValue(x, element.score));
+        x++;
+      }
     }
 
 
