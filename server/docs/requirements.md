@@ -1,9 +1,11 @@
 # Aplicaciones
 
-* server: posee los servicios rest de los cuales la aplicación móvil consumirá
-* aplicación móvil: aplicación usada por los calificadores y viewers
+* server: 
+  * posee los servicios rest de los cuales la aplicación móvil consumirá
+  * posee las conexiones web socket mediante el protocolo stomp para notificar y recibir actualizaciones de la aplicació móbil.
+* aplicación móvil: aplicación usada por los calificadores y observadores
 * aplicación batch: consumirá las imágenes tomadas a cada caravana, generará un job y los enviará al server. Cada
-  aplicación batch va a estar en un RaspberryPi y va a pertenecer a una locación en particular.
+  aplicación batch va a estar en un RaspberryPi y va a pertenecer a una locación en particular (Fuera de alcance).
 
 **Ventajas:**
 
@@ -17,7 +19,7 @@
 
 Diagrama de componentes
 
-**Funera de alcance(Versión final)**
+**Fuera de alcance(Versión final)**
 
 El backend fue pensando para ser extensible de la manera que lo muestra el diagrama. Durante la descripción de
 requerimientos se mostrará cual es el alcance de cada uno y cual sería los posibles cambios para lograr la versión
@@ -27,20 +29,21 @@ final.
 
 ## Registrar usuario
 
-Se desea registrar usuarios para que quede el histórico de sus interacciones con el sistema. Cualquier consumidor de la
-aplicación va a poder registrarse como cualquier tipo de usuario.
+Cualquier consumidor de la aplicación va a poder registrarse como cualquier tipo de usuario.
 
 **Tipos de usuarios a registrar:**
 
 * Calificadores
-* Viewers
+* Observadores
+
+Se desea registrar usuarios para que quede el histórico de sus interacciones con el sistema en el caso de los calificadores y notificar al usuario correspondiente mediante websocket en el caso de los observadores.
 
 **Alcance:**
 
 * Guardar el nombre de usuario en la base de datos con su tipo de usuario
 * Validaciones:
     * Error de validación si existe un usuario con el mismo nombre
-    * Tipo de usuario no es ni calificador ni viewer
+    * Tipo de usuario no es ni calificador ni observador
 
 **Fuera de alcance:**
 
@@ -50,7 +53,7 @@ aplicación va a poder registrarse como cualquier tipo de usuario.
 ## Iniciar sesión de usuario
 
 Obtener usuario registrado para decidir que tipo de usuario es y poder mostrarle la pantalla correspondiente(pantalla de
-viewer o calificador)
+observador o calificador)
 
 **Alcance:**
 
@@ -75,7 +78,7 @@ Un usuario calificador no puede:
 
 * unirse a una sesión de calificación si ya está asociado a otra.
 
-Un usuario viewer no puede:
+Un usuario observador no puede:
 
 * iniciar sesión de calificación
 * unirse a una sesión de calificación sesión
@@ -139,7 +142,7 @@ job.
 Leerá las imágenes tomadas a la caravana, armará el job y lo enviará al server. Este procedimiento por cada caravana. La
 cantidad de imágenes a tomar serán configuración de la aplicación batch. La primera imagen de cada job (elemento 0 de la
 lista) se va a suponer que va a poseer el número de caravana, por lo tanto, está imagen(la primera de la lista) es la
-única que se enviará al calificador a la hora de calificar. El resto de imagen van a ser enviadas a los viewers.
+única que se enviará al calificador a la hora de calificar. El resto de imagen van a ser enviadas a los observadores.
 
 ### Server
 
@@ -213,9 +216,9 @@ Validaciones:
 * El usuario debe ser calificador
 * El calificador debe pertenecer a una sesión de calificación
 
-## Enviar job al viewer
+## Enviar job al observador
 
-Los viewers tendrán configurados en la aplicación móvil cuantas imágenes como máximo desean recibir de cada caravana.
+Los observadores tendrán configurados en la aplicación móvil cuantas imágenes como máximo desean recibir de cada caravana.
 
 ## Aplicación móvil
 

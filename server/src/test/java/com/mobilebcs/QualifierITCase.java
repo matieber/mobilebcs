@@ -25,32 +25,23 @@ import org.testcontainers.shaded.org.apache.commons.lang.RandomStringUtils;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class QualifierITCase extends AbstractITCase {
 
-
     private static final String LOCATION_CODE = "DEFAULT";
 
 
     @LocalServerPort
     private int port;
-
-    private RestCaller restCaller;
-
     @Value("${images.path}")
     private String imagePath;
-
-    @Value("${images.queue.name}")
-    private String imageQueueName;
-
-    @Autowired
-    private JmsTemplate jmsTemplate;
-
     @Autowired
     private JdbcTemplate jdbcTemplate;
+    private RestCaller restCaller;
+    private Random randomScore;
+
     @BeforeEach
     public void init() throws IOException {
-
-
         FileUtils.deleteDirectory(new File(Paths.get(imagePath).toString()));
         restCaller = new RestCaller(port);
+        randomScore = new Random();
     }
 
 
@@ -61,69 +52,31 @@ public class QualifierITCase extends AbstractITCase {
         String name1 = "qualifier1" + UUID.randomUUID();
         String name2 = "qualifier2" + UUID.randomUUID();
         String name3 = "qualifier3" + UUID.randomUUID();
-        restCaller.createUser(name1, UserType.QUALIFIER);
-        restCaller.createUser(name2, UserType.QUALIFIER);
-        restCaller.createUser(name3, UserType.QUALIFIER);
+        createQualifiers(name1, name2, name3);
 
-        long qualificationSession = restCaller.joinQualificationSession(name1, null, LOCATION_CODE);
+        long qualificationSession = createQualification(name1, name2);
 
-        restCaller.joinQualificationSession(name2, qualificationSession, LOCATION_CODE);
+        int amountOfImages = 10;
+        ImageIdentification imageIdentification = sendImages(amountOfImages);
 
-        List<String> identifications = new ArrayList<>();
-        List<UUID> imagesIds=new ArrayList<>();
-        for (int position = 0; position < 10; position++) {
-            String identification = RandomStringUtils.randomAlphanumeric(6).toUpperCase();
-            UUID imageId = restCaller.sendImage(position, LOCATION_CODE, identification);
-            identifications.add(identification);
-            imagesIds.add(imageId);
-            Thread.sleep(1000L);
-        }
+        qualifyImages(amountOfImages, name1, imageIdentification, qualificationSession);
+        qualifyImages(amountOfImages, name2, imageIdentification, qualificationSession);
 
-        Random random = new Random();
-        int max = 5;
-        int min = 1;
+        int nextImagePosition = 10;
+        joinExistingQualification(name3, qualificationSession);
 
-        for (int position = 0; position < 10; position++) {
-            restCaller.testNextJob(name1, position,identifications.get(position));
-            int score = random.nextInt(max - min + 1) + min;
-            restCaller.testQualify(name1,imagesIds.get(position),score);
-            assertScore(name1,imagesIds.get(position),score,qualificationSession);
-
-        }
-        restCaller.testNextJob(name1, null, null);
-
-
-        for (int position = 0; position < 10; position++) {
-            restCaller.testNextJob(name2, position, identifications.get(position));
-            int score = random.nextInt(max - min + 1) + min;
-            restCaller.testQualify(name2,imagesIds.get(position),score);
-            assertScore(name2,imagesIds.get(position),score, qualificationSession);
-        }
-        restCaller.testNextJob(name2, null, null);
-
-
-        int position10 = 10;
-        restCaller.joinQualificationSession(name3, qualificationSession, LOCATION_CODE);
         String identification10 = RandomStringUtils.randomAlphanumeric(6).toUpperCase();
-        UUID uuid = restCaller.sendImage(position10, LOCATION_CODE, identification10);
-        restCaller.testNextJob(name1, position10, identification10);
-        int score = random.nextInt(max - min + 1) + min;
-        restCaller.testQualify(name1,uuid,score);
-        assertScore(name1,uuid,score, qualificationSession);
-        restCaller.testNextJob(name1, null, null);
-        restCaller.testNextJob(name2, position10, identification10);
-        score = random.nextInt(max - min + 1) + min;
-        restCaller.testQualify(name2,uuid,score);
-        assertScore(name2,uuid,score, qualificationSession);
-        restCaller.testNextJob(name2, null, null);
-
-        restCaller.testNextJob(name3, position10, identification10);
-        score = random.nextInt(max - min + 1) + min;
-        restCaller.testQualify(name3,uuid,score);
-        assertScore(name3,uuid,score, qualificationSession);
-        restCaller.testNextJob(name3, null, null);
+        UUID uuid = restCaller.sendImage(nextImagePosition, LOCATION_CODE, identification10);
+        qualifyImage(name1, nextImagePosition, identification10, uuid, qualificationSession);
+        qualifyImage(name2, nextImagePosition, identification10, uuid, qualificationSession);
+        qualifyImage(name3, nextImagePosition, identification10, uuid, qualificationSession);
 
         restCaller.endSession(LOCATION_CODE);
+    }
+
+    private void joinExistingQualification(String name3, long qualificationSession) {
+        restCaller.joinQualificationSession(name3, qualificationSession, LOCATION_CODE);
+        restCaller.testNextJob(name3, null, null);
     }
 
     @Test
@@ -148,6 +101,65 @@ public class QualifierITCase extends AbstractITCase {
         restCaller.endSession(LOCATION_CODE);
 
 
+    }
+
+    private void qualifyImage(String name, int nextImagePosition, String identification, UUID uuid, long qualificationSession) {
+        restCaller.testNextJob(name, nextImagePosition, identification);
+        int score = createScore();
+        restCaller.testQualify(name, uuid,score);
+        assertScore(name, uuid,score, qualificationSession);
+        restCaller.testNextJob(name, null, null);
+    }
+
+    private void qualifyImages(int amountOfImages, String name, ImageIdentification imageIdentification, long qualificationSession) {
+        for (int position = 0; position < amountOfImages; position++) {
+            restCaller.testNextJob(name, position, imageIdentification.identifications.get(position));
+            int score = createScore();
+            restCaller.testQualify(name, imageIdentification.imagesIds.get(position),score);
+            assertScore(name, imageIdentification.imagesIds.get(position),score, qualificationSession);
+        }
+        restCaller.testNextJob(name, null, null);
+    }
+
+    private long createQualification(String name1, String name2) {
+        long qualificationSession = restCaller.joinQualificationSession(name1, null, LOCATION_CODE);
+        restCaller.joinQualificationSession(name2, qualificationSession, LOCATION_CODE);
+        return qualificationSession;
+    }
+
+    private void createQualifiers(String... names) {
+        for(String name:names){
+            restCaller.createUser(name, UserType.QUALIFIER);
+        }
+    }
+
+    private int createScore() {
+        int max = 5;
+        int min = 1;
+        return randomScore.nextInt(max - min + 1) + min;
+    }
+
+    private ImageIdentification sendImages(int amountOfImages) throws IOException, InterruptedException {
+        List<String> identifications = new ArrayList<>();
+        List<UUID> imagesIds=new ArrayList<>();
+        for (int position = 0; position < amountOfImages; position++) {
+            String identification = RandomStringUtils.randomAlphanumeric(6).toUpperCase();
+            UUID imageId = restCaller.sendImage(position, LOCATION_CODE, identification);
+            identifications.add(identification);
+            imagesIds.add(imageId);
+            Thread.sleep(1000L);
+        }
+        return new ImageIdentification(identifications, imagesIds);
+    }
+
+    private static class ImageIdentification {
+        public final List<String> identifications;
+        public final List<UUID> imagesIds;
+
+        public ImageIdentification(List<String> identifications, List<UUID> imagesIds) {
+            this.identifications = identifications;
+            this.imagesIds = imagesIds;
+        }
     }
 
     private void assertScore(String userName, UUID setCode, int score, long qualificationSession) {

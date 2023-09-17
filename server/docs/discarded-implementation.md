@@ -24,12 +24,12 @@ La aplicación no permite multiples servers y se requiere la siguientes implemen
 
 Si hay dos aplicaciones va a haber dos ImageListener. Esto producirá:
 
-* que los viewer se conecten a un solo server y que le lleguen los jobs que reciba dicho ImageListener. Se podría utirlizar stomp connection con rabbit mq como broker y administrar el envío de jobs hacia los viewer.
+* que los viewer se conecten a un solo server y que le lleguen los jobs que reciba dicho ImageListener. Se podría utilizar stomp connection con rabbitmq como broker y administrar el envío de jobs hacia los viewer dado que cada viewer va a tener una cola.
 * que los calificadores reciban jobs duplicados debido a que cada ImageListener lee de la base los calificadores registrados y envía los jobs.
 
 ## Reestablecer estado de la aplicación móvil
 
-Si la aplicación móvil pierde su estado (por ejemplo si se fuerza la salida de la aplicación o si se reinicia el móvil), No se podrá finalizar la sesión de calificación
+Si la aplicación móvil pierde su estado (por ejemplo si se fuerza la salida de la aplicación o si se reinicia el móvil), No se podrá volver a la sesión de calificación.
 
 ## Persistencia de imágenes
 
