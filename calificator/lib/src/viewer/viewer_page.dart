@@ -173,7 +173,7 @@ class ViewerPageState extends State<ViewerPage> {
 
   @override
   Widget build(BuildContext context) {
-    widget.viewerStompClient.refreshCalculatedScore=refreshCalculatedScore;
+    widget.viewerStompClient.refreshCaravan=refreshCalculatedScore;
     widget.viewerStompClient.refreshReceivedScore=refreshReceivedScore;
     return Column(
         children: [

@@ -1,14 +1,12 @@
 package com.mobilebcs.controller.prediction;
 
 import com.mobilebcs.domain.predictions.CurrentQualificationSearch;
-import com.mobilebcs.domain.predictions.LastQualificationSearch;
-import com.mobilebcs.domain.predictions.PredictionSearchService;
+import com.mobilebcs.domain.predictions.EndedQualificationSessionPredictionSearch;
 import java.util.List;
-import jdk.jshell.spi.ExecutionControl;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,12 +16,17 @@ public class PredictionController {
 
 
     private final CurrentQualificationSearch currentQualificationSearch;
-    private final LastQualificationSearch lastQualificationSearch;
+    private final EndedQualificationSessionPredictionSearch endedQualificationSessionPredictionSearch;
 
     public PredictionController(CurrentQualificationSearch currentQualificationSearch,
-                                LastQualificationSearch lastQualificationSearch) {
+                                EndedQualificationSessionPredictionSearch endedQualificationSessionPredictionSearch) {
         this.currentQualificationSearch = currentQualificationSearch;
-        this.lastQualificationSearch = lastQualificationSearch;
+        this.endedQualificationSessionPredictionSearch = endedQualificationSessionPredictionSearch;
+    }
+
+    @GetMapping(value = "/{qualificationSessionId}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<QualifierSessionPredictionResponse> get(@PathVariable("qualificationSessionId") Long qualificationSessionId ){
+        return ResponseEntity.ok(endedQualificationSessionPredictionSearch.findSpecificQualificationSession(qualificationSessionId));
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
@@ -32,7 +35,7 @@ public class PredictionController {
         QualifierSessionPredictionResponse response=null;
         switch (predictionCriteria.getSearchType()) {
             case LAST_QUALIFICATION: response =
-                lastQualificationSearch.find(predictionCriteria.getLocation());
+                endedQualificationSessionPredictionSearch.findLast(predictionCriteria.getLocation());
                 break;
             case CURRENT_QUALIFICATION:
                 response = currentQualificationSearch.find(predictionCriteria.getLocation());

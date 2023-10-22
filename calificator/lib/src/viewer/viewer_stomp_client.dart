@@ -14,7 +14,7 @@ class ViewerStompClient {
 
   static const String defaultLocation="DEFAULT";
 
-  Function(ViewerCaravanMessage,ViewerStompClient)? refreshCalculatedScore;
+  Function(ViewerCaravanMessage,ViewerStompClient)? refreshCaravan;
   Function(ViewerCaravanScoreMessage)? refreshReceivedScore;
 
   static StompClient? stompClient;
@@ -45,16 +45,17 @@ class ViewerStompClient {
     Properties.getWSServerUrl(context).then((url) {
       stompClient = StompClient(
         config: StompConfig(
-            url: url,
-            onConnect: onConnect,
-            onWebSocketError: (dynamic error) {
-              print(error.toString());
-              deactivate();
-            },
+          url: url,
+          onConnect: onConnect,
+          onWebSocketError: (dynamic error) {
+            print(error.toString());
+            deactivate();
+          },
         ),
       );
 
       stompClient?.activate();
+    });
   }
 
 
@@ -71,7 +72,7 @@ class ViewerStompClient {
     if(!activated && stompClient!=null) {
       print("subscribing");
       activated = true;
-      calculatedScoreSubscription();
+      caravanSubscription();
       refreshScoreSubscription();
     }
   }
@@ -94,8 +95,8 @@ class ViewerStompClient {
     }
   }
 
-  void calculatedScoreSubscription() {
-     if (refreshCalculatedScore != null) {
+  void caravanSubscription() {
+     if (refreshCaravan != null) {
       print("subscribing /topic/notifications/$defaultLocation/$username");
       notificationUnsubscription = stompClient?.subscribe(
         destination: '/topic/notifications/$defaultLocation/$username',
@@ -105,7 +106,7 @@ class ViewerStompClient {
           ViewerCaravanMessage message = ViewerCaravanMessage.fromJson(
               responseBody);
           if (responseBody != null) {
-            refreshCalculatedScore!(message, this);
+            refreshCaravan!(message, this);
             print(message);
           }
         },

@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.UUID;
 
 @Service
-public class QualificationService {
+public class QualifierService {
 
     private final UserQualificationSessionService userQualificationSessionService;
 
@@ -20,7 +20,7 @@ public class QualificationService {
 
     private final static String INSERT = "INSERT INTO QUALIFIED_SCORE(USER_ID,QUALIFICATION_SESSION_ID,IMAGE_SET_ID,SCORE) VALUES(:userId,:qualificationSessionId,(SELECT ID FROM IMAGE_SET WHERE SET_CODE = :imageSetCode),:score)";
 
-    public QualificationService(UserQualificationSessionService userQualificationSessionService, NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
+    public QualifierService(UserQualificationSessionService userQualificationSessionService, NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
         this.userQualificationSessionService = userQualificationSessionService;
         this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
     }

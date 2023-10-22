@@ -1,4 +1,5 @@
 
+import 'package:calificator/src/diagram/qualifications_client.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -13,9 +14,12 @@ import 'indicator.dart';
 class DiagramViewerTab extends StatefulWidget {
 
   final DiagramClientHttp _diagramClientHttp;
+  final QualificationsClient _qualificationsClient;
   bool first=false;
 
-   DiagramViewerTab(Key key) : _diagramClientHttp = DiagramClientHttp(),super(key: key);
+   DiagramViewerTab(Key key) : _diagramClientHttp = DiagramClientHttp(),
+         _qualificationsClient = QualificationsClient(),
+         super(key: key);
 
   @override
   State<DiagramViewerTab> createState() => DiagramViewerTabState();
@@ -29,12 +33,17 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
   bool first=false;
 
   CustomDropdownButton? customDropdownButton;
+  CustomDropdownButton? qualificationsDropdownButton;
+
   var pieChart;
   String title="";
   DiagramResponse? diagramResponse;
   String caravanSize="";
   String date="";
   bool callSetDiagram=true;
+  List<CustomDropdownText> qualificationsDropdownButtons= [];
+
+  bool hideCombo=true;
 
   @override
   void initState() {
@@ -44,68 +53,77 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
 
   @override
   Widget build(BuildContext context) {
-    customDropdownButton ??= CustomDropdownButton([
-      CustomDropdownText("CURRENT_QUALIFICATION", "Sessión en curso"),
-      CustomDropdownText("LAST_QUALIFICATION", "Última sesión finalizada")],
-        setDiagram);
+    createCustomDropdownButton();
     if(callSetDiagram) {
       callSetDiagram=false;
       setDiagram();
     }
+
     return Column(
       children: [
-        customDropdownButton!,
+        Row(
+          children: [ const SizedBox(width: 10,)
+            ,customDropdownButton!, const SizedBox(width: 10,),
+            if(!hideCombo) qualificationsDropdownButton!
+          ],
+        ),
         const SizedBox(height: 20),
         Text(title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,decoration: TextDecoration.underline)),
         const SizedBox(height: 5),
         Text(caravanSize),
         Text(date),
-        const SizedBox(height: 40),
         buildDiagramBody()
       ],
     );
   }
 
-  AspectRatio buildDiagramBody() {
+
+
+  void createCustomDropdownButton() {
+    customDropdownButton ??= CustomDropdownButton([
+      CustomDropdownText("CURRENT_QUALIFICATION", "Sessión en curso"),
+      CustomDropdownText("LAST_QUALIFICATION", "Última sesión finalizada"),
+      CustomDropdownText("OTHERS", "Anteriores")],
+        setDiagram);
+
+    qualificationsDropdownButton ??= CustomDropdownButton(qualificationsDropdownButtons,
+        setDiagramById);
+  }
+
+  Row buildDiagramBody() {
     pieChart = buildPieChart();
-    return AspectRatio(
+    AspectRatio ratio=AspectRatio(
       aspectRatio: 1.3,
-      child: Row(
-        children: <Widget>[
-          const SizedBox(
-            height: 100,
-          ),
+      child:
           Expanded(
             child: AspectRatio(
               aspectRatio: 100,
               child: pieChart,
             ),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              buildIndicator(Colors.blue,'0 a 0.99'),
-              buildSizedBox(),
-              buildIndicator(Colors.orange, '1 a 1.99',),
-              buildSizedBox(),
-              buildIndicator(Colors.purple, '2 a 2.99'),
-              buildSizedBox(),
-              buildIndicator( Colors.green, '3 a 3.99'),
-              buildSizedBox(),
-              buildIndicator(Colors.red, '4 a 5'),
-              buildSizedBox(),
-              buildIndicator(Colors.grey, 'Sin valor'),
-              const SizedBox(
-                height: 18,
-              ),
-            ],
-          ),
-          const SizedBox(
-            width: 28,
-          ),
-        ],
-      ),
+          )
+      );
+
+    return Row(
+      children: <Widget>[
+        Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            buildIndicator(Colors.blue,'0 a 0.99'),
+            buildSizedBox(),
+            buildIndicator(Colors.orange, '1 a 1.99',),
+            buildSizedBox(),
+            buildIndicator(Colors.purple, '2 a 2.99'),
+            buildSizedBox(),
+            buildIndicator( Colors.green, '3 a 3.99'),
+            buildSizedBox(),
+            buildIndicator(Colors.red, '4 a 5'),
+            buildSizedBox(),
+            buildIndicator(Colors.grey, 'Sin valor')
+          ],
+        ),
+        ratio,
+      ],
     );
   }
 
@@ -139,18 +157,64 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
   }
 
   void setDiagram() {
-    if(customDropdownButton!=null) {
+    if(customDropdownButton!=null && "OTHERS" != customDropdownButton?.getValue()) {
       widget._diagramClientHttp.getCurrentPrediction(context,
-          customDropdownButton!.getValue()).then((currentDiagram) =>
+          customDropdownButton!.getValue()!).then((currentDiagram) =>
           setState(() {
             diagramResponse = currentDiagram;
             buildPieChart();
             title=buildTitle(diagramResponse);
             caravanSize=buildCaravanSize(diagramResponse);
             date=buildDate(diagramResponse);
+            hideCombo=true;
           })
       );
+    }else{
+      if(customDropdownButton!=null && "OTHERS" == customDropdownButton!.getValue()) {
+        widget._qualificationsClient.getQualifications(context).then((response) =>
+        setState(
+            (){
+
+              if(response!=null) {
+                List<String> allElements = response.list.map((
+                    element) => element.id!.toString()).toList();
+
+                List<String> currentElements=qualificationsDropdownButtons.map((element) => element.value).toList();
+
+                List<String> newElements=allElements.where((element) => !currentElements.contains(element)).toList();
+
+                newElements.map((id) =>
+                    CustomDropdownText(id.toString(),id.toString()))
+                    .forEach((element) {
+                      qualificationsDropdownButtons.add(element);
+                 });
+                hideCombo=false;
+                setDiagramById();
+              }
+            }
+        )
+        );
+      }
     }
+  }
+
+  void setDiagramById(){
+      if(qualificationsDropdownButton!=null && qualificationsDropdownButton!.getValue() != null) {
+        widget._diagramClientHttp.getPrediction(context,
+            qualificationsDropdownButton!.getValue()!).then((currentDiagram) =>
+            setState(() {
+              if(currentDiagram!=null) {
+                diagramResponse = DiagramResponse([currentDiagram]);
+                buildPieChart();
+                title = buildTitle(diagramResponse);
+                caravanSize = buildCaravanSize(diagramResponse);
+                date = buildDate(diagramResponse);
+              }
+            })
+        );
+      }
+
+
   }
 
   String buildTitle(DiagramResponse? diagramResponse){

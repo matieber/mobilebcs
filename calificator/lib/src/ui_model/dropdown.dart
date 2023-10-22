@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 
 class CustomDropdownButton extends StatefulWidget {
-  final List<CustomDropdownText> list;
+  final List<CustomDropdownText>? list;
   CustomDropdownText? previousDropDownValue;
-  CustomDropdownText dropDownValue;
+  CustomDropdownText? dropDownValue;
   Function notifyChange;
 
-  CustomDropdownButton(this.list,this.notifyChange, {Key? key}):dropDownValue=list.first, super(key: key);
+  CustomDropdownButton(this.list,this.notifyChange, {Key? key}):
+        dropDownValue = (list != null && list.isNotEmpty) ? list.first : null,
+        super(key: key);
 
   @override
   State<StatefulWidget> createState() => _CustomDropdownButtonState();
 
-  String getValue() {
-    return dropDownValue.value;
+  String? getValue() {
+    return dropDownValue?.value;
   }
 }
 
@@ -42,7 +44,7 @@ class _CustomDropdownButtonState extends State<CustomDropdownButton> {
           }
         });
       },
-      items: widget.list.map<DropdownMenuItem<CustomDropdownText>>((CustomDropdownText value) {
+      items: widget.list?.map<DropdownMenuItem<CustomDropdownText>>((CustomDropdownText value) {
         return DropdownMenuItem<CustomDropdownText>(
           value: value,
           child: Text(value.text),

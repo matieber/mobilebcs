@@ -5,7 +5,7 @@ import com.mobilebcs.domain.exception.InvalidOperationException;
 import com.mobilebcs.domain.qualifier.JobConsumerService;
 import com.mobilebcs.domain.qualifier.NextCaravanMessage;
 import com.mobilebcs.domain.exception.UserNonexistentException;
-import com.mobilebcs.domain.qualifier.QualificationService;
+import com.mobilebcs.domain.qualifier.QualifierService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,12 +21,12 @@ public class QualifierController {
 
     private final JobConsumerService jobConsumerService;
 
-    private final QualificationService qualificationService;
+    private final QualifierService qualifierService;
 
 
-    public QualifierController(JobConsumerService jobConsumerService, QualificationService qualificationService) {
+    public QualifierController(JobConsumerService jobConsumerService, QualifierService qualifierService) {
         this.jobConsumerService = jobConsumerService;
-        this.qualificationService = qualificationService;
+        this.qualifierService = qualifierService;
     }
 
     @GetMapping(value = "/{name}/next-animal", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -45,7 +45,7 @@ public class QualifierController {
     @PutMapping(value = "/{name}/setCode/{setCode}")
     public ResponseEntity<Void> qualify(@PathVariable("name") String identificationName, @PathVariable("setCode") UUID setCode,@RequestBody QualificationRequest qualificationRequest) throws InvalidOperationException, UserNonexistentException, SQLException {
         System.out.println("score "+qualificationRequest.getScore());
-        qualificationService.qualify(identificationName,setCode,qualificationRequest.getScore());
+        qualifierService.qualify(identificationName,setCode,qualificationRequest.getScore());
         return ResponseEntity.noContent().build();
     }
     

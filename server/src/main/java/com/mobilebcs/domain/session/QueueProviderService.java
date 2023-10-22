@@ -34,7 +34,7 @@ public class QueueProviderService {
         Long qualificationSessionId = userQualificationSessionRepository.getQualificationSessionByLocation(locationCode);
         HashSet<UserQueue> userQueues = new HashSet<>();
         if (qualificationSessionId == null) {
-            LOG.warn("There are not qualification sesión active for location code " + locationCode);
+            LOG.warn("There are not qualification session active for location code " + locationCode);
         } else {
             return queueSessionService.getQueues(qualificationSessionId);
 

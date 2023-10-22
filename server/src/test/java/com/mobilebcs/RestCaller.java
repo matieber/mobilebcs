@@ -5,12 +5,14 @@ import com.mobilebcs.controller.images.CaravanRequest;
 import com.mobilebcs.controller.prediction.QualifierSessionPredictionResponse;
 import com.mobilebcs.controller.prediction.QualifierSessionsPredictionResponse;
 import com.mobilebcs.controller.prediction.SearchType;
+import com.mobilebcs.controller.qualifications.QualificationsResponse;
 import com.mobilebcs.controller.qualifier.QualificationRequest;
 import com.mobilebcs.controller.user.UserRequest;
 import com.mobilebcs.controller.user.UserResponse;
 import com.mobilebcs.controller.user.UserType;
 import com.mobilebcs.domain.qualifier.NextCaravanMessage;
 import com.mobilebcs.images.ImageEncoder;
+import java.util.stream.Collectors;
 import org.junit.jupiter.api.Assertions;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpEntity;
@@ -18,6 +20,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
@@ -100,6 +103,7 @@ public class RestCaller {
         return user.getQualificationSession();
     }
 
+
     public void endSession(String locationCode) {
         ResponseEntity<Void> endResponse = restTemplate.exchange("/location/{locationCode}/qualificationSession", HttpMethod.DELETE, new HttpEntity<>(null, null), Void.class, locationCode);
         Assertions.assertEquals(204, endResponse.getStatusCodeValue());
@@ -109,6 +113,14 @@ public class RestCaller {
         UserRequest userRequest = new UserRequest(userName, qualifier.name());
         ResponseEntity<Void> creationResponse = restTemplate.exchange("/user", HttpMethod.POST, new HttpEntity<>(userRequest, null), Void.class);
         Assertions.assertEquals(201, creationResponse.getStatusCodeValue());
+    }
+
+    public QualifierSessionPredictionResponse searchPrediction(Long qualificationSessionId) {
+        ResponseEntity<QualifierSessionPredictionResponse> forEntity =
+                restTemplate.exchange("/prediction/"+qualificationSessionId,HttpMethod.GET,HttpEntity.EMPTY, QualifierSessionPredictionResponse.class);
+        Assertions.assertEquals(HttpStatus.OK,forEntity.getStatusCode());
+        Assertions.assertNotNull(forEntity.getBody());
+        return forEntity.getBody();
     }
 
     public QualifierSessionPredictionResponse searchPrediction(SearchType searchType) {
@@ -125,6 +137,18 @@ public class RestCaller {
         ResponseEntity<QualifierSessionsPredictionResponse> forEntity =
             restTemplate.exchange("/prediction?onlyLastOne=true&location=DEFAULT&searchType="+searchType.name(),HttpMethod.GET,HttpEntity.EMPTY, QualifierSessionsPredictionResponse.class);
         Assertions.assertEquals(HttpStatus.NO_CONTENT,forEntity.getStatusCode());
+    }
+
+    public QualificationsResponse getQualifications(String location) {
+        ResponseEntity<QualificationsResponse> forEntity =
+                restTemplate.exchange("/qualifications/"+location,HttpMethod.GET,HttpEntity.EMPTY, QualificationsResponse.class);
+        Assertions.assertTrue(forEntity.getStatusCode().is2xxSuccessful());
+        QualificationsResponse body = forEntity.getBody();
+        if(body!=null && !CollectionUtils.isEmpty(body.getQualificationResponse())){
+            int distinctSize = body.getQualificationResponse().stream().distinct().collect(Collectors.toList()).size();
+            Assertions.assertEquals(body.getQualificationResponse().size(),distinctSize);
+        }
+        return body;
     }
 
     void testQualify(String userName, UUID setId, int score){

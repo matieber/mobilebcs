@@ -41,8 +41,6 @@ public class QualificationSessionITCase extends AbstractITCase {
     @Value("${images.path}")
     private String imagePath;
 
-    @LocalServerPort
-    private Long randomServerPort;
 
     @Autowired
     private TestRestTemplate restTemplate;
@@ -50,15 +48,13 @@ public class QualificationSessionITCase extends AbstractITCase {
     @Autowired
     private NamedParameterJdbcTemplate jdbcTemplate;
 
-    private SimpMessagingTemplate simpMessagingTemplate;
-
     @BeforeEach
     public void init() throws IOException {
         FileUtils.deleteDirectory(new File(Paths.get(imagePath).toString()));
     }
 
     @Test
-    public void testCreateNewQualificationSession() throws IOException {
+    public void testCreateNewQualificationSession() {
 
         String userName = "user" + UUID.randomUUID();
 
@@ -70,7 +66,7 @@ public class QualificationSessionITCase extends AbstractITCase {
     }
 
     @Test
-    public void testCreateNewQualificationSessionWithViewerUser() throws IOException {
+    public void testCreateNewQualificationSessionWithViewerUser() {
 
         String userName = "user" + UUID.randomUUID();
 

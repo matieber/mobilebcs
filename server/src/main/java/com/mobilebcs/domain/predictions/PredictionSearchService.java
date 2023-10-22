@@ -38,11 +38,11 @@ public class PredictionSearchService {
         LocalDateTime endDate=null;
         Long currentQualificationSessionId = findCurrentQualificationSessionId(location);
         if(currentQualificationSessionId==null){
-            LastQualificationEntity lastQualificationEntity = findLastQualificationSession(location);
-            if(lastQualificationEntity !=null){
-                System.out.println(lastQualificationEntity.toString());
-                currentQualificationSessionId= lastQualificationEntity.getId();
-                endDate=Optional.ofNullable(lastQualificationEntity.getEndDate()).map(Timestamp::toLocalDateTime).orElse(null);
+            QualificationEntity qualificationEntity = findLastQualificationSession(location);
+            if(qualificationEntity !=null){
+                System.out.println(qualificationEntity.toString());
+                currentQualificationSessionId= qualificationEntity.getId();
+                endDate=Optional.ofNullable(qualificationEntity.getEndDate()).map(Timestamp::toLocalDateTime).orElse(null);
             }
         }
         QualifierSessionPredictionResponse qualifierSessionPredictionResponse=null;
@@ -74,17 +74,17 @@ public class PredictionSearchService {
         return qualifierSessionPredictionResponse;
     }
 
-    private LastQualificationEntity findLastQualificationSession(String location) {
+    private QualificationEntity findLastQualificationSession(String location) {
         MapSqlParameterSource paramMap = new MapSqlParameterSource();
         paramMap.addValue("location", location);
-        LastQualificationEntity lastQualificationEntity =null;
+        QualificationEntity qualificationEntity =null;
         try {
-            lastQualificationEntity = namedParameterJdbcTemplate.queryForObject(SELECT_ROW_LAST_QUALIFICATION_SESSION, paramMap, new BeanPropertyRowMapper<>(
-                LastQualificationEntity.class));
+            qualificationEntity = namedParameterJdbcTemplate.queryForObject(SELECT_ROW_LAST_QUALIFICATION_SESSION, paramMap, new BeanPropertyRowMapper<>(
+                QualificationEntity.class));
         }catch (EmptyResultDataAccessException exception){
 
         }
-        return lastQualificationEntity;
+        return qualificationEntity;
     }
 
     private Long findCurrentQualificationSessionId(String location) {

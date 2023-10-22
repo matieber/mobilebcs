@@ -2,15 +2,15 @@ package com.mobilebcs.domain.predictions;
 
 import java.sql.Timestamp;
 
-public class LastQualificationEntity {
+public class QualificationEntity {
 
     private Long id;
     private Timestamp endDate;
     private Timestamp startDate;
 
-    private LastQualificationEntity(){}
+    private QualificationEntity(){}
 
-    public LastQualificationEntity(Long id, Timestamp endDate, Timestamp startDate) {
+    public QualificationEntity(Long id, Timestamp endDate, Timestamp startDate) {
         this.id = id;
         this.endDate = endDate;
         this.startDate = startDate;

@@ -18,14 +18,12 @@ public class QualifierQueueFactory {
 
     private final UserLookupService userLookupService;
 
-    private final ImagesListener imagesListener;
 
 
     private final QueueProviderService queueProviderService;
 
-    public QualifierQueueFactory(UserLookupService userLookupService, ImagesListener imagesListener, QueueProviderService queueProviderService) {
+    public QualifierQueueFactory(UserLookupService userLookupService, QueueProviderService queueProviderService) {
         this.userLookupService = userLookupService;
-        this.imagesListener = imagesListener;
 
         this.queueProviderService = queueProviderService;
     }

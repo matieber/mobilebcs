@@ -2,6 +2,7 @@ package com.mobilebcs.controller.prediction;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class QualifierSessionPredictionResponse {
 
@@ -20,6 +21,18 @@ public class QualifierSessionPredictionResponse {
         this.sessionEndDate = sessionEndDate;
         this.qualificationSession = qualificationSession;
         this.caravanSize=caravanSize;
+    }
+
+
+    public static QualifierSessionPredictionResponse create(List<Double> scores, LocalDateTime endDate, LocalDateTime startDate, Long qualificationSessionId, Integer caravanSize) {
+        List<ScoreResponse> scoreResponse = scores.stream().map(ScoreResponse::new).collect(Collectors.toList());
+        QualifierSessionPredictionResponse qualifierSessionPredictionResponse = new QualifierSessionPredictionResponse();
+        qualifierSessionPredictionResponse.setScores(scoreResponse);
+        qualifierSessionPredictionResponse.setSessionEndDate(endDate);
+        qualifierSessionPredictionResponse.setQualificationSession(qualificationSessionId);
+        qualifierSessionPredictionResponse.setCaravanSize(caravanSize);
+        qualifierSessionPredictionResponse.setSessionStartDate(startDate);
+        return qualifierSessionPredictionResponse;
     }
 
     public List<ScoreResponse> getScores() {
@@ -61,6 +74,7 @@ public class QualifierSessionPredictionResponse {
     public void setCaravanSize(Integer caravanSize) {
         this.caravanSize = caravanSize;
     }
+
 
     @Override
     public String toString() {
