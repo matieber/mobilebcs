@@ -1,0 +1,189 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Planteo del problema
+\end_layout
+
+\begin_layout Standard
+En relación a la primera hipótesis formulada previamente, y en lo que respecta
+ a CC, la ampliación de la capacidad predictiva de los algoritmos de deep
+ learning ya estudiados requiere en principio contar con imágenes de buena
+ calidad de vacas de otras razas lecheras distintas a Holstei para entrenar
+ y re-diseñar los mismos, y valores de CC asociados tomados por expertos.
+ Esto representa el ground truth para entrenar y comprobar la efectividad
+ de los modelos.
+ Se considerará utilizar más de un experto para eliminar subjetividad en
+ la calificación de la CC.
+ 
+\end_layout
+
+\begin_layout Standard
+Una vez obtenidos los modelos de predicción de CC funcionales se pretende,
+ en lo que respecta al dispositivo computacional que los aloja y se integra
+ al aparejo, investigar y desarrollar la integración de dicho dispositivo
+ al concepto de IoT (Objetivo 3) dentro del contexto de la ganadería de
+ precisión.
+ Esto es, desarrollar una capa flexible de comunicación donde los dispositivos
+ (“cosas”, como por ejemplo una manga, un corral o un comedero) se puedan
+ conectar a una red de forma transparente y puedan realizar captura automatizada
+ de datos (CAD), y de comunicación de acciones de contingencia (CAC), de
+ forma que puedan estructurarse como Sistemas Integrales de Gestión de la
+ Información (SIGI) hard-soft de producción ganadera, de modo que faciliten
+ el monitoreo, la planificación y la toma de decisiones.
+\end_layout
+
+\begin_layout Standard
+Los pasos involucrados en la construcción y mejora del sistema incluyen
+ recolectar imágenes de profundidad para construir un conjunto de datos
+ de entrenamiento y prueba, donde cada imagen incluye una vaca y su correspondie
+nte CC asociado (Objetivo 1).
+ Este valor es asignado por al menos un par de evaluadores expertos/as en
+ el lugar que puntúa de forma independiente cada una de las vacas a medida
+ que caminan voluntariamente por debajo de una cámara con tecnología ToF
+ (Time of Flight).
+ 
+\end_layout
+
+\begin_layout Standard
+Respecto del software a desarrollar (Objetivo 3) este involucrará 3 grandes
+ componentes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Diagrama de componentes-Componentes.drawio.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Componentes del sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El server se encarga de almacenar los datos de usuarios, lo relacionado
+ a la sesión de calificación, la condición corporal de cada vaca definida
+ por los expertos y los algoritmos de predicción lo que esta última se utilizará
+ para realizar los reportes.
+ 
+\end_layout
+
+\begin_layout Standard
+La aplicación móvil permite dos tipos de usuarios, calificadores que permite
+ a los expertos realizar las calificaciones de cada vaca y ver reportes,
+ como los obervadores que solo tienen la funcion de ver reportes.
+ Además, los dispositivos de observadores serán los encargadores de ejecutar
+ el algoritmo predictivo para informar a otros observadores sbore la predicción
+ como al server para almacenar los datos que serán utilizados para los reportes.
+\end_layout
+
+\begin_layout Standard
+La aplicación batch será la encargada de mediante una llamada rest informar
+ al server las fotos que fueron sacadas a una vaca.
+\end_layout
+
+\end_body
+\end_document

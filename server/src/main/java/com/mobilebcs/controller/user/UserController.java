@@ -28,8 +28,8 @@ public class UserController {
     }
 
     @PostMapping(value = "/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<UserResponse> startUserSession(@PathVariable("name") String username) throws UserNonexistentException {
-        UserResponse userResponse = userSessionService.starUserSession(username);
+    public ResponseEntity<UserResponse> login(@PathVariable("name") String username) throws UserNonexistentException {
+        UserResponse userResponse = userSessionService.login(username);
         return ResponseEntity.status(201).body(userResponse);
     }
 

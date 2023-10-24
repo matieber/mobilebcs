@@ -21,7 +21,7 @@ public class UserSessionService {
         this.qualificationSessionService = qualificationSessionService;
     }
 
-    public UserResponse starUserSession(String name) throws UserNonexistentException {
+    public UserResponse login(String name) throws UserNonexistentException {
         User user = userLookupService.lookup(name);
         if (user == null) {
             throw new UserNonexistentException("Usuario " + name + " no existe");

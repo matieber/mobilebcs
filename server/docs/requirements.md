@@ -58,13 +58,14 @@ observador o calificador)
 **Alcance:**
 
 * Obtener de la base de datos el usuario y su tipo
+* su Mantener historial de sesiones iniciadas en el sistema.
 * Validaciones:
     * Error de validación si no existe el usuario
 
 **Fuera de alcance:**
 
 * Implementar mecanismo de inicio de sesión entre aplicación móvil y server con seguridad.
-* Mantener historial de sesiones iniciadas en el sistema.
+
 
 ## Inicio de sesión de calificación
 
@@ -179,7 +180,7 @@ los calificadores.
 **Fuera de alcance**
 
 * que los calificadores puedan calificar jobs creados anteriormente a la unión/creación de la sesión de calificación, es
-  decir, que los jobs que existan antes del inicio de sesión no serán calificadas por nadie. Aquellos que arriben antes
+  decir, que los jobs que existan antes del inicio de sesión no serán calificadps por nadie. Aquellos que arriben antes
   de que un calificador se una a una sesión de calificación tampoco van a ser calificados.
 
 Para lograr que los jobs generados antes del inicio de sesión de calificación o antes de que el usuario

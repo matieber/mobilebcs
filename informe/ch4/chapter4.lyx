@@ -1,0 +1,681 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+
+\lang spanish
+Diseño
+\end_layout
+
+\begin_layout Section
+Login
+\end_layout
+
+\begin_layout Standard
+En este MVP no se tuvo en cuenta la seguridad a la hora de registrar e iniciar
+ sesión de usuario.
+ Sin embargo, se ha tenido en cuenta la creación e inicio de sesión de un
+ usuario sin contraseña con el objetivo de diferenciar los calificadores
+ y los observadores como así también asociar las calificaciones realizadas
+ al experto correspondiente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Diagrama de componentes-Login.drawio.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de componentes - login
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la creación del usuario se decide el nombre único entre todos los usuarios
+ como así el tipo (observador o calificador), es decir, el server posee
+ una validación para verificar que el nombre del usuario sea único.
+\end_layout
+
+\begin_layout Section
+Sesión de calificación
+\end_layout
+
+\begin_layout Standard
+Una sesión de calificación es una sesión en la cual un conjunto de vacas
+ son controladas por un experto.
+ De esta manera, un experto ó calificador va a poder desde la aplicación
+ móvil comenzar, unirse o finalizar sesiones de calificación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Diagrama de componentes-Qualification session.drawio.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de componentes - sesión de calificación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En una sesión de calificación pueden participar varios expertos para calificar
+ a cada vaca y ser almacenada su calificación en una base de datos para
+ en futuros trabajos entrenar al modelo.
+\end_layout
+
+\begin_layout Standard
+Cada sesión de calificación va a estar asociada a una locación en particular
+ configurada en los scripts de inicialización de la base de datos.
+ En este MVP hay una sola sesión de calificación por defecto.
+ Aunque desde la aplicación móvil este configurada la sesión por defecto
+ esto puede ser fácilmente extensible dado que el server permite calificadores
+ trabajando en simultaneo cada uno en distintas locaciones.
+ Lo mismo ocurre con la funcionalidad de tener dos calificadores trabajando
+ de manera simultanea en la misma locación, es decir, la aplicación móvil
+ no permite a un calificador unirse a una sesión existente pero puede ser
+ fácilmente extensible dado que el server permite esta funcionalidad.
+\end_layout
+
+\begin_layout Standard
+Las sesiones de calificación son almacenadas en la base de datos con un
+ identificador generado automáticamente, una fecha de inicio y de fin.
+ Las sesiones de calificación van a ser utilizadas en el componente de reportes.
+\end_layout
+
+\begin_layout Standard
+Los componentes involucrados son:
+\end_layout
+
+\begin_layout Itemize
+Start Qualification Session: Una sesión de calificación puede ser iniciada
+ por un usuario calificador en una locación particular.
+ No puede haber dos sesiones de calificación en la misma locación.
+ El calificador que crea la sesión se unirá automáticamente a esta.
+\end_layout
+
+\begin_layout Itemize
+End Qualification Session: Una sesión de calificación puede ser finalizada
+ por un usuario calificador en una locación donde ya se haya iniciado una
+ sesión de calificación.
+\end_layout
+
+\begin_layout Itemize
+Join Qualification Session: Un calificador puede unirse a una sesión de
+ calificación existe si ya a sido iniciada por otro calificador previamente
+ y si este no esta asociado a ninguna sesión que no haya finalizado.
+\end_layout
+
+\begin_layout Itemize
+Qualification session page: La página de sesión de calificación permite
+ a un calificador iniciar o finalizar una sesión de calificación solamente
+ en la locación por defecto y no permite a un calificador unirse a una sesión
+ que ha iniciado.
+\end_layout
+
+\begin_layout Section
+Arribo de imágenes de vacas
+\end_layout
+
+\begin_layout Standard
+La aplicación batch se encarga de enviar imágenes de cada vaca junto a su
+ posición, la identificación de la vaca y el id del conjunto de imágenes.
+ Estas al llegar al server se almacena la meta-data en la base de datos
+ y las imágenes en el sistema de archivos.
+ Además, se crea y envía job a una cola para su procesamiento.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Diagrama de componentes-Image.drawio.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de componentes - imágenes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El componente Image Listener es el encargado de leer cada job y enviar un
+ job a la cola de calificadores para que los expertos puedan realizar la
+ calificación de cada vaca y otro se envía a través de websocket para que
+ los observadores puedan observar las imágenes y la aplicación móvil pueda
+ predecir la CC en backgroud.
+\end_layout
+
+\begin_layout Standard
+Cada observador va a tener una conexión websocket para recibir todas las
+ imágenes como cada calificador va a tener una cola para poder calificar
+ todos los jobs.
+\end_layout
+
+\begin_layout Standard
+La meta-data que arriben se almacenarán en la base de datos como los archivos
+ en el sistema de archivos aunque no haya sesión de calificación iniciada.
+ Una vez iniciada, estas se asociarán a la sesión de calificación.
+ Esto es posible debido a que se permite una sesión de calificación por
+ locación.
+ 
+\end_layout
+
+\begin_layout Section
+Calificador
+\end_layout
+
+\begin_layout Standard
+Cada experto como calificador va a poder consultar cual es la siguiente
+ imagen a calificar donde va a poder calificarla o ignorarla y continuar
+ con la siguiente, es decir, todos los calificadores van a tener la posibilidad
+ de calificar todas las vacas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Diagrama de componentes-Qualifier.drawio.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de componentes: calificador
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cada job de calificación será almacenado en una cola que pertenece a cada
+ calificador.
+ Las ventaja de utilizar colas es que los mensajes van a estar en la cola
+ jms sin importar la cantidad de servidores que haya o los re-inicios del
+ mismo.
+ Los calificadores van a poder calificar los jobs que arriben después de
+ que este se haya unido a la sesión de calificación.
+ Es decir, al momento de la captura de una imagen de una vaca esta se enviará
+ a calificar solo si existen expertos para recibir esta información.
+ Si no hay ningún calificador esta no se enviará a ningún calificador y
+ por lo tanto no va a poder ser calificada por un experto.
+\end_layout
+
+\begin_layout Section
+Observador
+\end_layout
+
+\begin_layout Standard
+Los usuarios observadores no podrán iniciar sesión de calificación ni asociarse
+ a una sesión de calificación para calificar.
+ Como se ha mencionado anteriormente, la aplicación móvil esta asociado
+ a la locación por defecto, por lo tanto, los observadores leerán los job
+ de las imágenes a través de websocket perteneciente a la locación por defecto
+ y las mostrará por pantalla.
+ A su vez, en cada móvil de un usuario observador se va a predecir la CC
+ de cada vaca si el server informa en el job que el usuario es el que debe
+ realiza la predicción.
+ Si es así, se ejecuta el algoritmo de predicción y se informa al server
+ a través de websocket para almacenar la predicción y ser utilizada para
+ los reportes como así también el server informa a través de websocket al
+ resto de los observadores cual es el CC calculada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de componentes - Observadores
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Diagrama de componentes-Viewer -2.drawio.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si no hay sesión de calificación iniciada, igualmente es posible que los
+ observadores puedan observar y que los móviles en backgroud ejecuten el
+ algoritmo de predicción de la CC.
+ Si no hay observador al momento de que se capture una imagen de una vaca,
+ esta no va tener CC predicción.
+\end_layout
+
+\begin_layout Standard
+En la siguiente imagen se puede observar que 
+\emph on
+Image Listener
+\emph default
+ envía las imágenes a través del
+\emph on
+ websocket /topic/notifications/{locationCode}/{viewerName}
+\emph default
+ a la aplicación móvil.
+ Esta última posee una suscripción a dicho topic y cuando un job llega se
+ muestra en pantalla la imagen.
+ Con respecto al score (CC) hay dos opciones:
+\end_layout
+
+\begin_layout Enumerate
+Si el job posee como observador a predecir al observador actual, se envía
+ la imagen a predecir y luego este componente envía el score a:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+la pantalla para que el observador lo pueda visualizar
+\end_layout
+
+\begin_layout Enumerate
+se envía a través de websocket (
+\emph on
+/app/score
+\emph default
+) para notificar al server el score calculado
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+el server almacena el score en la base de datos
+\end_layout
+
+\begin_layout Enumerate
+lo envía a través de websocket(/topic/notifications/{locationCode}/{viewerName})
+ para notificar al resto de los observadores
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+se actualizan los diagramas de reporte con el score calculado.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Si el job no posee como observador a predecir al observador actual, se espera
+ a que lo calcule otro observador esperando el score a través de websocket
+ (
+\emph on
+/topic/notifications/{locationCode}/{viewerName}
+\emph default
+).
+ Una vez que llega el score se muestra en pantalla y se actualice el diagrama
+ de report.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Diagrama de componentes-Viewer.drawio.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de componentes - Observadores en detalle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Reportes
+\end_layout
+
+\begin_layout Standard
+Tanto los observadores como los calificadores tienen la posibilidad de ver
+ diagramas de torta de los porcentajes de vacas de la CC calculada por el
+ algoritmo de predicción en una sesión de calificación dentro de los siguientes
+ rangos:
+\end_layout
+
+\begin_layout Itemize
+0 a 0.99
+\end_layout
+
+\begin_layout Itemize
+1 a 1.99
+\end_layout
+
+\begin_layout Itemize
+2 a 2.99
+\end_layout
+
+\begin_layout Itemize
+3 a 3.99
+\end_layout
+
+\begin_layout Itemize
+4 a 5
+\end_layout
+
+\begin_layout Itemize
+sin predicción
+\end_layout
+
+\begin_layout Standard
+La aplicación móvil da la posibilidad de ver los diagramas de la locación
+ por defecto:
+\end_layout
+
+\begin_layout Itemize
+en la sesión de calificación actual (sesión de calificación que ha comenzado
+ pero que no ha terminado)
+\end_layout
+
+\begin_layout Itemize
+en la última sesión de calificación terminada
+\end_layout
+
+\begin_layout Itemize
+en sesiones de calificación antiguas
+\end_layout
+
+\begin_layout Standard
+Tanto los observadores como calificadores tiene un tab donde se pueden ver
+ los diagramas, por lo que cada vez que se realiza un cambio de tab se actualiza
+ el diagrama si este corresponde a una sesión de calificación actual para
+ obtener los últimos valores realizados por el algoritmo de predicción.
+\end_layout
+
+\begin_layout Subsection
+Observador
+\end_layout
+
+\begin_layout Standard
+En el caso de los observadores, dado que es posible que los observadores
+ estén mirando la pantalla de diagramas y dado que siempre recibe la CC
+ calculada (o por él mismo o por otro observador) se actualiza el diagrama
+ automáticamente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Diagrama de componentes-Diagram Viewer.drawio.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de componentes - reporte de observadores
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los observadores a la hora de recibir una imagen de una vaca también visualizan
+ el historial de CC de predicción realizado en sesiones de calificación
+ anteriores.
+\end_layout
+
+\begin_layout Subsection
+Calificador
+\end_layout
+
+\begin_layout Standard
+En el caso de los calificadores como estos van a estar calificando vacas,
+ el diagrama solo se actualiza al momento de elegir el tab de diagramas.
+ Sin embargo, existe la posibilidad de mediante una conexión websocket recibir
+ los valores de CC realizados por el algoritmo de predicción en tiempo real.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Diagrama de componentes-Qualifier Viewer.drawio (1).png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de componentes - reporte de calificadores
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

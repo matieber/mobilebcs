@@ -1,0 +1,196 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Trabajos relacionados
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Trabajos-relacionados"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A nivel internacional existen tres aparejos comerciales automáticos (DeLaval
+ - Suecia, Ingenera SA - Suiza, y Biondi Engineering SA -Suiza) orientados
+ exclusivamente a lechería que han sido evaluados (O’ Leary et al., 2020),
+ pero que no han tenido penetración comercial en la región, posiblemente
+ por costos y modelo de negocio.
+ Por lo tanto se trabajó en la mejora del método de la automatización después
+ de haber analizado la bibliografía donde se han propuestos métodos a partir
+ de procesamiento de imágenes, mediante regresiones o a partir de algoritmos
+ basados en el nivel de angularidad de la zona pélvica (mayor angulosidad
+ se la asocia con menor CC), con diferente grado de automatización y de
+ precisión de los registros (Rodríguez Alvarez et al., 2017).
+ 
+\end_layout
+
+\begin_layout Standard
+En este sentido, se avanzó con buenos resultados (Rodríguez Alvarez et al.,
+ 2019, 2018) con mejoras en la precisión de la estimación de la CC de vacas
+ tipo Holstein, con respecto a trabajos internacionales previos a una escala
+ de 0.25 (1 delgada y 5 obesa) a partir de redes neuronales y algoritmos
+ de aprendizaje profundo o deep learning (Rodríguez Alvarez et al., 2018).
+ 
+\end_layout
+
+\begin_layout Standard
+El objetivo general de este proyecto que comenzó en trabajos anteriores
+ y continuará en el trabajo actual es: desarrollar un MVP de un aparejo
+ (hard-soft) móvil y robusto en condiciones de campo, que a partir capturas
+ de técnicas de visión computacional (imágenes 3D) obtenidas al paso de
+ los vacunos e inteligencia artificial, cuantifique de forma automática
+ y objetiva, la condición corporal (y potencial reproductivo de vacas) y
+ el grado de terminación de animales de engorde, permitiendo integrar, informar
+ y reportar esa información de forma ágil para la toma de decisión.
+\end_layout
+
+\begin_layout Standard
+Este proyecto tiene cinco objetivos específicos:
+\end_layout
+
+\begin_layout Standard
+1.
+ Expandir la calibración del algoritmo disponible de IA predictor de Condición
+ Corporal para vacas lecheras Holando Argentino, con la inclusión de otras
+ razas lecheras y cruzas, y razas principales de producción de carne.
+\end_layout
+
+\begin_layout Standard
+2.
+ Calibrar un algoritmo de IA para predecir el Grado de Terminación (GT,
+ expresado en mm de grasa dorsal y área de ojo de bife en cm2, contrastado
+ por ecografía) en bovinos de carne destinados a faena.
+\end_layout
+
+\begin_layout Standard
+3.
+ Desarrollar un servicio (software) de administración que permita emitir
+ reportes personalizables y con capacidad potencial de integración genérica
+ a un ambiente IoT para conexión futura a otros dispositivos (por ejemplo
+ lectores de RFID para individualizar los datos de forma automática, apartadores
+ automáticos de hacienda, etc.).
+ 
+\end_layout
+
+\begin_layout Standard
+4.
+ Desarrollar un aparejo móvil, robusto, con posibilidad de fuente energética
+ propia, con un branding definido y fácilmente adaptable a instalaciones
+ heterogéneas como las que se presentan en condiciones de campo en lechería
+ y en producción de carne.
+ 
+\end_layout
+
+\begin_layout Standard
+5.
+ Diseñar y validar el modelo de negocios más apropiado para el aparejo de
+ funcionalidad dual (CC y GT).
+\end_layout
+
+\begin_layout Standard
+En relación al objetivo 1, el grupo de trabajo ha realizado avances preliminares
+ sobre el algoritmo para el procesamiento automático de imágenes de la condición
+ corporal de vacas (Rodríguez Álvarez et al., 2018) y resta ampliar la base
+ de datos de campo para aumentar la capacidad predictiva a otras razas de
+ leche y carne, y proceder al desarrollo de un aparejo comercial con ese
+ propósito.
+\end_layout
+
+\begin_layout Standard
+El método desarrollado sobre el algoritmo se basa en el uso integral de
+ deep learning para: a) detectar la parte trasera de una vaca en un cuadro
+ de video, lo que se realiza con una red basada en YOLO (You Only Look Once),
+ y b) puntuar la condición corporal a partir de la imagen producción de
+ la detección en a), lo que se realiza con una red basada en CNN (Convolutional
+ Neural Network).
+ Los resultados iniciales mostraron una precisión del 94% y sucesivas mejoras
+ utilizando ensembles y transfer learning elevaron este valor a 97% (Rodriguez
+ Alvarez et al., 2019).
+ Cabe destacar, sin embargo, que el foco fue ganado lechero, y en particular
+ vacas Holstein-Freisian, por lo que las conclusiones respecto a la parametrizac
+ión, anatomía, entrenamiento y evaluación de la red son solo válidas en
+ el contexto de imágenes de dicha raza.
+ 
+\end_layout
+
+\end_body
+\end_document
