@@ -68,17 +68,32 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -997162125 "mhirsch"
 \end_header
 
 \begin_body
 
 \begin_layout Chapter
-Futuras funcionalidades
+
+\change_inserted -997162125 1699375880
+Conclusiones, Limitaciones y Trabajos 
+\change_unchanged
+Futur
+\change_deleted -997162125 1699375870
+a
+\change_inserted -997162125 1699375870
+o
+\change_unchanged
+s
+\change_deleted -997162125 1699375872
+ funcionalidades
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section

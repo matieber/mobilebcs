@@ -124,15 +124,6 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-btprint "btPrintCited"
-bibfiles "tesis"
-options "plainnat"
-
-\end_inset
-
-
 \begin_inset ERT
 status open
 
@@ -176,7 +167,7 @@ Ingeniería de Sistemas
 \align center
 
 \size huge
-Un prototipo d ambiente Dew para etiquetado y clasificación de ganado
+Un prototipo de ambiente Dew para etiquetado y clasificación de ganado
 \size default
 
 \begin_inset VSpace 0.3cm
