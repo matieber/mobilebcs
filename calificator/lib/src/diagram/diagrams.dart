@@ -3,8 +3,8 @@ import 'package:calificator/src/diagram/prediction_response.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-final fontSize = 16.0;
-final radius = 150.0;
+const fontSize = 16.0;
+const radius = 100.0;
 const shadows = [Shadow(color: Colors.black, blurRadius: 2)];
 
 List<PieChartSectionData> showingSections(DiagramResponse? diagramResponse) {
@@ -44,7 +44,7 @@ PieChartSectionData createSection(double value,MaterialColor color) {
           color: color,
           value: value,
           title: getPercentage(value),
-          radius: radius,
+          radius: 100,
           titleStyle: TextStyle(
             fontSize: fontSize,
             fontWeight: FontWeight.bold,

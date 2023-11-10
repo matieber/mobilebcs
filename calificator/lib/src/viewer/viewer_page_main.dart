@@ -66,9 +66,6 @@ class ViewerPageMainState extends State<ViewerPageMain> {
 
   ViewerStompClient? viewerStompClient;
 
-
-
-
   @override
   Widget build(BuildContext context) {
 

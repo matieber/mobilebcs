@@ -62,8 +62,10 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
     return Column(
       children: [
         Row(
-          children: [ const SizedBox(width: 10,)
-            ,customDropdownButton!, const SizedBox(width: 10,),
+          children: [
+            const SizedBox(width: 10),
+            customDropdownButton!,
+            const SizedBox(width: 10),
             if(!hideCombo) qualificationsDropdownButton!
           ],
         ),
@@ -76,8 +78,6 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
       ],
     );
   }
-
-
 
   void createCustomDropdownButton() {
     customDropdownButton ??= CustomDropdownButton([
@@ -92,37 +92,53 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
 
   Row buildDiagramBody() {
     pieChart = buildPieChart();
-    AspectRatio ratio=AspectRatio(
-      aspectRatio: 1.3,
-      child:
-          Expanded(
-            child: AspectRatio(
-              aspectRatio: 100,
-              child: pieChart,
-            ),
-          )
-      );
 
     return Row(
       children: <Widget>[
-        Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            buildIndicator(Colors.blue,'0 a 0.99'),
-            buildSizedBox(),
-            buildIndicator(Colors.orange, '1 a 1.99',),
-            buildSizedBox(),
-            buildIndicator(Colors.purple, '2 a 2.99'),
-            buildSizedBox(),
-            buildIndicator( Colors.green, '3 a 3.99'),
-            buildSizedBox(),
-            buildIndicator(Colors.red, '4 a 5'),
-            buildSizedBox(),
-            buildIndicator(Colors.grey, 'Sin valor')
-          ],
+        LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+            double containerWidth =MediaQuery.of(context).size.width/3;
+            double containerHeight =MediaQuery.of(context).size.height/4;
+            return Container(
+              width: containerWidth, // Ancho máximo basado en las restricciones
+              height: containerHeight, // Calcula la altura en función del ancho
+              child: AspectRatio(
+                aspectRatio: 1.3,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    buildIndicator(Colors.blue,'0 a 0.99'),
+                    buildSizedBox(),
+                    buildIndicator(Colors.orange, '1 a 1.99',),
+                    buildSizedBox(),
+                    buildIndicator(Colors.purple, '2 a 2.99'),
+                    buildSizedBox(),
+                    buildIndicator( Colors.green, '3 a 3.99'),
+                    buildSizedBox(),
+                    buildIndicator(Colors.red, '4 a 5'),
+                    buildSizedBox(),
+                    buildIndicator(Colors.grey, 'Sin valor')
+                  ],
+                )
+              ),
+            );
+          },
         ),
-        ratio,
+        LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+            double containerWidth =MediaQuery.of(context).size.width/2;
+            double containerHeight =MediaQuery.of(context).size.height/2;
+            return Container(
+              width: containerWidth, // Ancho máximo basado en las restricciones
+              height: containerHeight, // Calcula la altura en función del ancho
+              child: AspectRatio(
+                aspectRatio: 1.3,
+                child: pieChart,
+              ),
+            );
+          },
+        ),
       ],
     );
   }
