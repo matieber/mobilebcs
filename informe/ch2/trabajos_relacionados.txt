@@ -1,0 +1,1 @@
+(2023) Design, Deployment, and Validation of a Low-Cost IoT Platform based on LoRa for Precision Dairy Farming

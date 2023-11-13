@@ -161,12 +161,33 @@ cas (insert citation).
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -997162125 1699878806
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1699878871
+Juan: sugiere sacar esto porque no corresponde, es decir, la selección de
+ animales para su carga se hace mirando otro indicador que es el grado de
+ terminación del animal, no el CC.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -997162125 1699878735
 En términos prácticos, en la mayoría de los casos un/a experto/a califica
  subjetivamente y selecciona los animales para su carga.
  Similar al caso de la CC, la posibilidad de generar un aparejo inteligente
  que haga más objetivo este procedimiento de selección permitiría transparentar,
  hacer más objetiva y eficiente la transacción de animales vivos destinados
  a faena.
+
+\change_unchanged
  
 \end_layout
 

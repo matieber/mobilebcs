@@ -97,14 +97,96 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted -997162125 1699374807
+\change_inserted -997162125 1699883382
 En general el capítulo de trabajos relacionados describe lo que hay hecho
- en torno a una temática pero también desliza, al final, lo nuevo que se
- propone hacer.
- Veo que lo primero está aunque de mínima necesita algunos tweaks como por
- ejemplo contarlo en tercera persona.
+ en torno a una temática pero también va sugiriendo entre líneas o al final,
+ aquello a lo que no se dado solución por parte de otros y que coincide
+ con lo que se propone hacer en la tesis.
+ Veo que hay frases tomadas del proyecto para tratar de contar dónde se
+ inserta tu trabajo, pero falta pulir bastante lo que hay y agregar nuevo.
+ Para ayudar a pensar esto no hay que perder de vista lo siguiente: 
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1699885326
+1 - 
+\begin_inset Quotes fld
+\end_inset
+
+Tu proyecto final se enfoca en aplicar tecnología Edge/Dew computing al
+ monitoreo de sistemas de ganadería, puntualmente a la producción de vacas
+ lecheras.
+\begin_inset Quotes frd
+\end_inset
+
+ Lo distintivo de tu trabajo es que se diseña un software para que corra
+ sin necesidad de usar servicios en la nube, es decir, la toma, procesamiento
+ de las imágenes y visualización de resultados ocurre con dispositivos que
+ pueden estar funcionando en el propio tambo, lo que significa que el tambo
+ no necesita conexión a internet para que el sistema funcione.
+ La conexión a internet en todo caso puede ser exclusivamente para comunicar
+ resultados, pero no requerida para que el sistema monitoree.
+ Esto te puede dar un criterio para ver cómo lo hacen otros trabajos.
+ Con esto en mente, hay que contar cómo lo hacen otros trabajos (si es que
+ lo hacen).
+ Si no hay, se puede agregar discusión sobre si la ganadería aplica algún
+ sistema de información automatizado y ahí se pueden abarcar otros propósitos,
+ por ejemplo, alimentación en feetlot.
+ También se debe contar para qué son buenos los sistemas edge.
+ Una subsección de edge computing tiene que haber en este capítulo, contanto
+ conceptualmente de qué se trata.
+ Te sugiero usar GoogleScholar para la búsqueda de trabajos científicos
+ y académicos relacionados.
+ Dejé un txt en el directorio de este capítulo con un ejemplo de trabajo
+ relacionado.
+ Poné ese título en google scholar y vas a poder acceder al pdf para ver
+ de qué se trata.
+ En dicho pdf, al final de todo, en la parte de referencias, tenés punteros
+ a otros trabajos (varios de ellos pueden tener mucha relación con el trabajo
+ que se discute).
+ El objetivo sería seleccionar entre 5 y 7 trabajos.
+ Los más relacionados al tema.
+ El proyecto que se te pasó como base, podría discutirse último y eso te
+ da el pie para contar brevemente qué es lo que le falta, para luego desarrollar
+ mejor la idea de lo que vas a hacer en el próximo capítulo que es el 3.
+ Tené en cuenta también que podés sacar letra (contexto, referencias) del
+ plan de trabajo que se presentó que tenía una longitud de 4 o 5 páginas
+ y era un mini-informe condensado.
+ Si esto queda bien contextualizado y autocontenido, se podría pensar en
+ fusionar capítulo 1 y 2 en uno sólo.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1699882335
+Cosas a tener en cuenta al momento de volcar contenido:
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1699884916
+- Cuidar la hilación entre párrafos y el nivel de detalle con el que se
+ presentan las ideas (hay que encontrar un balacne, mucho detalle a veces
+ no es bueno porque no aporta a la discusión general.
+ Poco detalle, tampoco es bueno porque se le disparan muchas preguntas sin
+ respuesta al lector.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1699882543
+- Lo que es hecho por otros autores contarlo en tercera persona, e.g, En
+ [Rodríguez Alvarez et al., 2017] los autores proponen una red neuronal.....
 \change_unchanged
 
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1699882487
+- Lo que es hecho por vos, se puede contar en impersonal, e.g., se desarrolló,
+ se diseño, se tuvo en cuenta.
 \end_layout
 
 \end_inset
