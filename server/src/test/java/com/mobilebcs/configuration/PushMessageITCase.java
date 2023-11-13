@@ -64,7 +64,7 @@ public class PushMessageITCase {
         restCaller=new RestCaller(8080);
         for(int i=1;i<=5;i++) {
             restCaller.sendRealImage(i,locationCode, map.get(i));
-           Thread.sleep(5000L);
+           Thread.sleep(10000L);
         }
 
     }

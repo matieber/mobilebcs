@@ -3,6 +3,7 @@ package com.mobilebcs;
 import com.mobilebcs.controller.images.CaravanImage;
 import com.mobilebcs.controller.images.CaravanRequest;
 import com.mobilebcs.controller.prediction.QualifierSessionPredictionResponse;
+import com.mobilebcs.controller.prediction.QualifierSessionsAverageResponse;
 import com.mobilebcs.controller.prediction.QualifierSessionsPredictionResponse;
 import com.mobilebcs.controller.prediction.SearchType;
 import com.mobilebcs.controller.qualifications.QualificationsResponse;
@@ -19,7 +20,6 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.client.RestTemplate;
@@ -33,9 +33,7 @@ public class RestCaller {
     private static final String IMAGE_NAME = "primer-plano-lateral-vaca-raza-hereford";
     private static final String IMAGE_EXTENSION = "png";
 
-
     private RestTemplate restTemplate;
-    private NamedParameterJdbcTemplate jdbcTemplate;
 
     public RestCaller(int port) {
         restTemplate = new RestTemplateBuilder().rootUri("http://localhost:" + port).build();
@@ -103,7 +101,6 @@ public class RestCaller {
         return user.getQualificationSession();
     }
 
-
     public void endSession(String locationCode) {
         ResponseEntity<Void> endResponse = restTemplate.exchange("/location/{locationCode}/qualificationSession", HttpMethod.DELETE, new HttpEntity<>(null, null), Void.class, locationCode);
         Assertions.assertEquals(204, endResponse.getStatusCodeValue());
@@ -113,6 +110,20 @@ public class RestCaller {
         UserRequest userRequest = new UserRequest(userName, qualifier.name());
         ResponseEntity<Void> creationResponse = restTemplate.exchange("/user", HttpMethod.POST, new HttpEntity<>(userRequest, null), Void.class);
         Assertions.assertEquals(201, creationResponse.getStatusCodeValue());
+    }
+
+    public QualifierSessionsAverageResponse searchDispersion(int amount){
+        ResponseEntity<QualifierSessionsAverageResponse> forEntity =
+                restTemplate.exchange("/prediction/dispersion?location=DEFAULT&amount="+amount,HttpMethod.GET,HttpEntity.EMPTY, QualifierSessionsAverageResponse.class);
+        Assertions.assertEquals(HttpStatus.OK,forEntity.getStatusCode());
+        Assertions.assertNotNull(forEntity.getBody());
+        return forEntity.getBody();
+    }
+
+    public void searchDispersionNoContent(int amount){
+        ResponseEntity<QualifierSessionsAverageResponse> forEntity =
+                restTemplate.exchange("/prediction/dispersion?amount="+amount,HttpMethod.GET,HttpEntity.EMPTY, QualifierSessionsAverageResponse.class);
+        Assertions.assertEquals(HttpStatus.NO_CONTENT,forEntity.getStatusCode());
     }
 
     public QualifierSessionPredictionResponse searchPrediction(Long qualificationSessionId) {
@@ -156,4 +167,6 @@ public class RestCaller {
         Assertions.assertEquals(204,response.getStatusCodeValue());
 
     }
+
+
 }

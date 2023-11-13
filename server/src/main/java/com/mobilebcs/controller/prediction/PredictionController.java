@@ -1,5 +1,6 @@
 package com.mobilebcs.controller.prediction;
 
+
 import com.mobilebcs.domain.predictions.CurrentQualificationSearch;
 import com.mobilebcs.domain.predictions.EndedQualificationSessionPredictionSearch;
 import java.util.List;
@@ -45,6 +46,17 @@ public class PredictionController {
             return ResponseEntity.noContent().build();
         } else {
             return ResponseEntity.ok(new QualifierSessionsPredictionResponse(List.of(response)));
+        }
+    }
+
+    @GetMapping(value = "/dispersion", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<QualifierSessionsAverageResponse> searchAverage(SearchAverageCriteria criteria) {
+        System.out.println(criteria.toString());
+        List<QualifierSessionAverageResponse> response= endedQualificationSessionPredictionSearch.findDispersion(criteria.getLocation(),criteria.getAmount());
+        if (response==null || response.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.ok(new QualifierSessionsAverageResponse(response));
         }
     }
 
