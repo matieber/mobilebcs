@@ -73,12 +73,17 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -1783815582 "Cristian"
 \author -997162125 "mhirsch"
 \end_header
 
 \begin_body
 
 \begin_layout Chapter
+
+\change_inserted -1783815582 1700762861
+Marco teórico
+\change_deleted -1783815582 1700762894
 Trabajos relacionados
 \begin_inset CommandInset label
 LatexCommand label
@@ -86,6 +91,257 @@ name "chap:Trabajos-relacionados"
 
 \end_inset
 
+
+\change_inserted -1783815582 1700762922
+
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1700765046
+Computación en entorno distribuido
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1700765162
+Cloud computing 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1700829075
+\begin_inset CommandInset citation
+LatexCommand cite
+key "goscinski2010toward"
+literal "false"
+
+\end_inset
+
+ define cloud computing como un paradigma en el que los recursos informáticos
+ se ofrecen a través de Internet como servicios web escalables y bajo demanda
+ donde los recursos alojados dentro de las nubes pueden ser servicios de
+ bases de datos, máquinas virtuales, flujos de trabajo de servicios completos
+ o configuraciones complejas de sistemas informáticos distribuidos, como
+ los clústeres.
+ Independientemente de su naturaleza, todos los recursos se proporcionan
+ a través de servicios a clientes mediante computadoras alquiladas en la
+ nube (como las que ofrecen, por ejemplo, Amazon, Google, Microsoft).
+ Los servicios se brindan bajo demanda y los clientes solo pagan por la
+ cantidad de recursos que utilizan.
+ La computación en la nube es un proceso informático que se lleva a cabo
+ en un sistema distribuido a gran escala que aprovecha los vastos recursos
+ de Internet.
+ Por lo tanto, puede admitir aplicaciones a las que se puede acceder a través
+ de Internet.
+ Los servidores informáticos y de almacenamiento de datos (tanto virtuales
+ como físicos) son proporcionados por computadoras alquiladas en la nube
+ a pedido, en lugar de computadoras locales o de propiedad empresarial.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1700829851
+Edge computing
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1700830565
+Edge computing es diferente del cloud computing tradicional.
+ Según 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cao2020overview"
+literal "false"
+
+\end_inset
+
+, consiste en proporcionar servicios y realizar cálculos en el borde de
+ la red y generar datos.
+ Edge Computing consiste en migrar la red, la informática, las capacidades
+ de almacenamiento y los recursos de la nube al borde de la red y proporcionar
+ servicios inteligentes en el borde para satisfacer las necesidades críticas
+ de la industria de IT en vinculación ágil, negocios en tiempo real, optimizació
+n de datos, inteligencia de aplicaciones, seguridad y privacidad, y cumple
+ con los requisitos de baja latencia y alto ancho de banda en la red.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1700831543
+Según 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cao2020overview"
+literal "false"
+
+\end_inset
+
+, todos los datos de edge computing deben resumirse en la nube para lograr
+ un análisis en profundidad y obtener resultados de análisis más significativos.
+ Por lo tanto, cloud computing sigue desempeñando un papel importante en
+ el desarrollo de dispositivos de IoT que gradualmente se vuelven inteligentes.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1700781323
+Dew computing
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1700842755
+Según 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ray2017introduction"
+literal "false"
+
+\end_inset
+
+, dew Computing es un modelo de programación para habilitar una red personal
+ ubicua, omnipresente y conveniente lista para usar, habilitada con instalacione
+s enchufables que incluye un enlace de comunicación Single-Super-Hybrid-Peer
+ P2P.
+ Su objetivo principal es acceder a un conjunto de datos sin procesar equipados
+ con metadatos que se pueden crear, editar, almacenar y eliminar rápidamente
+ con un mínimo esfuerzo de gestión de redes (es decir, modo fuera de línea).
+ Puede estar especialmente diseñado para el uso, la instalación y el consumo
+ eficientes de recursos informáticos locales como PC, portátiles, tablets
+ y teléfonos inteligentes de alta gama.
+ Este modelo informático se compone de seis características esenciales como
+ recopilación de datos basada en reglas, sincronización, escalabilidad,
+ reoriginación, transparencia y accesibilidad en cualquier momento y modo;
+ tres modelos de servicio, como servicio Software-as-a-Dew, producto Software-as
+-a-Dew e infraestructura-as-a-Dew; y dos modelos de identidad (por ejemplo,
+ abierto, cerrado).
+ Todos estos esfuerzos se realizarán para ejecutar aplicaciones de manera
+ puramente distribuida y jerárquica sin requerir una intervención continua
+ desde un punto de comunicación central ubicado remotamente, por ejemplo
+ servidor en la nube.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1700781836
+Wireless Sensors Netwrok
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1700836511
+WSN es definida por 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "buratti2009overview"
+literal "false"
+
+\end_inset
+
+ como una red de dispositivos, denominados nodos, que pueden detectar el
+ entorno y comunicar la información recopilada del campo monitoreado a través
+ de enlaces inalámbricos.
+ Los datos se reenvían, posiblemente a través de múltiples saltos, a un
+ receptor (a veces denominado controlador o monitor) que puede usarlos localment
+e o está conectado a otras redes (por ejemplo, Internet) a través de un
+ gateway.
+ Los nodos pueden estar estacionarios o en movimiento.
+ Pueden ser conscientes de su ubicación o no.
+ Pueden ser homogéneos o no.
+ 
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1700782233
+Trabajos relacionados
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1700839888
+Diseño, implementación y validación de una plataforma IoT de bajo costo
+ basada en LoRa para la producción lechera de precisión
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1700838954
+Según 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "piedadedesign"
+literal "false"
+
+\end_inset
+
+, la agricultura de precisión se ha vuelto esencial para aumentar la producción
+ de alimentos en el área de cultivo utilizada anteriormente.
+ Por lo tanto, el seguimiento de la salud animal y la detección de estros
+ son esenciales para incrementar la producción lechera.
+ Las redes de sensores inalámbricos desempeñan un papel importante en la
+ sustitución de métodos manuales poco prácticos para rebaños grandes y pueden
+ utilizarse para recopilar una gran cantidad de datos en tiempo real.
+ Además, se pueden utilizar técnicas de transmisión de largo alcance en
+ grandes explotaciones.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1700842853
+\begin_inset CommandInset citation
+LatexCommand cite
+key "piedadedesign"
+literal "false"
+
+\end_inset
+
+propusp aplicar y validar WSN integrada con una base de datos y técnicas
+ de comunicaciones de largo alcance capaces de monitorear el hato lechero,
+ generando alertas de salud, estro y robo.
+ Los resultados obtenidos mediante la integración de elementos del sistema,
+ como la puerta de enlace LoRa, la base de datos MongoDB y el panel de control,
+ demuestraron la viabilidad de la WSN propuesta.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1700842907
+Según las características de IoT, los principales desafíos de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "piedadedesign"
+literal "false"
+
+\end_inset
+
+ fueron minimizar el consumo de energía y maximizar la cobertura de la red.
+ Para comunicaciones con amplia cobertura en zonas rurales, Long Range (LoRa)
+ se propone como una solución ideal.
+ LoRa es una tecnología de radiofrecuencia que ofrece comunicación de largo
+ alcance, bajo consumo de energía y flexibilidad.
+ Estas características son esenciales para las aplicaciones de IoT agrícola
+ y permiten una cobertura de área con bajo consumo de energía y costo de
+ hardware.
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1700782172
+Trabajo previo 
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Trabajo-previo"
+
+\end_inset
+
+
+\change_unchanged
 
 \end_layout
 
@@ -193,26 +449,131 @@ Cosas a tener en cuenta al momento de volcar contenido:
 
 
 \change_unchanged
-A nivel internacional existen tres aparejos comerciales automáticos (DeLaval
- - Suecia, Ingenera SA - Suiza, y Biondi Engineering SA -Suiza) orientados
- exclusivamente a lechería que han sido evaluados (O’ Leary et al., 2020),
- pero que no han tenido penetración comercial en la región, posiblemente
- por costos y modelo de negocio.
- Por lo tanto se trabajó en la mejora del método de la automatización después
- de haber analizado la bibliografía donde se han propuestos métodos a partir
- de procesamiento de imágenes, mediante regresiones o a partir de algoritmos
- basados en el nivel de angularidad de la zona pélvica (mayor angulosidad
- se la asocia con menor CC), con diferente grado de automatización y de
- precisión de los registros (Rodríguez Alvarez et al., 2017).
+A nivel internacional
+\change_inserted -1783815582 1700762450
+, en 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "leary2020validation"
+literal "false"
+
+\end_inset
+
+ se ha evaluado un conjunto de
+\change_deleted -1783815582 1700564402
+ existen
+\change_unchanged
+ tres aparejos comerciales automáticos (DeLaval - Suecia, Ingenera SA -
+ Suiza, y Biondi Engineering SA -Suiza) 
+\change_deleted -1783815582 1700564510
+orientados
+\change_inserted -1783815582 1700564512
+enfocados
+\change_unchanged
+ exclusivamente a 
+\change_inserted -1783815582 1700564424
+la industria 
+\change_unchanged
+lecher
+\change_deleted -1783815582 1700564426
+í
+\change_unchanged
+a
+\change_deleted -1783815582 1700652879
+ que han sido evaluados (O’ Leary et al., 2020)
+\change_inserted -1783815582 1700838807
+ que permiten automatizar la medición de la CC en vacas lecheras.
+ Sin embargo,
+\change_deleted -1783815582 1700564096
+, pero
+\change_unchanged
  
+\change_inserted -1783815582 1700564110
+estos 
+\change_deleted -1783815582 1700564112
+que
+\change_unchanged
+ no han tenido penetración comercial en la región, posiblemente 
+\change_inserted -1783815582 1700564134
+debido a 
+\change_deleted -1783815582 1700564136
+por 
+\change_unchanged
+costos y modelo de negocio.
+ Por lo tanto
+\change_inserted -1783815582 1700564145
+,
+\change_unchanged
+ se 
+\change_deleted -1783815582 1700564537
+trabajó
+\change_inserted -1783815582 1700564546
+empredieron esfuerzos para
+\change_deleted -1783815582 1700564548
+ en la 
+\change_unchanged
+mejora
+\change_inserted -1783815582 1700564550
+r
+\change_unchanged
+ 
+\change_deleted -1783815582 1700567039
+d
+\change_unchanged
+el método de 
+\change_deleted -1783815582 1700567043
+la
+\change_unchanged
+ automatización después de 
+\change_deleted -1783815582 1700564156
+haber analizado
+\change_inserted -1783815582 1700564158
+analizar
+\change_unchanged
+ la bibliografía donde se han propuesto
+\change_deleted -1783815582 1700564170
+s
+\change_unchanged
+ métodos a partir de procesamiento de imágenes, mediante regresiones o 
+\change_deleted -1783815582 1700564578
+a partir
+\change_inserted -1783815582 1700564580
+utilizando
+\change_deleted -1783815582 1700564585
+ de
+\change_unchanged
+ algoritmos basados en el nivel de angularidad de la zona pélvica (mayor
+ angulosidad se la asocia con menor CC), con diferente grado de automatización
+ y de precisión de los registros (Rodríguez Alvarez et al., 2017).
+ 
+\change_inserted -1783815582 1700652239
+En este contexto, se registraron buenos resultados en 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rodriguez2018revision"
+literal "false"
+
+\end_inset
+
+ logrando mejoras en la precisión de la estimación de la CC de vacas tipo
+ Holstein, en comparación con trabajos internacionales anteriores a una
+ escala de 0.25 (1 delgada y 5 obesa).
+ Esto se llevó a cabo mediante el empleo de redes neuronales y algoritmos
+ de aprendizaje profundo o deep learning.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1783815582 1700565041
 En este sentido, se avanzó con buenos resultados (Rodríguez Alvarez et al.,
  2019, 2018) con mejoras en la precisión de la estimación de la CC de vacas
  tipo Holstein, con respecto a trabajos internacionales previos a una escala
  de 0.25 (1 delgada y 5 obesa) a partir de redes neuronales y algoritmos
  de aprendizaje profundo o deep learning (Rodríguez Alvarez et al., 2018).
+
+\change_unchanged
  
 \change_inserted -997162125 1699372297
 
@@ -230,38 +591,62 @@ Evitar los párrafos de una sóla frase
 \end_inset
 
 
+\change_inserted -1783815582 1700565047
+
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1700567227
+Marco del proyecto
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Marco-del-proyecto"
+
+\end_inset
+
+
 \change_unchanged
 
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1783815582 1700565131
 El objetivo general de este proyecto que comenzó en trabajos anteriores
- y continuará en el trabajo actual es: desarrollar un 
-\change_inserted -997162125 1699372444
-prototipo
+ y continuará en el trabajo actual es
+\change_inserted -1783815582 1700567140
+En el marco de este proyecto en curso, con proyecciones de continuidad posee
+ cinco objetivos específicos:
+\change_deleted -1783815582 1700565248
+:
+\change_unchanged
+ 
+\change_deleted -1783815582 1700565212
+desarrollar un prototipo
 \change_deleted -997162125 1699372438
 MVP
-\change_unchanged
+\change_deleted -1783815582 1700565212
  de un aparejo (hard-soft) móvil y robusto en condiciones de campo, que
- a partir
-\change_inserted -997162125 1699372488
- de
-\change_unchanged
- capturas 
-\change_inserted -997162125 1699372516
-mediante 
+ a partir de capturas mediante 
 \change_deleted -997162125 1699372518
 de 
-\change_unchanged
+\change_deleted -1783815582 1700565212
 técnicas de visión computacional (imágenes 3D) obtenidas al paso de los
  vacunos e inteligencia artificial, cuantifique de forma automática y objetiva,
  la condición corporal (y potencial reproductivo de vacas) y el grado de
  terminación de animales de engorde, permitiendo integrar, informar y reportar
  esa información de forma ágil para la toma de decisión.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1783815582 1700565261
 Este proyecto tiene cinco objetivos específicos:
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -301,14 +686,19 @@ Este proyecto tiene cinco objetivos específicos:
 5.
  Diseñar y validar el modelo de negocios más apropiado para el aparejo de
  funcionalidad dual (CC y GT).
+\change_inserted -1783815582 1700565301
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1783815582 1700565548
 En relación al objetivo 1, el grupo de trabajo ha realizado avances preliminares
  sobre el algoritmo para el procesamiento automático de imágenes de la condición
  corporal de vacas (Rodríguez Álvarez et al., 2018) y resta ampliar la base
  de datos de campo para aumentar la capacidad predictiva a otras razas de
  leche y carne, y proceder al desarrollo de un aparejo comercial con ese
+\change_unchanged
  propósito.
 \change_inserted -997162125 1699373664
 
@@ -326,25 +716,184 @@ Esto hay que adaptarlo.
 \end_inset
 
 
+\change_inserted -1783815582 1700566362
+
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1700843139
+Algoritmo predictivo
+\end_layout
+
+\begin_layout Standard
+El método 
+\change_deleted -1783815582 1700566467
+desarrollado
+\change_inserted -1783815582 1700566471
+empleado
+\change_unchanged
+ 
+\change_deleted -1783815582 1700566486
+sobre el algoritmo
+\change_unchanged
+ se basa en el uso integral de deep learning para:
+\change_deleted -1783815582 1700566493
+ a)
+\change_inserted -1783815582 1700566493
+
+\end_layout
+
+\begin_layout Enumerate
+
+\change_deleted -1783815582 1700566493
+ 
+\change_unchanged
+detectar la parte trasera de una vaca en un cuadro de video, 
+\change_deleted -1783815582 1700566538
+lo que se realiza
+\change_inserted -1783815582 1700567173
+llevándose a cabo mediante
+\change_deleted -1783815582 1700566546
+ con
+\change_unchanged
+ una red basada en YOLO (You Only Look Once), 
+\change_deleted -1783815582 1700566552
+y b) 
+\change_inserted -1783815582 1700566552
+
+\end_layout
+
+\begin_layout Enumerate
+puntuar la condición corporal a partir de la imagen producción de la detección
+\change_inserted -1783815582 1700566577
+,
+\change_deleted -1783815582 1700566575
+ en a)
+\change_unchanged
+, 
+\change_deleted -1783815582 1700566552
+lo que se realiza con
+\change_unchanged
+ 
+\change_inserted -1783815582 1700566689
+a través de 
+\change_unchanged
+una red basada en CNN (Convolutional Neural Network).
+\change_inserted -1783815582 1700566734
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1700566721
+ 
+\change_unchanged
+Los resultados iniciales 
+\change_deleted -1783815582 1700566771
+mostraron
+\change_inserted -1783815582 1700566773
+revelaron
+\change_unchanged
+ una precisión del 94% y
+\change_inserted -1783815582 1700566780
+ mejoras continuas
+\change_deleted -1783815582 1700566785
+ sucesivas mejoras utilizando
+\change_inserted -1783815582 1700566787
+ mediante
+\change_unchanged
+ ensembles y transfer learning elevaron este valor a 97% (Rodriguez Alvarez
+ et al., 2019).
+ Cabe destacar, sin embargo, que
+\change_deleted -1783815582 1700566826
+ el foco fue
+\change_inserted -1783815582 1700566831
+el enfoque se centro en el
+\change_unchanged
+ ganado lechero, 
+\change_inserted -1783815582 1700567192
+específicamente en
+\change_deleted -1783815582 1700566846
+y en particular
+\change_unchanged
+ vacas Holstein-Freisian
+\change_deleted -1783815582 1700566870
+,
+\change_inserted -1783815582 1700566872
+.
+
+\change_unchanged
+ 
+\change_deleted -1783815582 1700566876
+p
+\change_inserted -1783815582 1700566876
+P
+\change_unchanged
+or lo 
+\change_inserted -1783815582 1700566881
+tanto, 
+\change_deleted -1783815582 1700566888
+que 
+\change_unchanged
+las conclusiones respecto a la parametrización, anatomía, entrenamiento
+ y evaluación de la red son solo válidas en el contexto de imágenes de dicha
+ raza.
+\change_inserted -1783815582 1700565183
+
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1700565550
+Objetivo del proyecto
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1700567306
+En relación al objetivo 1
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Marco-del-proyecto"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ , se han registrado avances preliminares sobre el algoritmo para el procesamien
+to automático de imágenes de la condición corporal de vacas (Rodríguez Álvarez
+ et al., 2018) y resta ampliar la base de datos de campo para aumentar la
+ capacidad predictiva a otras razas de leche y carne.
+ Por lo tanto el objetivo de este proyecto es proceder en el desarrollo
+ de un prototipo de un aparejo (hard-soft) móvil y robusto en condiciones
+ de campo, que a partir de capturas mediante técnicas de visión computacional
+ (imágenes 3D) obtenidas al paso de los vacunos e inteligencia artificial,
+ cuantifique de forma automática y objetiva, la condición corporal y potencial
+ reproductivo de vacas, permitiendo integrar, informar y reportar esa informació
+n de forma ágil para la toma de decisión.
+ Este prototipo representa el objetivo 3 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Marco-del-proyecto"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \change_unchanged
 
 \end_layout
 
 \begin_layout Standard
-El método desarrollado sobre el algoritmo se basa en el uso integral de
- deep learning para: a) detectar la parte trasera de una vaca en un cuadro
- de video, lo que se realiza con una red basada en YOLO (You Only Look Once),
- y b) puntuar la condición corporal a partir de la imagen producción de
- la detección en a), lo que se realiza con una red basada en CNN (Convolutional
- Neural Network).
- Los resultados iniciales mostraron una precisión del 94% y sucesivas mejoras
- utilizando ensembles y transfer learning elevaron este valor a 97% (Rodriguez
- Alvarez et al., 2019).
- Cabe destacar, sin embargo, que el foco fue ganado lechero, y en particular
- vacas Holstein-Freisian, por lo que las conclusiones respecto a la parametrizac
-ión, anatomía, entrenamiento y evaluación de la red son solo válidas en
- el contexto de imágenes de dicha raza.
+
+\change_deleted -1783815582 1700565183
  
+\change_unchanged
+
 \end_layout
 
 \end_body

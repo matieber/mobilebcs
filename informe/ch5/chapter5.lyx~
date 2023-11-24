@@ -1,0 +1,268 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes true
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\author -997162125 "mhirsch"
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+
+\change_inserted -997162125 1699375880
+Conclusiones, Limitaciones y Trabajos 
+\change_unchanged
+Futur
+\change_deleted -997162125 1699375870
+a
+\change_inserted -997162125 1699375870
+o
+\change_unchanged
+s
+\change_deleted -997162125 1699375872
+ funcionalidades
+\change_unchanged
+
+\end_layout
+
+\begin_layout Section
+Login
+\end_layout
+
+\begin_layout Standard
+En futuras implementaciones puede agregarse una capa de seguridad para el
+ login dedibo a que actualmente solo se creo este componente para poder
+ definir el tipo de usuario y asociar una calificación de una vaca a un
+ determinado experto.
+\end_layout
+
+\begin_layout Standard
+Ademas, en futuras implementaciones puede ser posible limitar que personas
+ pueden registrarse como calificador debido a que una sola aplicación móvil
+ soporta un usuario calificador y observador, cualquier persona puede registrars
+e como calificador sin ser un experto.
+\end_layout
+
+\begin_layout Section
+Calificador
+\end_layout
+
+\begin_layout Standard
+En futuras versiones del server va a ser posible que los calificadores compartan
+ la misma cola jms para repartirse la calificación y darse de baja de una
+ sesión de calificación y conectarse a otra.
+ Otra posibilidad para futuras versiones es que la sesión pueda configurase
+ para que los usuarios calificadores se repartan las caravanas a calificar.
+ Para lograr esto va a ser necesario que la sesión de calificación tenga
+ un tipo de calificación identificando ueden repartirse entre calificadores
+ o que todos los calificadores puedan calificar todas las vacas.
+\end_layout
+
+\begin_layout Section
+Arribo de imágenes de vacas
+\end_layout
+
+\begin_layout Standard
+El server tiene la posibilidad de recibir y almacenar un conjunto de imágenes
+ por cada vaca pero solo la primera será la que el observador y el calificador
+ reciban.
+ Queda para futuros proyectos la posibilidad de enviar todas las imágenes
+ a los calificadores y/o observadores.
+ 
+\end_layout
+
+\begin_layout Section
+Aplicación batch
+\end_layout
+
+\begin_layout Standard
+Esta aplicación se definió para este proyecto pero queda fuera de alcance
+ de este trabajo.
+ La aplicación batch deberá tener una locación preconfigurada que será utilizada
+ para notificar al server de donde proviene el job.
+ Leerá las imágenes tomadas a la vaca, armará el job y lo enviará al server.
+ Este procedimiento por cada vaca.
+ La cantidad de imágenes a tomar serán configuración de la aplicación batch.
+ La primera imagen de cada job (elemento 0 de la lista) se va a suponer
+ que va a poseer el número de caravana, por lo tanto, está imagen(la primera
+ de la lista) es la única que se enviará al calificador a la hora de calificar
+ y al observador.
+ 
+\end_layout
+
+\begin_layout Section
+Calificador
+\end_layout
+
+\begin_layout Standard
+Los calificadores no pueden calificar job anteriores a la unión/creación
+ de la sesión de calificación, es decir, que los jobs que existan antes
+ del inicio de sesión no serán calificados por nadie.
+ Aquellos que arriben antes de que un calificador se una a una sesión de
+ calificación tampoco van a ser calificados.
+\end_layout
+
+\begin_layout Standard
+Para lograr que los jobs generados antes del inicio de sesión de calificación
+ o antes de que el usuario se uniera a una sesión existente se envíen a
+ la cola de calificación de cada usuario va a ser necesario que cuando se
+ inicia sesión de calificación se carguen todos los jobs desde la base de
+ datos en la locación específica de la sesión a la cola jms del usuario.
+ Esto puede provocar que:
+\end_layout
+
+\begin_layout Itemize
+si se crea la cola del usuario calificador y luego se asigna a la sesión,
+ mientras se envíen los jobs desde la base a la cola, puedan llegar nuevos
+ job y se ubiquen antes de los jobs de la base.
+\end_layout
+
+\begin_layout Itemize
+si se crea la cola del usuario calificador, se agregan los jobs de la base
+ a la cola y luego se asigna a la sesión de calificación, pueden llegar
+ job nuevos que no fueron leídos de la base y que tampoco se haya enviado
+ a la cola porque no se había asignado a la sesión.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Observadores
+\end_layout
+
+\begin_layout Standard
+La predicción de la CC es realizada por los observadores, es decir, es realizada
+ en la aplicación móvil.
+ Si no hay observadores no es posible realizar la predicción.
+ Para poder realizarla sin la necesidad de observadores se ejecutar el algoritmo
+ de predicción en los calificadores y también es posible implementar el
+ algoritmo de predicción en el server para que realice la predicción de
+ aquellos jobs que no fueron entregados para predecir o que hayan fallado
+ para lograr que no haya jobs sin predecir.
+\end_layout
+
+\begin_layout Section
+Objetivos futuros
+\end_layout
+
+\begin_layout Standard
+En cuanto al objetivo 4 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Trabajos-relacionados"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, se ampliará el estudio de mercado inicial que acompaña a este proyecto,
+ además diagramando el núcleo del modelo de negocios a desarrollar sobre
+ la base de licenciamiento de registros.
+\end_layout
+
+\begin_layout Standard
+Los modelos de CC validados serán desplegados en los dispositivos electrónicos,
+ con su respectiva caja y estructura de caño para poder ser montado en cualquier
+ establecimiento agropecuario (Objetivo 4).
+ Este dispositivo integral será evaluado en al menos dos establecimientos
+ de la zona, donde se evaluará no sólo el comportamiento predictivo del
+ modelo, sino también su facilidad de uso e integración a las actividades
+ diarias del/la profesional o el/la productor/a.
+ En ese sentido (Objetivo 5 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Trabajos-relacionados"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), se realizará una reunión de profesionales y productores en alguno de
+ los sitios de pruebas, y bajo el formato de taller y con encuestas individuales
+ se registrarán sus opiniones sobre las posibles barreras de adopción de
+ estas tecnologías, así como sugerencias de mejoras.
+ Adicionalmente, se trabajará con la especialista colaboradora, en la identifica
+ción de las mejores estrategias para el plan de negocios (clientes profesionales
+/productores, socios claves, precio de mercado etc).
+\end_layout
+
+\end_body
+\end_document
