@@ -1,0 +1,33 @@
+INSERT INTO server.IMAGE_SET_QUALIFICATION_SESSION (IMAGE_SET_ID,QUALIFICATION_SESSION_ID) VALUES
+	 (1,1),
+	 (2,1),
+	 (3,1),
+	 (4,1),
+	 (5,1),
+	 (6,1),
+	 (7,1),
+	 (8,1),
+	 (9,1),
+	 (10,1);
+INSERT INTO server.IMAGE_SET_QUALIFICATION_SESSION (IMAGE_SET_ID,QUALIFICATION_SESSION_ID) VALUES
+	 (11,1),
+	 (12,1),
+	 (13,1),
+	 (14,1),
+	 (15,1),
+	 (16,2),
+	 (17,2),
+	 (18,2),
+	 (19,2),
+	 (20,2);
+INSERT INTO server.IMAGE_SET_QUALIFICATION_SESSION (IMAGE_SET_ID,QUALIFICATION_SESSION_ID) VALUES
+	 (21,2),
+	 (22,2),
+	 (23,2),
+	 (24,2),
+	 (25,2),
+	 (26,2),
+	 (27,2),
+	 (28,2),
+	 (29,2),
+	 (30,2);

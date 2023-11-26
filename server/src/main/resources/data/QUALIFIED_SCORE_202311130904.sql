@@ -1,0 +1,33 @@
+INSERT INTO server.QUALIFIED_SCORE (USER_ID,QUALIFICATION_SESSION_ID,IMAGE_SET_ID,SCORE) VALUES
+	 (1,1,1,3),
+	 (1,1,2,3),
+	 (1,1,3,3),
+	 (1,1,4,3),
+	 (1,1,5,3),
+	 (1,1,6,3),
+	 (1,1,7,3),
+	 (1,1,8,2),
+	 (1,1,9,2),
+	 (1,1,10,2);
+INSERT INTO server.QUALIFIED_SCORE (USER_ID,QUALIFICATION_SESSION_ID,IMAGE_SET_ID,SCORE) VALUES
+	 (1,1,11,2),
+	 (1,1,12,2),
+	 (1,1,13,3),
+	 (1,1,14,3),
+	 (1,1,15,3),
+	 (1,2,16,3),
+	 (1,2,17,3),
+	 (1,2,18,3),
+	 (1,2,19,3),
+	 (1,2,20,3);
+INSERT INTO server.QUALIFIED_SCORE (USER_ID,QUALIFICATION_SESSION_ID,IMAGE_SET_ID,SCORE) VALUES
+	 (1,2,21,3),
+	 (1,2,22,3),
+	 (1,2,23,2),
+	 (1,2,24,2),
+	 (1,2,25,2),
+	 (1,2,26,2),
+	 (1,2,27,2),
+	 (1,2,28,3),
+	 (1,2,29,3),
+	 (1,2,30,3);

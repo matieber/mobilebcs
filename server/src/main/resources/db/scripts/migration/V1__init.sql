@@ -78,7 +78,7 @@ CREATE TABLE server.IMAGE(
     ID BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     IMAGE_SET_ID BIGINT NOT NULL,
     PRIORITY INT NULL COMMENT 'La imagen con mas prioridad será enviada al calificador, el resto de las imágenes en orden de prioridad van a ser enviadas a los viewer según la configuración de cada uno',
-    `PATH` VARCHAR(500) NOT NULL UNIQUE COMMENT 'Directorio + nombre del archivo',
+    `PATH` VARCHAR(500) NULL UNIQUE COMMENT 'Directorio + nombre del archivo',
      CONSTRAINT  `fk_IMAGE_SET_ID` FOREIGN KEY (`IMAGE_SET_ID`) REFERENCES IMAGE_SET (`ID`)
 );
 

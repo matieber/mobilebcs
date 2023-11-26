@@ -1,0 +1,33 @@
+INSERT INTO server.IMAGE_SET (SET_CODE,IDENTIFICATION) VALUES
+	 ('21b7cf40-29a5-4fe5-9cfa-17c199af8775','UHSJQ3'),
+	 ('491ab7f2-dcfe-4be5-8f83-c41a9a84ebce','GSVQMB'),
+	 ('5bb6693f-c06f-4e98-96d2-8d6585ec14c6','9ZF1TV'),
+	 ('795627d9-69d6-4012-959f-83f6b1cc750e','GG8CWT'),
+	 ('a0df0168-89e3-450d-a791-f9e2ef3d5fa0','TEURMB'),
+	 ('fe26af10-c8a8-48cc-b1d3-dc56ec29bfad','BYHRFV'),
+	 ('aa0feb54-963c-45de-b760-2d9644ca90b1','AJ2RIR'),
+	 ('51f15e05-52f1-43f8-b981-d777b81e2a09','DT4NWA'),
+	 ('a71a262c-6fe2-4967-800d-bb599c6075e3','IFFVM7'),
+	 ('b31e821e-0ff2-4292-ac39-ed1de92489d1','7749T6');
+INSERT INTO server.IMAGE_SET (SET_CODE,IDENTIFICATION) VALUES
+	 ('507f42db-8c75-46c3-859b-457ab9df8ee8','RW674H'),
+	 ('bb739fb7-b8d7-439f-a38e-a1a24ae1b6e7','RSVZ1B'),
+	 ('4a7f8129-c0f7-4ebd-9c6e-18350c40f5c7','ZHBMMB'),
+	 ('2677e230-029b-4c9a-9e85-d80a537e0aa2','MQ8ABZ'),
+	 ('01abeef8-ef4a-4f85-a758-733d9cb248d3','7PSFVM'),
+	 ('bfef9b09-b71a-4e2f-ac7c-e8ac6ef4e77b','UHSJQ3'),
+	 ('8d9212ff-2cbc-4113-b235-d8fa4da30976','GSVQMB'),
+	 ('683fe0b5-1290-4d48-88e2-0e11a1c55ea6','9ZF1TV'),
+	 ('35a56233-5877-41fb-9bfd-24a074a8b53f','GG8CWT'),
+	 ('744b27fc-64d9-4f9b-b34a-f677ffc1d3c9','TEURMB');
+INSERT INTO server.IMAGE_SET (SET_CODE,IDENTIFICATION) VALUES
+	 ('0b991284-aa64-467d-be6c-128614452b75','BYHRFV'),
+	 ('123725a4-7a97-4655-84ad-8fdcefa373b4','AJ2RIR'),
+	 ('bf7fdb1f-5ccc-4d34-a499-7d4251bcfecd','DT4NWA'),
+	 ('6dcffdad-4bc1-42de-b6a9-2650b47f6a80','IFFVM7'),
+	 ('18636d33-2335-4cbd-b4c8-09faed660a45','7749T6'),
+	 ('55e4d956-8974-4b30-952a-ea04e80f2354','RW674H'),
+	 ('0e51a474-876f-458b-921a-322280ccdbc1','RSVZ1B'),
+	 ('9a0bd67a-e024-4ee1-a5cc-5bb1dea97f58','ZHBMMB'),
+	 ('fb761bd1-ac76-4e77-9e81-0ba115a65862','MQ8ABZ'),
+	 ('3a50b1bd-8cba-40f1-ae6d-748eb99e0971','7PSFVM');
