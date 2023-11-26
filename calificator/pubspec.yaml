@@ -21,6 +21,7 @@ dependencies:
   circular_chart_flutter: ^0.0.2
   fl_chart: ^0.62.0
   time_machine: ^0.9.17
+  flutter_candlesticks: ^0.1.4
 
 dev_dependencies:
   flutter_test:

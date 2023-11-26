@@ -86,6 +86,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_candlesticks:
+    dependency: "direct main"
+    description:
+      name: flutter_candlesticks
+      sha256: "28d956ec678f8b1867bc05f37724f1558d9c8330f156a584bd4a7ddd05a1dc98"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.4"
   flutter_lints:
     dependency: "direct dev"
     description:

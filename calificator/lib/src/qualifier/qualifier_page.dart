@@ -211,7 +211,7 @@ class _QualifierPageState extends State<QualifierPage> {
 
   String getPositionText() {
     if(identification != ""){
-      return "Indetificación ${identification}";
+      return "Identificación ${identification}";
     }else{
       return "";
     }

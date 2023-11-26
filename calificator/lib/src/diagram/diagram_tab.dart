@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import '../ui_model/dropdown.dart';
 import '../user/user.dart';
 import '../viewer/viewer_stomp_client.dart';
+import 'desviation_diagram.dart';
+import 'deviation/deviation_client.dart';
 import 'diagram_client.dart';
 import 'diagram_response.dart';
 import 'diagrams.dart';
@@ -14,15 +16,18 @@ import 'indicator.dart';
 class DiagramViewerTab extends StatefulWidget {
 
   final DiagramClientHttp _diagramClientHttp;
+  final DeviationDiagramClientHttp _deviationDiagramClientHttp;
   final QualificationsClient _qualificationsClient;
-  bool first=false;
 
    DiagramViewerTab(Key key) : _diagramClientHttp = DiagramClientHttp(),
          _qualificationsClient = QualificationsClient(),
+   _deviationDiagramClientHttp = DeviationDiagramClientHttp(),
          super(key: key);
 
   @override
   State<DiagramViewerTab> createState() => DiagramViewerTabState();
+
+  List<QualifierSessionAverageResponse> dispersion=[];
 
 
 
@@ -30,7 +35,7 @@ class DiagramViewerTab extends StatefulWidget {
 
 class DiagramViewerTabState extends State<DiagramViewerTab> {
 
-  bool first=false;
+
 
   CustomDropdownButton? customDropdownButton;
   CustomDropdownButton? qualificationsDropdownButton;
@@ -53,13 +58,18 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
 
   @override
   Widget build(BuildContext context) {
+
+     
+    
+
     createCustomDropdownButton();
     if(callSetDiagram) {
       callSetDiagram=false;
-      setDiagram();
+      setPieDiagram();
+      setDispersionDiagram(context);
     }
 
-    return Column(
+    return ListView(
       children: [
         Row(
           children: [
@@ -74,17 +84,32 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
         const SizedBox(height: 5),
         Text(caravanSize),
         Text(date),
-        buildDiagramBody()
+        buildDiagramBody(),
+        Text("Desviación estandar y porcetanje de calificaciones", style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,decoration: TextDecoration.underline)),
+        createDeviationDiagram(widget.dispersion),
+
+
       ],
     );
   }
 
+  void setDispersionDiagram(BuildContext context) {
+    widget._deviationDiagramClientHttp.getDispersion(context)
+        .then((value) {
+      if (value != null && value.values.isNotEmpty) {
+        setState(() {
+          widget.dispersion = value.values;
+        });
+      }
+    });
+  }
+
   void createCustomDropdownButton() {
     customDropdownButton ??= CustomDropdownButton([
-      CustomDropdownText("CURRENT_QUALIFICATION", "Sessión en curso"),
       CustomDropdownText("LAST_QUALIFICATION", "Última sesión finalizada"),
+      CustomDropdownText("CURRENT_QUALIFICATION", "Sessión en curso"),
       CustomDropdownText("OTHERS", "Anteriores")],
-        setDiagram);
+        setPieDiagram);
 
     qualificationsDropdownButton ??= CustomDropdownButton(qualificationsDropdownButtons,
         setDiagramById);
@@ -172,7 +197,7 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
     );
   }
 
-  void setDiagram() {
+  void setPieDiagram() {
     if(customDropdownButton!=null && "OTHERS" != customDropdownButton?.getValue()) {
       widget._diagramClientHttp.getCurrentPrediction(context,
           customDropdownButton!.getValue()!).then((currentDiagram) =>

@@ -80,7 +80,7 @@ class ViewerPageState extends State<ViewerPage> {
       if(message.byteImages.isNotEmpty) {
         setImageProviderWith(message);
       }
-     widget.diagramKey.currentState?.setDiagram();
+     widget.diagramKey.currentState?.setPieDiagram();
 
 
 

@@ -13,10 +13,6 @@ class DiagramClientHttp  {
 
 
 
-
-
-
-
   Future<DiagramResponse?> getCurrentPrediction(BuildContext context,String searchType) async{
 
     return Properties.getHttpServerUrl(context).then((_serverUrl) async {
