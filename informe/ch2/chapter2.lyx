@@ -74,43 +74,386 @@
 \html_css_as_file 0
 \html_be_strict false
 \author -1783815582 "Cristian"
-\author -997162125 "mhirsch"
 \end_header
 
 \begin_body
 
 \begin_layout Chapter
 
-\change_inserted -1783815582 1700762861
-Marco teórico
-\change_deleted -1783815582 1700762894
+\change_deleted -1783815582 1720564253
+ 
+\change_unchanged
 Trabajos relacionados
-\begin_inset CommandInset label
-LatexCommand label
-name "chap:Trabajos-relacionados"
+\change_inserted -1783815582 1723408254
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723408289
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1723408353
+Trabajo
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1723408304
+Resumen
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1723408309
+App móvil para visualización o etiquetado
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1723408314
+Contexto de la toma de datos/ evaluación del modelo (campo abierto, manga)
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1723408320
+modo de ejecución(edge o cloud)
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1723408327
+Sensores
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1723408362
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ccevik2020deep"
+literal "false"
 
 \end_inset
 
 
-\change_inserted -1783815582 1700762922
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1723408515
+Se pretende predecir el BCS para agrupar a los animales y dar el cuidado
+ y alimentar a los animales en determinado momento.
+ Su objetivo es realizar pruebas en tiempo real y proporcionar un fácil
+ acceso a los productores de lácteos con la ayuda del software móvil diseñado.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1723408714
+Se desarrolló un software para estimar los valores de BCS utilizando imágenes
+ en tiempo real en dispositivos móviles Android llevándose a cabo con la
+ ayuda de arquitecturas CNN.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\change_unchanged
 
 \end_layout
 
 \begin_layout Section
 
-\change_inserted -1783815582 1700765046
+\change_deleted -1783815582 1720566427
 Computación en entorno distribuido
+\change_inserted -1783815582 1723408252
+
 \end_layout
 
 \begin_layout Subsection
 
-\change_inserted -1783815582 1700765162
+\change_deleted -1783815582 1720566427
 Cloud computing 
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1700829075
+\change_deleted -1783815582 1720566427
 \begin_inset CommandInset citation
 LatexCommand cite
 key "goscinski2010toward"
@@ -141,13 +484,13 @@ literal "false"
 
 \begin_layout Subsection
 
-\change_inserted -1783815582 1700829851
+\change_deleted -1783815582 1720566427
 Edge computing
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1700830565
+\change_deleted -1783815582 1720566427
 Edge computing es diferente del cloud computing tradicional.
  Según 
 \begin_inset CommandInset citation
@@ -170,7 +513,7 @@ n de datos, inteligencia de aplicaciones, seguridad y privacidad, y cumple
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1700831543
+\change_deleted -1783815582 1720566427
 Según 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -187,13 +530,13 @@ literal "false"
 
 \begin_layout Subsection
 
-\change_inserted -1783815582 1700781323
+\change_deleted -1783815582 1720566427
 Dew computing
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1700842755
+\change_deleted -1783815582 1720566427
 Según 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -226,13 +569,13 @@ s enchufables que incluye un enlace de comunicación Single-Super-Hybrid-Peer
 
 \begin_layout Subsection
 
-\change_inserted -1783815582 1700781836
-Wireless Sensors Netwrok
+\change_deleted -1783815582 1720566427
+Wireless Sensors Network
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1700836511
+\change_deleted -1783815582 1720566427
 WSN es definida por 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -254,24 +597,291 @@ e o está conectado a otras redes (por ejemplo, Internet) a través de un
  
 \end_layout
 
+\begin_layout Subsection
+
+\change_deleted -1783815582 1720566427
+Mesh Wireless Network
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1720566427
+https://books.google.com.ar/books?hl=es&lr=&id=Ezj8DwAAQBAJ&oi=fnd&pg=PA1&dq=mesh+n
+etworking&ots=OSrxQdNPaO&sig=kf3YNmwaP2RP6Y8ViWbGaf5lqH4&redir_esc=y#v=onepage&q
+=mesh%20networking&f=false
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1720566427
+Wireless mesh networks are communication networks which comprise radio nodes
+ in which nodes are arranged ina mesh topology.
+ Mesh topolicy is an interconnection of all nodes connected with all other
+ nodes in the networks.
+ The network includes devices like nodes, clients, routers, gateway, etc.
+ As the nodes are fully connected, mesh networks are usually les mobile
+ as rerouting is mess difficult in predicting the reroute results in delay
+ in data transmision.
+ Mesh clientes can be of any wireless devices like cell phones, laptos,
+ etc.
+ The gateways which acs as forwarding nodes may not be connected with the
+ internet.
+ As different devices comes under a single network, it is also referrerd
+ as a mesh cloud.
+ WMN is self healable., ti is flexible to work with more than one protoclo.
+ Wireless mesh network is a network which comprises various wireless nodes
+ with access points.
+ each nodes int he network acks as a forwarding node to transfer the data.
+ Since the network is decentralized, forwarding of data is possible only
+ to the neighboring node.
+ This results in the network structure simple and easy.
+ WMN make the poeple connected witht he internet who work a remote areas
+ operating business.
+ 
+\end_layout
+
+\begin_layout Subsection
+
+\change_deleted -1783815582 1720566427
+LoRa
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1720566427
+https://www.mdpi.com/1424-8220/20/15/4336
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1723408245
+Segun:_
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yang2017develop"
+literal "false"
+
+\end_inset
+
+El protocolo de red de área amplia de largo alcance (LoRaWAN) es una de
+ las tecnologías más populares y exitosas en el ámbito de las LPWAN.
+ LoRaWAN consiste en un protocolo que opera en la capa física de LoRa en
+ bandas sin licencia.
+ Las características de este protocolo son: Bajo consumo de energía, baja
+ velocidad de datos, baja complejidad de implementación, diferentes clases
+ de operación para diversas aplicaciones, rango de cobertura entre 2-5 km
+ en áreas urbanas y hasta 15 km en áreas rurales.
+ La puerta de enlace LoRa es capaz de admitir una gran cantidad de conexiones
+ nodos
+\end_layout
+
 \begin_layout Section
 
-\change_inserted -1783815582 1700782233
+\change_inserted -1783815582 1723407192
+Importancia de dew computing
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723407193
+
+\lang spanish
+Dew Computing 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "skala2015scalable"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "rindos2016dew"
+literal "false"
+
+\end_inset
+
+ nace como un paradigma de computación posterior a Edge/Fog Computing que
+ se presenta como una alternativa sustentable para soportar aplicaciones
+ IoT.
+ Puede operar acoplada o desacopladamente de los servicios de ejecución
+ que ofrece el Cloud 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gusev2018formal"
+literal "false"
+
+\end_inset
+
+.
+ En el segundo caso, asociado a lo que puede ser una falta de conectividad,
+ se explotan recursos presentes en el contexto local al usuario, también
+ denominados “on premises resources” dentro de los cuales se encuentran
+ dispositivos de usuario como smartphones o single board computers (SBC).
+ Las capacidades de cómputo no despreciables que ofrecen hoy en día estos
+ dispositivos posibilitan la ejecución de software recurso-intensivo.
+ Existen ejemplos donde estos dispositivos consitutyen el principal soporte
+ de ejecución de software complejo en ámbitos profesionales 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "prego2018mobile"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "singh2017smart"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "aquino2018vitisberry"
+literal "false"
+
+\end_inset
+
+.
+ Incluso cuando un único de estos dispositivo carezca de los recursos necesarios
+ para cumplir con la ejecución de una tarea en el tiempos que se espera,
+ aparecen trabajos en la literatura que plantean enfoques de ejecución colaborat
+ivos, donde una tarea se paraleliza y ejecuta en grupos de dispositivos
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hirsch2018augmenting"
+literal "false"
+
+\end_inset
+
+ .
+ La eficiente utilización de un grupo de dispositivos en un contexto local
+ plantea desafíos a nivel plataforma, tal como el estudio de componente
+ de planificación de tareas, que es necesario seguir estudiando dada la
+ heterogeneidad en términos de eficiencia energética y prestaciones que
+ puede encontrarse de los dispositivos de usuario 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hirsch2017two"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hong2019resource"
+literal "false"
+
+\end_inset
+
+.
+ Es una práctica común y aceptada en el estudio de sistemas distribuidos
+ la experimentación mediante simulación 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hirsch2018augmenting"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "apolonia2017leveraging"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hirsch2020dewsim"
+literal "false"
+
+\end_inset
+
+.
+ Esto es dada la inherente complejidad de configuración, costos monetarios
+ y tiempo que conlleva estudiar estrategias de planificación en sistemas
+ distribuidos montados sobre ambientes de ejecución reales.
+ En relación a esto, DewSim 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hirsch2020dewsim"
+literal "false"
+
+\end_inset
+
+ permite modelar clusters de dispositivos móviles y evaluar estrategias
+ de planificación de tareas teniendo en cuenta aspectos que tienen que ver
+ con el consumo de energía de las baterías y uso de CPU de los dispositivos.
+ Si bien la simulación resulta de suma utilidad para estudiar de forma explorato
+ria nuevas estrategias de planificación de tareas en ambientes Dew, es relevante
+ contar con datos extraídos de la ejecución de aplicaciones Dew reales,
+ ya se sea para validar los resultados obtenidos mediante simulación como
+ para retroalimentar el modelo de entidades que forman parte de DewSim.
+\end_layout
+
+\begin_layout Section
 Trabajos relacionados
 \end_layout
 
 \begin_layout Subsection
 
-\change_inserted -1783815582 1700839888
-Diseño, implementación y validación de una plataforma IoT de bajo costo
- basada en LoRa para la producción lechera de precisión
-\change_unchanged
-
+\change_deleted -1783815582 1723407576
+Develop a video monitoring system for dairy estrus detection at night
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1700838954
+\change_deleted -1783815582 1723407576
+Según 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yang2017develop"
+literal "false"
+
+\end_inset
+
+ la detección precisa del estro de las vacas lecheras es esencial para el
+ éxito de la inseminación artificial.
+ Por lo tanto, se han desarrollado sistemas de monitorización por contacto
+ directo.
+ Pero estos sensores que entran en contacto directamente con la piel de
+ las vacas lecheras provocan su malestar.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yang2017develop"
+literal "false"
+
+\end_inset
+
+ ha desarrollado un sistema de monitorización de video sin contacto.
+ Usarón cámaras infrarrojas para registrar imágenes de las vacas lecheras
+ durante la noche, cuando la frecuencia de estro es más alta.
+ Luego, las vacas lecheras con comportamientos específicos del celo son
+ identificadas mediante procesamiento de imágenes.
+ Finalmente, sólo se requieren simples juicios de los propietarios para
+ decidir si se realizará una inseminación artificial.
+\end_layout
+
+\begin_layout Subsection
+
+\change_deleted -1783815582 1723407576
+Diseño, implementación y validación de una plataforma IoT de bajo costo
+ basada en LoRa para la producción lechera de precisión
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1723407576
 Según 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -281,7 +891,7 @@ literal "false"
 \end_inset
 
 , la agricultura de precisión se ha vuelto esencial para aumentar la producción
- de alimentos en el área de cultivo utilizada anteriormente.
+ de alimentos en el área de cultivo.
  Por lo tanto, el seguimiento de la salud animal y la detección de estros
  son esenciales para incrementar la producción lechera.
  Las redes de sensores inalámbricos desempeñan un papel importante en la
@@ -293,7 +903,7 @@ literal "false"
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1700842853
+\change_deleted -1783815582 1723407576
 \begin_inset CommandInset citation
 LatexCommand cite
 key "piedadedesign"
@@ -311,7 +921,7 @@ propusp aplicar y validar WSN integrada con una base de datos y técnicas
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1700842907
+\change_deleted -1783815582 1723407576
 Según las características de IoT, los principales desafíos de 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -328,11 +938,11 @@ literal "false"
  Estas características son esenciales para las aplicaciones de IoT agrícola
  y permiten una cobertura de área con bajo consumo de energía y costo de
  hardware.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section
-
-\change_inserted -1783815582 1700782172
 Trabajo previo 
 \begin_inset CommandInset label
 LatexCommand label
@@ -341,31 +951,27 @@ name "chap:Trabajo-previo"
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -997162125 1699373681
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -997162125 1699883382
 En general el capítulo de trabajos relacionados describe lo que hay hecho
  en torno a una temática pero también va sugiriendo entre líneas o al final,
  aquello a lo que no se dado solución por parte de otros y que coincide
  con lo que se propone hacer en la tesis.
  Veo que hay frases tomadas del proyecto para tratar de contar dónde se
  inserta tu trabajo, pero falta pulir bastante lo que hay y agregar nuevo.
- Para ayudar a pensar esto no hay que perder de vista lo siguiente: 
+ Para ayudar a pensar esto no hay que perder de vista lo siguiente:
+\change_deleted -1783815582 1720564178
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -997162125 1699885326
 1 - 
 \begin_inset Quotes fld
 \end_inset
@@ -414,14 +1020,10 @@ Tu proyecto final se enfoca en aplicar tecnología Edge/Dew computing al
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -997162125 1699882335
 Cosas a tener en cuenta al momento de volcar contenido:
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -997162125 1699884916
 - Cuidar la hilación entre párrafos y el nivel de detalle con el que se
  presentan las ideas (hay que encontrar un balacne, mucho detalle a veces
  no es bueno porque no aporta a la discusión general.
@@ -430,17 +1032,11 @@ Cosas a tener en cuenta al momento de volcar contenido:
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -997162125 1699882543
 - Lo que es hecho por otros autores contarlo en tercera persona, e.g, En
  [Rodríguez Alvarez et al., 2017] los autores proponen una red neuronal.....
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -997162125 1699882487
 - Lo que es hecho por vos, se puede contar en impersonal, e.g., se desarrolló,
  se diseño, se tuvo en cuenta.
 \end_layout
@@ -448,10 +1044,8 @@ Cosas a tener en cuenta al momento de volcar contenido:
 \end_inset
 
 
-\change_unchanged
-A nivel internacional
-\change_inserted -1783815582 1700762450
-, en 
+\change_deleted -1783815582 1723407678
+A nivel internacional, en 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "leary2020validation"
@@ -459,95 +1053,19 @@ literal "false"
 
 \end_inset
 
- se ha evaluado un conjunto de
-\change_deleted -1783815582 1700564402
- existen
-\change_unchanged
- tres aparejos comerciales automáticos (DeLaval - Suecia, Ingenera SA -
- Suiza, y Biondi Engineering SA -Suiza) 
-\change_deleted -1783815582 1700564510
-orientados
-\change_inserted -1783815582 1700564512
-enfocados
-\change_unchanged
- exclusivamente a 
-\change_inserted -1783815582 1700564424
-la industria 
-\change_unchanged
-lecher
-\change_deleted -1783815582 1700564426
-í
-\change_unchanged
-a
-\change_deleted -1783815582 1700652879
- que han sido evaluados (O’ Leary et al., 2020)
-\change_inserted -1783815582 1700838807
- que permiten automatizar la medición de la CC en vacas lecheras.
- Sin embargo,
-\change_deleted -1783815582 1700564096
-, pero
-\change_unchanged
- 
-\change_inserted -1783815582 1700564110
-estos 
-\change_deleted -1783815582 1700564112
-que
-\change_unchanged
- no han tenido penetración comercial en la región, posiblemente 
-\change_inserted -1783815582 1700564134
-debido a 
-\change_deleted -1783815582 1700564136
-por 
-\change_unchanged
-costos y modelo de negocio.
- Por lo tanto
-\change_inserted -1783815582 1700564145
-,
-\change_unchanged
- se 
-\change_deleted -1783815582 1700564537
-trabajó
-\change_inserted -1783815582 1700564546
-empredieron esfuerzos para
-\change_deleted -1783815582 1700564548
- en la 
-\change_unchanged
-mejora
-\change_inserted -1783815582 1700564550
-r
-\change_unchanged
- 
-\change_deleted -1783815582 1700567039
-d
-\change_unchanged
-el método de 
-\change_deleted -1783815582 1700567043
-la
-\change_unchanged
- automatización después de 
-\change_deleted -1783815582 1700564156
-haber analizado
-\change_inserted -1783815582 1700564158
-analizar
-\change_unchanged
- la bibliografía donde se han propuesto
-\change_deleted -1783815582 1700564170
-s
-\change_unchanged
- métodos a partir de procesamiento de imágenes, mediante regresiones o 
-\change_deleted -1783815582 1700564578
-a partir
-\change_inserted -1783815582 1700564580
-utilizando
-\change_deleted -1783815582 1700564585
- de
-\change_unchanged
- algoritmos basados en el nivel de angularidad de la zona pélvica (mayor
- angulosidad se la asocia con menor CC), con diferente grado de automatización
- y de precisión de los registros (Rodríguez Alvarez et al., 2017).
- 
-\change_inserted -1783815582 1700652239
-En este contexto, se registraron buenos resultados en 
+ se ha evaluado un conjunto de tres aparejos comerciales automáticos (DeLaval
+ - Suecia, Ingenera SA - Suiza, y Biondi Engineering SA -Suiza) enfocados
+ exclusivamente a la industria lechera que permiten automatizar la medición
+ de la CC en vacas lecheras.
+ Sin embargo, estos  no han tenido penetración comercial en la región, posibleme
+nte debido a costos y modelo de negocio.
+ Por lo tanto, se empredieron esfuerzos paramejorar el método de  automatización
+ después de analizar la bibliografía donde se han propuesto métodos a partir
+ de procesamiento de imágenes, mediante regresiones o utilizando algoritmos
+ basados en el nivel de angularidad de la zona pélvica (mayor angulosidad
+ se la asocia con menor CC), con diferente grado de automatización y de
+ precisión de los registros (Rodríguez Alvarez et al., 2017).
+ En este contexto, se registraron buenos resultados en 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "rodriguez2018revision"
@@ -566,38 +1084,23 @@ literal "false"
 
 \begin_layout Standard
 
-\change_deleted -1783815582 1700565041
-En este sentido, se avanzó con buenos resultados (Rodríguez Alvarez et al.,
- 2019, 2018) con mejoras en la precisión de la estimación de la CC de vacas
- tipo Holstein, con respecto a trabajos internacionales previos a una escala
- de 0.25 (1 delgada y 5 obesa) a partir de redes neuronales y algoritmos
- de aprendizaje profundo o deep learning (Rodríguez Alvarez et al., 2018).
-
-\change_unchanged
+\change_deleted -1783815582 1720564178
  
-\change_inserted -997162125 1699372297
+\change_unchanged
 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -997162125 1699372298
 Evitar los párrafos de una sóla frase
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
 
-\change_inserted -1783815582 1700565047
-
 \end_layout
 
 \begin_layout Section
-
-\change_inserted -1783815582 1700567227
 Marco del proyecto
 \begin_inset CommandInset label
 LatexCommand label
@@ -606,45 +1109,13 @@ name "sec:Marco-del-proyecto"
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -1783815582 1700565131
-El objetivo general de este proyecto que comenzó en trabajos anteriores
- y continuará en el trabajo actual es
-\change_inserted -1783815582 1700567140
 En el marco de este proyecto en curso, con proyecciones de continuidad posee
  cinco objetivos específicos:
-\change_deleted -1783815582 1700565248
-:
-\change_unchanged
+\change_deleted -1783815582 1720564178
  
-\change_deleted -1783815582 1700565212
-desarrollar un prototipo
-\change_deleted -997162125 1699372438
-MVP
-\change_deleted -1783815582 1700565212
- de un aparejo (hard-soft) móvil y robusto en condiciones de campo, que
- a partir de capturas mediante 
-\change_deleted -997162125 1699372518
-de 
-\change_deleted -1783815582 1700565212
-técnicas de visión computacional (imágenes 3D) obtenidas al paso de los
- vacunos e inteligencia artificial, cuantifique de forma automática y objetiva,
- la condición corporal (y potencial reproductivo de vacas) y el grado de
- terminación de animales de engorde, permitiendo integrar, informar y reportar
- esa información de forma ágil para la toma de decisión.
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1700565261
-Este proyecto tiene cinco objetivos específicos:
 \change_unchanged
 
 \end_layout
@@ -670,7 +1141,11 @@ Este proyecto tiene cinco objetivos específicos:
  a un ambiente IoT para conexión futura a otros dispositivos (por ejemplo
  lectores de RFID para individualizar los datos de forma automática, apartadores
  automáticos de hacienda, etc.).
+
+\change_deleted -1783815582 1720564178
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -679,35 +1154,29 @@ Este proyecto tiene cinco objetivos específicos:
  propia, con un branding definido y fácilmente adaptable a instalaciones
  heterogéneas como las que se presentan en condiciones de campo en lechería
  y en producción de carne.
+
+\change_deleted -1783815582 1720564178
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 5.
  Diseñar y validar el modelo de negocios más apropiado para el aparejo de
  funcionalidad dual (CC y GT).
-\change_inserted -1783815582 1700565301
-
 \end_layout
 
 \begin_layout Standard
 
-\change_deleted -1783815582 1700565548
-En relación al objetivo 1, el grupo de trabajo ha realizado avances preliminares
- sobre el algoritmo para el procesamiento automático de imágenes de la condición
- corporal de vacas (Rodríguez Álvarez et al., 2018) y resta ampliar la base
- de datos de campo para aumentar la capacidad predictiva a otras razas de
- leche y carne, y proceder al desarrollo de un aparejo comercial con ese
+\change_deleted -1783815582 1720564178
+ 
 \change_unchanged
- propósito.
-\change_inserted -997162125 1699373664
-
+propósito.
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -997162125 1699373664
 Esto hay que adaptarlo.
  Escrito como está no permite diferenciar qué es parte de tu proyecto y
  qué es parte del marco de tu proyecto.
@@ -716,142 +1185,58 @@ Esto hay que adaptarlo.
 \end_inset
 
 
-\change_inserted -1783815582 1700566362
-
 \end_layout
 
 \begin_layout Subsection
 
-\change_inserted -1783815582 1700843139
+\change_deleted -1783815582 1723407714
 Algoritmo predictivo
 \end_layout
 
 \begin_layout Standard
-El método 
-\change_deleted -1783815582 1700566467
-desarrollado
-\change_inserted -1783815582 1700566471
-empleado
-\change_unchanged
- 
-\change_deleted -1783815582 1700566486
-sobre el algoritmo
-\change_unchanged
- se basa en el uso integral de deep learning para:
-\change_deleted -1783815582 1700566493
- a)
-\change_inserted -1783815582 1700566493
 
+\change_deleted -1783815582 1723407714
+El método empleado  se basa en el uso integral de deep learning para:
 \end_layout
 
 \begin_layout Enumerate
 
-\change_deleted -1783815582 1700566493
- 
-\change_unchanged
-detectar la parte trasera de una vaca en un cuadro de video, 
-\change_deleted -1783815582 1700566538
-lo que se realiza
-\change_inserted -1783815582 1700567173
-llevándose a cabo mediante
-\change_deleted -1783815582 1700566546
- con
-\change_unchanged
- una red basada en YOLO (You Only Look Once), 
-\change_deleted -1783815582 1700566552
-y b) 
-\change_inserted -1783815582 1700566552
-
+\change_deleted -1783815582 1723407714
+detectar la parte trasera de una vaca en un cuadro de video, llevándose
+ a cabo mediante una red basada en YOLO (You Only Look Once), 
 \end_layout
 
 \begin_layout Enumerate
-puntuar la condición corporal a partir de la imagen producción de la detección
-\change_inserted -1783815582 1700566577
-,
-\change_deleted -1783815582 1700566575
- en a)
-\change_unchanged
-, 
-\change_deleted -1783815582 1700566552
-lo que se realiza con
-\change_unchanged
- 
-\change_inserted -1783815582 1700566689
-a través de 
-\change_unchanged
-una red basada en CNN (Convolutional Neural Network).
-\change_inserted -1783815582 1700566734
 
+\change_deleted -1783815582 1723407714
+puntuar la condición corporal a partir de la imagen producción de la detección,,
+  a través de una red basada en CNN (Convolutional Neural Network).
 \end_layout
 
 \begin_layout Standard
 
-\change_deleted -1783815582 1700566721
- 
+\change_deleted -1783815582 1723407714
+Los resultados iniciales revelaron una precisión del 94% y mejoras continuas
+ mediante ensembles y transfer learning elevaron este valor a 97% (Rodriguez
+ Alvarez et al., 2019).
+ Cabe destacar, sin embargo, queel enfoque se centro en el ganado lechero,
+ específicamente en vacas Holstein-Freisian.
+ Por lo tanto, las conclusiones respecto a la parametrización, anatomía,
+ entrenamiento y evaluación de la red son solo válidas en el contexto de
+ imágenes de dicha raza.
 \change_unchanged
-Los resultados iniciales 
-\change_deleted -1783815582 1700566771
-mostraron
-\change_inserted -1783815582 1700566773
-revelaron
-\change_unchanged
- una precisión del 94% y
-\change_inserted -1783815582 1700566780
- mejoras continuas
-\change_deleted -1783815582 1700566785
- sucesivas mejoras utilizando
-\change_inserted -1783815582 1700566787
- mediante
-\change_unchanged
- ensembles y transfer learning elevaron este valor a 97% (Rodriguez Alvarez
- et al., 2019).
- Cabe destacar, sin embargo, que
-\change_deleted -1783815582 1700566826
- el foco fue
-\change_inserted -1783815582 1700566831
-el enfoque se centro en el
-\change_unchanged
- ganado lechero, 
-\change_inserted -1783815582 1700567192
-específicamente en
-\change_deleted -1783815582 1700566846
-y en particular
-\change_unchanged
- vacas Holstein-Freisian
-\change_deleted -1783815582 1700566870
-,
-\change_inserted -1783815582 1700566872
-.
-
-\change_unchanged
- 
-\change_deleted -1783815582 1700566876
-p
-\change_inserted -1783815582 1700566876
-P
-\change_unchanged
-or lo 
-\change_inserted -1783815582 1700566881
-tanto, 
-\change_deleted -1783815582 1700566888
-que 
-\change_unchanged
-las conclusiones respecto a la parametrización, anatomía, entrenamiento
- y evaluación de la red son solo válidas en el contexto de imágenes de dicha
- raza.
-\change_inserted -1783815582 1700565183
 
 \end_layout
 
 \begin_layout Section
 
-\change_inserted -1783815582 1700565550
+\change_deleted -1783815582 1723407698
 Objetivo del proyecto
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1700567306
+\change_deleted -1783815582 1723407698
 En relación al objetivo 1
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -884,14 +1269,6 @@ noprefix "false"
 \end_inset
 
 .
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1700565183
- 
 \change_unchanged
 
 \end_layout

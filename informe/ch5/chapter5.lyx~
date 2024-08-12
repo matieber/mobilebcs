@@ -225,7 +225,7 @@ Objetivos futuros
 En cuanto al objetivo 4 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "chap:Trabajos-relacionados"
+reference "chap:Trabajo-previo"
 plural "false"
 caps "false"
 noprefix "false"
@@ -248,7 +248,7 @@ Los modelos de CC validados serán desplegados en los dispositivos electrónicos
  En ese sentido (Objetivo 5 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "chap:Trabajos-relacionados"
+reference "chap:Trabajo-previo"
 plural "false"
 caps "false"
 noprefix "false"

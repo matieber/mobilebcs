@@ -1,0 +1,64 @@
+Relacionados a Develop a video monitoring system for dairy estrus detection at night
+
+
+There are 3 characteristics of dairy cows which are typically
+detected during estrus. The first characteristic refers to
+behavior changes. Mounting is the most common behavior
+detected during estrus. Wowing, enhancing activity, walking
+along the fence, laying the lower forehead onto the back ridge
+of other cows can also be observed more frequently during
+estrus. The second characteristic refers to body changes, such
+as dirty lateral abdomen, hair clutter and hair loss over the tail
+root, and redness and swelling over the perineum. The last
+characteristic includes poor appetite and urinary frequency [2].
+The traditional estrus detection relies on close observation by
+humans. But the observer should stay around the farm for long
+time and also can make mistakes by missing those
+characteristics.
+
+Afimilk Co. in Israel has developed a AfiTag pedometer
+to record the numbers of cow steps. Since the activity of dairy
+cows is increased during estrus, the numbers recorded by the
+pedometer placed over the cow ankle can be further analyzed
+by the computer. The analyses can help owners to identify if the
+cows are under estrus or not [3]. Besides, Shen et al. [4] have
+developed a skin-attached sensor which can detect the cow
+movement acceleration over 3 axes (x, y, and z axis), which
+than can be analyzed by the computer algorithm to further
+classify the cow movement into static or dynamic (slight or
+sharp motion) status. This helps owners to identify if the dairy
+cow is under estrus or healthy or not. In addition, DVM system
+LLC. has designed a gastric temperature-measuring product
+which can be swallowed by the cow. This product includes a
+temperature sensor and a RFID chip. The reader which can
+receive signals is placed at the entrance of the milk squeezing
+area. The ID and the corresponding temperature signal of the
+cow can be recorded each time when the cow passes the
+entrance. The temperature changes of cow can help to evaluate
+if the cows are under estrus or sick [5]. Also, Kwong et al. [6]
+have used low power consumption sensor nodes as the base
+elements of a data gathering and communication infrastructure
+to monitor the physical and physiological conditions of cows.
+This infrastructure can be utilized over both dense house and
+free grazing cows. However, in direct contact monitor systems
+proposed, the sensors directly contact the cow skin leading to the discomfort of cows. Therefore, non-contact monitor
+systems are then developed. Tsai and Huang [7] have
+established an estrus detection system of dairy cows based on
+the imaging processing technology. But this system can only be
+used at daytime, which cannot detect estrus-related behaviors
+usually occurring at night. It then becomes a disadvantage of
+this system.
+
+
+
+
+
+
+
+
+------------------------------------------------------------------
+
+Design, Deployment, and Validation of a Low-Cost
+IoT Platform based on LoRa for Precision Dairy
+Farming
+

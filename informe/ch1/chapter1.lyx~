@@ -1,0 +1,930 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes true
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\author -1783815582 "Cristian"
+\author -997162125 "mhirsch"
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Introducción
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Introducción"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1723406035
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1699444364
+Esto está bien pero como intro le falta.
+ Le falta en el sentido que se habla de un sólo tema que es la motivación
+ a usar el indicador CC.
+ Faltaría introducir también lo que es un ambiente Dew.
+ Al concepto se lo puede asociar fácil a lo que se conoce como Edge Computing
+ o computación en el borde.
+ Lo mejor, es dejar la intro para lo último, cuando ya se tenga más definido
+ los otros capítulos.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -997162125 1699370442
+,,
+\change_deleted -1783815582 1723406035
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1699371992
+Las referencias se manejan con un archivo aparte que constituye la base
+ de referencias en un formato biby desde lyx se insertan referencias bibliográfi
+cas (insert citation).
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+(De 
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1723406035
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1699878871
+Juan: sugiere sacar esto porque no corresponde, es decir, la selección de
+ animales para su carga se hace mirando otro indicador que es el grado de
+ terminación del animal, no el CC.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1723204035
+
+\lang spanish-mexico
+Introducción sobre el uso de la tecnología en las granjas
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723202284
+
+\lang spanish-mexico
+La adopción de tecnología en las granjas tiene como objetivo transformar
+ la forma en que se gestionan y optimizan las operaciones agropecuarias,
+ permitiendo una mayor eficiencia, sostenibilidad y precisión en la producción.
+ En el ámbito de la ganadería lechera, por ejemplo, se ha diseñado un sistemas
+ avanzados para la detección del estro en vacas, como lo describe el artículo
+ de 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "li2010design"
+literal "false"
+
+\end_inset
+
+.
+ Este sistema utiliza tecnología inalámbrica Zigbee y sensores de infrarrojos
+ para monitorear la temperatura corporal y el movimiento del ganado, tratando
+ de mejorar la precisión en la detección del estro y reduciendo la carga
+ laboral.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723404261
+
+\lang spanish-mexico
+Por otro lado, en un contexto más amplio, la adopción de tecnologías como
+ el Internet de las Cosas (IoT) y la Edge Computing (EC) son cruciales en
+ la industria láctea para poder adaptarse a un mercado globalizado.
+ Según 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "alonso2020intelligent"
+literal "false"
+
+\end_inset
+
+, estas tecnologías permiten digitalizar toda la cadena de valor, optimizando
+ procesos, garantizando la trazabilidad y asegurando la calidad del producto
+ final, lo que es fundamental en un entorno de agricultura inteligente.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723404655
+
+\lang spanish-mexico
+Finalmente, la aplicación de técnicas de Deep Learning (DL) también está
+ revolucionando la ganadería.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mahmud2021systematic"
+literal "false"
+
+\end_inset
+
+ destacan cómo el DL se está utilizando para la automatización de tareas
+ como la identificación y el monitoreo de la salud del ganado, aunque aún
+ existen desafíos significativos, especialmente en el monitoreo en tiempo
+ real y el rastreo de movimientos en condiciones de granja.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723163871
+
+\lang spanish-mexico
+En conjunto, estos avances subrayan el papel esencial de la tecnología en
+ la modernización de la agricultura y la ganadería, impulsando mejoras en
+ la productividad.
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1723204040
+Importancia de BCS y la necesidad de mejorar la alimentación de las vacas
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723404819
+Entre varias variables de importancia productiva, económica y ambiental,
+ existe consenso en que la identificación de la condición corporal (BCS,
+ por sus siglas en inglés) y los cambios en esta son los mejores indicadores
+ de las reservas nutricionales de una vaca, superando al peso vivo o al
+ cambio de peso vivo.
+ Esto se debe a que estas últimas variables pueden verse afectadas por factores
+ como el peso fetal y el llenado del rumen, como se describió tempranamente
+ en la lechería 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "wildman1982dairy"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "wildman1982dairy"
+literal "false"
+
+\end_inset
+
+ y en el ganado bovinos 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "richards1986effect"
+literal "false"
+
+\end_inset
+
+ .
+ A lo largo del tiempo, se han acumulado evidencias sobre la efectividad
+ del sistema visual de condición corporal como un fuerte predictor de la
+ capacidad productiva, reproductiva y del bienestar animal 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "roche2009invited"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723204129
+Por lo tanto, el BCS es una herramienta fundamental en la gestión del ganado
+ lechero, ya que permite estimar la movilización de reservas energéticas
+ en grasa y músculo, siendo crucial para asegurar el bienestar animal y
+ la eficiencia productiva.
+ Según 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "yukun2019automatic"
+literal "false"
+
+\end_inset
+
+, el BCS es ampliamente utilizado para monitorear la ingesta de alimentos
+ y el estado de salud del ganado, además de optimizar la gestión de la curva
+ de lactancia.
+ Sin embargo, la evaluación manual tradicional del BCS, aunque útil, es
+ subjetiva y propensa a errores, dado que debe tenerse en cuenta la variabilidad
+ entre observadores 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "morin2017observational"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723394494
+Por otra parte, la mejora de la alimentación del ganado es esencial para
+ maximizar la producción de leche, y en este contexto, la precisión en la
+ evaluación del BCS se vuelve aún más crítica.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ccevik2020deep"
+literal "false"
+
+\end_inset
+
+ destacan la importancia del BCS como el indicador principal de una alimentación
+ adecuada en el ganado lechero, y señalan que agrupar a los animales según
+ su puntuación de BCS permite una gestión más eficiente de la alimentación.
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1723394504
+Dew Computing
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723406797
+Dew Computing 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "skala2015scalable"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "rindos2016dew"
+literal "false"
+
+\end_inset
+
+ nace como un paradigma de computación posterior a Edge/Fog Computing que
+ se presenta como una alternativa sustentable para soportar aplicaciones
+ IoT.
+ Puede operar acoplada o desacopladamente de los servicios de ejecución
+ que ofrece el Cloud 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gusev2018formal"
+literal "false"
+
+\end_inset
+
+.
+ En el segundo caso, asociado a lo que puede ser una falta de conectividad,
+ se explotan recursos presentes en el contexto local al usuario, también
+ denominados “on premises resources” dentro de los cuales se encuentran
+ dispositivos de usuario como smartphones o single board computers (SBC).
+ Las capacidades de cómputo no despreciables que ofrecen hoy en día estos
+ dispositivos posibilitan la ejecución de software recurso-intensivo.
+ Existen ejemplos donde estos dispositivos consitutyen el principal soporte
+ de ejecución de software complejo en ámbitos profesionales 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "prego2018mobile"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "singh2017smart"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "aquino2018vitisberry"
+literal "false"
+
+\end_inset
+
+.
+ Incluso cuando un único de estos dispositivo carezca de los recursos necesarios
+ para cumplir con la ejecución de una tarea en el tiempos que se espera,
+ aparecen trabajos en la literatura que plantean enfoques de ejecución colaborat
+ivos, donde una tarea se paraleliza y ejecuta en grupos de dispositivos
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hirsch2018augmenting"
+literal "false"
+
+\end_inset
+
+ .
+ La eficiente utilización de un grupo de dispositivos en un contexto local
+ plantea desafíos a nivel plataforma, tal como el estudio de componente
+ de planificación de tareas, que es necesario seguir estudiando dada la
+ heterogeneidad en términos de eficiencia energética y prestaciones que
+ puede encontrarse de los dispositivos de usuario 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hirsch2017two"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hong2019resource"
+literal "false"
+
+\end_inset
+
+.
+ Es una práctica común y aceptada en el estudio de sistemas distribuidos
+ la experimentación mediante simulación 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hirsch2018augmenting"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "apolonia2017leveraging"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hirsch2020dewsim"
+literal "false"
+
+\end_inset
+
+.
+ Esto es dada la inherente complejidad de configuración, costos monetarios
+ y tiempo que conlleva estudiar estrategias de planificación en sistemas
+ distribuidos montados sobre ambientes de ejecución reales.
+ En relación a esto, DewSim 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hirsch2020dewsim"
+literal "false"
+
+\end_inset
+
+ permite modelar clusters de dispositivos móviles y evaluar estrategias
+ de planificación de tareas teniendo en cuenta aspectos que tienen que ver
+ con el consumo de energía de las baterías y uso de CPU de los dispositivos.
+ Si bien la simulación resulta de suma utilidad para estudiar de forma explorato
+ria nuevas estrategias de planificación de tareas en ambientes Dew, es relevante
+ contar con datos extraídos de la ejecución de aplicaciones Dew reales,
+ ya se sea para validar los resultados obtenidos mediante simulación como
+ para retroalimentar el modelo de entidades que forman parte de DewSim.
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1723393785
+Motivación
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723404876
+A pesar del valor indiscutido del BCS, existe una gran subutilización de
+ esta valiosa herramienta de manejo en los sistemas comerciales por múltiples
+ causas, entre las que se encuentran la no disponibilidad regular del/la
+ experto/a en los movimientos de hacienda, superposición de actividades
+ que relega su medición regular, falta local de especialistas entre otros
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "deestudio"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "maresca2008estado"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "selk1988relationships"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723404881
+Por este motivo, la principal motivación de este proyecto es la de desarrollar
+ un prototipo de ambiente Dew con aplicación en el sector de producción
+ tambero.
+ La razón por la que elige este dominio es porque se cuenta con avances
+ obtenidos en el marco de una tesis doctoral sobre un modelo que aplica
+ aprendizaje profundo para clasificación de ganado bovino basado en el indicador
+ de condición corporal.
+ La idea realizar un desarrollo que permita agilizar el etiquetado de imágenes
+ que se realiza con una cámara de profundidad.
+ También se busca realizar una clasificación en tiempo real in situ, es
+ decir, a medida que los animales pasan por lo que en el campo se conoce
+ con el nombre de manga donde se realizan diversas prácticas veterinarias.
+ A partir del prototipo generado y planteando la tarea de clasificación
+ a partir de imágenes como un cómputo en el que intervienen varios dispositivos
+ de usuario, también se busca validar la performance de heurísticas de planifica
+ción de tareas estudiadas mediante simulación.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1723393687
+Escasees de prototipos
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723404931
+Si bien existe una abundante investigación sobre algoritmos e inteligencia
+ artificial aplicados en granjas 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "bao2022artificial"
+literal "false"
+
+\end_inset
+
+, este artículo destaca que persiste la necesidad de desarrollar aplicaciones
+ sistemáticas que integren dispositivos de recolección de datos, procesamiento
+ y algoritmos inteligentes.
+ Según estos autores, esto es especialmente relevante en el contexto de
+ la ganadería inteligente, donde se requieren sistemas de bajo costo y modelos
+ de IA eficientes.
+ Sin embargo desafíos como la precisión de los sensores y el costo de los
+ dispositivos, continúan suendo un obstaculo que debe superarse para lograr
+ una implementación efectiva.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723325829
+Ademas, los estudios sobre machine learning y reconocimiento de patrones
+ han mostrado avances en áreas como la detección de enfermedades y el monitoreo
+ del comportamiento animal.
+ Sin embargo, como se observa en los artículos de 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "kumar2018deep"
+literal "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "riekert2020automatically"
+literal "false"
+
+\end_inset
+
+, muchos de estos estudios se centran en marcos teóricos o modelos de detección
+ sin una implementación práctica clara.
+ Por ejemplo, el primero presenta un modelo de identificación de vacas mediante
+ deep learning, pero no aborda cómo se implementará en la práctica.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723405234
+En el ámbito del reconocimiento de patrones y procesamiento de imágenes,
+ se han desarrollado diversos modelos teóricos sin implementación efectiva
+ que pueden procesar y analizar información proveniente de imágenes, videos
+ y sonidos de manera similar a la inteligencia cerebral.
+ Estos modelos permiten describir e identificar comportamientos individuales,
+ evaluar la calidad de la carne y medir el rendimiento en el crecimiento
+ animal.
+ Por ejemplo, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "masferrer2018line"
+literal "false"
+
+\end_inset
+
+ propone un método de clasificación automática, combinados con datos intrínsecos
+ de los cerdos, para simular un sistema de clasificación manual.
+ Del mismo modo, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "masferrer2018line"
+literal "false"
+
+\end_inset
+
+ introducen un algoritmo inteligente para el monitoreo del comportamiento
+ alimentario mediante el reconocimiento de patrones y aprendizaje automático.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723324659
+En el campo de las redes neuronales artificiales (ANN), los desarrollos
+ recientes se han enfocado principalmente en la creación de modelos y algoritmos
+ dirigidos a la detección de enfermedades animales, la estimación del rendimient
+o de crecimiento y el monitoreo y control de las condiciones ambientales.
+ Por ejemplo, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "nasirahmadi2019automatic"
+literal "false"
+
+\end_inset
+
+ desarrollaron un algoritmo para monitorear automáticamente la postura de
+ acostado lateral y esternal de los cerdos, proporcionando información crucial
+ sobre su salud y bienestar.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723393695
+Aunque todos estos modelos y algoritmos representan avances significativos
+ en teoría, su implementación práctica en entornos reales aún es limitada.
+ Esto subraya la necesidad de traducir estas innovaciones en soluciones
+ tangibles que puedan ser aplicadas efectivamente en la ganadería, llevando
+ los desarrollos teóricos al uso práctico en la producción animal.
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1723389909
+Propuesta
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723405635
+La propuesta consiste en desarrollar una aplicación móvil diseñada para
+ predecir el BCS en vacas lecheras, aprovechando tecnologías de inteligencia
+ artificial y aprendizaje automático.
+ Esta herramienta no solo servirá para predecir el BCS utilizando un modelo
+ de red neuronal previamente entrenado para vacas lecheras de raza Holstein,
+ sino que también permitirá almacenar la información obtenida durante las
+ evaluaciones realizadas por expertos, dando la posibilidad de reentrenamiento
+ continuo del modelo.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1723393925
+Objetivo
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723405736
+El objetivo general de este proyecto es el de desarrollar un prototipo de
+ ambiente de computación Dew que aproveche capacidad de cómputo presente
+ en la cercanía de un usuario para ejecutar tareas de clasificación y etiquetado.
+ Desde el punto de vista práctico, la capacidad de cómputo estará representada
+ por dispositivos de bajo costo tipo SBC (Single Board Computers) y/o dispositiv
+os móviles (smartphones) que podrán asumirse ya presentes en el contexto
+ de utilización (tambo lechero) o en su defecto factibles de ser desplegados
+ con mínimos requerimientos para llevar a cabo tareas de clasificación de
+ ganado en tiempo real.
+ Las tareas de clasificación propiamente dichas, emplearán un modelo tensorflow
+ previamente desarrollado en el marco de un trabajo publicado en una revista
+ internacional de alto impacto en el área d etecnologías aplicadas al agro
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "alvarez2018body"
+literal "false"
+
+\end_inset
+
+.
+ El prototipo a desarrollar tiene múltiples propósitos que pueden resumirse
+ en: 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723405748
+1- Contribuir a mejorar el modelo tensorflow a partir de un reentrenamiento
+ que se será posible gracias a la agilización del proceso de etiquetado
+ de imágenes en las que interviene un profesional veterinario experto en
+ el dominio.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723405758
+2- Permitir que conocimiento experto en el dominio y encapsulado en una
+ red de aprendizaje profundo pueda ser utilizado para automatizar la clasificaci
+ón de ganado empleando dispositivos de usuario como plataforma de ejecución.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723405772
+3- Permitir la validación de resultados de estrategias de planificación
+ de tareas en grupos de dispositivos móviles estudiados con anterioridad
+ en el grupo de trabajo y empleando simulación.
+ De este objetivo general se desprenden los siguientes objetivos específicos:
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1723405789
+Diseño y desarrollo de una app móvil Android Evaluador que oficia de cliente
+ y permite al profesional veterinario experto en el dominio etiquetar imágenes
+ de ganado vacuno tomadas con una cámara de profundidad en tiempo real en
+ el contexto de labores realizados en una manga, sin requerir de conexión
+ a Internet.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1723405803
+Diseño y desarrollo de una app móvil Android Visualizador que permite a
+ un usuario no experto en el dominio conocer la condición corporal del ganado
+ vacuno a medida que se obtienen imágenes de este en tiempo real y en el
+ contexto de labores realizadas en una manga, sin requerir de conexión a
+ Internet.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1723405768
+Diseño y desarrollo de un componente servidor encargado de la gestión de
+ tareas que pueden ser de etiquetado o clasificación automática diferenciando
+ la app cliente de la cual provenga una petición.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723393925
+Para los objetivos que se relacionan con el desarrollo móvil se adoptará
+ como tecnología el framework Flutter por varias razones entre las que se
+ encuentran la amplia disponibilidad de librerías y documentación, la posibilida
+d de generar aplicaciones multiplataforma -aunque el desarrollo quedará
+ instanciado para la plataforma Android- y la experiencia previa en el uso
+ del framework por parte de los directores del proyecto.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1723389947
+Contexto 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723389940
+El proyecto se enmarca en la aplicación de Tecnologías de la Información
+ y la Comunicación (TICs) en el sector agropecuario, abordando la necesidad
+ de evaluar con precisión la nutrición del rodeo lechero a través del BCS.
+ Este proceso se realiza tradicionalmente en un lugar llamado "manga", donde
+ cada vaca es inspeccionada visualmente por un profesional veterinario,
+ denominado "Calificador", quien asigna un score basado en su experiencia.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1723389982
+Desafíos Actuales 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723389940
+Uno de los principales desafíos es la escasez de calificadores expertos,
+ lo que a menudo lleva a que las evaluaciones no se realicen o, cuando se
+ llevan a cabo, se tornen propensas a errores debido a la alta carga de
+ trabajo, especialmente en rodeos grandes.
+ Además, la precisión de la evaluación puede variar según el estado del
+ calificador, lo que introduce un margen de error adicional.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1723389992
+Solución Propuesta
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1723389940
+La aplicación móvil abordará estos desafíos mediante las siguientes funcionalida
+des:
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1723392283
+Predicción del BCS mediante IA: Utilizando un modelo de red neuronal entrenado
+ con imágenes de vacas, la aplicación podrá clasificar automáticamente el
+ BCS de cada animal con un score similar al que otorgaría un calificador
+ humano.
+ Este modelo ya ha sido desarrollado y entrenado en trabajos previos para
+ vacas de , pero requiere un proceso continuo de reentrenamiento para mejorar
+ su precisión y adaptabilidad.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1723405943
+Reentrenamiento automático del modelo: La aplicación permitirá almacenar
+ las calificaciones manuales realizadas por expertos, creando una base de
+ datos de referencia que se utilizará para reentrenar el modelo de red neuronal.
+ De este modo, cada nueva evaluación contribuirá a mejorar la precisión
+ del algoritmo, permitiendo su adaptación a distintas condiciones y característi
+cas del ganado.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1723405940
+Facilitación de uso por veterinarios: La herramienta será accesible y fácil
+ de usar por cualquier veterinario, incluso aquellos que no sean calificadores
+ expertos.
+ Esto no solo democratizará el uso de la tecnología, sino que también garantizar
+á que las evaluaciones del BCS puedan realizarse con mayor frecuencia y
+ precisión, sin depender exclusivamente de la disponibilidad de un calificador.
+\end_layout
+
+\begin_layout Subsection*
+
+\change_inserted -1783815582 1723390002
+Beneficios Esperados 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1723393581
+Automatización y Precisión: Al automatizar la predicción del BCS, se reducirá
+ la dependencia de calificadores humanos y se minimizarán los errores derivados
+ del cansancio o la subjetividad.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1723405980
+Mejora Continua: La posibilidad de reentrenar el modelo con nuevas evaluaciones
+ permitirá una mejora continua del algoritmo, adaptándose mejor a las variacione
+s individuales del ganado y las condiciones específicas de cada rodeo.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1723389940
+Accesibilidad y Eficiencia: Veterinarios no especializados podrán realizar
+ evaluaciones precisas del BCS, optimizando el tiempo y los recursos invertidos
+ en el manejo nutricional del rodeo.
+ Esta aplicación móvil no solo optimizará la gestión nutricional en el sector
+ agropecuario, sino que también contribuirá a la evolución de las prácticas
+ tradicionales hacia un enfoque más tecnológico y eficiente.
+\end_layout
+
+\end_body
+\end_document

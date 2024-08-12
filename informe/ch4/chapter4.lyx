@@ -73,6 +73,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -1783815582 "Cristian"
 \author -997162125 "mhirsch"
 \end_header
 
@@ -297,7 +298,11 @@ El componente Image Listener es el encargado de leer cada job y enviar un
  job a la cola de calificadores para que los expertos puedan realizar la
  calificación de cada vaca y otro se envía a través de websocket para que
  los observadores puedan observar las imágenes y la aplicación móvil pueda
- predecir la CC en backgroud.
+ predecir la CC en backgrou
+\change_inserted -1783815582 1702329878
+n
+\change_unchanged
+d.
 \end_layout
 
 \begin_layout Standard

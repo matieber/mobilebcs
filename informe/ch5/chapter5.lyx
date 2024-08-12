@@ -73,6 +73,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -1783815582 "Cristian"
 \author -997162125 "mhirsch"
 \end_header
 
@@ -125,8 +126,14 @@ En futuras versiones del server va a ser posible que los calificadores compartan
  Otra posibilidad para futuras versiones es que la sesión pueda configurase
  para que los usuarios calificadores se repartan las caravanas a calificar.
  Para lograr esto va a ser necesario que la sesión de calificación tenga
- un tipo de calificación identificando ueden repartirse entre calificadores
- o que todos los calificadores puedan calificar todas las vacas.
+ un tipo de calificación identificando 
+\change_inserted -1783815582 1702329909
+pu
+\change_deleted -1783815582 1702329908
+u
+\change_unchanged
+eden repartirse entre calificadores o que todos los calificadores puedan
+ calificar todas las vacas.
 \end_layout
 
 \begin_layout Section

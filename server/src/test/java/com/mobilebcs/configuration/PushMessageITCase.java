@@ -31,9 +31,8 @@ import org.testcontainers.shaded.org.apache.commons.lang.RandomStringUtils;
 @ContextConfiguration(classes = {JmsProperties.class, JmsAutoConfiguration.class})
 @TestPropertySource(properties = {"activemq.username=admin",
         "activemq.password=admin",
-        "activemq.brokerUrl=tcp://localhost:61616",
+        "activemq.brokerUrl=tcp://192.168.0.215:61616",
         "activemq.receive-timeout=10000","images.queue.name=IMAGE_QUEUE"})
-@Disabled
 public class PushMessageITCase {
     private RestCaller restCaller;
 

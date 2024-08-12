@@ -1,1 +1,125 @@
 (2023) Design, Deployment, and Validation of a Low-Cost IoT Platform based on LoRa for Precision Dairy Farming
+
+https://www.mdpi.com/2079-9292/11/17/2702
+	puede servir como introducion
+	preenta muchos ytrabajos relacionados en https://www.mdpi.com/2079-9292/11/17/2702
+
+https://www.mdpi.com/2624-862X/4/1/1
+	creo que puede ser muy util (mirar en detalle)
+
+
+
+https://www.mdpi.com/2076-2615/13/5/780
+	puede servir para introduiccion
+	habla d e que es el bcs boy condition score
+	presenta mas trabqajos relacionados
+
+
+https://www.ijabe.org/index.php/ijabe/article/view/5655
+	ver, creo que puede ser útil
+
+https://www.sciencedirect.com/science/article/abs/pii/S1570870519306043
+	puede ser útil pero no tengo accesdo
+
+bcs
+
+	https://ieeexplore.ieee.org/abstract/document/9272284
+
+		aplicacion movil pcon foto de la parter de atras de la vaca para detectar el bcs. el objetivo es agruipar as las vacas sefgun el peso para saber                               cuanto debe comer cadas una 
+			animals should be grouped according to their levels in dairy cattle farms.
+
+			 In dairy cattle farms, it is necessary to group the animals according to their body condition score (BCS) and to care and feed the animals at certain times. 
+
+		 	Failure to identify these animals at the right time increases the expenses of the dairy cattle enterprises due to disease treatments, losses in milk production and decreased fertility rates. In order to eliminate these problems, the animals are inspected regularly by experts and a scoring is made. This scoring system, involves visual inspection of each animal and is called body condition score (BCS).
+
+		 	. They proposed to separate such cows in the dry period from the milking herd and to feed them with an adequate but not excessive protein, mineral and vitamin additive and a low energy ration [6].
+
+		 	obile software was developed for real-time tests in the enterprise environment. The trained CNN was integrated into the software and a user-friendly design was realized
+
+		 	agruparlas puede ser util. si no tenes identificacion como nuestra app.
+		 	no tiene historial
+
+
+
+
+	https://www.sciencedirect.com/science/article/abs/pii/S0168169923000546 (tampoco lo puedo ver)
+
+	https://www.sciencedirect.com/science/article/abs/pii/S0168169921003306 (no lo puedo ver)
+
+https://www.mdpi.com/2076-3417/12/14/7316
+
+		Section 2 covers the overview and description of emerging technologies; Section 3 covers the animal health monitoring; Section 4 covers the animal location tracking and safety of animals; Section 5 covers the milk monitoring and supply chain; Section 6 covers the feed monitoring of the dairy cattle; Section 7 covers the discussion and recommendations.
+
+		section 2 Overview of Emerging Technologies
+
+			puede ser util para armar una secciond e tecnlogia
+
+		section 3 animal health monitoring
+			The identification of a specific animal within a herd is a critical activity since it optimizes better health outcomes, especially in large-scale dairy cattle.
+
+
+			Physical Health
+
+				Wearable sensors aid farmers in detecting illness early and preventing animal deaths. Sensors, AI, and ML are used to continuously monitor important animal health aspects 
+
+			Mental Health Monitoring
+
+				Sensors, facial expression analysis, sound analysis, and multimodal integrated technology techniques are discussed as tools for monitoring farm animal emotions.
+
+				Visual sensors (cameras) and biosensors are important components of the system to automate farm animal monitoring
+
+			architecture
+
+
+				https://www.mdpi.com/applsci/applsci-12-07316/article_deploy/html/images/applsci-12-07316-g004.png (Figure 4)
+				Figure 4 illustrates an architecture that is capable of monitoring the physical and mental health parameters of the dairy cattle with sensor mote and vision mote. The sensor mote attached to the body of the dairy cattle provides information related to body temperature, position (lying, standing), and heart rate. The sensor for muscle strength and behavior analysis can only be used during critical conditions and rare conditions. All the sensors are interfaced with the controller of the sensor mote. In this architecture, a long-range radio module is preferred as it is the communication protocol that is capable of transmitting to long-range up to 10 km with low power consumption. Every individual sensor mote of dairy cattle is identified with an ID provided in the controller through programming. Based upon ID, the edge gateway identifies the identity of the sensor mote and processes the data. An edge gateway is powered with edge computing and a pre-trained ML model, where it analyzes the received data and provides insights from it. In case, if it identifies that the particular dairy cattle are unwell, then it immediately transmits the information to the farmer/user on the cloud server. The vision mote is placed inside the cattle shelter, before the cattle and the visuals captured are transmitted to the edge gateway for analyzing the physical and mental behavior of the cattle. The computing of the data is processed at the edge gateway, and it sends the insights or data related to the condition of dairy cattle on a cloud server. To enhance the computing power of the edge gateway, it is powered with a co-processor and is charged with a dual power supply. Transfer learning and domain adaption approaches can be employed in collaboration with deep neural networks at the edge gateway to improve cross-domain image recognition generalisation [60,61]. Furthermore, transfer learning ensures that deep-learned features become more domain-invariant when carrying discriminative representations for cross-domain visual recognition. Edge gateway also enhances the latency and provides insights in real-time within a minimum duration.
+
+		section 4: Animal Tracking and Safety
+
+			Animal Location Tracking
+
+ 			https://www.mdpi.com/applsci/applsci-12-07316/article_deploy/html/images/applsci-12-07316-g005-550.jpg figure 5
+
+ 			A LoRaWAN GPS tracker [71] interfaced to the cow neck, is capable of providing the GPS location and motion of a cow. This tracker comprises of a low power GPS module and 9-axis accelerometer, and these two components are interfaced to the STM32L072 MCU along with LoRa module and 1000 ma Li-on battery. The ID provided in the GPS tracker assists the drone to categorize the identification of particular dairy cattle in the grazing field. The drone is equipped with a LoRa module that allows it to communicate with cattle for knowing the location and tracking during emergency state. In addition to this, the LoRaWAN GPS tracker communicates the location and motion information of dairy cattle to the farmer/user upon request from the cloud server through the gateway. The gateway is linked to LoRa and Wi-Fi in order to transmit and receive sensor data via LoRa and the internet. The cloud server provides feasibility to the farmer/user to visualize position and motion of each dairy cattle and it enables to realize the digitalization of the animal tracking. Moreover, the geo-fencing can be added to this system, as it also triggers the events if any dairy cattle move away from the fencing of the premises. Geo-fencing relies on GPS, Wi-Fi, RFID, and cellular data, and it is achievable with the existing system because GPS is available in the cow neck.
+
+
+ 		Vision Inspired Cattle Shelter for the Safety of Animals
+
+
+ 			https://www.mdpi.com/applsci/applsci-12-07316/article_deploy/html/images/applsci-12-07316-g006-550.jpg Figure 6
+			The architecture presented in Figure 6, comprises of an edge powered vision mote, and this vision mote is installed on the roof top of the cattle shelter to ensure the safety of the cattle. The edge powered vision mote is fed with a pre-trained ML model, which aids the vision mote in precisely classifying the enraged animals and suspicious person. If the vision mote detects a ferocious animal or a suspicious person, it quickly sends an alert to the owner of the cow shelter via LoRa-based gateway.
+			The owner is able to receive the alerts on the Alert based GUI unit and smartphone through the internet. Edge computing-based vision mote is the primary node that monitors and identifies the furious animals and suspicious person through camera visuals. The computing unit interfaced with ML model and co-processor analyzes the real-time visuals provided by the camera module to identify the suspicious and furious activities. The LoRa module assists to transmit the alerts to the owner. The solar power supply is preferred as the node is placed in the outdoor environment. A solar based power supply is provided to the mote. Real-time suspicious activities near the cattle shelter are informed to the owner in short interval of time. Edges computing in the vision mote enables the identification of the attack on the cattle at the edge device.
+
+
+ 	section 5:  Milk Monitoring and Supply Chain		
+
+ 			 Live monitoring of the milk supply and pickup events will also provide farmers with milk and pickup alerts, allowing them to cope with inappropriate milk chilling and pickup difficulties such as trucks arriving late, the driver forgetting to wash the vat, etc. This data will also help suppliers forecast their production
+
+ 			 https://www.mdpi.com/applsci/applsci-12-07316/article_deploy/html/images/applsci-12-07316-g007-550.jpg (Figure 7)
+ 			 A sensing system is utilized for checking the milk quantity, and a weight sensor is used for the measurement of weight of the milk vessel. In addition to this, an RFID reader interfaced to the milk monitoring mote recognizes the identification of the milk vessel through the RFID tag attached to it. This framework assists to establish communication when ‘n’ number of milk monitoring mote are deployed in dairy farm in a scalable manner. To connect ‘n’ number of the milk monitoring mote to the blockchain, first it needs to connect to the cloud server. To connect to the cloud server, it should establish communication with a gateway, so the LoRa module embedded in the milk monitoring mote empowers it to connect to the gateway. The LoRa module in the gateway serves as a receiver unit, and the Wi-Fi module allows it to connect to the internet and log data to a cloud server. Here the cloud server is interfaced to the blockchain web3.js interface, and this interface is utilized to connect the cloud server and blockchain locally or remotely through HTTP, IPC or WebSocket. Blockchain enables the provision of real-time data of milk with transparency and security. Moreover, the trust and collaboration with different business entities will be enhanced further for digitalized real-time information.
+
+
+ 	section 6: feed monitoring
+
+
+ 			https://www.mdpi.com/applsci/applsci-12-07316/article_deploy/html/images/applsci-12-07316-g008-550.jpg figure 8
+
+ 			The architecture illustrated in Figure 8 empowers the implementation of the edge device with robots for planning a healthy diet and feeding the cattle with respect to the health conditions. The edge mote is placed in the position of the cow where the image captured by the camera module is analyzed by the pre-trained model embedded in it. Further, the results of analytics are communicated to the robots in the premise of dairy cattle through LoRa. Based up on received health information, the robots prepare the food to the dairy cattle. This food is placed in the chamber of mobile robot, that carry the food to the particular cattle position. Mobile robot identifies the ID of the particular cattle that is provided during firmware development in both mobile robot and edge mote. The implementation of robots also ensures the health environment to the cattle, as it is difficult for the cattle, if the farmer/user are unhealthy. The co-processor in the edge mote provides the computing power for analyzing the data with the ML model. Moreover, the information is logged on the digital platform i.e., cloud server through gateway. The integration of robots, ML, IoT and edge devices has facilitated the implementation of intelligent systems to ensure a healthy diet for dairy cows.
+
+
+ 	section 7: In dairy cattle, robots play a significant and intelligent role in executing tasks intelligently and precisely [92]. In small dairy cattle, mobile robots can be deployed to study the behavior and eating patterns of the cattle precisely.
+
+
+ 	relacionados:
+
+ 		https://www.mdpi.com/2076-3417/11/22/10665 (R1) saltear por el momento. puede no ser util
+ 		https://www.sciencedirect.com/science/article/abs/pii/S221128552031140X (R2) no tengo acceso
+ 		https://www.sciencedirect.com/science/article/abs/pii/S0956566320309313 (R3) no tyeng acceso
+
+
+
+
+
+
+
+

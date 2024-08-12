@@ -1,0 +1,147 @@
+An IoT service-oriented system for agriculture monitoring
+
+	Infraestructura
+		¿Donde esta la base de datos?¿En la nube? si
+		¿Como se comunican los drones y los controladores de riego?¿El middware coordinarodr de red se encarga de esta comunicacion?¿Este se encarga de la comunicacion con los servicios de la nube? resuelto
+	Acceso a internet
+		el telefono movila accede a un sofware que esta en la nube y todos los datos tambien ahi? si
+		Los datos de loss sensores dice que pertenecen a la nube, por lo tanto estos se transfieren a la nube y se amancenan ahi? si todo se hace en la nube salvo la recoleccion de datos e recibir en que momento se activa el controlador de riego mediante el coordinador de red? si
+
+	campos grandes
+		Trata de solucionar la escalabilidad y manejabilidad por la red mesh? si
+
+	transferencia interna de datos:
+		Diseño de un administrador de sistema de comunicación inteligente de IoT.  como se realiza? medienta la red mesh? la red mesh para las camaras y la red lora para comunicar el resto. solucionado
+		que son lo scanales?
+
+	necesidad de intervension humana:
+		pueden ver reportes? si
+
+
+Controladores de riego: sistema de riego inteligente de IoT basado en una red de mesh que opera con la especificación LoRa WAN, utilizando el nuevo sensor de mapeo aéreo incluido en los AR Drones con cámaras HD para monitorear un área destinada al cultivo de cosechas. El video capturado se utiliza para controlar el sistema de riego y el bloqueo de los rociadores.
+
+Network middleware:  Existe un cordinador de Network middleware que implementa LoRa, el cual crea uan transmicion dinamica basada en rutas multi hop entre el punto de acceso del coordinador y varios controladores de irrigacion. 
+
+cloud:
+	MySql: carga información del estado de bateria, intensidad de señal y id de dispositivos como asi tambien los datos de los sensores.
+	Rule engine: encargardo de tomar decisiones y generar notificaciones teniendo en cuenta los datos previos de los sensores y el estado del analisis de los controladores para poder ejecutar una regla.
+aplicación movil:
+	La aplicacion visual del usuario es usada para interactuar y ejecutar acciones en el sistema como abrir una valvula hidraulica o mostrar datos respecto a la temperatura acumulada en grados-día de un cultivo específico. La aplicación esta conectada a los servicios de la nube a traves de internet.
+
+
+
+
+
+
+   * sistema de riego inteligente de IoT basado en una red de mesh, utilizando el nuevo sensor de mapeo aéreo incluido en los AR Drones con cámaras HD para monitorear un área destinada al cultivo de cosechas. El video capturado se utiliza para controlar el sistema de riego y el bloqueo de los rociadores.
+	* La propuesta es basada en un read WSN conectado a controladores de riego inteligente IoT que utiliza snesores de mapeo aereo incluido en Drones AR con camaras HD.
+	* Los controladores de riego consiste en una red mesh que opera con la especificación LoRa WAN.
+	* Existe un cordinador de Network middleware que implementa LoRa, el cual crea uan transmicion dinamica basada en rutas multi hop entre el punto de acceso del coordinador y varios controladores de irrigacion. 
+	* Las entradas de los sensores también se pueden utilizar para recopilar datos ambientales de las estaciones meteorológicas.
+	* Las sondas sensoras recopilan datos sobre la humedad del suelo y la funcionalidad del sistema, como sensores de presión y flujo.
+	* El network middleware tiene el rol de crear la mejor ruta para comunicar lso dispositivos. El sistema también carga información esencial en la base de datos, como el estado de la batería, la intensidad de la señal y el ID del dispositivo.
+
+	* Todos los datos de sonsores pertenecen al serivcio cloud. almacenados en una base de datos MySql.
+	* Un rule engine basado esta a cargode de tomar decisiones y generar notificaciones teniendo en cuenta los datos previous de los sensores y el estado del analisis de los controlladores para poder ejeucutar una regla. 
+	* La aplicacion visual del usuario es usada para interactuar y ejecutar acciones en el sistema como abrir una valvula hidraulica o mostrar datos respecto a la temperatura acumulada en grados-día de un cultivo específico. La aplicación esta conectada a los servicios de la nube a traves de internet.
+
+
+
+	Usa Drools Guvnor que es un Business rules manager. ¿Es inteligencia arficial?
+	Propones el analisis de las imagenes capturales por los sensores aeros que junto a los sensores del suelo y datos del ambienten puedan tomarse decisiones.
+
+Develop a video monitoring system for dairy estrus detection at night
+
+	consumo de energia
+		dice algo?
+	infraestructura:
+		solo habla de camara y computadora. algo mas?
+	acceso a internet:
+		dice algo?
+	analisis de imagenes es IA? se identifica mediante reglas
+	costos:
+		dice algo mas?
+	transferencia de datos:
+		dice algo de la comunicacion de la camara al servidor?
+
+
+Design, Deployment, and Validation of a Low-Cost
+IoT Platform based on LoRa for Precision Dairy
+Farming
+
+	objetivo
+		agregar uno. listo
+	propueta
+		que es LoRa-> se agrego un seccion en lyx. se agrego en infraestructura. listo
+	Infraestructura. listo, se agrego seccion de flujo
+		donde se envian los datos recopilados? hay un server? si hay servidor. se explica en transferencia de datos. explicar mejor infraestructura
+	acceso a internet
+		explicar porque no tiene acceso a internet
+	inteligencia artificial
+		dice algo de como se define si una vaca esta en celo?
+	costos:
+		dice sobre red agricola. explicar mejor este parrafo
+	transferencia ded atos:
+		explicar mejor lo de los canales
+		explicar lo de espectro extendido y colision
+		explicar mejor la ultima oracion
+	interversion humana:
+		se explica algo?
+	teconologia molesta a las vacas:
+	cambio de rutina de las vacas
+		algo?
+	identificacion de la vaca:
+		dice algo? puede ser el collar no?	
+		se puede uar para detectar robo?
+
+
+
+
+
+
+
+Cada vaca lechera tiene un collar se convierte en un nodo final de la red LoRa. 
+Cada uno caputra datos de movimientos a traves de un giroscopio y acelerómetro, datos de temperatura y humedada, datatos de frecuencia caridaca, monitorizando la presencia del animal dentro de un perímetro predeterminado y monitorizando la presencia de un collar alrededor del cuello del animal.
+
+Se desarrolló un estuche impreso en 3D para proteger el hardware WSN de las condiciones climáticas y la aplicación del rebaño lechero. El estuche está sujeto al collar, que se fija al cuello de cada vaca lechera del rebaño.
+
+El nodo final desarrollado es responsable de ensamblar y transmitir el paquete de datos a través de la red LoRa. Los paquetes de datos transmitidos por el nodo final son recibidos por la puerta de enlace LoRa, cuya función principal es recibir datos de los sensores y enviarlos al servidor.
+
+Las aplicaciones WSN e IoT utilizan múltiples dispositivos para recopilar datos al mismo tiempo. Además, algunos escenarios de producción lechera pueden requerir soluciones con comunicación de largo alcance. En este contexto, LoRa juega un papel fundamental al permitir estas aplicaciones. LoRa utiliza comunicación de espectro extendido y tiene una menor probabilidad de colisión e interferencia en comparación con tecnologías similares.
+
+
+El sistema TTN es un ecosistema colaborativo global de Internet de las cosas que crea redes, dispositivos y soluciones utilizando LoRaWAN. Ofrece varias interfaces de integración para desarrollar aplicaciones y servicios de IoT en la nube, como Amazon Web Services: AWS IoT, Azure IoT y el protocolo Message Queuing Telemetry Transport (MQTT). TTN recibe paquetes LoRa desde la puerta de enlace y pone los datos de los nodos finales a disposición de la interfaz de la aplicación en notación de objetos JavaScript (JSON). Los datos se transmiten desde el sistema TTN al siguiente paso a través del protocolo MQTT.
+
+La etapa del mensaje final está en NodeRED, que es una herramienta de programación para conectar dispositivos de hardware, interfaces de programación de aplicaciones (API) y servicios en línea.
+
+El NodeRED se utiliza en una placa de desarrollo Raspberry Pi 3, donde se realiza todo el procesamiento de los datos recibidos. En este escenario, NodeRED tiene cuatro funciones principales: (I) Recibir datos del sistema TTN a través de la interfaz MQTT, (II) Almacenar los datos recibidos a través de la Base de Datos, (III) Realizar el procesamiento de datos y (IV) Presentación de los resultados en Panel.
+
+Para aumentar la flexibilidad a la hora de presentar los resultados, se utiliza el broker MQTT público gratuito de la empresa HiveMQ. Un broker MQTT, que es el corazón del protocolo de publicación/suscripción MQTT, es un servidor que recibe todos los mensajes de los clientes MQTT y luego enruta los mensajes a los clientes suscriptores apropiados. Por lo tanto, cualquier aplicación WEB móvil o de escritorio puede acceder a los resultados del procesamiento disponibles en el broker.
+
+La aplicación desarrollada en NodeRED envía los datos en paralelo para ser presentados en un deshboard local y los publica en el broker HiveMQ en topics específicos. Cualquier aplicación remota que quiera recibir los datos y presentarlos en un dashboard  puede suscribirse al tema requerido.
+
+
+
+
+
+
+
+antes en An IoT service-oriented system for agriculture monitoring
+
+	infraestructura
+
+
+		* La propuesta es basada en un read WSN conectado a controladores de riego inteligente IoT que utiliza snesores de mapeo aereo incluido en Drones AR con camaras HD.
+        * Los controladores de riego consiste en una red mesh que opera con la especificación LoRa WAN.
+        * Existe un cordinador de Network middleware que implementa LoRa, el cual crea uan transmicion dinamica basada en rutas multi hop entre el punto de acceso del coordinador y varios controladores de irrigacion. 
+        * Las entradas de los sensores también se pueden utilizar para recopilar datos ambientales de las estaciones meteorológicas.
+        * Las sondas sensoras recopilan datos sobre la humedad del suelo y la funcionalidad del sistema, como sensores de presión y flujo.
+        * El network middleware tiene el rol de crear la mejor ruta para comunicar lso dispositivos. El sistema también carga información esencial en la base de datos, como el estado de la batería, la intensidad de la señal y el ID del dispositivo.
+
+
+antes en Design, Deployment, and Validation of a Low-Cost IoT Platform based on LoRa for Precision Dairy Farming
+
+
+	infraestructura
+
+        Wireless Sensor network integrado con una base de datos MongDB y tecnica de comunicacion de largo alcance. Los resultados se integran con un gateway LoRa. LoRa es una tecnología de radiofrecuencia que ofrece comunicación de largo alcance, bajo consumo de energía y flexibilidad.. Se desarrolló una carcasa impresa en 3D para proteger el hardware de la WSN de las condiciones climáticas y la aplicación en el hato lechero.  Cada vaca lechera con collar se convierte en un nodo final de la red LoRa, que envía los datos recopilados periódicamente, con tiempo de envío programable para satisfacer diferentes necesidades según la aplicación. El nodo final utiliza un microcontrolador ESP32, que ofrece una plataforma de desarrollo ideal para sistemas IoT, ofreciendo conectividad inalámbrica a través de interfaces LoRa, Wi-Fi y Bluetooth.
