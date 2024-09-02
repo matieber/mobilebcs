@@ -8,4 +8,5 @@
 build/*
 calificator/local.properties
 informe/*/*.lyx~
+**.lyx~
 informe/*/*.lyx#

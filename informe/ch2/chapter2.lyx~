@@ -1,16 +1,16 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
 \textclass book
 \use_default_options true
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language spanish-mexico
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -18,7 +18,9 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -52,7 +54,9 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -68,43 +72,82 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tablestyle default
 \tracking_changes true
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \author -1783815582 "Cristian"
+\author -997162125 "mhirsch"
 \end_header
 
 \begin_body
 
 \begin_layout Chapter
-
-\change_deleted -1783815582 1720564253
- 
-\change_unchanged
 Trabajos relacionados
-\change_inserted -1783815582 1723925569
-
 \end_layout
 
 \begin_layout Section
-
-\change_inserted -1783815582 1723998802
 Importancia y avances de la IA para calcular BCS
 \end_layout
 
 \begin_layout Standard
+El procesamiento de imágenes es 
+\change_deleted -997162125 1724418626
+el
+\change_inserted -997162125 1724418626
+un
+\change_unchanged
+ paso clave para 
+\change_deleted -997162125 1724418662
+entrenar y probar conjuntos de datos para
+\change_inserted -997162125 1724418683
 
-\change_inserted -1783815582 1723999142
-El procesamiento de imágenes es el paso clave para entrenar y probar conjuntos
- de datos para extraer las características disponibles que se utilizarán
- para evaluar automáticamente el BCS.
- Establecer un modelo predictivo de BCS con extracción manual tradicional
- de características es menos eficiente y preciso, principalmente debido
- al pequeño número de muestras (relacionado con la naturaleza que consume
- mucho tiempo de la evaluación manual) y al bajo número de puntos de característ
-icas, lo que resulta en un ajuste deficiente 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724418798
+borro esto porque resulta algo confuso.
+ Puede haber procesamiento de imágenes que se haga de forma tradicional,
+ es decir,
+ sin requerir de un modelo de IA entremado con datos.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ extraer
+\change_deleted -997162125 1724418817
+ las
+\change_unchanged
+ características 
+\change_deleted -997162125 1724418860
+disponibles que se utilizarán para evaluar automáticamente
+\change_unchanged
+ 
+\change_inserted -997162125 1724418880
+relevantes para la evaluación d
+\change_unchanged
+el BCS.
+ 
+\change_deleted -997162125 1724418927
+Establecer
+\change_inserted -997162125 1724418928
+Generar
+\change_unchanged
+ un modelo predictivo de BCS con extracción manual tradicional de características es menos eficiente y preciso,
+ principalmente debido al pequeño número de muestras (relacionado con la naturaleza que consume mucho tiempo de la evaluación manual) y al bajo número de puntos de características,
+ lo que resulta en un ajuste deficiente 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "fischer2015rear"
@@ -112,13 +155,38 @@ literal "false"
 
 \end_inset
 
- .
- Para abordar estos desafíos, el aprendizaje profundo basado en redes neuronales
- artificiales ha demostrado ser una herramienta poderosa para la modelización
- predictiva; las técnicas populares utilizadas para analizar imágenes incluyen
- las redes neuronales convolucionales (CNN).
- La estructura de CNN imita una red neuronal biológica y se aplica fácilmente
- a la identificación de imágenes visuales 
+
+\change_deleted -997162125 1724419234
+ 
+\change_inserted -997162125 1724419255
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724419439
+Es necesario mejorar la claridad de esta frase,
+ está confusa.
+ ¿Qué sería una extracción manual tradicional?
+ Yo entiendo por extracción tradicional a aquella que hace uso de operaciones de recorte,
+ filtrado y segmentación de una zona de interés y que puede obtenerse a partir de identificar puntos claves en una silueta.
+ No necesariamente todo eso es realizado de forma manual.
+ Por otro lado,
+ en qué parte entra el número de muestras en un análisis tradicional?
+ Por la frase siguiente,
+ entiendo que lo que se quiere es motivar el uso de deep learning.
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
+ Para abordar estos desafíos,
+ el aprendizaje profundo basado en redes neuronales artificiales ha demostrado ser una herramienta poderosa para la modelización predictiva;
+ las técnicas populares utilizadas para analizar imágenes incluyen las redes neuronales convolucionales (CNN).
+ La estructura de CNN imita una red neuronal biológica y se aplica fácilmente a la identificación de imágenes visuales 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "singh2016machine"
@@ -127,10 +195,9 @@ literal "false"
 \end_inset
 
 .
- En la agricultura ganadera, las CNN se han aplicado ampliamente a la clasificac
-ión e identificación de imágenes en áreas como el reconocimiento de comportamien
-tos animales, la monitorización del estado de salud y la identificación
- de individuos 
+ En la agricultura ganadera,
+ las CNN se han aplicado ampliamente a la clasificación e identificación de imágenes en áreas como el reconocimiento de comportamientos animales,
+ la monitorización del estado de salud y la identificación de individuos 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "kamilaris2018deep"
@@ -138,21 +205,32 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -997162125 1724419777
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724419943
+Falta agregar como último ejemplo el calculo del BCS apuntando al paper de Juan Rodríguez Alvarez
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 .
- 
 \end_layout
 
 \begin_layout Section
-
-\change_inserted -1783815582 1723925263
 Importancia de dew computing
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1723925264
-
-\lang spanish
 Dew Computing 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -169,11 +247,8 @@ literal "false"
 
 \end_inset
 
- nace como un paradigma de computación posterior a Edge/Fog Computing que
- se presenta como una alternativa sustentable para soportar aplicaciones
- IoT.
- Puede operar acoplada o desacopladamente de los servicios de ejecución
- que ofrece el Cloud 
+ nace como un paradigma de computación posterior a Edge/Fog Computing que se presenta como una alternativa sustentable para soportar aplicaciones IoT.
+ Puede operar acoplada o desacopladamente de los servicios de ejecución que ofrece el Cloud 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "gusev2018formal"
@@ -182,14 +257,16 @@ literal "false"
 \end_inset
 
 .
- En el segundo caso, asociado a lo que puede ser una falta de conectividad,
- se explotan recursos presentes en el contexto local al usuario, también
- denominados “on premises resources” dentro de los cuales se encuentran
- dispositivos de usuario como smartphones o single board computers (SBC).
- Las capacidades de cómputo no despreciables que ofrecen hoy en día estos
- dispositivos posibilitan la ejecución de software recurso-intensivo.
- Existen ejemplos donde estos dispositivos consitutyen el principal soporte
- de ejecución de software complejo en ámbitos profesionales 
+ En el segundo caso,
+ asociado a lo que puede ser una falta de conectividad,
+ se explotan recursos presentes en el contexto local al usuario,
+ también denominados “on premises resources” dentro de los cuales se encuentran dispositivos de usuario como smartphones o single board computers (SBC).
+ Las capacidades de cómputo no despreciables que ofrecen hoy en día estos dispositivos posibilitan la ejecución de software recurso-intensivo.
+ Existen ejemplos donde estos dispositivos consitu
+\change_deleted -997162125 1724420532
+t
+\change_unchanged
+yen el principal soporte de ejecución de software complejo en ámbitos profesionales 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "prego2018mobile"
@@ -214,11 +291,9 @@ literal "false"
 \end_inset
 
 .
- Incluso cuando un único de estos dispositivo carezca de los recursos necesarios
- para cumplir con la ejecución de una tarea en el tiempos que se espera,
- aparecen trabajos en la literatura que plantean enfoques de ejecución colaborat
-ivos, donde una tarea se paraleliza y ejecuta en grupos de dispositivos
- 
+ Incluso cuando un único de estos dispositivo carezca de los recursos necesarios para cumplir con la ejecución de una tarea en el tiempos que se espera,
+ aparecen trabajos en la literatura que plantean enfoques de ejecución colaborativos,
+ donde una tarea se paraleliza y ejecuta en grupos de dispositivos 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "hirsch2018augmenting"
@@ -226,12 +301,14 @@ literal "false"
 
 \end_inset
 
- .
- La eficiente utilización de un grupo de dispositivos en un contexto local
- plantea desafíos a nivel plataforma, tal como el estudio de componente
- de planificación de tareas, que es necesario seguir estudiando dada la
- heterogeneidad en términos de eficiencia energética y prestaciones que
- puede encontrarse de los dispositivos de usuario 
+
+\change_deleted -997162125 1724420558
+ 
+\change_unchanged
+.
+ La eficiente utilización de un grupo de dispositivos en un contexto local plantea desafíos a nivel plataforma,
+ tal como el estudio de componente de planificación de tareas,
+ que es necesario seguir estudiando dada la heterogeneidad en términos de eficiencia energética y prestaciones que puede encontrarse de los dispositivos de usuario 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "hirsch2017two"
@@ -248,8 +325,7 @@ literal "false"
 \end_inset
 
 .
- Es una práctica común y aceptada en el estudio de sistemas distribuidos
- la experimentación mediante simulación 
+ Es una práctica común y aceptada en el estudio de sistemas distribuidos la experimentación mediante simulación 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "hirsch2018augmenting"
@@ -274,10 +350,10 @@ literal "false"
 \end_inset
 
 .
- Esto es dada la inherente complejidad de configuración, costos monetarios
- y tiempo que conlleva estudiar estrategias de planificación en sistemas
- distribuidos montados sobre ambientes de ejecución reales.
- En relación a esto, DewSim 
+ Esto es dada la inherente complejidad de configuración,
+ costos monetarios y tiempo que conlleva estudiar estrategias de planificación en sistemas distribuidos montados sobre ambientes de ejecución reales.
+ En relación a esto,
+ DewSim 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "hirsch2020dewsim"
@@ -285,43 +361,50 @@ literal "false"
 
 \end_inset
 
- permite modelar clusters de dispositivos móviles y evaluar estrategias
- de planificación de tareas teniendo en cuenta aspectos que tienen que ver
- con el consumo de energía de las baterías y uso de CPU de los dispositivos.
- Si bien la simulación resulta de suma utilidad para estudiar de forma explorato
-ria nuevas estrategias de planificación de tareas en ambientes Dew, es relevante
- contar con datos extraídos de la ejecución de aplicaciones Dew reales,
- ya se sea para validar los resultados obtenidos mediante simulación como
- para retroalimentar el modelo de entidades que forman parte de DewSim.
+ permite modelar clusters de dispositivos móviles y evaluar estrategias de planificación de tareas teniendo en cuenta aspectos que tienen que ver con el consumo de energía de las baterías y uso de CPU de los dispositivos.
+ Si bien la simulación resulta de suma utilidad para estudiar de forma exploratoria nuevas estrategias de planificación de tareas en ambientes Dew,
+ es relevante contar con datos extraídos de la ejecución de aplicaciones Dew reales,
+ ya se sea para validar los resultados obtenidos mediante simulación como para retroalimentar el modelo de entidades que forman parte de DewSim.
 \end_layout
 
 \begin_layout Section
-
-\change_inserted -1783815582 1724197215
-
-\lang spanish
 Comparaciones
 \end_layout
 
 \begin_layout Standard
+En el campo de la gestión ganadera,
+ varios estudios recientes han abordado la automatización y optimización de procesos clave como la evaluación de la Condición Corporal (BCS) del ganado.
+ Estos trabajos han explorado diversas tecnologías para mejorar la captura de datos,
+ el análisis y la toma de decisiones,
+ incluyendo aplicaciones móviles,
+ inteligencia artificial,
+ y diferentes contextos y modos de ejecución para la toma de datos.
+ A continuación,
+ se presenta un cuadro comparativo que sintetiza estos aspectos en los principales trabajos relacionados
+\change_inserted -997162125 1724452329
+ 
+\begin_inset Note Note
+status collapsed
 
-\change_inserted -1783815582 1724197844
+\begin_layout Plain Layout
 
-\lang spanish
-En el campo de la gestión ganadera, varios estudios recientes han abordado
- la automatización y optimización de procesos clave como la evaluación de
- la Condición Corporal (BCS) del ganado.
- Estos trabajos han explorado diversas tecnologías para mejorar la captura
- de datos, el análisis y la toma de decisiones, incluyendo aplicaciones
- móviles, inteligencia artificial, y diferentes contextos y modos de ejecución
- para la toma de datos.
- A continuación, se presenta un cuadro comparativo que sintetiza estos aspectos
- en los principales trabajos relacionados:
+\change_inserted -997162125 1724452329
+Por el párrafo anterior,
+ da la impresión que lo que se va a discutir en la tabla son trabajos que evaluan BCS.
+ Sin embargo,
+ hay un sólo trabajo en la tabla relacionado directamente con BCS.
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+:
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1723408289
+\change_deleted -997162125 1724436761
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="6">
 <features tabularvalignment="middle">
@@ -336,11 +419,7 @@ En el campo de la gestión ganadera, varios estudios recientes han abordado
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723408353
 Trabajo
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -349,11 +428,7 @@ Trabajo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723408304
 Resumen
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -362,11 +437,7 @@ Resumen
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723408309
 App móvil para visualización o etiquetado
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -375,11 +446,8 @@ App móvil para visualización o etiquetado
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723408314
-Contexto de la toma de datos/ evaluación del modelo (campo abierto, manga)
-\change_unchanged
-
+Contexto de la toma de datos/ evaluación del modelo (campo abierto,
+ manga)
 \end_layout
 
 \end_inset
@@ -388,11 +456,7 @@ Contexto de la toma de datos/ evaluación del modelo (campo abierto, manga)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723408320
 modo de ejecución(edge o cloud)
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -401,11 +465,7 @@ modo de ejecución(edge o cloud)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723408327
 Sensores
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -416,8 +476,6 @@ Sensores
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723408362
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ccevik2020deep"
@@ -426,8 +484,6 @@ literal "false"
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -436,14 +492,9 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723909357
-Se pretende predecir el BCS para agrupar, dar cuidado y alimentar a los
- animales en determinado momento.
- Su objetivo es realizar pruebas en tiempo real y proporcionar un fácil
- acceso a los productores de lácteos con la ayuda del software móvil diseñado.
-\change_unchanged
-
+Se pretende predecir el BCS para agrupar,
+ dar cuidado y alimentar a los animales en determinado momento.
+ Su objetivo es realizar pruebas en tiempo real y proporcionar un fácil acceso a los productores de lácteos con la ayuda del software móvil diseñado.
 \end_layout
 
 \end_inset
@@ -452,13 +503,7 @@ Se pretende predecir el BCS para agrupar, dar cuidado y alimentar a los
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723408714
-Se desarrolló un software para estimar los valores de BCS utilizando imágenes
- en tiempo real en dispositivos móviles Android llevándose a cabo con la
- ayuda de arquitecturas CNN.
-\change_unchanged
-
+Se desarrolló un software para estimar los valores de BCS utilizando imágenes en tiempo real en dispositivos móviles Android llevándose a cabo con la ayuda de arquitecturas CNN.
 \end_layout
 
 \end_inset
@@ -467,14 +512,9 @@ Se desarrolló un software para estimar los valores de BCS utilizando imágenes
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723910285
-Imágenes tomadas por un software y evaluadas por un experto se utilizaron
- para entrenar la arquitectura CNN.
+Imágenes tomadas por un software y evaluadas por un experto se utilizaron para entrenar la arquitectura CNN.
  La red entrenada se transfiero a otro software para probar en tiempo.
  real.
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -483,13 +523,9 @@ Imágenes tomadas por un software y evaluadas por un experto se utilizaron
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723910284
-El software posee el modelo entrenado para realizar la toma de la foto y
- predecir el valor de BCS.
- De esta manera, no necesita acceso a cloud.
-\change_unchanged
-
+El software posee el modelo entrenado para realizar la toma de la foto y predecir el valor de BCS.
+ De esta manera,
+ no necesita acceso a cloud.
 \end_layout
 
 \end_inset
@@ -498,11 +534,7 @@ El software posee el modelo entrenado para realizar la toma de la foto y
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723910944
 No posee sensores
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -513,8 +545,6 @@ No posee sensores
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723910981
 \begin_inset CommandInset citation
 LatexCommand cite
 key "alonso2020intelligent"
@@ -523,8 +553,6 @@ literal "false"
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -533,12 +561,8 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723922466
-Desarrollo de una plataforma diseñada para monitorear, rastrear y optimizar
- las tareas de gestión de explotaciones mixtas de cultivo y ganaderia.
-\change_unchanged
-
+Desarrollo de una plataforma diseñada para monitorear,
+ rastrear y optimizar las tareas de gestión de explotaciones mixtas de cultivo y ganaderia.
 \end_layout
 
 \end_inset
@@ -547,15 +571,14 @@ Desarrollo de una plataforma diseñada para monitorear, rastrear y optimizar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723911459
-La tecnología integra visualización de datos, un sistema de alertas, un
- mapa interactivo de dispositivos IoT y una interfaz para configurar sensores.
- Además, registra y almacena datos biométricos del ganado lechero, mostrando
- su actividad y un historial de fiebre, combinando temperatura, ritmo respirator
-io y frecuencia cardíaca.
-\change_unchanged
-
+La tecnología integra visualización de datos,
+ un sistema de alertas,
+ un mapa interactivo de dispositivos IoT y una interfaz para configurar sensores.
+ Además,
+ registra y almacena datos biométricos del ganado lechero,
+ mostrando su actividad y un historial de fiebre,
+ combinando temperatura,
+ ritmo respiratorio y frecuencia cardíaca.
 \end_layout
 
 \end_inset
@@ -564,14 +587,7 @@ io y frecuencia cardíaca.
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723912675
-Los datos se toman a traves de dispositivos IoT que se encuentran por todo
- el campo y los datos son preprocesados en la capa Edge donde se puede ver
- los datos a traves de la LAN pero las técnicas de IA son aplicadas en el
- cloud.
-\change_unchanged
-
+Los datos se toman a traves de dispositivos IoT que se encuentran por todo el campo y los datos son preprocesados en la capa Edge donde se puede ver los datos a traves de la LAN pero las técnicas de IA son aplicadas en el cloud.
 \end_layout
 
 \end_inset
@@ -580,16 +596,13 @@ Los datos se toman a traves de dispositivos IoT que se encuentran por todo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723912353
-En la capa Edge, los datos de IoT se recopilan, filtran y se eliminan ruidos
- y tramas repetidas.
- Luego, se ofrece información resumida accesible localmente y se envían
- solo datos valiosos a la Nube.
- En la capa Cloud, se recibe la información procesada para su gestión y
- escalabilidad en múltiples granjas lecheras.
-\change_unchanged
-
+En la capa Edge,
+ los datos de IoT se recopilan,
+ filtran y se eliminan ruidos y tramas repetidas.
+ Luego,
+ se ofrece información resumida accesible localmente y se envían solo datos valiosos a la Nube.
+ En la capa Cloud,
+ se recibe la información procesada para su gestión y escalabilidad en múltiples granjas lecheras.
 \end_layout
 
 \end_inset
@@ -598,15 +611,9 @@ En la capa Edge, los datos de IoT se recopilan, filtran y se eliminan ruidos
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723913004
-Entre otros sensores, poseen sensores de granero ambientales que incluyen
- para estimar el indice temperatura-humedad que indica el estrés, sensores
- de gas para detectas gases peligrosos en el granero y sensores biométricos
- y de localización para detectar enfermedades entre otros problemas que
- afectan la salud del ganado y producción.
-\change_unchanged
-
+Entre otros sensores,
+ poseen sensores de granero ambientales que incluyen para estimar el indice temperatura-humedad que indica el estrés,
+ sensores de gas para detectas gases peligrosos en el granero y sensores biométricos y de localización para detectar enfermedades entre otros problemas que afectan la salud del ganado y producción.
 \end_layout
 
 \end_inset
@@ -617,8 +624,6 @@ Entre otros sensores, poseen sensores de granero ambientales que incluyen
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723922984
 \begin_inset CommandInset citation
 LatexCommand cite
 key "piedadedesign"
@@ -627,8 +632,6 @@ literal "false"
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -637,17 +640,12 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723923051
-Propone una red de sensores inalámbricos (WSN) con nodos LoRa, MongoDB y
- comunicaciones de largo alcance para monitorear la salud del ganado en
- hatos lecheros.
+Propone una red de sensores inalámbricos (WSN) con nodos LoRa,
+ MongoDB y comunicaciones de largo alcance para monitorear la salud del ganado en hatos lecheros.
  Los nodos LoRa recopilan datos y los transmiten a través de un LoRa Gateway,
  validando la viabilidad del sistema.
- Este enfoque permite generar alertas sobre la salud del ganado, detectar
- estro y prevenir robos.
-\change_unchanged
-
+ Este enfoque permite generar alertas sobre la salud del ganado,
+ detectar estro y prevenir robos.
 \end_layout
 
 \end_inset
@@ -656,15 +654,10 @@ Propone una red de sensores inalámbricos (WSN) con nodos LoRa, MongoDB y
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723923160
-El sistema convierte los datos recibidos por el gateway a JSON y los almacena
- en MongoDB.
- Luego, los datos procesados se publican a través de un broker MQTT, permitiendo
- que aplicaciones móviles accedan y presenten los resultados en un dashboard
- externo.
-\change_unchanged
-
+El sistema convierte los datos recibidos por el gateway a JSON y los almacena en MongoDB.
+ Luego,
+ los datos procesados se publican a través de un broker MQTT,
+ permitiendo que aplicaciones móviles accedan y presenten los resultados en un dashboard externo.
 \end_layout
 
 \end_inset
@@ -673,16 +666,13 @@ El sistema convierte los datos recibidos por el gateway a JSON y los almacena
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723923388
-En un entorno de producción lechera, se recopilan datos de cada vaca mediante
- collares equipados con nodos LoRa, que capturan movimiento, temperatura,
+En un entorno de producción lechera,
+ se recopilan datos de cada vaca mediante collares equipados con nodos LoRa,
+ que capturan movimiento,
+ temperatura,
  humedad y frecuencia cardíaca.
- Estos datos se transmiten a través de la red LoRa a una puerta de enlace
- y se procesan en una Raspberry Pi 3 con NodeRED, donde se almacenan en
- una base de datos para su análisis y visualización en un dashboard.
-\change_unchanged
-
+ Estos datos se transmiten a través de la red LoRa a una puerta de enlace y se procesan en una Raspberry Pi 3 con NodeRED,
+ donde se almacenan en una base de datos para su análisis y visualización en un dashboard.
 \end_layout
 
 \end_inset
@@ -691,16 +681,13 @@ En un entorno de producción lechera, se recopilan datos de cada vaca mediante
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723923600
-La capa Edge se encarga de recibir, procesar y almacenar localmente los
- datos de los nodos finales utilizando NodeRED y MongoDB, permitiendo la
- visualización en un dashboard sin necesidad de internet.
- La capa Cloud, cuando está disponible, permite la publicación de los datos
- procesados en aplicaciones web o dashboards remotos, ampliando las opciones
- de supervisión y gestión.
-\change_unchanged
-
+La capa Edge se encarga de recibir,
+ procesar y almacenar localmente los datos de los nodos finales utilizando NodeRED y MongoDB,
+ permitiendo la visualización en un dashboard sin necesidad de internet.
+ La capa Cloud,
+ cuando está disponible,
+ permite la publicación de los datos procesados en aplicaciones web o dashboards remotos,
+ ampliando las opciones de supervisión y gestión.
 \end_layout
 
 \end_inset
@@ -709,14 +696,10 @@ La capa Edge se encarga de recibir, procesar y almacenar localmente los
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723923697
-Las vacas llevan un collar para registrar movimiento, temperatura, humedad
- y frecuencia cardíaca.
- Además monitorea la presencia dentro de un perímetro predeterminado y verifica
- que el collar siga colgado.
-\change_unchanged
-
+Las vacas llevan un collar para registrar movimiento,
+ temperatura,
+ humedad y frecuencia cardíaca.
+ Además monitorea la presencia dentro de un perímetro predeterminado y verifica que el collar siga colgado.
 \end_layout
 
 \end_inset
@@ -727,8 +710,6 @@ Las vacas llevan un collar para registrar movimiento, temperatura, humedad
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723923003
 \begin_inset CommandInset citation
 LatexCommand cite
 key "yang2017develop"
@@ -737,8 +718,6 @@ literal "false"
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -747,14 +726,9 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723924811
-Se desarrolló un sistema de monitoreo de video sin contacto usando cámaras
- infrarrojas para registrar imágenes nocturnas de vacas lecheras.
- El procesamiento de imágenes identifica comportamientos de celo, facilitando
- que los propietarios tomen decisiones sobre la inseminación artificial.
-\change_unchanged
-
+Se desarrolló un sistema de monitoreo de video sin contacto usando cámaras infrarrojas para registrar imágenes nocturnas de vacas lecheras.
+ El procesamiento de imágenes identifica comportamientos de celo,
+ facilitando que los propietarios tomen decisiones sobre la inseminación artificial.
 \end_layout
 
 \end_inset
@@ -763,15 +737,9 @@ Se desarrolló un sistema de monitoreo de video sin contacto usando cámaras
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723924928
-Utilizando análisis de energía dinámica de imágenes y procesamiento de imágenes
- binarias, pueden identificar cambios en la longitud de las vacas durante
- el comportamiento de montaje específico del estro.
- Los eventos que se ajusten a nuestra regla se grabarán como videos y se
- guardarán en la computadora.
-\change_unchanged
-
+Utilizando análisis de energía dinámica de imágenes y procesamiento de imágenes binarias,
+ pueden identificar cambios en la longitud de las vacas durante el comportamiento de montaje específico del estro.
+ Los eventos que se ajusten a nuestra regla se grabarán como videos y se guardarán en la computadora.
 \end_layout
 
 \end_inset
@@ -780,17 +748,10 @@ Utilizando análisis de energía dinámica de imágenes y procesamiento de imág
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723925110
-El prototipo se realizo con una sola cámara pero sugiere utilizar una cámara
- nocturna de ojo de pez a futuro para registrar actividades en un área más
- amplia de la granja lechera, superando la limitación de cobertura de una
- sola cámara.
- Esto evitaría la necesidad de combinar imágenes de múltiples cámaras y
- supera los problemas de los sensores de contacto directo utilizados en
- otras propuestas, que pueden ser perjudiciales para las vacas.
-\change_unchanged
-
+El prototipo se realizo con una sola cámara pero sugiere utilizar una cámara nocturna de ojo de pez a futuro para registrar actividades en un área más amplia de la granja lechera,
+ superando la limitación de cobertura de una sola cámara.
+ Esto evitaría la necesidad de combinar imágenes de múltiples cámaras y supera los problemas de los sensores de contacto directo utilizados en otras propuestas,
+ que pueden ser perjudiciales para las vacas.
 \end_layout
 
 \end_inset
@@ -799,14 +760,10 @@ El prototipo se realizo con una sola cámara pero sugiere utilizar una cámara
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723925200
-Los eventos que se ajusten a la regla establecida se grabarán como videos
- y se guardarán en la computadora.
+Los eventos que se ajusten a la regla establecida se grabarán como videos y se guardarán en la computadora.
  Estos eventos serán evaluados más adelante por los propietarios.
- Por lo tanto, no es necesario acceso a internet.
-\change_unchanged
-
+ Por lo tanto,
+ no es necesario acceso a internet.
 \end_layout
 
 \end_inset
@@ -815,12 +772,7 @@ Los eventos que se ajusten a la regla establecida se grabarán como videos
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1723925213
-Las vacas no poseen sensores en contacto directo con la piel produciéndole
- discomfort.
-\change_unchanged
-
+Las vacas no poseen sensores en contacto directo con la piel produciéndole discomfort.
 \end_layout
 
 \end_inset
@@ -831,19 +783,1024 @@ Las vacas no poseen sensores en contacto directo con la piel produciéndole
 \end_inset
 
 
+\change_inserted -997162125 1724436892
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="6">
+<features booktabs="true" islongtable="true" tabularwidth="100text%" longtabularalignment="center">
+<column alignment="left" valignment="top" width="0pt" varwidth="true">
+<column alignment="left" valignment="top" width="0pt" varwidth="true">
+<column alignment="left" valignment="top" varwidth="true">
+<column alignment="left" valignment="top" width="0pt" varwidth="true">
+<column alignment="left" valignment="top" varwidth="true">
+<column alignment="left" valignment="top" varwidth="true">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Trabajo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Resumen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+App móvil para visualización o etiquetado
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Contexto de la toma de datos/ evaluación del modelo (campo abierto,
+ manga)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+modo de ejecución(edge o cloud)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Sensores
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ccevik2020deep"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Se pretende predecir el BCS para agrupar,
+ dar cuidado y alimentar a los animales en determinado momento.
+ Su objetivo es realizar pruebas en tiempo real y proporcionar un fácil acceso a los productores de lácteos con la ayuda del software móvil diseñado.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Se desarrolló un software para estimar los valores de BCS utilizando imágenes en tiempo real en dispositivos móviles Android llevándose a cabo con la ayuda de arquitecturas CNN.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Imágenes tomadas por un software y evaluadas por un experto se utilizaron para entrenar la arquitectura CNN.
+ La red entrenada se transfiero a otro software para probar en tiempo.
+ real.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+El software posee el modelo entrenado para realizar la toma de la foto y predecir el valor de BCS.
+ De esta manera,
+ no necesita acceso a cloud.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+No posee sensores
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+\begin_inset CommandInset citation
+LatexCommand cite
+key "alonso2020intelligent"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Desarrollo de una plataforma diseñada para monitorear,
+ rastrear y optimizar las tareas de gestión de explotaciones mixtas de cultivo y ganaderia.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+La tecnología integra visualización de datos,
+ un sistema de alertas,
+ un mapa interactivo de dispositivos IoT y una interfaz para configurar sensores.
+ Además,
+ registra y almacena datos biométricos del ganado lechero,
+ mostrando su actividad y un historial de fiebre,
+ combinando temperatura,
+ ritmo respiratorio y frecuencia cardíaca.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Los datos se toman a traves de dispositivos IoT que se encuentran por todo el campo y los datos son preprocesados en la capa Edge donde se puede ver los datos a traves de la LAN pero las técnicas de IA son aplicadas en el cloud.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+En la capa Edge,
+ los datos de IoT se recopilan,
+ filtran y se eliminan ruidos y tramas repetidas.
+ Luego,
+ se ofrece información resumida accesible localmente y se envían solo datos valiosos a la Nube.
+ En la capa Cloud,
+ se recibe la información procesada para su gestión y escalabilidad en múltiples granjas lecheras.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Entre otros sensores,
+ poseen sensores de granero ambientales que incluyen para estimar el indice temperatura-humedad que indica el estrés,
+ sensores de gas para detectas gases peligrosos en el granero y sensores biométricos y de localización para detectar enfermedades entre otros problemas que afectan la salud del ganado y producción.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+\begin_inset CommandInset citation
+LatexCommand cite
+key "piedadedesign"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Propone una red de sensores inalámbricos (WSN) con nodos LoRa,
+ MongoDB y comunicaciones de largo alcance para monitorear la salud del ganado en hatos lecheros.
+ Los nodos LoRa recopilan datos y los transmiten a través de un LoRa Gateway,
+ validando la viabilidad del sistema.
+ Este enfoque permite generar alertas sobre la salud del ganado,
+ detectar estro y prevenir robos.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+El sistema convierte los datos recibidos por el gateway a JSON y los almacena en MongoDB.
+ Luego,
+ los datos procesados se publican a través de un broker MQTT,
+ permitiendo que aplicaciones móviles accedan y presenten los resultados en un dashboard externo.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+En un entorno de producción lechera,
+ se recopilan datos de cada vaca mediante collares equipados con nodos LoRa,
+ que capturan movimiento,
+ temperatura,
+ humedad y frecuencia cardíaca.
+ Estos datos se transmiten a través de la red LoRa a una puerta de enlace y se procesan en una Raspberry Pi 3 con NodeRED,
+ donde se almacenan en una base de datos para su análisis y visualización en un dashboard.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+La capa Edge se encarga de recibir,
+ procesar y almacenar localmente los datos de los nodos finales utilizando NodeRED y MongoDB,
+ permitiendo la visualización en un dashboard sin necesidad de internet.
+ La capa Cloud,
+ cuando está disponible,
+ permite la publicación de los datos procesados en aplicaciones web o dashboards remotos,
+ ampliando las opciones de supervisión y gestión.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Las vacas llevan un collar para registrar movimiento,
+ temperatura,
+ humedad y frecuencia cardíaca.
+ Además monitorea la presencia dentro de un perímetro predeterminado y verifica que el collar siga colgado.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yang2017develop"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Se desarrolló un sistema de monitoreo de video sin contacto usando cámaras infrarrojas para registrar imágenes nocturnas de vacas lecheras.
+ El procesamiento de imágenes identifica comportamientos de celo,
+ facilitando que los propietarios tomen decisiones sobre la inseminación artificial.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724451599
+Utilizando análisis de energía dinámica de imágenes y procesamiento de imágenes binarias,
+ pueden identificar cambios en la longitud de las vacas durante el comportamiento de montaje específico del estro.
+ Los eventos que se ajusten a nuestra regla se grabarán como videos y se guardarán en la computadora.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+El prototipo se realizo con una sola cámara pero sugiere utilizar una cámara nocturna de ojo de pez a futuro para registrar actividades en un área más amplia de la granja lechera,
+ superando la limitación de cobertura de una sola cámara.
+ Esto evitaría la necesidad de combinar imágenes de múltiples cámaras y supera los problemas de los sensores de contacto directo utilizados en otras propuestas,
+ que pueden ser perjudiciales para las vacas.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Los eventos que se ajusten a la regla establecida se grabarán como videos y se guardarán en la computadora.
+ Estos eventos serán evaluados más adelante por los propietarios.
+ Por lo tanto,
+ no es necesario acceso a internet.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724436868
+Las vacas no poseen sensores en contacto directo con la piel produciéndole discomfort.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724452760
+Acomodé las dimensiones de la tabla para facilitar la lectura y que entren todas las columnas en el ancho de una página cuando se genera un pdf.
+ Veo que seguiste las columnas planteadas en uno de los mails.
+ No sé qué te parece,
+ pero me da la sensación que el contenido de las columnas está muy largo,
+ y en varias no se condice con el nombre de la columna.
+ Eso NO implica que haya que tirar por completo lo que tiene la tabla.
+ Lo que propongo es hacer que lo que está descrito para un trabajo en una fila pase a transformarse en un sólo párrafo.
+ Las columnas tendrían que popularse con palabras claves,
+ no con párrafos.
+ De esa manera la tabla va a quedar más compacta y fácil de leer.
+ Si adoptamos esta forma que te digo,
+ la columna resumen pasaría a estar representada por el párrafo descriptivo del trabajo entonces la sacaría de la tabla,
+ o en su lugar pondría que sea 
+\begin_inset Quotes fld
+\end_inset
+
+objetivo del sistema
+\begin_inset Quotes frd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724693235
+Va un ejemplo de cómo quedarían estas transformaciones (a su vez,
+ le cambié un poco el orden y el nombre a las columnas).
+ La idea es darle alguna vuelta más,
+ agregando un trabajo bien relacionado al primero pero no mucho más:
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724673917
+En 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ccevik2020deep"
+literal "false"
+
+\end_inset
+
+ se usa BCS para agrupar y mejorar las tareas de cuidado y alimentación de los animales en determinados momentos.
+ El objetivo es proporcionar una herramienta de fácil acceso a los productores de lácteos con la ayuda del software móvil diseñado.
+ Se desarrolló un software para estimar los valores de BCS utilizando imágenes en tiempo real en dispositivos móviles Android llevándose a cabo con la ayuda de arquitecturas CNN que fueron entrenadas con imágenes tomadas por un software y evaluadas por un experto de manera offline.
+ La red entrenada se transfirió al software móvil para utilizar el modelo entrenado y realizar predicciones en tiempo real.
+ El software posee el modelo entrenado para realizar la toma de la foto y predecir el valor de BCS.
+ De esta manera,
+ no necesita acceso a cloud.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724673978
+\begin_inset CommandInset citation
+LatexCommand cite
+key "alonso2020intelligent"
+literal "false"
+
+\end_inset
+
+:
+ Desarrollo de una plataforma diseñada para monitorear,
+ rastrear y optimizar las tareas de gestión de explotaciones mixtas de cultivo y ganaderia.
+ La tecnología integra visualización de datos,
+ un sistema de alertas,
+ un mapa interactivo de dispositivos IoT y una interfaz para configurar sensores.
+ Además,
+ registra y almacena datos biométricos del ganado lechero,
+ mostrando su actividad y un historial de fiebre,
+ combinando temperatura,
+ ritmo respiratorio y frecuencia cardíaca.
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724670919
+En 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "piedadedesign"
+literal "false"
+
+\end_inset
+
+ se propone una red de sensores inalámbricos (WSN) con nodos LoRa,
+ MongoDB y comunicaciones de largo alcance para monitorear la salud del ganado en hatos lecheros.
+ Los nodos LoRa recopilan datos y los transmiten a través de un LoRa Gateway,
+ validando la viabilidad del sistema.
+ Este enfoque permite generar alertas sobre la salud del ganado,
+ detectar estro y prevenir robos.
+ El sistema convierte los datos recibidos por el gateway a JSON y los almacena en MongoDB.
+ Luego,
+ los datos procesados se publican a través de un broker MQTT,
+ permitiendo que aplicaciones móviles accedan y presenten los resultados en un dashboard externo.
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724451747
+En 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yang2017develop"
+literal "false"
+
+\end_inset
+
+ se desarrolló un sistema de monitoreo usando cámaras infrarrojas para registrar imágenes nocturnas de vacas lecheras.
+ El procesamiento de imágenes identifica comportamientos de celo,
+ facilitando que los propietarios tomen decisiones sobre la inseminación artificial.
+ Utilizando análisis de energía dinámica de imágenes y procesamiento de imágenes binarias,
+ pueden identificar cambios en la longitud de las vacas durante el comportamiento de montaje específico del estro.
+ Los eventos que se ajusten a nuestra regla se grabarán como videos y se guardarán en la computadora.
+ El prototipo se realizo con una sola cámara pero sugiere utilizar una cámara nocturna de ojo de pez a futuro para registrar actividades en un área más amplia de la granja lechera,
+ superando la limitación de cobertura de una sola cámara.
+ Esto evitaría la necesidad de combinar imágenes de múltiples cámaras y supera los problemas de los sensores de contacto directo utilizados en otras propuestas,
+ que pueden ser perjudiciales para las vacas.
+ Los eventos que se ajusten a la regla establecida se grabarán como videos y se guardarán en la computadora.
+ Estos eventos serán evaluados más adelante por los propietarios.
+ Por lo tanto,
+ no es necesario acceso a internet.
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724692502
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" change="inserted -997162125 1724438449" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438463
+Trabajo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724671202
+Objetivos de monitoreo
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438449
+Rol de la app móvil
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724670460
+Método computacional empleado
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724671040
+Contexto de toma de datos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724671099
+Dispositivos de sensado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438480
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ccevik2020deep"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724451494
+Alimentación,
+ Bienestar animal
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438449
+Toma de imágenes y soporte para inferencia de BCS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724671357
+Deep Learning en el edge
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724442650
+Campo abierto
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724451870
+Cámara del móvil
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row change="inserted -997162125 1724438449">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438449
+\begin_inset CommandInset citation
+LatexCommand cite
+key "piedadedesign"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438449
+Salud Animal,
+ Reproducción
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438449
+Visualización de resultados
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438449
+Red de Sensores
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438449
+Campo abierto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438449
+Collar con nodo ESP32
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row change="inserted -997162125 1724438449">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724672828
+\begin_inset CommandInset citation
+LatexCommand cite
+key "alonso2020intelligent"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724673440
+Bienestar animal,
+ Alimentación
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724674114
+N/A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724673073
+Red de Sensores + Edge Computing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724674140
+Campo abierto/Corral
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724673800
+Collar,
+ Sensores de ambiente (termómetro,
+ higrómetro,
+ gas),
+ Estaciones meterológicas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row change="inserted -997162125 1724438449">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438449
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yang2017develop"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438449
+Reproducción
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438449
+N/A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438449
+Procesamiento de imágenes clásico
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438449
+Corral
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724438449
+Cámara infrarroja
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724693126
+De esta tabla surge que hay esfuerzos diversos en relación a tecnologizar tareas de monitoreo en tambos para incrementar al productividad,
+ algunas relacionadas con mejorar la alimentación,
+ otras con detectar momentos en los cuales la productividad de un animal disminuye,
+ etc.
+ Se ven,
+ a su vez,
+ soluciones que emplean dispositivos específicos para recolección de datos como por ej.
+ collares,
+ mientras que otros emplean imágenes o videos tomados mediante cámaras fijas estrategicamente ubicadas o cámaras móviles.
+\end_layout
+
+\end_inset
+
+
 \change_unchanged
 
 \end_layout
 
 \begin_layout Subsection
 
-\change_inserted -1783815582 1724107243
-Desventajas de trabajos relacionados
+\change_deleted -997162125 1724420974
+Desventajas
+\change_inserted -997162125 1724420982
+Limitaciones halladas en
+\change_deleted -997162125 1724420984
+ de
+\change_unchanged
+ trabajos relacionados
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1724197861
 En el artículo de 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -852,22 +1809,20 @@ literal "false"
 
 \end_inset
 
- se presenta un método para calcular el BCS en tiempo real, pero no se ofrece
- un sistema robusto para almacenar y visualizar el historial de BCS de cada
- vaca.
- Esta falta de almacenamiento histórico limita la capacidad de hacer un
- seguimiento continuo del estado del ganado.
- Además, la aplicación desarrollada en este estudio está limitada a dispositivos
- Android, lo que restringe su accesibilidad en otras plataformas móviles.
- Otro punto débil es el uso de una cámara de celular, que debe ser operada
- manualmente por el usuario para capturar imágenes desde la parte trasera
- del animal, lo cual puede ser ineficiente y propenso a errores humanos.
+ se presenta un método para calcular el BCS en tiempo real,
+ pero no se ofrece un sistema robusto para almacenar y visualizar el historial de BCS de cada vaca.
+ Esta falta de almacenamiento histórico limita la capacidad de hacer un seguimiento continuo del estado del ganado.
+ Además,
+ la aplicación desarrollada en este estudio está limitada a dispositivos Android,
+ lo que restringe su accesibilidad en otras plataformas móviles.
+ Otro punto débil es el uso de una cámara de celular,
+ que debe ser operada manualmente por el usuario para capturar imágenes desde la parte trasera del animal,
+ lo cual puede ser ineficiente y propenso a errores humanos.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1724197978
-Por otro lado, el artículo 
+Por otro lado,
+ el artículo 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "alonso2020intelligent"
@@ -875,18 +1830,33 @@ literal "false"
 
 \end_inset
 
-, describe una plataforma que depende de la nube para ejecutar sus algoritmos
- de IA, lo que introduce una dependencia crítica de la conectividad a internet.
- En entornos donde la conexión a internet es inestable o inexistente, esta
- limitación puede impedir el funcionamiento adecuado del sistema.
- Además, esta dependencia de la nube puede limitar la escalabilidad de la
- plataforma, ya que no es viable en zonas donde el acceso a la nube es difícil
- o costoso.
+,
+ describe una plataforma que depende de la nube para ejecutar sus algoritmos de IA,
+ lo que introduce una dependencia crítica de la conectividad a internet.
+ En entornos donde la conexión a internet es inestable o inexistente,
+ esta limitación puede impedir el funcionamiento adecuado del sistema.
+ Además,
+ esta dependencia de la nube puede 
+\change_deleted -997162125 1724454139
+limitar la escalabilidad
+\change_inserted -997162125 1724454156
+restringir la usabilidad
+\change_unchanged
+ de la plataforma,
+ 
+\change_deleted -997162125 1724454162
+ya que no es viable 
+\change_unchanged
+en zonas donde el acceso a 
+\change_inserted -997162125 1724454193
+internet y por ende a servicios de nube no es posible
+\change_deleted -997162125 1724454182
+la nube es difícil o costoso
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1724197905
 La propuesta de 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -895,20 +1865,21 @@ literal "false"
 
 \end_inset
 
-, aunque no requiere conexión a internet, deja toda la interpretación de
- los datos al usuario, ya que no ofrece recomendaciones automáticas ni utiliza
- inteligencia artificial para la toma de decisiones.
- Esto puede resultar en un uso ineficiente de los datos, ya que la interpretació
-n manual puede ser subjetiva y propensa a errores.
- Además, este sistema requiere que las vacas utilicen collares, lo que implica
- un mayor costo y mantenimiento, además de potenciales molestias para los
- animales.
+,
+ aunque no requiere conexión a internet,
+ deja toda la interpretación de los datos al usuario,
+ ya que no ofrece recomendaciones automáticas ni utiliza inteligencia artificial para la toma de decisiones.
+ Esto puede resultar en un uso ineficiente de los datos,
+ ya que la interpretación manual puede ser subjetiva y propensa a errores.
+ Además,
+ este sistema requiere que las vacas utilicen collares,
+ lo que implica un mayor costo y mantenimiento,
+ además de potenciales molestias para los animales.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1724197925
-Finalmente, en el artículo de 
+Finalmente,
+ en el artículo de 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "yang2017develop"
@@ -916,35 +1887,77 @@ literal "false"
 
 \end_inset
 
-, aunque se almacena información localmente y no depende de internet, el
- análisis de las imágenes capturadas depende totalmente del usuario, ya
- que no se utiliza inteligencia artificial para automatizar este proceso.
- Esto requiere una intervención constante del usuario, lo que puede ser
- un proceso lento y laborioso.
+,
+ aunque se almacena información localmente y no depende de internet,
+ el análisis de las imágenes capturadas depende totalmente del usuario,
+ ya que no se utiliza inteligencia artificial para automatizar este proceso.
+ Esto requiere una intervención constante del usuario,
+ lo que puede ser un proceso lento y laborioso.
+\change_inserted -997162125 1724452869
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724669535
+Están buenos los argumentos que utilizaste para contrastar,
+ pero noto que el conjunto de trabajos seleccionados sirven para automatizar diversas tareas,
+ es decir,
+ más allá de que son ejemplos de TICs aplicados al sector agro-granadero tienen poco solapamiento con tu propuesta (salvo el primero).
+ Entonces veo más apropiado contar lo que contás puntualizando que no se ven prototipos que reunan las siguientes características:
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724692231
+- Asistencia en tiempo real mediante app móvil a tareas de apartamiento o agrupamiento de individuos empleando el cómputo de BCS y cámara estratégicamente colocada tratando de reducir márgenes de error en las predicciones propios de la captura de imágenes sea realizada por el usuario.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724692365
+- No dependecia de la nube para realizar el cómputo del BCS.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724692445
+- Mantenimiento de historial de BCS para individuos y rodeos.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724692330
+- Contemplar la mejora continua del componente predictor de BCS ofreciendo una app móvil para etiquetado.
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1724692487
+En estos cuatro puntos estará centrado el foco de tu propuesta.
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted -1783815582 1724107268
 Mejoras de mi propuesta
+\change_inserted -1783815582 1724107268
+
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1724199402
-El objetivo general de este proyecto es el de desarrollar un prototipo de
- ambiente de computación Dew que aproveche capacidad de cómputo presente
- en la cercanía de un usuario para ejecutar tareas de clasificación y etiquetado.
- Desde el punto de vista práctico, la capacidad de cómputo estará representada
- por dispositivos de bajo costo tipo SBC (Single Board Computers) y/o dispositiv
-os móviles (smartphones) que podrán asumirse ya presentes en el contexto
- de utilización (tambo lechero) o en su defecto factibles de ser desplegados
- con mínimos requerimientos para llevar a cabo tareas de clasificación de
- ganado en tiempo real.
- Las tareas de clasificación propiamente dichas, emplearán un modelo tensorflow
- previamente desarrollado en el marco de un trabajo publicado en una revista
- internacional de alto impacto en el área de tecnologías aplicadas al agro
- 
+El objetivo general de este proyecto es el de desarrollar un prototipo de ambiente de computación Dew que aproveche capacidad de cómputo presente en la cercanía de un usuario para ejecutar tareas de clasificación y etiquetado.
+ Desde el punto de vista práctico,
+ la capacidad de cómputo estará representada por dispositivos de bajo costo tipo SBC (Single Board Computers) y/o dispositivos móviles (smartphones) que podrán asumirse ya presentes en el contexto de utilización (tambo lechero) o en su defecto factibles de ser desplegados con mínimos requerimientos para llevar a cabo tareas de clasificación de ganado en tiempo real.
+ Las tareas de clasificación propiamente dichas,
+ emplearán un modelo tensorflow previamente desarrollado en el marco de un trabajo publicado en una revista internacional de alto impacto en el área de tecnologías aplicadas al agro 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "alvarez2018body"
@@ -953,91 +1966,71 @@ literal "false"
 \end_inset
 
 .
- El prototipo a desarrollar tiene múltiples propósitos que pueden resumirse
- en:
+ El prototipo a desarrollar tiene múltiples propósitos que pueden resumirse en:
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted -1783815582 1724199411
-Contribuir a mejorar el modelo tensorflow a partir de un reentrenamiento
- que se será posible gracias a la agilización del proceso de etiquetado
- de imágenes en las que interviene un profesional veterinario experto en
- el dominio.
+Contribuir a mejorar el modelo tensorflow a partir de un reentrenamiento que se será posible gracias a la agilización del proceso de etiquetado de imágenes en las que interviene un profesional veterinario experto en el dominio.
 \end_layout
 
 \begin_layout Enumerate
+Permitir que conocimiento experto en el dominio y encapsulado en una red de aprendizaje profundo pueda ser utilizado para automatizar la clasificación de ganado empleando dispositivos de usuario como plataforma de ejecución.
 
-\change_inserted -1783815582 1724199413
-Permitir que conocimiento experto en el dominio y encapsulado en una red
- de aprendizaje profundo pueda ser utilizado para automatizar la clasificación
- de ganado empleando dispositivos de usuario como plataforma de ejecución.
+\change_deleted -997162125 1724453457
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted -1783815582 1724199507
-Permitir la validación de resultados de estrategias de planificación de
- tareas en grupos de dispositivos móviles estudiados con anterioridad en
- el grupo de trabajo y empleando simulación.
+Permitir la validación de resultados de estrategias de planificación de tareas en grupos de dispositivos móviles estudiados con anterioridad en el grupo de trabajo y empleando simulación.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1724199511
 De este objetivo general se desprenden los siguientes objetivos específicos:
 \end_layout
 
 \begin_layout Itemize
+Diseño y desarrollo de una app móvil Android Evaluador que oficia de cliente y permite al profesional veterinario experto en el dominio etiquetar imágenes de ganado vacuno tomadas con una cámara de profundidad en tiempo real en el contexto de labores realizados en una manga,
+ sin requerir de conexión a Internet.
 
-\change_inserted -1783815582 1724199518
-Diseño y desarrollo de una app móvil Android Evaluador que oficia de cliente
- y permite al profesional veterinario experto en el dominio etiquetar imágenes
- de ganado vacuno tomadas con una cámara de profundidad en tiempo real en
- el contexto de labores realizados en una manga, sin requerir de conexión
- a Internet.
+\change_deleted -997162125 1724453457
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
+Diseño y desarrollo de una app móvil Android Visualizador que permite a un usuario no experto en el dominio conocer la condición corporal del ganado vacuno a medida que se obtienen imágenes de este en tiempo real y en el contexto de labores realizadas en una manga,
+ sin requerir de conexión a Internet.
 
-\change_inserted -1783815582 1724199520
-Diseño y desarrollo de una app móvil Android Visualizador que permite a
- un usuario no experto en el dominio conocer la condición corporal del ganado
- vacuno a medida que se obtienen imágenes de este en tiempo real y en el
- contexto de labores realizadas en una manga, sin requerir de conexión a
- Internet.
+\change_deleted -997162125 1724453457
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1724199564
-Diseño y desarrollo de un componente servidor encargado de la gestión de
- tareas que pueden ser de etiquetado o clasificación automática diferenciando
- la app cliente de la cual provenga una petición.
+Diseño y desarrollo de un componente servidor encargado de la gestión de tareas que pueden ser de etiquetado o clasificación automática diferenciando la app cliente de la cual provenga una petición.
 \end_layout
 
 \begin_layout Itemize
+Diseño y desarrollo de un módulo de generación de reportes que permitirá tanto a observadores como a calificadores visualizar reportes gráficos del BCS calculada por el algoritmo de predicción.
+\change_inserted -1783815582 1724199846
 
-\change_inserted -1783815582 1724199651
-Ambas aplicaciones podrán visualizar el historial BCS de la sesión anterior
- como así tambien  
 \end_layout
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-En general el capítulo de trabajos relacionados describe lo que hay hecho
- en torno a una temática pero también va sugiriendo entre líneas o al final,
- aquello a lo que no se dado solución por parte de otros y que coincide
- con lo que se propone hacer en la tesis.
- Veo que hay frases tomadas del proyecto para tratar de contar dónde se
- inserta tu trabajo, pero falta pulir bastante lo que hay y agregar nuevo.
+En general el capítulo de trabajos relacionados describe lo que hay hecho en torno a una temática pero también va sugiriendo entre líneas o al final,
+ aquello a lo que no se dado solución por parte de otros y que coincide con lo que se propone hacer en la tesis.
+ Veo que hay frases tomadas del proyecto para tratar de contar dónde se inserta tu trabajo,
+ pero falta pulir bastante lo que hay y agregar nuevo.
  Para ayudar a pensar esto no hay que perder de vista lo siguiente:
+
 \change_deleted -1783815582 1720564178
  
 \change_unchanged
@@ -1049,47 +2042,44 @@ En general el capítulo de trabajos relacionados describe lo que hay hecho
 \begin_inset Quotes fld
 \end_inset
 
-Tu proyecto final se enfoca en aplicar tecnología Edge/Dew computing al
- monitoreo de sistemas de ganadería, puntualmente a la producción de vacas
- lecheras.
+Tu proyecto final se enfoca en aplicar tecnología Edge/Dew computing al monitoreo de sistemas de ganadería,
+ puntualmente a la producción de vacas lecheras.
 \begin_inset Quotes frd
 \end_inset
 
- Lo distintivo de tu trabajo es que se diseña un software para que corra
- sin necesidad de usar servicios en la nube, es decir, la toma, procesamiento
- de las imágenes y visualización de resultados ocurre con dispositivos que
- pueden estar funcionando en el propio tambo, lo que significa que el tambo
- no necesita conexión a internet para que el sistema funcione.
- La conexión a internet en todo caso puede ser exclusivamente para comunicar
- resultados, pero no requerida para que el sistema monitoree.
+ Lo distintivo de tu trabajo es que se diseña un software para que corra sin necesidad de usar servicios en la nube,
+ es decir,
+ la toma,
+ procesamiento de las imágenes y visualización de resultados ocurre con dispositivos que pueden estar funcionando en el propio tambo,
+ lo que significa que el tambo no necesita conexión a internet para que el sistema funcione.
+ La conexión a internet en todo caso puede ser exclusivamente para comunicar resultados,
+ pero no requerida para que el sistema monitoree.
  Esto te puede dar un criterio para ver cómo lo hacen otros trabajos.
- Con esto en mente, hay que contar cómo lo hacen otros trabajos (si es que
- lo hacen).
- Si no hay, se puede agregar discusión sobre si la ganadería aplica algún
- sistema de información automatizado y ahí se pueden abarcar otros propósitos,
- por ejemplo, alimentación en feetlot.
+ Con esto en mente,
+ hay que contar cómo lo hacen otros trabajos (si es que lo hacen).
+ Si no hay,
+ se puede agregar discusión sobre si la ganadería aplica algún sistema de información automatizado y ahí se pueden abarcar otros propósitos,
+ por ejemplo,
+ alimentación en feetlot.
  También se debe contar para qué son buenos los sistemas edge.
- Una subsección de edge computing tiene que haber en este capítulo, contanto
- conceptualmente de qué se trata.
- Te sugiero usar GoogleScholar para la búsqueda de trabajos científicos
- y académicos relacionados.
- Dejé un txt en el directorio de este capítulo con un ejemplo de trabajo
- relacionado.
- Poné ese título en google scholar y vas a poder acceder al pdf para ver
- de qué se trata.
- En dicho pdf, al final de todo, en la parte de referencias, tenés punteros
- a otros trabajos (varios de ellos pueden tener mucha relación con el trabajo
- que se discute).
+ Una subsección de edge computing tiene que haber en este capítulo,
+ contanto conceptualmente de qué se trata.
+ Te sugiero usar GoogleScholar para la búsqueda de trabajos científicos y académicos relacionados.
+ Dejé un txt en el directorio de este capítulo con un ejemplo de trabajo relacionado.
+ Poné ese título en google scholar y vas a poder acceder al pdf para ver de qué se trata.
+ En dicho pdf,
+ al final de todo,
+ en la parte de referencias,
+ tenés punteros a otros trabajos (varios de ellos pueden tener mucha relación con el trabajo que se discute).
  El objetivo sería seleccionar entre 5 y 7 trabajos.
  Los más relacionados al tema.
- El proyecto que se te pasó como base, podría discutirse último y eso te
- da el pie para contar brevemente qué es lo que le falta, para luego desarrollar
- mejor la idea de lo que vas a hacer en el próximo capítulo que es el 3.
- Tené en cuenta también que podés sacar letra (contexto, referencias) del
- plan de trabajo que se presentó que tenía una longitud de 4 o 5 páginas
- y era un mini-informe condensado.
- Si esto queda bien contextualizado y autocontenido, se podría pensar en
- fusionar capítulo 1 y 2 en uno sólo.
+ El proyecto que se te pasó como base,
+ podría discutirse último y eso te da el pie para contar brevemente qué es lo que le falta,
+ para luego desarrollar mejor la idea de lo que vas a hacer en el próximo capítulo que es el 3.
+ Tené en cuenta también que podés sacar letra (contexto,
+ referencias) del plan de trabajo que se presentó que tenía una longitud de 4 o 5 páginas y era un mini-informe condensado.
+ Si esto queda bien contextualizado y autocontenido,
+ se podría pensar en fusionar capítulo 1 y 2 en uno sólo.
 \end_layout
 
 \begin_layout Plain Layout
@@ -1097,21 +2087,26 @@ Cosas a tener en cuenta al momento de volcar contenido:
 \end_layout
 
 \begin_layout Plain Layout
-- Cuidar la hilación entre párrafos y el nivel de detalle con el que se
- presentan las ideas (hay que encontrar un balacne, mucho detalle a veces
- no es bueno porque no aporta a la discusión general.
- Poco detalle, tampoco es bueno porque se le disparan muchas preguntas sin
- respuesta al lector.
+- Cuidar la hilación entre párrafos y el nivel de detalle con el que se presentan las ideas (hay que encontrar un balacne,
+ mucho detalle a veces no es bueno porque no aporta a la discusión general.
+ Poco detalle,
+ tampoco es bueno porque se le disparan muchas preguntas sin respuesta al lector.
 \end_layout
 
 \begin_layout Plain Layout
-- Lo que es hecho por otros autores contarlo en tercera persona, e.g, En
- [Rodríguez Alvarez et al., 2017] los autores proponen una red neuronal.....
+- Lo que es hecho por otros autores contarlo en tercera persona,
+ e.g,
+ En [Rodríguez Alvarez et al.,
+ 2017] los autores proponen una red neuronal.....
 \end_layout
 
 \begin_layout Plain Layout
-- Lo que es hecho por vos, se puede contar en impersonal, e.g., se desarrolló,
- se diseño, se tuvo en cuenta.
+- Lo que es hecho por vos,
+ se puede contar en impersonal,
+ e.g.,
+ se desarrolló,
+ se diseño,
+ se tuvo en cuenta.
 \end_layout
 
 \end_inset
@@ -1137,86 +2132,13 @@ Evitar los párrafos de una sóla frase
 
 \end_layout
 
-\begin_layout Section
-Marco del proyecto
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Marco-del-proyecto"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
-
-\change_deleted -1783815582 1724107894
-En el marco de este proyecto en curso, con proyecciones de continuidad posee
- cinco objetivos específicos: 
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1724107894
-1.
- Expandir la calibración del algoritmo disponible de IA predictor de Condición
- Corporal para vacas lecheras Holando Argentino, con la inclusión de otras
- razas lecheras y cruzas, y razas principales de producción de carne.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1724107894
-2.
- Calibrar un algoritmo de IA para predecir el Grado de Terminación (GT,
- expresado en mm de grasa dorsal y área de ojo de bife en cm2, contrastado
- por ecografía) en bovinos de carne destinados a faena.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1724107894
-3.
- Desarrollar un servicio (software) de administración que permita emitir
- reportes personalizables y con capacidad potencial de integración genérica
- a un ambiente IoT para conexión futura a otros dispositivos (por ejemplo
- lectores de RFID para individualizar los datos de forma automática, apartadores
- automáticos de hacienda, etc.).
- 
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1724107894
-4.
- Desarrollar un aparejo móvil, robusto, con posibilidad de fuente energética
- propia, con un branding definido y fácilmente adaptable a instalaciones
- heterogéneas como las que se presentan en condiciones de campo en lechería
- y en producción de carne.
- 
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1724107894
-5.
- Diseñar y validar el modelo de negocios más apropiado para el aparejo de
- funcionalidad dual (CC y GT).
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1724107894
- propósito.
-\change_unchanged
-
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Esto hay que adaptarlo.
- Escrito como está no permite diferenciar qué es parte de tu proyecto y
- qué es parte del marco de tu proyecto.
+ Escrito como está no permite diferenciar qué es parte de tu proyecto y qué es parte del marco de tu proyecto.
 \end_layout
 
 \end_inset
