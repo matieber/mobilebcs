@@ -78,111 +78,371 @@
 \begin_body
 
 \begin_layout Chapter
-Planteo del problema
+Requerimientos
 \end_layout
 
 \begin_layout Standard
-En relación a la primera hipótesis formulada previamente, y en lo que respecta
- a CC, la ampliación de la capacidad predictiva de los algoritmos de deep
- learning ya estudiados requiere en principio contar con imágenes de buena
- calidad de vacas de otras razas lecheras distintas a Holstei para entrenar
- y re-diseñar los mismos, y valores de CC asociados tomados por expertos.
- Esto representa el ground truth para entrenar y comprobar la efectividad
- de los modelos.
- Se considerará utilizar más de un experto para eliminar subjetividad en
- la calificación de la CC.
- 
+La aplicación se enfoca en automatizar el BSC del ganado, integrando tecnologías
+ de IoT, deep learning y una infraestructura de computación Dew.
+ A continuación se detallan los requerimientos claves.
+\end_layout
+
+\begin_layout Section
+Requerimientos funcionales
+\end_layout
+
+\begin_layout Itemize
+Calidad de Imágenes y Datos de Entrenamiento: La aplicación debe ser capaz
+ de capturar y procesar imágenes de alta calidad de vacas de diferentes
+ razas lecheras, más allá de la raza Holstein.
+ Estas imágenes deben ser etiquetadas con valores de BSC proporcionados
+ por expertos en el lugar, quienes puntuarán de manera independiente para
+ minimizar la subjetividad.
+ Estos datos constituyen el ground truth necesario para entrenar, rediseñar
+ y validar los modelos de predicción del BSC.
+\end_layout
+
+\begin_layout Itemize
+Capacidad Predictiva y Almacenamiento de Datos: Una vez que los modelos
+ de predicción del BSC estén operativos, la aplicación debe alojar estos
+ algoritmos en dispositivos computacionales que se integren al aparejo móvil.
+ Estos dispositivos deben ser capaces de ejecutar los algoritmos en tiempo
+ real, utilizando computación Dew para reducir la dependencia de la conectividad
+ a internet.
+ El servidor central debe almacenar datos de los usuarios, sesiones de calificac
+ión, BSC asignadas por expertos, y resultados de los algoritmos predictivos,
+ asegurando la disponibilidad de esta información para la generación de
+ reportes.
+\end_layout
+
+\begin_layout Itemize
+Integración IoT: El sistema debe ser extensible y preparado para integrarse
+ en un entorno IoT.
+ Esto implica el desarrollo de una capa de comunicación flexible que permita
+ conectar diferentes dispositivos y elementos del entorno ganadero (como
+ mangas, corrales, y comederos) a una red.
+ Estos dispositivos deben ser capaces de realizar captura automatizada de
+ datos y comunicar acciones de contingencia (CAC), estructurándose como
+ un Sistema Integral de Gestión de la Información (SIGI) para facilitar
+ el monitoreo, planificación, y toma de decisiones.
+\end_layout
+
+\begin_layout Itemize
+Aplicación Móvil y Perfiles de Usuario: La aplicación móvil debe soportar
+ dos perfiles de usuario: calificadores y observadores.
+ Los calificadores, generalmente expertos, deben poder realizar la calificación
+ del BSC de cada vaca y visualizar reportes detallados.
+ Los observadores, en cambio, tendrán acceso solo a la visualización de
+ reportes, los cuales se actualizan en tiempo real según los últimos datos
+ procesados.
+ Además, los dispositivos utilizados por los observadores serán responsables
+ de ejecutar el algoritmo predictivo, informando tanto a otros observadores
+ como al servidor central para el almacenamiento y uso de estos datos en
+ reportes.
+\end_layout
+
+\begin_layout Itemize
+Interfaz de Comunicación y Reportes: La aplicación debe incluir un módulo
+ para la generación de reportes en formato gráfico, como diagramas de torta,
+ que permita a los usuarios visualizar la distribución del BSC en diferentes
+ rangos.
+ Estos reportes deben ser accesibles para diferentes sesiones de calificación
+ (actual, última finalizada, y anteriores) y se actualizarán en tiempo real.
+ La interfaz de usuario debe ser intuitiva, permitiendo la fácil navegación
+ entre las diferentes opciones de visualización.
+\end_layout
+
+\begin_layout Itemize
+Interfaz de captura de datos: El prototipo incluirá una interfaz de entrada
+ diseñada para recibir las imágenes capturadas de las vacas y su correspondiente
+ identificación.
+ Las imágenes serán tomadas automáticamente por la cámara ubicada en la
+ manga mientras las vacas pasan por ella.
+ Simultáneamente, la identificación de cada vaca se obtendrá mediante un
+ sistema RFID, asegurando que cada imagen esté correctamente asociada al
+ animal correspondiente.
+ Esta interfaz permitirá un flujo de datos continuo y preciso, facilitando
+ la posterior clasificación y análisis del BSC en tiempo real.
+\end_layout
+
+\begin_layout Itemize
+Autorización: definirá los permisos de cada usuario según su rol dentro
+ del sistema, diferenciando entre calificadores y observadores.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Calificadores: Pueden iniciar nuevas sesiones de calificación, etiquetar
+ imágenes, y acceder a los reportes generados por las sesiones que han realizado.
+\end_layout
+
+\begin_layout Itemize
+Observadores: Pueden visualizar los reportes generados, consultar el historial
+ de sesiones, y acceder tanto a la predicción en tiempo real del BCS como
+ al historial asociado de cada vaca.
+ Sin embargo, no tienen permisos para realizar calificaciones.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Casos de uso
+\end_layout
+
+\begin_layout Subsection
+Login
 \end_layout
 
 \begin_layout Standard
-Una vez obtenidos los modelos de predicción de CC funcionales se pretende,
- en lo que respecta al dispositivo computacional que los aloja y se integra
- al aparejo, investigar y desarrollar la integración de dicho dispositivo
- al concepto de IoT (Objetivo 3) dentro del contexto de la ganadería de
- precisión.
- Esto es, desarrollar una capa flexible de comunicación donde los dispositivos
- (“cosas”, como por ejemplo una manga, un corral o un comedero) se puedan
- conectar a una red de forma transparente y puedan realizar captura automatizada
- de datos (CAD), y de comunicación de acciones de contingencia (CAC), de
- forma que puedan estructurarse como Sistemas Integrales de Gestión de la
- Información (SIGI) hard-soft de producción ganadera, de modo que faciliten
- el monitoreo, la planificación y la toma de decisiones.
+La interfaz de usuario permite ingresar el nombre de usuario para iniciar
+ sesión sin necesidad de una contraseña.
+ Durante el proceso de registro, los usuarios tienen la opción de seleccionar
+ su rol, ya sea como calificador u observador.
 \end_layout
 
 \begin_layout Standard
-Los pasos involucrados en la construcción y mejora del sistema incluyen
- recolectar imágenes de profundidad para construir un conjunto de datos
- de entrenamiento y prueba, donde cada imagen incluye una vaca y su correspondie
-nte CC asociado (Objetivo 1).
- Este valor es asignado por al menos un par de evaluadores expertos/as en
- el lugar que puntúa de forma independiente cada una de las vacas a medida
- que caminan voluntariamente por debajo de una cámara con tecnología ToF
- (Time of Flight).
- 
+El flujo de creación de usuario comienza desde la página de usuario en la
+ aplicación móvil.
+ Los usuarios crean una nueva cuenta ingresando su nombre y seleccionando
+ su rol.
+ Este proceso garantiza que el nombre de usuario sea único y que el usuario
+ sea identificado correctamente como calificador u observador.
+ Tras la creación de la cuenta, los usuarios inician sesión ingresando simplemen
+te su nombre, lo que les permite acceder a las funcionalidades específicas
+ de su rol.
 \end_layout
 
 \begin_layout Standard
-Respecto del software a desarrollar (Objetivo 3) este involucrará 3 grandes
- componentes:
+El sistema clasifica a los usuarios según su rol, lo que determina las funciones
+ y vistas a las que tienen acceso.
+ Los calificadores pueden realizar nuevas calificaciones y etiquetar imágenes,
+ mientras que los observadores tienen acceso a la visualización de reportes
+ y predicciones en tiempo real, sin la posibilidad de modificar datos.
+ Esta diferenciación asegura que cada usuario interactúe con el sistema
+ de acuerdo con sus funciones específicas, proporcionando una experiencia
+ personalizada.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
+La sesión de usuario es fundamental para asociar las calificaciones realizadas
+ a la cuenta del usuario.
+ Esto permite al sistema rastrear y organizar las calificaciones, así como
+ gestionar el historial de reportes y predicciones, mostrando solo la informació
+n relevante para cada usuario.
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Diagrama de componentes-Componentes.drawio.png
+\begin_layout Subsection
+Sesión de calificación
+\end_layout
 
+\begin_layout Standard
+Las sesiones de calificación son esenciales para gestionar y registrar las
+ evaluaciones del BCS.
+ Durante una sesión de calificación, un experto, conocido como calificador,
+ controla y evalúa un grupo de vacas usando la aplicación móvil.
+ En estas sesiones, uno o más calificadores participan en la evaluación
+ de cada vaca, y sus calificaciones se almacenan para su uso posterior,
+ como en el entrenamiento de modelos de predicción.
+\end_layout
+
+\begin_layout Standard
+La gestión de las sesiones de calificación es clave para garantizar que
+ las evaluaciones se registren y organicen adecuadamente.
+ Un calificador inicia una sesión en una locación específica, y se le asocia
+ automáticamente a esa sesión.
+ No se permite la existencia de más de una sesión activa en la misma locación,
+ aunque es posible que varios calificadores participen en una misma sesión.
+\end_layout
+
+\begin_layout Standard
+Las sesiones de calificación se almacenan con un identificador único y registran
+ las fechas de inicio y finalización, lo que es crucial para generar reportes
+ detallados sobre las evaluaciones realizadas.
+\end_layout
+
+\begin_layout Standard
+Los casos de uso incluyen:
+\end_layout
+
+\begin_layout Itemize
+Inicio de Sesión de Calificación: Un calificador inicia una sesión en una
+ locación específica y se asocia automáticamente a esta sesión.
+\end_layout
+
+\begin_layout Itemize
+Finalización de Sesión de Calificación: Un calificador finaliza una sesión
+ previamente iniciada, marcando el cierre de la sesión en el sistema.
+\end_layout
+
+\begin_layout Itemize
+Unirse a una Sesión de Calificación: Un calificador puede unirse a una sesión
+ activa en su locación si no ha iniciado su propia sesión.
+ Aunque la aplicación móvil actual no permite unirse a sesiones activas,
+ el sistema está diseñado para manejar esta funcionalidad, permitiendo su
+ extensión futura.
+\end_layout
+
+\begin_layout Itemize
+Locación de la Sesión de Calificación: La administración de locaciones no
+ está implementada en la aplicación móvil, aunque el sistema soporta estas
+ opciones para facilitar futuras mejoras.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Componentes del sistema
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
+\begin_layout Subsection
+Sistema de notificación de imágenes
 \end_layout
 
 \begin_layout Standard
-El server se encarga de almacenar los datos de usuarios, lo relacionado
- a la sesión de calificación, la condición corporal de cada vaca definida
- por los expertos y los algoritmos de predicción lo que esta última se utilizará
- para realizar los reportes.
+El sistema recibe imágenes de vacas y procesa la información asociada para
+ la calificación y observación del BCS.
+ El flujo comienza cuando las imágenes de cada vaca, junto con su metadata
+ son transmitidas al servidor.
+ El servidor, que cuenta con una interfaz de recepción de datos, es responsable
+ de recibir y procesar esta información.
  
 \end_layout
 
-\begin_layout Standard
-La aplicación móvil permite dos tipos de usuarios, calificadores que permite
- a los expertos realizar las calificaciones de cada vaca y ver reportes,
- como los obervadores que solo tienen la funcion de ver reportes.
- Además, los dispositivos de observadores serán los encargadores de ejecutar
- el algoritmo predictivo para informar a otros observadores sbore la predicción
- como al server para almacenar los datos que serán utilizados para los reportes.
+\begin_layout Itemize
+Sistema de Envío: Este componente es responsable de transmitir las imágenes
+ de las vacas al servidor, junto con la identificación de la vaca, posición
+ en la caravana y conjunto de imágenes.
+ El sistema de envío incluye un sistema RFID que captura automáticamente
+ la identificación de la vaca cuando pasa por la manga, sincronizando esta
+ información con la captura de la imagen.
+ De esta manera, se asegura que cada imagen esté correctamente asociada
+ a la vaca correspondiente.
+ Cabe destacar que el sistema de envío, queda fuera del alcance de este
+ proyecto
+\end_layout
+
+\begin_layout Itemize
+Recepción y Almacenamiento de Imágenes: Las imágenes y su meta-data asociada
+ se reciben en el servidor donde son almacenadas.
+ Esta interfaz permitirá un flujo de datos continuo y preciso, facilitando
+ la posterior clasificación y análisis del BSC en tiempo real.
+\end_layout
+
+\begin_layout Itemize
+Gestor de mensajes de imágenes: Una vez que las imágenes y su meta-data
+ han sido almacenadas, se genera una notificación para cada imagen que se
+ coloca en un sistema de seguimiento.
+ Esta notificación está destinada tanto para los calificadores como para
+ los observadores, quienes recibirán las imágenes en tiempo real a través
+ de un sistema de notificación.
+\end_layout
+
+\begin_layout Subsection
+Calificadores
 \end_layout
 
 \begin_layout Standard
-La aplicación batch será la encargada de mediante una llamada rest informar
- al server las fotos que fueron sacadas a una vaca.
+Los calificadores son expertos especializados en la evaluación del BCS,
+ ya sea a partir de imágenes recibidas o mediante la observación directa
+ de las vacas en la manga.
+ Con base en su experiencia y conocimiento, asignan una puntuación de BCS
+ a cada vaca evaluada, la cual es almacenada.
+ Al ingresar el puntaje, este se asocia tanto a la vaca como a la sesión
+ de calificación correspondiente, lo que garantiza una gestión de datos
+ organizada y trazable.
+ Esta información resulta fundamental para entrenar y mejorar continuamente
+ los modelos predictivos de BCS en futuras iteraciones del sistema.
+ Además de asignar las puntuaciones, los calificadores tienen la capacidad
+ de visualizar reportes.
+\end_layout
+
+\begin_layout Subsection
+Observadores
+\end_layout
+
+\begin_layout Standard
+Los dispositivos de los observadores ejecutan el algoritmo de predicción
+ del BCS, cuyo resultado se distribuye automáticamente por el sistema y
+ entre otros observadores.
+ Además de visualizar la predicción del BCS, los observadores también tendrán
+ acceso a diversos reportes.
+\end_layout
+
+\begin_layout Subsection
+Reportes
+\end_layout
+
+\begin_layout Standard
+El sistema de reportes proporciona a calificadores y observadores acceso
+ a la visualización de datos sobre las evaluaciones del BCS predichas por
+ el algoritmo de predicción.
+ Estos reportes se presentan en diagramas de torta que agrupan las vacas
+ dentro de los siguientes rangos de puntaje:
+\end_layout
+
+\begin_layout Itemize
+0 a 0.99
+\end_layout
+
+\begin_layout Itemize
+1 a 1.99
+\end_layout
+
+\begin_layout Itemize
+2 a 2.99 
+\end_layout
+
+\begin_layout Itemize
+3 a 3.99 
+\end_layout
+
+\begin_layout Itemize
+4 a 5
+\end_layout
+
+\begin_layout Itemize
+Sin predicción
+\end_layout
+
+\begin_layout Standard
+Los casos de uso incluyen:
+\end_layout
+
+\begin_layout Itemize
+Visualización de Reportes en Sesiones Actuales:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Los observadores pueden acceder a reportes que se actualizan automáticamente
+ durante la sesión de calificación en curso.
+ Los valores de BCS generados por el algoritmo se reflejan en los diagramas
+ de torta en tiempo real, lo que permite un monitoreo continuo del estado
+ de las vacas.
+\end_layout
+
+\begin_layout Itemize
+Los calificadores tienen la opción de visualizar los reportes cuando lo
+ consideren necesario.
+ Sin embargo, dado que su función principal es la evaluación directa de
+ las vacas, los diagramas se actualizan solo cuando el calificador decide
+ consultar esta información, asegurando que accedan a los datos más recientes
+ en ese momento.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Acceso a Reportes de Sesiones Anteriores: Los usuarios pueden acceder a
+ los reportes de sesiones de calificación terminadas, donde pueden consultar
+ los puntajes BCS registrados durante esas sesiones.
+\end_layout
+
+\begin_layout Itemize
+Historial BCS para Observadores: Los observadores, además de ver los reportes
+ actuales, pueden acceder al historial de predicciones BCS de vacas en sesiones
+ de calificación anteriores, lo que les permite tener una visión más amplia
+ del progreso o cambios en la condición corporal de las vacas a lo largo
+ del tiempo.
 \end_layout
 
 \end_body
