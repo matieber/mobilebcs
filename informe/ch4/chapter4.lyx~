@@ -269,9 +269,16 @@ Diagrama de componentes - sesión de calificación
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1724800570
-En este prototipo, las sesiones de calificación están asociadas a locaciones
- configuradas en los scripts de inicialización de la base de datos.
+\change_inserted -1783815582 1726267875
+Cada sesión de calificación está vinculada a una locación específica, predefinid
+a en los scripts de inicialización del sistema.
+ Este prototipo establece una sesión de calificación por defecto para simplifica
+r la operación, pero el diseño del sistema permite la posibilidad de múltiples
+ sesiones simultáneas en distintas locaciones.
+ Esto significa que diferentes calificadores pueden trabajar en paralelo,
+ ya sea en diferentes locaciones o en la misma.
+ Las sesiones de calificación están asociadas a locaciones configuradas
+ en los scripts de inicialización de la base de datos.
  Solo una sesión de calificación está disponible por defecto en la aplicación
  móvil, aunque el servidor está diseñado para manejar múltiples sesiones
  simultáneas en diferentes locaciones.

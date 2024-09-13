@@ -126,26 +126,20 @@ Componentes del sistema
 
 \begin_layout Section
 Login
-\change_inserted -1783815582 1724800247
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1724800249
 El flujo de creación de usuario en la aplicación móvil se implementa mediante
- el envío de una solicitud POST al servidor en el endpoint /user.
+ el envío de una solicitud POST al servidor .
  El módulo de creación de usuario del servidor procesa esta solicitud, generando
  el nuevo usuario en el sistema y asegurando que el nombre sea único a través
  de una validación.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1724800249
 Para la autenticación, cuando un usuario ingresa su nombre en la aplicación,
- se envía una solicitud POST a /user/{name}, la cual es manejada por el
- módulo de login del servidor.
+ se envía una solicitud POST, la cual es manejada por el módulo de login
+ del servidor.
  El sistema verifica la identidad del usuario únicamente a través de su
  nombre, sin necesidad de una contraseña.
  Una vez identificado, el sistema clasifica al usuario como calificador
@@ -153,16 +147,12 @@ Para la autenticación, cuando un usuario ingresa su nombre en la aplicación,
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1724800249
 Este diseño del módulo de login, junto con la funcionalidad de creación
  de usuarios y la validación de nombres únicos, se alinea con los objetivos
  del prototipo.
  Se prioriza la simplicidad y la funcionalidad básica, dejando de lado la
  implementación de medidas de seguridad avanzadas que podrían ser consideradas
  en versiones futuras.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -218,17 +208,6 @@ Sesión de calificación
 
 \begin_layout Standard
 
-\change_deleted -1783815582 1724799746
-Una sesión de calificación es una sesión en la cual un conjunto de vacas
- son controladas por un experto.
- De esta manera, un experto ó calificador va a poder desde la aplicación
- móvil comenzar, unirse o finalizar sesiones de calificación.
-\change_inserted -1783815582 1724799766
-
-\end_layout
-
-\begin_layout Standard
-
 \change_inserted -1783815582 1724799767
 .
 \change_unchanged
@@ -268,27 +247,19 @@ Diagrama de componentes - sesión de calificación
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1726267875
 Cada sesión de calificación está vinculada a una locación específica, predefinid
 a en los scripts de inicialización del sistema.
  Este prototipo establece una sesión de calificación por defecto para simplifica
-r la operación, pero el diseño del sistema permite la posibilidad de múltiples
+r la operación, pero el diseño del servidor permite la posibilidad de múltiples
  sesiones simultáneas en distintas locaciones.
  Esto significa que diferentes calificadores pueden trabajar en paralelo,
  ya sea en diferentes locaciones o en la misma.
- Las sesiones de calificación están asociadas a locaciones configuradas
- en los scripts de inicialización de la base de datos.
- Solo una sesión de calificación está disponible por defecto en la aplicación
- móvil, aunque el servidor está diseñado para manejar múltiples sesiones
- simultáneas en diferentes locaciones.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1724800570
 El servidor genera automáticamente un identificador único para cada sesión
- de calificación, junto con la fecha de inicio y finalización.
+ de calificación, junto con las marcas de fecha y hora de inicio y finalización
+ al comenzar o concluir la sesión.
  Aunque la aplicación móvil actualmente está limitada a la gestión de la
  sesión por defecto, el sistema permite que varios calificadores trabajen
  simultáneamente en diferentes locaciones o en la misma locación, aunque
@@ -297,16 +268,12 @@ El servidor genera automáticamente un identificador único para cada sesión
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1724800570
 La base de datos registra cada sesión de calificación, lo que es esencial
  para el módulo de reportes que genera informes basados en estas sesiones.
  Los componentes claves incluyen:
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1725742707
 Inicio de Sesión de Calificación: El servidor gestiona el inicio de las
  sesiones de calificación, garantizando que solo exista una sesión activa
  por locación.
@@ -314,125 +281,44 @@ Inicio de Sesión de Calificación: El servidor gestiona el inicio de las
  almacenadas que aún no estén vinculadas a una sesión.
  De este modo, se asegura que ninguna imagen quede sin procesar si no hay
  una sesión de calificación activa en el momento de su recepción.
+
+\change_deleted -1783815582 1726268666
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1724800610
 Finalización de Sesión de Calificación: El servidor cierra la sesión, permitiend
 o el uso de datos en reportes.
+
+\change_deleted -1783815582 1726268666
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1724800623
 Unirse a una Sesión de Calificación: Aunque el servidor soporta esta funcionalid
 ad, la aplicación móvil actual no permite que un calificador se una a una
  sesión iniciada por otro.
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1724800570
-Página de Sesión de Calificación: Actualmente, solo permite iniciar o finalizar
- sesiones en la locación por defecto, pero es extensible para permitir más
- funcionalidades en futuras versiones.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1724799649
-En una sesión de calificación pueden participar varios expertos para calificar
- a cada vaca y ser almacenada su calificación en una base de datos para
- en futuros trabajos entrenar al modelo.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1724799649
-Cada sesión de calificación va a estar asociada a una locación en particular
- configurada en los scripts de inicialización de la base de datos.
- En este MVP hay una sola sesión de calificación por defecto.
- Aunque desde la aplicación móvil este configurada la sesión por defecto
- esto puede ser fácilmente extensible dado que el server permite calificadores
- trabajando en simultaneo cada uno en distintas locaciones.
- Lo mismo ocurre con la funcionalidad de tener dos calificadores trabajando
- de manera simultanea en la misma locación, es decir, la aplicación móvil
- no permite a un calificador unirse a una sesión existente pero puede ser
- fácilmente extensible dado que el server permite esta funcionalidad.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1724799649
-Las sesiones de calificación son almacenadas en la base de datos con un
- identificador generado automáticamente, una fecha de inicio y de fin.
- Las sesiones de calificación van a ser utilizadas en el componente de reportes.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1724799649
-Los componentes involucrados son:
-\end_layout
-
-\begin_layout Itemize
-
-\change_deleted -1783815582 1724799649
-Start Qualification Session: Una sesión de calificación puede ser iniciada
- por un usuario calificador en una locación particular.
- No puede haber dos sesiones de calificación en la misma locación.
- El calificador que crea la sesión se unirá automáticamente a esta.
-\end_layout
-
-\begin_layout Itemize
-
-\change_deleted -1783815582 1724799649
-End Qualification Session: Una sesión de calificación puede ser finalizada
- por un usuario calificador en una locación donde ya se haya iniciado una
- sesión de calificación.
-\end_layout
-
-\begin_layout Itemize
-
-\change_deleted -1783815582 1724799649
-Join Qualification Session: Un calificador puede unirse a una sesión de
- calificación existe si ya a sido iniciada por otro calificador previamente
- y si este no esta asociado a ninguna sesión que no haya finalizado.
-\end_layout
-
-\begin_layout Itemize
-
-\change_deleted -1783815582 1724799649
-Qualification session page: La página de sesión de calificación permite
- a un calificador iniciar o finalizar una sesión de calificación solamente
- en la locación por defecto y no permite a un calificador unirse a una sesión
- que ha iniciado.
-\change_unchanged
-
+Locación de la Sesión de Calificación: Actualmente, solo permite iniciar
+ o finalizar sesiones en la locación por defecto, pero es extensible para
+ permitir más funcionalidades en futuras versiones.
 \end_layout
 
 \begin_layout Section
-
-\change_deleted -1783815582 1725750101
-Arribo de imágenes de vacas
-\change_inserted -1783815582 1725750101
 Sistema de notificación de imágenes
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1725750117
 El diseño del sistema para notificar las imágenes de las vacas se centra
  en varios componentes clave que interactúan para garantizar el procesamiento
  adecuado de las imágenes y su integración con el flujo de calificación
  y observación.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -472,14 +358,10 @@ Diagrama de componentes - imágenes
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted -1783815582 1725743152
 Recepción y Almacenamiento de Imágenes
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1725832683
 El sistema cuenta con una interfaz REST que recibe las imágenes capturadas
  junto con la identificación de la vaca, su posición en la caravana y la
  locación de la manga.
@@ -491,8 +373,6 @@ El sistema cuenta con una interfaz REST que recibe las imágenes capturadas
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1725832683
 Este proceso ocurre de forma independiente a la activación de una sesión
  de calificación.
  Las imágenes se almacenan de inmediato y se asocian a la sesión correspondiente
@@ -502,22 +382,16 @@ Este proceso ocurre de forma independiente a la activación de una sesión
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted -1783815582 1725743175
 Gestor de mensajes de imágenes
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1725832734
 El Gestor de Mensajes de Imágenes distribuye los mensajes generados por
  la llegada de imágenes a los componentes correspondientes, con dos rutas
  principales:
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1725832734
 Mensajes a calificadores: El sistema verifica la locación de las imágenes
  para determinar si hay una sesión de calificación activa.
  Si es así, los mensajes JMS se envían a las colas de los calificadores
@@ -527,8 +401,6 @@ Mensajes a calificadores: El sistema verifica la locación de las imágenes
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1725832734
 Mensajes a observadores: Los observadores reciben las imágenes a través
  de una conexión websocket, independientemente de la existencia de una sesión
  de calificación.
@@ -537,8 +409,6 @@ Mensajes a observadores: Los observadores reciben las imágenes a través
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1725832734
 Esta arquitectura asegura una distribución eficiente de las imágenes: los
  calificadores trabajan en sus respectivas sesiones y los observadores pueden
  ver las imágenes y ejecutar el algoritmo predictivo de CC de manera simultánea,
@@ -546,22 +416,7 @@ Esta arquitectura asegura una distribución eficiente de las imágenes: los
 \end_layout
 
 \begin_layout Subsection
-Calificador
-\change_inserted -1783815582 1725831843
-es
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1725295676
-Cada experto como calificador va a poder consultar cual es la siguiente
- imagen a calificar donde va a poder calificarla o ignorarla y continuar
- con la siguiente, es decir, todos los calificadores van a tener la posibilidad
- de calificar todas las vacas.
-\change_inserted -1783815582 1725295691
-
+Calificadores
 \end_layout
 
 \begin_layout Standard
@@ -594,8 +449,6 @@ Diagrama de componentes: calificador
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1725832819
 Los calificadores reciben las imágenes mediante un sistema de colas JMS,
  que les permite acceder a los trabajos de calificación pendientes.
  El sistema gestiona estos trabajos de manera robusta, asegurando que no
@@ -603,8 +456,6 @@ Los calificadores reciben las imágenes mediante un sistema de colas JMS,
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1725832819
 Para evaluar, los calificadores deben estar asociados a una sesión de calificaci
 ón activa.
  Las imágenes de las vacas se envían únicamente si hay calificadores disponibles.
@@ -615,29 +466,9 @@ Para evaluar, los calificadores deben estar asociados a una sesión de calificac
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1725832819
 Este proceso asegura que las evaluaciones de los calificadores estén organizadas
  y almacenadas correctamente para su uso posterior, como el entrenamiento
- de modelos predictivos de CC.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1725749051
-Cada job de calificación será almacenado en una cola que pertenece a cada
- calificador.
- Las ventaja de utilizar colas es que los mensajes van a estar en la cola
- jms sin importar la cantidad de servidores que haya o los re-inicios del
- mismo.
- Los calificadores van a poder calificar los jobs que arriben después de
- que este se haya unido a la sesión de calificación.
- Es decir, al momento de la captura de una imagen de una vaca esta se enviará
- a calificar solo si existen expertos para recibir esta información.
- Si no hay ningún calificador esta no se enviará a ningún calificador y
- por lo tanto no va a poder ser calificada por un experto.
-\change_unchanged
-
+ de modelos predictivos de BCS.
 \end_layout
 
 \begin_layout Subsection
@@ -645,36 +476,12 @@ Observador
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -1783815582 1725749557
-Los usuarios observadores no podrán iniciar sesión de calificación ni asociarse
- a una sesión de calificación para calificar.
- Como se ha mencionado anteriormente, la aplicación móvil esta asociado
- a la locación por defecto, por lo tanto, los observadores leerán los job
- de las imágenes a través de websocket perteneciente a la locación por defecto
- y las mostrará por pantalla.
- A su vez, en cada móvil de un usuario observador se va a predecir la CC
- de cada vaca si el server informa en el job que el usuario es el que debe
- realiza la predicción.
- Si es así, se ejecuta el algoritmo de predicción y se informa al server
- a través de websocket para almacenar la predicción y ser utilizada para
- los reportes como así también el server informa a través de websocket al
- resto de los observadores cual es el CC calculada.
-\change_inserted -1783815582 1725832913
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1725832951
 Los observadores reciben las imágenes en tiempo real a través de websockets,
  conectados por defecto a una locación específica.
  A diferencia de los calificadores, los observadores no necesitan estar
  asociados a una sesión de calificación.
- Pueden visualizar las imágenes y ejecutar el algoritmo predictivo de CC,
+ Pueden visualizar las imágenes y ejecutar el algoritmo predictivo BCS,
  incluso sin una sesión activa.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -716,212 +523,55 @@ Diagrama de componentes - Observadores
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -1783815582 1725832991
-Cuando un observador recibe una imagen a través del websocket /topic/notificatio
-ns/{locationCode}/{viewerName}, puede suceder una de dos situaciones respecto
- al cálculo del puntaje CC:
-\end_layout
-
-\begin_layout Enumerate
-
-\change_deleted -1783815582 1725832991
-El observador actual debe realizar la predicción: Si el job asigna al observador
- la tarea de predecir el CC, la imagen es enviada para su procesamiento.
- Una vez calculado el puntaje, este se envía:
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-
-\change_deleted -1783815582 1725832991
-A la pantalla del observador para que pueda visualizar el resultado.
- 
-\end_layout
-
-\begin_layout Enumerate
-
-\change_deleted -1783815582 1725832991
-Al servidor a través del websocket (/app/score) para que el puntaje se almacene
- en la base de datos.
-\end_layout
-
-\begin_layout Enumerate
-
-\change_deleted -1783815582 1725832991
-Al websocket (/topic/notifications/{locationCode}/{viewerName}), notificando
- a los demás observadores el puntaje calculado y permitiendo que se actualicen
- los reportes en tiempo real.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\change_deleted -1783815582 1725832991
-Otro observador está realizando la predicción: si el job asigna la predicción
- a otro observador, el dispositivo espera el resultado del puntaje CC a
- través del websocket.
- Cuando llega el puntaje, se muestra en pantalla y los diagramas de reportes
- se actualizan automáticamente.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1725832991
-De este modo, la separación entre calificadores y observadores garantiza
- que ambos roles cumplan con sus funciones de manera eficiente, permitiendo
- que la observación y la predicción de CC se realicen simultáneamente, incluso
- cuando no hay una sesión de calificación activa.Si no hay sesión de calificación
- iniciada, igualmente es posible que los observadores puedan observar y
- que los móviles en backgroud ejecuten el algoritmo de predicción de la
- CC.
- Si no hay observador al momento de que se capture una imagen de una vaca,
- esta no va tener CC predicción.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1725749570
-En la siguiente imagen se puede observar que 
-\emph on
-Image Listener
-\emph default
- envía las imágenes a través del
-\emph on
- websocket /topic/notifications/{locationCode}/{viewerName}
-\emph default
- a la aplicación móvil.
- Esta última posee una suscripción a dicho topic y cuando un job llega se
- muestra en pantalla la imagen.
- Con respecto al score (CC) hay dos opciones:
-\end_layout
-
-\begin_layout Enumerate
-
-\change_deleted -1783815582 1725749570
-Si el job posee como observador a predecir al observador actual, se envía
- la imagen a predecir y luego este componente envía el score a:
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-
-\change_deleted -1783815582 1725749570
-la pantalla para que el observador lo pueda visualizar
-\end_layout
-
-\begin_layout Enumerate
-
-\change_deleted -1783815582 1725749570
-se envía a través de websocket (
-\emph on
-/app/score
-\emph default
-) para notificar al server el score calculado
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-
-\change_deleted -1783815582 1725749570
-el server almacena el score en la base de datos
-\end_layout
-
-\begin_layout Enumerate
-
-\change_deleted -1783815582 1725749570
-lo envía a través de websocket(/topic/notifications/{locationCode}/{viewerName})
- para notificar al resto de los observadores
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\change_deleted -1783815582 1725749570
-se actualizan los diagramas de reporte con el score calculado.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\change_deleted -1783815582 1725749570
-Si el job no posee como observador a predecir al observador actual, se espera
- a que lo calcule otro observador esperando el score a través de websocket
- (
-\emph on
-/topic/notifications/{locationCode}/{viewerName}
-\emph default
-).
- Una vez que llega el score se muestra en pantalla y se actualice el diagrama
- de report.
-\change_inserted -1783815582 1725833001
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1725835849
 Cada dispositivo móvil de los observadores tiene la capacidad de ejecutar
- el algoritmo de predicción de la condición corporal (CC) si así se asigna
- en el job.
+ el algoritmo de predicción del BCS si así se asigna en el job.
  El sistema utiliza un enfoque de round-robin para seleccionar un observador
  de la lista de aquellos que tienen conexiones websocket abiertas, permitiendo
  que este realice la predicción del puntaje BCS.
  El resultado de esta predicción se envía al servidor y se distribuye a
  otros observadores en la misma locación a través de websocket, lo que permite
- que el puntaje CC calculado se actualice en tiempo real en los dispositivos
+ que el puntaje BCS calculado se actualice en tiempo real en los dispositivos
  de todos los observadores activos.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1725835849
 Si no hay observadores disponibles al momento de capturar las imágenes,
  la vaca no obtendrá un puntaje predictivo, ya que el algoritmo de predicción
  debe ejecutarse en los dispositivos de los observadores.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1725835849
 Los observadores asignados ejecutan el algoritmo de predicción en sus dispositiv
 os, y el puntaje calculado se envía a:
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1725835880
 Su pantalla: Para que puedan visualizar el resultado de inmediato.
- 
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1725835893
 El servidor: Donde se almacena en la base de datos para su posterior análisis.
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1725835904
 Los demás observadores conectados: Para que también puedan ver el puntaje
  obtenido.
+
+\change_deleted -1783815582 1726268700
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1725835899
 Si el job designa la tarea de predicción a otro observador, el dispositivo
- del observador inicial espera el resultado del puntaje CC.
+ del observador inicial espera el resultado del puntaje BCS.
  Una vez que llega, el puntaje se muestra automáticamente en su pantalla,
  actualizando simultáneamente los reportes y visualizaciones.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1725835849
-Esta estructura garantiza que el flujo de imágenes, la predicción de CC
+Esta estructura garantiza que el flujo de imágenes, la predicción de BCS
  y la visualización por parte de los observadores se lleven a cabo de manera
  eficiente y sin interrupciones, independientemente de si hay sesiones activas.
 \end_layout
@@ -970,7 +620,7 @@ Cada opción de visualización de reportes, ya sea para sesiones actuales
 \begin_layout Itemize
 Notificaciones en Tiempo Real: En las sesiones actuales, solo los observadores
  reciben notificaciones de las predicciones en tiempo real, lo que les permite
- actuar rápidamente.
+ actualizar el diagrama de torta automáticamente.
  Por otro lado, los calificadores no reciben estas notificaciones en tiempo
  real, ya que su función principal es calificar las vacas.
  Sin embargo, pueden acceder a los datos en cualquier momento, ingresando
@@ -981,7 +631,7 @@ Notificaciones en Tiempo Real: En las sesiones actuales, solo los observadores
 Historial de BCS: Exclusivo para los observadores, el historial de BCS se
  obtiene mediante una llamada REST a la base de datos.
  Este diagrama se actualiza automáticamente con el valor predicho una vez
- que el cálculo del BCS para la sesiñin actual finaliza, garantizando que
+ que el cálculo del BCS para la sesión actual finaliza, garantizando que
  los observadores tengan acceso a la información más precisa y actualizada.
 \end_layout
 
