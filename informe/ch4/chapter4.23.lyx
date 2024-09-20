@@ -1,16 +1,16 @@
 #LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 620
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
 \textclass book
 \use_default_options true
-\maintain_unincluded_children no
+\maintain_unincluded_children false
 \language spanish-mexico
 \language_package default
-\inputencoding auto-legacy
-\fontencoding auto
+\inputencoding auto
+\fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -18,9 +18,7 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_roman_osf false
-\font_sans_osf false
-\font_typewriter_osf false
+\font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -54,9 +52,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
-\use_formatted_ref 0
 \use_minted 0
-\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -72,16 +68,11 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tablestyle default
 \tracking_changes true
 \output_changes false
-\change_bars false
-\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\docbook_table_output 0
-\docbook_mathml_prefix 1
 \author -1783815582 "Cristian"
 \author -997162125 "mhirsch"
 \end_header
@@ -145,8 +136,6 @@ Faltan uno o dos párrafos introductorios:
 
 \change_inserted -1783815582 1724280911
 \begin_inset Float figure
-placement document
-alignment document
 wide false
 sideways false
 status open
@@ -224,8 +213,6 @@ MVP
 
 \begin_layout Standard
 \begin_inset Float figure
-placement document
-alignment document
 wide false
 sideways false
 status open
@@ -280,8 +267,6 @@ Sesión de calificación
 
 \begin_layout Standard
 \begin_inset Float figure
-placement document
-alignment document
 wide false
 sideways false
 status open
@@ -422,8 +407,6 @@ Para que no quede tan trunco y corto el párrafo,
 
 \begin_layout Standard
 \begin_inset Float figure
-placement document
-alignment document
 wide false
 sideways false
 status open
@@ -618,8 +601,6 @@ Calificadores
 
 \begin_layout Standard
 \begin_inset Float figure
-placement document
-alignment document
 wide false
 sideways false
 status open
@@ -709,8 +690,6 @@ Adaptar esto a lo que puse en otra nota más arriba sobre las sessiones.
 
 \begin_layout Standard
 \begin_inset Float figure
-placement document
-alignment document
 wide false
 sideways false
 status open
@@ -874,8 +853,6 @@ acomodar esto de las sesiones activas
 
 \begin_layout Standard
 \begin_inset Float figure
-placement document
-alignment document
 wide false
 sideways false
 status open
@@ -884,7 +861,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Diagrama de componentes-Viewer.drawio.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -979,8 +956,6 @@ En el caso de los observadores,
 
 \begin_layout Standard
 \begin_inset Float figure
-placement document
-alignment document
 wide false
 sideways false
 status open
@@ -989,7 +964,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Diagrama de componentes-Diagram Viewer.drawio.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -1050,8 +1025,6 @@ En el caso de los calificadores,
 
 \begin_layout Standard
 \begin_inset Float figure
-placement document
-alignment document
 wide false
 sideways false
 status open
@@ -1064,7 +1037,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Diagrama de componentes-Qualifier Viewer.drawio (1).png
-	scale 50
+	scale 40
 
 \end_inset
 
