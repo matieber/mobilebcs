@@ -399,7 +399,7 @@ setcounter{page}{1}
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "ch1/chapter1.lyx"
+filename "ch1/chapter1.23.lyx"
 
 \end_inset
 
@@ -409,7 +409,7 @@ filename "ch1/chapter1.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "ch2/chapter2.lyx"
+filename "ch2/chapter2.23.lyx"
 
 \end_inset
 
