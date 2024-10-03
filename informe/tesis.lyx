@@ -419,7 +419,7 @@ filename "ch2/chapter2.23.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "ch3/chapter3.lyx"
+filename "ch3/chapter3.23.lyx"
 
 \end_inset
 
@@ -429,7 +429,7 @@ filename "ch3/chapter3.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "ch4/chapter4.lyx"
+filename "ch4/chapter4.23.lyx"
 
 \end_inset
 
