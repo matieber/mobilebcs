@@ -1,16 +1,16 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
 \textclass book
 \use_default_options true
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language spanish-mexico
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -18,7 +18,9 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -52,7 +54,9 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -68,11 +72,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tablestyle default
 \tracking_changes true
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \author -1783815582 "Cristian"
 \author -997162125 "mhirsch"
 \end_header
@@ -84,76 +93,11 @@ Requerimientos
 \end_layout
 
 \begin_layout Standard
-El sistema 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-No es sólo una aplicación, sinó dos y un componente server, por eso cambio
- a 
-\begin_inset Quotes fld
-\end_inset
-
-El sistema
-\begin_inset Quotes frd
-\end_inset
-
- en vez de la aplicación
-\end_layout
-
-\end_inset
-
- debe ofrecer una solución para automatizar
-\change_inserted -997162125 1726749758
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -997162125 1726750218
-automatizar cuando sólo miramos la app observador
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
- el cálculo 
-\change_inserted -1783815582 1727918899
-del indice BCS del ganado, a través de la aplicación observador y mejorar
- dicho indice con la ayuda del aplicación calificador.
- 
-\change_deleted -1783815582 1727918827
-y mejorar
-\change_inserted -997162125 1726749810
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -997162125 1726750239
-Mejorar cuando además consideramos la app calificador
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
- 
-\change_deleted -1783815582 1727918833
-el índice BSC del ganado,
-\change_inserted -1783815582 1727918841
-.
- El sistema integra
-\change_deleted -1783815582 1727918847
- integrando
-\change_unchanged
- tecnologías de IoT, deep learning y una infraestructura de computación
- Dew.
+El sistema debe ofrecer una solución para automatizar el cálculo del indice BCS del ganado,
+ a través de la aplicación observador y mejorar dicho indice con la ayuda de la aplicación calificador.
+ .
+ El sistema integra tecnologías de IoT,
+ deep learning y una infraestructura de computación Dew.
  A continuación se detallan los requerimientos claves.
 \end_layout
 
@@ -162,39 +106,38 @@ Requerimientos funcionales
 \end_layout
 
 \begin_layout Itemize
-Calidad de Imágenes y Datos de Entrenamiento: La aplicación debe ser capaz
- de capturar y procesar imágenes de alta calidad de vacas de diferentes
- razas lecheras, más allá de la raza Holstein.
- Estas imágenes deben ser etiquetadas con valores de BSC proporcionados
- por expertos en el lugar, quienes puntuarán de manera independiente para
- minimizar la subjetividad.
- Estos datos constituyen el ground truth necesario para entrenar, rediseñar
- y validar los modelos de predicción del BSC.
+Calidad de Imágenes y Datos de Entrenamiento:
+ La aplicación debe ser capaz de capturar y procesar imágenes de alta calidad de vacas de diferentes razas lecheras,
+ más allá de la raza Holstein.
+ Estas imágenes deben ser etiquetadas con valores de BSC proporcionados por expertos en el lugar,
+ quienes puntuarán de manera independiente para minimizar la subjetividad.
+ Estos datos constituyen el ground truth necesario para entrenar,
+ rediseñar y validar los modelos de predicción del BSC.
 \end_layout
 
 \begin_layout Itemize
-Capacidad Predictiva y Almacenamiento de Datos: Una vez que los modelos
- de predicción del BSC estén operativos, la aplicación debe alojar estos
- algoritmos en dispositivos computacionales que se integren al aparejo móvil.
- Estos dispositivos deben ser capaces de ejecutar los algoritmos en tiempo
- real, utilizando computación Dew para reducir la dependencia de la conectividad
- a internet.
- El servidor central debe almacenar datos de los usuarios, sesiones de calificac
-ión, BSC asignadas por expertos, y resultados de los algoritmos predictivos,
- asegurando la disponibilidad de esta información para la generación de
- reportes.
+Capacidad Predictiva y Almacenamiento de Datos:
+ Una vez que los modelos de predicción del BSC estén operativos,
+ la aplicación debe alojar estos algoritmos en dispositivos computacionales que se integren al aparejo móvil.
+ Estos dispositivos deben ser capaces de ejecutar los algoritmos en tiempo real,
+ utilizando computación Dew para reducir la dependencia de la conectividad a internet.
+ El servidor central debe almacenar datos de los usuarios,
+ sesiones de calificación,
+ BSC asignadas por expertos,
+ y resultados de los algoritmos predictivos,
+ asegurando la disponibilidad de esta información para la generación de reportes.
 \end_layout
 
 \begin_layout Itemize
-Integración IoT: El sistema debe ser extensible y preparado para integrarse
- en un entorno IoT.
- Esto implica el desarrollo de una capa de comunicación flexible que permita
- conectar diferentes dispositivos y elementos del entorno ganadero (como
- mangas, corrales, y comederos) a una red.
- Estos dispositivos deben ser capaces de realizar captura automatizada de
- datos y comunicar acciones de contingencia (CAC), estructurándose como
- un Sistema Integral de Gestión de la Información (SIGI) para facilitar
- el monitoreo, planificación, y toma de decisiones.
+Integración IoT:
+ El sistema debe ser extensible y preparado para integrarse en un entorno IoT.
+ Esto implica el desarrollo de una capa de comunicación flexible que permita conectar diferentes dispositivos y elementos del entorno ganadero (como mangas,
+ corrales,
+ y comederos) a una red.
+ Estos dispositivos deben ser capaces de realizar captura automatizada de datos y comunicar acciones de contingencia (CAC),
+ estructurándose como un Sistema Integral de Gestión de la Información (SIGI) para facilitar el monitoreo,
+ planificación,
+ y toma de decisiones.
 \change_inserted -997162125 1726750090
 
 \begin_inset Note Note
@@ -203,8 +146,8 @@ status open
 \begin_layout Plain Layout
 
 \change_inserted -997162125 1726750282
-El requerimiento está bien, sería deseable contar con algo así pero eso
- cae fuera del alcance de tu propuesta.
+El requerimiento está bien,
+ sería deseable contar con algo así pero eso cae fuera del alcance de tu propuesta.
  Tal vez se puede aclarar eso justamente en alguna parte.
 \change_unchanged
 
@@ -221,12 +164,18 @@ status open
 \begin_layout Plain Layout
 
 \change_inserted -1783815582 1727920428
-No recuerdo de donde saque esto, si de algún mail o trabajo anterior.
- Mi idea era que al tener un server es posible realizar integracion en un
- futuro lo que permite que sea extensible y este preparado.
- Puede ser que sea posible pero no este preparado, ¿no? .
- Lo puedo borrar o mover en el capitulo de conclusion como ideas para el
- futuro.~
+No recuerdo de donde saque esto,
+ si de algún mail o trabajo anterior.
+ Mi idea era que al tener un server es posible realizar integracion en un futuro lo que permite que sea extensible y este preparado.
+ Puede ser que sea posible pero no este preparado,
+ ¿no?
+ .
+ Lo puedo borrar o mover en el capitulo de conclusion como ideas para el futuro.~
+\change_inserted -997162125 1728048393
+ Si,
+ yo creo que es lo mejor moverlo a trabajos futuros,
+ porque habría que mostrar más componentes desde lo arquitectónico para validar el requerimiento.
+ El sólo hecho de que exista un componente server pero sin métodos con los que se puedan registrar y gestionar diversos dispositivos tipo sensores y actuadores no alcanza.
 \change_unchanged
 
 \end_layout
@@ -237,14 +186,18 @@ No recuerdo de donde saque esto, si de algún mail o trabajo anterior.
 \end_layout
 
 \begin_layout Itemize
-Aplicación Móvil y Perfiles de Usuario: La aplicación móvil debe soportar
- dos perfiles de usuario: calificadores y observadores.
- Los calificadores, generalmente expertos, deben poder realizar la calificación
- del BSC de cada vaca y visualizar reportes detallados.
- Los observadores, en cambio, tendrán acceso al cálculo automatizado de
- BCS -resultado de una inferencia- y a la visualización de reportes, los
- cuales se actualizan en tiempo real según los últimos datos procesados.
- Además, los dispositivos utilizados por los observadores 
+Aplicación Móvil y Perfiles de Usuario:
+ La aplicación móvil debe soportar dos perfiles de usuario:
+ calificadores y observadores.
+ Los calificadores,
+ generalmente expertos,
+ deben poder realizar la calificación del BSC de cada vaca y visualizar reportes detallados.
+ Los observadores,
+ en cambio,
+ tendrán acceso al cálculo automatizado de BCS -resultado de una inferencia- y a la visualización de reportes,
+ los cuales se actualizan en tiempo real según los últimos datos procesados.
+ Además,
+ los dispositivos utilizados por los observadores 
 \change_inserted -997162125 1726750896
 opcionalmente 
 \change_inserted -1783815582 1727958677
@@ -255,9 +208,20 @@ status open
 \begin_layout Plain Layout
 
 \change_inserted -1783815582 1727958717
-No he realizado la configuración para que el procesamiento predictivo sea
- opcional.
+No he realizado la configuración para que el procesamiento predictivo sea opcional.
  ¿Debería agregar esa funcionalidad en el código?
+
+\change_inserted -997162125 1728049368
+ Dejalo como está,
+ borramos lo que dice 
+\begin_inset Quotes fld
+\end_inset
+
+opcionalmente
+\begin_inset Quotes frd
+\end_inset
+
+
 \change_unchanged
 
 \end_layout
@@ -288,27 +252,26 @@ tar
 \change_inserted -997162125 1726750911
 d
 \change_unchanged
-el algoritmo predictivo, informando tanto a otros observadores como al servidor
- central para el almacenamiento y uso de estos datos en reportes.
+el algoritmo predictivo,
+ informando tanto a otros observadores como al servidor central para el almacenamiento y uso de estos datos en reportes.
 \end_layout
 
 \begin_layout Itemize
-Interfaz de Comunicación y Reportes: La aplicación debe incluir un módulo
- para la generación de reportes en formato gráfico, como diagramas de torta,
- que permita a los usuarios visualizar la distribución del BSC en diferentes
- rangos.
- Estos reportes deben ser accesibles para diferentes sesiones de calificación
- (actual, última finalizada, y anteriores) y se actualizarán en tiempo real.
- La interfaz de usuario debe ser intuitiva, permitiendo la fácil navegación
- entre las diferentes opciones de visualización.
+Interfaz de Comunicación y Reportes:
+ La aplicación debe incluir un módulo para la generación de reportes en formato gráfico,
+ como diagramas de torta,
+ que permita a los usuarios visualizar la distribución del BSC en diferentes rangos.
+ Estos reportes deben ser accesibles para diferentes sesiones de calificación (actual,
+ última finalizada,
+ y anteriores) y se actualizarán en tiempo real.
+ La interfaz de usuario debe ser intuitiva,
+ permitiendo la fácil navegación entre las diferentes opciones de visualización.
 \end_layout
 
 \begin_layout Itemize
-Interfaz de captura de datos: El prototipo incluirá una interfaz de entrada
- diseñada para recibir las imágenes capturadas de las vacas y su correspondiente
- identificación.
- Las imágenes serán tomadas automáticamente por la cámara ubicada en la
- manga mientras las vacas pasan 
+Interfaz de captura de datos:
+ El prototipo incluirá una interfaz de entrada diseñada para recibir las imágenes capturadas de las vacas y su correspondiente identificación.
+ Las imágenes serán tomadas automáticamente por la cámara ubicada en la manga mientras las vacas pasan 
 \change_inserted -997162125 1726751005
 debajo de
 \change_unchanged
@@ -317,29 +280,34 @@ debajo de
 sta
 \change_unchanged
 .
- Simultáneamente, la identificación de cada vaca se obtendrá mediante un
- sistema RFID, asegurando que cada imagen esté correctamente asociada al
- animal correspondiente.
- Esta interfaz permitirá un flujo de datos continuo y preciso, facilitando
- la posterior clasificación y análisis del BSC en tiempo real.
+ Simultáneamente,
+ la identificación de cada vaca se obtendrá mediante un sistema RFID,
+ asegurando que cada imagen esté correctamente asociada al animal correspondiente.
+ Esta interfaz permitirá un flujo de datos continuo y preciso,
+ facilitando la posterior clasificación y análisis del BSC en tiempo real.
 \end_layout
 
 \begin_layout Itemize
-Autorización: definirá los permisos de cada usuario según su rol dentro
- del sistema, diferenciando entre calificadores y observadores.
+Autorización:
+ definirá los permisos de cada usuario según su rol dentro del sistema,
+ diferenciando entre calificadores y observadores.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Calificadores: Pueden iniciar nuevas sesiones de calificación, etiquetar
- imágenes, y acceder a los reportes generados por las sesiones que han realizado.
+Calificadores:
+ Pueden iniciar nuevas sesiones de calificación,
+ etiquetar imágenes,
+ y acceder a los reportes generados por las sesiones que han realizado.
 \end_layout
 
 \begin_layout Itemize
-Observadores: Pueden visualizar los reportes generados, consultar el historial
- de sesiones, y acceder tanto a la predicción en tiempo real del BCS como
- al historial asociado de cada vaca.
- Sin embargo, no tienen permisos para realizar calificaciones.
+Observadores:
+ Pueden visualizar los reportes generados,
+ consultar el historial de sesiones,
+ y acceder tanto a la predicción en tiempo real del BCS como al historial asociado de cada vaca.
+ Sin embargo,
+ no tienen permisos para realizar calificaciones.
 \end_layout
 
 \end_deeper
@@ -352,41 +320,36 @@ Login
 \end_layout
 
 \begin_layout Standard
-La interfaz de usuario permite ingresar el nombre de usuario para iniciar
- sesión sin necesidad de una contraseña.
- Durante el proceso de registro, los usuarios tienen la opción de seleccionar
- su rol, ya sea como calificador u observador.
+La interfaz de usuario permite ingresar el nombre de usuario para iniciar sesión sin necesidad de una contraseña.
+ Durante el proceso de registro,
+ los usuarios tienen la opción de seleccionar su rol,
+ ya sea como calificador u observador.
 \end_layout
 
 \begin_layout Standard
-El flujo de creación de usuario comienza desde la página de usuario en la
- aplicación móvil.
- Los usuarios crean una nueva cuenta ingresando su nombre y seleccionando
- su rol.
- Este proceso garantiza que el nombre de usuario sea único y que el usuario
- sea identificado correctamente como calificador u observador.
- Tras la creación de la cuenta, los usuarios inician sesión ingresando simplemen
-te su nombre, lo que les permite acceder a las funcionalidades específicas
- de su rol.
+El flujo de creación de usuario comienza desde la página de usuario en la aplicación móvil.
+ Los usuarios crean una nueva cuenta ingresando su nombre y seleccionando su rol.
+ Este proceso garantiza que el nombre de usuario sea único y que el usuario sea identificado correctamente como calificador u observador.
+ Tras la creación de la cuenta,
+ los usuarios inician sesión ingresando simplemente su nombre,
+ lo que les permite acceder a las funcionalidades específicas de su rol.
 \end_layout
 
 \begin_layout Standard
-El sistema clasifica a los usuarios según su rol, lo que determina las funciones
- y vistas a las que tienen acceso.
+El sistema clasifica a los usuarios según su rol,
+ lo que determina las funciones y vistas a las que tienen acceso.
  Los calificadores pueden realizar nuevas calificaciones y etiquetar imágenes,
- mientras que los observadores tienen acceso a la visualización de reportes
- y predicciones en tiempo real, sin la posibilidad de modificar datos.
- Esta diferenciación asegura que cada usuario interactúe con el sistema
- de acuerdo con sus funciones específicas, proporcionando una experiencia
- personalizada.
+ mientras que los observadores tienen acceso a la visualización de reportes y predicciones en tiempo real,
+ sin la posibilidad de modificar datos.
+ Esta diferenciación asegura que cada usuario interactúe con el sistema de acuerdo con sus funciones específicas,
+ proporcionando una experiencia personalizada.
 \end_layout
 
 \begin_layout Standard
-La sesión de usuario es fundamental para asociar las calificaciones realizadas
- a la cuenta del usuario.
- Esto permite al sistema rastrear y organizar las calificaciones, así como
- gestionar el historial de reportes y predicciones, mostrando sólo la informació
-n relevante para cada usuario.
+La sesión de usuario es fundamental para asociar las calificaciones realizadas a la cuenta del usuario.
+ Esto permite al sistema rastrear y organizar las calificaciones,
+ así como gestionar el historial de reportes y predicciones,
+ mostrando sólo la información relevante para cada usuario.
 \end_layout
 
 \begin_layout Subsection
@@ -394,29 +357,29 @@ Sesión de calificación
 \end_layout
 
 \begin_layout Standard
-Las sesiones de calificación son esenciales para gestionar y registrar datos
- que forman parte del ground truth para el entrenamiento de un modelo de
- aprendizaje profundo.
- Durante una sesión de calificación, un experto, conocido como calificador,
- evalúa de a una por vez, un grupo de vacas usando la aplicación móvil.
- En estas sesiones, uno o más calificadores participan en la evaluación
- de cada vaca, y sus calificaciones se almacenan para su uso posterior,
+Las sesiones de calificación son esenciales para gestionar y registrar datos que forman parte del ground truth para el entrenamiento de un modelo de aprendizaje profundo.
+ Durante una sesión de calificación,
+ un experto,
+ conocido como calificador,
+ evalúa de a una por vez,
+ un grupo de vacas usando la aplicación móvil.
+ En estas sesiones,
+ uno o más calificadores participan en la evaluación de cada vaca,
+ y sus calificaciones se almacenan para su uso posterior,
  como en el entrenamiento de modelos de predicción.
 \end_layout
 
 \begin_layout Standard
-La gestión de las sesiones de calificación es clave para garantizar que
- las evaluaciones se registren y organicen adecuadamente.
- Un calificador inicia una sesión en una locación (campo) específica, y
- se le asocia automáticamente a esa sesión.
+La gestión de las sesiones de calificación es clave para garantizar que las evaluaciones se registren y organicen adecuadamente.
+ Un calificador inicia una sesión en una locación (campo) específica,
+ y se le asocia automáticamente a esa sesión.
  No se permite la existencia de más de una sesión activa en la misma locación,
  aunque es posible que varios calificadores participen en una misma sesión.
 \end_layout
 
 \begin_layout Standard
-Las sesiones de calificación se almacenan con un identificador único y registran
- las fechas de inicio y finalización, lo que es crucial para generar reportes
- detallados sobre las evaluaciones realizadas.
+Las sesiones de calificación se almacenan con un identificador único y registran las fechas de inicio y finalización,
+ lo que es crucial para generar reportes detallados sobre las evaluaciones realizadas.
 \end_layout
 
 \begin_layout Standard
@@ -424,27 +387,28 @@ Los casos de uso incluyen:
 \end_layout
 
 \begin_layout Itemize
-Inicio de Sesión de Calificación: Un calificador inicia una sesión en una
- locación específica y se asocia automáticamente a esta sesión.
+Inicio de Sesión de Calificación:
+ Un calificador inicia una sesión en una locación específica y se asocia automáticamente a esta sesión.
 \end_layout
 
 \begin_layout Itemize
-Finalización de Sesión de Calificación: Un calificador finaliza una sesión
- previamente iniciada, marcando el cierre de la sesión en el sistema.
+Finalización de Sesión de Calificación:
+ Un calificador finaliza una sesión previamente iniciada,
+ marcando el cierre de la sesión en el sistema.
 \end_layout
 
 \begin_layout Itemize
-Unirse a una Sesión de Calificación: Un calificador puede unirse a una sesión
- activa en su locación si no ha iniciado su propia sesión.
+Unirse a una Sesión de Calificación:
+ Un calificador puede unirse a una sesión activa en su locación si no ha iniciado su propia sesión.
  Aunque la aplicación móvil actual no permite unirse a sesiones activas,
- el sistema está diseñado para manejar esta funcionalidad, permitiendo su
- extensión futura.
+ el sistema está diseñado para manejar esta funcionalidad,
+ permitiendo su extensión futura.
 \end_layout
 
 \begin_layout Itemize
-Locación de la Sesión de Calificación: La administración de locaciones no
- está implementada en la aplicación móvil, aunque el sistema soporta estas
- opciones para facilitar futuras mejoras.
+Locación de la Sesión de Calificación:
+ La administración de locaciones no está implementada en la aplicación móvil,
+ aunque el sistema soporta estas opciones para facilitar futuras mejoras.
 \end_layout
 
 \begin_layout Standard
@@ -459,102 +423,42 @@ Sistema de notificación de imágenes
 \end_layout
 
 \begin_layout Standard
-El sistema recibe imágenes de vacas y procesa la información asociada para
- la calificación y 
-\change_inserted -1783815582 1727958969
-visualización
-\change_deleted -1783815582 1727958965
-observación
-\change_inserted -997162125 1726753513
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_deleted -1783815582 1727958983
-visualización?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
- del BCS.
- El flujo comienza cuando las imágenes de cada vaca, junto con su metadata
- son transmitidas al servidor.
- El servidor, que cuenta con una interfaz de recepción de datos, es responsable
- de recibir y procesar esta información.
+El sistema recibe imágenes de vacas y procesa la información asociada para la calificación y visualización del BCS.
+ El flujo comienza cuando las imágenes de cada vaca,
+ junto con su metadata son transmitidas al servidor.
+ El servidor,
+ que cuenta con una interfaz de recepción de datos,
+ es responsable de recibir y procesar esta información.
  
 \end_layout
 
 \begin_layout Itemize
-Sistema de Envío: Este componente es responsable de transmitir las imágenes
- de las vacas al servidor, junto con la identificación de la vaca, posición
- en la caravana y conjunto de imágenes.
- El sistema de envío incluye un sistema RFID que captura automáticamente
- la identificación de la vaca cuando pasa por la manga, sincronizando esta
- información con la captura de la imagen.
- De esta manera, se asegura que cada imagen esté correctamente asociada
- a la vaca correspondiente.
- Cabe destacar que el sistema de captura de imágenes, queda fuera del alcance
- de este proyecto
-\change_inserted -997162125 1726753613
-.
-\change_unchanged
-
+Sistema de Envío:
+ Este componente es responsable de transmitir las imágenes de las vacas al servidor,
+ junto con la identificación de la vaca,
+ posición en la caravana y conjunto de imágenes.
+ El sistema de envío incluye un sistema RFID que captura automáticamente la identificación de la vaca cuando pasa por la manga,
+ sincronizando esta información con la captura de la imagen.
+ De esta manera,
+ se asegura que cada imagen esté correctamente asociada a la vaca correspondiente.
+ Cabe destacar que el sistema de captura de imágenes,
+ queda fuera del alcance de este proyecto.
 \end_layout
 
 \begin_layout Itemize
-Recepción y Almacenamiento de Imágenes: Las imágenes y su meta-data asociada
- se reciben en el servidor donde son almacenadas.
- Esta interfaz permitirá un flujo de datos continuo y preciso, facilitando
- la posterior clasificación y análisis del BSC en tiempo real.
+Recepción y Almacenamiento de Imágenes:
+ Las imágenes y su meta-data asociada se reciben en el servidor donde son almacenadas.
+ Esta interfaz permitirá un flujo de datos continuo y preciso,
+ facilitando la posterior clasificación y análisis del BSC en tiempo real.
 \end_layout
 
 \begin_layout Itemize
-Gestor de mensajes de imágenes: Una vez que las imágenes y su meta-data
- han sido almacenadas, se genera una notificación
-\change_inserted -1783815582 1727960143
- interna entre el servidor y la aplicación móvil
-\change_unchanged
- 
-\change_inserted -1783815582 1727959926
-que permite un flujo continue de imágenes hacia los calificadores y observadores.
- 
-\change_deleted -1783815582 1727959961
-para cada imagen que se coloca en un sistema de seguimiento.
- Esta notificación está destinada tanto para los calificadores como para
- los observadores, quienes recibirán las imágenes en tiempo real a través
- de un sistema de notificación
-\change_inserted -1783815582 1727959971
- Los calificadores pueden acceder a las imágenes solicitando la siguiente
- disponible dentro de su sesión activa, mientras que los observadores reciben
- automáticamente las imágenes en tiempo real, acompañadas de la metadata
- correspondiente.
-\change_inserted -997162125 1726753736
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_deleted -1783815582 1727960107
-Esto del sistema de notificación habría que aclarar que no es el clásico
- sistema de notificación presente en las app móviles que indica con un icono
- la existencia del mensaje en la barra de estado, sino que es un mecanismo
- de comunicación interno entre el servidor y la app móvil.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-.
+Gestor de mensajes de imágenes:
+ Una vez que las imágenes y su meta-data han sido almacenadas,
+ se genera una notificación interna entre el servidor y la aplicación móvil que permite un flujo continuo de imágenes hacia los calificadores y observadores.
+ Los calificadores pueden acceder a las imágenes solicitando la siguiente disponible dentro de su sesión activa,
+ mientras que los observadores reciben automáticamente las imágenes en tiempo real,
+ acompañadas de los metadatos correspondientes.
 \end_layout
 
 \begin_layout Subsection
@@ -563,17 +467,16 @@ Calificadores
 
 \begin_layout Standard
 Los calificadores son expertos especializados en la evaluación del BCS,
- ya sea a partir de imágenes recibidas o mediante la observación directa
- de las vacas en la manga.
- Con base en su experiencia y conocimiento, asignan una puntuación de BCS
- a cada vaca evaluada, la cual es almacenada.
- Al ingresar el puntaje, este se asocia tanto a la vaca como a la sesión
- de calificación correspondiente, lo que garantiza una gestión de datos
- organizada y trazable.
- Esta información resulta fundamental para entrenar y mejorar continuamente
- los modelos predictivos de BCS en futuras iteraciones del sistema.
- Además de asignar las puntuaciones, los calificadores tienen la capacidad
- de visualizar reportes.
+ ya sea a partir de imágenes recibidas o mediante la observación directa de las vacas en la manga.
+ Con base en su experiencia y conocimiento,
+ asignan una puntuación de BCS a cada vaca evaluada,
+ la cual es almacenada.
+ Al ingresar el puntaje,
+ este se asocia tanto a la vaca como a la sesión de calificación correspondiente,
+ lo que garantiza una gestión de datos organizada y trazable.
+ Esta información resulta fundamental para entrenar y mejorar continuamente los modelos predictivos de BCS en futuras iteraciones del sistema.
+ Además de asignar las puntuaciones,
+ los calificadores tienen la capacidad de visualizar reportes.
 \end_layout
 
 \begin_layout Subsection
@@ -581,10 +484,7 @@ Observadores
 \end_layout
 
 \begin_layout Standard
-Los usuarios con rol observador.
- pueden visualizar la predicción del BCS
-\change_inserted -997162125 1726754050
- calculado en el servidor
+Los usuarios con rol observador pueden visualizar la predicción del BCS
 \change_inserted -1783815582 1727960178
  
 \begin_inset Note Note
@@ -593,10 +493,13 @@ status open
 \begin_layout Plain Layout
 
 \change_inserted -1783815582 1727960225
-La prediccion es calculada en los dispositivos de los observadores, no en
- el servidor.
- el servidor es el responsable de recibir las predicciones de los dispositivos
- de los observadores y propagarla al resto de los observadores.
+La prediccion es calculada en los dispositivos de los observadores,
+ no en el servidor.
+ el servidor es el responsable de recibir las predicciones de los dispositivos de los observadores y propagarla al resto de los observadores.
+
+\change_inserted -997162125 1728049731
+ Ok.
+ Tenía en mente lo de la opcionalidad de los observadores de participar en el cálculo por eso creí que el server también estaba habilitado como un nodo más que computa el bcs.
 \change_unchanged
 
 \end_layout
@@ -607,26 +510,34 @@ La prediccion es calculada en los dispositivos de los observadores, no en
 \change_inserted -997162125 1726754050
  y
 \change_deleted -997162125 1726754050
-, los observadores
+,
+ los observadores
 \change_unchanged
  también tendrán acceso a diversos reportes
 \change_inserted -997162125 1726754134
-, por ejemplo, evolución en el tiempo del BCS de un animal e historial de
- BCS de un rodeo
+,
+ por ejemplo,
+ evolución en el tiempo del BCS de un animal e historial de BCS de un rodeo
 \change_unchanged
 .
 
 \change_inserted -997162125 1726754344
- Opcionalmente
-\change_inserted -1783815582 1727960398
  
+\change_deleted -997162125 1728049773
+ 
+\change_inserted -1783815582 1727960398
+
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
 
 \change_inserted -1783815582 1727960409
-Como mencione anteriormente, no es opcional por el momento
+Como mencione anteriormente,
+ no es opcional por el momento
+\change_inserted -997162125 1728049768
+.
+ Ok
 \change_unchanged
 
 \end_layout
@@ -634,12 +545,9 @@ Como mencione anteriormente, no es opcional por el momento
 \end_inset
 
 
-\change_inserted -997162125 1726754344
- los dispositivos de usuarios observadores podrán participar de la ejecución
- del algoritmo de predicción del BCS aportando recursos computacionales,
- acción que no afectará la experiencia de usuario con la app y cuyo resultado
- se distribuirá automáticamente por el sistema entre otros observadores
- presentes.
+\change_inserted -997162125 1728049798
+ Los dispositivos de usuarios observadores por defecto participan de la ejecución del algoritmo de predicción del BCS aportando recursos computacionales,
+ acción que no afecta la experiencia de usuario con la app y cuyo resultado se distribuirá automáticamente por el sistema entre otros observadores presentes.
 \change_unchanged
 
 \end_layout
@@ -649,11 +557,8 @@ Reportes
 \end_layout
 
 \begin_layout Standard
-El sistema de reportes proporciona a calificadores y observadores acceso
- a la visualización de datos sobre las evaluaciones del BCS predichas por
- el algoritmo de predicción.
- Estos reportes se presentan en diagramas de torta que agrupan las vacas
- dentro de los siguientes rangos de puntaje:
+El sistema de reportes proporciona a calificadores y observadores acceso a la visualización de datos sobre las evaluaciones del BCS predichas por el algoritmo de predicción.
+ Estos reportes se presentan en diagramas de torta que agrupan las vacas dentro de los siguientes rangos de puntaje:
 \end_layout
 
 \begin_layout Itemize
@@ -690,35 +595,32 @@ Visualización de Reportes en Sesiones Actuales:
 
 \begin_deeper
 \begin_layout Itemize
-Los observadores pueden acceder a reportes que se actualizan automáticamente
- durante la sesión de calificación en curso.
- Los valores de BCS generados por el algoritmo se reflejan en los diagramas
- de torta en tiempo real, lo que permite un monitoreo continuo del estado
- de las vacas.
+Los observadores pueden acceder a reportes que se actualizan automáticamente durante la sesión de calificación en curso.
+ Los valores de BCS generados por el algoritmo se reflejan en los diagramas de torta en tiempo real,
+ lo que permite un monitoreo continuo del estado de las vacas.
 \end_layout
 
 \begin_layout Itemize
-Los calificadores tienen la opción de visualizar los reportes cuando lo
- consideren necesario.
- Sin embargo, dado que su función principal es la evaluación directa de
- las vacas, los diagramas se actualizan solo cuando el calificador decide
- consultar esta información, asegurando que accedan a los datos más recientes
- en ese momento.
+Los calificadores tienen la opción de visualizar los reportes cuando lo consideren necesario.
+ Sin embargo,
+ dado que su función principal es la evaluación directa de las vacas,
+ los diagramas se actualizan solo cuando el calificador decide consultar esta información,
+ asegurando que accedan a los datos más recientes en ese momento.
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Acceso a Reportes de Sesiones Anteriores: Los usuarios pueden acceder a
- los reportes de sesiones de calificación terminadas, donde pueden consultar
- los puntajes BCS registrados durante esas sesiones.
+Acceso a Reportes de Sesiones Anteriores:
+ Los usuarios pueden acceder a los reportes de sesiones de calificación terminadas,
+ donde pueden consultar los puntajes BCS registrados durante esas sesiones.
 \end_layout
 
 \begin_layout Itemize
-Historial BCS para Observadores: Los observadores, además de ver los reportes
- actuales, pueden acceder al historial de predicciones BCS de vacas en sesiones
- de calificación anteriores, lo que les permite tener una visión más amplia
- del progreso o cambios en la condición corporal de las vacas a lo largo
- del tiempo.
+Historial BCS para Observadores:
+ Los observadores,
+ además de ver los reportes actuales,
+ pueden acceder al historial de predicciones BCS de vacas en sesiones de calificación anteriores,
+ lo que les permite tener una visión más amplia del progreso o cambios en la condición corporal de las vacas a lo largo del tiempo.
 \end_layout
 
 \end_body
