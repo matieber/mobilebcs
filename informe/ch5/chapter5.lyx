@@ -269,6 +269,67 @@ noprefix "false"
  Adicionalmente, se trabajará con la especialista colaboradora, en la identifica
 ción de las mejores estrategias para el plan de negocios (clientes profesionales
 /productores, socios claves, precio de mercado etc).
+\change_inserted -1783815582 1728866362
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1728866378
+MOVIDO DEL CAPÍTULO 3.
+ ARREGLAR
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1728866358
+Integración IoT: El sistema debe ser extensible y preparado para integrarse
+ en un entorno IoT.
+ Esto implica el desarrollo de una capa de comunicación flexible que permita
+ conectar diferentes dispositivos y elementos del entorno ganadero (como
+ mangas, corrales, y comederos) a una red.
+ Estos dispositivos deben ser capaces de realizar captura automatizada de
+ datos y comunicar acciones de contingencia (CAC), estructurándose como
+ un Sistema Integral de Gestión de la Información (SIGI) para facilitar
+ el monitoreo, planificación, y toma de decisiones.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1728866358
+El requerimiento está bien, sería deseable contar con algo así pero eso
+ cae fuera del alcance de tu propuesta.
+ Tal vez se puede aclarar eso justamente en alguna parte.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1728866358
+No recuerdo de donde saque esto, si de algún mail o trabajo anterior.
+ Mi idea era que al tener un server es posible realizar integracion en un
+ futuro lo que permite que sea extensible y este preparado.
+ Puede ser que sea posible pero no este preparado, ¿no? .
+ Lo puedo borrar o mover en el capitulo de conclusion como ideas para el
+ futuro.~ Si, yo creo que es lo mejor moverlo a trabajos futuros, porque
+ habría que mostrar más componentes desde lo arquitectónico para validar
+ el requerimiento.
+ El sólo hecho de que exista un componente server pero sin métodos con los
+ que se puedan registrar y gestionar diversos dispositivos tipo sensores
+ y actuadores no alcanza.
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_body
