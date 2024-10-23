@@ -74,135 +74,585 @@
 \html_css_as_file 0
 \html_be_strict false
 \author -1783815582 "Cristian"
-\author -997162125 "mhirsch"
 \end_header
 
 \begin_body
 
 \begin_layout Chapter
 
-\change_inserted -997162125 1699375880
-Conclusiones, Limitaciones y Trabajos 
-\change_unchanged
-Futur
-\change_deleted -997162125 1699375870
-a
-\change_inserted -997162125 1699375870
-o
-\change_unchanged
-s
-\change_deleted -997162125 1699375872
- funcionalidades
-\change_unchanged
-
+\change_inserted -1783815582 1729210645
+Resultados
 \end_layout
 
 \begin_layout Section
-Login
+
+\change_inserted -1783815582 1729210655
+Configuración del Sistema 
 \end_layout
 
 \begin_layout Standard
-En futuras implementaciones puede agregarse una capa de seguridad para el
- login dedibo a que actualmente solo se creo este componente para poder
- definir el tipo de usuario y asociar una calificación de una vaca a un
- determinado experto.
+
+\change_inserted -1783815582 1729210653
+Este apartado explicará cómo se configuran los diversos componentes del
+ sistema, incluidos el servidor, base de datos y las dependencias necesarias
+ para que el sistema funcione correctamente.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1729212775
+Configuración del Servidor
+\end_layout
+
+\begin_layout Subsubsection
+
+\change_inserted -1783815582 1729212802
+Requisitos previos
 \end_layout
 
 \begin_layout Standard
-Ademas, en futuras implementaciones puede ser posible limitar que personas
- pueden registrarse como calificador debido a que una sola aplicación móvil
- soporta un usuario calificador y observador, cualquier persona puede registrars
-e como calificador sin ser un experto.
-\end_layout
 
-\begin_layout Section
-Calificador
-\end_layout
-
-\begin_layout Standard
-En futuras versiones del server va a ser posible que los calificadores compartan
- la misma cola jms para repartirse la calificación y darse de baja de una
- sesión de calificación y conectarse a otra.
- Otra posibilidad para futuras versiones es que la sesión pueda configurase
- para que los usuarios calificadores se repartan las caravanas a calificar.
- Para lograr esto va a ser necesario que la sesión de calificación tenga
- un tipo de calificación identificando 
-\change_inserted -1783815582 1702329909
-pu
-\change_deleted -1783815582 1702329908
-u
-\change_unchanged
-eden repartirse entre calificadores o que todos los calificadores puedan
- calificar todas las vacas.
-\end_layout
-
-\begin_layout Section
-Arribo de imágenes de vacas
-\end_layout
-
-\begin_layout Standard
-El server tiene la posibilidad de recibir y almacenar un conjunto de imágenes
- por cada vaca pero solo la primera será la que el observador y el calificador
- reciban.
- Queda para futuros proyectos la posibilidad de enviar todas las imágenes
- a los calificadores y/o observadores.
- 
-\end_layout
-
-\begin_layout Section
-Aplicación batch
-\end_layout
-
-\begin_layout Standard
-Esta aplicación se definió para este proyecto pero queda fuera de alcance
- de este trabajo.
- La aplicación batch deberá tener una locación preconfigurada que será utilizada
- para notificar al server de donde proviene el job.
- Leerá las imágenes tomadas a la vaca, armará el job y lo enviará al server.
- Este procedimiento por cada vaca.
- La cantidad de imágenes a tomar serán configuración de la aplicación batch.
- La primera imagen de cada job (elemento 0 de la lista) se va a suponer
- que va a poseer el número de caravana, por lo tanto, está imagen(la primera
- de la lista) es la única que se enviará al calificador a la hora de calificar
- y al observador.
- 
-\end_layout
-
-\begin_layout Section
-Calificador
-\end_layout
-
-\begin_layout Standard
-Los calificadores no pueden calificar job anteriores a la unión/creación
- de la sesión de calificación, es decir, que los jobs que existan antes
- del inicio de sesión no serán calificados por nadie.
- Aquellos que arriben antes de que un calificador se una a una sesión de
- calificación tampoco van a ser calificados.
-\end_layout
-
-\begin_layout Standard
-Para lograr que los jobs generados antes del inicio de sesión de calificación
- o antes de que el usuario se uniera a una sesión existente se envíen a
- la cola de calificación de cada usuario va a ser necesario que cuando se
- inicia sesión de calificación se carguen todos los jobs desde la base de
- datos en la locación específica de la sesión a la cola jms del usuario.
- Esto puede provocar que:
+\change_inserted -1783815582 1729212803
+Antes de proceder con cualquiera de las opciones, asegúrate de tener instalado:
 \end_layout
 
 \begin_layout Itemize
-si se crea la cola del usuario calificador y luego se asigna a la sesión,
- mientras se envíen los jobs desde la base a la cola, puedan llegar nuevos
- job y se ubiquen antes de los jobs de la base.
-\end_layout
 
-\begin_layout Itemize
-si se crea la cola del usuario calificador, se agregan los jobs de la base
- a la cola y luego se asigna a la sesión de calificación, pueden llegar
- job nuevos que no fueron leídos de la base y que tampoco se haya enviado
- a la cola porque no se había asignado a la sesión.
+\change_inserted -1783815582 1729212803
+Java 11: Es obligatorio para ejecutar la aplicación.
+ Puedes verificar tu versión de Java ejecutando el siguiente comando:
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -1783815582 1729212818
+java -version 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729212803
+Si no tienes Java 11, puedes instalarlo desde el sitio oficial de Oracle
+ o mediante un gestor de paquetes como apt, brew, o sdkman.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729212803
+Maven (si vas a compilar desde el código fuente): Para compilar el proyecto
+ si tienes acceso al código fuente.
+ Para instalar Maven en Linux o macOS:
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729212851
+sudo apt install maven # En Ubuntu/Debian
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729212803
+brew install maven # En macOS con Homebrew
+\end_layout
+
+\begin_layout Subsubsection
+
+\change_inserted -1783815582 1729211631
+Configurar ActiveMQ Artemis
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211631
+Descarga ActiveMQ Artemis
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211394
+Ve al sitio oficial de ActiveMQ Artemis 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211411
+Descarga la última versión del broker.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211431
+Instalar ActiveMQ Artemis
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211449
+Descomprime el archivo descargado en un directorio de tu elección.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211450
+Ve al directorio bin dentro de la carpeta de ActiveMQ Artemis.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211467
+Ejecuta el siguiente comando para crear una nueva instancia del broker.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211467
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211475
+./artemis create mybroker --user admin --password admin 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211507
+Esto creará una instancia de ActiveMQ con el nombre mybroker
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211520
+Iniciar el broker
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211546
+Ve al directorio mybroker/bin y ejecuta:
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211572
+./artemis run 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211650
+El broker estará corriendo por defecto en el puerto 61616
+\end_layout
+
+\begin_layout Subsubsection
+
+\change_inserted -1783815582 1729211695
+Configurar MySQL
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211706
+Descargar e instalar MySQL
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211708
+Descarga MySQL 8.0 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211723
+Instalarlo siguiendo las instrucciones del assistente.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211733
+Configurar MySQL
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211762
+Una vez instalado, iniciar el servidor MySQL
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211770
+mysql.server start # en macOS oLinux 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211776
+net start mysql # en Windows 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211782
+Acceder a MySQL
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211850
+Abre el cliente de MySQL
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211859
+mysql -u root -p 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211888
+Cuando se te solicite, introduce la contraseña de root
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211896
+Crear la base de datos
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211912
+Ejecuta el siguiente comando para crear el esquema necesario
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729212897
+CREATE SCHEMA server
+\end_layout
+
+\begin_layout Subsubsection
+
+\change_inserted -1783815582 1729213107
+Ejecutar la aplicación
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1729213107
+(mover la infra atras)
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729212999
+Opción 1
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729213013
+Si prefieres usar Docker, sigue los siguientes pasos:
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1783815582 1729213026
+Iniciar la cola de mensajería con Docker_
+\begin_inset Newline newline
+\end_inset
+
+docker run -p 61616:61616 -e AMQ_USER=admin -e AMQ_PASSWORD=admin quay.io/artemis
+cloud/activemq-artemis-broker 
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1783815582 1729213055
+Iniciar la base de datos con Docker:
+\begin_inset Newline newline
+\end_inset
+
+docker run --name=mysql-db -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 mysql:8.0
+ 
+\begin_inset Newline newline
+\end_inset
+
+docker exec -it mysql-db mysql -p
+\begin_inset Newline newline
+\end_inset
+
+ create schema server; 
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1783815582 1729213063
+Ejecutar el servidor con Docker: Si tienes el archivo server.jar ya compilado,
+ puedes ejecutarlo directamente con Docker:
+\begin_inset Newline newline
+\end_inset
+
+docker run -v $(pwd)/server.jar:/app/server.jar -p 8080:8080 openjdk:11 java
+ -jar /app/server.jar 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729213140
+Opcion 2
+\begin_inset Newline newline
+\end_inset
+
+Si tienes acceso al código fuente del proyecto y prefieres compilarlo y
+ ejecutarlo en un entorno de desarrollo local, sigue los pasos a continuación:
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1783815582 1729213153
+Clonar el repositorio del proyecto 
+\begin_inset Newline newline
+\end_inset
+
+git clone <URL del repositorio>
+\begin_inset Newline newline
+\end_inset
+
+cd <directorio del proyecto> 
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1783815582 1729213168
+Compilar el proyecto usando Maven: Asegúrate de que Maven está instalado
+ y luego ejecuta el siguiente comando:
+\begin_inset Newline newline
+\end_inset
+
+mvn clean install 
+\begin_inset Newline newline
+\end_inset
+
+Esto generará un archivo server.jar en el directorio target.
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1783815582 1729213181
+Ejecutar la aplicación: Una vez compilado, ejecuta el JAR generado con Java:
+\begin_inset Newline newline
+\end_inset
+
+java -jar target/server.jar 
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1783815582 1729213196
+Configuración adicional del servidor: La aplicación se ejecutará por defecto
+ en el puerto 8080.
+ Si necesitas cambiar el puerto, puedes hacerlo modificando el archivo de
+ configuración o pasando parámetros adicionales en la línea de comandos.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729213201
+Opción 3
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729213218
+Si ya tienes el archivo server.jar y no necesitas compilarlo, simplemente
+ puedes ejecutar el servidor usando el siguiente comando:
+\begin_inset Newline newline
+\end_inset
+
+java -jar server.jar 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729213223
+Este comando requiere que tengas Java 11 instalado en tu máquina.
+ La aplicación se iniciará en el puerto 8080 por defecto.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1729210681
+Configuración del Cliente (Aplicación Flutter)
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729210653
+En esta sección se detallará cómo configurar la aplicación móvil desarrollada
+ con Flutter para interactuar con el sistema.
+\end_layout
+
+\begin_layout Subsubsection
+
+\change_inserted -1783815582 1729210698
+Configuración del Host y Puerto del Servidor
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729210653
+La aplicación Flutter permite configurar el host y el puerto del servidor
+ al que se conectará.
+ Las variables serverHost y serverPort deben ser definidas de la siguiente
+ manera:
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729210725
+serverHost: Si está vacío, la aplicación utilizará por defecto:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729210730
+localhost en entornos de iOS.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729210755
+10.0.2.2 en entornos de Android (para emuladores).
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729210802
+serverPort: Si está vacío, la aplicación usará el puerto 8080 como valor
+ por defecto.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729210804
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729210834
+Esto garantiza que la aplicación funcione por defecto en ambientes de desarollo
+ para emuladores de iOS y Android.
+\end_layout
+
+\begin_layout Subsubsection
+
+\change_inserted -1783815582 1729210972
+Configuración de Python 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729210858
+La aplicación depende de un entorno Python 3.8 para ejecutar scripts específicos.
+ Para configurar el entorno Python:
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729210867
+Definir la ruta de Python 3.8 en el sistema:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211018
+Para sistemas Linux: 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211019
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211024
+export PYTHON_3_8_HOME='/home/linuxbrew/.linuxbrew/opt/python@3.8/bin' 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211019
+export PATH=$PATH:$PYTHON_3_8_HOME 
+\end_layout
+
+\begin_layout Subsubsection
+
+\change_inserted -1783815582 1729210993
+Configuración de Escritura en Android
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211126
+Para permitir que la aplicación móvil interactúe con el sistema de archivos
+ del dispositivo Android, se deben realizar las siguientes configuraciones:
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211132
+Copiar el archivo assets/empty_image.png al directorio sdcard/Download/ del
+ emulador o dispositivo Android.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1729211146
+Asegurarse de que la aplicación tenga permisos de escritura en el sistema
+ de archivos del dispositivo.
+ Esto se puede configurar desde los ajustes del emulador o del dispositivo
+ Android en la opción de permisos de la aplicación calificator.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1729211147
 \begin_inset Separator plain
 \end_inset
 
@@ -210,65 +660,18 @@ si se crea la cola del usuario calificador, se agregan los jobs de la base
 \end_layout
 
 \begin_layout Section
-Observadores
+
+\change_inserted -1783815582 1729211163
+Ejecución de la Aplicación
 \end_layout
 
 \begin_layout Standard
-La predicción de la CC es realizada por los observadores, es decir, es realizada
- en la aplicación móvil.
- Si no hay observadores no es posible realizar la predicción.
- Para poder realizarla sin la necesidad de observadores se ejecutar el algoritmo
- de predicción en los calificadores y también es posible implementar el
- algoritmo de predicción en el server para que realice la predicción de
- aquellos jobs que no fueron entregados para predecir o que hayan fallado
- para lograr que no haya jobs sin predecir.
-\end_layout
 
-\begin_layout Section
-Objetivos futuros
-\end_layout
-
-\begin_layout Standard
-En cuanto al objetivo 4 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Trabajo-previo"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, se ampliará el estudio de mercado inicial que acompaña a este proyecto,
- además diagramando el núcleo del modelo de negocios a desarrollar sobre
- la base de licenciamiento de registros.
-\end_layout
-
-\begin_layout Standard
-Los modelos de CC validados serán desplegados en los dispositivos electrónicos,
- con su respectiva caja y estructura de caño para poder ser montado en cualquier
- establecimiento agropecuario (Objetivo 4).
- Este dispositivo integral será evaluado en al menos dos establecimientos
- de la zona, donde se evaluará no sólo el comportamiento predictivo del
- modelo, sino también su facilidad de uso e integración a las actividades
- diarias del/la profesional o el/la productor/a.
- En ese sentido (Objetivo 5 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Trabajo-previo"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-), se realizará una reunión de profesionales y productores en alguno de
- los sitios de pruebas, y bajo el formato de taller y con encuestas individuales
- se registrarán sus opiniones sobre las posibles barreras de adopción de
- estas tecnologías, así como sugerencias de mejoras.
- Adicionalmente, se trabajará con la especialista colaboradora, en la identifica
-ción de las mejores estrategias para el plan de negocios (clientes profesionales
-/productores, socios claves, precio de mercado etc).
+\change_inserted -1783815582 1729211143
+En esta sección puedes mostrar capturas de pantalla de la aplicación Flutter
+ funcionando, después de haber configurado los pasos mencionados anteriormente.
+ Muestra tanto la interfaz en Android como en iOS, y detalla cualquier configura
+ción adicional que se deba realizar para obtener los resultados deseados.
 \end_layout
 
 \end_body
