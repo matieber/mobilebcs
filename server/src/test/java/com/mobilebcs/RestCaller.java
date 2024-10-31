@@ -36,7 +36,7 @@ public class RestCaller {
     private RestTemplate restTemplate;
 
     public RestCaller(int port) {
-        restTemplate = new RestTemplateBuilder().rootUri("http://192.168.0.215:" + port).build();
+        restTemplate = new RestTemplateBuilder().rootUri("http://localhost:" + port).build();
     }
 
     public UUID sendImage(int position, String locationCode, String caravanIdentification) throws IOException {

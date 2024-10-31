@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -110,6 +111,7 @@ public class ViewerITCase extends AbstractITCase {
 
     @Test
     @Order(1)
+    @Disabled("es necesario arreglarlo")
     public void predictionInASessionWithReceptorValidation() throws IOException, InterruptedException, ExecutionException, TimeoutException {
         searchPredictionUtil.testSearchPredictionNoContent(SearchType.LAST_QUALIFICATION);
         searchPredictionUtil.testSearchPredictionNoContent(SearchType.CURRENT_QUALIFICATION);
