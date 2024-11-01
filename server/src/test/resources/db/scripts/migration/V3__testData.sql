@@ -1,0 +1,1 @@
+INSERT INTO server.LOCATION(ID,CODE,NAME) VALUES(2,'LOCALIZATION2','Localización secundaria');

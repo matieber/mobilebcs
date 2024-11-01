@@ -1,15 +1,15 @@
 INSERT INTO server.LOCATION(ID,CODE,NAME) VALUES(2,'LOCALIZATION2','Localización secundaria');
 
 INSERT INTO server.QUALIFICATION_SESSION (ID,LOCATION_ID,START_DATE,END_DATE) VALUES
-                                                                               (1,1,'2023-11-13 11:52:21','2023-11-13 08:58:16'),
-                                                                               (2,1,'2023-11-13 11:58:39','2023-11-14 09:01:34'),
-                                                                               (3,1,'2023-11-13 11:58:39','2023-11-15 09:01:34'),
-                                                                               (4,1,'2023-11-13 11:58:39','2023-12-16 09:01:34'),
-                                                                               (5,1,'2023-11-13 11:58:39','2023-12-17 09:01:34');
+                                                                                  (1,1,'2023-11-13 11:52:21','2023-11-13 08:58:16'),
+                                                                                  (2,1,'2023-11-13 11:58:39','2023-11-14 09:01:34'),
+                                                                                  (3,1,'2023-11-13 11:58:39','2023-11-15 09:01:34'),
+                                                                                  (4,1,'2023-11-13 11:58:39','2023-12-16 09:01:34'),
+                                                                                  (5,1,'2023-11-13 11:58:39','2023-12-17 09:01:34');
 
 INSERT INTO server.`USER` (ID, USER_NAME,`TYPE`) VALUES
-                                                 (1, 'David','QUALIFIER'),
-                                                 (2, 'Cristian','VIEWER');
+                                                     (1, 'David','QUALIFIER'),
+                                                     (2, 'Cristian','VIEWER');
 
 
 INSERT INTO server.USER_QUALIFICATION_SESSION (USER_ID,QUALIFICATION_SESSION_ID) VALUES
@@ -21,37 +21,37 @@ INSERT INTO server.USER_QUALIFICATION_SESSION (USER_ID,QUALIFICATION_SESSION_ID)
 
 
 INSERT INTO server.IMAGE_SET (ID, SET_CODE,IDENTIFICATION) VALUES
-                                                           (1,'21b7cf40-29a5-4fe5-9cfa-17c199af8775','UHSJQ3'),
-                                                           (2, '491ab7f2-dcfe-4be5-8f83-c41a9a84ebce','GSVQMB'),
-                                                           (3, '5bb6693f-c06f-4e98-96d2-8d6585ec14c6','9ZF1TV'),
-                                                           (4, '795627d9-69d6-4012-959f-83f6b1cc750e','GG8CWT'),
-                                                           (5, 'a0df0168-89e3-450d-a791-f9e2ef3d5fa0','TEURMB'),
-                                                           (6, 'fe26af10-c8a8-48cc-b1d3-dc56ec29bfad','BYHRFV'),
-                                                           (7, 'aa0feb54-963c-45de-b760-2d9644ca90b1','AJ2RIR'),
-                                                           (8, '51f15e05-52f1-43f8-b981-d777b81e2a09','DT4NWA'),
-                                                           (9, 'a71a262c-6fe2-4967-800d-bb599c6075e3','IFFVM7'),
-                                                           (10, 'b31e821e-0ff2-4292-ac39-ed1de92489d1','7749T6'),
-                                                           (11,'507f42db-8c75-46c3-859b-457ab9df8ee8','RW674H'),
-                                                           (12,'bb739fb7-b8d7-439f-a38e-a1a24ae1b6e7','RSVZ1B'),
-                                                           (13,'4a7f8129-c0f7-4ebd-9c6e-18350c40f5c7','ZHBMMB'),
-                                                           (14,'2677e230-029b-4c9a-9e85-d80a537e0aa2','MQ8ABZ'),
-                                                           (15,'01abeef8-ef4a-4f85-a758-733d9cb248d3','7PSFVM');
+                                                               (1,'21b7cf40-29a5-4fe5-9cfa-17c199af8775','UHSJQ3'),
+                                                               (2, '491ab7f2-dcfe-4be5-8f83-c41a9a84ebce','GSVQMB'),
+                                                               (3, '5bb6693f-c06f-4e98-96d2-8d6585ec14c6','9ZF1TV'),
+                                                               (4, '795627d9-69d6-4012-959f-83f6b1cc750e','GG8CWT'),
+                                                               (5, 'a0df0168-89e3-450d-a791-f9e2ef3d5fa0','TEURMB'),
+                                                               (6, 'fe26af10-c8a8-48cc-b1d3-dc56ec29bfad','BYHRFV'),
+                                                               (7, 'aa0feb54-963c-45de-b760-2d9644ca90b1','AJ2RIR'),
+                                                               (8, '51f15e05-52f1-43f8-b981-d777b81e2a09','DT4NWA'),
+                                                               (9, 'a71a262c-6fe2-4967-800d-bb599c6075e3','IFFVM7'),
+                                                               (10, 'b31e821e-0ff2-4292-ac39-ed1de92489d1','7749T6'),
+                                                               (11,'507f42db-8c75-46c3-859b-457ab9df8ee8','RW674H'),
+                                                               (12,'bb739fb7-b8d7-439f-a38e-a1a24ae1b6e7','RSVZ1B'),
+                                                               (13,'4a7f8129-c0f7-4ebd-9c6e-18350c40f5c7','ZHBMMB'),
+                                                               (14,'2677e230-029b-4c9a-9e85-d80a537e0aa2','MQ8ABZ'),
+                                                               (15,'01abeef8-ef4a-4f85-a758-733d9cb248d3','7PSFVM');
 INSERT INTO server.IMAGE_SET (ID, SET_CODE,IDENTIFICATION) VALUES
-                                                           (16,'bfef9b09-b71a-4e2f-ac7c-e8ac6ef4e77b','UHSJQ3'),
-                                                           (17,'8d9212ff-2cbc-4113-b235-d8fa4da30976','GSVQMB'),
-                                                           (18,'683fe0b5-1290-4d48-88e2-0e11a1c55ea6','9ZF1TV'),
-                                                           (19,'35a56233-5877-41fb-9bfd-24a074a8b53f','GG8CWT'),
-                                                           (20,'744b27fc-64d9-4f9b-b34a-f677ffc1d3c9','TEURMB'),
-                                                           (21,'0b991284-aa64-467d-be6c-128614452b75','BYHRFV'),
-                                                           (22,'123725a4-7a97-4655-84ad-8fdcefa373b4','AJ2RIR'),
-                                                           (23,'bf7fdb1f-5ccc-4d34-a499-7d4251bcfecd','DT4NWA'),
-                                                           (24,'6dcffdad-4bc1-42de-b6a9-2650b47f6a80','IFFVM7'),
-                                                           (25,'18636d33-2335-4cbd-b4c8-09faed660a45','7749T6'),
-                                                           (26,'55e4d956-8974-4b30-952a-ea04e80f2354','RW674H'),
-                                                           (27,'0e51a474-876f-458b-921a-322280ccdbc1','RSVZ1B'),
-                                                           (28,'9a0bd67a-e024-4ee1-a5cc-5bb1dea97f58','ZHBMMB'),
-                                                           (29,'fb761bd1-ac76-4e77-9e81-0ba115a65862','MQ8ABZ'),
-                                                           (30,'3a50b1bd-8cba-40f1-ae6d-748eb99e0971','7PSFVM');
+                                                               (16,'bfef9b09-b71a-4e2f-ac7c-e8ac6ef4e77b','UHSJQ3'),
+                                                               (17,'8d9212ff-2cbc-4113-b235-d8fa4da30976','GSVQMB'),
+                                                               (18,'683fe0b5-1290-4d48-88e2-0e11a1c55ea6','9ZF1TV'),
+                                                               (19,'35a56233-5877-41fb-9bfd-24a074a8b53f','GG8CWT'),
+                                                               (20,'744b27fc-64d9-4f9b-b34a-f677ffc1d3c9','TEURMB'),
+                                                               (21,'0b991284-aa64-467d-be6c-128614452b75','BYHRFV'),
+                                                               (22,'123725a4-7a97-4655-84ad-8fdcefa373b4','AJ2RIR'),
+                                                               (23,'bf7fdb1f-5ccc-4d34-a499-7d4251bcfecd','DT4NWA'),
+                                                               (24,'6dcffdad-4bc1-42de-b6a9-2650b47f6a80','IFFVM7'),
+                                                               (25,'18636d33-2335-4cbd-b4c8-09faed660a45','7749T6'),
+                                                               (26,'55e4d956-8974-4b30-952a-ea04e80f2354','RW674H'),
+                                                               (27,'0e51a474-876f-458b-921a-322280ccdbc1','RSVZ1B'),
+                                                               (28,'9a0bd67a-e024-4ee1-a5cc-5bb1dea97f58','ZHBMMB'),
+                                                               (29,'fb761bd1-ac76-4e77-9e81-0ba115a65862','MQ8ABZ'),
+                                                               (30,'3a50b1bd-8cba-40f1-ae6d-748eb99e0971','7PSFVM');
 
 
 
@@ -195,37 +195,37 @@ INSERT INTO server.IMAGE_SET_QUALIFICATION_SESSION (IMAGE_SET_ID,QUALIFICATION_S
 
 
 INSERT INTO server.IMAGE (ID, IMAGE_SET_ID) VALUES
-                                                            (1, 1),
-                                                            (2, 2),
-                                                            (3, 3),
-                                                            (4, 4),
-                                                            (5, 5),
-                                                            (6, 6),
-                                                            (7, 7),
-                                                            (8, 8),
-                                                            (9, 9),
-                                                            (10,10),
-                                                            (11,11),
-                                                            (12,12),
-                                                            (13,13),
-                                                            (14,14),
-                                                            (15,15);
+                                                (1, 1),
+                                                (2, 2),
+                                                (3, 3),
+                                                (4, 4),
+                                                (5, 5),
+                                                (6, 6),
+                                                (7, 7),
+                                                (8, 8),
+                                                (9, 9),
+                                                (10,10),
+                                                (11,11),
+                                                (12,12),
+                                                (13,13),
+                                                (14,14),
+                                                (15,15);
 INSERT INTO server.IMAGE (ID, IMAGE_SET_ID) VALUES
-                                                            (16,16),
-                                                            (17,17),
-                                                            (18,18),
-                                                            (19,19),
-                                                            (20,20),
-                                                            (21,21),
-                                                            (22,22),
-                                                            (23,23),
-                                                            (24,24),
-                                                            (25,25),
-                                                            (26,26),
-                                                            (27,27),
-                                                            (28,28),
-                                                            (29,29),
-                                                            (30,30);
+                                                (16,16),
+                                                (17,17),
+                                                (18,18),
+                                                (19,19),
+                                                (20,20),
+                                                (21,21),
+                                                (22,22),
+                                                (23,23),
+                                                (24,24),
+                                                (25,25),
+                                                (26,26),
+                                                (27,27),
+                                                (28,28),
+                                                (29,29),
+                                                (30,30);
 
 INSERT INTO server.IMAGE (ID, IMAGE_SET_ID) VALUES
                                                 (31, 31),

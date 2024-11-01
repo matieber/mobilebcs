@@ -111,7 +111,6 @@ public class ViewerITCase extends AbstractITCase {
 
     @Test
     @Order(1)
-    @Disabled("es necesario arreglarlo")
     public void predictionInASessionWithReceptorValidation() throws IOException, InterruptedException, ExecutionException, TimeoutException {
         searchPredictionUtil.testSearchPredictionNoContent(SearchType.LAST_QUALIFICATION);
         searchPredictionUtil.testSearchPredictionNoContent(SearchType.CURRENT_QUALIFICATION);
