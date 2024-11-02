@@ -5,8 +5,6 @@ import 'package:calificator/src/settings/properties.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import 'caravan_response.dart';
-import 'diagram_response.dart';
 
 
 class QualificationsClient  {

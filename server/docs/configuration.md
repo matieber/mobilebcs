@@ -10,7 +10,9 @@
 
     docker run --name=mysql-db -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 mysql:8.0
     docker exec -it mysql-db mysql -p
+    password: root
     create schema server;
+    escribir exit
 
 ### Iniciar aplicación
 

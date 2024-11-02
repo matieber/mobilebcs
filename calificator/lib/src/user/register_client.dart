@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:async';
 import 'package:calificator/src/user/user_type.dart';
 import 'package:http/http.dart' as http;

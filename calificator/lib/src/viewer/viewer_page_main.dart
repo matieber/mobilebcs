@@ -1,6 +1,4 @@
 
-import 'dart:io';
-import 'dart:typed_data';
 import 'package:calificator/src/viewer/viewer_caravan_message.dart';
 import 'package:calificator/src/viewer/viewer_caravan_score_message.dart';
 import 'package:calificator/src/user/user.dart';
@@ -10,9 +8,7 @@ import 'package:flutter/material.dart';
 import '../diagram/caravan_response.dart';
 import '../diagram/diagram_client.dart';
 import '../diagram/diagram_tab.dart';
-import '../diagram/line_chart.dart';
 import '../menu/qualificator_side_menu.dart';
-import '../image/image.dart';
 import 'viewer_stomp_client.dart';
 import 'package:flutter/services.dart';
 
@@ -74,7 +70,7 @@ class ViewerPageMainState extends State<ViewerPageMain> {
       widget.first=false;
       User? user = widget._user;
       String? name = user?.username;
-      username=name!;
+      username=name;
       viewerStompClient= ViewerStompClient(username);
       viewerStompClient?.activate(context);
     }

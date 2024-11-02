@@ -6,7 +6,6 @@ import '../qualifier/qualification_session_http.dart';
 import '../qualifier/qualifier_session_page.dart';
 import '../ui_model/alert.dart';
 import '../ui_model/custom_icon_text_button.dart';
-import '../ui_model/custom_text_button.dart';
 import '../user/user.dart';
 
 class QualificationSideMenu extends StatefulWidget{

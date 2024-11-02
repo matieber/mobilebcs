@@ -4,8 +4,6 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 import '../ui_model/dropdown.dart';
-import '../user/user.dart';
-import '../viewer/viewer_stomp_client.dart';
 import 'desviation_diagram.dart';
 import 'deviation/deviation_client.dart';
 import 'diagram_client.dart';
@@ -282,7 +280,7 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
     if(diagramResponse!=null && diagramResponse.values!=null && diagramResponse.values.first!=null && diagramResponse.values.first.sessionStartDate!=null){
       date+="Desde º "+diagramResponse.values.first.sessionStartDate!.toString()+" ";
     }
-    if(diagramResponse!=null && diagramResponse.values!=null && diagramResponse.values.first!=null && diagramResponse.values.first.sessionEndDate!=null){
+    if(diagramResponse!=null && diagramResponse.values.first!=null && diagramResponse.values.first.sessionEndDate!=null){
       date+="hasta º "+diagramResponse.values.first.sessionEndDate!.toString();
     }
     return date;
