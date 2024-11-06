@@ -1,0 +1,13 @@
+device,stage,battery_level
+motorola_moto_g9_play,PREP_START,0.64
+motorola_moto_g6,PREP_START,0.39
+Xiaomi_Redmi_Note_7,PREP_START,0.47
+motorola_moto_g9_play,PREP_END,0.65
+motorola_moto_g6,PREP_END,0.4
+Xiaomi_Redmi_Note_7,PREP_END,0.5
+motorola_moto_g9_play,PROCESSING_START,0.65
+motorola_moto_g6,PROCESSING_START,0.4
+Xiaomi_Redmi_Note_7,PROCESSING_START,0.5
+motorola_moto_g9_play,PROCESSING_END,0.64
+motorola_moto_g6,PROCESSING_END,0.37
+Xiaomi_Redmi_Note_7,PROCESSING_END,0.48

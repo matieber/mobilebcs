@@ -1,0 +1,141 @@
+2022-04-07 11:43:51,450 {'scn_id': 'cs304_roundrobin_goodBatt2Slow_scn006', 'app_dir': 'cow_bcs_app', 'results_dir': '../cow_bcs_app/results/cs304_roundrobin_goodBatt2Slow_scn006/jue_07_abr_2022_11:43:51_-03', 'log_file': '../cow_bcs_app/results/cs304_roundrobin_goodBatt2Slow_scn006/jue_07_abr_2022_11:43:51_-03/cs304_roundrobin_goodBatt2Slow_scn006.log', 'stream_source': {'type': 'SimulatedFromImageFolder', 'field': {'img_folder': 'cow_bcs_app/frameRoot/cow_images', 'img_extension': 'png', 'per_job_frames': 15, 'per_burst_jobs': 10, 'millis_btw_jobs': 1000, 'millis_btw_bursts': 10000, 'launch_images_server': 'True', 'image_server_port': 8001, 'job_builder': {'builder_class': 'cow_bcs_app.job.MobileCowBCSJobBuilder', 'builder_params': {'json_template': 'cow_bcs_app/templates/benchmarkConfig-template.json'}}}}, 'processor': {'hardware_support': 'hardsupp.mobile_cluster.LabMobileCluster', 'processor_impl': {'emanager_server_url': 'http://localhost:1080/', 'emanager_output_path': '../emanager_server/profiles', 'devs_batt_init': {'motorola_moto_g6': 0.77, 'Xiaomi_Redmi_Note_7': 0.25, 'motorola_moto_g9_play': 0.53}, 'logic': {'processor_class': 'job.job_scheduling.RoundRobin', 'processor_params': {}}}}}
+2022-04-07 11:43:51,503 Job's descriptors directory created at: ../cow_bcs_app/results/cs304_roundrobin_goodBatt2Slow_scn006/jue_07_abr_2022_11:43:51_-03/jobs/
+2022-04-07 11:43:51,655 IMAGES PATH: ../cow_bcs_app/frameRoot/cow_images
+2022-04-07 11:43:51,658 IMAGES PREFIX: cow_images
+2022-04-07 11:43:51,658 IMAGES COUNT: 1740
+2022-04-07 11:43:51,658 IMAGES EXTENSION: png
+2022-04-07 11:43:51,905 Devices for the test are registered and virtually connected.
+2022-04-07 11:43:51,931 [{'model': 'motorola_moto_g6', 'currentLevel': 0.76, 'benchmark': {'mflops': 323962333, 'tflite4th': 161981166, 'cow_bcs': 139303803}, 'rssi': -53, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 3, 'ip': '192.168.2.54'}, {'model': 'Xiaomi_Redmi_Note_7', 'currentLevel': 0.21, 'benchmark': {'mflops': 914064600, 'tflite4th': 685548450, 'cow_bcs': 484454238}, 'rssi': 0, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 2, 'ip': '192.168.2.226'}, {'model': 'motorola_moto_g9_play', 'currentLevel': 0.51, 'benchmark': {'mflops': 841400523, 'tflite4th': 546910339, 'cow_bcs': 434162669}, 'rssi': 0, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 1, 'ip': '192.168.2.57'}]
+2022-04-07 11:43:51,943 Battery Charge task for device motorola_moto_g6 [submitted]
+2022-04-07 11:43:51,950 Battery Discharge task for device motorola_moto_g6 [submitted]
+2022-04-07 11:43:51,957 Battery Charge task for device Xiaomi_Redmi_Note_7 [submitted]
+2022-04-07 11:43:51,964 Battery Discharge task for device Xiaomi_Redmi_Note_7 [submitted]
+2022-04-07 11:43:51,971 Battery Charge task for device motorola_moto_g9_play [submitted]
+2022-04-07 11:43:51,977 Battery Discharge task for device motorola_moto_g9_play [submitted]
+2022-04-07 11:43:54,980 Waiting for devices to reach battery level: {'motorola_moto_g6': 0.77, 'Xiaomi_Redmi_Note_7': 0.25, 'motorola_moto_g9_play': 0.53}
+2022-04-07 11:49:01,120 Devices reached battery level configured. Current level: [{'model': 'motorola_moto_g6', 'currentLevel': 0.76, 'benchmark': {'mflops': 323962333, 'tflite4th': 161981166, 'cow_bcs': 139303803}, 'rssi': -56, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 3, 'ip': '192.168.2.54'}, {'model': 'Xiaomi_Redmi_Note_7', 'currentLevel': 0.25, 'benchmark': {'mflops': 914064600, 'tflite4th': 685548450, 'cow_bcs': 484454238}, 'rssi': -32, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 2, 'ip': '192.168.2.226'}, {'model': 'motorola_moto_g9_play', 'currentLevel': 0.53, 'benchmark': {'mflops': 841400523, 'tflite4th': 546910339, 'cow_bcs': 434162669}, 'rssi': -41, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 1, 'ip': '192.168.2.57'}]
+2022-04-07 11:49:01,126 [{'model': 'motorola_moto_g6', 'currentLevel': 0.76, 'benchmark': {'mflops': 323962333, 'tflite4th': 161981166, 'cow_bcs': 139303803}, 'rssi': -56, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 3, 'ip': '192.168.2.54'}, {'model': 'Xiaomi_Redmi_Note_7', 'currentLevel': 0.25, 'benchmark': {'mflops': 914064600, 'tflite4th': 685548450, 'cow_bcs': 484454238}, 'rssi': -32, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 2, 'ip': '192.168.2.226'}, {'model': 'motorola_moto_g9_play', 'currentLevel': 0.53, 'benchmark': {'mflops': 841400523, 'tflite4th': 546910339, 'cow_bcs': 434162669}, 'rssi': -41, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 1, 'ip': '192.168.2.57'}]
+2022-04-07 11:49:01,131 [{'model': 'motorola_moto_g6', 'currentLevel': 0.76, 'benchmark': {'mflops': 323962333, 'tflite4th': 161981166, 'cow_bcs': 139303803}, 'rssi': -56, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 3, 'ip': '192.168.2.54'}, {'model': 'Xiaomi_Redmi_Note_7', 'currentLevel': 0.25, 'benchmark': {'mflops': 914064600, 'tflite4th': 685548450, 'cow_bcs': 484454238}, 'rssi': -32, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 2, 'ip': '192.168.2.226'}, {'model': 'motorola_moto_g9_play', 'currentLevel': 0.53, 'benchmark': {'mflops': 841400523, 'tflite4th': 546910339, 'cow_bcs': 434162669}, 'rssi': -41, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 1, 'ip': '192.168.2.57'}]
+2022-04-07 11:49:01,132 Initiating local web server at port: 8001 for serving images at: ../cow_bcs_app/frameRoot
+2022-04-07 11:49:01,133 [STREAM]:Open
+2022-04-07 11:49:02,154 [PROCESSOR]job assignment: cow_images_1_to_15 to motorola_moto_g6
+2022-04-07 11:49:03,163 [PROCESSOR]job assignment: cow_images_16_to_30 to motorola_moto_g9_play
+2022-04-07 11:49:04,173 [PROCESSOR]job assignment: cow_images_31_to_45 to Xiaomi_Redmi_Note_7
+2022-04-07 11:49:05,174 [PROCESSOR]job assignment: cow_images_46_to_60 to motorola_moto_g6
+2022-04-07 11:49:06,190 [PROCESSOR]job assignment: cow_images_61_to_75 to motorola_moto_g9_play
+2022-04-07 11:49:07,194 [PROCESSOR]job assignment: cow_images_76_to_90 to Xiaomi_Redmi_Note_7
+2022-04-07 11:49:08,199 [PROCESSOR]job assignment: cow_images_91_to_105 to motorola_moto_g6
+2022-04-07 11:49:09,207 [PROCESSOR]job assignment: cow_images_106_to_120 to motorola_moto_g9_play
+2022-04-07 11:49:10,215 [PROCESSOR]job assignment: cow_images_121_to_135 to Xiaomi_Redmi_Note_7
+2022-04-07 11:49:11,228 [PROCESSOR]job assignment: cow_images_136_to_150 to motorola_moto_g6
+2022-04-07 11:49:22,244 [PROCESSOR]job assignment: cow_images_151_to_165 to motorola_moto_g9_play
+2022-04-07 11:49:23,260 [PROCESSOR]job assignment: cow_images_166_to_180 to Xiaomi_Redmi_Note_7
+2022-04-07 11:49:24,270 [PROCESSOR]job assignment: cow_images_181_to_195 to motorola_moto_g6
+2022-04-07 11:49:25,274 [PROCESSOR]job assignment: cow_images_196_to_210 to motorola_moto_g9_play
+2022-04-07 11:49:26,282 [PROCESSOR]job assignment: cow_images_211_to_225 to Xiaomi_Redmi_Note_7
+2022-04-07 11:49:27,291 [PROCESSOR]job assignment: cow_images_226_to_240 to motorola_moto_g6
+2022-04-07 11:49:28,299 [PROCESSOR]job assignment: cow_images_241_to_255 to motorola_moto_g9_play
+2022-04-07 11:49:29,308 [PROCESSOR]job assignment: cow_images_256_to_270 to Xiaomi_Redmi_Note_7
+2022-04-07 11:49:30,316 [PROCESSOR]job assignment: cow_images_271_to_285 to motorola_moto_g6
+2022-04-07 11:49:31,330 [PROCESSOR]job assignment: cow_images_286_to_300 to motorola_moto_g9_play
+2022-04-07 11:49:42,342 [PROCESSOR]job assignment: cow_images_301_to_315 to Xiaomi_Redmi_Note_7
+2022-04-07 11:49:43,345 [PROCESSOR]job assignment: cow_images_316_to_330 to motorola_moto_g6
+2022-04-07 11:49:44,353 [PROCESSOR]job assignment: cow_images_331_to_345 to motorola_moto_g9_play
+2022-04-07 11:49:45,365 [PROCESSOR]job assignment: cow_images_346_to_360 to Xiaomi_Redmi_Note_7
+2022-04-07 11:49:46,366 [PROCESSOR]job assignment: cow_images_361_to_375 to motorola_moto_g6
+2022-04-07 11:49:47,381 [PROCESSOR]job assignment: cow_images_376_to_390 to motorola_moto_g9_play
+2022-04-07 11:49:48,383 [PROCESSOR]job assignment: cow_images_391_to_405 to Xiaomi_Redmi_Note_7
+2022-04-07 11:49:49,399 [PROCESSOR]job assignment: cow_images_406_to_420 to motorola_moto_g6
+2022-04-07 11:49:50,411 [PROCESSOR]job assignment: cow_images_421_to_435 to motorola_moto_g9_play
+2022-04-07 11:49:51,421 [PROCESSOR]job assignment: cow_images_436_to_450 to Xiaomi_Redmi_Note_7
+2022-04-07 11:50:02,443 [PROCESSOR]job assignment: cow_images_451_to_465 to motorola_moto_g6
+2022-04-07 11:50:03,451 [PROCESSOR]job assignment: cow_images_466_to_480 to motorola_moto_g9_play
+2022-04-07 11:50:04,461 [PROCESSOR]job assignment: cow_images_481_to_495 to Xiaomi_Redmi_Note_7
+2022-04-07 11:50:05,468 [PROCESSOR]job assignment: cow_images_496_to_510 to motorola_moto_g6
+2022-04-07 11:50:06,478 [PROCESSOR]job assignment: cow_images_511_to_525 to motorola_moto_g9_play
+2022-04-07 11:50:07,490 [PROCESSOR]job assignment: cow_images_526_to_540 to Xiaomi_Redmi_Note_7
+2022-04-07 11:50:08,500 [PROCESSOR]job assignment: cow_images_541_to_555 to motorola_moto_g6
+2022-04-07 11:50:09,508 [PROCESSOR]job assignment: cow_images_556_to_570 to motorola_moto_g9_play
+2022-04-07 11:50:10,520 [PROCESSOR]job assignment: cow_images_571_to_585 to Xiaomi_Redmi_Note_7
+2022-04-07 11:50:11,519 [PROCESSOR]job assignment: cow_images_586_to_600 to motorola_moto_g6
+2022-04-07 11:50:22,543 [PROCESSOR]job assignment: cow_images_601_to_615 to motorola_moto_g9_play
+2022-04-07 11:50:23,546 [PROCESSOR]job assignment: cow_images_616_to_630 to Xiaomi_Redmi_Note_7
+2022-04-07 11:50:24,558 [PROCESSOR]job assignment: cow_images_631_to_645 to motorola_moto_g6
+2022-04-07 11:50:25,568 [PROCESSOR]job assignment: cow_images_646_to_660 to motorola_moto_g9_play
+2022-04-07 11:50:26,578 [PROCESSOR]job assignment: cow_images_661_to_675 to Xiaomi_Redmi_Note_7
+2022-04-07 11:50:27,590 [PROCESSOR]job assignment: cow_images_676_to_690 to motorola_moto_g6
+2022-04-07 11:50:28,600 [PROCESSOR]job assignment: cow_images_691_to_705 to motorola_moto_g9_play
+2022-04-07 11:50:29,601 [PROCESSOR]job assignment: cow_images_706_to_720 to Xiaomi_Redmi_Note_7
+2022-04-07 11:50:30,611 [PROCESSOR]job assignment: cow_images_721_to_735 to motorola_moto_g6
+2022-04-07 11:50:31,614 [PROCESSOR]job assignment: cow_images_736_to_750 to motorola_moto_g9_play
+2022-04-07 11:50:42,637 [PROCESSOR]job assignment: cow_images_751_to_765 to Xiaomi_Redmi_Note_7
+2022-04-07 11:50:43,646 [PROCESSOR]job assignment: cow_images_766_to_780 to motorola_moto_g6
+2022-04-07 11:50:44,659 [PROCESSOR]job assignment: cow_images_781_to_795 to motorola_moto_g9_play
+2022-04-07 11:50:45,660 [PROCESSOR]job assignment: cow_images_796_to_810 to Xiaomi_Redmi_Note_7
+2022-04-07 11:50:46,674 [PROCESSOR]job assignment: cow_images_811_to_825 to motorola_moto_g6
+2022-04-07 11:50:47,686 [PROCESSOR]job assignment: cow_images_826_to_840 to motorola_moto_g9_play
+2022-04-07 11:50:48,691 [PROCESSOR]job assignment: cow_images_841_to_855 to Xiaomi_Redmi_Note_7
+2022-04-07 11:50:49,690 [PROCESSOR]job assignment: cow_images_856_to_870 to motorola_moto_g6
+2022-04-07 11:50:50,709 [PROCESSOR]job assignment: cow_images_871_to_885 to motorola_moto_g9_play
+2022-04-07 11:50:51,709 [PROCESSOR]job assignment: cow_images_886_to_900 to Xiaomi_Redmi_Note_7
+2022-04-07 11:51:02,720 [PROCESSOR]job assignment: cow_images_901_to_915 to motorola_moto_g6
+2022-04-07 11:51:03,728 [PROCESSOR]job assignment: cow_images_916_to_930 to motorola_moto_g9_play
+2022-04-07 11:51:04,746 [PROCESSOR]job assignment: cow_images_931_to_945 to Xiaomi_Redmi_Note_7
+2022-04-07 11:51:05,748 [PROCESSOR]job assignment: cow_images_946_to_960 to motorola_moto_g6
+2022-04-07 11:51:06,765 [PROCESSOR]job assignment: cow_images_961_to_975 to motorola_moto_g9_play
+2022-04-07 11:51:07,766 [PROCESSOR]job assignment: cow_images_976_to_990 to Xiaomi_Redmi_Note_7
+2022-04-07 11:51:08,769 [PROCESSOR]job assignment: cow_images_991_to_1005 to motorola_moto_g6
+2022-04-07 11:51:09,777 [PROCESSOR]job assignment: cow_images_1006_to_1020 to motorola_moto_g9_play
+2022-04-07 11:51:10,794 [PROCESSOR]job assignment: cow_images_1021_to_1035 to Xiaomi_Redmi_Note_7
+2022-04-07 11:51:11,804 [PROCESSOR]job assignment: cow_images_1036_to_1050 to motorola_moto_g6
+2022-04-07 11:51:22,818 [PROCESSOR]job assignment: cow_images_1051_to_1065 to motorola_moto_g9_play
+2022-04-07 11:51:23,826 [PROCESSOR]job assignment: cow_images_1066_to_1080 to Xiaomi_Redmi_Note_7
+2022-04-07 11:51:24,834 [PROCESSOR]job assignment: cow_images_1081_to_1095 to motorola_moto_g6
+2022-04-07 11:51:25,849 [PROCESSOR]job assignment: cow_images_1096_to_1110 to motorola_moto_g9_play
+2022-04-07 11:51:26,861 [PROCESSOR]job assignment: cow_images_1111_to_1125 to Xiaomi_Redmi_Note_7
+2022-04-07 11:51:27,864 [PROCESSOR]job assignment: cow_images_1126_to_1140 to motorola_moto_g6
+2022-04-07 11:51:28,879 [PROCESSOR]job assignment: cow_images_1141_to_1155 to motorola_moto_g9_play
+2022-04-07 11:51:29,891 [PROCESSOR]job assignment: cow_images_1156_to_1170 to Xiaomi_Redmi_Note_7
+2022-04-07 11:51:30,894 [PROCESSOR]job assignment: cow_images_1171_to_1185 to motorola_moto_g6
+2022-04-07 11:51:31,902 [PROCESSOR]job assignment: cow_images_1186_to_1200 to motorola_moto_g9_play
+2022-04-07 11:51:42,918 [PROCESSOR]job assignment: cow_images_1201_to_1215 to Xiaomi_Redmi_Note_7
+2022-04-07 11:51:43,932 [PROCESSOR]job assignment: cow_images_1216_to_1230 to motorola_moto_g6
+2022-04-07 11:51:44,932 [PROCESSOR]job assignment: cow_images_1231_to_1245 to motorola_moto_g9_play
+2022-04-07 11:51:45,941 [PROCESSOR]job assignment: cow_images_1246_to_1260 to Xiaomi_Redmi_Note_7
+2022-04-07 11:51:46,949 [PROCESSOR]job assignment: cow_images_1261_to_1275 to motorola_moto_g6
+2022-04-07 11:51:47,957 [PROCESSOR]job assignment: cow_images_1276_to_1290 to motorola_moto_g9_play
+2022-04-07 11:51:48,973 [PROCESSOR]job assignment: cow_images_1291_to_1305 to Xiaomi_Redmi_Note_7
+2022-04-07 11:51:49,983 [PROCESSOR]job assignment: cow_images_1306_to_1320 to motorola_moto_g6
+2022-04-07 11:51:50,986 [PROCESSOR]job assignment: cow_images_1321_to_1335 to motorola_moto_g9_play
+2022-04-07 11:51:51,992 [PROCESSOR]job assignment: cow_images_1336_to_1350 to Xiaomi_Redmi_Note_7
+2022-04-07 11:52:03,017 [PROCESSOR]job assignment: cow_images_1351_to_1365 to motorola_moto_g6
+2022-04-07 11:52:04,027 [PROCESSOR]job assignment: cow_images_1366_to_1380 to motorola_moto_g9_play
+2022-04-07 11:52:05,037 [PROCESSOR]job assignment: cow_images_1381_to_1395 to Xiaomi_Redmi_Note_7
+2022-04-07 11:52:06,041 [PROCESSOR]job assignment: cow_images_1396_to_1410 to motorola_moto_g6
+2022-04-07 11:52:07,055 [PROCESSOR]job assignment: cow_images_1411_to_1425 to motorola_moto_g9_play
+2022-04-07 11:52:08,067 [PROCESSOR]job assignment: cow_images_1426_to_1440 to Xiaomi_Redmi_Note_7
+2022-04-07 11:52:09,069 [PROCESSOR]job assignment: cow_images_1441_to_1455 to motorola_moto_g6
+2022-04-07 11:52:10,078 [PROCESSOR]job assignment: cow_images_1456_to_1470 to motorola_moto_g9_play
+2022-04-07 11:52:11,093 [PROCESSOR]job assignment: cow_images_1471_to_1485 to Xiaomi_Redmi_Note_7
+2022-04-07 11:52:12,095 [PROCESSOR]job assignment: cow_images_1486_to_1500 to motorola_moto_g6
+2022-04-07 11:52:23,123 [PROCESSOR]job assignment: cow_images_1501_to_1515 to motorola_moto_g9_play
+2022-04-07 11:52:24,132 [PROCESSOR]job assignment: cow_images_1516_to_1530 to Xiaomi_Redmi_Note_7
+2022-04-07 11:52:25,143 [PROCESSOR]job assignment: cow_images_1531_to_1545 to motorola_moto_g6
+2022-04-07 11:52:26,151 [PROCESSOR]job assignment: cow_images_1546_to_1560 to motorola_moto_g9_play
+2022-04-07 11:52:27,162 [PROCESSOR]job assignment: cow_images_1561_to_1575 to Xiaomi_Redmi_Note_7
+2022-04-07 11:52:28,172 [PROCESSOR]job assignment: cow_images_1576_to_1590 to motorola_moto_g6
+2022-04-07 11:52:29,170 [PROCESSOR]job assignment: cow_images_1591_to_1605 to motorola_moto_g9_play
+2022-04-07 11:52:30,172 [PROCESSOR]job assignment: cow_images_1606_to_1620 to Xiaomi_Redmi_Note_7
+2022-04-07 11:52:31,177 [PROCESSOR]job assignment: cow_images_1621_to_1635 to motorola_moto_g6
+2022-04-07 11:52:32,193 [PROCESSOR]job assignment: cow_images_1636_to_1650 to motorola_moto_g9_play
+2022-04-07 11:52:43,212 [PROCESSOR]job assignment: cow_images_1651_to_1665 to Xiaomi_Redmi_Note_7
+2022-04-07 11:52:44,221 [PROCESSOR]job assignment: cow_images_1666_to_1680 to motorola_moto_g6
+2022-04-07 11:52:45,232 [PROCESSOR]job assignment: cow_images_1681_to_1695 to motorola_moto_g9_play
+2022-04-07 11:52:46,231 [PROCESSOR]job assignment: cow_images_1696_to_1710 to Xiaomi_Redmi_Note_7
+2022-04-07 11:52:47,246 [PROCESSOR]job assignment: cow_images_1711_to_1725 to motorola_moto_g6
+2022-04-07 11:52:48,247 [STREAM]:Closed
+2022-04-07 11:52:48,257 [PROCESSOR]job assignment: cow_images_1726_to_1740 to motorola_moto_g9_play
+2022-04-07 11:55:49,968 [{'model': 'motorola_moto_g6', 'currentLevel': 0.74, 'benchmark': {'mflops': 323962333, 'tflite4th': 161981166, 'cow_bcs': 139303803}, 'rssi': -56, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 3, 'ip': '192.168.2.54'}, {'model': 'Xiaomi_Redmi_Note_7', 'currentLevel': 0.23, 'benchmark': {'mflops': 914064600, 'tflite4th': 685548450, 'cow_bcs': 484454238}, 'rssi': -39, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 2, 'ip': '192.168.2.226'}, {'model': 'motorola_moto_g9_play', 'currentLevel': 0.53, 'benchmark': {'mflops': 841400523, 'tflite4th': 546910339, 'cow_bcs': 434162669}, 'rssi': -41, 'pendingJobs': 0, 'runningJobs': 0, 'connected:': True, 'slotId': 1, 'ip': '192.168.2.57'}]
+2022-04-07 11:55:49,968 [PROCESSOR]all jobs done
+[stats]device,scenario,elapsed_seconds,scenario_descriptor
+[stats]hardsupp.mobile_cluster.LabMobileCluster,cs304_roundrobin_goodBatt2Slow_scn006,719,../cow_bcs_app/scn/mobileCluster/cs304_roundrobin_goodBatt2Slow_scn006.json
