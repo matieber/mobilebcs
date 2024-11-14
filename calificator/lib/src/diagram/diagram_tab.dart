@@ -51,15 +51,10 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
   @override
   void initState() {
     super.initState();
-
   }
 
   @override
   Widget build(BuildContext context) {
-
-     
-    
-
     createCustomDropdownButton();
     if(callSetDiagram) {
       callSetDiagram=false;
@@ -67,7 +62,9 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
       setDispersionDiagram(context);
     }
 
-    return ListView(
+    return  SingleChildScrollView(
+        child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
@@ -82,12 +79,17 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
         const SizedBox(height: 5),
         Text(caravanSize),
         Text(date),
-        buildDiagramBody(),
+        SizedBox(
+          height: 300,
+          child:
+          buildDiagramBody(),
+    ),
         Text("Desviación estandar y porcetanje de calificaciones", style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,decoration: TextDecoration.underline)),
         createDeviationDiagram(widget.dispersion),
 
 
       ],
+    ),
     );
   }
 
@@ -113,20 +115,12 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
         setDiagramById);
   }
 
-  Row buildDiagramBody() {
+  Column buildDiagramBody() {
     pieChart = buildPieChart();
 
-    return Row(
+    return Column(
       children: <Widget>[
-        LayoutBuilder(
-          builder: (BuildContext context, BoxConstraints constraints) {
-            double containerWidth =MediaQuery.of(context).size.width/3;
-            double containerHeight =MediaQuery.of(context).size.height/4;
-            return Container(
-              width: containerWidth, // Ancho máximo basado en las restricciones
-              height: containerHeight, // Calcula la altura en función del ancho
-              child: AspectRatio(
-                aspectRatio: 1.3,
+            Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -144,17 +138,14 @@ class DiagramViewerTabState extends State<DiagramViewerTab> {
                     buildIndicator(Colors.grey, 'Sin valor')
                   ],
                 )
-              ),
-            );
-          },
+
+
         ),
         LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {
-            double containerWidth =MediaQuery.of(context).size.width/2;
-            double containerHeight =MediaQuery.of(context).size.height/2;
             return Container(
-              width: containerWidth, // Ancho máximo basado en las restricciones
-              height: containerHeight, // Calcula la altura en función del ancho
+              width: 0,
+              height: 0,
               child: AspectRatio(
                 aspectRatio: 1.3,
                 child: pieChart,

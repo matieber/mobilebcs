@@ -46,7 +46,6 @@ class _MyImageState extends State<MyImage> {
 
   void _updateImage(ImageInfo imageInfo, bool synchronousCall) {
     setState(() {
-      // Trigger a build whenever the image changes.
       _imageInfo?.dispose();
       _imageInfo = imageInfo;
     });
@@ -63,7 +62,7 @@ class _MyImageState extends State<MyImage> {
   @override
   Widget build(BuildContext context) {
     return RawImage(
-      image: _imageInfo?.image, // this is a dart:ui Image object
+      image: _imageInfo?.image,
       scale: _imageInfo?.scale ?? 1.0,
     );
   }

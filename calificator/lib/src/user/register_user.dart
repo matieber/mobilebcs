@@ -92,7 +92,6 @@ class _RegisterUserState extends State<RegisterUser> {
   }
 
   void showAlertDialog(BuildContext context, Object error, String text) {
-    // set up the button
     Widget okButton = TextButton(
       child: Text("OK"),
       onPressed: () {
@@ -100,7 +99,6 @@ class _RegisterUserState extends State<RegisterUser> {
       },
     );
 
-    // set up the AlertDialog
     AlertDialog alert = AlertDialog(
       title: Text(text),
       content: Text(error.toString()),
@@ -109,7 +107,6 @@ class _RegisterUserState extends State<RegisterUser> {
       ],
     );
 
-    // show the dialog
     showDialog(
       context: context,
       builder: (BuildContext context) {

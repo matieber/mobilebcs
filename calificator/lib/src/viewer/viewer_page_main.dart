@@ -70,7 +70,7 @@ class ViewerPageMainState extends State<ViewerPageMain> {
       widget.first=false;
       User? user = widget._user;
       String? name = user?.username;
-      username=name;
+      username=name??"";
       viewerStompClient= ViewerStompClient(username);
       viewerStompClient?.activate(context);
     }

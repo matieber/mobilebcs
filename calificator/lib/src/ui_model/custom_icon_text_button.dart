@@ -22,7 +22,7 @@ class _CustomIconTextButtonState extends State<CustomIconTextButton> {
       label: Text(widget.text),
       onPressed: this.widget.voidCallback?? () {},
         style: ElevatedButton.styleFrom(
-            primary: Colors.green
+            backgroundColor: Colors.green
         )
     );
   }

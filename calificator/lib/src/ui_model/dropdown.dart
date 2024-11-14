@@ -35,7 +35,6 @@ class _CustomDropdownButtonState extends State<CustomDropdownButton> {
         color: Colors.deepPurpleAccent,
       ),
       onChanged: (CustomDropdownText? value) {
-        // This is called when the user selects an item.
         setState(() {
           widget.previousDropDownValue=widget.dropDownValue;
           widget.dropDownValue = value!;

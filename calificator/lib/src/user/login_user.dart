@@ -58,7 +58,6 @@ class LoginUser extends MaterialPageRoute {
 
   static void showAlertDialog(BuildContext context, Object error,String text) {
 
-    // set up the button
     Widget okButton = TextButton(
       child: Text("OK"),
       onPressed: () {
@@ -67,7 +66,6 @@ class LoginUser extends MaterialPageRoute {
         },
     );
 
-    // set up the AlertDialog
     AlertDialog alert = AlertDialog(
       title: Text(text),
       content: Text(error.toString()),
@@ -76,7 +74,6 @@ class LoginUser extends MaterialPageRoute {
       ],
     );
 
-    // show the dialog
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -92,16 +89,6 @@ class LoginUser extends MaterialPageRoute {
 
     );
   }
-
-
 }
 
-
-
-  /*
-  redirect(String userName) {
-    widget.user.username=userName;
-    widget._currentPage.toQualifierPage();
-  }
-  */
 

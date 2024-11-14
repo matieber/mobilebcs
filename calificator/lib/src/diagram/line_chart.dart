@@ -277,10 +277,6 @@ class CaravanLineChartState extends State<CaravanLineChart> {
         x++;
       }
     }
-
-
-    //list.add(caravanScoreValue(1,3));
-    //list.add(caravanScoreValue(2, 2));
     return list;
   }
 

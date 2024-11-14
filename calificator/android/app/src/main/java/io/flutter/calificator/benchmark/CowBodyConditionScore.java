@@ -1,8 +1,13 @@
 package io.flutter.calificator.benchmark;
 
+
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.Manifest;
 import android.util.Log;
+import androidx.core.content.ContextCompat;
+import androidx.core.app.ActivityCompat;
 
 import com.chaquo.python.PyException;
 import com.chaquo.python.PyObject;
@@ -59,6 +64,7 @@ public class CowBodyConditionScore extends Benchmark {
         Log.d(TAG, "Getting preprocess_image python module");
         this.module = py.getModule("preprocess_image");
     }
+
 
     @Override
     public float runBenchmark(byte[] content) {
@@ -170,12 +176,14 @@ public class CowBodyConditionScore extends Benchmark {
 
     private long getImg(int retry_nmb, final long request_start_millis, String imgPath, final byte[] content) throws IOException{
 
-
-
+        if (retry_nmb > 3) {
+            throw new IOException("Max retries reached while trying to save the image.");
+        }
 
         try (FileOutputStream fileOutputStream = new FileOutputStream(imgPath)) {
             fileOutputStream.write(content);
         } catch (IOException e) {
+            Log.w(TAG, "Retrying image save, attempt #" + (retry_nmb + 1)+": "+e);
             getImg(retry_nmb+1, request_start_millis, imgPath, content);
         }
 

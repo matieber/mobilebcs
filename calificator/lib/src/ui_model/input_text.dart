@@ -35,7 +35,6 @@ class _UserNameInputTextState extends State<UserNameInputText> {
   Widget build(BuildContext context) {
       return
         SizedBox(
-          //  width: widget.width/2,
             child:
             TextField(
               controller: _controller,

@@ -34,7 +34,6 @@ class _DropdownTypeState extends State<DropdownType> {
         color: Colors.green,
       ),
       onChanged: (UserType? value) {
-        // This is called when the user selects an item.
         dropdownValue=value!;
         widget.notifyParent(value!);
 

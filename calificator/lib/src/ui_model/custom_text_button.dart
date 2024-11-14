@@ -22,7 +22,7 @@ class CustomTextButton extends StatelessWidget{
         ),
         textAlign: TextAlign.center),
         style: ElevatedButton.styleFrom(
-            primary: Colors.green,
+            backgroundColor: Colors.green,
             fixedSize:  Size.fromHeight(height)
         )
     );

@@ -82,8 +82,10 @@ Map<int, int> sort(PredictionResponse values) {
   groupedMap.putIfAbsent(4, ()=> 0);
 
   numbers.forEach((number) {
-    int range = number.floor(); // Obtener el entero inferior del número
-    groupedMap[range] = (groupedMap[range]! + 1); // Calcular el promedio
+    int range = number.floor();
+    if(range != -1) {
+      groupedMap[range] = (groupedMap[range]! + 1);
+    }
 
   });
 
