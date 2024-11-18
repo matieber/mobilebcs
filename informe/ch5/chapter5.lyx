@@ -80,14 +80,963 @@
 
 \begin_layout Chapter
 
-\change_inserted -1783815582 1729210645
+\change_inserted -1783815582 1731631313
 Resultados
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1729211143
-.
+\change_inserted -1783815582 1731930624
+En este capítulo, se presentan las capturas de pantalla y el análisis de
+ las principales interfaces de usuario de cada caso de uso, proporcionando
+ una evaluación del funcionamiento y la usabilidad de cada módulo en la
+ aplicación.
+ Adicionalmente, se proporciona información sobre el rendimiento del sistema,
+ incluyendo métricas específicas relacionadas con el consumo de memoria
+ y su impacto en la eficiencia operativa.
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1731631324
+Pantalla de Inicio de Sesión (Login) 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731758978
+El módulo de inicio de sesión permite a los usuarios acceder al sistema
+ con distintos roles, con diferentes permisos y funciones dentro de la aplicació
+n.
+ La pantalla principal de acceso ofrece dos opciones: "Iniciar sesión" y
+ "Registrar usuario", de modo que el usuario puede elegir entre ingresar
+ al sistema o registrarse como nuevo usuario, según sea necesario.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731758937
+[Acá va imagen de la pantalla principal de acceso]
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731758937
+Si el usuario selecciona "Iniciar sesión", es dirigido a una pantalla donde
+ puede introducir su nombre de usuario.
+ En caso de un ingreso correcto, el sistema autentica el perfil y redirige
+ al usuario a su módulo correspondiente, ya sea como calificador o como
+ observador.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731758937
+[Acá va imagen de la pantalla de ingreso de usuario]
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731758937
+En cambio, si el usuario selecciona "Registrar usuario", el sistema muestra
+ una pantalla donde el usuario puede introducir su nombre y seleccionar
+ su rol (calificador u observador).
+ Esta pantalla permite que los nuevos usuarios definan adecuadamente su
+ perfil dentro de la aplicación.
+ Una vez completado el registro, el sistema redirige automáticamente al
+ usuario a la pantalla de inicio de sesión para facilitar el acceso.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731758937
+[Acá va imagen de la pantalla de registro de usuario]
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731758937
+La interfaz de inicio de sesión presenta mensajes de error en caso de datos
+ incorrectos o problemas de conexión con el servidor.
+ El sistema está configurado para gestionar el acceso según el rol del usuario,
+ asegurando que cada perfil (calificador u observador) acceda exclusivamente
+ a las funciones asignadas.
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1731760661
+Calificador
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731760366
+El módulo de calificación permite al usuario con rol de calificador gestionar
+ sus sesiones de calificación de manera eficiente.
+ Desde esta pantalla, el calificador puede iniciar una nueva sesión de calificac
+ión o finalizar una sesión previamente activa, asegurando que solo una sesión
+ esté abierta a la vez.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731760348
+[Acá va imagen de la pantalla de inicio de sesión de calificador]
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731760421
+Si el calificador intenta iniciar una nueva sesión mientras otra está activa,
+ el sistema muestra mensajes de error claros e informativos, indicando la
+ necesidad de finalizar la sesión actual antes de comenzar una nueva.
+ Esta funcionalidad garantiza el control adecuado del flujo de trabajo del
+ calificador, evitando conflictos o superposición de datos.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731760439
+En el caso de iniciar sesión, la aplicación los redirige a la pantalla principar
+ del calificador.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731931142
+Durante la sesión de calificación, los usuarios calificadores tienen la
+ capacidad de asignar puntajes BCS a las vacas, una funcionalidad clave
+ para garantizar la recopilación y el almacenamiento de datos de evaluación.
+ Estos datos no solo respaldan el proceso de calificación actual, sino que
+ también son esenciales para el entrenamiento y la mejora continua de futuros
+ modelos predictivos.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731760664
+[Acá va imagen de la pantalla de sesión de calificación]
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1731760663
+Sistema de Notificación de Imágenes
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731761091
+El módulo del observador, tras iniciar sesión, redirige automáticamente
+ al usuario a la pantalla principal, diseñada para recibir y mostrar las
+ imágenes a medida que son enviadas al sistema.
+ Este módulo permite a los usuarios con el rol de observador visualizar
+ las imágenes capturadas de las caravanas junto con su identificación asociada.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731931227
+Además, una vez que se calcula el puntaje de condición corporal (BCS) predicho,
+ ya sea por el dispositivo móvil de este observador u otro, el resultado
+ se muestra en la misma pantalla.
+ También se proporciona acceso al historial de dicha caravana, permitiendo
+ revisar las evaluaciones realizadas en sesiones anteriores.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731931249
+La interfaz del observador es completamente de solo lectura, sin opciones
+ para interactuar o realizar modificaciones.
+ Las imágenes de las caravanas se actualizan de manera automática conforme
+ las vacas pasan por debajo de la cámara, ofreciendo una experiencia fluida
+ y enfocada en la visualización y monitoreo en tiempo real.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731762084
+[Acá va imagen de la pantalla del observador]
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731762284
+Por otro lado, el módulo del calificador redirige automáticamente al usuario,
+ tras iniciar sesión de calificación, a su pantalla principal.
+ Esta interfaz está diseñada para permitir que el calificador avance manualmente
+ a la siguiente imagen de una vaca haciendo clic en el botón "Siguiente".
+ Esto le da al calificador el control de cuándo visualizar la próxima imagen
+ para asignar el valor BCS correspondiente.
+ Es importante destacar que el calificador debe interactuar activamente
+ con la aplicación para avanzar o esperar la llegada de una nueva imagen.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731931183
+[Acá va imagen de la pantalla del calificador]
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731765086
+En la pantalla principal, ambos usuarios tienen acceso a un menú que les
+ permite cerrar la sesión.
+ Además, para los calificadores, este menú incluye la opción adicional de
+ finalizar una sesión de calificación en curso.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731931281
+[Acá va imagen del menú]
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1731631434
+Reportes Generados 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731766582
+Tanto los calificadores como los observadores cuentan con herramientas visuales
+ que facilitan el análisis de los datos generados durante las sesiones de
+ calificación.
+ Entre estas herramientas destaca un gráfico de tipo torta, que proporciona
+ una representación clara y organizada de las sesiones en curso y las completada
+s.
+ Este gráfico agrupa los valores predichos del puntaje de condición corporal
+ (BCS) en categorías enteras del 1 al 5, basándose en la parte entera del
+ valor incluso cuando la predicción incluye decimales.
+ Esta metodología asegura una visualización uniforme, intuitiva y de fácil
+ interpretación para todos los usuarios.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731768006
+Adicionalmente, se incluye un diagrama de dispersión que muestra el promedio
+ del puntaje de condición corporal (BCS) de las sesiones anteriores, ofreciendo
+ una perspectiva comparativa y útil para evaluar tendencias a lo largo del
+ tiempo.
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1731768052
+Rendimientos del sistema
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731931693
+Para evaluar la eficiencia del sistema, se midieron los tiempos de predicción
+ del BCS en dispositivos móviles, un aspecto crítico para asegurar una experienc
+ia fluida al obtener los resultados de la predicción.
+ Esto permite que el observador visualice los resultados rápidamente y que
+ tanto el calificador como el observador accedan a los reportes en tiempo
+ real.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731931696
+Antes de la implementación del prototipo, el algoritmo fue sometido a pruebas
+ utilizando una versión preliminar desarrollada para Android.
+ Estas pruebas se realizaron en diversos dispositivos móviles, variando
+ tanto el número de dispositivos como el tamaño de los lotes de procesamiento
+ ("jobs"), dentro de un flujo continuo de datos transmitidos desde un servidor
+ hacia los móviles en la misma red local.
+ A continuación, se presenta un resumen de los resultados obtenidos en estas
+ evaluaciones:
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731773256
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787635
+Ejecuciones
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787569
+Modelo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731773283
+Tiempo Promedio por imagen (milisegundos) 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731773798
+desviación estandar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731773831
+total de imágenes procesadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787774
+total de jobs procesados
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787602
+stream de dos imágenes por job
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787572
+Xiaomi_Redmi_Note_7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731770675
+235
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731772017
+24
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787243
+876
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787800
+438
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787575
+motorola_moto_g9_play
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731772742
+243
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731772750
+15
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731773843
+876
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787804
+438
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787626
+stream de dos imágenes por job
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787578
+Xiaomi_Redmi_Note_7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731775203
+233
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731775699
+23
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787229
+584
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787814
+292
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787581
+motorola_moto_g6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731786096
+300
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731786100
+54
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787231
+584
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787816
+292
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787586
+motorola_moto_g9_play 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731786131
+244
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731786135
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787235
+584
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787817
+292
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787743
+stream de 15 imágenes por job
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787853
+Xiaomi_Redmi_Note_7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731791253
+217
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731791258
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731788177
+580
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731788133
+116
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787860
+motorola_moto_g6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731791403
+355
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731791409
+14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731788179
+5840
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731788136
+116
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787863
+motorola_moto_g9_play 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731791928
+215
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731791932
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731788180
+580
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731788138
+116
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1731788649
+En el primer experimento, se emplearon dos dispositivos móviles (Xiaomi
+ Redmi Note 7 y Motorola Moto G9 Play), con lotes de 2 imágenes por job.
+ El flujo de datos procesó un total de 1752 imágenes en 26 minutos y 43
+ segundos.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1731788649
+En el segundo experimento, se incorporó un tercer dispositivo (Motorola
+ Moto G9 Play adicional), manteniendo el tamaño de los jobs en 2 imágenes.
+ Nuevamente, se procesaron 1752 imágenes, pero en 26 minutos y 44 segundos,
+ mostrando una variación mínima en el tiempo total.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1731788649
+En el tercer experimento, utilizando los mismos tres dispositivos móviles,
+ se incrementó el tamaño de los jobs a 15 imágenes por lote.
+ En esta configuración, se procesaron 1740 imágenes en 3 minutos y 47,114
+ segundos, demostrando una notable mejora en el tiempo de procesamiento
+ gracias al tamaño optimizado de los jobs.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731931638
+En el prototipo actual, realizando el experimiento en un Motorola Moto G32,
+ se realizó una prueba con un lote de 15 imágenes.
+ El tiempo medido abarcó desde el envío de las imágenes al servidor (mediante
+ una llamada REST realizada desde una máquina distinta a la máquina del
+ servidor desde de la misma red LAN) hasta la finalización del cálculo en
+ el dispositivo móvil.
+ En este caso, el tiempo promedio por lote fue de X segundos.
 \end_layout
 
 \end_body

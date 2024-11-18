@@ -17,4 +17,10 @@ Si serverPOrt esta vacio se usa el valor 8080
 
 
 * copiar archivo de assets/empty_image.png al directorio sdcard/Download/ del emulador o celular android.
-* Dar el permiso a la aplicacion calificator para poder escribir en el file system desde setting del emulador.
+* Los permisos a la aplicacion calificator para poder escribir en el file system desde setting del emulador son pedidos al iniciar la aplicación por primera vez.
+
+
+### Versiones utilizadas en ambiente local
+
+Flutter 3.24.4
+Dart 3.5.4

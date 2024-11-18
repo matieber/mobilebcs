@@ -74,132 +74,190 @@
 \html_css_as_file 0
 \html_be_strict false
 \author -1783815582 "Cristian"
-\author -997162125 "mhirsch"
 \end_header
 
 \begin_body
 
 \begin_layout Chapter
+Conclusiones, Limitaciones y Trabajos Futuros
+\change_inserted -1783815582 1731879569
 
-\change_inserted -997162125 1699375880
-Conclusiones, Limitaciones y Trabajos 
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1731879589
+Limitaciones y trabajos futuros
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731877756
+Este capítulo aborda las mejoras y desarrollos potenciales para el sistema,
+ identificando áreas donde se pueden realizar innovaciones, optimizaciones
+ e integraciones para incrementar la funcionalidad, seguridad y usabilidad
+ del sistema en contextos reales.
 \change_unchanged
-Futur
-\change_deleted -997162125 1699375870
-a
-\change_inserted -997162125 1699375870
-o
-\change_unchanged
-s
-\change_deleted -997162125 1699375872
- funcionalidades
+
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1731878430
+Seguridad
 \change_unchanged
 
 \end_layout
 
-\begin_layout Section
-Login
+\begin_layout Standard
+
+\change_inserted -1783815582 1731877761
+Una de las mejoras futuras incluye la incorporación de una capa de seguridad
+ para el sistema de inicio de sesión.
+ Actualmente, este componente solo permite la identificación del tipo de
+ usuario y la asociación de calificaciones con un experto determinado.
 \end_layout
 
 \begin_layout Standard
-En futuras implementaciones puede agregarse una capa de seguridad para el
- login dedibo a que actualmente solo se creo este componente para poder
- definir el tipo de usuario y asociar una calificación de una vaca a un
- determinado experto.
+
+\change_inserted -1783815582 1731878481
+Además, será necesario implementar restricciones que limiten quiénes pueden
+ registrarse como calificadores, ya que la aplicación admite usuarios con
+ roles tanto de calificador como de observador sin validación previa.
+ Esto garantizará que solo expertos cualificados puedan registrarse como
+ calificadores.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1731878493
+Tolerencia a fallos
 \end_layout
 
 \begin_layout Standard
-Ademas, en futuras implementaciones puede ser posible limitar que personas
- pueden registrarse como calificador debido a que una sola aplicación móvil
- soporta un usuario calificador y observador, cualquier persona puede registrars
-e como calificador sin ser un experto.
-\end_layout
 
-\begin_layout Section
-Calificador
+\change_inserted -1783815582 1731931789
+Es crucial mejorar la tolerancia a fallos del sistema para garantizar su
+ robustez y confiabilidad.
+ En caso de interrupciones en la conexión WebSocket o errores en el mismo,
+ el sistema debería implementar mecanismos de reintento o redirección de
+ trabajos ("jobs") para asegurar que ninguno quede sin predecir por el modelo.
 \end_layout
 
 \begin_layout Standard
-En futuras versiones del server va a ser posible que los calificadores compartan
- la misma cola jms para repartirse la calificación y darse de baja de una
- sesión de calificación y conectarse a otra.
- Otra posibilidad para futuras versiones es que la sesión pueda configurase
- para que los usuarios calificadores se repartan las caravanas a calificar.
- Para lograr esto va a ser necesario que la sesión de calificación tenga
- un tipo de calificación identificando 
-\change_inserted -1783815582 1702329909
-pu
-\change_deleted -1783815582 1702329908
-u
+
+\change_inserted -1783815582 1731931817
+De igual manera, es fundamental que el proceso de calificación contemple
+ estrategias de reintento en caso de fallos en llamadas rest, evitando así
+ por ejemplo la pérdida de las evaluaciones realizadas por los expertos
+ y asegurando que todas las calificaciones se almacenen correctamente en
+ el sistema.
+ Estas mejoras son esenciales para mantener la integridad y continuidad
+ de las operaciones.
 \change_unchanged
-eden repartirse entre calificadores o que todos los calificadores puedan
- calificar todas las vacas.
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\change_inserted -1783815582 1731931827
+Múltiples calificadores
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731931941
+En futuras versiones del servidor, se planea implementar mejoras que permitan
+ a los calificadores compartir una única cola JMS, facilitando la distribución
+ equitativa de las tareas de calificación.
+ Esto incluiría la opción de dividir las caravanas de vacas entre calificadores
+ o mantener la funcionalidad actual, donde todos los calificadores evalúan
+ todas las vacas.
+ Además, esta mejora permitiría que los calificadores puedan abandonar una
+ sesión y unirse a otra según sea necesario, ofreciendo mayor flexibilidad
+ en la gestión de las sesiones.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731931941
+Actualmente, aunque la aplicación móvil no permite que dos calificadores
+ trabajen simultáneamente, el servidor ha sido diseñado para admitir múltiples
+ calificadores en una misma sesión.
+ Cada calificador dispone de su propia cola JMS y tiene la capacidad de
+ calificar todas las vacas, lo que sienta las bases para la implementación
+ de las mejoras mencionadas.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1731878472
+Mayor cantidade de imágenes a procesar
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731877886
+Actualmente, el sistema permite recibir y almacenar múltiples imágenes por
+ vaca, pero solo la primera es enviada a los usuarios calificadores y observador
+es.
+ Un avance futuro sería la capacidad de enviar todas las imágenes relacionadas
+ con cada vaca para análisis más detallado, tanto por parte de los calificadores
+ como de los observadores.
 \end_layout
 
 \begin_layout Section
-Arribo de imágenes de vacas
+
+\change_inserted -1783815582 1731796677
+Sistema de envío
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
-El server tiene la posibilidad de recibir y almacenar un conjunto de imágenes
- por cada vaca pero solo la primera será la que el observador y el calificador
- reciban.
- Queda para futuros proyectos la posibilidad de enviar todas las imágenes
- a los calificadores y/o observadores.
- 
+
+\change_inserted -1783815582 1731877973
+Aunque definido como parte del diseño, la implementación de un sistema de
+ envío por lotes quedó fuera del alcance de este proyecto.
+ Este sistema deberá configurarse para notificar al servidor sobre el origen
+ del lote, procesar las imágenes capturadas, asociarlas con la identificación
+ RFID de la vaca, crear el lote ("job") y enviarlo al servidor.
+ Además, permitirá configurar la cantidad de imágenes a tomar por vaca en
+ esta aplicación.
+\change_unchanged
+
 \end_layout
 
-\begin_layout Section
-Aplicación batch
-\end_layout
+\begin_layout Subsection
 
-\begin_layout Standard
-Esta aplicación se definió para este proyecto pero queda fuera de alcance
- de este trabajo.
- La aplicación batch deberá tener una locación preconfigurada que será utilizada
- para notificar al server de donde proviene el job.
- Leerá las imágenes tomadas a la vaca, armará el job y lo enviará al server.
- Este procedimiento por cada vaca.
- La cantidad de imágenes a tomar serán configuración de la aplicación batch.
- La primera imagen de cada job (elemento 0 de la lista) se va a suponer
- que va a poseer el número de caravana, por lo tanto, está imagen(la primera
- de la lista) es la única que se enviará al calificador a la hora de calificar
- y al observador.
- 
-\end_layout
+\change_inserted -1783815582 1731877987
+Mejora en la Gestión de Jobs para Calificadores
+\change_unchanged
 
-\begin_layout Section
-Calificador
 \end_layout
 
 \begin_layout Standard
-Los calificadores no pueden calificar job anteriores a la unión/creación
- de la sesión de calificación, es decir, que los jobs que existan antes
- del inicio de sesión no serán calificados por nadie.
- Aquellos que arriben antes de que un calificador se una a una sesión de
- calificación tampoco van a ser calificados.
+
+\change_inserted -1783815582 1731882646
+En la implementación actual, los calificadores no pueden procesar los trabajos
+ ("jobs") creados antes de su ingreso a una sesión de calificación.
+ Esto implica que los trabajos generados antes del inicio de la sesión no
+ se califican.
 \end_layout
 
 \begin_layout Standard
-Para lograr que los jobs generados antes del inicio de sesión de calificación
- o antes de que el usuario se uniera a una sesión existente se envíen a
- la cola de calificación de cada usuario va a ser necesario que cuando se
- inicia sesión de calificación se carguen todos los jobs desde la base de
- datos en la locación específica de la sesión a la cola jms del usuario.
- Esto puede provocar que:
-\end_layout
 
-\begin_layout Itemize
-si se crea la cola del usuario calificador y luego se asigna a la sesión,
- mientras se envíen los jobs desde la base a la cola, puedan llegar nuevos
- job y se ubiquen antes de los jobs de la base.
-\end_layout
-
-\begin_layout Itemize
-si se crea la cola del usuario calificador, se agregan los jobs de la base
- a la cola y luego se asigna a la sesión de calificación, pueden llegar
- job nuevos que no fueron leídos de la base y que tampoco se haya enviado
- a la cola porque no se había asignado a la sesión.
+\change_inserted -1783815582 1731882644
+Futuras mejoras podrían incluir la capacidad de cargar todos los trabajos
+ previos desde la base de datos hacia la cola JMS del usuario al iniciar
+ sesión, asegurando que ningún trabajo quede sin calificar.
+ Sin embargo, esta funcionalidad deberá considerar aspectos técnicos como
+ el manejo de nuevos trabajos que llegan mientras se cargan los existentes,
+ para evitar desorden en el orden de calificación.
 \end_layout
 
 \begin_layout Standard
@@ -207,129 +265,191 @@ si se crea la cola del usuario calificador, se agregan los jobs de la base
 \end_inset
 
 
+\change_inserted -1783815582 1731876859
+
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1731876887
+Integración con IoT
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731882825
+El sistema tiene el potencial de integrarse en un entorno IoT, permitiendo
+ la conexión con dispositivos y elementos del entorno ganadero, como mangas,
+ corrales y comederos.
+ Esto requerirá desarrollar una capa de comunicación que facilite la captura
+ automatizada de datos y acciones de contingencia, estructurando el sistema
+ como un Sistema Integral de Gestión de la Información (SIGI) para apoyar
+ el monitoreo, la planificación y la toma de decisiones.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1731882834
+Mutiples modelos
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731932075
+La aplicación móvil está diseñada con una arquitectura flexible que puede
+ permir la integración de diferentes modelos de predicción.
+ A través de una configuración sencilla, se posible seleccionar y definir
+ qué modelo utilizar en cada caso específico, adaptándose así a diversas
+ necesidades y escenarios.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1731882959
+Multiples plataformas
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731883278
+Al desarrollar la aplicación móvil en Flutter, la portabilidad a iOS se
+ facilita significativamente debido a la naturaleza multiplataforma del
+ framework.
+ Sin embargo, para lograr esta transición, es necesario analizar y ajustar
+ el modelo predictivo, ya que actualmente está diseñado específicamente
+ para Android.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1731883316
+Medir consumo de batería
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731883319
+En futuras implementaciones, se planea incorporar a la aplicación móvil
+ un interruptor (switch) junto con un campo de configuración para establecer
+ un nivel mínimo de batería.
+ Este mecanismo permitirá al dispositivo móvil notificar al servidor si
+ puede ofrecer recursos de procesamiento para el cálculo del BCS.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731883319
+Al activar este interruptor, se deberá iniciar un servicio en segundo plano
+ encargado de gestionar un protocolo de intercambio de mensajes entre la
+ aplicación y el servidor, asegurando una coordinación eficiente para el
+ uso compartido de recursos.
+ Aunque esta funcionalidad estaba contemplada desde el inicio, no se logró
+ implementar debido a las dificultades encontradas durante el desarrollo
+ de la aplicación móvil y las limitaciones de tiempo.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1731878342
+Observadores y Algoritmo de Predicción
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731878420
+Actualmente, la predicción del puntaje de condición corporal (BCS) se realiza
+ en la aplicación móvil por los observadores.
+ En ausencia de observadores, no es posible realizar predicciones.
+ Para solucionar esto, se plantea ejecutar el algoritmo de predicción en
+ los dispositivos de los calificadores o directamente en el servidor.
+ Esto permitirá predecir trabajos que no hayan sido procesados por los observado
+res, asegurando que no queden trabajos sin evaluar.
 \end_layout
 
 \begin_layout Section
-Observadores
-\end_layout
 
-\begin_layout Standard
-La predicción de la CC es realizada por los observadores, es decir, es realizada
- en la aplicación móvil.
- Si no hay observadores no es posible realizar la predicción.
- Para poder realizarla sin la necesidad de observadores se ejecutar el algoritmo
- de predicción en los calificadores y también es posible implementar el
- algoritmo de predicción en el server para que realice la predicción de
- aquellos jobs que no fueron entregados para predecir o que hayan fallado
- para lograr que no haya jobs sin predecir.
-\end_layout
-
-\begin_layout Section
-Objetivos futuros
-\end_layout
-
-\begin_layout Standard
-En cuanto al objetivo 4 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Trabajo-previo"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, se ampliará el estudio de mercado inicial que acompaña a este proyecto,
- además diagramando el núcleo del modelo de negocios a desarrollar sobre
- la base de licenciamiento de registros.
-\end_layout
-
-\begin_layout Standard
-Los modelos de CC validados serán desplegados en los dispositivos electrónicos,
- con su respectiva caja y estructura de caño para poder ser montado en cualquier
- establecimiento agropecuario (Objetivo 4).
- Este dispositivo integral será evaluado en al menos dos establecimientos
- de la zona, donde se evaluará no sólo el comportamiento predictivo del
- modelo, sino también su facilidad de uso e integración a las actividades
- diarias del/la profesional o el/la productor/a.
- En ese sentido (Objetivo 5 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Trabajo-previo"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-), se realizará una reunión de profesionales y productores en alguno de
- los sitios de pruebas, y bajo el formato de taller y con encuestas individuales
- se registrarán sus opiniones sobre las posibles barreras de adopción de
- estas tecnologías, así como sugerencias de mejoras.
- Adicionalmente, se trabajará con la especialista colaboradora, en la identifica
-ción de las mejores estrategias para el plan de negocios (clientes profesionales
-/productores, socios claves, precio de mercado etc).
-\change_inserted -1783815582 1728866362
-
+\change_inserted -1783815582 1731881219
+Conclusión
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1728866378
-MOVIDO DEL CAPÍTULO 3.
- ARREGLAR
+\change_inserted -1783815582 1731881338
+En este proyecto se desarrolló un sistema funcional y extensible diseñado
+ para su implementación en entornos ganaderos, logrando mejorar la precisión
+ y eficiencia en la predicción del BCS.
+ Este desarrollo supuso enfrentar diferentes niveles de desafío según el
+ componente en cuestión.
+ En el caso del servidor, mi experiencia de más de 10 años como desarrollador
+ backend fue determinante para diseñar e implementar este componente de
+ manera ágil, utilizando tecnologías como Java, Spring Boot, JMS Template
+ y STOMP.
+ Además, esta experiencia facilitó la comprensión del dominio y los requerimient
+os funcionales, permitiendo una interacción efectiva con el modelo de negocio
+ y sus particularidades.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731881338
+Por otro lado, el desarrollo de la aplicación móvil representó un desafío
+ mayor, debido a mi falta de experiencia con Flutter, Dart y el desarrollo
+ de interfaces visuales.
+ Esta situación implicó una curva de aprendizaje significativa, que demandó
+ más tiempo y esfuerzo en comparación con el desarrollo del servidor.
+ Sin embargo, esta experiencia se convirtió en una oportunidad valiosa para
+ ampliar mis habilidades en áreas complementarias y explorar nuevos enfoques
+ en el desarrollo de software.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731881338
+En total, el proyecto involucró el desarrollo de N clases en el servidor
+ y M clases en la aplicación móvil, alcanzando un total de X líneas de código,
+ reflejando su complejidad técnica y su alcance.
+ El sistema fue probado en un entorno con un solo calificador y un observador,
+ y demostró operar eficientemente con recursos mínimos, incluyendo:
 \end_layout
 
 \begin_layout Itemize
 
-\change_inserted -1783815582 1728866358
-Integración IoT: El sistema debe ser extensible y preparado para integrarse
- en un entorno IoT.
- Esto implica el desarrollo de una capa de comunicación flexible que permita
- conectar diferentes dispositivos y elementos del entorno ganadero (como
- mangas, corrales, y comederos) a una red.
- Estos dispositivos deben ser capaces de realizar captura automatizada de
- datos y comunicar acciones de contingencia (CAC), estructurándose como
- un Sistema Integral de Gestión de la Información (SIGI) para facilitar
- el monitoreo, planificación, y toma de decisiones.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1783815582 1728866358
-El requerimiento está bien, sería deseable contar con algo así pero eso
- cae fuera del alcance de tu propuesta.
- Tal vez se puede aclarar eso justamente en alguna parte.
-\end_layout
-
-\end_inset
-
+\change_inserted -1783815582 1731932259
+ActiveMQ: Aproximadamente X MB de memoria para mantener un flujo estable
+ de trabajos ("jobs").
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1783815582 1728866358
-No recuerdo de donde saque esto, si de algún mail o trabajo anterior.
- Mi idea era que al tener un server es posible realizar integracion en un
- futuro lo que permite que sea extensible y este preparado.
- Puede ser que sea posible pero no este preparado, ¿no? .
- Lo puedo borrar o mover en el capitulo de conclusion como ideas para el
- futuro.~ Si, yo creo que es lo mejor moverlo a trabajos futuros, porque
- habría que mostrar más componentes desde lo arquitectónico para validar
- el requerimiento.
- El sólo hecho de que exista un componente server pero sin métodos con los
- que se puedan registrar y gestionar diversos dispositivos tipo sensores
- y actuadores no alcanza.
 \end_layout
 
-\end_inset
+\begin_layout Itemize
 
+\change_inserted -1783815582 1731932263
+MySQL: Y MB de memoria para el almacenamiento y gestión de las bases de
+ datos.
+\end_layout
 
-\change_unchanged
+\begin_layout Itemize
 
+\change_inserted -1783815582 1731932266
+Servidor (API principal): Z MB de memoria para procesar solicitudes y manejar
+ la lógica de negocio.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731932250
+La modularidad y escalabilidad del sistema abren puertas para futuras ampliacion
+es, como la integración con dispositivos IoT, la optimización de modelos
+ predictivos según distintas razas bovinas y el desarrollo de estrategias
+ avanzadas de tolerancia a fallos.
+ En conjunto, este proyecto no solo cumplió con los objetivos iniciales,
+ sino que también sienta las bases para nuevas innovaciones en la automatización
+ y gestión del sector ganadero.
+ Además, representa un avance significativo tanto en términos técnicos como
+ en el aprendizaje y adaptación a tecnologías y dominios desconocidos.
 \end_layout
 
 \end_body

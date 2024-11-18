@@ -1,4 +1,4 @@
-#LyX 2.4 created this file. For more info see https://www.lyx.org/
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 544
 \begin_document
 \begin_header
@@ -102,13 +102,12 @@ Uso de tecnología de la información en granjas
 \begin_layout Standard
 
 \lang spanish-mexico
-La adopción de tecnología en las granjas tiene como objetivo transformar la forma en que se gestionan y optimizan las operaciones agropecuarias,
- permitiendo una mayor eficiencia,
- sostenibilidad y precisión en la producción.
- En el ámbito de la ganadería lechera,
- por ejemplo,
- se han diseñado sistemas avanzados para la detección del estro en vacas,
- como lo describe el artículo de 
+La adopción de tecnología en las granjas tiene como objetivo transformar
+ la forma en que se gestionan y optimizan las operaciones agropecuarias,
+ permitiendo una mayor eficiencia, sostenibilidad y precisión en la producción.
+ En el ámbito de la ganadería lechera, por ejemplo, se han diseñado sistemas
+ avanzados para la detección del estro en vacas, como lo describe el artículo
+ de 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "li2010design"
@@ -117,16 +116,18 @@ literal "false"
 \end_inset
 
 .
- Este sistema utiliza tecnología inalámbrica Zigbee y sensores de infrarrojos para monitorear la temperatura corporal y el movimiento del ganado,
- tratando de mejorar la precisión en la detección del estro y reduciendo la carga laboral.
+ Este sistema utiliza tecnología inalámbrica Zigbee y sensores de infrarrojos
+ para monitorear la temperatura corporal y el movimiento del ganado, tratando
+ de mejorar la precisión en la detección del estro y reduciendo la carga
+ laboral.
 \end_layout
 
 \begin_layout Standard
 
 \lang spanish-mexico
-Por otro lado,
- en un contexto más amplio,
- la adopción de tecnologías como la Internet de las Cosas (IoT) y Edge Computing (EC) son cruciales en la industria láctea para poder adaptarse a un mercado globalizado.
+Por otro lado, en un contexto más amplio, la adopción de tecnologías como
+ la Internet de las Cosas (IoT) y Edge Computing (EC) son cruciales en la
+ industria láctea para poder adaptarse a un mercado globalizado.
  Según 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -135,18 +136,16 @@ literal "false"
 
 \end_inset
 
-,
- estas tecnologías permiten digitalizar toda la cadena de valor,
- optimizando procesos,
- garantizando la trazabilidad y asegurando la calidad del producto final,
- lo que es fundamental en un entorno de agricultura inteligente.
+, estas tecnologías permiten digitalizar toda la cadena de valor, optimizando
+ procesos, garantizando la trazabilidad y asegurando la calidad del producto
+ final, lo que es fundamental en un entorno de agricultura inteligente.
 \end_layout
 
 \begin_layout Standard
 
 \lang spanish-mexico
-Finalmente,
- la aplicación de técnicas de Deep Learning (DL) también está revolucionando la ganadería.
+Finalmente, la aplicación de técnicas de Deep Learning (DL) también está
+ revolucionando la ganadería.
  En 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -155,17 +154,18 @@ literal "false"
 
 \end_inset
 
- destacan cómo DL se está utilizando para la automatización de tareas como la identificación y el monitoreo de la salud del ganado,
- aunque aún existen desafíos significativos,
- especialmente en el monitoreo en tiempo real y el rastreo de movimientos en condiciones de granja.
+ destacan cómo DL se está utilizando para la automatización de tareas como
+ la identificación y el monitoreo de la salud del ganado, aunque aún existen
+ desafíos significativos, especialmente en el monitoreo en tiempo real y
+ el rastreo de movimientos en condiciones de granja.
 \end_layout
 
 \begin_layout Standard
 
 \lang spanish-mexico
-En conjunto,
- estos avances subrayan el papel esencial de la tecnología en la modernización de la agricultura y la ganadería,
- impulsando mejoras en la productividad.
+En conjunto, estos avances subrayan el papel esencial de la tecnología en
+ la modernización de la agricultura y la ganadería, impulsando mejoras en
+ la productividad.
 \end_layout
 
 \begin_layout Section
@@ -173,13 +173,14 @@ Importancia de BCS y la necesidad de mejorar la alimentación de las vacas
 \end_layout
 
 \begin_layout Standard
-Entre varias variables de importancia productiva,
- económica y ambiental,
+Entre varias variables de importancia productiva, económica y ambiental,
  existe consenso en que la identificación de la condición corporal (BCS,
- por sus siglas en inglés) y los cambios en esta son los mejores indicadores de las reservas nutricionales de una vaca,
- superando al peso vivo o al cambio de peso vivo.
- Esto se debe a que estas últimas variables pueden verse afectadas por factores como el peso fetal y el llenado del rumen,
- como se describió tempranamente en la lechería 
+ por sus siglas en inglés) y los cambios en esta son los mejores indicadores
+ de las reservas nutricionales de una vaca, superando al peso vivo o al
+ cambio de peso vivo.
+ Esto se debe a que estas últimas variables pueden verse afectadas por factores
+ como el peso fetal y el llenado del rumen, como se describió tempranamente
+ en la lechería 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "wildman1982dairy"
@@ -200,9 +201,9 @@ literal "false"
  
 \change_unchanged
 .
- A lo largo del tiempo,
- se han acumulado evidencias sobre la efectividad del sistema visual de condición corporal como un fuerte predictor de la capacidad productiva,
- reproductiva y del bienestar animal 
+ A lo largo del tiempo, se han acumulado evidencias sobre la efectividad
+ del sistema visual de condición corporal como un fuerte predictor de la
+ capacidad productiva, reproductiva y del bienestar animal 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "roche2009invited"
@@ -214,10 +215,10 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Por lo tanto,
- el BCS es una herramienta fundamental en la gestión del ganado lechero,
- ya que permite estimar la movilización de reservas energéticas en grasa y músculo,
- siendo crucial para asegurar el bienestar animal y la eficiencia productiva.
+Por lo tanto, el BCS es una herramienta fundamental en la gestión del ganado
+ lechero, ya que permite estimar la movilización de reservas energéticas
+ en grasa y músculo, siendo crucial para asegurar el bienestar animal y
+ la eficiencia productiva.
  Según 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -226,14 +227,12 @@ literal "false"
 
 \end_inset
 
-,
- el BCS es ampliamente utilizado para monitorear la ingesta de alimentos y el estado de salud del ganado,
- además de optimizar la gestión de la curva de lactancia.
- Sin embargo,
- la evaluación manual tradicional del BCS,
- aunque útil,
- es subjetiva y propensa a errores,
- dado que debe tenerse en cuenta la variabilidad entre observadores 
+, el BCS es ampliamente utilizado para monitorear la ingesta de alimentos
+ y el estado de salud del ganado, además de optimizar la gestión de la curva
+ de lactancia.
+ Sin embargo, la evaluación manual tradicional del BCS, aunque útil, es
+ subjetiva y propensa a errores, dado que debe tenerse en cuenta la variabilidad
+ entre observadores 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "morin2017observational"
@@ -245,10 +244,9 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Por otra parte,
- la mejora de la alimentación del ganado es esencial para maximizar la producción de leche,
- y en este contexto,
- la precisión en la evaluación del BCS se vuelve aún más crítica.
+Por otra parte, la mejora de la alimentación del ganado es esencial para
+ maximizar la producción de leche, y en este contexto, la precisión en la
+ evaluación del BCS se vuelve aún más crítica.
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -257,8 +255,9 @@ literal "false"
 
 \end_inset
 
- destacan la importancia del BCS como el indicador principal de una alimentación adecuada en el ganado lechero,
- y señalan que agrupar a los animales según su puntuación de BCS permite una gestión más eficiente de la alimentación
+ destacan la importancia del BCS como el indicador principal de una alimentación
+ adecuada en el ganado lechero, y señalan que agrupar a los animales según
+ su puntuación de BCS permite una gestión más eficiente de la alimentación
 \change_inserted -997162125 1723813875
 .
 \change_unchanged
@@ -270,11 +269,11 @@ Motivación
 \end_layout
 
 \begin_layout Standard
-A pesar del valor indiscutido del BCS,
- existe una subutilización de este valioso indicador en los sistemas comerciales por múltiples causas,
- entre las que se encuentran la no disponibilidad regular del/la experto/a en los movimientos de hacienda,
- superposición de actividades que relega su medición regular,
- falta local de especialistas entre otros 
+A pesar del valor indiscutido del BCS, existe una subutilización de este
+ valioso indicador en los sistemas comerciales por múltiples causas, entre
+ las que se encuentran la no disponibilidad regular del/la experto/a en
+ los movimientos de hacienda, superposición de actividades que relega su
+ medición regular, falta local de especialistas entre otros 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "deestudio"
@@ -282,8 +281,7 @@ literal "false"
 
 \end_inset
 
-,
- 
+, 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "maresca2008estado"
@@ -291,8 +289,7 @@ literal "false"
 
 \end_inset
 
-,
- 
+, 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "selk1988relationships"
@@ -301,15 +298,23 @@ literal "false"
 \end_inset
 
 .
- Por este motivo,
- la principal motivación de este proyecto es la de desarrollar un prototipo de ambiente Dew con aplicación en el sector de producción tambero.
- La razón por la que se elige este dominio es porque se cuenta con avances obtenidos en el marco de una tesis doctoral sobre un modelo que aplica aprendizaje profundo para clasificación de ganado bovino basado en el indicador de condición corporal.
- La idea es realizar un desarrollo que permita agilizar el etiquetado de imágenes –aumento del conjunto de datos de entrenamiento– que se realiza con una cámara de profundidad.
- También se busca realizar una clasificación en tiempo real in situ,
- es decir,
- a medida que los animales pasan por lo que en el campo se conoce con el nombre de manga donde se realizan diversas prácticas veterinarias.
- A partir del prototipo generado y planteando la tarea de clasificación a partir de imágenes como un cómputo en el que intervienen varios dispositivos de usuario,
- también se busca validar la performance de heurísticas de planificación de tareas estudiadas mediante simulación.
+ Por este motivo, la principal motivación de este proyecto es la de desarrollar
+ un prototipo de ambiente Dew con aplicación en el sector de producción
+ tambero.
+ La razón por la que se elige este dominio es porque se cuenta con avances
+ obtenidos en el marco de una tesis doctoral sobre un modelo que aplica
+ aprendizaje profundo para clasificación de ganado bovino basado en el indicador
+ de condición corporal.
+ La idea es realizar un desarrollo que permita agilizar el etiquetado de
+ imágenes –aumento del conjunto de datos de entrenamiento– que se realiza
+ con una cámara de profundidad.
+ También se busca realizar una clasificación en tiempo real in situ, es
+ decir, a medida que los animales pasan por lo que en el campo se conoce
+ con el nombre de manga donde se realizan diversas prácticas veterinarias.
+ A partir del prototipo generado y planteando la tarea de clasificación
+ a partir de imágenes como un cómputo en el que intervienen varios dispositivos
+ de usuario, también se busca validar la performance de heurísticas de planifica
+ción de tareas estudiadas mediante simulación.
 \end_layout
 
 \begin_layout Subsection
@@ -317,7 +322,8 @@ Escasez de prototipos
 \end_layout
 
 \begin_layout Standard
-Si bien existe abundante investigación sobre algoritmos e inteligencia artificial aplicados en granjas 
+Si bien existe abundante investigación sobre algoritmos e inteligencia artificia
+l aplicados en granjas 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "bao2022artificial"
@@ -325,21 +331,22 @@ literal "false"
 
 \end_inset
 
-,
- este artículo destaca que persiste la necesidad de desarrollar aplicaciones sistemáticas que integren dispositivos de recolección de datos,
- procesamiento y algoritmos inteligentes.
- Según estos autores,
- esto es especialmente relevante en el contexto de la ganadería inteligente,
- donde se requieren sistemas de bajo costo y modelos de IA eficientes.
- Sin embargo desafíos como la precisión de los sensores y el costo de los dispositivos,
- continúan siendo un obstáculo que debe superarse para lograr una implementación efectiva.
+, este artículo destaca que persiste la necesidad de desarrollar aplicaciones
+ sistemáticas que integren dispositivos de recolección de datos, procesamiento
+ y algoritmos inteligentes.
+ Según estos autores, esto es especialmente relevante en el contexto de
+ la ganadería inteligente, donde se requieren sistemas de bajo costo y modelos
+ de IA eficientes.
+ Sin embargo desafíos como la precisión de los sensores y el costo de los
+ dispositivos, continúan siendo un obstáculo que debe superarse para lograr
+ una implementación efectiva.
 \end_layout
 
 \begin_layout Standard
-Además,
- los estudios sobre machine learning y reconocimiento de patrones han mostrado avances en áreas como la detección de enfermedades y el monitoreo del comportamiento animal.
- Sin embargo,
- como se observa en los artículos de 
+Además, los estudios sobre machine learning y reconocimiento de patrones
+ han mostrado avances en áreas como la detección de enfermedades y el monitoreo
+ del comportamiento animal.
+ Sin embargo, como se observa en los artículos de 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "kumar2018deep"
@@ -355,11 +362,10 @@ literal "false"
 
 \end_inset
 
-,
- muchos de estos estudios se centran en marcos teóricos o modelos de detección sin una implementación práctica clara.
- Por ejemplo,
- el primero presenta un modelo de identificación de vacas mediante deep learning,
- pero no aborda cómo se implementará en la práctica.
+, muchos de estos estudios se centran en marcos teóricos o modelos de detección
+ sin una implementación práctica clara.
+ Por ejemplo, el primero presenta un modelo de identificación de vacas mediante
+ deep learning, pero no aborda cómo se implementará en la práctica.
 
 \change_deleted -997162125 1723814448
  
@@ -369,12 +375,13 @@ literal "false"
 
 \begin_layout Standard
 En el ámbito del reconocimiento de patrones y procesamiento de imágenes,
- se han desarrollado diversos modelos teóricos sin implementación efectiva que pueden procesar y analizar información proveniente de imágenes,
- videos y sonidos de manera similar a la inteligencia cerebral.
+ se han desarrollado diversos modelos teóricos sin implementación efectiva
+ que pueden procesar y analizar información proveniente de imágenes, videos
+ y sonidos de manera similar a la inteligencia cerebral.
  Estos modelos permiten describir e identificar comportamientos individuales,
- evaluar la calidad de la carne y medir el rendimiento en el crecimiento animal.
- Por ejemplo,
- 
+ evaluar la calidad de la carne y medir el rendimiento en el crecimiento
+ animal.
+ Por ejemplo, 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "masferrer2018line"
@@ -382,11 +389,9 @@ literal "false"
 
 \end_inset
 
- propone un método de clasificación automática,
- combinados con datos intrínsecos de los cerdos,
- para simular un sistema de clasificación manual.
- Del mismo modo,
- 
+ propone un método de clasificación automática, combinados con datos intrínsecos
+ de los cerdos, para simular un sistema de clasificación manual.
+ Del mismo modo, 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "masferrer2018line"
@@ -394,15 +399,16 @@ literal "false"
 
 \end_inset
 
- introducen un algoritmo inteligente para el monitoreo del comportamiento alimentario mediante el reconocimiento de patrones y aprendizaje automático.
+ introducen un algoritmo inteligente para el monitoreo del comportamiento
+ alimentario mediante el reconocimiento de patrones y aprendizaje automático.
 \end_layout
 
 \begin_layout Standard
-En el campo de las redes neuronales artificiales (ANN),
- los desarrollos recientes se han enfocado principalmente en la creación de modelos y algoritmos dirigidos a la detección de enfermedades animales,
- la estimación del rendimiento de crecimiento y el monitoreo y control de las condiciones ambientales.
- Por ejemplo,
- 
+En el campo de las redes neuronales artificiales (ANN), los desarrollos
+ recientes se han enfocado principalmente en la creación de modelos y algoritmos
+ dirigidos a la detección de enfermedades animales, la estimación del rendimient
+o de crecimiento y el monitoreo y control de las condiciones ambientales.
+ Por ejemplo, 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "nasirahmadi2019automatic"
@@ -410,8 +416,9 @@ literal "false"
 
 \end_inset
 
- desarrollaron un algoritmo para monitorear automáticamente la postura de acostado lateral y esternal de los cerdos,
- proporcionando información crucial sobre su salud y bienestar.
+ desarrollaron un algoritmo para monitorear automáticamente la postura de
+ acostado lateral y esternal de los cerdos, proporcionando información crucial
+ sobre su salud y bienestar.
 
 \change_deleted -997162125 1723814448
  
@@ -420,10 +427,11 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Aunque todos estos modelos y algoritmos representan avances significativos en teoría,
- su implementación práctica en entornos reales aún es limitada.
- Esto subraya la necesidad de traducir estas innovaciones en soluciones tangibles que puedan ser aplicadas efectivamente en la ganadería,
- llevando los desarrollos teóricos al uso práctico en la producción animal.
+Aunque todos estos modelos y algoritmos representan avances significativos
+ en teoría, su implementación práctica en entornos reales aún es limitada.
+ Esto subraya la necesidad de traducir estas innovaciones en soluciones
+ tangibles que puedan ser aplicadas efectivamente en la ganadería, llevando
+ los desarrollos teóricos al uso práctico en la producción animal.
 \end_layout
 
 \begin_layout Section
@@ -431,16 +439,18 @@ Propuesta
 \end_layout
 
 \begin_layout Standard
-La propuesta consiste en desarrollar un prototipo de ambiente de computación Dew compuesto de un componente servidor y una aplicación móvil diseñada para predecir el BCS en vacas lecheras,
- combinando tecnologías de inteligencia artificial,
- aprendizaje automático y computación en el borde.
- Este prototipo no sólo servirá para predecir el BCS utilizando un modelo de red neuronal previamente entrenado para vacas lecheras de raza 
+La propuesta consiste en desarrollar un prototipo de ambiente de computación
+ Dew compuesto de un componente servidor y una aplicación móvil diseñada
+ para predecir el BCS en vacas lecheras, combinando tecnologías de inteligencia
+ artificial, aprendizaje automático y computación en el borde.
+ Este prototipo no sólo servirá para predecir el BCS utilizando un modelo
+ de red neuronal previamente entrenado para vacas lecheras de raza 
 \lang spanish-mexico
 Holstein-Freisian
 \lang spanish
-,
- sino que también permitirá almacenar la información obtenida durante las evaluaciones realizadas por expertos,
- dando la posibilidad de reentrenamiento continuo del modelo.
+, sino que también permitirá almacenar la información obtenida durante las
+ evaluaciones realizadas por expertos, dando la posibilidad de reentrenamiento
+ continuo del modelo.
 \end_layout
 
 \begin_layout Subsection
@@ -448,23 +458,20 @@ Objetivo
 \end_layout
 
 \begin_layout Standard
-El objetivo general de este proyecto es el de desarrollar un prototipo de ambiente de computación Dew que aproveche capacidad de cómputo presente en la cercanía de un usuario para ejecutar tareas de clasificación y etiquetado in-situ.
- Desde el punto de vista práctico,
- la capacidad de cómputo estará representada por dispositivos de bajo costo tipo SBC (Single Board Computers) y/o dispositivos móviles (smartphones) que podrán asumirse ya presentes en el contexto de utilización (tambo lechero) o en su defecto factibles de ser desplegados con mínimos requerimientos para llevar a cabo tareas de clasificación de ganado en tiempo real.
- Las tareas de clasificación propiamente dichas,
- emplearán un modelo tensorflow previamente desarrollado en el marco de un trabajo publicado en una revista 
-\change_deleted -997162125 1727887250
-internacional
-\change_inserted -997162125 1727887252
-científica
-\change_unchanged
- de alto impacto en el área de 
-\change_inserted -997162125 1727887259
-las 
-\change_deleted -997162125 1727887260
-e
-\change_unchanged
-tecnologías aplicadas al agro 
+El objetivo general de este proyecto es el de desarrollar un prototipo de
+ ambiente de computación Dew que aproveche capacidad de cómputo presente
+ en la cercanía de un usuario para ejecutar tareas de clasificación y etiquetado
+ in-situ.
+ Desde el punto de vista práctico, la capacidad de cómputo estará representada
+ por dispositivos de bajo costo tipo SBC (Single Board Computers) y/o dispositiv
+os móviles (smartphones) que podrán asumirse ya presentes en el contexto
+ de utilización (tambo lechero) o en su defecto factibles de ser desplegados
+ con mínimos requerimientos para llevar a cabo tareas de clasificación de
+ ganado en tiempo real.
+ Las tareas de clasificación propiamente dichas, emplearán un modelo tensorflow
+ previamente desarrollado en el marco de un trabajo publicado en una revista
+ científica de alto impacto en el área de las tecnologías aplicadas al agro
+ 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "alvarez2018body"
@@ -473,30 +480,44 @@ literal "false"
 \end_inset
 
 .
- El prototipo a desarrollar tiene múltiples propósitos que pueden resumirse en:
+ El prototipo a desarrollar tiene múltiples propósitos que pueden resumirse
+ en:
 \end_layout
 
 \begin_layout Standard
-1- Contribuir a mejorar el modelo tensorflow a partir de un reentrenamiento que se será posible gracias a la agilización del proceso de etiquetado de imágenes en las que interviene un profesional veterinario experto en el dominio.
+1- Contribuir a mejorar el modelo tensorflow a partir de un reentrenamiento
+ que se será posible gracias a la agilización del proceso de etiquetado
+ de imágenes en las que interviene un profesional veterinario experto en
+ el dominio.
 \end_layout
 
 \begin_layout Standard
-2- Permitir que conocimiento experto en el dominio y encapsulado en una red de aprendizaje profundo pueda ser utilizado para automatizar la clasificación de ganado empleando dispositivos de usuario como plataforma de ejecución.
+2- Permitir que conocimiento experto en el dominio y encapsulado en una
+ red de aprendizaje profundo pueda ser utilizado para automatizar la clasificaci
+ón de ganado empleando dispositivos de usuario como plataforma de ejecución.
 \end_layout
 
 \begin_layout Standard
-3- Permitir la validación de resultados de estrategias de planificación de tareas en grupos de dispositivos móviles estudiados con anterioridad en el grupo de trabajo y empleando simulación.
+3- Permitir la validación de resultados de estrategias de planificación
+ de tareas en grupos de dispositivos móviles estudiados con anterioridad
+ en el grupo de trabajo y empleando simulación.
  De este objetivo general se desprenden los siguientes objetivos específicos:
 \end_layout
 
 \begin_layout Itemize
-Diseño y desarrollo de una app móvil Android Evaluador que oficia de cliente y permite al profesional veterinario experto en el dominio etiquetar imágenes de ganado vacuno tomadas con una cámara de profundidad en tiempo real en el contexto de labores realizados en una manga,
- sin requerir de conexión a Internet.
+Diseño y desarrollo de una app móvil Android Evaluador que oficia de cliente
+ y permite al profesional veterinario experto en el dominio etiquetar imágenes
+ de ganado vacuno tomadas con una cámara de profundidad en tiempo real en
+ el contexto de labores realizados en una manga, sin requerir de conexión
+ a Internet.
 \end_layout
 
 \begin_layout Itemize
-Diseño y desarrollo de una app móvil Android Visualizador que permite a un usuario no experto en el dominio conocer la condición corporal del ganado vacuno a medida que se obtienen imágenes de este en tiempo real y en el contexto de labores realizadas en una manga,
- sin requerir de conexión a Internet.
+Diseño y desarrollo de una app móvil Android Visualizador que permite a
+ un usuario no experto en el dominio conocer la condición corporal del ganado
+ vacuno a medida que se obtienen imágenes de este en tiempo real y en el
+ contexto de labores realizadas en una manga, sin requerir de conexión a
+ Internet.
 
 \change_deleted -997162125 1723815236
  
@@ -505,30 +526,18 @@ Diseño y desarrollo de una app móvil Android Visualizador que permite a un usu
 \end_layout
 
 \begin_layout Itemize
-Diseño y desarrollo de un componente servidor encargado de la gestión de tareas que 
-\change_deleted -997162125 1727887308
-pueden ser
-\change_inserted -997162125 1727887308
-son
-\change_unchanged
- 
-\change_deleted -997162125 1727887309
-de
-\change_inserted -997162125 1727887310
-el
-\change_unchanged
- etiquetado 
-\change_deleted -997162125 1727887316
-o
-\change_inserted -997162125 1727887316
-y
-\change_unchanged
- clasificación automática diferenciando la app cliente de la cual provenga una petición.
+Diseño y desarrollo de un componente servidor encargado de la gestión de
+ tareas que son el etiquetado y clasificación automática diferenciando la
+ app cliente de la cual provenga una petición.
 \end_layout
 
 \begin_layout Standard
-Para los objetivos que se relacionan con el desarrollo móvil se adoptará como tecnología el framework Flutter por varias razones entre las que se encuentran la amplia disponibilidad de librerías y documentación,
- la posibilidad de generar aplicaciones multiplataforma -aunque el desarrollo quedará instanciado para la plataforma Android- y la experiencia previa en el uso del framework por parte de los directores del proyecto.
+Para los objetivos que se relacionan con el desarrollo móvil se adoptará
+ como tecnología el framework Flutter por varias razones entre las que se
+ encuentran la amplia disponibilidad de librerías y documentación, la posibilida
+d de generar aplicaciones multiplataforma -aunque el desarrollo quedará
+ instanciado para la plataforma Android- y la experiencia previa en el uso
+ del framework por parte de los directores del proyecto.
 \end_layout
 
 \begin_layout Subsection
@@ -536,12 +545,12 @@ Contexto
 \end_layout
 
 \begin_layout Standard
-El proyecto se enmarca en la aplicación de Tecnologías de la Información y la Comunicación (TICs) en el sector agropecuario,
- abordando la necesidad de evaluar con precisión la nutrición del rodeo lechero a través del BCS.
- Este proceso se realiza tradicionalmente en un lugar llamado "manga",
- donde cada vaca es inspeccionada visualmente por un profesional veterinario,
- denominado "Calificador",
- quien asigna un score basado en su experiencia.
+El proyecto se enmarca en la aplicación de Tecnologías de la Información
+ y la Comunicación (TICs) en el sector agropecuario, abordando la necesidad
+ de evaluar con precisión la nutrición del rodeo lechero a través del BCS.
+ Este proceso se realiza tradicionalmente en un lugar llamado "manga", donde
+ cada vaca es inspeccionada visualmente por un profesional veterinario,
+ denominado "Calificador", quien asigna un score basado en su experiencia.
 \end_layout
 
 \begin_layout Subsection
@@ -554,13 +563,11 @@ Desafíos actuales
 
 \begin_layout Standard
 Uno de los principales desafíos es la escasez de calificadores expertos,
- lo que a menudo lleva a que las evaluaciones no se realicen o,
- cuando se llevan a cabo,
- se tornen propensas a errores debido a la alta carga de trabajo,
- especialmente en rodeos grandes.
- Además,
- la precisión de la evaluación puede variar según el estado del calificador,
- lo que introduce un margen de error adicional.
+ lo que a menudo lleva a que las evaluaciones no se realicen o, cuando se
+ llevan a cabo, se tornen propensas a errores debido a la alta carga de
+ trabajo, especialmente en rodeos grandes.
+ Además, la precisión de la evaluación puede variar según el estado del
+ calificador, lo que introduce un margen de error adicional.
 \end_layout
 
 \begin_layout Subsection
@@ -568,33 +575,36 @@ Solución propuesta
 \end_layout
 
 \begin_layout Standard
-La aplicación móvil abordará estos desafíos mediante las siguientes funcionalidades:
+La aplicación móvil abordará estos desafíos mediante las siguientes funcionalida
+des:
 \end_layout
 
 \begin_layout Itemize
-Predicción del BCS mediante IA:
- Utilizando un modelo de red neuronal entrenado con imágenes de vacas,
- la aplicación podrá clasificar automáticamente el BCS de cada animal con un score similar al que otorgaría un calificador humano.
- Este modelo ya ha sido desarrollado y entrenado en trabajos previos para vacas de ,
- pero requiere un proceso continuo de reentrenamiento para mejorar su precisión y adaptabilidad.
+Predicción del BCS mediante IA: Utilizando un modelo de red neuronal entrenado
+ con imágenes de vacas, la aplicación podrá clasificar automáticamente el
+ BCS de cada animal con un score similar al que otorgaría un calificador
+ humano.
+ Este modelo ya ha sido desarrollado y entrenado en trabajos previos para
+ vacas de , pero requiere un proceso continuo de reentrenamiento para mejorar
+ su precisión y adaptabilidad.
 \end_layout
 
 \begin_layout Itemize
-Reentrenamiento automático del modelo:
- La aplicación permitirá almacenar las calificaciones manuales realizadas por expertos,
- creando una base de datos de referencia que se utilizará para reentrenar el modelo de red neuronal.
- De este modo,
- cada nueva evaluación contribuirá a mejorar la precisión del algoritmo,
- permitiendo su adaptación a distintas condiciones y características del ganado.
+Reentrenamiento automático del modelo: La aplicación permitirá almacenar
+ las calificaciones manuales realizadas por expertos, creando una base de
+ datos de referencia que se utilizará para reentrenar el modelo de red neuronal.
+ De este modo, cada nueva evaluación contribuirá a mejorar la precisión
+ del algoritmo, permitiendo su adaptación a distintas condiciones y característi
+cas del ganado.
 \end_layout
 
 \begin_layout Itemize
-Facilitación de uso por veterinarios:
- La herramienta será accesible y fácil de usar por cualquier veterinario,
- incluso aquellos que no sean calificadores expertos.
- Esto no solo democratizará el uso de la tecnología,
- sino que también garantizará que las evaluaciones del BCS puedan realizarse con mayor frecuencia y precisión,
- sin depender exclusivamente de la disponibilidad de un calificador.
+Facilitación de uso por veterinarios: La herramienta será accesible y fácil
+ de usar por cualquier veterinario, incluso aquellos que no sean calificadores
+ expertos.
+ Esto no solo democratizará el uso de la tecnología, sino que también garantizar
+á que las evaluaciones del BCS puedan realizarse con mayor frecuencia y
+ precisión, sin depender exclusivamente de la disponibilidad de un calificador.
 \change_inserted -1783815582 1723405940
 
 \end_layout
@@ -604,23 +614,24 @@ Resultados esperados
 \end_layout
 
 \begin_layout Itemize
-Automatización y precisión:
- Al automatizar la predicción del BCS,
- se reducirá la dependencia de calificadores humanos y se minimizarán los errores derivados del cansancio o la subjetividad.
+Automatización y precisión: Al automatizar la predicción del BCS, se reducirá
+ la dependencia de calificadores humanos y se minimizarán los errores derivados
+ del cansancio o la subjetividad.
 \end_layout
 
 \begin_layout Itemize
-Mejora continua:
- La posibilidad de reentrenar el modelo con nuevas evaluaciones permitirá una mejora continua del algoritmo,
- adaptándose mejor a las variaciones individuales del ganado y las condiciones específicas de cada rodeo.
+Mejora continua: La posibilidad de reentrenar el modelo con nuevas evaluaciones
+ permitirá una mejora continua del algoritmo, adaptándose mejor a las variacione
+s individuales del ganado y las condiciones específicas de cada rodeo.
 \end_layout
 
 \begin_layout Itemize
-Accesibilidad y eficiencia:
- Veterinarios no especializados podrán realizar evaluaciones precisas del BCS,
- optimizando el tiempo y los recursos invertidos en el manejo nutricional del rodeo.
- Este prototipo no sólo permitirá optimizar la gestión nutricional en el sector agropecuario,
- sino que también contribuirá a la evolución de las prácticas tradicionales hacia un enfoque más tecnológico y eficiente.
+Accesibilidad y eficiencia: Veterinarios no especializados podrán realizar
+ evaluaciones precisas del BCS, optimizando el tiempo y los recursos invertidos
+ en el manejo nutricional del rodeo.
+ Este prototipo no sólo permitirá optimizar la gestión nutricional en el
+ sector agropecuario, sino que también contribuirá a la evolución de las
+ prácticas tradicionales hacia un enfoque más tecnológico y eficiente.
 \end_layout
 
 \end_body

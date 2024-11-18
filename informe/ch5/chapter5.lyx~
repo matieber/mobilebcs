@@ -80,598 +80,979 @@
 
 \begin_layout Chapter
 
-\change_inserted -1783815582 1729210645
+\change_inserted -1783815582 1731631313
 Resultados
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731631319
+En este capítulo, se presentan las capturas de pantalla y el análisis de
+ las principales interfaces de usuario de cada caso de uso, proporcionando
+ una evaluación del funcionamiento y la usabilidad de cada módulo en la
+ aplicación.
 \end_layout
 
 \begin_layout Section
 
-\change_inserted -1783815582 1729210655
-Configuración del Sistema 
+\change_inserted -1783815582 1731631324
+Pantalla de Inicio de Sesión (Login) 
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1729210653
-Este apartado explicará cómo se configuran los diversos componentes del
- sistema, incluidos el servidor, base de datos y las dependencias necesarias
- para que el sistema funcione correctamente.
+\change_inserted -1783815582 1731758978
+El módulo de inicio de sesión permite a los usuarios acceder al sistema
+ con distintos roles, con diferentes permisos y funciones dentro de la aplicació
+n.
+ La pantalla principal de acceso ofrece dos opciones: "Iniciar sesión" y
+ "Registrar usuario", de modo que el usuario puede elegir entre ingresar
+ al sistema o registrarse como nuevo usuario, según sea necesario.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731758937
+[Acá va imagen de la pantalla principal de acceso]
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731758937
+Si el usuario selecciona "Iniciar sesión", es dirigido a una pantalla donde
+ puede introducir su nombre de usuario.
+ En caso de un ingreso correcto, el sistema autentica el perfil y redirige
+ al usuario a su módulo correspondiente, ya sea como calificador o como
+ observador.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731758937
+[Acá va imagen de la pantalla de ingreso de usuario]
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731758937
+En cambio, si el usuario selecciona "Registrar usuario", el sistema muestra
+ una pantalla donde el usuario puede introducir su nombre y seleccionar
+ su rol (calificador u observador).
+ Esta pantalla permite que los nuevos usuarios definan adecuadamente su
+ perfil dentro de la aplicación.
+ Una vez completado el registro, el sistema redirige automáticamente al
+ usuario a la pantalla de inicio de sesión para facilitar el acceso.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731758937
+[Acá va imagen de la pantalla de registro de usuario]
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731758937
+La interfaz de inicio de sesión presenta mensajes de error en caso de datos
+ incorrectos o problemas de conexión con el servidor.
+ El sistema está configurado para gestionar el acceso según el rol del usuario,
+ asegurando que cada perfil (calificador u observador) acceda exclusivamente
+ a las funciones asignadas.
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1731760661
+Calificador
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731760366
+El módulo de calificación permite al usuario con rol de calificador gestionar
+ sus sesiones de calificación de manera eficiente.
+ Desde esta pantalla, el calificador puede iniciar una nueva sesión de calificac
+ión o finalizar una sesión previamente activa, asegurando que solo una sesión
+ esté abierta a la vez.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731760348
+[Acá va imagen de la pantalla de inicio de sesión de calificador]
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731760421
+Si el calificador intenta iniciar una nueva sesión mientras otra está activa,
+ el sistema muestra mensajes de error claros e informativos, indicando la
+ necesidad de finalizar la sesión actual antes de comenzar una nueva.
+ Esta funcionalidad garantiza el control adecuado del flujo de trabajo del
+ calificador, evitando conflictos o superposición de datos.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731760439
+En el caso de iniciar sesión, la aplicación los redirige a la pantalla principar
+ del calificador.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731631314
+En la sesión de calificación, los usuarios calificadores pueden asignar
+ puntajes a las imágenes de las caravanas en base a criterios predefinidos.
+ Esta funcionalidad es fundamental para la recopilación y almacenamiento
+ de datos de evaluación.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731760664
+[Acá va imagen de la pantalla de sesión de calificación]
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1731760663
+Sistema de Notificación de Imágenes
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731761091
+El módulo del observador, tras iniciar sesión, redirige automáticamente
+ al usuario a la pantalla principal, diseñada para recibir y mostrar las
+ imágenes a medida que son enviadas al sistema.
+ Este módulo permite a los usuarios con el rol de observador visualizar
+ las imágenes capturadas de las caravanas junto con su identificación asociada.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731761091
+Además, una vez que se calcula el puntaje de condición corporal (BCS) predicho,
+ ya sea por este observador u otro, el resultado se muestra en la misma
+ pantalla.
+ También se proporciona acceso al historial de dicha caravana, permitiendo
+ revisar las evaluaciones realizadas en sesiones anteriores.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731762074
+La interfaz del observador es completamente de solo lectura, sin opciones
+ para interactuar o realizar modificaciones.
+ Las imágenes de las caravanas se actualizan de manera automática conforme
+ las vacas pasan frente a la cámara, ofreciendo una experiencia fluida y
+ enfocada en la visualización y monitoreo en tiempo real.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731762084
+[Acá va imagen de la pantalla del observador]
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731762284
+Por otro lado, el módulo del calificador redirige automáticamente al usuario,
+ tras iniciar sesión de calificación, a su pantalla principal.
+ Esta interfaz está diseñada para permitir que el calificador avance manualmente
+ a la siguiente imagen de una vaca haciendo clic en el botón "Siguiente".
+ Esto le da al calificador el control de cuándo visualizar la próxima imagen
+ para asignar el valor BCS correspondiente.
+ Es importante destacar que el calificador debe interactuar activamente
+ con la aplicación para avanzar o esperar la llegada de una nueva imagen.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731763415
+[Acá va imagen de la pantalla del calificador]
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731765086
+En la pantalla principal, ambos usuarios tienen acceso a un menú que les
+ permite cerrar la sesión.
+ Además, para los calificadores, este menú incluye la opción adicional de
+ finalizar una sesión de calificación en curso.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731764815
+[Acá va imagen del menu]
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1731631434
+Reportes Generados 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731766582
+Tanto los calificadores como los observadores cuentan con herramientas visuales
+ que facilitan el análisis de los datos generados durante las sesiones de
+ calificación.
+ Entre estas herramientas destaca un gráfico de tipo torta, que proporciona
+ una representación clara y organizada de las sesiones en curso y las completada
+s.
+ Este gráfico agrupa los valores predichos del puntaje de condición corporal
+ (BCS) en categorías enteras del 1 al 5, basándose en la parte entera del
+ valor incluso cuando la predicción incluye decimales.
+ Esta metodología asegura una visualización uniforme, intuitiva y de fácil
+ interpretación para todos los usuarios.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731768006
+Adicionalmente, se incluye un diagrama de dispersión que muestra el promedio
+ del puntaje de condición corporal (BCS) de las sesiones anteriores, ofreciendo
+ una perspectiva comparativa y útil para evaluar tendencias a lo largo del
+ tiempo.
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1731768052
+Rendimientos del sistema
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731768151
+Para evaluar la eficiencia del sistema, se midieron los tiempos de predicción
+ del BCS en un móvil.
+ Estos tiempos son críticos para garantizar una experiencia fluida en obtener
+ los resultados de la prediccion para que el observador puede visualizarlos
+ y para que tanto el calificador como el observador puedan visualizar los
+ reportes en tiempo real.
 \end_layout
 
 \begin_layout Subsection
 
-\change_inserted -1783815582 1729212775
-Configuración del Servidor
-\end_layout
-
-\begin_layout Subsubsection
-
-\change_inserted -1783815582 1729212802
-Requisitos previos
+\change_inserted -1783815582 1731768161
+Tiempos de Predicción
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1729212803
-Antes de proceder con cualquiera de las opciones, asegúrate de tener instalado:
+\change_inserted -1783815582 1731768053
+El tiempo promedio de predicción para una imagen fue de X segundos, con
+ una desviación estándar de Y segundos.
+ Este rendimiento asegura que el sistema puede procesar imágenes en tiempo
+ real sin retrasos significativos, incluso bajo carga sostenida.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Subsection
 
-\change_inserted -1783815582 1729212803
-Java 11: Es obligatorio para ejecutar la aplicación.
- Puedes verificar tu versión de Java ejecutando el siguiente comando:
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729212818
-java -version 
+\change_inserted -1783815582 1731768701
+Comparación de Rendimiento 
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1729212803
-Si no tienes Java 11, puedes instalarlo desde el sitio oficial de Oracle
- o mediante un gestor de paquetes como apt, brew, o sdkman.
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729212803
-Maven (si vas a compilar desde el código fuente): Para compilar el proyecto
- si tienes acceso al código fuente.
- Para instalar Maven en Linux o macOS:
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729212851
-sudo apt install maven # En Ubuntu/Debian
+\change_inserted -1783815582 1731792119
+El algoritmo fue evaluado antes de la implementación del prototipo en Flutter,
+ utilizando una versión preliminar desarrollada para Android.
+ Las pruebas se llevaron a cabo en diversos dispositivos móviles, variando
+ tanto el número de dispositivos como el tamaño de los lotes de procesamiento
+ ("jobs") durante un flujo continuo de datos transmitidos desde un servidor
+ hacia los móviles dentro de la misma red local.
+ A continuación, se presenta un resumen de los resultados obtenidos en estas
+ evaluaciones:
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1729212803
-brew install maven # En macOS con Homebrew
-\end_layout
-
-\begin_layout Subsubsection
-
-\change_inserted -1783815582 1729211631
-Configurar ActiveMQ Artemis
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211631
-Descarga ActiveMQ Artemis
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211394
-Ve al sitio oficial de ActiveMQ Artemis 
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211411
-Descarga la última versión del broker.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211431
-Instalar ActiveMQ Artemis
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211449
-Descomprime el archivo descargado en un directorio de tu elección.
- 
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211450
-Ve al directorio bin dentro de la carpeta de ActiveMQ Artemis.
- 
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211467
-Ejecuta el siguiente comando para crear una nueva instancia del broker.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211467
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211475
-./artemis create mybroker --user admin --password admin 
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211507
-Esto creará una instancia de ActiveMQ con el nombre mybroker
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211520
-Iniciar el broker
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211546
-Ve al directorio mybroker/bin y ejecuta:
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211572
-./artemis run 
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211650
-El broker estará corriendo por defecto en el puerto 61616
-\end_layout
-
-\begin_layout Subsubsection
-
-\change_inserted -1783815582 1729211695
-Configurar MySQL
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211706
-Descargar e instalar MySQL
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211708
-Descarga MySQL 8.0 
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211723
-Instalarlo siguiendo las instrucciones del assistente.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211733
-Configurar MySQL
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211762
-Una vez instalado, iniciar el servidor MySQL
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211770
-mysql.server start # en macOS oLinux 
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211776
-net start mysql # en Windows 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211782
-Acceder a MySQL
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211850
-Abre el cliente de MySQL
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211859
-mysql -u root -p 
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211888
-Cuando se te solicite, introduce la contraseña de root
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211896
-Crear la base de datos
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211912
-Ejecuta el siguiente comando para crear el esquema necesario
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729212897
-CREATE SCHEMA server
-\end_layout
-
-\begin_layout Subsubsection
-
-\change_inserted -1783815582 1729213107
-Ejecutar la aplicación
-\begin_inset Note Note
-status open
+\change_inserted -1783815582 1731773256
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1729213107
-(mover la infra atras)
+\change_inserted -1783815582 1731787635
+Ejecuciones
 \change_unchanged
 
 \end_layout
 
 \end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
 
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787569
+Modelo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731773283
+Tiempo Promedio por imagen (milisegundos) 
+\change_unchanged
 
 \end_layout
 
-\begin_layout Standard
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
 
-\change_inserted -1783815582 1729212999
-Opción 1
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731773798
+desviación estandar
 \end_layout
 
-\begin_layout Standard
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
 
-\change_inserted -1783815582 1729213013
-Si prefieres usar Docker, sigue los siguientes pasos:
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731773831
+total de imágenes procesadas
 \end_layout
 
-\begin_layout Enumerate
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
 
-\change_inserted -1783815582 1729213026
-Iniciar la cola de mensajería con Docker_
-\begin_inset Newline newline
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787774
+total de jobs procesados
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787602
+stream de dos imágenes por job
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787572
+Xiaomi_Redmi_Note_7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731770675
+235
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731772017
+24
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787243
+876
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787800
+438
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787575
+motorola_moto_g9_play
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731772742
+243
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731772750
+15
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731773843
+876
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787804
+438
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787626
+stream de dos imágenes por job
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787578
+Xiaomi_Redmi_Note_7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731775203
+233
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731775699
+23
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787229
+584
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787814
+292
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787581
+motorola_moto_g6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731786096
+300
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731786100
+54
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787231
+584
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787816
+292
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787586
+motorola_moto_g9_play 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731786131
+244
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731786135
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787235
+584
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787817
+292
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787743
+stream de 15 imágenes por job
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787853
+Xiaomi_Redmi_Note_7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731791253
+217
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731791258
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731788177
+580
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731788133
+116
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787860
+motorola_moto_g6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731791403
+355
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731791409
+14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731788179
+5840
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731788136
+116
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731787863
+motorola_moto_g9_play 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731791928
+215
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731791932
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731788180
+580
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1731788138
+116
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
 \end_inset
 
-docker run -p 61616:61616 -e AMQ_USER=admin -e AMQ_PASSWORD=admin quay.io/artemis
-cloud/activemq-artemis-broker 
-\end_layout
 
-\begin_layout Enumerate
-
-\change_inserted -1783815582 1729213055
-Iniciar la base de datos con Docker:
-\begin_inset Newline newline
-\end_inset
-
-docker run --name=mysql-db -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 mysql:8.0
- 
-\begin_inset Newline newline
-\end_inset
-
-docker exec -it mysql-db mysql -p
-\begin_inset Newline newline
-\end_inset
-
- create schema server; 
-\end_layout
-
-\begin_layout Enumerate
-
-\change_inserted -1783815582 1729213063
-Ejecutar el servidor con Docker: Si tienes el archivo server.jar ya compilado,
- puedes ejecutarlo directamente con Docker:
-\begin_inset Newline newline
-\end_inset
-
-docker run -v $(pwd)/server.jar:/app/server.jar -p 8080:8080 openjdk:11 java
- -jar /app/server.jar 
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729213140
-Opcion 2
-\begin_inset Newline newline
-\end_inset
-
-Si tienes acceso al código fuente del proyecto y prefieres compilarlo y
- ejecutarlo en un entorno de desarrollo local, sigue los pasos a continuación:
-\end_layout
-
-\begin_layout Enumerate
-
-\change_inserted -1783815582 1729213153
-Clonar el repositorio del proyecto 
-\begin_inset Newline newline
-\end_inset
-
-git clone <URL del repositorio>
-\begin_inset Newline newline
-\end_inset
-
-cd <directorio del proyecto> 
-\end_layout
-
-\begin_layout Enumerate
-
-\change_inserted -1783815582 1729213168
-Compilar el proyecto usando Maven: Asegúrate de que Maven está instalado
- y luego ejecuta el siguiente comando:
-\begin_inset Newline newline
-\end_inset
-
-mvn clean install 
-\begin_inset Newline newline
-\end_inset
-
-Esto generará un archivo server.jar en el directorio target.
-\end_layout
-
-\begin_layout Enumerate
-
-\change_inserted -1783815582 1729213181
-Ejecutar la aplicación: Una vez compilado, ejecuta el JAR generado con Java:
-\begin_inset Newline newline
-\end_inset
-
-java -jar target/server.jar 
-\end_layout
-
-\begin_layout Enumerate
-
-\change_inserted -1783815582 1729213196
-Configuración adicional del servidor: La aplicación se ejecutará por defecto
- en el puerto 8080.
- Si necesitas cambiar el puerto, puedes hacerlo modificando el archivo de
- configuración o pasando parámetros adicionales en la línea de comandos.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729213201
-Opción 3
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729213218
-Si ya tienes el archivo server.jar y no necesitas compilarlo, simplemente
- puedes ejecutar el servidor usando el siguiente comando:
-\begin_inset Newline newline
-\end_inset
-
-java -jar server.jar 
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729213223
-Este comando requiere que tengas Java 11 instalado en tu máquina.
- La aplicación se iniciará en el puerto 8080 por defecto.
-\end_layout
-
-\begin_layout Subsection
-
-\change_inserted -1783815582 1729210681
-Configuración del Cliente (Aplicación Flutter)
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729210653
-En esta sección se detallará cómo configurar la aplicación móvil desarrollada
- con Flutter para interactuar con el sistema.
-\end_layout
-
-\begin_layout Subsubsection
-
-\change_inserted -1783815582 1729210698
-Configuración del Host y Puerto del Servidor
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729210653
-La aplicación Flutter permite configurar el host y el puerto del servidor
- al que se conectará.
- Las variables serverHost y serverPort deben ser definidas de la siguiente
- manera:
 \end_layout
 
 \begin_layout Itemize
 
-\change_inserted -1783815582 1729210725
-serverHost: Si está vacío, la aplicación utilizará por defecto:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729210730
-localhost en entornos de iOS.
- 
+\change_inserted -1783815582 1731788649
+En el primer experimento, se emplearon dos dispositivos móviles (Xiaomi
+ Redmi Note 7 y Motorola Moto G9 Play), con lotes de 2 imágenes por job.
+ El flujo de datos procesó un total de 1752 imágenes en 26 minutos y 43
+ segundos.
 \end_layout
 
 \begin_layout Itemize
 
-\change_inserted -1783815582 1729210755
-10.0.2.2 en entornos de Android (para emuladores).
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729210802
-serverPort: Si está vacío, la aplicación usará el puerto 8080 como valor
- por defecto.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729210804
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729210834
-Esto garantiza que la aplicación funcione por defecto en ambientes de desarollo
- para emuladores de iOS y Android.
-\end_layout
-
-\begin_layout Subsubsection
-
-\change_inserted -1783815582 1729210972
-Configuración de Python 
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729210858
-La aplicación depende de un entorno Python 3.8 para ejecutar scripts específicos.
- Para configurar el entorno Python:
+\change_inserted -1783815582 1731788649
+En el segundo experimento, se incorporó un tercer dispositivo (Motorola
+ Moto G9 Play adicional), manteniendo el tamaño de los jobs en 2 imágenes.
+ Nuevamente, se procesaron 1752 imágenes, pero en 26 minutos y 44 segundos,
+ mostrando una variación mínima en el tiempo total.
 \end_layout
 
 \begin_layout Itemize
 
-\change_inserted -1783815582 1729210867
-Definir la ruta de Python 3.8 en el sistema:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211018
-Para sistemas Linux: 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211019
-\begin_inset Separator plain
-\end_inset
-
-
+\change_inserted -1783815582 1731788649
+En el tercer experimento, utilizando los mismos tres dispositivos móviles,
+ se incrementó el tamaño de los jobs a 15 imágenes por lote.
+ En esta configuración, se procesaron 1740 imágenes en 3 minutos y 47,114
+ segundos, demostrando una notable mejora en el tiempo de procesamiento
+ gracias al tamaño optimizado de los jobs.
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1729211024
-export PYTHON_3_8_HOME='/home/linuxbrew/.linuxbrew/opt/python@3.8/bin' 
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211019
-export PATH=$PATH:$PYTHON_3_8_HOME 
-\end_layout
-
-\begin_layout Subsubsection
-
-\change_inserted -1783815582 1729210993
-Configuración de Escritura en Android
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211126
-Para permitir que la aplicación móvil interactúe con el sistema de archivos
- del dispositivo Android, se deben realizar las siguientes configuraciones:
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211132
-Copiar el archivo assets/empty_image.png al directorio sdcard/Download/ del
- emulador o dispositivo Android.
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1729211146
-Asegurarse de que la aplicación tenga permisos de escritura en el sistema
- de archivos del dispositivo.
- Esto se puede configurar desde los ajustes del emulador o del dispositivo
- Android en la opción de permisos de la aplicación calificator.
- 
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211147
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-
-\change_inserted -1783815582 1729211163
-Ejecución de la Aplicación
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1729211143
-En esta sección puedes mostrar capturas de pantalla de la aplicación Flutter
- funcionando, después de haber configurado los pasos mencionados anteriormente.
- Muestra tanto la interfaz en Android como en iOS, y detalla cualquier configura
-ción adicional que se deba realizar para obtener los resultados deseados.
+\change_inserted -1783815582 1731788841
+En el prototipo actual, realizando el experimiento en un Motorola Moto G32,
+ se realizó una prueba con un lote de 15 imágenes.
+ El tiempo medido abarcó desde el envío de las imágenes al servidor (mediante
+ una llamada REST realizada desde una máquina distinta a la máquina del
+ servidor desde de la misma red lan) hasta la finalización del cálculo en
+ el dispositivo móvil.
+ En este caso, el tiempo promedio por lote fue de X segundos.
 \end_layout
 
 \end_body

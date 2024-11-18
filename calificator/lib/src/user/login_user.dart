@@ -49,7 +49,10 @@ class LoginUser extends MaterialPageRoute {
           )
           )
       )
-          .onError((error, stackTrace) => showAlertDialog(context,error!,"Error al ingresar usuario"));
+          .onError((error, stackTrace) {
+            var message = error.toString() == "Connection refused"? "Error de connexión": error!;
+            return showAlertDialog(context,message,"Error al ingresar usuario");
+          });
     }
         }
         )
