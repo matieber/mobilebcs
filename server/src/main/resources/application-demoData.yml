@@ -1,3 +1,0 @@
-spring:
-  flyway:
-    locations: classpath:/db/scripts/migration,db/script/demoData

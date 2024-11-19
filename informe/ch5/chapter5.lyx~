@@ -86,11 +86,14 @@ Resultados
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731631319
+\change_inserted -1783815582 1731930624
 En este capítulo, se presentan las capturas de pantalla y el análisis de
  las principales interfaces de usuario de cada caso de uso, proporcionando
  una evaluación del funcionamiento y la usabilidad de cada módulo en la
  aplicación.
+ Adicionalmente, se proporciona información sobre el rendimiento del sistema,
+ incluyendo métricas específicas relacionadas con el consumo de memoria
+ y su impacto en la eficiencia operativa.
 \end_layout
 
 \begin_layout Section
@@ -201,11 +204,13 @@ En el caso de iniciar sesión, la aplicación los redirige a la pantalla princip
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731631314
-En la sesión de calificación, los usuarios calificadores pueden asignar
- puntajes a las imágenes de las caravanas en base a criterios predefinidos.
- Esta funcionalidad es fundamental para la recopilación y almacenamiento
- de datos de evaluación.
+\change_inserted -1783815582 1731931142
+Durante la sesión de calificación, los usuarios calificadores tienen la
+ capacidad de asignar puntajes BCS a las vacas, una funcionalidad clave
+ para garantizar la recopilación y el almacenamiento de datos de evaluación.
+ Estos datos no solo respaldan el proceso de calificación actual, sino que
+ también son esenciales para el entrenamiento y la mejora continua de futuros
+ modelos predictivos.
 \end_layout
 
 \begin_layout Standard
@@ -232,22 +237,22 @@ El módulo del observador, tras iniciar sesión, redirige automáticamente
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731761091
+\change_inserted -1783815582 1731931227
 Además, una vez que se calcula el puntaje de condición corporal (BCS) predicho,
- ya sea por este observador u otro, el resultado se muestra en la misma
- pantalla.
+ ya sea por el dispositivo móvil de este observador u otro, el resultado
+ se muestra en la misma pantalla.
  También se proporciona acceso al historial de dicha caravana, permitiendo
  revisar las evaluaciones realizadas en sesiones anteriores.
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731762074
+\change_inserted -1783815582 1731931249
 La interfaz del observador es completamente de solo lectura, sin opciones
  para interactuar o realizar modificaciones.
  Las imágenes de las caravanas se actualizan de manera automática conforme
- las vacas pasan frente a la cámara, ofreciendo una experiencia fluida y
- enfocada en la visualización y monitoreo en tiempo real.
+ las vacas pasan por debajo de la cámara, ofreciendo una experiencia fluida
+ y enfocada en la visualización y monitoreo en tiempo real.
 \end_layout
 
 \begin_layout Standard
@@ -271,7 +276,7 @@ Por otro lado, el módulo del calificador redirige automáticamente al usuario,
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731763415
+\change_inserted -1783815582 1731931183
 [Acá va imagen de la pantalla del calificador]
 \end_layout
 
@@ -286,8 +291,8 @@ En la pantalla principal, ambos usuarios tienen acceso a un menú que les
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731764815
-[Acá va imagen del menu]
+\change_inserted -1783815582 1731931281
+[Acá va imagen del menú]
 \end_layout
 
 \begin_layout Section
@@ -329,45 +334,24 @@ Rendimientos del sistema
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731768151
+\change_inserted -1783815582 1731931693
 Para evaluar la eficiencia del sistema, se midieron los tiempos de predicción
- del BCS en un móvil.
- Estos tiempos son críticos para garantizar una experiencia fluida en obtener
- los resultados de la prediccion para que el observador puede visualizarlos
- y para que tanto el calificador como el observador puedan visualizar los
- reportes en tiempo real.
-\end_layout
-
-\begin_layout Subsection
-
-\change_inserted -1783815582 1731768161
-Tiempos de Predicción
+ del BCS en dispositivos móviles, un aspecto crítico para asegurar una experienc
+ia fluida al obtener los resultados de la predicción.
+ Esto permite que el observador visualice los resultados rápidamente y que
+ tanto el calificador como el observador accedan a los reportes en tiempo
+ real.
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731768053
-El tiempo promedio de predicción para una imagen fue de X segundos, con
- una desviación estándar de Y segundos.
- Este rendimiento asegura que el sistema puede procesar imágenes en tiempo
- real sin retrasos significativos, incluso bajo carga sostenida.
-\end_layout
-
-\begin_layout Subsection
-
-\change_inserted -1783815582 1731768701
-Comparación de Rendimiento 
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731792119
-El algoritmo fue evaluado antes de la implementación del prototipo en Flutter,
+\change_inserted -1783815582 1731931696
+Antes de la implementación del prototipo, el algoritmo fue sometido a pruebas
  utilizando una versión preliminar desarrollada para Android.
- Las pruebas se llevaron a cabo en diversos dispositivos móviles, variando
+ Estas pruebas se realizaron en diversos dispositivos móviles, variando
  tanto el número de dispositivos como el tamaño de los lotes de procesamiento
- ("jobs") durante un flujo continuo de datos transmitidos desde un servidor
- hacia los móviles dentro de la misma red local.
+ ("jobs"), dentro de un flujo continuo de datos transmitidos desde un servidor
+ hacia los móviles en la misma red local.
  A continuación, se presenta un resumen de los resultados obtenidos en estas
  evaluaciones:
 \end_layout
@@ -1045,12 +1029,12 @@ En el tercer experimento, utilizando los mismos tres dispositivos móviles,
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731788841
+\change_inserted -1783815582 1731931638
 En el prototipo actual, realizando el experimiento en un Motorola Moto G32,
  se realizó una prueba con un lote de 15 imágenes.
  El tiempo medido abarcó desde el envío de las imágenes al servidor (mediante
  una llamada REST realizada desde una máquina distinta a la máquina del
- servidor desde de la misma red lan) hasta la finalización del cálculo en
+ servidor desde de la misma red LAN) hasta la finalización del cálculo en
  el dispositivo móvil.
  En este caso, el tiempo promedio por lote fue de X segundos.
 \end_layout

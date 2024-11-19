@@ -62,7 +62,7 @@ public class PushMessageITCase {
     @Test
     public void testSendImagesToQueue() throws InterruptedException, IOException {
         restCaller=new RestCaller(8080);
-        for(int i=4;i<=4;i++) {
+        for(int i=2;i<=2;i++) {
             restCaller.sendRealImage(i,locationCode, map.get(i));
            Thread.sleep(1000L);
         }

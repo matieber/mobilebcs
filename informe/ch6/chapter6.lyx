@@ -407,10 +407,11 @@ Por otro lado, el desarrollo de la aplicación móvil representó un desafío
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731881338
-En total, el proyecto involucró el desarrollo de N clases en el servidor
- y M clases en la aplicación móvil, alcanzando un total de X líneas de código,
- reflejando su complejidad técnica y su alcance.
+\change_inserted -1783815582 1731968579
+En total, el proyecto involucró el desarrollo de 113 clases java y 4748
+ lineas de código en el servidor y 52 archivos dart y 37 clases java y 6006
+ lineas de código en la aplicación móvil, alcanzando un total de 10754 líneas
+ de código, reflejando su complejidad técnica y su alcance.
  El sistema fue probado en un entorno con un solo calificador y un observador,
  y demostró operar eficientemente con recursos mínimos, incluyendo:
 \end_layout
