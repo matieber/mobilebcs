@@ -117,7 +117,7 @@ n.
 
 \change_inserted -1783815582 1732018543
 \begin_inset Graphics
-	filename /home/cristian/personal/tesis/capturas/1 pantalla principal.png
+	filename capturas/1 pantalla principal.png
 
 \end_inset
 
@@ -138,7 +138,7 @@ Si el usuario selecciona "Iniciar sesión", es dirigido a una pantalla donde
 
 \change_inserted -1783815582 1732018560
 \begin_inset Graphics
-	filename /home/cristian/personal/tesis/capturas/2 ingresar usuario.png
+	filename capturas/2 ingresar usuario.png
 
 \end_inset
 
@@ -161,7 +161,7 @@ En cambio, si el usuario selecciona "Registrar usuario", el sistema muestra
 
 \change_inserted -1783815582 1732018592
 \begin_inset Graphics
-	filename /home/cristian/personal/tesis/capturas/3 registrar usuario.png
+	filename capturas/3 registrar usuario.png
 
 \end_inset
 
@@ -198,7 +198,7 @@ ión o finalizar una sesión previamente activa, asegurando que solo una sesión
 
 \change_inserted -1783815582 1732018610
 \begin_inset Graphics
-	filename /home/cristian/personal/tesis/capturas/4 sesiones.png
+	filename capturas/4 sesiones.png
 
 \end_inset
 
@@ -237,7 +237,7 @@ Durante la sesión de calificación, los usuarios calificadores tienen la
 
 \change_inserted -1783815582 1732018637
 \begin_inset Graphics
-	filename /home/cristian/personal/tesis/capturas/5 calificador.png
+	filename capturas/5 calificador.png
 
 \end_inset
 
@@ -284,7 +284,7 @@ La interfaz del observador es completamente de solo lectura, sin opciones
 
 \change_inserted -1783815582 1732018657
 \begin_inset Graphics
-	filename /home/cristian/personal/tesis/capturas/6 observador.png
+	filename capturas/6 observador.png
 
 \end_inset
 
@@ -308,7 +308,7 @@ Por otro lado, el módulo del calificador redirige automáticamente al usuario,
 
 \change_inserted -1783815582 1732018706
 \begin_inset Graphics
-	filename /home/cristian/personal/tesis/capturas/7 espera.png
+	filename capturas/7 espera.png
 
 \end_inset
 
@@ -328,13 +328,13 @@ En la pantalla principal, ambos usuarios tienen acceso a un menú que les
 
 \change_inserted -1783815582 1732018740
 \begin_inset Graphics
-	filename /home/cristian/personal/tesis/capturas/8a menu calificador.png
+	filename capturas/8a menu calificador.png
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename /home/cristian/personal/tesis/capturas/8b menu observador.png
+	filename capturas/8b menu observador.png
 
 \end_inset
 
@@ -376,7 +376,7 @@ Adicionalmente, se incluye un diagrama de dispersión que muestra el promedio
 
 \change_inserted -1783815582 1732018525
 \begin_inset Graphics
-	filename /home/cristian/personal/tesis/capturas/diagramas.png
+	filename capturas/diagramas.png
 
 \end_inset
 

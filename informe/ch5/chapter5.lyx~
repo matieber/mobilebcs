@@ -115,8 +115,13 @@ n.
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731758937
-[Acá va imagen de la pantalla principal de acceso]
+\change_inserted -1783815582 1732018543
+\begin_inset Graphics
+	filename capturas/1 pantalla principal.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -131,8 +136,13 @@ Si el usuario selecciona "Iniciar sesión", es dirigido a una pantalla donde
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731758937
-[Acá va imagen de la pantalla de ingreso de usuario]
+\change_inserted -1783815582 1732018560
+\begin_inset Graphics
+	filename capturas/2 ingresar usuario.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -149,8 +159,13 @@ En cambio, si el usuario selecciona "Registrar usuario", el sistema muestra
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731758937
-[Acá va imagen de la pantalla de registro de usuario]
+\change_inserted -1783815582 1732018592
+\begin_inset Graphics
+	filename capturas/3 registrar usuario.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -181,8 +196,13 @@ ión o finalizar una sesión previamente activa, asegurando que solo una sesión
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731760348
-[Acá va imagen de la pantalla de inicio de sesión de calificador]
+\change_inserted -1783815582 1732018610
+\begin_inset Graphics
+	filename capturas/4 sesiones.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -215,8 +235,13 @@ Durante la sesión de calificación, los usuarios calificadores tienen la
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731760664
-[Acá va imagen de la pantalla de sesión de calificación]
+\change_inserted -1783815582 1732018637
+\begin_inset Graphics
+	filename apturas/5 calificador.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -257,8 +282,13 @@ La interfaz del observador es completamente de solo lectura, sin opciones
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731762084
-[Acá va imagen de la pantalla del observador]
+\change_inserted -1783815582 1732018657
+\begin_inset Graphics
+	filename capturas/6 observador.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -276,8 +306,13 @@ Por otro lado, el módulo del calificador redirige automáticamente al usuario,
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731931183
-[Acá va imagen de la pantalla del calificador]
+\change_inserted -1783815582 1732018706
+\begin_inset Graphics
+	filename capturas/7 espera.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -291,8 +326,19 @@ En la pantalla principal, ambos usuarios tienen acceso a un menú que les
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731931281
-[Acá va imagen del menú]
+\change_inserted -1783815582 1732018740
+\begin_inset Graphics
+	filename capturas/8a menu calificador.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename capturas/8b menu observador.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -319,11 +365,22 @@ s.
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731768006
+\change_inserted -1783815582 1732018506
 Adicionalmente, se incluye un diagrama de dispersión que muestra el promedio
  del puntaje de condición corporal (BCS) de las sesiones anteriores, ofreciendo
  una perspectiva comparativa y útil para evaluar tendencias a lo largo del
  tiempo.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732018525
+\begin_inset Graphics
+	filename capturas/diagramas.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
