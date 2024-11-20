@@ -1,16 +1,16 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
 \textclass book
 \use_default_options true
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language spanish-mexico
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -18,7 +18,9 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -52,7 +54,9 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -68,130 +72,401 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tablestyle default
 \tracking_changes true
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \author -1783815582 "Cristian"
+\author -997162125 "mhirsch"
 \end_header
 
 \begin_body
 
 \begin_layout Chapter
-
-\change_inserted -1783815582 1731631313
 Resultados
 \end_layout
 
 \begin_layout Standard
-
+En este capítulo,
+ se presentan las capturas de pantalla y el análisis de las principales interfaces de usuario de cada caso de uso,
+ proporcionando una evaluación del funcionamiento y la usabilidad de cada módulo en la aplicación.
+ Adicionalmente,
+ se proporciona información sobre el rendimiento del sistema,
+ incluyendo métricas específicas relacionadas con el consumo de memoria y su impacto en la eficiencia operativa.
 \change_inserted -1783815582 1731930624
-En este capítulo, se presentan las capturas de pantalla y el análisis de
- las principales interfaces de usuario de cada caso de uso, proporcionando
- una evaluación del funcionamiento y la usabilidad de cada módulo en la
- aplicación.
- Adicionalmente, se proporciona información sobre el rendimiento del sistema,
- incluyendo métricas específicas relacionadas con el consumo de memoria
- y su impacto en la eficiencia operativa.
+
 \end_layout
 
 \begin_layout Section
+Pantalla de Inicio de Sesión (Login)
+\change_deleted -997162125 1732110091
+ 
+\change_unchanged
 
-\change_inserted -1783815582 1731631324
-Pantalla de Inicio de Sesión (Login) 
 \end_layout
 
 \begin_layout Standard
+El módulo de inicio de sesión permite a los usuarios acceder al sistema con distintos roles,
+ con diferentes permisos y funciones dentro de la aplicación.
+ La pantalla principal de acceso ofrece dos opciones:
+ "Iniciar sesión" y "Registrar usuario",
+ de modo que el usuario puede elegir entre ingresar al sistema o registrarse como nuevo usuario,
+ según sea necesario.
+\change_inserted -997162125 1732110188
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1732110340
+Las imágenes ubicalas mejor dentro de un flotante y etiquetalas para que te queden bien identificadas y puedas referenciarlas en el texto.
+ Incluso,
+ siendo en un formato vertical,
+ para que quede más condensado podés agruparlas en subflotantes.
+ Te pongo un ejemplo con las primeras tres que está relacionadas a la funcionalidad de logeo:
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -997162125 1732110533
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -997162125 1732110387
+\begin_inset Graphics
+	filename capturas/1 pantalla principal.png
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1732110522
+Pantalla de bienvenida
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pantalla-de-bienvenida"
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -997162125 1732110454
+\begin_inset Graphics
+	filename capturas/2 ingresar usuario.png
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1732110509
+Pantalla de usuario registrado
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pantalla-de-usuario-registrado"
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -997162125 1732110569
+\begin_inset Graphics
+	filename capturas/3 registrar usuario.png
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1732110553
+Pantalla de nuevo usuario
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pantalla-de-nuevo-usuario"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1732110188
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1732110378
+App móvil:
+ caso de uso de login
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
 
 \change_inserted -1783815582 1731758978
-El módulo de inicio de sesión permite a los usuarios acceder al sistema
- con distintos roles, con diferentes permisos y funciones dentro de la aplicació
-n.
- La pantalla principal de acceso ofrece dos opciones: "Iniciar sesión" y
- "Registrar usuario", de modo que el usuario puede elegir entre ingresar
- al sistema o registrarse como nuevo usuario, según sea necesario.
+
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1732018543
+\change_deleted -997162125 1732110235
 \begin_inset Graphics
 	filename capturas/1 pantalla principal.png
 
 \end_inset
 
 
+\change_inserted -1783815582 1732018543
+
 \end_layout
 
 \begin_layout Standard
 
+\change_inserted -997162125 1732110706
+En Figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pantalla-de-bienvenida"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+,
+ 
+\change_deleted -997162125 1732110707
+S
+\change_inserted -997162125 1732110707
+s
+\change_unchanged
+i el usuario selecciona "Iniciar sesión",
+ es dirigido a una pantalla donde puede introducir su nombre de usuario
+\change_inserted -997162125 1732110743
+ (Figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pantalla-de-usuario-registrado"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+)
+\change_unchanged
+.
+ En caso de un ingreso correcto,
+ el sistema autentica el perfil y redirige al usuario a su módulo correspondiente,
+ ya sea como calificador o como observador.
 \change_inserted -1783815582 1731758937
-Si el usuario selecciona "Iniciar sesión", es dirigido a una pantalla donde
- puede introducir su nombre de usuario.
- En caso de un ingreso correcto, el sistema autentica el perfil y redirige
- al usuario a su módulo correspondiente, ya sea como calificador o como
- observador.
+
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1732018560
+\change_deleted -997162125 1732110451
 \begin_inset Graphics
 	filename capturas/2 ingresar usuario.png
 
 \end_inset
 
 
+\change_inserted -1783815582 1732018560
+
 \end_layout
 
 \begin_layout Standard
+En cambio,
+ si el usuario selecciona "Registrar usuario",
+ el sistema muestra la pantalla
+\change_inserted -997162125 1732110784
+ que está en la Figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pantalla-de-nuevo-usuario"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
 
 \change_inserted -1783815582 1731758937
-En cambio, si el usuario selecciona "Registrar usuario", el sistema muestra
- una pantalla donde el usuario puede introducir su nombre y seleccionar
- su rol (calificador u observador).
- Esta pantalla permite que los nuevos usuarios definan adecuadamente su
- perfil dentro de la aplicación.
- Una vez completado el registro, el sistema redirige automáticamente al
- usuario a la pantalla de inicio de sesión para facilitar el acceso.
+ 
+\change_unchanged
+donde el usuario puede introducir su nombre y seleccionar su rol (calificador u observador).
+ Esta pantalla permite que los nuevos usuarios definan adecuadamente su perfil dentro de la aplicación.
+ Una vez completado el registro,
+ el sistema redirige automáticamente al usuario a la pantalla de inicio de sesión para facilitar el acceso.
+\change_inserted -1783815582 1731758937
+
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1732018592
+\change_deleted -997162125 1732110562
 \begin_inset Graphics
 	filename capturas/3 registrar usuario.png
 
 \end_inset
 
 
+\change_inserted -1783815582 1732018592
+
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1731758937
-La interfaz de inicio de sesión presenta mensajes de error en caso de datos
- incorrectos o problemas de conexión con el servidor.
+La interfaz de inicio de sesión presenta mensajes de error en caso de datos incorrectos o problemas de conexión con el servidor.
  El sistema está configurado para gestionar el acceso según el rol del usuario,
- asegurando que cada perfil (calificador u observador) acceda exclusivamente
- a las funciones asignadas.
+ asegurando que cada perfil (calificador u observador) acceda exclusivamente a las funciones asignadas.
+\change_inserted -1783815582 1731758937
+
 \end_layout
 
 \begin_layout Section
-
-\change_inserted -1783815582 1731760661
 Calificador
 \end_layout
 
 \begin_layout Standard
-
+El módulo de calificación permite al usuario con rol de calificador gestionar sus sesiones de calificación de manera eficiente.
+ Desde esta pantalla,
+ el calificador puede iniciar una nueva sesión de calificación o finalizar una sesión previamente activa,
+ asegurando que solo una sesión esté abierta a la vez.
 \change_inserted -1783815582 1731760366
-El módulo de calificación permite al usuario con rol de calificador gestionar
- sus sesiones de calificación de manera eficiente.
- Desde esta pantalla, el calificador puede iniciar una nueva sesión de calificac
-ión o finalizar una sesión previamente activa, asegurando que solo una sesión
- esté abierta a la vez.
+
 \end_layout
 
 \begin_layout Standard
@@ -206,38 +481,33 @@ ión o finalizar una sesión previamente activa, asegurando que solo una sesión
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1731760421
 Si el calificador intenta iniciar una nueva sesión mientras otra está activa,
- el sistema muestra mensajes de error claros e informativos, indicando la
- necesidad de finalizar la sesión actual antes de comenzar una nueva.
- Esta funcionalidad garantiza el control adecuado del flujo de trabajo del
- calificador, evitando conflictos o superposición de datos.
+ el sistema muestra mensajes de error claros e informativos,
+ indicando la necesidad de finalizar la sesión actual antes de comenzar una nueva.
+ Esta funcionalidad garantiza el control adecuado del flujo de trabajo del calificador,
+ evitando conflictos o superposición de datos.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1731760439
-En el caso de iniciar sesión, la aplicación los redirige a la pantalla principar
- del calificador.
+En el caso de iniciar sesión,
+ la aplicación los redirige a la pantalla principar del calificador.
 \end_layout
 
 \begin_layout Standard
-
+Durante la sesión de calificación,
+ los usuarios calificadores tienen la capacidad de asignar puntajes BCS a las vacas,
+ una funcionalidad clave para garantizar la recopilación y el almacenamiento de datos de evaluación.
+ Estos datos no solo respaldan el proceso de calificación actual,
+ sino que también son esenciales para el entrenamiento y la mejora continua de futuros modelos predictivos.
 \change_inserted -1783815582 1731931142
-Durante la sesión de calificación, los usuarios calificadores tienen la
- capacidad de asignar puntajes BCS a las vacas, una funcionalidad clave
- para garantizar la recopilación y el almacenamiento de datos de evaluación.
- Estos datos no solo respaldan el proceso de calificación actual, sino que
- también son esenciales para el entrenamiento y la mejora continua de futuros
- modelos predictivos.
+
 \end_layout
 
 \begin_layout Standard
 
 \change_inserted -1783815582 1732018637
 \begin_inset Graphics
-	filename apturas/5 calificador.png
+	filename capturas/5 calificador.png
 
 \end_inset
 
@@ -245,39 +515,37 @@ Durante la sesión de calificación, los usuarios calificadores tienen la
 \end_layout
 
 \begin_layout Section
-
-\change_inserted -1783815582 1731760663
 Sistema de Notificación de Imágenes
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1731761091
-El módulo del observador, tras iniciar sesión, redirige automáticamente
- al usuario a la pantalla principal, diseñada para recibir y mostrar las
- imágenes a medida que son enviadas al sistema.
- Este módulo permite a los usuarios con el rol de observador visualizar
- las imágenes capturadas de las caravanas junto con su identificación asociada.
+El módulo del observador,
+ tras iniciar sesión,
+ redirige automáticamente al usuario a la pantalla principal,
+ diseñada para recibir y mostrar las imágenes a medida que son enviadas al sistema.
+ Este módulo permite a los usuarios con el rol de observador visualizar las imágenes capturadas de las caravanas junto con su identificación asociada.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1731931227
-Además, una vez que se calcula el puntaje de condición corporal (BCS) predicho,
- ya sea por el dispositivo móvil de este observador u otro, el resultado
- se muestra en la misma pantalla.
- También se proporciona acceso al historial de dicha caravana, permitiendo
- revisar las evaluaciones realizadas en sesiones anteriores.
+Además,
+ una vez que se calcula el puntaje de condición corporal (BCS) predicho,
+ ya sea por el dispositivo móvil de este observador u otro,
+ el resultado se muestra en la misma pantalla.
+ También se proporciona acceso al historial de dicha caravana,
+ permitiendo revisar las evaluaciones realizadas en sesiones anteriores.
 \end_layout
 
 \begin_layout Standard
-
+La interfaz del observador es completamente de solo lectura,
+ sin opciones para interactuar o realizar modificaciones.
+ Las imágenes 
+\change_deleted -997162125 1732110943
+de las caravanas 
+\change_unchanged
+se actualizan de manera automática conforme las vacas pasan por debajo de la cámara,
+ ofreciendo una experiencia fluida y enfocada en la visualización y monitoreo en tiempo real.
 \change_inserted -1783815582 1731931249
-La interfaz del observador es completamente de solo lectura, sin opciones
- para interactuar o realizar modificaciones.
- Las imágenes de las caravanas se actualizan de manera automática conforme
- las vacas pasan por debajo de la cámara, ofreciendo una experiencia fluida
- y enfocada en la visualización y monitoreo en tiempo real.
+
 \end_layout
 
 \begin_layout Standard
@@ -292,16 +560,15 @@ La interfaz del observador es completamente de solo lectura, sin opciones
 \end_layout
 
 \begin_layout Standard
-
+Por otro lado,
+ el módulo del calificador redirige automáticamente al usuario,
+ tras iniciar sesión de calificación,
+ a su pantalla principal.
+ Esta interfaz está diseñada para permitir que el calificador avance manualmente a la siguiente imagen de una vaca haciendo clic en el botón "Siguiente".
+ Esto le da al calificador el control de cuándo visualizar la próxima imagen para asignar el valor BCS correspondiente.
+ Es importante destacar que el calificador debe interactuar activamente con la aplicación para avanzar o esperar la llegada de una nueva imagen.
 \change_inserted -1783815582 1731762284
-Por otro lado, el módulo del calificador redirige automáticamente al usuario,
- tras iniciar sesión de calificación, a su pantalla principal.
- Esta interfaz está diseñada para permitir que el calificador avance manualmente
- a la siguiente imagen de una vaca haciendo clic en el botón "Siguiente".
- Esto le da al calificador el control de cuándo visualizar la próxima imagen
- para asignar el valor BCS correspondiente.
- Es importante destacar que el calificador debe interactuar activamente
- con la aplicación para avanzar o esperar la llegada de una nueva imagen.
+
 \end_layout
 
 \begin_layout Standard
@@ -316,12 +583,13 @@ Por otro lado, el módulo del calificador redirige automáticamente al usuario,
 \end_layout
 
 \begin_layout Standard
-
+En la pantalla principal,
+ ambos usuarios tienen acceso a un menú que les permite cerrar la sesión.
+ Además,
+ para los calificadores,
+ este menú incluye la opción adicional de finalizar una sesión de calificación en curso.
 \change_inserted -1783815582 1731765086
-En la pantalla principal, ambos usuarios tienen acceso a un menú que les
- permite cerrar la sesión.
- Además, para los calificadores, este menú incluye la opción adicional de
- finalizar una sesión de calificación en curso.
+
 \end_layout
 
 \begin_layout Standard
@@ -342,34 +610,29 @@ En la pantalla principal, ambos usuarios tienen acceso a un menú que les
 \end_layout
 
 \begin_layout Section
+Reportes Generados
+\change_deleted -997162125 1732111021
+ 
+\change_unchanged
 
-\change_inserted -1783815582 1731631434
-Reportes Generados 
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1731766582
-Tanto los calificadores como los observadores cuentan con herramientas visuales
- que facilitan el análisis de los datos generados durante las sesiones de
- calificación.
- Entre estas herramientas destaca un gráfico de tipo torta, que proporciona
- una representación clara y organizada de las sesiones en curso y las completada
-s.
- Este gráfico agrupa los valores predichos del puntaje de condición corporal
- (BCS) en categorías enteras del 1 al 5, basándose en la parte entera del
- valor incluso cuando la predicción incluye decimales.
- Esta metodología asegura una visualización uniforme, intuitiva y de fácil
- interpretación para todos los usuarios.
+Tanto los calificadores como los observadores cuentan con herramientas visuales que facilitan el análisis de los datos generados durante las sesiones de calificación.
+ Entre estas herramientas destaca un gráfico de tipo torta,
+ que proporciona una representación clara y organizada de las sesiones en curso y las completadas.
+ Este gráfico agrupa los valores predichos del puntaje de condición corporal (BCS) en categorías enteras del 1 al 5,
+ basándose en la parte entera del valor incluso cuando la predicción incluye decimales.
+ Esta metodología asegura una visualización uniforme,
+ intuitiva y de fácil interpretación para todos los usuarios.
 \end_layout
 
 \begin_layout Standard
-
+Adicionalmente,
+ se incluye un diagrama de dispersión que muestra el promedio del puntaje de condición corporal (BCS) de las sesiones anteriores,
+ ofreciendo una perspectiva comparativa y útil para evaluar tendencias a lo largo del tiempo.
 \change_inserted -1783815582 1732018506
-Adicionalmente, se incluye un diagrama de dispersión que muestra el promedio
- del puntaje de condición corporal (BCS) de las sesiones anteriores, ofreciendo
- una perspectiva comparativa y útil para evaluar tendencias a lo largo del
- tiempo.
+
 \end_layout
 
 \begin_layout Standard
@@ -384,33 +647,46 @@ Adicionalmente, se incluye un diagrama de dispersión que muestra el promedio
 \end_layout
 
 \begin_layout Section
-
-\change_inserted -1783815582 1731768052
 Rendimientos del sistema
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1731931693
-Para evaluar la eficiencia del sistema, se midieron los tiempos de predicción
- del BCS en dispositivos móviles, un aspecto crítico para asegurar una experienc
-ia fluida al obtener los resultados de la predicción.
- Esto permite que el observador visualice los resultados rápidamente y que
- tanto el calificador como el observador accedan a los reportes en tiempo
- real.
+Para evaluar la eficiencia del sistema,
+ se midieron los tiempos de predicción del BCS en dispositivos móviles,
+ un aspecto crítico para asegurar una experiencia fluida al obtener los resultados de la predicción.
+ Esto permite que el observador visualice los resultados rápidamente y que tanto el calificador como el observador accedan a los reportes en tiempo real.
 \end_layout
 
 \begin_layout Standard
+Antes de la implementación del prototipo,
+ el algoritmo fue sometido a pruebas utilizando una versión preliminar desarrollada para Android.
+ Estas pruebas se realizaron en diversos dispositivos móviles,
+ variando tanto el número de dispositivos como el tamaño de los lotes de procesamiento ("jobs"),
+ dentro de un flujo continuo de datos transmitidos desde un servidor hacia los móviles en la misma red local.
+ A continuación,
+ se presenta un resumen de los resultados obtenidos en estas evaluaciones:
+\change_inserted -997162125 1732116727
 
-\change_inserted -1783815582 1731931696
-Antes de la implementación del prototipo, el algoritmo fue sometido a pruebas
- utilizando una versión preliminar desarrollada para Android.
- Estas pruebas se realizaron en diversos dispositivos móviles, variando
- tanto el número de dispositivos como el tamaño de los lotes de procesamiento
- ("jobs"), dentro de un flujo continuo de datos transmitidos desde un servidor
- hacia los móviles en la misma red local.
- A continuación, se presenta un resumen de los resultados obtenidos en estas
- evaluaciones:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -997162125 1732117613
+Estos resultados falta formatearlos/compatibilizarlos con lo que vos estás corriendo.
+ Es decir,
+ en estos experimentos de la tabla hay un scheduler round robin que no se estaría mencionando y que es el que se usó para distribuir los jobs.
+ En tu experimento,
+ al parecer va a haber un sólo móvil con lo cual el scheduler no tendría sentido,
+ a menos que incluyas otro móvil en el cálculo.
+ La tabla muestra 3 experimentos donde varían los streams y la composición del cluster pero contiene resultados discriminados por móvil de lo que resultó la inferencia de una imágen.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -444,8 +720,14 @@ Ejecuciones
 
 \begin_layout Plain Layout
 
+\change_inserted -997162125 1732116020
+Smartphone marca-
+\change_deleted -997162125 1732116378
+M
+\change_inserted -997162125 1732116378
+m
 \change_inserted -1783815582 1731787569
-Modelo
+odelo
 \end_layout
 
 \end_inset
@@ -517,7 +799,13 @@ stream de dos imágenes por job
 \begin_layout Plain Layout
 
 \change_inserted -1783815582 1731787572
-Xiaomi_Redmi_Note_7
+Xiaomi
+\change_inserted -997162125 1732115739
+ 
+\change_deleted -997162125 1732115739
+_
+\change_inserted -1783815582 1731787572
+Redmi_Note_7
 \end_layout
 
 \end_inset
@@ -1059,41 +1347,66 @@ motorola_moto_g9_play
 \begin_layout Itemize
 
 \change_inserted -1783815582 1731788649
-En el primer experimento, se emplearon dos dispositivos móviles (Xiaomi
- Redmi Note 7 y Motorola Moto G9 Play), con lotes de 2 imágenes por job.
- El flujo de datos procesó un total de 1752 imágenes en 26 minutos y 43
- segundos.
+En el primer experimento,
+ se emplearon dos dispositivos móviles (Xiaomi Redmi Note 7 y Motorola Moto G9 Play),
+ con lotes de 2 imágenes por job.
+ El flujo de datos 
+\change_deleted -997162125 1732116915
+procesó
+\change_inserted -997162125 1732116916
+fue de
+\change_inserted -1783815582 1731788649
+ un total de 1752 imágenes 
+\change_inserted -997162125 1732116946
+cuyo BCS asociado se calculó 
+\change_inserted -1783815582 1731788649
+en 
+\change_inserted -997162125 1732116951
+un total de 
+\change_inserted -1783815582 1731788649
+26 minutos y 43 segundos.
 \end_layout
 
 \begin_layout Itemize
 
 \change_inserted -1783815582 1731788649
-En el segundo experimento, se incorporó un tercer dispositivo (Motorola
- Moto G9 Play adicional), manteniendo el tamaño de los jobs en 2 imágenes.
- Nuevamente, se procesaron 1752 imágenes, pero en 26 minutos y 44 segundos,
+En el segundo experimento,
+ se incorporó un tercer dispositivo (Motorola Moto G
+\change_deleted -997162125 1732116399
+9
+\change_inserted -997162125 1732116399
+6
+\change_deleted -997162125 1732116409
+ Play adicional
+\change_inserted -1783815582 1731788649
+),
+ manteniendo el tamaño de los jobs en 2 imágenes.
+ Nuevamente,
+ se procesaron 1752 imágenes,
+ pero en 26 minutos y 44 segundos,
  mostrando una variación mínima en el tiempo total.
 \end_layout
 
 \begin_layout Itemize
 
 \change_inserted -1783815582 1731788649
-En el tercer experimento, utilizando los mismos tres dispositivos móviles,
+En el tercer experimento,
+ utilizando los mismos tres dispositivos móviles,
  se incrementó el tamaño de los jobs a 15 imágenes por lote.
- En esta configuración, se procesaron 1740 imágenes en 3 minutos y 47,114
- segundos, demostrando una notable mejora en el tiempo de procesamiento
- gracias al tamaño optimizado de los jobs.
+ En esta configuración,
+ se procesaron 1740 imágenes en 3 minutos y 47,114 segundos,
+ demostrando una notable mejora en el tiempo de procesamiento gracias al tamaño optimizado de los jobs.
 \end_layout
 
 \begin_layout Standard
 
 \change_inserted -1783815582 1731931638
-En el prototipo actual, realizando el experimiento en un Motorola Moto G32,
+En el prototipo actual,
+ realizando el experimiento en un Motorola Moto G32,
  se realizó una prueba con un lote de 15 imágenes.
- El tiempo medido abarcó desde el envío de las imágenes al servidor (mediante
- una llamada REST realizada desde una máquina distinta a la máquina del
- servidor desde de la misma red LAN) hasta la finalización del cálculo en
- el dispositivo móvil.
- En este caso, el tiempo promedio por lote fue de X segundos.
+ El tiempo medido abarcó desde el envío de las imágenes al servidor (mediante una llamada REST realizada desde una máquina distinta a la máquina del servidor desde de la misma red LAN) hasta la finalización del cálculo en el dispositivo móvil.
+ En este caso,
+ el tiempo promedio por lote fue de X segundos.
 \end_layout
 
 \end_body
