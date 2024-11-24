@@ -11,15 +11,11 @@ void main() async {
 
 
   runApp(
-      const MediaQuery(data:
-      MediaQueryData(),
-          child:
-            MaterialApp(
-                home: CalificatorApp(),
-                debugShowCheckedModeBanner: false,
-            )
-
-    )
-  );
+      MaterialApp(
+        home: SafeArea(
+            child: CalificatorApp()
+        ),
+        debugShowCheckedModeBanner: false,
+      ));
 
 }

@@ -28,7 +28,7 @@ public class QualificationITCase extends AbstractITCase {
 
     @BeforeEach
     public void init() throws IOException {
-        restCaller = new RestCaller(port);
+        restCaller = new RestCaller(port, "localhost");
     }
 
     @Test

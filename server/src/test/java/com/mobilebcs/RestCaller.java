@@ -35,8 +35,8 @@ public class RestCaller {
 
     private RestTemplate restTemplate;
 
-    public RestCaller(int port) {
-        restTemplate = new RestTemplateBuilder().rootUri("http://localhost:" + port).build();
+    public RestCaller(int port, String localhost) {
+        restTemplate = new RestTemplateBuilder().rootUri("http://" + localhost + ":" + port).build();
     }
 
     public UUID sendImage(int position, String locationCode, String caravanIdentification) throws IOException {
@@ -54,7 +54,7 @@ public class RestCaller {
 
     }
 
-    public UUID sendRealImage(int position, String locationCode, String name) throws IOException {
+    public UUID sendRealImage(int position, String locationCode, String name,int index) throws IOException {
 
         UUID setCode = UUID.randomUUID();
         List<CaravanImage> list = new ArrayList<>();
@@ -62,7 +62,7 @@ public class RestCaller {
         byte[] content = ImageEncoder.getImage(imageName, IMAGE_EXTENSION);
         list.add(new CaravanImage(content, IMAGE_NAME+ "." + IMAGE_EXTENSION));
 
-        ResponseEntity<Void> response = restTemplate.postForEntity("/location/" + locationCode + "/caravan", new CaravanRequest(position, name, list, setCode), Void.class);
+        ResponseEntity<Void> response = restTemplate.postForEntity("/location/" + locationCode + "/caravan", new CaravanRequest(index, name+index, list, setCode), Void.class);
         Assertions.assertEquals(204, response.getStatusCodeValue());
         return setCode;
 

@@ -3,7 +3,7 @@
 
 ### Iniciar cola de mensajería con docker
 
-    docker run -p 61616:61616 -e AMQ_USER=admin -e AMQ_PASSWORD=admin quay.io/artemiscloud/activemq-artemis-broker
+    docker run --name=activemq -p 61616:61616 -e AMQ_USER=admin -e AMQ_PASSWORD=admin quay.io/artemiscloud/activemq-artemis-broker
 
 ### Iniciar base de datos:
 

@@ -1,4 +1,5 @@
 
+import 'dart:developer';
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:calificator/src/diagram/diagram_tab.dart';
@@ -45,8 +46,11 @@ class ViewerPageState extends State<ViewerPage> {
   Future<String> _getScore(Uint8List body,int position,String setCode,ViewerStompClient viewerStompClient) async {
     String score;
     try {
+      log("Calculando puntaje");
       final double result = await platform.invokeMethod('calculateScore',body);
       score = 'El puntaje es calculado $result.';
+
+      log("El puntaje obtenido es ${result.toString()}");
       viewerStompClient.publish(result, position,setCode);
       widget.caravanDiagramKey.currentState?.addNewSetCode(setCode, result);
     } on PlatformException catch (e) {
@@ -54,9 +58,8 @@ class ViewerPageState extends State<ViewerPage> {
     }
     return score;
 
-
-
   }
+
   refreshCalculatedScore(ViewerCaravanMessage message, ViewerStompClient viewerStompClient) {
       if(message.predictor==widget._user?.username) {
         setScore("Calculando puntaje");

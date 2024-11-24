@@ -30,7 +30,7 @@ public class QualificationWithImageAfterRestartITCase {
 
         port = getOpenPort();
         FileUtils.deleteDirectory(new File(Paths.get(ApplicationRestarter.getImagePath()).toString()));
-        restCaller = new RestCaller(port);
+        restCaller = new RestCaller(port, "localhost");
     }
 
     private static int getOpenPort() throws IOException {

@@ -1,0 +1,1740 @@
+11-25 22:27:20.138  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584440137
+11-25 22:27:20.635  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:20.636  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584440636
+11-25 22:27:20.991  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:20.992  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584440992
+11-25 22:27:21.368  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:21.794  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584441794
+11-25 22:27:22.172  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:23.861  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584443860
+11-25 22:27:24.235  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:25.420  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584445420
+11-25 22:27:25.781  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:27.187  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584447187
+11-25 22:27:27.553  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:28.829  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584448828
+11-25 22:27:29.202  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:30.510  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584450510
+11-25 22:27:30.876  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:32.178  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584452178
+11-25 22:27:32.540  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:33.984  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584453984
+11-25 22:27:34.367  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:35.614  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584455614
+11-25 22:27:35.982  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:37.604  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584457603
+11-25 22:27:37.973  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:39.141  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584459141
+11-25 22:27:39.521  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:40.824  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584460824
+11-25 22:27:41.224  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:42.581  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584462581
+11-25 22:27:42.960  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:44.304  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584464304
+11-25 22:27:44.688  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:46.119  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584466119
+11-25 22:27:46.484  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:48.007  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584468007
+11-25 22:27:48.377  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:49.519  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584469519
+11-25 22:27:49.883  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:51.151  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584471151
+11-25 22:27:51.527  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:52.970  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584472970
+11-25 22:27:53.341  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:54.570  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584474570
+11-25 22:27:54.956  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:56.627  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584476627
+11-25 22:27:56.993  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:58.097  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584478097
+11-25 22:27:58.466  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:27:59.634  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584479634
+11-25 22:28:00.009  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:01.303  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584481303
+11-25 22:28:01.675  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:03.050  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584483050
+11-25 22:28:03.428  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:04.766  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584484766
+11-25 22:28:05.156  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:06.607  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584486607
+11-25 22:28:06.982  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:08.466  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584488465
+11-25 22:28:08.829  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:10.186  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584490186
+11-25 22:28:10.564  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:11.774  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584491774
+11-25 22:28:12.141  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:13.511  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584493511
+11-25 22:28:13.870  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:15.469  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584495469
+11-25 22:28:15.834  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:17.167  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584497167
+11-25 22:28:17.533  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:18.807  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584498806
+11-25 22:28:19.183  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:20.686  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584500686
+11-25 22:28:21.062  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:22.260  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584502260
+11-25 22:28:22.627  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:24.095  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584504095
+11-25 22:28:24.461  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:25.788  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584505788
+11-25 22:28:26.166  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:27.316  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584507316
+11-25 22:28:27.690  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:29.122  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584509122
+11-25 22:28:29.490  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:30.933  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584510933
+11-25 22:28:31.323  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:32.577  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584512577
+11-25 22:28:32.951  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:34.330  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584514330
+11-25 22:28:34.700  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:36.004  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584516004
+11-25 22:28:36.373  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:37.680  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584517680
+11-25 22:28:38.048  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:39.590  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584519590
+11-25 22:28:39.963  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:41.154  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584521154
+11-25 22:28:41.534  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:42.764  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584522764
+11-25 22:28:43.132  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:44.568  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584524568
+11-25 22:28:44.934  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:46.236  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584526236
+11-25 22:28:46.594  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:47.887  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584527887
+11-25 22:28:48.258  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:49.598  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584529598
+11-25 22:28:49.969  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:51.492  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584531492
+11-25 22:28:52.392  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:53.169  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584533169
+11-25 22:28:53.921  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:55.164  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584535164
+11-25 22:28:55.908  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:56.702  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584536701
+11-25 22:28:57.497  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:28:58.723  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584538723
+11-25 22:28:59.562  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:00.477  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584540477
+11-25 22:29:01.286  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:02.218  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584542218
+11-25 22:29:03.041  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:03.951  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584543951
+11-25 22:29:04.781  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:05.468  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584545467
+11-25 22:29:06.297  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:07.226  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584547225
+11-25 22:29:08.038  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:09.083  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584549083
+11-25 22:29:09.934  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:10.929  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584550928
+11-25 22:29:11.734  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:12.598  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584552598
+11-25 22:29:13.404  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:14.408  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584554408
+11-25 22:29:15.229  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:16.129  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584556129
+11-25 22:29:16.946  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:17.901  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584557901
+11-25 22:29:18.715  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:19.822  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584559821
+11-25 22:29:20.630  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:21.533  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584561533
+11-25 22:29:22.342  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:23.323  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584563323
+11-25 22:29:24.140  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:25.074  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584565074
+11-25 22:29:25.887  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:26.781  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584566781
+11-25 22:29:27.597  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:28.571  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584568571
+11-25 22:29:29.170  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:30.390  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584570390
+11-25 22:29:30.780  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:32.026  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584572026
+11-25 22:29:32.376  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:33.843  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584573843
+11-25 22:29:34.228  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:35.681  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584575681
+11-25 22:29:36.024  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:37.403  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584577402
+11-25 22:29:37.790  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:38.991  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584578990
+11-25 22:29:39.336  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:40.951  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584580951
+11-25 22:29:41.318  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:43.048  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584583048
+11-25 22:29:43.411  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:44.886  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584584886
+11-25 22:29:45.267  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:46.683  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584586683
+11-25 22:29:47.027  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:48.429  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584588429
+11-25 22:29:48.815  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:50.231  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584590231
+11-25 22:29:50.582  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:52.068  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584592068
+11-25 22:29:52.453  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:53.798  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584593798
+11-25 22:29:54.138  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:55.548  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584595548
+11-25 22:29:55.929  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:57.276  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584597276
+11-25 22:29:57.620  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:29:59.214  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584599213
+11-25 22:29:59.598  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:00.761  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584600761
+11-25 22:30:01.107  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:02.608  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584602608
+11-25 22:30:02.985  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:04.271  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584604271
+11-25 22:30:04.617  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:06.618  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584606618
+11-25 22:30:06.997  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:08.391  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584608391
+11-25 22:30:08.742  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:10.280  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584610280
+11-25 22:30:10.654  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:12.062  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584612062
+11-25 22:30:12.424  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:13.920  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584613920
+11-25 22:30:14.304  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:15.722  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584615722
+11-25 22:30:16.067  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:17.538  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584617538
+11-25 22:30:17.921  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:19.085  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584619085
+11-25 22:30:19.429  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:20.777  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584620777
+11-25 22:30:21.160  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:22.484  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584622484
+11-25 22:30:22.838  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:24.126  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584624126
+11-25 22:30:24.529  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:25.896  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584625896
+11-25 22:30:26.249  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:27.794  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584627794
+11-25 22:30:28.180  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:29.431  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584629431
+11-25 22:30:29.768  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:31.082  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584631082
+11-25 22:30:31.461  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:32.818  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584632817
+11-25 22:30:33.180  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:34.772  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584634772
+11-25 22:30:35.153  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:36.501  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584636501
+11-25 22:30:36.860  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:38.386  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584638386
+11-25 22:30:38.776  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:39.893  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584639893
+11-25 22:30:40.240  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:41.740  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584641740
+11-25 22:30:42.128  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:43.288  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584643288
+11-25 22:30:43.627  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:44.937  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584644936
+11-25 22:30:45.316  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:46.618  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584646618
+11-25 22:30:46.976  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:48.275  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584648275
+11-25 22:30:48.653  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:49.952  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584649952
+11-25 22:30:50.293  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:51.724  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584651723
+11-25 22:30:52.103  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:53.631  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584653631
+11-25 22:30:53.972  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:55.130  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584655130
+11-25 22:30:55.516  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:56.883  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584656883
+11-25 22:30:57.231  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:30:58.528  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584658528
+11-25 22:30:58.910  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:00.084  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584660084
+11-25 22:31:00.435  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:02.041  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584662041
+11-25 22:31:02.430  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:03.748  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584663748
+11-25 22:31:04.097  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:05.456  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584665456
+11-25 22:31:05.839  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:07.141  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584667141
+11-25 22:31:07.483  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:08.746  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584668746
+11-25 22:31:09.126  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:10.493  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584670493
+11-25 22:31:10.833  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:12.331  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584672331
+11-25 22:31:12.734  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:13.993  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584673993
+11-25 22:31:14.340  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:15.701  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584675701
+11-25 22:31:16.077  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:17.475  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584677475
+11-25 22:31:17.819  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:19.113  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584679113
+11-25 22:31:19.598  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:20.771  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584680771
+11-25 22:31:21.133  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:22.577  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584682577
+11-25 22:31:22.969  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:24.214  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584684214
+11-25 22:31:24.619  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:26.116  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584686116
+11-25 22:31:26.462  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:27.800  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584687800
+11-25 22:31:28.175  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:29.463  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584689463
+11-25 22:31:30.218  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:31.291  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584691291
+11-25 22:31:32.010  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:32.981  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584692980
+11-25 22:31:33.769  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:34.834  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584694834
+11-25 22:31:35.689  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:36.619  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584696618
+11-25 22:31:37.434  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:38.464  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584698464
+11-25 22:31:39.283  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:40.223  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584700223
+11-25 22:31:41.060  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:41.952  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584701951
+11-25 22:31:42.764  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:43.707  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584703707
+11-25 22:31:44.524  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:45.465  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584705464
+11-25 22:31:46.281  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:47.287  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584707287
+11-25 22:31:48.122  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:49.039  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584709038
+11-25 22:31:49.870  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:50.671  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584710671
+11-25 22:31:51.491  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:52.504  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584712503
+11-25 22:31:53.320  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:54.265  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584714265
+11-25 22:31:55.100  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:55.984  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584715984
+11-25 22:31:56.771  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:57.702  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584717702
+11-25 22:31:58.487  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:31:59.624  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584719624
+11-25 22:32:00.453  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:01.196  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584721195
+11-25 22:32:02.002  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:03.211  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584723210
+11-25 22:32:04.050  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:04.734  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584724734
+11-25 22:32:05.552  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:06.460  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584726459
+11-25 22:32:07.287  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:08.855  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584728855
+11-25 22:32:09.684  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:10.208  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584730208
+11-25 22:32:11.023  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:11.944  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584731944
+11-25 22:32:12.767  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:13.760  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584733760
+11-25 22:32:14.594  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:15.221  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584735221
+11-25 22:32:16.041  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:17.347  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584737347
+11-25 22:32:18.174  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:19.028  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584739028
+11-25 22:32:19.920  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:20.726  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584740726
+11-25 22:32:21.561  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:22.507  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584742507
+11-25 22:32:23.320  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:24.252  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584744251
+11-25 22:32:25.061  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:25.987  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584745987
+11-25 22:32:26.805  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:27.739  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584747738
+11-25 22:32:28.569  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:29.476  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584749476
+11-25 22:32:30.291  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:31.204  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584751204
+11-25 22:32:32.030  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:32.944  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584752944
+11-25 22:32:33.755  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:34.642  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584754642
+11-25 22:32:35.457  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:36.494  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584756494
+11-25 22:32:37.346  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:38.168  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584758168
+11-25 22:32:38.984  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:40.001  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584760001
+11-25 22:32:40.818  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:41.657  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584761656
+11-25 22:32:42.469  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:43.390  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584763390
+11-25 22:32:44.204  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:45.226  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584765226
+11-25 22:32:46.041  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:47.069  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584767069
+11-25 22:32:47.872  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:48.844  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584768844
+11-25 22:32:49.670  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:50.681  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584770681
+11-25 22:32:51.503  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:52.504  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584772503
+11-25 22:32:53.342  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:54.762  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584774762
+11-25 22:32:55.612  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:56.131  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584776131
+11-25 22:32:56.925  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:57.936  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584777936
+11-25 22:32:58.740  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:32:59.788  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584779788
+11-25 22:33:00.620  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:01.508  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584781508
+11-25 22:33:02.245  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:03.312  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584783312
+11-25 22:33:03.651  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:05.204  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584785204
+11-25 22:33:05.602  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:07.115  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584787115
+11-25 22:33:07.455  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:09.003  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584789003
+11-25 22:33:09.394  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:10.961  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584790961
+11-25 22:33:11.313  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:12.503  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584792503
+11-25 22:33:12.885  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:14.298  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584794298
+11-25 22:33:14.646  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:16.153  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584796153
+11-25 22:33:16.539  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:18.265  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584798265
+11-25 22:33:18.612  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:20.038  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584800037
+11-25 22:33:20.425  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:21.776  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584801776
+11-25 22:33:22.136  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:23.501  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584803500
+11-25 22:33:23.882  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:25.467  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584805467
+11-25 22:33:25.813  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:27.233  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584807233
+11-25 22:33:27.624  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:29.751  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584809751
+11-25 22:33:30.101  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:31.441  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584811441
+11-25 22:33:31.820  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:33.330  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584813330
+11-25 22:33:33.681  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:34.926  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584814926
+11-25 22:33:35.308  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:36.476  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584816476
+11-25 22:33:36.823  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:38.553  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584818553
+11-25 22:33:38.937  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:40.330  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584820330
+11-25 22:33:40.680  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:41.946  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584821946
+11-25 22:33:42.329  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:43.552  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584823552
+11-25 22:33:43.898  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:45.344  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584825344
+11-25 22:33:45.756  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:47.096  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584827096
+11-25 22:33:47.450  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:48.806  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584828806
+11-25 22:33:49.186  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:50.428  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584830427
+11-25 22:33:50.768  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:52.419  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584832419
+11-25 22:33:52.807  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:54.028  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584834027
+11-25 22:33:54.366  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:55.617  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584835616
+11-25 22:33:56.000  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:57.260  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584837260
+11-25 22:33:57.599  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:33:59.147  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584839147
+11-25 22:33:59.536  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:00.888  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584840888
+11-25 22:34:01.232  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:02.539  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584842539
+11-25 22:34:02.918  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:04.327  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584844327
+11-25 22:34:04.677  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:06.121  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584846121
+11-25 22:34:06.504  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:07.973  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584847973
+11-25 22:34:08.313  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:09.741  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584849741
+11-25 22:34:10.128  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:11.388  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584851388
+11-25 22:34:11.733  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:13.168  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584853168
+11-25 22:34:13.552  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:14.815  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584854815
+11-25 22:34:15.160  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:16.792  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584856792
+11-25 22:34:17.169  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:18.252  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584858251
+11-25 22:34:18.591  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:20.056  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584860056
+11-25 22:34:20.444  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:21.884  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584861884
+11-25 22:34:22.230  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:23.640  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584863639
+11-25 22:34:24.020  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:25.344  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584865344
+11-25 22:34:25.693  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:26.999  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584866998
+11-25 22:34:27.376  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:28.557  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584868557
+11-25 22:34:28.895  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:30.276  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584870276
+11-25 22:34:30.658  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:31.997  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584871997
+11-25 22:34:32.344  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:33.594  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584873593
+11-25 22:34:33.972  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:35.414  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584875413
+11-25 22:34:35.764  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:37.074  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584877074
+11-25 22:34:37.455  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:38.579  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584878579
+11-25 22:34:38.928  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:40.327  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584880327
+11-25 22:34:40.703  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:42.120  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584882120
+11-25 22:34:42.466  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:43.900  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584883900
+11-25 22:34:44.280  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:45.458  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584885458
+11-25 22:34:45.806  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:47.284  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584887283
+11-25 22:34:47.672  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:48.811  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584888811
+11-25 22:34:49.146  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:50.624  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584890624
+11-25 22:34:50.999  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:52.433  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584892433
+11-25 22:34:52.771  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:54.063  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584894063
+11-25 22:34:54.441  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:55.723  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584895723
+11-25 22:34:56.072  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:57.621  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584897621
+11-25 22:34:58.000  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:34:59.368  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584899368
+11-25 22:34:59.708  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:00.994  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584900994
+11-25 22:35:01.382  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:02.755  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584902755
+11-25 22:35:03.514  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:04.608  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584904608
+11-25 22:35:05.374  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:06.339  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584906339
+11-25 22:35:07.150  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:08.090  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584908090
+11-25 22:35:08.893  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:09.820  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584909820
+11-25 22:35:10.624  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:11.769  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584911769
+11-25 22:35:12.602  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:13.721  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584913721
+11-25 22:35:14.530  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:15.352  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584915351
+11-25 22:35:16.158  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:17.398  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584917398
+11-25 22:35:18.399  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:19.096  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584919096
+11-25 22:35:20.070  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:20.936  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584920936
+11-25 22:35:21.779  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:22.519  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584922519
+11-25 22:35:23.348  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:24.376  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584924375
+11-25 22:35:25.210  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:26.127  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584926126
+11-25 22:35:26.963  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:27.956  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584927956
+11-25 22:35:28.793  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:29.587  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584929586
+11-25 22:35:30.402  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:31.233  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584931233
+11-25 22:35:32.047  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:32.967  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584932967
+11-25 22:35:33.786  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:34.705  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584934704
+11-25 22:35:35.492  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:36.447  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584936446
+11-25 22:35:37.268  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:38.192  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584938192
+11-25 22:35:39.046  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:40.086  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584940086
+11-25 22:35:40.899  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:41.907  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584941907
+11-25 22:35:42.728  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:43.720  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584943720
+11-25 22:35:44.549  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:45.663  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584945663
+11-25 22:35:46.291  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:47.555  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584947554
+11-25 22:35:47.973  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:49.562  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584949562
+11-25 22:35:49.940  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:51.507  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584951507
+11-25 22:35:51.894  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:53.257  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584953256
+11-25 22:35:53.606  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:55.285  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584955285
+11-25 22:35:55.669  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:57.150  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584957150
+11-25 22:35:57.517  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:35:58.766  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584958766
+11-25 22:35:59.158  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:00.722  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584960722
+11-25 22:36:01.107  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:02.235  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584962235
+11-25 22:36:02.611  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:03.880  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584963880
+11-25 22:36:04.227  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:05.826  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584965825
+11-25 22:36:06.211  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:07.491  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584967491
+11-25 22:36:07.833  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:09.338  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584969338
+11-25 22:36:09.734  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:10.934  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584970934
+11-25 22:36:11.287  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:12.560  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584972560
+11-25 22:36:12.940  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:14.273  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584974273
+11-25 22:36:14.621  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:16.102  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584976102
+11-25 22:36:16.481  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:17.991  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584977991
+11-25 22:36:18.344  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:19.575  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584979575
+11-25 22:36:19.956  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:21.196  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584981196
+11-25 22:36:21.536  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:23.186  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584983186
+11-25 22:36:23.574  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:24.759  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584984759
+11-25 22:36:25.106  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:26.319  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584986319
+11-25 22:36:26.701  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:28.063  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584988063
+11-25 22:36:28.411  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:29.814  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584989814
+11-25 22:36:30.194  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:31.388  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584991388
+11-25 22:36:31.733  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:33.160  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584993160
+11-25 22:36:33.546  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:35.103  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584995103
+11-25 22:36:35.447  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:36.675  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584996675
+11-25 22:36:37.058  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:38.497  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732584998497
+11-25 22:36:38.847  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:40.116  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585000116
+11-25 22:36:40.494  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:41.714  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585001713
+11-25 22:36:42.059  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:43.398  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585003398
+11-25 22:36:43.784  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:45.143  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585005143
+11-25 22:36:45.490  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:46.740  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585006740
+11-25 22:36:47.116  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:48.598  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585008598
+11-25 22:36:48.948  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:50.256  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585010255
+11-25 22:36:50.635  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:52.020  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585012020
+11-25 22:36:52.370  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:53.820  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585013820
+11-25 22:36:54.204  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:55.585  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585015585
+11-25 22:36:55.939  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:57.447  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585017447
+11-25 22:36:57.827  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:36:58.977  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585018977
+11-25 22:36:59.328  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:00.704  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585020704
+11-25 22:37:01.085  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:02.623  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585022622
+11-25 22:37:02.965  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:04.393  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585024393
+11-25 22:37:04.776  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:06.094  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585026094
+11-25 22:37:06.442  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:07.880  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585027880
+11-25 22:37:08.269  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:09.519  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585029519
+11-25 22:37:09.873  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:11.255  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585031255
+11-25 22:37:11.640  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:12.897  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585032897
+11-25 22:37:13.235  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:14.635  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585034635
+11-25 22:37:15.016  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:16.441  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585036441
+11-25 22:37:16.791  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:18.111  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585038111
+11-25 22:37:18.495  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:19.731  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585039731
+11-25 22:37:20.068  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:21.633  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585041633
+11-25 22:37:22.043  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:23.189  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585043189
+11-25 22:37:23.542  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:25.199  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585045199
+11-25 22:37:25.583  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:26.794  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585046793
+11-25 22:37:27.136  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:28.568  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585048568
+11-25 22:37:28.948  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:30.403  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585050403
+11-25 22:37:30.747  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:31.979  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585051979
+11-25 22:37:32.367  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:33.663  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585053663
+11-25 22:37:34.009  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:35.426  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585055426
+11-25 22:37:35.810  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:37.159  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585057159
+11-25 22:37:37.507  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:39.306  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585059306
+11-25 22:37:39.707  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:40.658  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585060658
+11-25 22:37:40.996  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:42.483  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585062483
+11-25 22:37:42.867  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:44.420  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585064420
+11-25 22:37:44.774  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:46.182  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585066181
+11-25 22:37:46.974  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:47.907  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585067907
+11-25 22:37:48.802  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:49.667  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585069666
+11-25 22:37:50.375  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:51.575  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585071575
+11-25 22:37:52.406  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:53.263  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585073262
+11-25 22:37:54.077  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:54.889  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585074888
+11-25 22:37:55.707  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:56.767  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585076767
+11-25 22:37:57.595  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:37:58.370  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585078370
+11-25 22:37:59.194  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:00.129  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585080129
+11-25 22:38:00.964  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:02.058  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585082058
+11-25 22:38:02.882  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:03.638  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585083638
+11-25 22:38:04.449  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:05.345  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585085345
+11-25 22:38:06.175  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:07.110  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585087110
+11-25 22:38:07.934  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:08.823  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585088823
+11-25 22:38:09.638  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:10.637  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585090636
+11-25 22:38:11.487  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:12.310  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585092310
+11-25 22:38:13.134  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:14.174  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585094174
+11-25 22:38:14.994  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:15.793  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585095793
+11-25 22:38:16.617  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:17.535  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585097535
+11-25 22:38:18.367  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:19.275  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585099275
+11-25 22:38:20.104  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:20.903  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585100903
+11-25 22:38:21.728  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:22.673  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585102673
+11-25 22:38:23.501  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:24.483  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585104482
+11-25 22:38:25.317  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:26.111  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585106110
+11-25 22:38:26.925  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:27.881  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585107881
+11-25 22:38:28.703  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:29.728  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585109728
+11-25 22:38:30.564  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:31.369  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585111368
+11-25 22:38:32.179  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:33.096  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585113096
+11-25 22:38:33.917  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:34.846  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585114846
+11-25 22:38:35.672  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:36.593  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585116593
+11-25 22:38:37.410  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:38.510  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585118510
+11-25 22:38:39.349  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:40.000  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585120000
+11-25 22:38:40.824  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:41.863  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585121863
+11-25 22:38:42.720  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:43.384  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585123384
+11-25 22:38:44.200  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:45.166  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585125165
+11-25 22:38:45.987  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:46.920  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585126920
+11-25 22:38:47.735  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:48.660  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585128660
+11-25 22:38:49.470  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:50.399  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585130399
+11-25 22:38:51.219  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:52.130  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585132130
+11-25 22:38:52.953  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:53.873  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585133873
+11-25 22:38:54.695  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:55.631  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585135630
+11-25 22:38:56.448  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:57.357  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585137357
+11-25 22:38:58.192  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:38:59.057  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585139056
+11-25 22:38:59.876  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:00.710  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585140709
+11-25 22:39:01.534  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:02.477  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585142477
+11-25 22:39:03.299  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:04.196  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585144196
+11-25 22:39:05.017  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:05.964  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585145963
+11-25 22:39:06.793  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:07.705  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585147705
+11-25 22:39:08.526  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:09.421  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585149421
+11-25 22:39:10.242  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:11.134  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585151133
+11-25 22:39:11.946  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:12.824  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585152823
+11-25 22:39:13.714  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:14.669  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585154669
+11-25 22:39:15.508  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:16.308  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585156308
+11-25 22:39:17.124  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:18.044  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585158044
+11-25 22:39:18.862  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:19.810  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585159810
+11-25 22:39:20.647  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:21.429  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585161429
+11-25 22:39:22.240  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:23.032  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585163032
+11-25 22:39:23.856  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:24.799  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585164798
+11-25 22:39:25.597  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:26.530  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585166530
+11-25 22:39:27.312  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:28.378  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585168378
+11-25 22:39:29.197  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:30.124  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585170124
+11-25 22:39:30.946  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:31.760  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585171760
+11-25 22:39:32.557  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:33.489  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585173489
+11-25 22:39:34.237  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:35.246  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585175246
+11-25 22:39:36.027  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:36.980  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585176980
+11-25 22:39:37.745  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:38.726  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585178726
+11-25 22:39:39.538  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:40.460  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585180459
+11-25 22:39:41.298  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:42.101  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585182101
+11-25 22:39:42.914  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:43.833  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585183833
+11-25 22:39:44.657  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:45.512  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585185512
+11-25 22:39:46.338  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:47.229  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585187229
+11-25 22:39:48.050  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:48.975  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585188975
+11-25 22:39:49.829  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:50.912  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585190912
+11-25 22:39:51.703  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:52.548  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585192548
+11-25 22:39:53.359  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:54.307  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585194307
+11-25 22:39:55.222  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:56.144  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585196143
+11-25 22:39:56.980  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:57.808  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585197807
+11-25 22:39:58.652  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:39:59.422  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585199421
+11-25 22:40:00.245  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:01.175  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585201175
+11-25 22:40:01.996  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:02.881  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585202880
+11-25 22:40:03.702  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:04.630  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585204630
+11-25 22:40:05.457  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:06.387  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585206387
+11-25 22:40:07.211  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:08.099  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585208099
+11-25 22:40:08.895  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:09.858  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585209857
+11-25 22:40:10.680  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:11.812  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585211812
+11-25 22:40:12.630  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:13.656  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585213656
+11-25 22:40:14.484  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:15.550  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585215550
+11-25 22:40:16.379  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:17.129  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585217129
+11-25 22:40:17.893  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:18.857  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585218857
+11-25 22:40:19.668  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:20.508  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585220507
+11-25 22:40:21.338  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:22.242  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585222241
+11-25 22:40:23.090  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:23.847  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585223847
+11-25 22:40:24.664  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:25.512  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585225512
+11-25 22:40:26.330  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:27.248  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585227248
+11-25 22:40:28.051  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:29.001  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585229001
+11-25 22:40:29.829  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:30.825  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585230825
+11-25 22:40:31.654  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:32.472  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585232472
+11-25 22:40:33.213  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:34.220  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585234220
+11-25 22:40:35.036  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:35.964  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585235964
+11-25 22:40:36.785  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:37.710  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585237709
+11-25 22:40:38.538  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:39.456  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585239456
+11-25 22:40:40.269  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:41.514  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585241514
+11-25 22:40:42.339  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:43.148  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585243148
+11-25 22:40:43.958  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:44.867  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585244867
+11-25 22:40:45.683  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:46.850  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585246849
+11-25 22:40:47.673  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:48.577  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585248577
+11-25 22:40:49.376  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:50.194  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585250194
+11-25 22:40:51.004  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:51.940  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585251940
+11-25 22:40:52.775  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:53.580  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585253580
+11-25 22:40:54.405  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:55.322  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585255322
+11-25 22:40:56.131  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:57.113  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585257113
+11-25 22:40:57.938  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:40:58.919  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585258919
+11-25 22:40:59.759  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:00.551  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585260550
+11-25 22:41:01.454  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:02.464  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585262464
+11-25 22:41:03.300  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:03.924  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585263924
+11-25 22:41:04.727  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:05.670  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585265669
+11-25 22:41:06.478  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:07.626  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585267625
+11-25 22:41:08.395  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:09.348  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585269348
+11-25 22:41:10.126  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:11.079  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585271078
+11-25 22:41:11.944  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:13.407  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585273407
+11-25 22:41:13.761  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:15.017  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585275017
+11-25 22:41:15.402  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:16.844  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585276844
+11-25 22:41:17.205  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:18.348  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585278347
+11-25 22:41:18.730  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:20.115  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585280115
+11-25 22:41:20.463  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:21.893  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585281893
+11-25 22:41:22.288  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:23.579  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585283579
+11-25 22:41:23.923  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:25.330  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585285330
+11-25 22:41:25.705  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:26.943  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585286943
+11-25 22:41:27.291  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:28.684  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585288684
+11-25 22:41:29.066  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:30.444  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585290444
+11-25 22:41:30.786  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:32.160  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585292160
+11-25 22:41:32.543  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:33.904  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585293904
+11-25 22:41:34.248  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:35.655  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585295655
+11-25 22:41:36.037  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:37.507  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585297507
+11-25 22:41:37.848  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:39.235  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585299235
+11-25 22:41:39.627  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:41.100  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585301100
+11-25 22:41:41.443  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:42.817  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585302817
+11-25 22:41:43.193  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:44.660  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585304660
+11-25 22:41:45.004  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:46.199  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585306199
+11-25 22:41:46.579  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:47.960  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585307960
+11-25 22:41:48.303  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:49.781  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585309781
+11-25 22:41:50.161  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:51.388  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585311388
+11-25 22:41:51.731  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:53.057  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585313057
+11-25 22:41:53.436  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:54.861  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585314861
+11-25 22:41:55.205  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:56.499  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585316498
+11-25 22:41:56.878  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:58.117  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585318117
+11-25 22:41:58.457  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:41:59.945  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585319945
+11-25 22:42:00.322  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:01.656  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585321656
+11-25 22:42:01.998  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:03.220  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585323220
+11-25 22:42:03.601  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:04.984  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585324984
+11-25 22:42:05.331  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:06.684  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585326684
+11-25 22:42:07.061  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:08.217  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585328217
+11-25 22:42:08.566  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:09.858  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585329858
+11-25 22:42:10.238  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:11.744  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585331744
+11-25 22:42:12.090  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:13.359  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585333359
+11-25 22:42:13.738  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:14.980  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585334980
+11-25 22:42:15.324  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:16.834  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585336834
+11-25 22:42:17.223  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:18.554  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585338554
+11-25 22:42:18.901  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:20.422  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585340422
+11-25 22:42:20.807  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:21.991  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585341991
+11-25 22:42:22.339  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:23.639  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585343639
+11-25 22:42:24.020  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:25.394  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585345394
+11-25 22:42:25.750  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:27.039  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585347039
+11-25 22:42:27.427  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:28.788  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585348787
+11-25 22:42:29.132  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:30.411  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585350411
+11-25 22:42:30.795  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:32.281  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585352280
+11-25 22:42:32.623  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:33.921  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585353921
+11-25 22:42:34.301  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:35.649  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585355649
+11-25 22:42:35.991  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:37.701  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585357701
+11-25 22:42:38.086  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:39.312  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585359312
+11-25 22:42:39.659  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:41.089  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585361088
+11-25 22:42:41.476  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:42.749  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585362749
+11-25 22:42:43.097  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:44.476  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585364476
+11-25 22:42:44.857  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:46.201  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585366201
+11-25 22:42:46.541  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:47.795  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585367795
+11-25 22:42:48.177  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:49.623  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585369623
+11-25 22:42:49.976  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:51.316  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585371316
+11-25 22:42:51.696  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:53.062  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585373062
+11-25 22:42:53.413  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:54.707  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585374707
+11-25 22:42:55.088  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:56.450  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585376450
+11-25 22:42:56.790  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:58.243  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585378243
+11-25 22:42:58.628  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:42:59.853  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585379853
+11-25 22:43:00.201  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:01.574  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585381573
+11-25 22:43:01.970  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:03.207  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585383207
+11-25 22:43:03.550  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:05.043  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585385043
+11-25 22:43:05.433  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:06.604  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585386604
+11-25 22:43:06.950  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:08.319  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585388319
+11-25 22:43:08.695  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:10.001  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585390001
+11-25 22:43:10.345  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:11.644  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585391644
+11-25 22:43:12.171  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:13.490  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585393489
+11-25 22:43:14.252  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:15.207  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585395206
+11-25 22:43:15.974  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:16.846  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585396845
+11-25 22:43:17.651  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:18.458  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585398457
+11-25 22:43:19.289  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:20.477  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585400477
+11-25 22:43:21.313  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:21.947  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585401947
+11-25 22:43:22.757  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:23.669  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585403669
+11-25 22:43:24.487  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:25.454  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585405454
+11-25 22:43:26.296  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:27.179  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585407179
+11-25 22:43:28.013  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:28.924  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585408924
+11-25 22:43:29.687  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:30.690  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585410689
+11-25 22:43:31.484  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:32.407  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585412407
+11-25 22:43:33.221  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:34.150  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585414150
+11-25 22:43:34.948  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:35.894  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585415893
+11-25 22:43:36.729  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:37.673  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585417673
+11-25 22:43:38.463  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:39.522  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585419522
+11-25 22:43:40.335  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:41.319  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585421319
+11-25 22:43:42.107  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:42.969  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585422969
+11-25 22:43:43.778  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:44.833  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585424833
+11-25 22:43:45.646  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:46.843  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585426842
+11-25 22:43:47.656  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:48.782  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585428782
+11-25 22:43:49.581  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:50.523  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585430522
+11-25 22:43:51.341  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:52.582  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585432582
+11-25 22:43:53.407  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:54.339  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585434339
+11-25 22:43:55.149  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:56.115  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585436115
+11-25 22:43:56.924  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:57.780  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585437780
+11-25 22:43:58.583  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:43:59.577  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585439577
+11-25 22:44:00.346  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:01.291  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585441291
+11-25 22:44:02.112  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:03.126  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585443126
+11-25 22:44:03.915  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:04.863  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585444862
+11-25 22:44:05.679  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:06.820  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585446820
+11-25 22:44:07.625  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:08.585  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585448584
+11-25 22:44:09.349  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:10.291  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585450290
+11-25 22:44:11.107  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:12.041  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585452041
+11-25 22:44:12.855  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:13.790  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585453789
+11-25 22:44:14.580  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:15.627  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585455627
+11-25 22:44:16.433  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:17.464  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585457464
+11-25 22:44:18.280  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:19.155  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585459155
+11-25 22:44:19.956  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:20.844  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585460844
+11-25 22:44:21.619  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:22.601  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585462601
+11-25 22:44:23.413  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:24.305  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585464305
+11-25 22:44:25.101  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:26.281  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585466281
+11-25 22:44:27.111  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:27.969  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585467969
+11-25 22:44:28.784  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:29.745  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585469745
+11-25 22:44:30.581  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:31.246  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585471246
+11-25 22:44:32.056  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:33.128  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585473128
+11-25 22:44:33.953  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:34.869  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585474869
+11-25 22:44:35.676  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:36.609  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585476608
+11-25 22:44:37.430  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:38.347  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585478347
+11-25 22:44:39.179  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:40.150  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585480150
+11-25 22:44:40.971  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:41.948  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585481948
+11-25 22:44:42.773  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:43.770  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585483770
+11-25 22:44:44.590  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:45.523  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585485522
+11-25 22:44:46.343  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:47.436  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585487436
+11-25 22:44:48.251  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:49.224  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585489224
+11-25 22:44:49.990  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:50.960  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585490960
+11-25 22:44:51.763  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:52.586  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585492585
+11-25 22:44:53.378  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:54.360  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585494360
+11-25 22:44:55.173  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:56.410  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585496410
+11-25 22:44:57.226  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:44:58.326  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585498326
+11-25 22:44:59.102  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:00.057  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585500057
+11-25 22:45:00.883  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:01.801  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585501801
+11-25 22:45:02.613  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:03.503  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585503503
+11-25 22:45:04.304  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:05.317  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585505317
+11-25 22:45:06.130  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:07.080  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585507079
+11-25 22:45:07.883  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:08.878  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585508878
+11-25 22:45:09.652  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:10.617  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585510616
+11-25 22:45:11.428  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:12.458  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585512457
+11-25 22:45:13.294  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:14.206  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585514206
+11-25 22:45:15.014  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:15.939  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585515938
+11-25 22:45:16.756  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:17.684  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585517684
+11-25 22:45:18.498  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:19.520  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585519520
+11-25 22:45:20.335  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:21.250  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585521250
+11-25 22:45:22.068  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:22.893  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585522892
+11-25 22:45:23.662  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:24.607  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585524606
+11-25 22:45:25.437  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:26.379  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585526378
+11-25 22:45:27.162  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:28.109  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585528109
+11-25 22:45:28.911  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:29.961  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585529960
+11-25 22:45:30.764  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:31.600  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585531600
+11-25 22:45:32.393  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:33.333  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585533332
+11-25 22:45:34.161  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:35.060  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585535060
+11-25 22:45:35.877  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:36.773  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585536773
+11-25 22:45:37.786  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:38.556  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585538556
+11-25 22:45:39.414  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:40.309  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585540309
+11-25 22:45:41.115  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:42.049  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585542049
+11-25 22:45:42.874  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:43.672  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585543672
+11-25 22:45:44.490  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:45.425  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585545425
+11-25 22:45:46.230  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:47.157  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585547157
+11-25 22:45:47.947  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:48.896  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585548896
+11-25 22:45:49.705  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:50.751  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585550750
+11-25 22:45:51.539  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:52.631  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585552631
+11-25 22:45:53.426  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:54.339  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585554339
+11-25 22:45:55.132  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:56.077  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585556077
+11-25 22:45:56.866  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:57.809  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585557809
+11-25 22:45:58.260  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:45:59.463  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585559463
+11-25 22:45:59.917  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:01.279  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585561279
+11-25 22:46:01.625  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:03.192  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585563192
+11-25 22:46:03.587  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:04.900  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585564900
+11-25 22:46:05.242  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:06.486  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585566486
+11-25 22:46:06.873  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:08.244  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585568244
+11-25 22:46:08.583  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:09.953  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585569953
+11-25 22:46:10.331  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:11.619  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585571619
+11-25 22:46:11.961  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:13.278  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585573278
+11-25 22:46:13.677  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:14.886  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585574886
+11-25 22:46:15.233  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:16.849  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585576848
+11-25 22:46:17.237  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:18.636  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585578636
+11-25 22:46:18.983  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:20.432  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585580431
+11-25 22:46:20.814  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:21.960  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585581960
+11-25 22:46:22.303  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:23.770  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585583769
+11-25 22:46:24.159  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:25.448  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585585447
+11-25 22:46:25.792  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:27.090  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585587090
+11-25 22:46:27.471  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:28.751  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585588751
+11-25 22:46:29.110  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:30.469  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585590469
+11-25 22:46:30.853  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:32.106  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585592106
+11-25 22:46:32.446  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:33.773  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585593773
+11-25 22:46:34.154  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:35.576  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585595576
+11-25 22:46:35.925  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:37.431  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585597431
+11-25 22:46:37.811  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:39.185  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585599185
+11-25 22:46:39.522  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:40.729  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585600729
+11-25 22:46:41.111  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:42.481  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585602481
+11-25 22:46:42.827  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:44.128  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585604128
+11-25 22:46:44.514  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:45.721  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585605721
+11-25 22:46:46.062  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:47.476  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585607476
+11-25 22:46:47.859  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:49.071  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585609071
+11-25 22:46:49.412  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:50.869  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585610869
+11-25 22:46:51.249  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:52.493  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585612493
+11-25 22:46:52.837  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:54.497  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585614497
+11-25 22:46:54.888  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:56.070  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585616070
+11-25 22:46:56.412  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:57.798  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585617798
+11-25 22:46:58.188  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:46:59.525  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585619524
+11-25 22:46:59.874  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:01.190  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585621190
+11-25 22:47:01.569  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:02.920  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585622920
+11-25 22:47:03.264  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:04.575  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585624575
+11-25 22:47:04.962  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:06.313  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585626312
+11-25 22:47:06.655  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:07.861  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585627861
+11-25 22:47:08.255  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:09.798  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585629798
+11-25 22:47:10.151  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:11.300  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585631299
+11-25 22:47:11.682  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:12.926  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585632926
+11-25 22:47:13.269  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:14.722  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585634722
+11-25 22:47:15.107  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:16.436  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585636436
+11-25 22:47:16.779  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:18.074  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585638073
+11-25 22:47:18.456  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:19.681  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585639681
+11-25 22:47:20.035  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:21.564  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585641564
+11-25 22:47:21.958  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:23.143  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585643143
+11-25 22:47:23.502  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:24.941  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585644941
+11-25 22:47:25.334  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:26.789  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585646789
+11-25 22:47:27.139  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:28.359  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585648359
+11-25 22:47:28.739  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:30.366  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585650366
+11-25 22:47:30.720  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:32.136  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585652136
+11-25 22:47:32.517  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:33.767  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585653767
+11-25 22:47:34.106  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:35.794  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585655794
+11-25 22:47:36.188  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:37.614  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585657614
+11-25 22:47:37.970  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:39.114  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585659114
+11-25 22:47:39.491  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:40.786  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585660786
+11-25 22:47:41.130  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:42.739  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585662739
+11-25 22:47:43.123  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:44.218  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585664217
+11-25 22:47:44.558  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:46.270  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585666269
+11-25 22:47:46.647  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:47.934  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585667933
+11-25 22:47:48.278  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:49.727  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585669727
+11-25 22:47:50.122  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:51.497  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585671497
+11-25 22:47:51.845  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:53.196  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585673196
+11-25 22:47:53.575  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:55.006  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585675006
+11-25 22:47:55.359  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:56.527  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585676527
+11-25 22:47:56.904  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:58.312  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585678312
+11-25 22:47:58.671  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:47:59.948  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585679948
+11-25 22:48:00.332  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:01.738  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585681737
+11-25 22:48:02.078  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:03.274  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585683274
+11-25 22:48:03.654  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:04.978  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585684977
+11-25 22:48:05.322  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:06.744  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585686744
+11-25 22:48:07.127  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:08.457  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585688457
+11-25 22:48:08.798  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:10.237  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585690237
+11-25 22:48:10.623  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:12.036  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585692036
+11-25 22:48:12.383  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:13.677  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585693677
+11-25 22:48:14.060  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:15.305  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585695304
+11-25 22:48:15.674  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:17.159  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585697159
+11-25 22:48:17.543  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:18.904  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585698904
+11-25 22:48:19.248  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:20.522  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585700522
+11-25 22:48:20.900  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:22.293  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585702293
+11-25 22:48:22.633  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:24.019  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585704019
+11-25 22:48:24.407  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:25.898  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585705897
+11-25 22:48:26.233  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:27.625  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585707624
+11-25 22:48:28.007  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:29.397  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585709397
+11-25 22:48:29.737  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:31.062  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585711062
+11-25 22:48:31.442  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:32.723  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585712723
+11-25 22:48:33.061  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:34.485  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585714485
+11-25 22:48:34.867  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:36.120  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585716119
+11-25 22:48:36.461  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:37.849  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585717849
+11-25 22:48:38.225  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:39.690  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585719690
+11-25 22:48:40.042  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:41.413  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585721413
+11-25 22:48:41.795  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:43.247  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585723247
+11-25 22:48:43.595  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:44.814  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585724814
+11-25 22:48:45.194  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:46.457  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585726457
+11-25 22:48:46.806  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:48.221  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585728221
+11-25 22:48:48.616  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:49.928  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585729928
+11-25 22:48:50.275  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:51.937  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585731937
+11-25 22:48:52.322  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:53.521  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585733521
+11-25 22:48:53.866  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:55.255  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585735255
+11-25 22:48:55.637  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:57.147  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585737147
+11-25 22:48:57.505  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:48:58.837  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585738837
+11-25 22:48:59.216  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:00.753  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585740753
+11-25 22:49:01.093  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:02.421  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585742421
+11-25 22:49:02.796  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:04.175  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585744175
+11-25 22:49:04.536  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:06.015  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585746015
+11-25 22:49:06.400  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:07.748  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585747748
+11-25 22:49:08.094  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:09.536  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585749536
+11-25 22:49:09.922  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:11.229  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585751229
+11-25 22:49:11.583  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:12.974  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585752974
+11-25 22:49:13.357  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:15.030  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585755030
+11-25 22:49:15.372  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:16.979  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585756979
+11-25 22:49:17.366  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:18.612  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585758611
+11-25 22:49:18.953  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:20.566  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585760566
+11-25 22:49:20.943  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:22.193  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585762193
+11-25 22:49:22.540  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:23.831  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585763831
+11-25 22:49:24.222  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:25.451  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585765451
+11-25 22:49:25.800  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:27.204  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585767204
+11-25 22:49:27.586  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:28.848  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585768848
+11-25 22:49:29.201  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:30.724  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585770724
+11-25 22:49:31.108  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:32.333  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585772333
+11-25 22:49:32.678  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:33.967  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585773967
+11-25 22:49:34.354  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:35.982  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585775982
+11-25 22:49:36.326  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:37.344  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585777344
+11-25 22:49:37.729  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:39.025  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585779025
+11-25 22:49:39.372  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:40.836  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585780836
+11-25 22:49:41.215  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:42.440  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585782440
+11-25 22:49:42.780  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:44.110  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585784110
+11-25 22:49:44.488  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:45.868  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585785868
+11-25 22:49:46.212  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:47.547  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585787547
+11-25 22:49:47.924  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:49.133  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585789132
+11-25 22:49:49.479  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:50.793  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585790793
+11-25 22:49:51.173  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:52.470  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585792470
+11-25 22:49:52.830  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:54.235  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585794235
+11-25 22:49:54.614  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:56.127  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585796126
+11-25 22:49:56.455  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:57.819  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585797819
+11-25 22:49:58.197  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:49:59.564  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585799564
+11-25 22:49:59.906  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:01.253  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585801252
+11-25 22:50:01.631  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:03.043  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585803043
+11-25 22:50:03.385  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:04.890  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585804890
+11-25 22:50:05.269  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:06.632  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585806632
+11-25 22:50:06.976  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:08.241  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585808241
+11-25 22:50:08.622  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:10.121  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585810121
+11-25 22:50:10.471  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:11.781  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585811781
+11-25 22:50:12.163  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:13.567  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585813567
+11-25 22:50:13.926  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:15.344  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585815344
+11-25 22:50:15.727  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:17.078  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585817077
+11-25 22:50:17.419  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:18.979  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585818979
+11-25 22:50:19.362  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:20.651  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585820651
+11-25 22:50:20.996  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:22.296  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585822296
+11-25 22:50:22.680  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:24.010  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585824010
+11-25 22:50:24.354  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:25.692  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585825692
+11-25 22:50:26.071  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:27.296  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585827296
+11-25 22:50:27.635  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:29.061  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585829061
+11-25 22:50:29.438  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:30.721  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585830721
+11-25 22:50:31.067  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:32.437  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585832437
+11-25 22:50:32.811  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:34.121  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585834121
+11-25 22:50:34.465  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:35.823  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585835823
+11-25 22:50:36.210  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:37.661  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585837661
+11-25 22:50:38.011  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:39.399  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585839399
+11-25 22:50:39.789  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:41.139  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585841139
+11-25 22:50:41.490  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:42.809  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585842809
+11-25 22:50:43.177  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:44.575  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585844575
+11-25 22:50:44.932  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:46.373  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585846373
+11-25 22:50:46.775  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:48.103  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585848103
+11-25 22:50:48.452  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:49.855  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585849855
+11-25 22:50:50.239  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:51.672  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585851672
+11-25 22:50:52.016  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:53.187  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585853187
+11-25 22:50:53.568  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:54.857  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585854857
+11-25 22:50:55.207  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:56.597  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585856597
+11-25 22:50:56.992  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:50:58.379  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585858379
+11-25 22:50:58.714  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:00.186  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585860186
+11-25 22:51:00.575  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:02.024  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585862024
+11-25 22:51:02.366  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:03.641  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585863641
+11-25 22:51:04.015  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:05.379  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585865379
+11-25 22:51:05.714  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:07.203  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585867203
+11-25 22:51:07.586  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:08.794  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585868794
+11-25 22:51:09.138  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:10.708  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585870708
+11-25 22:51:11.095  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:12.257  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585872256
+11-25 22:51:12.607  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:13.903  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585873903
+11-25 22:51:14.281  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:15.822  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585875822
+11-25 22:51:16.167  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:17.491  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585877491
+11-25 22:51:17.872  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:19.230  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585879230
+11-25 22:51:19.597  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:20.981  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585880981
+11-25 22:51:21.363  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:22.628  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585882628
+11-25 22:51:22.973  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:24.253  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585884253
+11-25 22:51:24.631  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:26.101  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585886101
+11-25 22:51:26.447  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:27.832  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585887831
+11-25 22:51:28.212  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:29.745  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585889744
+11-25 22:51:30.091  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:31.344  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585891344
+11-25 22:51:31.726  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:33.051  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585893051
+11-25 22:51:33.390  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:35.000  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585895000
+11-25 22:51:35.386  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:36.643  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585896643
+11-25 22:51:36.987  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:38.317  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585898317
+11-25 22:51:38.693  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:39.980  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585899980
+11-25 22:51:40.329  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:41.777  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585901777
+11-25 22:51:42.172  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:43.564  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585903564
+11-25 22:51:43.909  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:45.281  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585905280
+11-25 22:51:45.666  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:46.963  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585906963
+11-25 22:51:47.306  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:48.739  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585908739
+11-25 22:51:49.119  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:50.563  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585910563
+11-25 22:51:50.916  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:52.352  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585912352
+11-25 22:51:52.731  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:54.057  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585914057
+11-25 22:51:54.401  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:55.788  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585915787
+11-25 22:51:56.175  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:57.514  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585917514
+11-25 22:51:57.866  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:51:59.077  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585919077
+11-25 22:51:59.460  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:00.921  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585920920
+11-25 22:52:01.282  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:02.649  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585922649
+11-25 22:52:03.030  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:04.297  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585924296
+11-25 22:52:04.643  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:06.086  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585926086
+11-25 22:52:06.485  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:07.691  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585927691
+11-25 22:52:08.037  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:09.617  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585929617
+11-25 22:52:10.007  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:11.323  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585931323
+11-25 22:52:11.656  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:13.020  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585933020
+11-25 22:52:13.414  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:14.892  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585934892
+11-25 22:52:15.233  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:16.444  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585936444
+11-25 22:52:16.825  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:18.115  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585938115
+11-25 22:52:18.455  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:19.847  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585939847
+11-25 22:52:20.231  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:21.604  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585941604
+11-25 22:52:21.949  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:23.438  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585943437
+11-25 22:52:23.819  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:25.060  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585945059
+11-25 22:52:25.406  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:26.787  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585946787
+11-25 22:52:27.166  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:28.452  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585948452
+11-25 22:52:28.796  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:30.295  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585950295
+11-25 22:52:30.686  8154  8154 D CowBodyConditionScore: runBenchmark: END
+11-25 22:52:31.847  8154  8154 D CowBodyConditionScore: Initiating Job at SystemCurrentMillis: 1732585951847
+11-25 22:52:32.189  8154  8154 D CowBodyConditionScore: runBenchmark: END

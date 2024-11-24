@@ -5,8 +5,11 @@ import com.mobilebcs.configuration.jms.JmsAutoConfiguration;
 import com.mobilebcs.configuration.jms.JmsProperties;
 import com.mobilebcs.domain.qualifier.NextCaravanMessage;
 import com.mobilebcs.images.ImageEncoder;
-import java.util.HashMap;
-import java.util.Map;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -22,9 +25,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import java.io.File;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+
 import org.testcontainers.shaded.org.apache.commons.lang.RandomStringUtils;
 
 @ExtendWith(SpringExtension.class)
@@ -33,6 +34,7 @@ import org.testcontainers.shaded.org.apache.commons.lang.RandomStringUtils;
         "activemq.password=admin",
         "activemq.brokerUrl=tcp://localhost:61616",
         "activemq.receive-timeout=10000","images.queue.name=IMAGE_QUEUE"})
+@Disabled
 public class PushMessageITCase {
     private RestCaller restCaller;
 
@@ -61,12 +63,16 @@ public class PushMessageITCase {
 
     @Test
     public void testSendImagesToQueue() throws InterruptedException, IOException {
-        restCaller=new RestCaller(8080);
-        for(int i=2;i<=2;i++) {
-            restCaller.sendRealImage(i,locationCode, map.get(i));
-           Thread.sleep(1000L);
+        restCaller=new RestCaller(8080,"192.168.0.215");
+        int initial;for(int j=0;j<116;j++) {
+            initial=15*j;
+            for (int i = 1; i <= 15; i++) {
+                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+
+                System.out.println(LocalDateTime.now().format(dtf) + " Sending image " + (initial+i) + " to queue " + map.get(i));
+                restCaller.sendRealImage(i, locationCode, map.get(i),initial+i);
+                Thread.sleep(600);
+            }
         }
-
     }
-
 }

@@ -18,7 +18,6 @@ import java.util.stream.Collectors;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -91,7 +90,7 @@ public class ViewerITCase extends AbstractITCase {
     public void init() throws IOException {
 
         FileUtils.deleteDirectory(new File(Paths.get(imagePath).toString()));
-        restCaller = new RestCaller(port);
+        restCaller = new RestCaller(port, "localhost");
         searchPredictionUtil=new SearchPredictionUtil(restCaller);
         Mockito.reset(stompSessionHandler,stompSessionHandler2);
 

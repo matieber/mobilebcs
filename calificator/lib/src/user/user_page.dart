@@ -18,7 +18,7 @@ class UserPage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     var registerUser = RegisterUser(serverUrl);
-    return Scaffold(
+    return SafeArea(child: Scaffold(
       appBar: buildAppBar(),
       drawer: HomeSideMenu(),
       body: Container(
@@ -41,7 +41,7 @@ _toRegisterUser(context,registerUser);})
 
       ),
     )
-    );
+    ));
   }
 
  void _toLoginUser(BuildContext context,String serverUrl){

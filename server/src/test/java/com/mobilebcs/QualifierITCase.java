@@ -11,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jms.core.JmsTemplate;
 import org.springframework.test.context.ActiveProfiles;
 
 import java.io.File;
@@ -40,7 +39,7 @@ public class QualifierITCase extends AbstractITCase {
     @BeforeEach
     public void init() throws IOException {
         FileUtils.deleteDirectory(new File(Paths.get(imagePath).toString()));
-        restCaller = new RestCaller(port);
+        restCaller = new RestCaller(port, "localhost");
         randomScore = new Random();
     }
 

@@ -80,304 +80,19 @@
 
 \begin_layout Chapter
 Conclusiones, Limitaciones y Trabajos Futuros
-\change_inserted -1783815582 1731879569
+\change_inserted -1783815582 1732390748
 
 \end_layout
 
 \begin_layout Section
 
-\change_inserted -1783815582 1731879589
-Limitaciones y trabajos futuros
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731877756
-Este capítulo aborda las mejoras y desarrollos potenciales para el sistema,
- identificando áreas donde se pueden realizar innovaciones, optimizaciones
- e integraciones para incrementar la funcionalidad, seguridad y usabilidad
- del sistema en contextos reales.
-\change_unchanged
-
-\end_layout
-
-\begin_layout Subsection
-
-\change_inserted -1783815582 1731878430
-Seguridad
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731877761
-Una de las mejoras futuras incluye la incorporación de una capa de seguridad
- para el sistema de inicio de sesión.
- Actualmente, este componente solo permite la identificación del tipo de
- usuario y la asociación de calificaciones con un experto determinado.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731878481
-Además, será necesario implementar restricciones que limiten quiénes pueden
- registrarse como calificadores, ya que la aplicación admite usuarios con
- roles tanto de calificador como de observador sin validación previa.
- Esto garantizará que solo expertos cualificados puedan registrarse como
- calificadores.
-\end_layout
-
-\begin_layout Subsection
-
-\change_inserted -1783815582 1731878493
-Tolerencia a fallos
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731931789
-Es crucial mejorar la tolerancia a fallos del sistema para garantizar su
- robustez y confiabilidad.
- En caso de interrupciones en la conexión WebSocket o errores en el mismo,
- el sistema debería implementar mecanismos de reintento o redirección de
- trabajos ("jobs") para asegurar que ninguno quede sin predecir por el modelo.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731931817
-De igual manera, es fundamental que el proceso de calificación contemple
- estrategias de reintento en caso de fallos en llamadas rest, evitando así
- por ejemplo la pérdida de las evaluaciones realizadas por los expertos
- y asegurando que todas las calificaciones se almacenen correctamente en
- el sistema.
- Estas mejoras son esenciales para mantener la integridad y continuidad
- de las operaciones.
-\change_unchanged
-
-\end_layout
-
-\begin_layout Subsubsection
-
-\change_inserted -1783815582 1731931827
-Múltiples calificadores
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731931941
-En futuras versiones del servidor, se planea implementar mejoras que permitan
- a los calificadores compartir una única cola JMS, facilitando la distribución
- equitativa de las tareas de calificación.
- Esto incluiría la opción de dividir las caravanas de vacas entre calificadores
- o mantener la funcionalidad actual, donde todos los calificadores evalúan
- todas las vacas.
- Además, esta mejora permitiría que los calificadores puedan abandonar una
- sesión y unirse a otra según sea necesario, ofreciendo mayor flexibilidad
- en la gestión de las sesiones.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731931941
-Actualmente, aunque la aplicación móvil no permite que dos calificadores
- trabajen simultáneamente, el servidor ha sido diseñado para admitir múltiples
- calificadores en una misma sesión.
- Cada calificador dispone de su propia cola JMS y tiene la capacidad de
- calificar todas las vacas, lo que sienta las bases para la implementación
- de las mejoras mencionadas.
-\end_layout
-
-\begin_layout Subsection
-
-\change_inserted -1783815582 1731878472
-Mayor cantidade de imágenes a procesar
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731877886
-Actualmente, el sistema permite recibir y almacenar múltiples imágenes por
- vaca, pero solo la primera es enviada a los usuarios calificadores y observador
-es.
- Un avance futuro sería la capacidad de enviar todas las imágenes relacionadas
- con cada vaca para análisis más detallado, tanto por parte de los calificadores
- como de los observadores.
-\end_layout
-
-\begin_layout Section
-
-\change_inserted -1783815582 1731796677
-Sistema de envío
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731877973
-Aunque definido como parte del diseño, la implementación de un sistema de
- envío por lotes quedó fuera del alcance de este proyecto.
- Este sistema deberá configurarse para notificar al servidor sobre el origen
- del lote, procesar las imágenes capturadas, asociarlas con la identificación
- RFID de la vaca, crear el lote ("job") y enviarlo al servidor.
- Además, permitirá configurar la cantidad de imágenes a tomar por vaca en
- esta aplicación.
-\change_unchanged
-
-\end_layout
-
-\begin_layout Subsection
-
-\change_inserted -1783815582 1731877987
-Mejora en la Gestión de Jobs para Calificadores
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731882646
-En la implementación actual, los calificadores no pueden procesar los trabajos
- ("jobs") creados antes de su ingreso a una sesión de calificación.
- Esto implica que los trabajos generados antes del inicio de la sesión no
- se califican.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731882644
-Futuras mejoras podrían incluir la capacidad de cargar todos los trabajos
- previos desde la base de datos hacia la cola JMS del usuario al iniciar
- sesión, asegurando que ningún trabajo quede sin calificar.
- Sin embargo, esta funcionalidad deberá considerar aspectos técnicos como
- el manejo de nuevos trabajos que llegan mientras se cargan los existentes,
- para evitar desorden en el orden de calificación.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\change_inserted -1783815582 1731876859
-
-\end_layout
-
-\begin_layout Subsection
-
-\change_inserted -1783815582 1731876887
-Integración con IoT
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731882825
-El sistema tiene el potencial de integrarse en un entorno IoT, permitiendo
- la conexión con dispositivos y elementos del entorno ganadero, como mangas,
- corrales y comederos.
- Esto requerirá desarrollar una capa de comunicación que facilite la captura
- automatizada de datos y acciones de contingencia, estructurando el sistema
- como un Sistema Integral de Gestión de la Información (SIGI) para apoyar
- el monitoreo, la planificación y la toma de decisiones.
-\end_layout
-
-\begin_layout Subsection
-
-\change_inserted -1783815582 1731882834
-Mutiples modelos
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731932075
-La aplicación móvil está diseñada con una arquitectura flexible que puede
- permir la integración de diferentes modelos de predicción.
- A través de una configuración sencilla, se posible seleccionar y definir
- qué modelo utilizar en cada caso específico, adaptándose así a diversas
- necesidades y escenarios.
-\end_layout
-
-\begin_layout Subsection
-
-\change_inserted -1783815582 1731882959
-Multiples plataformas
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731883278
-Al desarrollar la aplicación móvil en Flutter, la portabilidad a iOS se
- facilita significativamente debido a la naturaleza multiplataforma del
- framework.
- Sin embargo, para lograr esta transición, es necesario analizar y ajustar
- el modelo predictivo, ya que actualmente está diseñado específicamente
- para Android.
-\end_layout
-
-\begin_layout Subsection
-
-\change_inserted -1783815582 1731883316
-Medir consumo de batería
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731883319
-En futuras implementaciones, se planea incorporar a la aplicación móvil
- un interruptor (switch) junto con un campo de configuración para establecer
- un nivel mínimo de batería.
- Este mecanismo permitirá al dispositivo móvil notificar al servidor si
- puede ofrecer recursos de procesamiento para el cálculo del BCS.
- 
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731883319
-Al activar este interruptor, se deberá iniciar un servicio en segundo plano
- encargado de gestionar un protocolo de intercambio de mensajes entre la
- aplicación y el servidor, asegurando una coordinación eficiente para el
- uso compartido de recursos.
- Aunque esta funcionalidad estaba contemplada desde el inicio, no se logró
- implementar debido a las dificultades encontradas durante el desarrollo
- de la aplicación móvil y las limitaciones de tiempo.
-\end_layout
-
-\begin_layout Subsection
-
-\change_inserted -1783815582 1731878342
-Observadores y Algoritmo de Predicción
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731878420
-Actualmente, la predicción del puntaje de condición corporal (BCS) se realiza
- en la aplicación móvil por los observadores.
- En ausencia de observadores, no es posible realizar predicciones.
- Para solucionar esto, se plantea ejecutar el algoritmo de predicción en
- los dispositivos de los calificadores o directamente en el servidor.
- Esto permitirá predecir trabajos que no hayan sido procesados por los observado
-res, asegurando que no queden trabajos sin evaluar.
-\end_layout
-
-\begin_layout Section
-
-\change_inserted -1783815582 1731881219
+\change_inserted -1783815582 1732390754
 Conclusión
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731881338
+\change_inserted -1783815582 1732390747
 En este proyecto se desarrolló un sistema funcional y extensible diseñado
  para su implementación en entornos ganaderos, logrando mejorar la precisión
  y eficiencia en la predicción del BCS.
@@ -394,7 +109,7 @@ os funcionales, permitiendo una interacción efectiva con el modelo de negocio
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731881338
+\change_inserted -1783815582 1732390747
 Por otro lado, el desarrollo de la aplicación móvil representó un desafío
  mayor, debido a mi falta de experiencia con Flutter, Dart y el desarrollo
  de interfaces visuales.
@@ -407,41 +122,17 @@ Por otro lado, el desarrollo de la aplicación móvil representó un desafío
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731968579
+\change_inserted -1783815582 1732390747
 En total, el proyecto involucró el desarrollo de 113 clases java y 4748
  lineas de código en el servidor y 52 archivos dart y 37 clases java y 6006
  lineas de código en la aplicación móvil, alcanzando un total de 10754 líneas
  de código, reflejando su complejidad técnica y su alcance.
- El sistema fue probado en un entorno con un solo calificador y un observador,
- y demostró operar eficientemente con recursos mínimos, incluyendo:
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1731932259
-ActiveMQ: Aproximadamente X MB de memoria para mantener un flujo estable
- de trabajos ("jobs").
- 
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1731932263
-MySQL: Y MB de memoria para el almacenamiento y gestión de las bases de
- datos.
-\end_layout
-
-\begin_layout Itemize
-
-\change_inserted -1783815582 1731932266
-Servidor (API principal): Z MB de memoria para procesar solicitudes y manejar
- la lógica de negocio.
  
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -1783815582 1731932250
+\change_inserted -1783815582 1732591232
 La modularidad y escalabilidad del sistema abren puertas para futuras ampliacion
 es, como la integración con dispositivos IoT, la optimización de modelos
  predictivos según distintas razas bovinas y el desarrollo de estrategias
@@ -451,6 +142,1387 @@ es, como la integración con dispositivos IoT, la optimización de modelos
  y gestión del sector ganadero.
  Además, representa un avance significativo tanto en términos técnicos como
  en el aprendizaje y adaptación a tecnologías y dominios desconocidos.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1732591957
+Rendimientos en dispositivos móviles
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732592636
+Para evaluar la eficiencia del sistema, se midieron los tiempos de predicción
+ del BCS en dispositivos móviles, un aspecto crítico para asegurar una experienc
+ia fluida al obtener los resultados de la predicción.
+ Antes de la implementación del prototipo, el algoritmo fue probado mediante
+ una versión preliminar diseñada para Android.
+ Estas pruebas se llevaron a cabo en diversos dispositivos móviles, variando
+ tanto la cantidad de dispositivos como el tamaño de los lotes de procesamiento
+ ("jobs").
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732592768
+En la versión preliminar, los datos se transmitían de forma continua desde
+ un servidor a los dispositivos móviles, operando dentro de la misma red
+ local.
+ En el prototipo final, el flujo de datos comenzó con una máquina que simulaba
+ el sistema de envíos hacia el servidor.
+ Posteriormente, el servidor redistribuía los trabajos a los dispositivos
+ móviles, permitiendo evaluar el rendimiento en condiciones más representativas
+ del entorno real en una red local.
+ A continuación, se presenta un resumen de los resultados obtenidos en estas
+ evaluaciones:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+Estos resultados falta formatearlos/compatibilizarlos con lo que vos estás
+ corriendo.
+ Es decir, en estos experimentos de la tabla hay un scheduler round robin
+ que no se estaría mencionando y que es el que se usó para distribuir los
+ jobs.
+ En tu experimento, al parecer va a haber un sólo móvil con lo cual el scheduler
+ no tendría sentido, a menos que incluyas otro móvil en el cálculo.
+ La tabla muestra 3 experimentos donde varían los streams y la composición
+ del cluster pero contiene resultados discriminados por móvil de lo que
+ resultó la inferencia de una imágen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732591233
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+Ejecuciones
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591836
+Version
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+Smartphone marca-modelo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+Tiempo Promedio por imagen (milisegundos) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+desviación estandar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+total de imágenes procesadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+total de jobs procesados
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+stream de dos imágenes por job
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591855
+preliminar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+Xiaomi Redmi_Note_7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+235
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+24
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+876
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+438
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+motorola_moto_g9_play
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+243
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+876
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+438
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+stream de dos imágenes por job
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591859
+preliminar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+Xiaomi_Redmi_Note_7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+233
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+23
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+584
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+292
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+motorola_moto_g6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+300
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+54
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+584
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+292
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+motorola_moto_g9_play 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+244
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+584
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+292
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+stream de 15 imágenes por job
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591862
+preliminar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+Xiaomi_Redmi_Note_7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+217
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+580
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+116
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+motorola_moto_g6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+355
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+5840
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+116
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+motorola_moto_g9_play 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+215
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+580
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+116
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+stream de 1 imágen por job
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591866
+prototipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+motorala_moto_g9_plus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+660
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+184
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+870
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+870
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+motorola_moto_g32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+528
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+216
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+870
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+870
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1732591233
+En el primer experimento, se emplearon dos dispositivos móviles (Xiaomi
+ Redmi Note 7 y Motorola Moto G9 Play), con lotes de 2 imágenes por job.
+ El flujo de datos fue de un total de 1752 imágenes cuyo BCS asociado se
+ calculó en un total de 26 minutos y 43 segundos.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1732591233
+En el segundo experimento, se incorporó un tercer dispositivo (Motorola
+ Moto G6), manteniendo el tamaño de los jobs en 2 imágenes.
+ Nuevamente, se procesaron 1752 imágenes, pero en 26 minutos y 44 segundos,
+ mostrando una variación mínima en el tiempo total.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1732591233
+En el tercer experimento, utilizando los mismos tres dispositivos móviles,
+ se incrementó el tamaño de los jobs a 15 imágenes por lote.
+ En esta configuración, se procesaron 1740 imágenes en 3 minutos y 47,114
+ segundos, demostrando una notable mejora en el tiempo de procesamiento
+ gracias al tamaño optimizado de los jobs.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1732592322
+En el cuarto experimento, se emplearon dos dispositivos móviles (utilizando
+ un motorola g9 plus y un moto g 32), con lotes de 1 imágen por job.
+ El flujo de datos fue de un total de 1740 imágenes cuyo BCS asociado se
+ calculo en un total de 25 minutos y 5 segundos.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732592797
+Es importante destacar que todos los experimentos se llevaron a cabo utilizando
+ un programador (scheduler) con política round robin para la distribución
+ de los trabajos (jobs).
+ En el prototipo, cada trabajo asociado a una imagen se envió al servidor
+ con un intervalo fijo de 750 milisegundos entre cada envío.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732591920
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1783815582 1732591233
+Faltan los screenshots del uso de cpu y memoria de la app móvil y el server.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1732591969
+Rendimientos en el servidor
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732592004
+Como se mencionó anteriormente el sistema fue probado en un entorno con
+ un dos observadores, sin calificadores para verificar el consume de recursos
+ durante la ejecución del algoritmo de predicción, y demostró los siguientes
+ consumos de memoria:
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1732591943
+ActiveMQ: fue incrementando desde 277 MB de memoria hasta 554 MB de memoria.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1732591943
+MySQL: fue incrementando desde 395 MB de memoria hasta 401 MB de memoria.
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1783815582 1732591943
+Servidor (API principal): tuvo un máximo de 464.
+ 
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1732392346
+Limitaciones
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1732392347
+Seguridad
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1732392532
+Una de las mejoras futuras incluye la incorporación de una capa de seguridad
+ para el sistema de inicio de sesión.
+ Actualmente, este componente solo permite la identificación del tipo de
+ usuario y la asociación de calificaciones con un experto determinado.
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1732392532
+Además, será necesario implementar restricciones que limiten quiénes pueden
+ registrarse como calificadores, ya que la aplicación admite usuarios con
+ roles tanto de calificador como de observador sin validación previa.
+ Esto garantizará que solo expertos cualificados puedan registrarse como
+ calificadores.
+\change_inserted -1783815582 1732392540
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732392548
+El sistema de inicio de sesión presenta una limitación en términos de seguridad.
+ Actualmente, este componente únicamente permite identificar el tipo de
+ usuario y asociar calificaciones a un experto específico, pero no incluye
+ mecanismos de autenticación robustos ni validaciones avanzadas para garantizar
+ la protección del acceso.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732392541
+Asimismo, no se han implementado restricciones para controlar quiénes pueden
+ registrarse como calificadores.
+ Esto permite que cualquier usuario pueda asumir este rol, lo que podría
+ comprometer la calidad de las evaluaciones realizadas.
+ La falta de validación previa de las credenciales o experiencia de los
+ calificadores representa una limitación para la confiabilidad del sistema
+ en entornos reales.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1732392347
+Tolerencia a fallos
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1732392643
+Es crucial mejorar la tolerancia a fallos del sistema para garantizar su
+ robustez y confiabilidad.
+ En caso de interrupciones en la conexión WebSocket o errores en el mismo,
+ el sistema debería implementar mecanismos de reintento o redirección de
+ trabajos ("jobs") para asegurar que ninguno quede sin predecir por el modelo.
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1732392643
+De igual manera, es fundamental que el proceso de calificación contemple
+ estrategias de reintento en caso de fallos en llamadas rest, evitando así
+ por ejemplo la pérdida de las evaluaciones realizadas por los expertos
+ y asegurando que todas las calificaciones se almacenen correctamente en
+ el sistema.
+ Estas mejoras son esenciales para mantener la integridad y continuidad
+ de las operaciones.
+\change_inserted -1783815582 1732392644
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732392644
+El sistema actual presenta limitaciones en su capacidad de tolerancia a
+ fallos.
+ Ante interrupciones en la conexión WebSocket o errores relacionados, no
+ existen mecanismos implementados para realizar reintentos automáticos o
+ redirigir los trabajos ("jobs"), lo que puede resultar en predicciones
+ no realizadas por el modelo.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732392644
+Asimismo, el proceso de calificación carece de estrategias que manejen fallos
+ en llamadas REST, lo que puede ocasionar la pérdida de evaluaciones realizadas
+ por los expertos y comprometer la integridad de los datos almacenados.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1732392336
+Mejora en la Gestión de Jobs para Calificadores
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1732392715
+En la implementación actual, los calificadores no pueden procesar los trabajos
+ ("jobs") creados antes de su ingreso a una sesión de calificación.
+ Esto implica que los trabajos generados antes del inicio de la sesión no
+ se califican.
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1732392715
+Futuras mejoras podrían incluir la capacidad de cargar todos los trabajos
+ previos desde la base de datos hacia la cola JMS del usuario al iniciar
+ sesión, asegurando que ningún trabajo quede sin calificar.
+ Sin embargo, esta funcionalidad deberá considerar aspectos técnicos como
+ el manejo de nuevos trabajos que llegan mientras se cargan los existentes,
+ para evitar desorden en el orden de calificación.
+\change_inserted -1783815582 1732392721
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732392722
+Una limitación en la implementación actual es que los calificadores no pueden
+ procesar los trabajos ("jobs") generados antes de su ingreso a una sesión
+ de calificación.
+ Esto significa que los trabajos existentes antes del inicio de la sesión
+ quedan sin calificar, lo que afecta la completitud del proceso de calificación.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732392722
+Además, no se contempla la carga automática de trabajos previos desde la
+ base de datos hacia la cola JMS del usuario al momento de iniciar sesión,
+ lo que limita la capacidad de los calificadores para abordar tareas pendientes
+ acumuladas antes de su participación activa en la sesión.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1732392384
+Observadores y Algoritmo de Predicción
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1732392780
+Actualmente, la predicción del puntaje de condición corporal (BCS) se realiza
+ en la aplicación móvil por los observadores.
+ En ausencia de observadores, no es posible realizar predicciones.
+ Para solucionar esto, se plantea ejecutar el algoritmo de predicción en
+ los dispositivos de los calificadores o directamente en el servidor.
+ Esto permitirá predecir trabajos que no hayan sido procesados por los observado
+res, asegurando que no queden trabajos sin evaluar.
+\change_inserted -1783815582 1732392782
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732392809
+En la implementación actual, la predicción del puntaje de condición corporal
+ (BCS) está limitada a ser ejecutada exclusivamente en la aplicación móvil
+ por los observadores.
+ Esto implica que, en ausencia de observadores, el sistema no tiene la capacidad
+ de generar predicciones, dejando trabajos sin evaluar y afectando la continuida
+d del flujo de trabajo.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732392834
+La falta de una alternativa para realizar las predicciones, ya sea en los
+ dispositivos de los calificadores o directamente en el servidor, representa
+ una limitación del sistema.
+\end_layout
+
+\begin_layout Section
+
+\change_inserted -1783815582 1732391697
+Trabajos futuros
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1732391698
+Múltiples calificadores
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732391698
+En futuras versiones del servidor, se planea implementar mejoras que permitan
+ a los calificadores compartir una única cola JMS, facilitando la distribución
+ equitativa de las tareas de calificación.
+ Esto incluiría la opción de dividir las caravanas de vacas entre calificadores
+ o mantener la funcionalidad actual, donde todos los calificadores evalúan
+ todas las vacas.
+ Además, esta mejora permitiría que los calificadores puedan abandonar una
+ sesión y unirse a otra según sea necesario, ofreciendo mayor flexibilidad
+ en la gestión de las sesiones.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732391804
+Actualmente, aunque la aplicación móvil no permite que dos calificadores
+ trabajen simultáneamente, el servidor ha sido diseñado para admitir múltiples
+ calificadores en una misma sesión.
+ Cada calificador dispone de su propia cola JMS y tiene la capacidad de
+ calificar todas las vacas, lo que sienta las bases para la implementación
+ de las mejoras mencionadas.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1732391808
+Sistema de envío
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732392212
+Aunque definido como parte del diseño, la implementación de un sistema de
+ envío por lotes quedó fuera del alcance de este proyecto.
+ Este sistema deberá configurarse para notificar al servidor sobre el origen
+ del lote, procesar las imágenes capturadas, asociarlas con la identificación
+ RFID de la vaca, crear el lote ("job") y enviarlo al servidor.
+ Además, permitirá configurar la cantidad de imágenes a tomar por vaca en
+ esta aplicación.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1732592857
+Procesamiento de imágenes
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732593084
+Actualmente, el sistema está diseñado para recibir y almacenar múltiples
+ imágenes asociadas a cada vaca; sin embargo, solo la primera imagen es
+ enviada a los usuarios calificadores y observadores.
+ Una posible mejora futura sería habilitar la capacidad de enviar todas
+ las imágenes relacionadas con cada vaca, permitiendo un análisis más exhaustivo
+ por parte de los calificadores y observadores.
+ Además, esto abriría la posibilidad de optimizar el algoritmo de predicción
+ para procesar múltiples imágenes dentro de un mismo trabajo (*job*), lo
+ que podría mejorar la precisión de los resultados generados.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1732392404
+Integración con IoT
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732392412
+El sistema tiene el potencial de integrarse en un entorno IoT, permitiendo
+ la conexión con dispositivos y elementos del entorno ganadero, como mangas,
+ corrales y comederos.
+ Esto requerirá desarrollar una capa de comunicación que facilite la captura
+ automatizada de datos y acciones de contingencia, estructurando el sistema
+ como un Sistema Integral de Gestión de la Información (SIGI) para apoyar
+ el monitoreo, la planificación y la toma de decisiones.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1732392413
+Mutiples modelos
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732393255
+La aplicación móvil está diseñada con una arquitectura flexible que puede
+ permtir la integración de diferentes modelos de predicción.
+ A través de una configuración sencilla, se posible seleccionar y definir
+ qué modelo utilizar en cada caso específico, adaptándose así a diversas
+ necesidades y escenarios.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1732392424
+Multiples plataformas
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732392435
+Al desarrollar la aplicación móvil en Flutter, la portabilidad a iOS se
+ facilita significativamente debido a la naturaleza multiplataforma del
+ framework.
+ Sin embargo, para lograr esta transición, es necesario analizar y ajustar
+ el modelo predictivo, ya que actualmente está diseñado específicamente
+ para Android.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1783815582 1732392436
+Medir consumo de batería
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732392436
+En futuras implementaciones, se planea incorporar a la aplicación móvil
+ un interruptor (switch) junto con un campo de configuración para establecer
+ un nivel mínimo de batería.
+ Este mecanismo permitirá al dispositivo móvil notificar al servidor si
+ puede ofrecer recursos de procesamiento para el cálculo del BCS.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1732392436
+Al activar este interruptor, se deberá iniciar un servicio en segundo plano
+ encargado de gestionar un protocolo de intercambio de mensajes entre la
+ aplicación y el servidor, asegurando una coordinación eficiente para el
+ uso compartido de recursos.
+ Aunque esta funcionalidad estaba contemplada desde el inicio, no se logró
+ implementar debido a las dificultades encontradas durante el desarrollo
+ de la aplicación móvil y las limitaciones de tiempo.
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1732392411
+\begin_inset Separator plain
+\end_inset
+
+
+\change_inserted -1783815582 1731876859
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1783815582 1731878420
+
 \end_layout
 
 \end_body
