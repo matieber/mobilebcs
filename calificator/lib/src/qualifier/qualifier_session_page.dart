@@ -40,7 +40,6 @@ class QualifierSessionPage extends StatelessWidget{
                         voidFunction: (){
                           Future<User> future=_startQualificationSession(context,serverUrl,user.username);
                           future.then((userResponse) =>user.qualificationSession=userResponse.qualificationSession)
-                          .then((value) => print("Id de la sesión de calificación "+user.qualificationSession.toString()))
                           .then((value) => showAlertDialog(context, "La sesión de calificación ha comenzado correctamente"))
                           .then((value) =>
                               Navigator.of(context).pushReplacement(

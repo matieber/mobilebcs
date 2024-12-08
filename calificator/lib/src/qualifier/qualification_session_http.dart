@@ -19,7 +19,6 @@ class QualificationSessionHttp  {
     final response = await http.post(uri);
     if (response.statusCode == 200) {
       final responseBody=json.decode(response.body);
-      print(responseBody);
       return User.fromJson(responseBody);
     }else{
       if (response.statusCode == 404) {

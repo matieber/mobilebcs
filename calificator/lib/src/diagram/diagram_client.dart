@@ -24,7 +24,6 @@ class DiagramClientHttp  {
         return DiagramResponse.fromJson(responseBody);
       }else{
         if(response.statusCode == 204){
-          print("no hay diagramas");
           return null;
         }
       }
@@ -40,11 +39,9 @@ class DiagramClientHttp  {
       final response = await http.get(uri);
       if (response.statusCode == 200) {
         final responseBody=json.decode(response.body);
-        print(responseBody);
         return PredictionResponse.fromJson(responseBody);
       }else{
         if(response.statusCode == 204){
-          print("no hay diagramas");
           return null;
         }
       }

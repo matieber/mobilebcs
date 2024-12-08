@@ -1,5 +1,4 @@
 
-import 'dart:developer';
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:calificator/src/diagram/diagram_tab.dart';
@@ -14,9 +13,12 @@ import '../diagram/line_chart.dart';
 import '../image/image.dart';
 import 'viewer_stomp_client.dart';
 import 'package:flutter/services.dart';
+import 'dart:developer';
+
 
 class ViewerPage extends StatefulWidget {
 
+  final String img_path = "/sdcard/Download/my.png";
 
   final DiagramClientHttp _diagramClientHttp;
   User? _user;
@@ -42,29 +44,57 @@ class ViewerPageState extends State<ViewerPage> {
 
 
 
+  Future<int> getImg(
+      int retryNmb,
+      int requestStartMillis,
+      String imgPath,
+      List<int> content,
+      ) async {
+    if (retryNmb > 3) {
+      throw Exception("Max retries reached while trying to save the image.");
+    }
+
+    try {
+      final file = File(imgPath);
+      await file.writeAsBytes(content);
+    } catch (e) {
+      // Registrar el error y reintentar
+      print("Retrying image save, attempt #${retryNmb + 1}: $e");
+      return await getImg(retryNmb + 1, requestStartMillis, imgPath, content);
+    }
+
+    // Devolver la diferencia de tiempo en milisegundos
+    return DateTime.now().millisecondsSinceEpoch - requestStartMillis;
+  }
+
 
   Future<String> _getScore(Uint8List body,int position,String setCode,ViewerStompClient viewerStompClient) async {
+    final userTag = UserTag('GetScore');
+    userTag.makeCurrent();
     String score;
     try {
       int index=position;
 
       DateTime processingStart=DateTime.now();
-      print("index $index calculate scored was called");
       final arguments = {
-        'body': body,
         "position": position,
       };
+      int endGettingImage=await getImg(0, DateTime.now().millisecondsSinceEpoch,widget.img_path,body);
+
       final double result = await platform.invokeMethod('calculateScore',arguments);
       DateTime processingEnd=DateTime.now();
       score = 'El puntaje es calculado $result.';
-      print("index $index  scored got was ${result.toString()}");
       int processingTime=processingEnd.difference(processingStart).inMilliseconds;
-      print("completed-processing-score: index $index in $processingTime"+"ms");
       viewerStompClient.publish(result, position,setCode);
       widget.caravanDiagramKey.currentState?.addNewSetCode(setCode, result);
+      print("saving-image-pre-processing-score: index $index in ${endGettingImage.toString()}\n"
+          "calling-plugin-processing-score: index $index calculate scored was called\n"
+          "index $index scored got was ${result.toString()}\n"
+          "completed-processing-score: index $index in $processingTime ms");
     } on PlatformException catch (e) {
       score = "Error al calcular el puntaje: '${e.message}'.";
     }
+    UserTag.defaultTag.makeCurrent();
     return score;
 
   }

@@ -77,7 +77,6 @@ class _RegisterUserState extends State<RegisterUser> {
       } else {
         Future future = registerUserHttp.register(userName,userType);
         future
-            .whenComplete(() => print('Usuario registrado: ' + userName))
             .then((value) => Navigator.of(context).pop())
             .then((value) => Navigator.of(context).push(LoginUser(serverUrl)));
       }

@@ -67,7 +67,7 @@ public class CowBodyConditionScore extends Benchmark {
 
 
     @Override
-    public float runBenchmark(byte[] content,int position) {
+    public float runBenchmark(int position) {
         long jobInitTime = System.currentTimeMillis();
         Log.d(TAG, String.format("Initiating Job at SystemCurrentMillis: %s", jobInitTime));
         try {
@@ -97,7 +97,7 @@ public class CowBodyConditionScore extends Benchmark {
             try {
 
                 long startPreprocessingTime = System.currentTimeMillis();
-                getImg(0,System.currentTimeMillis(),img_path,content);
+                //getImg(0,System.currentTimeMillis(),img_path,content);
                 preprocessImg(img_path);
                 Npy npy = new Npy(preprocessed_img_path);
                 float[] npyData = npy.floatElements();
@@ -137,7 +137,7 @@ public class CowBodyConditionScore extends Benchmark {
             }
 
 
-        Log.d(TAG, "preprocessing-time-processing-score: index "+position+" in "+proprosesionTime);
+        Log.d(TAG, "python-preprocessing-time-processing-score: index "+position+" in "+proprosesionTime);
         Log.d(TAG, "detection-time-processing-score: index "+position+" in "+detectionTime);
         long jobTime=System.currentTimeMillis() - jobInitTime;
         Log.d(TAG, "job-processing-score: index "+position+" in "+jobTime);

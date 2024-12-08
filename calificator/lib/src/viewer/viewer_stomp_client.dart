@@ -69,7 +69,6 @@ class ViewerStompClient {
 
   void onConnect(StompFrame frame) {
     if(!activated && stompClient!=null) {
-      print("subscribing");
       activated = true;
       caravanSubscription();
       refreshScoreSubscription();
@@ -78,7 +77,6 @@ class ViewerStompClient {
 
   void refreshScoreSubscription() {
     if (refreshReceivedScore != null) {
-      print("subscribing /topic/notifications/score/$defaultLocation/$username");
       scoreNotificationUnsubscription = stompClient?.subscribe(
         destination: '/topic/notifications/score/$defaultLocation/$username',
         callback: (frame) {
@@ -87,16 +85,13 @@ class ViewerStompClient {
               .fromJson(
               responseBody);
           refreshReceivedScore!(message);
-          print(message);
         },
       );
-      print("subscribed");
     }
   }
 
   void caravanSubscription() {
      if (refreshCaravan != null) {
-      print("subscribing /topic/notifications/$defaultLocation/$username");
       notificationUnsubscription = stompClient?.subscribe(
         destination: '/topic/notifications/$defaultLocation/$username',
         callback: (frame) {
@@ -105,13 +100,9 @@ class ViewerStompClient {
           ViewerCaravanMessage message = ViewerCaravanMessage.fromJson(
               responseBody);
           if (responseBody != null) {
-            print(message);
-
             DateTime startTime=message.startTimeUTC;
             int index=message.position;
             var endTineUTC = DateTime.now().toUtc();
-            print("index $index notification has sent at $startTime to /topic/notifications/$defaultLocation/$username");
-            print("index $index notification arrive at $endTineUTC to /topic/notifications/$defaultLocation/$username");
             print("network-time: index $index in "+endTineUTC.difference(startTime).inMilliseconds.toString()+"ms");
             refreshCaravan!(message, this);
           }
@@ -123,8 +114,6 @@ class ViewerStompClient {
 
 
   void publish(double score,int position,String setCode){
-
-    print("sending to publish");
     stompClient?.send(destination: "/app/score",body: '''{
     "location": "$defaultLocation",
     "position": $position,
@@ -136,7 +125,6 @@ class ViewerStompClient {
 
   void deactivate(){
     if(stompClient!=null){
-      print("deactivating");
       removeSubscription();
       stompClient?.deactivate();
       activated=false;

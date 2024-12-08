@@ -49,11 +49,11 @@ public class MainActivity extends FlutterActivity {
         methodChannel
                 .setMethodCallHandler(
                 (call,result)->{
+                    Log.d(TAG, "in-plugin-processing-score");
                     if(call.method.equals("calculateScore")){
                         Map<String,Object> arguments=call.arguments();
-                        byte[] content = (byte[]) arguments.get("body");
                         int position = (int) arguments.get("position");
-                        float score=calculateScore(content, position);
+                        float score=calculateScore( position);
                         result.success(score);
                     }else {
                         result.notImplemented();
@@ -63,8 +63,8 @@ public class MainActivity extends FlutterActivity {
                 );
     }
 
-    private float calculateScore(byte[] body,int position) {
-        return cowBodyConditionScore.runBenchmark(body,position);
+    private float calculateScore(int position) {
+        return cowBodyConditionScore.runBenchmark(position);
     }
 
     private void initiateBenchmarksExecutionSet() {
