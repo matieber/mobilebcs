@@ -4,14 +4,19 @@ import com.mobilebcs.domain.jobnotification.JobNotificationOutput;
 import com.mobilebcs.domain.qualifier.NextCaravanMessage;
 import com.mobilebcs.domain.session.QueueProviderService;
 import com.mobilebcs.domain.user.UserQueue;
+import com.mobilebcs.domain.user.UserRepository;
 import com.mobilebcs.domain.viewer.ViewerPerLocation;
 import com.mobilebcs.domain.viewer.ViewerService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
 
 import javax.jms.JMSException;
 import javax.jms.Message;
+import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Component
@@ -20,6 +25,7 @@ public class ImagesListener {
     private final JmsTemplate jmsTemplate;
 
     private final QueueProviderService queueProviderService;
+    private static final Logger LOG = LoggerFactory.getLogger(ImagesListener.class);
 
 
     private final ViewerService viewerService;
@@ -51,6 +57,10 @@ public class ImagesListener {
     private void sendToViewer(String locationCode, JobNotificationOutput jobNotificationOutput) throws InterruptedException {
         ViewerPerLocation viewerByLocation = viewerService.getViewerByLocation(locationCode);
         if(viewerByLocation!=null) {
+
+
+            jobNotificationOutput.setStartTime(Instant.now());
+            LOG.info("Envio al observador: ",jobNotificationOutput.getStartTime().toString());
             viewerByLocation.send(jobNotificationOutput);
         }
     }

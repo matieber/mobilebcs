@@ -1,5 +1,7 @@
 package com.mobilebcs.domain.jobnotification;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -13,6 +15,7 @@ public class JobNotificationOutput {
     private String predictor;
 
     private String identification;
+    private Instant startTime;
 
 
     private JobNotificationOutput() {
@@ -59,6 +62,14 @@ public class JobNotificationOutput {
 
     public void setIdentification(String identification) {
         this.identification = identification;
+    }
+
+    public void setStartTime(Instant startTime) {
+        this.startTime = startTime;
+    }
+
+    public Instant getStartTime() {
+        return startTime;
     }
 
     @Override

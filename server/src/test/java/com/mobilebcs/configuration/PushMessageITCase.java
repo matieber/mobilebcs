@@ -63,15 +63,16 @@ public class PushMessageITCase {
 
     @Test
     public void testSendImagesToQueue() throws InterruptedException, IOException {
-        restCaller=new RestCaller(8080,"192.168.0.215");
-        int initial;for(int j=0;j<116;j++) {
+        restCaller=new RestCaller(8080,"localhost");
+        //int initial;for(int j=0;j<116;j++) {
+        int initial;for(int j=3;j<4;j++) {
             initial=15*j;
-            for (int i = 1; i <= 15; i++) {
+            for (int i = 6; i <= 6; i++) {
                 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
 
                 System.out.println(LocalDateTime.now().format(dtf) + " Sending image " + (initial+i) + " to queue " + map.get(i));
                 restCaller.sendRealImage(i, locationCode, map.get(i),initial+i);
-                Thread.sleep(600);
+                Thread.sleep(3000);
             }
         }
     }

@@ -46,11 +46,20 @@ class ViewerPageState extends State<ViewerPage> {
   Future<String> _getScore(Uint8List body,int position,String setCode,ViewerStompClient viewerStompClient) async {
     String score;
     try {
-      log("Calculando puntaje");
-      final double result = await platform.invokeMethod('calculateScore',body);
-      score = 'El puntaje es calculado $result.';
+      int index=position;
 
-      log("El puntaje obtenido es ${result.toString()}");
+      DateTime processingStart=DateTime.now();
+      print("index $index calculate scored was called");
+      final arguments = {
+        'body': body,
+        "position": position,
+      };
+      final double result = await platform.invokeMethod('calculateScore',arguments);
+      DateTime processingEnd=DateTime.now();
+      score = 'El puntaje es calculado $result.';
+      print("index $index  scored got was ${result.toString()}");
+      int processingTime=processingEnd.difference(processingStart).inMilliseconds;
+      print("completed-processing-score: index $index in $processingTime"+"ms");
       viewerStompClient.publish(result, position,setCode);
       widget.caravanDiagramKey.currentState?.addNewSetCode(setCode, result);
     } on PlatformException catch (e) {

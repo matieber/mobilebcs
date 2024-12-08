@@ -100,18 +100,27 @@ class ViewerStompClient {
       notificationUnsubscription = stompClient?.subscribe(
         destination: '/topic/notifications/$defaultLocation/$username',
         callback: (frame) {
-          print("notification arrive to /topic/notifications/$defaultLocation/$username");
+
           var responseBody = json.decode(frame.body!);
           ViewerCaravanMessage message = ViewerCaravanMessage.fromJson(
               responseBody);
           if (responseBody != null) {
-            refreshCaravan!(message, this);
             print(message);
+
+            DateTime startTime=message.startTimeUTC;
+            int index=message.position;
+            var endTineUTC = DateTime.now().toUtc();
+            print("index $index notification has sent at $startTime to /topic/notifications/$defaultLocation/$username");
+            print("index $index notification arrive at $endTineUTC to /topic/notifications/$defaultLocation/$username");
+            print("network-time: index $index in "+endTineUTC.difference(startTime).inMilliseconds.toString()+"ms");
+            refreshCaravan!(message, this);
           }
         },
       );
     }
   }
+
+
 
   void publish(double score,int position,String setCode){
 

@@ -67,7 +67,7 @@ public class CowBodyConditionScore extends Benchmark {
 
 
     @Override
-    public float runBenchmark(byte[] content) {
+    public float runBenchmark(byte[] content,int position) {
         long jobInitTime = System.currentTimeMillis();
         Log.d(TAG, String.format("Initiating Job at SystemCurrentMillis: %s", jobInitTime));
         try {
@@ -89,11 +89,10 @@ public class CowBodyConditionScore extends Benchmark {
             boolean success = false;
             Bitmap bm;
             long kb_input = 0;
-            long endDetectionTime = -1;
-            long endPreprocessingTime = -1;
+            long detectionTime = -1;
+            long proprosesionTime = -1;
             TensorBuffer tensorBuffer = null;
             List<Classifier.Recognition> recognitionList = new ArrayList<>();
-            StringBuilder recog = new StringBuilder();
 
             try {
 
@@ -105,7 +104,7 @@ public class CowBodyConditionScore extends Benchmark {
                 int[] inputShape = new int[]{1, 424, 512, 2};   //the data shape before I flattened it
                 tensorBuffer = TensorBuffer.createFixedSize(inputShape, DataType.FLOAT32);
                 tensorBuffer.loadArray(npyData);
-                endPreprocessingTime = System.currentTimeMillis() - startPreprocessingTime;
+                proprosesionTime = System.currentTimeMillis() - startPreprocessingTime;
                 success = true;
             } catch (IOException e) {
                 e.printStackTrace();
@@ -121,8 +120,7 @@ public class CowBodyConditionScore extends Benchmark {
                 recognitionList = detector.recognize(tensorBuffer);
 
 
-            endDetectionTime = System.currentTimeMillis() - startDetectionTime;
-            recog.append("'");
+            detectionTime = System.currentTimeMillis() - startDetectionTime;
 
             /**
              *
@@ -133,27 +131,17 @@ public class CowBodyConditionScore extends Benchmark {
              *
              * */
             float value=-1;
-            for (int i = 0; i < recognitionList.size(); i++) {
-            Classifier.Recognition r = recognitionList.get(i);
-
-            if(i==0){
+            if(recognitionList.size()>0){
+                Classifier.Recognition r = recognitionList.get(0);
                 value= Float.parseFloat(r.getTitle());
             }
 
-            recog.append(r.toString());
-            recog.append(";");
-        }
 
-            recog.append("'");
-            recog.trimToSize();
+        Log.d(TAG, "preprocessing-time-processing-score: index "+position+" in "+proprosesionTime);
+        Log.d(TAG, "detection-time-processing-score: index "+position+" in "+detectionTime);
+        long jobTime=System.currentTimeMillis() - jobInitTime;
+        Log.d(TAG, "job-processing-score: index "+position+" in "+jobTime);
 
-            String msg =  success + "," + jobInitTime + "," + endDetectionTime + ","/* + endNetworkTime */+ "," + endPreprocessingTime;
-             msg += "," + kb_input /*+ "," + rssi_value + "," + batteryLevelInfo + ","*/ + recog;
-            Log.i(TAG,"recog: "+msg);
-
-        Log.i(TAG, "runBenchmark: imagePreffix: "/* + imagePrefix + " beginIndex = " + beginFrameIndex + " endIndex = " + endFrameIndex*/);
-
-        Log.d(TAG, "runBenchmark: END");
         this.progressUpdater = null;
         return value;
     }
