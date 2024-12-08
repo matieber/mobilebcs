@@ -15,24 +15,29 @@ echo "Job Index,Network duration (ms),Detection time (ms)" > "$output_csv"  # Es
 
 # Procesa cada línea del archivo de logs
 while IFS= read -r line; do
-    # Extraer network-time
+       if [[ "$line" =~ network-time:\ index\ ([0-9]+)\ in\ ([0-9]+)ms ]]; then
+        job_index="${BASH_REMATCH[1]}"
+        network_time="${BASH_REMATCH[2]}"
+        
+        # Almacena o actualiza el valor en el mapa
+        job_data["$job_index,network"]="$network_time"
 
-    if [[ "$line" =~ network-time:\ index\ ([0-9]+)\ in\ ([0-9]+)ms ]]; then
-        # Extrae la hora de fin (parte de la línea)
-          network_ms="${BASH_REMATCH[2]}"
-          job_index=$((BASH_REMATCH[1]))
-          # Escribe el índice del job, tiempo de inicio y fin al archivo CSV
-          echo "$job_index,$network_ms", >> "$output_csv"
+    elif [[ "$line" =~ detection-time-processing-score:\ index\ ([0-9]+)\ in\ ([0-9]+) ]]; then
+        job_index="${BASH_REMATCH[1]}"
+        detection_time="${BASH_REMATCH[2]}"
+
+        # Almacena o actualiza el valor en el mapa
+        job_data["$job_index,detection"]="$detection_time"
     fi
 
-    # Extraer  detection time
-
-    if [[ "$line" =~ detection-time-processing-score:\ index\ ([0-9]+)\ in\ ([0-9]+) ]]; then
-        # Extrae la hora de fin (parte de la línea)
-          detection_time="${BASH_REMATCH[2]}"
-          job_index=$((BASH_REMATCH[1]))
-          # Escribe el índice del job, tiempo de inicio y fin al archivo CSV
-          echo "$job_index,,$detection_time" >> "$output_csv"
+    # Verifica si ambos valores están presentes
+    if [[ -n "${job_data["$job_index,network"]}" && -n "${job_data["$job_index,detection"]}" ]]; then
+        # Escribe la línea en el CSV
+        echo "$job_index,${job_data["$job_index,network"]},${job_data["$job_index,detection"]}" >> "$output_csv"
+        
+        # Limpia los datos de este índice
+        unset job_data["$job_index,network"]
+        unset job_data["$job_index,detection"]
     fi
 
 done < "$log_file"
