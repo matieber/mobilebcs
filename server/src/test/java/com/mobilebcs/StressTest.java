@@ -1,10 +1,15 @@
 package com.mobilebcs;
 
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 public class StressTest {
+
+
     private static final String LOCATION_CODE = "DEFAULT";
     private static final Map<Integer, String> MAP = new HashMap<>();
     private static RestCaller restCaller;
@@ -27,18 +32,17 @@ public class StressTest {
         MAP.put(15, "7PSFVM");
     }
 
-    public static void main(String[] args) {
-        try {
-            restCaller = new RestCaller(8080, "localhost");
-            sendImagesToQueue();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @BeforeAll
+    public static void setup() {
+        String ip = System.getProperty("remoteIp", "localhost");
+        restCaller = new RestCaller(8080, ip);
     }
 
-    private static void sendImagesToQueue() throws InterruptedException {
+
+    @Test
+    public void sendImagesToQueue() throws InterruptedException {
         int initial;
-        for (int j = 2; j <= 2; j++) { // Adjust the range of `j` as needed
+        for (int j = 1; j <= 1; j++) { // Adjust the range of `j` as needed
             initial = 15 * j;
             for (int i = 1; i <= 15; i++) {
                 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
