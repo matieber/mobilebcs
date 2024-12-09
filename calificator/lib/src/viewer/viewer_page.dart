@@ -80,14 +80,15 @@ class ViewerPageState extends State<ViewerPage> {
         "position": position,
       };
       int endGettingImage=await getImg(0, DateTime.now().millisecondsSinceEpoch,widget.img_path,body);
-
+      DateTime beforePlugin=DateTime.now();
       final double result = await platform.invokeMethod('calculateScore',arguments);
       DateTime processingEnd=DateTime.now();
       score = 'El puntaje es calculado $result.';
       int processingTime=processingEnd.difference(processingStart).inMilliseconds;
       viewerStompClient.publish(result, position,setCode);
       widget.caravanDiagramKey.currentState?.addNewSetCode(setCode, result);
-      print("saving-image-pre-processing-score: index $index in ${endGettingImage.toString()}\n"
+      print("before-plugin-processing-score: index $index in ${beforePlugin.toString()}\n"
+          "saving-image-pre-processing-score: index $index in ${endGettingImage.toString()}\n"
           "calling-plugin-processing-score: index $index calculate scored was called\n"
           "index $index scored got was ${result.toString()}\n"
           "completed-processing-score: index $index in $processingTime ms");

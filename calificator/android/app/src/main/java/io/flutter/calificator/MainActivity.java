@@ -49,10 +49,11 @@ public class MainActivity extends FlutterActivity {
         methodChannel
                 .setMethodCallHandler(
                 (call,result)->{
-                    Log.d(TAG, "in-plugin-processing-score");
+
                     if(call.method.equals("calculateScore")){
                         Map<String,Object> arguments=call.arguments();
                         int position = (int) arguments.get("position");
+                        Log.d(TAG, "in-plugin-processing-score in index: "+position);
                         float score=calculateScore( position);
                         result.success(score);
                     }else {

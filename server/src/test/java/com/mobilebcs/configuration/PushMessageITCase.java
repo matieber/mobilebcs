@@ -65,7 +65,7 @@ public class PushMessageITCase {
     public void testSendImagesToQueue() throws InterruptedException, IOException {
         restCaller=new RestCaller(8080,"localhost");
         //int initial;for(int j=0;j<116;j++) {
-        int initial;for(int j=2;j<=2;j++) {
+        int initial;for(int j=1;j<=1;j++) {
             initial=15*j;
             for (int i = 1; i <= 15; i++) {
                 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");

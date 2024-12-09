@@ -103,7 +103,7 @@ class ViewerStompClient {
             DateTime startTime=message.startTimeUTC;
             int index=message.position;
             var endTineUTC = DateTime.now().toUtc();
-            print("network-time: index $index in "+endTineUTC.difference(startTime).inMilliseconds.toString()+"ms");
+            print("network-time: index $index in "+endTineUTC.difference(startTime).inMilliseconds.toString());
             refreshCaravan!(message, this);
           }
         },
