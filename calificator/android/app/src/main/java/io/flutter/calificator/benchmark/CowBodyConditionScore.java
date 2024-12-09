@@ -131,7 +131,7 @@ public class CowBodyConditionScore extends Benchmark {
              *
              * */
             float value=-1;
-            if(recognitionList.size()>0){
+            if(!recognitionList.isEmpty()){
                 Classifier.Recognition r = recognitionList.get(0);
                 value= Float.parseFloat(r.getTitle());
             }

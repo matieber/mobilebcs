@@ -53,7 +53,7 @@ public class MainActivity extends FlutterActivity {
                     if(call.method.equals("calculateScore")){
                         Map<String,Object> arguments=call.arguments();
                         int position = (int) arguments.get("position");
-                        Log.d(TAG, "in-plugin-processing-score in index: "+position);
+                        Log.d(TAG, "in-plugin-processing-score: index "+position+" at "+System.currentTimeMillis());
                         float score=calculateScore( position);
                         result.success(score);
                     }else {
