@@ -57,10 +57,6 @@ public class ImagesListener {
     private void sendToViewer(String locationCode, JobNotificationOutput jobNotificationOutput) throws InterruptedException {
         ViewerPerLocation viewerByLocation = viewerService.getViewerByLocation(locationCode);
         if(viewerByLocation!=null) {
-
-
-            jobNotificationOutput.setStartTime(Instant.now());
-            LOG.info("Envio al observador: ",jobNotificationOutput.getStartTime().toString());
             viewerByLocation.send(jobNotificationOutput);
         }
     }

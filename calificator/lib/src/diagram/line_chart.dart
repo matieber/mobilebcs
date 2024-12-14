@@ -91,19 +91,22 @@ class CaravanLineChartState extends State<CaravanLineChart> {
             addQualification(viewerPageMainState);
           }
         }
-
   }
 
   void addQualification(ViewerPageMainState viewerPageMainState) {
-
-        if(mounted){
-          setState(() {
-            viewerPageMainState.qualifications.add("Actual");
-          });
-        }else{
-          viewerPageMainState.qualifications.add("Actual");
-        }
-
+    if (mounted) {
+      setState(() {
+        viewerPageMainState.qualifications = [
+          ...viewerPageMainState.qualifications,
+          "Actual",
+        ];
+      });
+    } else {
+      viewerPageMainState.qualifications = [
+        ...viewerPageMainState.qualifications,
+        "Actual",
+      ];
+    }
   }
 
   void addCaravan(ViewerPageMainState viewerPageMainState, double newScore, String newSetCode) {
@@ -283,5 +286,6 @@ class CaravanLineChartState extends State<CaravanLineChart> {
   FlSpot caravanScoreValue(double x,double y) {
     return FlSpot(x, y);
   }
+
 
 }

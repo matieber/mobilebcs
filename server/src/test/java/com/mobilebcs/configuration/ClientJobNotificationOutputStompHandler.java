@@ -66,7 +66,7 @@ public class ClientJobNotificationOutputStompHandler implements StompSessionHand
                 score=round(score,3);
 
                 scores.put(jobNotificationOutput.getSetCode(),score);
-                ScoreJobNotification scoreJobNotification = new ScoreJobNotification(jobNotificationOutput.getSetCode(), jobNotificationOutput.getPosition(), location, score, viewerName);
+                ScoreJobNotification scoreJobNotification = new ScoreJobNotification(jobNotificationOutput.getIdentification(), jobNotificationOutput.getSetCode(), jobNotificationOutput.getPosition(), location, score, viewerName);
 
                 stompSession.send("/app/score", scoreJobNotification);
 

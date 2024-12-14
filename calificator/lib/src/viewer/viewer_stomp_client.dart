@@ -100,10 +100,6 @@ class ViewerStompClient {
           ViewerCaravanMessage message = ViewerCaravanMessage.fromJson(
               responseBody);
           if (responseBody != null) {
-            DateTime startTime=message.startTimeUTC;
-            int index=message.position;
-            var endTineUTC = DateTime.now().toUtc();
-            print("network-time: index $index in "+endTineUTC.difference(startTime).inMilliseconds.toString());
             refreshCaravan!(message, this);
           }
         },
@@ -113,13 +109,14 @@ class ViewerStompClient {
 
 
 
-  void publish(double score,int position,String setCode){
+  void publish(double score,int position,String setCode, String identification){
     stompClient?.send(destination: "/app/score",body: '''{
     "location": "$defaultLocation",
     "position": $position,
     "score": $score,
     "predictor": "$username",
-    "setCode": "$setCode"
+    "setCode": "$setCode",
+    "identification": "$identification"
     }''');
   }
 

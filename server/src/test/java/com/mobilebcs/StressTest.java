@@ -42,9 +42,9 @@ public class StressTest {
     @Test
     public void sendImagesToQueue() throws InterruptedException {
         int initial;
-        for (int j = 1; j <= 1; j++) { // Adjust the range of `j` as needed
-            initial = 15 * j;
-            for (int i = 1; i <= 15; i++) {
+        for (int j = 0; j < 146; j++) {
+            initial = 12 * j;
+            for (int i = 1; i <= 12; i++) {
                 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
                 System.out.println(LocalDateTime.now().format(dtf) +
                         " Sending image " + (initial + i) + " to queue " + MAP.get(i));

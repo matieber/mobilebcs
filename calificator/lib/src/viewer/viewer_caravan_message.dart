@@ -8,16 +8,14 @@ class ViewerCaravanMessage{
     final String predictor;
     final String setCode;
     final String identification;
-    final DateTime startTimeUTC;
 
-  ViewerCaravanMessage(this.startTimeUTC,this.position,this.identification,this.byteImages,this.predictor,this.setCode);
+  ViewerCaravanMessage(this.position,this.identification,this.byteImages,this.predictor,this.setCode);
 
   ViewerCaravanMessage.fromJson(Map<String,dynamic> json):
           position = json['position'],
           predictor = json['predictor'],
           identification=json['identification'],
           setCode = json['setCode'],
-          startTimeUTC= DateTime.parse(json['startTime']).toUtc(),
           byteImages=convert(json);
 
     @override
