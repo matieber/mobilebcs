@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# es necesario para limpiar log viejos adb logcat -c
+export LC_NUMERIC="en_US.UTF-8"
 
-# Es necesario ejecutar el siguiente comando para copar los log anteriores al archivo log: stdbuf -oL adb logcat | grep -E "processing-score|network-time" > log.txt
-# tail -f log.txt para ir viendo los logs que se copiaron
-# Archivo de entrada y salida
+
 log_file="log.txt"
 output_csv="jobs.csv"
 
@@ -96,9 +94,9 @@ for field in "${fields[@]}"; do
     sum_squared="${sums_squared["$field"]}"
 
     if (( count > 0 )); then
-        avg=$((sum / count))
-        variance=$(( (sum_squared - (sum * sum) / count) / count ))
-        stddev=$(awk "BEGIN { print sqrt($variance) }")
+        avg=$(awk "BEGIN { printf \"%.2f\", $sum / $count }")
+        variance=$(awk "BEGIN { printf \"%.2f\", ($sum_squared - ($sum * $sum) / $count) / $count }")
+        stddev=$(awk "BEGIN { printf \"%.2f\", sqrt($variance) }")
     else
         avg=0
         stddev=0
@@ -108,8 +106,10 @@ for field in "${fields[@]}"; do
     stddevs+=("$stddev")
 done
 
-# Escribe los promedios y desviaciones estándar al final del archivo CSV
-echo "Averages,${averages[*]}" >> "$output_csv"
-echo "Standard Deviations,${stddevs[*]}" >> "$output_csv"
+# Escribe los promedios al final del archivo CSV
+echo "Averages,${averages[*]}" | sed 's/ /,/g' >> "$output_csv"
+
+# Escribe las desviaciones estándar al final del archivo CSV
+echo "Standard Deviations,$(echo ${stddevs[*]} | sed 's/ /,/g')" >> "$output_csv"
 
 echo "Resultados guardados en $output_csv"
