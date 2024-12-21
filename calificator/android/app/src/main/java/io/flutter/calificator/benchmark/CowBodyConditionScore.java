@@ -63,17 +63,10 @@ public class CowBodyConditionScore extends Benchmark {
         Python py = Python.getInstance();
         Log.d(TAG, "Getting preprocess_image python module");
         this.module = py.getModule("preprocess_image");
-    }
-
-
-    @Override
-    public float runBenchmark(int position) {
-        long jobInitTime = System.currentTimeMillis();
-        Log.d(TAG, String.format("Initiating Job at SystemCurrentMillis: %s", jobInitTime));
         try {
 
             this.detector = BcsDetectionAPIModel.create(
-                   context.getAssets(),
+                    context.getAssets(),
                     "bcs_classifier_preProcDE-channels.tflite",
                     "bcslabel.txt",
                     false
@@ -83,6 +76,14 @@ public class CowBodyConditionScore extends Benchmark {
         } catch (IOException ex) {
             throw new RuntimeException(ex);
         }
+    }
+
+
+    @Override
+    public float runBenchmark(int position) {
+        long jobInitTime = System.currentTimeMillis();
+        Log.d(TAG, String.format("Initiating Job at SystemCurrentMillis: %s", jobInitTime));
+
 
         Log.d(TAG, "Begin iteration over job images");
 

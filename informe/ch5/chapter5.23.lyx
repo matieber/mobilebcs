@@ -1,10 +1,13 @@
-#LyX 2.4 created this file. For more info see https://www.lyx.org/
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
 \textclass book
+\begin_preamble
+\usepackage{a4wide}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language spanish-mexico
@@ -84,12 +87,13 @@ Resultados
 \end_layout
 
 \begin_layout Standard
-En este capítulo,
- se presentan las capturas de pantalla y el análisis de las principales interfaces de usuario de cada caso de uso,
- proporcionando una evaluación del funcionamiento y la usabilidad de cada módulo en la aplicación.
- Adicionalmente,
- se proporciona información sobre el rendimiento del sistema,
- incluyendo métricas específicas relacionadas con el consumo de memoria y su impacto en la eficiencia operativa.
+En este capítulo, se presentan las capturas de pantalla y el análisis de
+ las principales interfaces de usuario de cada caso de uso, proporcionando
+ una evaluación del funcionamiento y la usabilidad de cada módulo en la
+ aplicación.
+ Adicionalmente, se proporciona información sobre el rendimiento del sistema,
+ incluyendo métricas específicas relacionadas con el consumo de memoria
+ y su impacto en la eficiencia operativa.
 \end_layout
 
 \begin_layout Section
@@ -97,12 +101,12 @@ Pantalla de Inicio de Sesión (Login)
 \end_layout
 
 \begin_layout Standard
-El módulo de inicio de sesión permite a los usuarios acceder al sistema con distintos roles,
- con diferentes permisos y funciones dentro de la aplicación.
- La pantalla principal de acceso ofrece dos opciones:
- "Iniciar sesión" y "Registrar usuario",
- de modo que el usuario puede elegir entre ingresar al sistema o registrarse como nuevo usuario,
- según sea necesario.
+El módulo de inicio de sesión permite a los usuarios acceder al sistema
+ con distintos roles, con diferentes permisos y funciones dentro de la aplicació
+n.
+ La pantalla principal de acceso ofrece dos opciones: "Iniciar sesión" y
+ "Registrar usuario", de modo que el usuario puede elegir entre ingresar
+ al sistema o registrarse como nuevo usuario, según sea necesario.
 \begin_inset Float figure
 wide false
 sideways false
@@ -221,8 +225,7 @@ name "fig:Pantalla-de-nuevo-usuario"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil:
- caso de uso de login
+App móvil: caso de uso de login
 \end_layout
 
 \end_inset
@@ -250,9 +253,8 @@ noprefix "false"
 
 \end_inset
 
-,
- si el usuario selecciona "Iniciar sesión",
- es dirigido a una pantalla donde puede introducir su nombre de usuario (Figura
+, si el usuario selecciona "Iniciar sesión", es dirigido a una pantalla
+ donde puede introducir su nombre de usuario (Figura
 \begin_inset space ~
 \end_inset
 
@@ -267,15 +269,14 @@ noprefix "false"
 \end_inset
 
 ).
- En caso de un ingreso correcto,
- el sistema autentica el perfil y redirige al usuario a su módulo correspondiente,
- ya sea como calificador o como observador.
+ En caso de un ingreso correcto, el sistema autentica el perfil y redirige
+ al usuario a su módulo correspondiente, ya sea como calificador o como
+ observador.
 \end_layout
 
 \begin_layout Standard
-En cambio,
- si el usuario selecciona "Registrar usuario",
- el sistema muestra la pantalla que está en la Figura
+En cambio, si el usuario selecciona "Registrar usuario", el sistema muestra
+ la pantalla que está en la Figura
 \begin_inset space ~
 \end_inset
 
@@ -289,16 +290,20 @@ noprefix "false"
 
 \end_inset
 
- donde el usuario puede introducir su nombre y seleccionar su rol (calificador u observador).
- Esta pantalla permite que los nuevos usuarios definan adecuadamente su perfil dentro de la aplicación.
- Una vez completado el registro,
- el sistema redirige automáticamente al usuario a la pantalla de inicio de sesión para facilitar el acceso.
+ donde el usuario puede introducir su nombre y seleccionar su rol (calificador
+ u observador).
+ Esta pantalla permite que los nuevos usuarios definan adecuadamente su
+ perfil dentro de la aplicación.
+ Una vez completado el registro, el sistema redirige automáticamente al
+ usuario a la pantalla de inicio de sesión para facilitar el acceso.
 \end_layout
 
 \begin_layout Standard
-La interfaz de inicio de sesión presenta mensajes de error en caso de datos incorrectos o problemas de conexión con el servidor.
+La interfaz de inicio de sesión presenta mensajes de error en caso de datos
+ incorrectos o problemas de conexión con el servidor.
  El sistema está configurado para gestionar el acceso según el rol del usuario,
- asegurando que cada perfil (calificador u observador) acceda exclusivamente a las funciones asignadas.
+ asegurando que cada perfil (calificador u observador) acceda exclusivamente
+ a las funciones asignadas.
 \end_layout
 
 \begin_layout Section
@@ -306,7 +311,8 @@ Calificador
 \end_layout
 
 \begin_layout Standard
-El módulo de calificación permite al usuario con rol de calificador gestionar sus sesiones de calificación de manera eficiente como muestra
+El módulo de calificación permite al usuario con rol de calificador gestionar
+ sus sesiones de calificación de manera eficiente como muestra
 \begin_inset space ~
 \end_inset
 
@@ -321,9 +327,9 @@ noprefix "false"
 \end_inset
 
 .
- Desde esta pantalla,
- el calificador puede iniciar una nueva sesión de calificación o finalizar una sesión previamente activa,
- asegurando que solo una sesión esté abierta a la vez.
+ Desde esta pantalla, el calificador puede iniciar una nueva sesión de calificac
+ión o finalizar una sesión previamente activa, asegurando que solo una sesión
+ esté abierta a la vez.
 \begin_inset Float figure
 wide false
 sideways false
@@ -389,8 +395,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil:
- pantalla calificador
+App móvil: pantalla calificador
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:pantalla-calificador"
@@ -414,8 +419,7 @@ name "fig:pantalla-calificador"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil:
- caso de uso calificación
+App móvil: caso de uso calificación
 \end_layout
 
 \end_inset
@@ -430,15 +434,15 @@ App móvil:
 
 \begin_layout Standard
 Si el calificador intenta iniciar una nueva sesión mientras otra está activa,
- el sistema muestra mensajes de error claros e informativos,
- indicando la necesidad de finalizar la sesión actual antes de comenzar una nueva.
- Esta funcionalidad garantiza el control adecuado del flujo de trabajo del calificador,
- evitando conflictos o superposición de datos.
+ el sistema muestra mensajes de error claros e informativos, indicando la
+ necesidad de finalizar la sesión actual antes de comenzar una nueva.
+ Esta funcionalidad garantiza el control adecuado del flujo de trabajo del
+ calificador, evitando conflictos o superposición de datos.
 \end_layout
 
 \begin_layout Standard
-En el caso de iniciar sesión,
- la aplicación los redirige a la pantalla principar del calificador como se muestra en 
+En el caso de iniciar sesión, la aplicación los redirige a la pantalla principar
+ del calificador como se muestra en 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:pantalla-calificador"
@@ -452,11 +456,12 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Durante la sesión de calificación,
- los usuarios calificadores tienen la capacidad de asignar puntajes BCS a las vacas,
- una funcionalidad clave para garantizar la recopilación y el almacenamiento de datos de evaluación.
- Estos datos no solo respaldan el proceso de calificación actual,
- sino que también son esenciales para el entrenamiento y la mejora continua de futuros modelos predictivos.
+Durante la sesión de calificación, los usuarios calificadores tienen la
+ capacidad de asignar puntajes BCS a las vacas, una funcionalidad clave
+ para garantizar la recopilación y el almacenamiento de datos de evaluación.
+ Estos datos no solo respaldan el proceso de calificación actual, sino que
+ también son esenciales para el entrenamiento y la mejora continua de futuros
+ modelos predictivos.
 \end_layout
 
 \begin_layout Section
@@ -491,8 +496,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil:
- Notificación de observador
+App móvil: Notificación de observador
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Notificación-observador"
@@ -530,8 +534,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil:
- arribo de imágen de calificador
+App móvil: arribo de imágen de calificador
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:arribo-calificador"
@@ -555,8 +558,7 @@ name "fig:arribo-calificador"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil:
- Arribo de imágenes
+App móvil: Arribo de imágenes
 \end_layout
 
 \end_inset
@@ -570,19 +572,21 @@ App móvil:
 \end_layout
 
 \begin_layout Standard
-El módulo del observador,
- tras iniciar sesión,
- redirige automáticamente al usuario a la pantalla principal,
- diseñada para recibir y mostrar las imágenes a medida que son enviadas al sistema.
- Este módulo permite a los usuarios con el rol de observador visualizar las imágenes capturadas de las caravanas junto con su identificación asociada y un historial detallado de los puntajes de condición corporal (BCS) asignados en sesiones anteriores para cada caravana.
+El módulo del observador, tras iniciar sesión, redirige automáticamente
+ al usuario a la pantalla principal, diseñada para recibir y mostrar las
+ imágenes a medida que son enviadas al sistema.
+ Este módulo permite a los usuarios con el rol de observador visualizar
+ las imágenes capturadas de las caravanas junto con su identificación asociada
+ y un historial detallado de los puntajes de condición corporal (BCS) asignados
+ en sesiones anteriores para cada caravana.
 \end_layout
 
 \begin_layout Standard
-Además,
- una vez que se calcula el puntaje de condición corporal (BCS) predicho,
- ya sea por el dispositivo móvil de este observador u otro,
- el resultado se muestra en la misma pantalla.
- Luego de este cálculo se actualiza en tiempo real el gráfico del historial como se muestra en 
+Además, una vez que se calcula el puntaje de condición corporal (BCS) predicho,
+ ya sea por el dispositivo móvil de este observador u otro, el resultado
+ se muestra en la misma pantalla.
+ Luego de este cálculo se actualiza en tiempo real el gráfico del historial
+ como se muestra en 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Notificación-observador"
@@ -596,18 +600,20 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-La interfaz del observador es completamente de solo lectura,
- sin opciones para interactuar o realizar modificaciones.
- Las imágenes se actualizan de manera automática conforme las vacas pasan por debajo de la cámara,
- ofreciendo una experiencia fluida y enfocada en la visualización y monitoreo en tiempo real.
+La interfaz del observador es completamente de solo lectura, sin opciones
+ para interactuar o realizar modificaciones.
+ Las imágenes se actualizan de manera automática conforme las vacas pasan
+ por debajo de la cámara, ofreciendo una experiencia fluida y enfocada en
+ la visualización y monitoreo en tiempo real.
 \end_layout
 
 \begin_layout Standard
-Por otro lado,
- el módulo del calificador redirige automáticamente al usuario,
- tras iniciar sesión de calificación,
- a su pantalla principal.
- Esta interfaz está diseñada para permitir que el calificador avance manualmente a la siguiente imagen de una vaca haciendo clic en el botón con el simbolo de > (Siguiente) a la espera de la llegada de una imágen como se ve en 
+Por otro lado, el módulo del calificador redirige automáticamente al usuario,
+ tras iniciar sesión de calificación, a su pantalla principal.
+ Esta interfaz está diseñada para permitir que el calificador avance manualmente
+ a la siguiente imagen de una vaca haciendo clic en el botón con el simbolo
+ de > (Siguiente) a la espera de la llegada de una imágen como se ve en
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:arribo-calificador"
@@ -618,8 +624,10 @@ noprefix "false"
 \end_inset
 
 .
- Esto le da al calificador el control de cuándo visualizar la próxima imagen para asignar el valor BCS correspondiente.
- Es importante destacar que el calificador debe interactuar activamente con la aplicación para avanzar o esperar la llegada de una nueva imagen.
+ Esto le da al calificador el control de cuándo visualizar la próxima imagen
+ para asignar el valor BCS correspondiente.
+ Es importante destacar que el calificador debe interactuar activamente
+ con la aplicación para avanzar o esperar la llegada de una nueva imagen.
 \end_layout
 
 \begin_layout Standard
@@ -651,8 +659,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil:
- menú de calificador 
+App móvil: menú de calificador 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:menú-calificador"
@@ -689,8 +696,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil:
- menú de observador 
+App móvil: menú de observador 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:menú-observador"
@@ -714,8 +720,7 @@ name "fig:menú-observador"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil:
- menú
+App móvil: menú
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:App-móvil:-menú"
@@ -736,8 +741,8 @@ name "fig:App-móvil:-menú"
 \end_layout
 
 \begin_layout Standard
-En la pantalla principal,
- ambos usuarios tienen acceso a un menú que les permite cerrar la sesión como se ve en 
+En la pantalla principal, ambos usuarios tienen acceso a un menú que les
+ permite cerrar la sesión como se ve en 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:App-móvil:-menú"
@@ -748,9 +753,8 @@ noprefix "false"
 \end_inset
 
 .
- Además,
- para los calificadores,
- este menú incluye la opción adicional de finalizar una sesión de calificación en curso.
+ Además, para los calificadores, este menú incluye la opción adicional de
+ finalizar una sesión de calificación en curso.
 \end_layout
 
 \begin_layout Section
@@ -758,19 +762,24 @@ Reportes Generados
 \end_layout
 
 \begin_layout Standard
-Tanto los calificadores como los observadores cuentan con herramientas visuales que facilitan el análisis de los datos generados durante las sesiones de calificación.
- Entre estas herramientas destaca un gráfico de tipo torta,
- que proporciona una representación clara y organizada de las sesiones en curso y las completadas.
- Este gráfico agrupa los valores predichos del puntaje de condición corporal (BCS) en categorías enteras del 1 al 5,
- basándose en la parte entera del valor incluso cuando la predicción incluye decimales.
- Esta metodología asegura una visualización uniforme,
- intuitiva y de fácil interpretación para todos los usuarios.
+Tanto los calificadores como los observadores cuentan con herramientas visuales
+ que facilitan el análisis de los datos generados durante las sesiones de
+ calificación.
+ Entre estas herramientas destaca un gráfico de tipo torta, que proporciona
+ una representación clara y organizada de las sesiones en curso y las completada
+s.
+ Este gráfico agrupa los valores predichos del puntaje de condición corporal
+ (BCS) en categorías enteras del 1 al 5, basándose en la parte entera del
+ valor incluso cuando la predicción incluye decimales.
+ Esta metodología asegura una visualización uniforme, intuitiva y de fácil
+ interpretación para todos los usuarios.
 \end_layout
 
 \begin_layout Standard
-Adicionalmente,
- se incluye un diagrama de dispersión que muestra el promedio del puntaje de condición corporal (BCS) de las sesiones anteriores,
- ofreciendo una perspectiva comparativa y útil para evaluar tendencias a lo largo del tiempo.
+Adicionalmente, se incluye un diagrama de dispersión que muestra el promedio
+ del puntaje de condición corporal (BCS) de las sesiones anteriores, ofreciendo
+ una perspectiva comparativa y útil para evaluar tendencias a lo largo del
+ tiempo.
 \end_layout
 
 \begin_layout Standard
@@ -794,8 +803,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil:
- reportes
+App móvil: reportes
 \end_layout
 
 \end_inset
@@ -817,35 +825,41 @@ Rendimientos del sistema
 \begin_layout Standard
 
 \change_deleted -1783815582 1732591217
-Para evaluar la eficiencia del sistema,
- se midieron los tiempos de predicción del BCS en dispositivos móviles,
- un aspecto crítico para asegurar una experiencia fluida al obtener los resultados de la predicción.
- Esto permite que el observador visualice los resultados rápidamente y que tanto el calificador como el observador accedan a los reportes en tiempo real.
+Para evaluar la eficiencia del sistema, se midieron los tiempos de predicción
+ del BCS en dispositivos móviles, un aspecto crítico para asegurar una experienc
+ia fluida al obtener los resultados de la predicción.
+ Esto permite que el observador visualice los resultados rápidamente y que
+ tanto el calificador como el observador accedan a los reportes en tiempo
+ real.
 \end_layout
 
 \begin_layout Standard
 
 \change_deleted -1783815582 1732591217
-Antes de la implementación del prototipo,
- el algoritmo fue sometido a pruebas utilizando una versión preliminar desarrollada para Android.
- Estas pruebas se realizaron en diversos dispositivos móviles,
- variando tanto el número de dispositivos como el tamaño de los lotes de procesamiento ("jobs"),
- dentro de un flujo continuo de datos transmitidos desde un servidor hacia los móviles en la misma red local.
- A continuación,
- se presenta un resumen de los resultados obtenidos en estas evaluaciones:
+Antes de la implementación del prototipo, el algoritmo fue sometido a pruebas
+ utilizando una versión preliminar desarrollada para Android.
+ Estas pruebas se realizaron en diversos dispositivos móviles, variando
+ tanto el número de dispositivos como el tamaño de los lotes de procesamiento
+ ("jobs"), dentro de un flujo continuo de datos transmitidos desde un servidor
+ hacia los móviles en la misma red local.
+ A continuación, se presenta un resumen de los resultados obtenidos en estas
+ evaluaciones:
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
 
 \change_inserted -997162125 1732117613
-Estos resultados falta formatearlos/compatibilizarlos con lo que vos estás corriendo.
- Es decir,
- en estos experimentos de la tabla hay un scheduler round robin que no se estaría mencionando y que es el que se usó para distribuir los jobs.
- En tu experimento,
- al parecer va a haber un sólo móvil con lo cual el scheduler no tendría sentido,
- a menos que incluyas otro móvil en el cálculo.
- La tabla muestra 3 experimentos donde varían los streams y la composición del cluster pero contiene resultados discriminados por móvil de lo que resultó la inferencia de una imágen.
+Estos resultados falta formatearlos/compatibilizarlos con lo que vos estás
+ corriendo.
+ Es decir, en estos experimentos de la tabla hay un scheduler round robin
+ que no se estaría mencionando y que es el que se usó para distribuir los
+ jobs.
+ En tu experimento, al parecer va a haber un sólo móvil con lo cual el scheduler
+ no tendría sentido, a menos que incluyas otro móvil en el cálculo.
+ La tabla muestra 3 experimentos donde varían los streams y la composición
+ del cluster pero contiene resultados discriminados por móvil de lo que
+ resultó la inferencia de una imágen.
 \change_unchanged
 
 \end_layout

@@ -6,7 +6,7 @@
 \origin unavailable
 \textclass book
 \begin_preamble
-%\usepackage{a4wide}
+\usepackage{a4wide}
 %\usepackage[small]{titlesec}
 
 \usepackage{multirow}
@@ -270,41 +270,7 @@ thispagestyle{empty}
 
 \end_layout
 
-\begin_layout Section*
-Resumen
-\end_layout
-
 \begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thispagestyle{empty}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section*
-Agradecimientos
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
 
 \end_layout
 
