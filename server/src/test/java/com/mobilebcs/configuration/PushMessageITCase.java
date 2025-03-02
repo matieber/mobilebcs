@@ -34,7 +34,6 @@ import org.testcontainers.shaded.org.apache.commons.lang.RandomStringUtils;
         "activemq.password=admin",
         "activemq.brokerUrl=tcp://localhost:61616",
         "activemq.receive-timeout=10000","images.queue.name=IMAGE_QUEUE"})
-@Disabled
 public class PushMessageITCase {
     private RestCaller restCaller;
 
@@ -63,16 +62,18 @@ public class PushMessageITCase {
 
     @Test
     public void testSendImagesToQueue() throws InterruptedException, IOException {
-        restCaller=new RestCaller(8080,"192.168.0.215");
-        int initial;for(int j=0;j<116;j++) {
+        restCaller=new RestCaller(8080,"localhost");
+        //int initial;for(int j=0;j<116;j++) {
+        int initial;for(int j=1;j<=1;j++) {
             initial=15*j;
             for (int i = 1; i <= 15; i++) {
                 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
 
                 System.out.println(LocalDateTime.now().format(dtf) + " Sending image " + (initial+i) + " to queue " + map.get(i));
                 restCaller.sendRealImage(i, locationCode, map.get(i),initial+i);
-                Thread.sleep(600);
+                Thread.sleep(1000);
             }
+            Thread.sleep(10000);
         }
     }
 }

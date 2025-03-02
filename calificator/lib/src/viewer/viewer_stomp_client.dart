@@ -69,7 +69,6 @@ class ViewerStompClient {
 
   void onConnect(StompFrame frame) {
     if(!activated && stompClient!=null) {
-      print("subscribing");
       activated = true;
       caravanSubscription();
       refreshScoreSubscription();
@@ -78,7 +77,6 @@ class ViewerStompClient {
 
   void refreshScoreSubscription() {
     if (refreshReceivedScore != null) {
-      print("subscribing /topic/notifications/score/$defaultLocation/$username");
       scoreNotificationUnsubscription = stompClient?.subscribe(
         destination: '/topic/notifications/score/$defaultLocation/$username',
         callback: (frame) {
@@ -87,47 +85,43 @@ class ViewerStompClient {
               .fromJson(
               responseBody);
           refreshReceivedScore!(message);
-          print(message);
         },
       );
-      print("subscribed");
     }
   }
 
   void caravanSubscription() {
      if (refreshCaravan != null) {
-      print("subscribing /topic/notifications/$defaultLocation/$username");
       notificationUnsubscription = stompClient?.subscribe(
         destination: '/topic/notifications/$defaultLocation/$username',
         callback: (frame) {
-          print("notification arrive to /topic/notifications/$defaultLocation/$username");
+
           var responseBody = json.decode(frame.body!);
           ViewerCaravanMessage message = ViewerCaravanMessage.fromJson(
               responseBody);
           if (responseBody != null) {
             refreshCaravan!(message, this);
-            print(message);
           }
         },
       );
     }
   }
 
-  void publish(double score,int position,String setCode){
 
-    print("sending to publish");
+
+  void publish(double score,int position,String setCode, String identification){
     stompClient?.send(destination: "/app/score",body: '''{
     "location": "$defaultLocation",
     "position": $position,
     "score": $score,
     "predictor": "$username",
-    "setCode": "$setCode"
+    "setCode": "$setCode",
+    "identification": "$identification"
     }''');
   }
 
   void deactivate(){
     if(stompClient!=null){
-      print("deactivating");
       removeSubscription();
       stompClient?.deactivate();
       activated=false;

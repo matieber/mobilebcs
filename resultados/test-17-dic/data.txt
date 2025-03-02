@@ -1,0 +1,4 @@
+876 imágenes
+dos moviles
+876 jobs para cada movil, de los cuales 438 predijeron y otros 438 esperaron confirmación
+12 imágenes cada 1 segundo, espera de 10 segundos y volver a enviar las imagenes

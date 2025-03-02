@@ -1,0 +1,1718 @@
+12-29 16:55:47.282 30724 30724 D MainActivity: in-plugin-processing-score: index 1 at 1735502147281
+12-29 16:55:48.317 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 1 in 607
+12-29 16:55:48.317 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 1 in 428
+12-29 16:55:48.318 30724 30724 D CowBodyConditionScore: job-processing-score: index 1 in 1035
+12-29 16:55:49.516 30724 30774 I flutter : before-plugin-processing-score: index 1 at 1735502147271
+12-29 16:55:49.516 30724 30774 I flutter : saving-image-pre-processing-score: index 1 in 1101
+12-29 16:55:49.516 30724 30774 I flutter : calling-plugin-processing-score: index 1 calculate scored was called
+12-29 16:55:49.516 30724 30774 I flutter : completed-processing-score: index 1 in 3331 ms
+12-29 16:55:50.544 30724 30724 D MainActivity: in-plugin-processing-score: index 3 at 1735502150544
+12-29 16:55:51.154 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 3 in 317
+12-29 16:55:51.154 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 3 in 292
+12-29 16:55:51.154 30724 30724 D CowBodyConditionScore: job-processing-score: index 3 in 609
+12-29 16:55:52.693 30724 30774 I flutter : before-plugin-processing-score: index 3 at 1735502150542
+12-29 16:55:52.693 30724 30774 I flutter : saving-image-pre-processing-score: index 3 in 1085
+12-29 16:55:52.693 30724 30774 I flutter : calling-plugin-processing-score: index 3 calculate scored was called
+12-29 16:55:52.693 30724 30774 I flutter : completed-processing-score: index 3 in 3234 ms
+12-29 16:55:54.737 30724 30724 D MainActivity: in-plugin-processing-score: index 7 at 1735502154737
+12-29 16:55:55.373 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 7 in 322
+12-29 16:55:55.373 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 7 in 313
+12-29 16:55:55.373 30724 30724 D CowBodyConditionScore: job-processing-score: index 7 in 635
+12-29 16:55:55.374 30724 30724 D MainActivity: in-plugin-processing-score: index 5 at 1735502155374
+12-29 16:55:56.012 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 5 in 295
+12-29 16:55:56.012 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 5 in 343
+12-29 16:55:56.012 30724 30724 D CowBodyConditionScore: job-processing-score: index 5 in 638
+12-29 16:55:56.868 30724 30774 I flutter : before-plugin-processing-score: index 7 at 1735502154734
+12-29 16:55:56.868 30724 30774 I flutter : saving-image-pre-processing-score: index 7 in 2053
+12-29 16:55:56.868 30724 30774 I flutter : calling-plugin-processing-score: index 7 calculate scored was called
+12-29 16:55:56.868 30724 30774 I flutter : completed-processing-score: index 7 in 4185 ms
+12-29 16:55:56.871 30724 30774 I flutter : before-plugin-processing-score: index 5 at 1735502154737
+12-29 16:55:56.871 30724 30774 I flutter : saving-image-pre-processing-score: index 5 in 2131
+12-29 16:55:56.871 30724 30774 I flutter : calling-plugin-processing-score: index 5 calculate scored was called
+12-29 16:55:56.871 30724 30774 I flutter : completed-processing-score: index 5 in 4263 ms
+12-29 16:55:56.882 30724 30724 D MainActivity: in-plugin-processing-score: index 9 at 1735502156882
+12-29 16:55:57.517 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 9 in 320
+12-29 16:55:57.518 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 9 in 315
+12-29 16:55:57.518 30724 30724 D CowBodyConditionScore: job-processing-score: index 9 in 636
+12-29 16:56:01.022 30724 30774 I flutter : before-plugin-processing-score: index 9 at 1735502156880
+12-29 16:56:01.022 30724 30774 I flutter : saving-image-pre-processing-score: index 9 in 53
+12-29 16:56:01.022 30724 30774 I flutter : calling-plugin-processing-score: index 9 calculate scored was called
+12-29 16:56:01.022 30724 30774 I flutter : completed-processing-score: index 9 in 4192 ms
+12-29 16:56:01.033 30724 30724 D MainActivity: in-plugin-processing-score: index 11 at 1735502161033
+12-29 16:56:01.671 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 11 in 322
+12-29 16:56:01.671 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 11 in 315
+12-29 16:56:01.671 30724 30724 D CowBodyConditionScore: job-processing-score: index 11 in 637
+12-29 16:56:04.105 30724 30774 I flutter : before-plugin-processing-score: index 11 at 1735502161032
+12-29 16:56:04.105 30724 30774 I flutter : saving-image-pre-processing-score: index 11 in 57
+12-29 16:56:04.105 30724 30774 I flutter : calling-plugin-processing-score: index 11 calculate scored was called
+12-29 16:56:04.105 30724 30774 I flutter : completed-processing-score: index 11 in 3126 ms
+12-29 16:56:05.203 30724 30724 D MainActivity: in-plugin-processing-score: index 13 at 1735502165203
+12-29 16:56:05.815 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 13 in 306
+12-29 16:56:05.815 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 13 in 305
+12-29 16:56:05.816 30724 30724 D CowBodyConditionScore: job-processing-score: index 13 in 613
+12-29 16:56:06.395 30724 30774 I flutter : before-plugin-processing-score: index 13 at 1735502165202
+12-29 16:56:06.395 30724 30774 I flutter : saving-image-pre-processing-score: index 13 in 13
+12-29 16:56:06.395 30724 30774 I flutter : calling-plugin-processing-score: index 13 calculate scored was called
+12-29 16:56:06.395 30724 30774 I flutter : completed-processing-score: index 13 in 1204 ms
+12-29 16:56:07.477 30724 30724 D MainActivity: in-plugin-processing-score: index 15 at 1735502167477
+12-29 16:56:08.082 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 15 in 310
+12-29 16:56:08.082 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 15 in 295
+12-29 16:56:08.082 30724 30724 D CowBodyConditionScore: job-processing-score: index 15 in 605
+12-29 16:56:09.629 30724 30774 I flutter : before-plugin-processing-score: index 15 at 1735502167475
+12-29 16:56:09.629 30724 30774 I flutter : saving-image-pre-processing-score: index 15 in 17
+12-29 16:56:09.629 30724 30774 I flutter : calling-plugin-processing-score: index 15 calculate scored was called
+12-29 16:56:09.629 30724 30774 I flutter : completed-processing-score: index 15 in 2169 ms
+12-29 16:56:09.637 30724 30724 D MainActivity: in-plugin-processing-score: index 17 at 1735502169637
+12-29 16:56:10.257 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 17 in 316
+12-29 16:56:10.257 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 17 in 304
+12-29 16:56:10.258 30724 30724 D CowBodyConditionScore: job-processing-score: index 17 in 621
+12-29 16:56:12.826 30724 30774 I flutter : before-plugin-processing-score: index 17 at 1735502169635
+12-29 16:56:12.826 30724 30774 I flutter : saving-image-pre-processing-score: index 17 in 19
+12-29 16:56:12.826 30724 30774 I flutter : calling-plugin-processing-score: index 17 calculate scored was called
+12-29 16:56:12.826 30724 30774 I flutter : completed-processing-score: index 17 in 3208 ms
+12-29 16:56:12.833 30724 30724 D MainActivity: in-plugin-processing-score: index 19 at 1735502172833
+12-29 16:56:13.447 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 19 in 324
+12-29 16:56:13.447 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 19 in 289
+12-29 16:56:13.447 30724 30724 D CowBodyConditionScore: job-processing-score: index 19 in 613
+12-29 16:56:17.076 30724 30774 I flutter : before-plugin-processing-score: index 19 at 1735502172832
+12-29 16:56:17.076 30724 30774 I flutter : saving-image-pre-processing-score: index 19 in 55
+12-29 16:56:17.076 30724 30774 I flutter : calling-plugin-processing-score: index 19 calculate scored was called
+12-29 16:56:17.076 30724 30774 I flutter : completed-processing-score: index 19 in 4296 ms
+12-29 16:56:17.093 30724 30724 D MainActivity: in-plugin-processing-score: index 21 at 1735502177093
+12-29 16:56:17.692 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 21 in 308
+12-29 16:56:17.692 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 21 in 290
+12-29 16:56:17.692 30724 30724 D CowBodyConditionScore: job-processing-score: index 21 in 599
+12-29 16:56:17.693 30724 30724 D MainActivity: in-plugin-processing-score: index 23 at 1735502177693
+12-29 16:56:18.410 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 23 in 304
+12-29 16:56:18.410 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 23 in 413
+12-29 16:56:18.410 30724 30724 D CowBodyConditionScore: job-processing-score: index 23 in 717
+12-29 16:56:22.208 30724 30774 I flutter : before-plugin-processing-score: index 21 at 1735502177092
+12-29 16:56:22.208 30724 30774 I flutter : saving-image-pre-processing-score: index 21 in 127
+12-29 16:56:22.208 30724 30774 I flutter : calling-plugin-processing-score: index 21 calculate scored was called
+12-29 16:56:22.208 30724 30774 I flutter : completed-processing-score: index 21 in 5240 ms
+12-29 16:56:22.211 30724 30774 I flutter : before-plugin-processing-score: index 23 at 1735502177093
+12-29 16:56:22.211 30724 30774 I flutter : saving-image-pre-processing-score: index 23 in 67
+12-29 16:56:22.211 30724 30774 I flutter : calling-plugin-processing-score: index 23 calculate scored was called
+12-29 16:56:22.211 30724 30774 I flutter : completed-processing-score: index 23 in 5183 ms
+12-29 16:56:23.348 30724 30724 D MainActivity: in-plugin-processing-score: index 25 at 1735502183348
+12-29 16:56:23.984 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 25 in 325
+12-29 16:56:23.984 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 25 in 311
+12-29 16:56:23.984 30724 30724 D CowBodyConditionScore: job-processing-score: index 25 in 636
+12-29 16:56:24.464 30724 30774 I flutter : before-plugin-processing-score: index 25 at 1735502183346
+12-29 16:56:24.464 30724 30774 I flutter : saving-image-pre-processing-score: index 25 in 21
+12-29 16:56:24.464 30724 30774 I flutter : calling-plugin-processing-score: index 25 calculate scored was called
+12-29 16:56:24.464 30724 30774 I flutter : completed-processing-score: index 25 in 1137 ms
+12-29 16:56:25.606 30724 30724 D MainActivity: in-plugin-processing-score: index 27 at 1735502185606
+12-29 16:56:26.243 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 27 in 324
+12-29 16:56:26.243 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 27 in 311
+12-29 16:56:26.243 30724 30724 D CowBodyConditionScore: job-processing-score: index 27 in 637
+12-29 16:56:27.716 30724 30774 I flutter : before-plugin-processing-score: index 27 at 1735502185604
+12-29 16:56:27.716 30724 30774 I flutter : saving-image-pre-processing-score: index 27 in 23
+12-29 16:56:27.716 30724 30774 I flutter : calling-plugin-processing-score: index 27 calculate scored was called
+12-29 16:56:27.716 30724 30774 I flutter : completed-processing-score: index 27 in 2132 ms
+12-29 16:56:27.739 30724 30724 D MainActivity: in-plugin-processing-score: index 29 at 1735502187738
+12-29 16:56:28.373 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 29 in 319
+12-29 16:56:28.374 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 29 in 315
+12-29 16:56:28.374 30724 30724 D CowBodyConditionScore: job-processing-score: index 29 in 635
+12-29 16:56:30.880 30724 30774 I flutter : before-plugin-processing-score: index 29 at 1735502187737
+12-29 16:56:30.880 30724 30774 I flutter : saving-image-pre-processing-score: index 29 in 37
+12-29 16:56:30.880 30724 30774 I flutter : calling-plugin-processing-score: index 29 calculate scored was called
+12-29 16:56:30.880 30724 30774 I flutter : completed-processing-score: index 29 in 3178 ms
+12-29 16:56:30.889 30724 30724 D MainActivity: in-plugin-processing-score: index 31 at 1735502190889
+12-29 16:56:31.528 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 31 in 328
+12-29 16:56:31.529 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 31 in 311
+12-29 16:56:31.529 30724 30724 D CowBodyConditionScore: job-processing-score: index 31 in 640
+12-29 16:56:35.087 30724 30774 I flutter : before-plugin-processing-score: index 31 at 1735502190887
+12-29 16:56:35.087 30724 30774 I flutter : saving-image-pre-processing-score: index 31 in 53
+12-29 16:56:35.087 30724 30774 I flutter : calling-plugin-processing-score: index 31 calculate scored was called
+12-29 16:56:35.087 30724 30774 I flutter : completed-processing-score: index 31 in 4250 ms
+12-29 16:56:39.149 30724 30724 D MainActivity: in-plugin-processing-score: index 33 at 1735502199149
+12-29 16:56:39.732 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 33 in 309
+12-29 16:56:39.732 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 33 in 272
+12-29 16:56:39.732 30724 30724 D CowBodyConditionScore: job-processing-score: index 33 in 583
+12-29 16:56:39.733 30724 30724 D MainActivity: in-plugin-processing-score: index 35 at 1735502199733
+12-29 16:56:40.198 30724 30774 I flutter : before-plugin-processing-score: index 33 at 1735502199146
+12-29 16:56:40.198 30724 30774 I flutter : saving-image-pre-processing-score: index 33 in 4164
+12-29 16:56:40.198 30724 30774 I flutter : calling-plugin-processing-score: index 33 calculate scored was called
+12-29 16:56:40.198 30724 30774 I flutter : completed-processing-score: index 33 in 5214 ms
+12-29 16:56:40.310 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 35 in 299
+12-29 16:56:40.310 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 35 in 278
+12-29 16:56:40.310 30724 30724 D CowBodyConditionScore: job-processing-score: index 35 in 577
+12-29 16:56:40.314 30724 30774 I flutter : before-plugin-processing-score: index 35 at 1735502199148
+12-29 16:56:40.314 30724 30774 I flutter : saving-image-pre-processing-score: index 35 in 4112
+12-29 16:56:40.314 30724 30774 I flutter : calling-plugin-processing-score: index 35 calculate scored was called
+12-29 16:56:40.314 30724 30774 I flutter : completed-processing-score: index 35 in 5277 ms
+12-29 16:56:40.579 30724 30724 D MainActivity: in-plugin-processing-score: index 37 at 1735502200579
+12-29 16:56:41.246 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 37 in 390
+12-29 16:56:41.246 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 37 in 276
+12-29 16:56:41.246 30724 30724 D CowBodyConditionScore: job-processing-score: index 37 in 666
+12-29 16:56:41.605 30724 30774 I flutter : before-plugin-processing-score: index 37 at 1735502200578
+12-29 16:56:41.605 30724 30774 I flutter : saving-image-pre-processing-score: index 37 in 14
+12-29 16:56:41.605 30724 30774 I flutter : calling-plugin-processing-score: index 37 calculate scored was called
+12-29 16:56:41.605 30724 30774 I flutter : completed-processing-score: index 37 in 1038 ms
+12-29 16:56:43.810 30724 30724 D MainActivity: in-plugin-processing-score: index 39 at 1735502203810
+12-29 16:56:44.387 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 39 in 302
+12-29 16:56:44.387 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 39 in 275
+12-29 16:56:44.387 30724 30724 D CowBodyConditionScore: job-processing-score: index 39 in 577
+12-29 16:56:46.021 30724 30774 I flutter : before-plugin-processing-score: index 39 at 1735502203808
+12-29 16:56:46.021 30724 30774 I flutter : saving-image-pre-processing-score: index 39 in 11
+12-29 16:56:46.021 30724 30774 I flutter : calling-plugin-processing-score: index 39 calculate scored was called
+12-29 16:56:46.021 30724 30774 I flutter : completed-processing-score: index 39 in 2221 ms
+12-29 16:56:47.044 30724 30724 D MainActivity: in-plugin-processing-score: index 41 at 1735502207044
+12-29 16:56:47.666 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 41 in 306
+12-29 16:56:47.667 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 41 in 315
+12-29 16:56:47.667 30724 30724 D CowBodyConditionScore: job-processing-score: index 41 in 623
+12-29 16:56:49.161 30724 30774 I flutter : before-plugin-processing-score: index 41 at 1735502207042
+12-29 16:56:49.161 30724 30774 I flutter : saving-image-pre-processing-score: index 41 in 1032
+12-29 16:56:49.161 30724 30774 I flutter : calling-plugin-processing-score: index 41 calculate scored was called
+12-29 16:56:49.161 30724 30774 I flutter : completed-processing-score: index 41 in 3150 ms
+12-29 16:56:50.243 30724 30724 D MainActivity: in-plugin-processing-score: index 43 at 1735502210243
+12-29 16:56:50.813 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 43 in 299
+12-29 16:56:50.813 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 43 in 270
+12-29 16:56:50.813 30724 30724 D CowBodyConditionScore: job-processing-score: index 43 in 569
+12-29 16:56:53.400 30724 30774 I flutter : before-plugin-processing-score: index 43 at 1735502210240
+12-29 16:56:53.400 30724 30774 I flutter : saving-image-pre-processing-score: index 43 in 1123
+12-29 16:56:53.400 30724 30774 I flutter : calling-plugin-processing-score: index 43 calculate scored was called
+12-29 16:56:53.400 30724 30774 I flutter : completed-processing-score: index 43 in 4281 ms
+12-29 16:56:55.436 30724 30724 D MainActivity: in-plugin-processing-score: index 45 at 1735502215436
+12-29 16:56:56.005 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 45 in 293
+12-29 16:56:56.006 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 45 in 275
+12-29 16:56:56.006 30724 30724 D CowBodyConditionScore: job-processing-score: index 45 in 570
+12-29 16:56:56.006 30724 30724 D MainActivity: in-plugin-processing-score: index 47 at 1735502216006
+12-29 16:56:56.733 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 47 in 295
+12-29 16:56:56.733 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 47 in 431
+12-29 16:56:56.733 30724 30724 D CowBodyConditionScore: job-processing-score: index 47 in 727
+12-29 16:56:58.478 30724 30774 I flutter : before-plugin-processing-score: index 45 at 1735502215433
+12-29 16:56:58.478 30724 30774 I flutter : saving-image-pre-processing-score: index 45 in 2127
+12-29 16:56:58.478 30724 30774 I flutter : calling-plugin-processing-score: index 45 calculate scored was called
+12-29 16:56:58.478 30724 30774 I flutter : completed-processing-score: index 45 in 5168 ms
+12-29 16:56:58.482 30724 30774 I flutter : before-plugin-processing-score: index 47 at 1735502215436
+12-29 16:56:58.482 30724 30774 I flutter : saving-image-pre-processing-score: index 47 in 2078
+12-29 16:56:58.482 30724 30774 I flutter : calling-plugin-processing-score: index 47 calculate scored was called
+12-29 16:56:58.482 30724 30774 I flutter : completed-processing-score: index 47 in 5122 ms
+12-29 16:56:59.610 30724 30724 D MainActivity: in-plugin-processing-score: index 49 at 1735502219610
+12-29 16:57:00.256 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 49 in 339
+12-29 16:57:00.256 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 49 in 306
+12-29 16:57:00.256 30724 30724 D CowBodyConditionScore: job-processing-score: index 49 in 646
+12-29 16:57:01.744 30724 30774 I flutter : before-plugin-processing-score: index 49 at 1735502219608
+12-29 16:57:01.744 30724 30774 I flutter : saving-image-pre-processing-score: index 49 in 16
+12-29 16:57:01.744 30724 30774 I flutter : calling-plugin-processing-score: index 49 calculate scored was called
+12-29 16:57:01.744 30724 30774 I flutter : completed-processing-score: index 49 in 2149 ms
+12-29 16:57:01.757 30724 30724 D MainActivity: in-plugin-processing-score: index 51 at 1735502221757
+12-29 16:57:02.382 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 51 in 323
+12-29 16:57:02.382 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 51 in 302
+12-29 16:57:02.382 30724 30724 D CowBodyConditionScore: job-processing-score: index 51 in 625
+12-29 16:57:03.927 30724 30774 I flutter : before-plugin-processing-score: index 51 at 1735502221755
+12-29 16:57:03.927 30724 30774 I flutter : saving-image-pre-processing-score: index 51 in 21
+12-29 16:57:03.927 30724 30774 I flutter : calling-plugin-processing-score: index 51 calculate scored was called
+12-29 16:57:03.927 30724 30774 I flutter : completed-processing-score: index 51 in 2190 ms
+12-29 16:57:04.956 30724 30724 D MainActivity: in-plugin-processing-score: index 53 at 1735502224956
+12-29 16:57:05.571 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 53 in 317
+12-29 16:57:05.571 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 53 in 297
+12-29 16:57:05.571 30724 30724 D CowBodyConditionScore: job-processing-score: index 53 in 614
+12-29 16:57:07.094 30724 30774 I flutter : before-plugin-processing-score: index 53 at 1735502224952
+12-29 16:57:07.094 30724 30774 I flutter : saving-image-pre-processing-score: index 53 in 1039
+12-29 16:57:07.094 30724 30774 I flutter : calling-plugin-processing-score: index 53 calculate scored was called
+12-29 16:57:07.094 30724 30774 I flutter : completed-processing-score: index 53 in 3178 ms
+12-29 16:57:07.118 30724 30724 D MainActivity: in-plugin-processing-score: index 55 at 1735502227118
+12-29 16:57:07.729 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 55 in 309
+12-29 16:57:07.730 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 55 in 301
+12-29 16:57:07.730 30724 30724 D CowBodyConditionScore: job-processing-score: index 55 in 612
+12-29 16:57:11.306 30724 30774 I flutter : before-plugin-processing-score: index 55 at 1735502227116
+12-29 16:57:11.306 30724 30774 I flutter : saving-image-pre-processing-score: index 55 in 71
+12-29 16:57:11.306 30724 30774 I flutter : calling-plugin-processing-score: index 55 calculate scored was called
+12-29 16:57:11.306 30724 30774 I flutter : completed-processing-score: index 55 in 4258 ms
+12-29 16:57:11.322 30724 30724 D MainActivity: in-plugin-processing-score: index 59 at 1735502231322
+12-29 16:57:11.941 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 59 in 297
+12-29 16:57:11.941 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 59 in 322
+12-29 16:57:11.941 30724 30724 D CowBodyConditionScore: job-processing-score: index 59 in 619
+12-29 16:57:11.942 30724 30724 D MainActivity: in-plugin-processing-score: index 57 at 1735502231942
+12-29 16:57:12.614 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 57 in 327
+12-29 16:57:12.614 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 57 in 344
+12-29 16:57:12.614 30724 30724 D CowBodyConditionScore: job-processing-score: index 57 in 672
+12-29 16:57:16.524 30724 30774 I flutter : before-plugin-processing-score: index 59 at 1735502231320
+12-29 16:57:16.524 30724 30774 I flutter : saving-image-pre-processing-score: index 59 in 65
+12-29 16:57:16.524 30724 30774 I flutter : calling-plugin-processing-score: index 59 calculate scored was called
+12-29 16:57:16.524 30724 30774 I flutter : completed-processing-score: index 59 in 5265 ms
+12-29 16:57:16.533 30724 30774 I flutter : before-plugin-processing-score: index 57 at 1735502231321
+12-29 16:57:16.533 30724 30774 I flutter : saving-image-pre-processing-score: index 57 in 118
+12-29 16:57:16.533 30724 30774 I flutter : calling-plugin-processing-score: index 57 calculate scored was called
+12-29 16:57:16.533 30724 30774 I flutter : completed-processing-score: index 57 in 5328 ms
+12-29 16:57:17.618 30724 30724 D MainActivity: in-plugin-processing-score: index 61 at 1735502237618
+12-29 16:57:18.249 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 61 in 320
+12-29 16:57:18.249 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 61 in 310
+12-29 16:57:18.249 30724 30724 D CowBodyConditionScore: job-processing-score: index 61 in 631
+12-29 16:57:19.764 30724 30774 I flutter : before-plugin-processing-score: index 61 at 1735502237616
+12-29 16:57:19.764 30724 30774 I flutter : saving-image-pre-processing-score: index 61 in 10
+12-29 16:57:19.764 30724 30774 I flutter : calling-plugin-processing-score: index 61 calculate scored was called
+12-29 16:57:19.764 30724 30774 I flutter : completed-processing-score: index 61 in 2156 ms
+12-29 16:57:19.773 30724 30724 D MainActivity: in-plugin-processing-score: index 63 at 1735502239773
+12-29 16:57:20.410 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 63 in 320
+12-29 16:57:20.411 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 63 in 316
+12-29 16:57:20.411 30724 30724 D CowBodyConditionScore: job-processing-score: index 63 in 638
+12-29 16:57:21.859 30724 30774 I flutter : before-plugin-processing-score: index 63 at 1735502239772
+12-29 16:57:21.859 30724 30774 I flutter : saving-image-pre-processing-score: index 63 in 20
+12-29 16:57:21.859 30724 30774 I flutter : calling-plugin-processing-score: index 63 calculate scored was called
+12-29 16:57:21.859 30724 30774 I flutter : completed-processing-score: index 63 in 2097 ms
+12-29 16:57:21.974 30724 30724 D MainActivity: in-plugin-processing-score: index 65 at 1735502241974
+12-29 16:57:22.594 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 65 in 312
+12-29 16:57:22.594 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 65 in 308
+12-29 16:57:22.594 30724 30724 D CowBodyConditionScore: job-processing-score: index 65 in 620
+12-29 16:57:24.085 30724 30774 I flutter : before-plugin-processing-score: index 65 at 1735502241972
+12-29 16:57:24.085 30724 30774 I flutter : saving-image-pre-processing-score: index 65 in 29
+12-29 16:57:24.085 30724 30774 I flutter : calling-plugin-processing-score: index 65 calculate scored was called
+12-29 16:57:24.085 30724 30774 I flutter : completed-processing-score: index 65 in 2128 ms
+12-29 16:57:24.187 30724 30724 D MainActivity: in-plugin-processing-score: index 67 at 1735502244187
+12-29 16:57:24.830 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 67 in 322
+12-29 16:57:24.830 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 67 in 319
+12-29 16:57:24.830 30724 30724 D CowBodyConditionScore: job-processing-score: index 67 in 642
+12-29 16:57:26.290 30724 30774 I flutter : before-plugin-processing-score: index 67 at 1735502244185
+12-29 16:57:26.290 30724 30774 I flutter : saving-image-pre-processing-score: index 67 in 39
+12-29 16:57:26.290 30724 30774 I flutter : calling-plugin-processing-score: index 67 calculate scored was called
+12-29 16:57:26.290 30724 30774 I flutter : completed-processing-score: index 67 in 2142 ms
+12-29 16:57:26.306 30724 30724 D MainActivity: in-plugin-processing-score: index 69 at 1735502246306
+12-29 16:57:26.934 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 69 in 314
+12-29 16:57:26.934 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 69 in 312
+12-29 16:57:26.934 30724 30724 D CowBodyConditionScore: job-processing-score: index 69 in 628
+12-29 16:57:29.458 30724 30774 I flutter : before-plugin-processing-score: index 69 at 1735502246304
+12-29 16:57:29.458 30724 30774 I flutter : saving-image-pre-processing-score: index 69 in 26
+12-29 16:57:29.458 30724 30774 I flutter : calling-plugin-processing-score: index 69 calculate scored was called
+12-29 16:57:29.458 30724 30774 I flutter : completed-processing-score: index 69 in 3176 ms
+12-29 16:57:29.573 30724 30724 D MainActivity: in-plugin-processing-score: index 71 at 1735502249573
+12-29 16:57:30.212 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 71 in 330
+12-29 16:57:30.212 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 71 in 308
+12-29 16:57:30.212 30724 30724 D CowBodyConditionScore: job-processing-score: index 71 in 639
+12-29 16:57:32.623 30724 30774 I flutter : before-plugin-processing-score: index 71 at 1735502249571
+12-29 16:57:32.623 30724 30774 I flutter : saving-image-pre-processing-score: index 71 in 55
+12-29 16:57:32.623 30724 30774 I flutter : calling-plugin-processing-score: index 71 calculate scored was called
+12-29 16:57:32.623 30724 30774 I flutter : completed-processing-score: index 71 in 3103 ms
+12-29 16:57:35.547 30724 30724 D MainActivity: in-plugin-processing-score: index 73 at 1735502255547
+12-29 16:57:36.169 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 73 in 312
+12-29 16:57:36.169 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 73 in 310
+12-29 16:57:36.169 30724 30724 D CowBodyConditionScore: job-processing-score: index 73 in 622
+12-29 16:57:36.576 30724 30774 I flutter : before-plugin-processing-score: index 73 at 1735502255545
+12-29 16:57:36.576 30724 30774 I flutter : saving-image-pre-processing-score: index 73 in 5
+12-29 16:57:36.576 30724 30774 I flutter : calling-plugin-processing-score: index 73 calculate scored was called
+12-29 16:57:36.576 30724 30774 I flutter : completed-processing-score: index 73 in 1033 ms
+12-29 16:57:38.756 30724 30724 D MainActivity: in-plugin-processing-score: index 75 at 1735502258756
+12-29 16:57:39.383 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 75 in 323
+12-29 16:57:39.383 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 75 in 303
+12-29 16:57:39.383 30724 30724 D CowBodyConditionScore: job-processing-score: index 75 in 627
+12-29 16:57:39.838 30724 30774 I flutter : before-plugin-processing-score: index 75 at 1735502258755
+12-29 16:57:39.838 30724 30774 I flutter : saving-image-pre-processing-score: index 75 in 1026
+12-29 16:57:39.838 30724 30774 I flutter : calling-plugin-processing-score: index 75 calculate scored was called
+12-29 16:57:39.838 30724 30774 I flutter : completed-processing-score: index 75 in 2107 ms
+12-29 16:57:41.973 30724 30724 D MainActivity: in-plugin-processing-score: index 77 at 1735502261973
+12-29 16:57:42.610 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 77 in 321
+12-29 16:57:42.610 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 77 in 315
+12-29 16:57:42.610 30724 30724 D CowBodyConditionScore: job-processing-score: index 77 in 637
+12-29 16:57:45.112 30724 30774 I flutter : before-plugin-processing-score: index 77 at 1735502261971
+12-29 16:57:45.112 30724 30774 I flutter : saving-image-pre-processing-score: index 77 in 58
+12-29 16:57:45.112 30724 30774 I flutter : calling-plugin-processing-score: index 77 calculate scored was called
+12-29 16:57:45.112 30724 30774 I flutter : completed-processing-score: index 77 in 3197 ms
+12-29 16:57:46.145 30724 30724 D MainActivity: in-plugin-processing-score: index 79 at 1735502266145
+12-29 16:57:46.857 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 79 in 416
+12-29 16:57:46.857 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 79 in 295
+12-29 16:57:46.857 30724 30724 D CowBodyConditionScore: job-processing-score: index 79 in 712
+12-29 16:57:46.858 30724 30724 D MainActivity: in-plugin-processing-score: index 81 at 1735502266858
+12-29 16:57:47.465 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 81 in 311
+12-29 16:57:47.465 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 81 in 296
+12-29 16:57:47.465 30724 30724 D CowBodyConditionScore: job-processing-score: index 81 in 607
+12-29 16:57:49.278 30724 30774 I flutter : before-plugin-processing-score: index 79 at 1735502266141
+12-29 16:57:49.278 30724 30774 I flutter : saving-image-pre-processing-score: index 79 in 1105
+12-29 16:57:49.278 30724 30774 I flutter : calling-plugin-processing-score: index 79 calculate scored was called
+12-29 16:57:49.278 30724 30774 I flutter : completed-processing-score: index 79 in 4240 ms
+12-29 16:57:49.281 30724 30774 I flutter : before-plugin-processing-score: index 81 at 1735502266145
+12-29 16:57:49.281 30724 30774 I flutter : saving-image-pre-processing-score: index 81 in 1056
+12-29 16:57:49.281 30724 30774 I flutter : calling-plugin-processing-score: index 81 calculate scored was called
+12-29 16:57:49.281 30724 30774 I flutter : completed-processing-score: index 81 in 4189 ms
+12-29 16:57:49.297 30724 30724 D MainActivity: in-plugin-processing-score: index 83 at 1735502269297
+12-29 16:57:49.927 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 83 in 310
+12-29 16:57:49.927 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 83 in 320
+12-29 16:57:49.927 30724 30724 D CowBodyConditionScore: job-processing-score: index 83 in 630
+12-29 16:57:53.384 30724 30774 I flutter : before-plugin-processing-score: index 83 at 1735502269295
+12-29 16:57:53.384 30724 30774 I flutter : saving-image-pre-processing-score: index 83 in 62
+12-29 16:57:53.384 30724 30774 I flutter : calling-plugin-processing-score: index 83 calculate scored was called
+12-29 16:57:53.384 30724 30774 I flutter : completed-processing-score: index 83 in 4148 ms
+12-29 16:57:54.486 30724 30724 D MainActivity: in-plugin-processing-score: index 85 at 1735502274486
+12-29 16:57:55.110 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 85 in 311
+12-29 16:57:55.110 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 85 in 313
+12-29 16:57:55.110 30724 30724 D CowBodyConditionScore: job-processing-score: index 85 in 624
+12-29 16:57:55.583 30724 30774 I flutter : before-plugin-processing-score: index 85 at 1735502274485
+12-29 16:57:55.583 30724 30774 I flutter : saving-image-pre-processing-score: index 85 in 20
+12-29 16:57:55.583 30724 30774 I flutter : calling-plugin-processing-score: index 85 calculate scored was called
+12-29 16:57:55.583 30724 30774 I flutter : completed-processing-score: index 85 in 1115 ms
+12-29 16:57:56.797 30724 30724 D MainActivity: in-plugin-processing-score: index 87 at 1735502276797
+12-29 16:57:57.434 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 87 in 321
+12-29 16:57:57.434 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 87 in 314
+12-29 16:57:57.434 30724 30724 D CowBodyConditionScore: job-processing-score: index 87 in 636
+12-29 16:57:58.958 30724 30774 I flutter : before-plugin-processing-score: index 87 at 1735502276796
+12-29 16:57:58.958 30724 30774 I flutter : saving-image-pre-processing-score: index 87 in 13
+12-29 16:57:58.958 30724 30774 I flutter : calling-plugin-processing-score: index 87 calculate scored was called
+12-29 16:57:58.958 30724 30774 I flutter : completed-processing-score: index 87 in 2169 ms
+12-29 16:57:59.982 30724 30724 D MainActivity: in-plugin-processing-score: index 89 at 1735502279982
+12-29 16:58:00.590 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 89 in 310
+12-29 16:58:00.590 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 89 in 297
+12-29 16:58:00.591 30724 30724 D CowBodyConditionScore: job-processing-score: index 89 in 607
+12-29 16:58:02.114 30724 30774 I flutter : before-plugin-processing-score: index 89 at 1735502279980
+12-29 16:58:02.114 30724 30774 I flutter : saving-image-pre-processing-score: index 89 in 1040
+12-29 16:58:02.114 30724 30774 I flutter : calling-plugin-processing-score: index 89 calculate scored was called
+12-29 16:58:02.114 30724 30774 I flutter : completed-processing-score: index 89 in 3172 ms
+12-29 16:58:02.222 30724 30724 D MainActivity: in-plugin-processing-score: index 91 at 1735502282222
+12-29 16:58:02.827 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 91 in 311
+12-29 16:58:02.827 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 91 in 294
+12-29 16:58:02.827 30724 30724 D CowBodyConditionScore: job-processing-score: index 91 in 605
+12-29 16:58:06.413 30724 30774 I flutter : before-plugin-processing-score: index 91 at 1735502282132
+12-29 16:58:06.413 30724 30774 I flutter : saving-image-pre-processing-score: index 91 in 58
+12-29 16:58:06.413 30724 30774 I flutter : calling-plugin-processing-score: index 91 calculate scored was called
+12-29 16:58:06.413 30724 30774 I flutter : completed-processing-score: index 91 in 4336 ms
+12-29 16:58:09.483 30724 30724 D MainActivity: in-plugin-processing-score: index 93 at 1735502289482
+12-29 16:58:10.099 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 93 in 327
+12-29 16:58:10.100 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 93 in 289
+12-29 16:58:10.100 30724 30724 D CowBodyConditionScore: job-processing-score: index 93 in 617
+12-29 16:58:10.100 30724 30724 D MainActivity: in-plugin-processing-score: index 95 at 1735502290100
+12-29 16:58:10.720 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 95 in 318
+12-29 16:58:10.720 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 95 in 302
+12-29 16:58:10.720 30724 30724 D CowBodyConditionScore: job-processing-score: index 95 in 620
+12-29 16:58:11.523 30724 30774 I flutter : before-plugin-processing-score: index 93 at 1735502289478
+12-29 16:58:11.523 30724 30774 I flutter : saving-image-pre-processing-score: index 93 in 3168
+12-29 16:58:11.523 30724 30774 I flutter : calling-plugin-processing-score: index 93 calculate scored was called
+12-29 16:58:11.523 30724 30774 I flutter : completed-processing-score: index 93 in 5209 ms
+12-29 16:58:11.526 30724 30774 I flutter : before-plugin-processing-score: index 95 at 1735502289482
+12-29 16:58:11.526 30724 30774 I flutter : saving-image-pre-processing-score: index 95 in 3119
+12-29 16:58:11.526 30724 30774 I flutter : calling-plugin-processing-score: index 95 calculate scored was called
+12-29 16:58:11.526 30724 30774 I flutter : completed-processing-score: index 95 in 5160 ms
+12-29 16:58:13.627 30724 30724 D MainActivity: in-plugin-processing-score: index 97 at 1735502293627
+12-29 16:58:14.267 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 97 in 322
+12-29 16:58:14.267 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 97 in 316
+12-29 16:58:14.267 30724 30724 D CowBodyConditionScore: job-processing-score: index 97 in 640
+12-29 16:58:14.722 30724 30774 I flutter : before-plugin-processing-score: index 97 at 1735502293623
+12-29 16:58:14.722 30724 30774 I flutter : saving-image-pre-processing-score: index 97 in 1028
+12-29 16:58:14.722 30724 30774 I flutter : calling-plugin-processing-score: index 97 calculate scored was called
+12-29 16:58:14.722 30724 30774 I flutter : completed-processing-score: index 97 in 2124 ms
+12-29 16:58:14.742 30724 30724 D MainActivity: in-plugin-processing-score: index 99 at 1735502294742
+12-29 16:58:15.370 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 99 in 310
+12-29 16:58:15.370 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 99 in 316
+12-29 16:58:15.370 30724 30724 D CowBodyConditionScore: job-processing-score: index 99 in 628
+12-29 16:58:17.871 30724 30774 I flutter : before-plugin-processing-score: index 99 at 1735502294740
+12-29 16:58:17.871 30724 30774 I flutter : saving-image-pre-processing-score: index 99 in 35
+12-29 16:58:17.871 30724 30774 I flutter : calling-plugin-processing-score: index 99 calculate scored was called
+12-29 16:58:17.871 30724 30774 I flutter : completed-processing-score: index 99 in 3165 ms
+12-29 16:58:19.903 30724 30724 D MainActivity: in-plugin-processing-score: index 101 at 1735502299903
+12-29 16:58:20.627 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 101 in 425
+12-29 16:58:20.627 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 101 in 297
+12-29 16:58:20.627 30724 30724 D CowBodyConditionScore: job-processing-score: index 101 in 724
+12-29 16:58:22.058 30724 30774 I flutter : before-plugin-processing-score: index 101 at 1735502299898
+12-29 16:58:22.058 30724 30774 I flutter : saving-image-pre-processing-score: index 101 in 2068
+12-29 16:58:22.058 30724 30774 I flutter : calling-plugin-processing-score: index 101 calculate scored was called
+12-29 16:58:22.058 30724 30774 I flutter : completed-processing-score: index 101 in 4226 ms
+12-29 16:58:22.073 30724 30724 D MainActivity: in-plugin-processing-score: index 103 at 1735502302073
+12-29 16:58:22.881 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 103 in 323
+12-29 16:58:22.882 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 103 in 484
+12-29 16:58:22.882 30724 30724 D CowBodyConditionScore: job-processing-score: index 103 in 809
+12-29 16:58:22.883 30724 30724 D MainActivity: in-plugin-processing-score: index 105 at 1735502302882
+12-29 16:58:23.528 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 105 in 302
+12-29 16:58:23.528 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 105 in 342
+12-29 16:58:23.528 30724 30724 D CowBodyConditionScore: job-processing-score: index 105 in 645
+12-29 16:58:24.378 30724 30774 I flutter : before-plugin-processing-score: index 103 at 1735502302071
+12-29 16:58:24.378 30724 30774 I flutter : saving-image-pre-processing-score: index 103 in 117
+12-29 16:58:24.378 30724 30774 I flutter : calling-plugin-processing-score: index 103 calculate scored was called
+12-29 16:58:24.378 30724 30774 I flutter : completed-processing-score: index 103 in 2417 ms
+12-29 16:58:27.410 30724 30774 I flutter : before-plugin-processing-score: index 105 at 1735502302073
+12-29 16:58:27.410 30724 30774 I flutter : saving-image-pre-processing-score: index 105 in 67
+12-29 16:58:27.410 30724 30774 I flutter : calling-plugin-processing-score: index 105 calculate scored was called
+12-29 16:58:27.410 30724 30774 I flutter : completed-processing-score: index 105 in 5400 ms
+12-29 16:58:27.431 30724 30724 D MainActivity: in-plugin-processing-score: index 107 at 1735502307430
+12-29 16:58:28.064 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 107 in 316
+12-29 16:58:28.065 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 107 in 317
+12-29 16:58:28.065 30724 30724 D CowBodyConditionScore: job-processing-score: index 107 in 634
+12-29 16:58:29.476 30724 30774 I flutter : before-plugin-processing-score: index 107 at 1735502307429
+12-29 16:58:29.476 30724 30774 I flutter : saving-image-pre-processing-score: index 107 in 3090
+12-29 16:58:29.476 30724 30774 I flutter : calling-plugin-processing-score: index 107 calculate scored was called
+12-29 16:58:29.476 30724 30774 I flutter : completed-processing-score: index 107 in 5133 ms
+12-29 16:58:30.595 30724 30724 D MainActivity: in-plugin-processing-score: index 109 at 1735502310595
+12-29 16:58:31.241 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 109 in 327
+12-29 16:58:31.241 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 109 in 319
+12-29 16:58:31.241 30724 30724 D CowBodyConditionScore: job-processing-score: index 109 in 646
+12-29 16:58:32.704 30724 30774 I flutter : before-plugin-processing-score: index 109 at 1735502310593
+12-29 16:58:32.704 30724 30774 I flutter : saving-image-pre-processing-score: index 109 in 19
+12-29 16:58:32.704 30724 30774 I flutter : calling-plugin-processing-score: index 109 calculate scored was called
+12-29 16:58:32.704 30724 30774 I flutter : completed-processing-score: index 109 in 2127 ms
+12-29 16:58:33.758 30724 30724 D MainActivity: in-plugin-processing-score: index 111 at 1735502313758
+12-29 16:58:34.378 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 111 in 316
+12-29 16:58:34.378 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 111 in 304
+12-29 16:58:34.378 30724 30724 D CowBodyConditionScore: job-processing-score: index 111 in 620
+12-29 16:58:35.900 30724 30774 I flutter : before-plugin-processing-score: index 111 at 1735502313725
+12-29 16:58:35.900 30724 30774 I flutter : saving-image-pre-processing-score: index 111 in 1039
+12-29 16:58:35.900 30724 30774 I flutter : calling-plugin-processing-score: index 111 calculate scored was called
+12-29 16:58:35.900 30724 30774 I flutter : completed-processing-score: index 111 in 3210 ms
+12-29 16:58:36.003 30724 30724 D MainActivity: in-plugin-processing-score: index 113 at 1735502316003
+12-29 16:58:36.616 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 113 in 313
+12-29 16:58:36.617 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 113 in 299
+12-29 16:58:36.617 30724 30724 D CowBodyConditionScore: job-processing-score: index 113 in 614
+12-29 16:58:40.173 30724 30774 I flutter : before-plugin-processing-score: index 113 at 1735502315927
+12-29 16:58:40.173 30724 30774 I flutter : saving-image-pre-processing-score: index 113 in 73
+12-29 16:58:40.173 30724 30774 I flutter : calling-plugin-processing-score: index 113 calculate scored was called
+12-29 16:58:40.173 30724 30774 I flutter : completed-processing-score: index 113 in 4317 ms
+12-29 16:58:40.186 30724 30724 D MainActivity: in-plugin-processing-score: index 115 at 1735502320186
+12-29 16:58:40.923 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 115 in 417
+12-29 16:58:40.923 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 115 in 319
+12-29 16:58:40.923 30724 30724 D CowBodyConditionScore: job-processing-score: index 115 in 737
+12-29 16:58:40.924 30724 30724 D MainActivity: in-plugin-processing-score: index 117 at 1735502320924
+12-29 16:58:41.553 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 117 in 337
+12-29 16:58:41.553 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 117 in 292
+12-29 16:58:41.553 30724 30724 D CowBodyConditionScore: job-processing-score: index 117 in 629
+12-29 16:58:45.341 30724 30774 I flutter : before-plugin-processing-score: index 115 at 1735502320184
+12-29 16:58:45.341 30724 30774 I flutter : saving-image-pre-processing-score: index 115 in 112
+12-29 16:58:45.341 30724 30774 I flutter : calling-plugin-processing-score: index 115 calculate scored was called
+12-29 16:58:45.341 30724 30774 I flutter : completed-processing-score: index 115 in 5266 ms
+12-29 16:58:45.344 30724 30774 I flutter : before-plugin-processing-score: index 117 at 1735502320186
+12-29 16:58:45.344 30724 30774 I flutter : saving-image-pre-processing-score: index 117 in 60
+12-29 16:58:45.344 30724 30774 I flutter : calling-plugin-processing-score: index 117 calculate scored was called
+12-29 16:58:45.344 30724 30774 I flutter : completed-processing-score: index 117 in 5216 ms
+12-29 16:58:45.367 30724 30724 D MainActivity: in-plugin-processing-score: index 119 at 1735502325367
+12-29 16:58:46.005 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 119 in 321
+12-29 16:58:46.005 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 119 in 316
+12-29 16:58:46.005 30724 30724 D CowBodyConditionScore: job-processing-score: index 119 in 638
+12-29 16:58:48.406 30724 30774 I flutter : before-plugin-processing-score: index 119 at 1735502325365
+12-29 16:58:48.406 30724 30774 I flutter : saving-image-pre-processing-score: index 119 in 66
+12-29 16:58:48.406 30724 30774 I flutter : calling-plugin-processing-score: index 119 calculate scored was called
+12-29 16:58:48.406 30724 30774 I flutter : completed-processing-score: index 119 in 3103 ms
+12-29 16:58:49.533 30724 30724 D MainActivity: in-plugin-processing-score: index 121 at 1735502329533
+12-29 16:58:50.150 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 121 in 312
+12-29 16:58:50.150 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 121 in 304
+12-29 16:58:50.150 30724 30724 D CowBodyConditionScore: job-processing-score: index 121 in 616
+12-29 16:58:51.625 30724 30774 I flutter : before-plugin-processing-score: index 121 at 1735502329500
+12-29 16:58:51.625 30724 30774 I flutter : saving-image-pre-processing-score: index 121 in 1060
+12-29 16:58:51.625 30724 30774 I flutter : calling-plugin-processing-score: index 121 calculate scored was called
+12-29 16:58:51.625 30724 30774 I flutter : completed-processing-score: index 121 in 3183 ms
+12-29 16:58:51.638 30724 30724 D MainActivity: in-plugin-processing-score: index 123 at 1735502331638
+12-29 16:58:52.242 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 123 in 301
+12-29 16:58:52.243 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 123 in 302
+12-29 16:58:52.243 30724 30724 D CowBodyConditionScore: job-processing-score: index 123 in 605
+12-29 16:58:54.793 30724 30774 I flutter : before-plugin-processing-score: index 123 at 1735502331637
+12-29 16:58:54.793 30724 30774 I flutter : saving-image-pre-processing-score: index 123 in 52
+12-29 16:58:54.793 30724 30774 I flutter : calling-plugin-processing-score: index 123 calculate scored was called
+12-29 16:58:54.793 30724 30774 I flutter : completed-processing-score: index 123 in 3205 ms
+12-29 16:58:57.909 30724 30724 D MainActivity: in-plugin-processing-score: index 125 at 1735502337909
+12-29 16:58:58.574 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 125 in 330
+12-29 16:58:58.575 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 125 in 334
+12-29 16:58:58.575 30724 30724 D CowBodyConditionScore: job-processing-score: index 125 in 666
+12-29 16:58:58.930 30724 30724 D MainActivity: in-plugin-processing-score: index 127 at 1735502338930
+12-29 16:58:59.078 30724 30774 I flutter : before-plugin-processing-score: index 125 at 1735502337905
+12-29 16:58:59.078 30724 30774 I flutter : saving-image-pre-processing-score: index 125 in 3201
+12-29 16:58:59.078 30724 30774 I flutter : calling-plugin-processing-score: index 125 calculate scored was called
+12-29 16:58:59.078 30724 30774 I flutter : completed-processing-score: index 125 in 4367 ms
+12-29 16:58:59.530 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 127 in 303
+12-29 16:58:59.530 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 127 in 296
+12-29 16:58:59.530 30724 30724 D CowBodyConditionScore: job-processing-score: index 127 in 600
+12-29 16:59:02.130 30724 30724 D MainActivity: in-plugin-processing-score: index 129 at 1735502342130
+12-29 16:59:02.760 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 129 in 316
+12-29 16:59:02.760 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 129 in 314
+12-29 16:59:02.761 30724 30724 D CowBodyConditionScore: job-processing-score: index 129 in 631
+12-29 16:59:02.761 30724 30724 D MainActivity: in-plugin-processing-score: index 131 at 1735502342761
+12-29 16:59:03.479 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 131 in 414
+12-29 16:59:03.479 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 131 in 303
+12-29 16:59:03.480 30724 30724 D CowBodyConditionScore: job-processing-score: index 131 in 719
+12-29 16:59:04.198 30724 30774 I flutter : before-plugin-processing-score: index 127 at 1735502338927
+12-29 16:59:04.198 30724 30774 I flutter : saving-image-pre-processing-score: index 127 in 4155
+12-29 16:59:04.198 30724 30774 I flutter : calling-plugin-processing-score: index 127 calculate scored was called
+12-29 16:59:04.198 30724 30774 I flutter : completed-processing-score: index 127 in 9423 ms
+12-29 16:59:04.202 30724 30774 I flutter : before-plugin-processing-score: index 129 at 1735502342129
+12-29 16:59:04.202 30724 30774 I flutter : saving-image-pre-processing-score: index 129 in 3131
+12-29 16:59:04.202 30724 30774 I flutter : calling-plugin-processing-score: index 129 calculate scored was called
+12-29 16:59:04.202 30724 30774 I flutter : completed-processing-score: index 129 in 5202 ms
+12-29 16:59:04.205 30724 30774 I flutter : before-plugin-processing-score: index 131 at 1735502342130
+12-29 16:59:04.205 30724 30774 I flutter : saving-image-pre-processing-score: index 131 in 3079
+12-29 16:59:04.205 30724 30774 I flutter : calling-plugin-processing-score: index 131 calculate scored was called
+12-29 16:59:04.205 30724 30774 I flutter : completed-processing-score: index 131 in 5152 ms
+12-29 16:59:06.293 30724 30724 D MainActivity: in-plugin-processing-score: index 133 at 1735502346293
+12-29 16:59:06.914 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 133 in 317
+12-29 16:59:06.914 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 133 in 303
+12-29 16:59:06.914 30724 30724 D CowBodyConditionScore: job-processing-score: index 133 in 621
+12-29 16:59:08.412 30724 30774 I flutter : before-plugin-processing-score: index 133 at 1735502346290
+12-29 16:59:08.412 30724 30774 I flutter : saving-image-pre-processing-score: index 133 in 16
+12-29 16:59:08.412 30724 30774 I flutter : calling-plugin-processing-score: index 133 calculate scored was called
+12-29 16:59:08.412 30724 30774 I flutter : completed-processing-score: index 133 in 2135 ms
+12-29 16:59:08.422 30724 30724 D MainActivity: in-plugin-processing-score: index 135 at 1735502348422
+12-29 16:59:09.034 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 135 in 307
+12-29 16:59:09.034 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 135 in 305
+12-29 16:59:09.034 30724 30724 D CowBodyConditionScore: job-processing-score: index 135 in 612
+12-29 16:59:10.566 30724 30774 I flutter : before-plugin-processing-score: index 135 at 1735502348419
+12-29 16:59:10.566 30724 30774 I flutter : saving-image-pre-processing-score: index 135 in 24
+12-29 16:59:10.566 30724 30774 I flutter : calling-plugin-processing-score: index 135 calculate scored was called
+12-29 16:59:10.566 30724 30774 I flutter : completed-processing-score: index 135 in 2169 ms
+12-29 16:59:10.577 30724 30724 D MainActivity: in-plugin-processing-score: index 137 at 1735502350577
+12-29 16:59:11.185 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 137 in 299
+12-29 16:59:11.185 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 137 in 309
+12-29 16:59:11.185 30724 30724 D CowBodyConditionScore: job-processing-score: index 137 in 608
+12-29 16:59:12.713 30724 30774 I flutter : before-plugin-processing-score: index 137 at 1735502350575
+12-29 16:59:12.713 30724 30774 I flutter : saving-image-pre-processing-score: index 137 in 26
+12-29 16:59:12.713 30724 30774 I flutter : calling-plugin-processing-score: index 137 calculate scored was called
+12-29 16:59:12.713 30724 30774 I flutter : completed-processing-score: index 137 in 2161 ms
+12-29 16:59:12.723 30724 30724 D MainActivity: in-plugin-processing-score: index 139 at 1735502352723
+12-29 16:59:13.353 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 139 in 334
+12-29 16:59:13.353 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 139 in 296
+12-29 16:59:13.353 30724 30724 D CowBodyConditionScore: job-processing-score: index 139 in 630
+12-29 16:59:15.890 30724 30774 I flutter : before-plugin-processing-score: index 139 at 1735502352721
+12-29 16:59:15.890 30724 30774 I flutter : saving-image-pre-processing-score: index 139 in 23
+12-29 16:59:15.890 30724 30774 I flutter : calling-plugin-processing-score: index 139 calculate scored was called
+12-29 16:59:15.890 30724 30774 I flutter : completed-processing-score: index 139 in 3190 ms
+12-29 16:59:16.913 30724 30724 D MainActivity: in-plugin-processing-score: index 141 at 1735502356913
+12-29 16:59:17.545 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 141 in 326
+12-29 16:59:17.545 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 141 in 304
+12-29 16:59:17.545 30724 30724 D CowBodyConditionScore: job-processing-score: index 141 in 631
+12-29 16:59:20.023 30724 30774 I flutter : before-plugin-processing-score: index 141 at 1735502356910
+12-29 16:59:20.023 30724 30774 I flutter : saving-image-pre-processing-score: index 141 in 1059
+12-29 16:59:20.023 30724 30774 I flutter : calling-plugin-processing-score: index 141 calculate scored was called
+12-29 16:59:20.023 30724 30774 I flutter : completed-processing-score: index 141 in 4169 ms
+12-29 16:59:22.058 30724 30724 D MainActivity: in-plugin-processing-score: index 143 at 1735502362058
+12-29 16:59:22.704 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 143 in 327
+12-29 16:59:22.704 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 143 in 318
+12-29 16:59:22.704 30724 30724 D CowBodyConditionScore: job-processing-score: index 143 in 646
+12-29 16:59:23.084 30724 30774 I flutter : before-plugin-processing-score: index 143 at 1735502362054
+12-29 16:59:23.084 30724 30774 I flutter : saving-image-pre-processing-score: index 143 in 2073
+12-29 16:59:23.084 30724 30774 I flutter : calling-plugin-processing-score: index 143 calculate scored was called
+12-29 16:59:23.084 30724 30774 I flutter : completed-processing-score: index 143 in 3100 ms
+12-29 16:59:24.339 30724 30724 D MainActivity: in-plugin-processing-score: index 145 at 1735502364339
+12-29 16:59:24.974 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 145 in 328
+12-29 16:59:24.974 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 145 in 306
+12-29 16:59:24.974 30724 30724 D CowBodyConditionScore: job-processing-score: index 145 in 634
+12-29 16:59:25.393 30724 30774 I flutter : before-plugin-processing-score: index 145 at 1735502364337
+12-29 16:59:25.393 30724 30774 I flutter : saving-image-pre-processing-score: index 145 in 40
+12-29 16:59:25.393 30724 30774 I flutter : calling-plugin-processing-score: index 145 calculate scored was called
+12-29 16:59:25.393 30724 30774 I flutter : completed-processing-score: index 145 in 1094 ms
+12-29 16:59:26.541 30724 30724 D MainActivity: in-plugin-processing-score: index 147 at 1735502366541
+12-29 16:59:27.156 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 147 in 308
+12-29 16:59:27.157 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 147 in 307
+12-29 16:59:27.157 30724 30724 D CowBodyConditionScore: job-processing-score: index 147 in 616
+12-29 16:59:28.759 30724 30774 I flutter : before-plugin-processing-score: index 147 at 1735502366539
+12-29 16:59:28.759 30724 30774 I flutter : saving-image-pre-processing-score: index 147 in 16
+12-29 16:59:28.759 30724 30774 I flutter : calling-plugin-processing-score: index 147 calculate scored was called
+12-29 16:59:28.759 30724 30774 I flutter : completed-processing-score: index 147 in 2234 ms
+12-29 16:59:30.861 30724 30724 D MainActivity: in-plugin-processing-score: index 149 at 1735502370861
+12-29 16:59:31.498 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 149 in 328
+12-29 16:59:31.498 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 149 in 308
+12-29 16:59:31.498 30724 30724 D CowBodyConditionScore: job-processing-score: index 149 in 636
+12-29 16:59:31.998 30724 30774 I flutter : before-plugin-processing-score: index 149 at 1735502370858
+12-29 16:59:31.998 30724 30774 I flutter : saving-image-pre-processing-score: index 149 in 2116
+12-29 16:59:31.998 30724 30774 I flutter : calling-plugin-processing-score: index 149 calculate scored was called
+12-29 16:59:31.998 30724 30774 I flutter : completed-processing-score: index 149 in 3250 ms
+12-29 16:59:32.025 30724 30724 D MainActivity: in-plugin-processing-score: index 151 at 1735502372025
+12-29 16:59:32.741 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 151 in 423
+12-29 16:59:32.741 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 151 in 292
+12-29 16:59:32.741 30724 30724 D CowBodyConditionScore: job-processing-score: index 151 in 716
+12-29 16:59:35.147 30724 30774 I flutter : before-plugin-processing-score: index 151 at 1735502372023
+12-29 16:59:35.147 30724 30774 I flutter : saving-image-pre-processing-score: index 151 in 79
+12-29 16:59:35.147 30724 30774 I flutter : calling-plugin-processing-score: index 151 calculate scored was called
+12-29 16:59:35.147 30724 30774 I flutter : completed-processing-score: index 151 in 3200 ms
+12-29 16:59:35.156 30724 30724 D MainActivity: in-plugin-processing-score: index 155 at 1735502375156
+12-29 16:59:35.783 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 155 in 322
+12-29 16:59:35.783 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 155 in 305
+12-29 16:59:35.783 30724 30724 D CowBodyConditionScore: job-processing-score: index 155 in 627
+12-29 16:59:35.784 30724 30724 D MainActivity: in-plugin-processing-score: index 153 at 1735502375784
+12-29 16:59:36.412 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 153 in 326
+12-29 16:59:36.412 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 153 in 302
+12-29 16:59:36.412 30724 30724 D CowBodyConditionScore: job-processing-score: index 153 in 628
+12-29 16:59:39.268 30724 30774 I flutter : before-plugin-processing-score: index 155 at 1735502375154
+12-29 16:59:39.268 30724 30774 I flutter : saving-image-pre-processing-score: index 155 in 23
+12-29 16:59:39.268 30724 30774 I flutter : calling-plugin-processing-score: index 155 calculate scored was called
+12-29 16:59:39.268 30724 30774 I flutter : completed-processing-score: index 155 in 4134 ms
+12-29 16:59:39.271 30724 30774 I flutter : before-plugin-processing-score: index 153 at 1735502375156
+12-29 16:59:39.271 30724 30774 I flutter : saving-image-pre-processing-score: index 153 in 74
+12-29 16:59:39.271 30724 30774 I flutter : calling-plugin-processing-score: index 153 calculate scored was called
+12-29 16:59:39.271 30724 30774 I flutter : completed-processing-score: index 153 in 4187 ms
+12-29 16:59:43.850 30724 30724 D MainActivity: in-plugin-processing-score: index 157 at 1735502383850
+12-29 16:59:44.500 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 157 in 332
+12-29 16:59:44.501 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 157 in 317
+12-29 16:59:44.501 30724 30724 D CowBodyConditionScore: job-processing-score: index 157 in 651
+12-29 16:59:44.904 30724 30774 I flutter : before-plugin-processing-score: index 157 at 1735502383845
+12-29 16:59:44.904 30724 30774 I flutter : saving-image-pre-processing-score: index 157 in 1067
+12-29 16:59:44.904 30724 30774 I flutter : calling-plugin-processing-score: index 157 calculate scored was called
+12-29 16:59:44.904 30724 30774 I flutter : completed-processing-score: index 157 in 2124 ms
+12-29 16:59:45.929 30724 30724 D MainActivity: in-plugin-processing-score: index 159 at 1735502385929
+12-29 16:59:46.554 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 159 in 320
+12-29 16:59:46.554 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 159 in 304
+12-29 16:59:46.554 30724 30724 D CowBodyConditionScore: job-processing-score: index 159 in 624
+12-29 16:59:47.018 30724 30774 I flutter : before-plugin-processing-score: index 159 at 1735502385928
+12-29 16:59:47.018 30724 30774 I flutter : saving-image-pre-processing-score: index 159 in 1032
+12-29 16:59:47.018 30724 30774 I flutter : calling-plugin-processing-score: index 159 calculate scored was called
+12-29 16:59:47.018 30724 30774 I flutter : completed-processing-score: index 159 in 2120 ms
+12-29 16:59:49.049 30724 30724 D MainActivity: in-plugin-processing-score: index 161 at 1735502389049
+12-29 16:59:49.678 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 161 in 321
+12-29 16:59:49.678 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 161 in 307
+12-29 16:59:49.678 30724 30724 D CowBodyConditionScore: job-processing-score: index 161 in 629
+12-29 16:59:50.160 30724 30774 I flutter : before-plugin-processing-score: index 161 at 1735502389045
+12-29 16:59:50.160 30724 30774 I flutter : saving-image-pre-processing-score: index 161 in 2040
+12-29 16:59:50.160 30724 30774 I flutter : calling-plugin-processing-score: index 161 calculate scored was called
+12-29 16:59:50.160 30724 30774 I flutter : completed-processing-score: index 161 in 3152 ms
+12-29 16:59:53.200 30724 30724 D MainActivity: in-plugin-processing-score: index 163 at 1735502393200
+12-29 16:59:53.821 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 163 in 323
+12-29 16:59:53.821 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 163 in 296
+12-29 16:59:53.821 30724 30724 D CowBodyConditionScore: job-processing-score: index 163 in 620
+12-29 16:59:54.354 30724 30774 I flutter : before-plugin-processing-score: index 163 at 1735502393197
+12-29 16:59:54.354 30724 30774 I flutter : saving-image-pre-processing-score: index 163 in 3081
+12-29 16:59:54.354 30724 30774 I flutter : calling-plugin-processing-score: index 163 calculate scored was called
+12-29 16:59:54.354 30724 30774 I flutter : completed-processing-score: index 163 in 4235 ms
+12-29 16:59:58.411 30724 30724 D MainActivity: in-plugin-processing-score: index 165 at 1735502398411
+12-29 16:59:59.054 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 165 in 331
+12-29 16:59:59.054 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 165 in 310
+12-29 16:59:59.054 30724 30724 D CowBodyConditionScore: job-processing-score: index 165 in 643
+12-29 16:59:59.055 30724 30724 D MainActivity: in-plugin-processing-score: index 167 at 1735502399055
+12-29 16:59:59.430 30724 30774 I flutter : before-plugin-processing-score: index 165 at 1735502398408
+12-29 16:59:59.430 30724 30774 I flutter : saving-image-pre-processing-score: index 165 in 4157
+12-29 16:59:59.430 30724 30774 I flutter : calling-plugin-processing-score: index 165 calculate scored was called
+12-29 16:59:59.430 30724 30774 I flutter : completed-processing-score: index 165 in 5177 ms
+12-29 16:59:59.773 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 167 in 420
+12-29 16:59:59.773 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 167 in 298
+12-29 16:59:59.774 30724 30724 D CowBodyConditionScore: job-processing-score: index 167 in 718
+12-29 17:00:00.597 30724 30774 I flutter : before-plugin-processing-score: index 167 at 1735502398411
+12-29 17:00:00.597 30724 30774 I flutter : saving-image-pre-processing-score: index 167 in 4107
+12-29 17:00:00.597 30724 30774 I flutter : calling-plugin-processing-score: index 167 calculate scored was called
+12-29 17:00:00.597 30724 30774 I flutter : completed-processing-score: index 167 in 6290 ms
+12-29 17:00:00.670 30724 30724 D MainActivity: in-plugin-processing-score: index 169 at 1735502400670
+12-29 17:00:01.283 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 169 in 314
+12-29 17:00:01.284 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 169 in 299
+12-29 17:00:01.284 30724 30724 D CowBodyConditionScore: job-processing-score: index 169 in 614
+12-29 17:00:02.840 30724 30774 I flutter : before-plugin-processing-score: index 169 at 1735502400668
+12-29 17:00:02.840 30724 30774 I flutter : saving-image-pre-processing-score: index 169 in 27
+12-29 17:00:02.840 30724 30774 I flutter : calling-plugin-processing-score: index 169 calculate scored was called
+12-29 17:00:02.840 30724 30774 I flutter : completed-processing-score: index 169 in 2191 ms
+12-29 17:00:03.937 30724 30724 D MainActivity: in-plugin-processing-score: index 171 at 1735502403937
+12-29 17:00:04.542 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 171 in 313
+12-29 17:00:04.542 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 171 in 291
+12-29 17:00:04.543 30724 30724 D CowBodyConditionScore: job-processing-score: index 171 in 604
+12-29 17:00:06.085 30724 30774 I flutter : before-plugin-processing-score: index 171 at 1735502403859
+12-29 17:00:06.085 30724 30774 I flutter : saving-image-pre-processing-score: index 171 in 1039
+12-29 17:00:06.085 30724 30774 I flutter : calling-plugin-processing-score: index 171 calculate scored was called
+12-29 17:00:06.085 30724 30774 I flutter : completed-processing-score: index 171 in 3262 ms
+12-29 17:00:09.123 30724 30724 D MainActivity: in-plugin-processing-score: index 173 at 1735502409122
+12-29 17:00:09.731 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 173 in 305
+12-29 17:00:09.731 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 173 in 303
+12-29 17:00:09.731 30724 30724 D CowBodyConditionScore: job-processing-score: index 173 in 608
+12-29 17:00:10.274 30724 30774 I flutter : before-plugin-processing-score: index 173 at 1735502409120
+12-29 17:00:10.274 30724 30774 I flutter : saving-image-pre-processing-score: index 173 in 3082
+12-29 17:00:10.274 30724 30774 I flutter : calling-plugin-processing-score: index 173 calculate scored was called
+12-29 17:00:10.274 30724 30774 I flutter : completed-processing-score: index 173 in 4233 ms
+12-29 17:00:14.332 30724 30724 D MainActivity: in-plugin-processing-score: index 175 at 1735502414332
+12-29 17:00:14.947 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 175 in 300
+12-29 17:00:14.947 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 175 in 314
+12-29 17:00:14.947 30724 30724 D CowBodyConditionScore: job-processing-score: index 175 in 615
+12-29 17:00:14.948 30724 30724 D MainActivity: in-plugin-processing-score: index 177 at 1735502414948
+12-29 17:00:15.443 30724 30774 I flutter : before-plugin-processing-score: index 175 at 1735502414328
+12-29 17:00:15.443 30724 30774 I flutter : saving-image-pre-processing-score: index 175 in 4159
+12-29 17:00:15.443 30724 30774 I flutter : calling-plugin-processing-score: index 175 calculate scored was called
+12-29 17:00:15.443 30724 30774 I flutter : completed-processing-score: index 175 in 5271 ms
+12-29 17:00:15.669 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 177 in 398
+12-29 17:00:15.669 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 177 in 323
+12-29 17:00:15.669 30724 30724 D CowBodyConditionScore: job-processing-score: index 177 in 721
+12-29 17:00:16.479 30724 30724 D MainActivity: in-plugin-processing-score: index 179 at 1735502416479
+12-29 17:00:17.090 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 179 in 305
+12-29 17:00:17.090 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 179 in 305
+12-29 17:00:17.090 30724 30724 D CowBodyConditionScore: job-processing-score: index 179 in 611
+12-29 17:00:18.507 30724 30774 I flutter : before-plugin-processing-score: index 177 at 1735502414332
+12-29 17:00:18.507 30724 30774 I flutter : saving-image-pre-processing-score: index 177 in 4110
+12-29 17:00:18.507 30724 30774 I flutter : calling-plugin-processing-score: index 177 calculate scored was called
+12-29 17:00:18.507 30724 30774 I flutter : completed-processing-score: index 177 in 8281 ms
+12-29 17:00:18.519 30724 30774 I flutter : before-plugin-processing-score: index 179 at 1735502416476
+12-29 17:00:18.519 30724 30774 I flutter : saving-image-pre-processing-score: index 179 in 1098
+12-29 17:00:18.519 30724 30774 I flutter : calling-plugin-processing-score: index 179 calculate scored was called
+12-29 17:00:18.519 30724 30774 I flutter : completed-processing-score: index 179 in 3138 ms
+12-29 17:00:19.719 30724 30724 D MainActivity: in-plugin-processing-score: index 181 at 1735502419719
+12-29 17:00:20.339 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 181 in 305
+12-29 17:00:20.339 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 181 in 315
+12-29 17:00:20.340 30724 30724 D CowBodyConditionScore: job-processing-score: index 181 in 620
+12-29 17:00:21.812 30724 30774 I flutter : before-plugin-processing-score: index 181 at 1735502419620
+12-29 17:00:21.812 30724 30774 I flutter : saving-image-pre-processing-score: index 181 in 19
+12-29 17:00:21.812 30724 30774 I flutter : calling-plugin-processing-score: index 181 calculate scored was called
+12-29 17:00:21.812 30724 30774 I flutter : completed-processing-score: index 181 in 2209 ms
+12-29 17:00:21.824 30724 30724 D MainActivity: in-plugin-processing-score: index 183 at 1735502421824
+12-29 17:00:22.448 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 183 in 311
+12-29 17:00:22.448 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 183 in 313
+12-29 17:00:22.448 30724 30724 D CowBodyConditionScore: job-processing-score: index 183 in 624
+12-29 17:00:24.967 30724 30774 I flutter : before-plugin-processing-score: index 183 at 1735502421823
+12-29 17:00:24.967 30724 30774 I flutter : saving-image-pre-processing-score: index 183 in 19
+12-29 17:00:24.967 30724 30774 I flutter : calling-plugin-processing-score: index 183 calculate scored was called
+12-29 17:00:24.967 30724 30774 I flutter : completed-processing-score: index 183 in 3161 ms
+12-29 17:00:24.992 30724 30724 D MainActivity: in-plugin-processing-score: index 185 at 1735502424992
+12-29 17:00:25.618 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 185 in 316
+12-29 17:00:25.618 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 185 in 310
+12-29 17:00:25.618 30724 30724 D CowBodyConditionScore: job-processing-score: index 185 in 626
+12-29 17:00:29.168 30724 30774 I flutter : before-plugin-processing-score: index 185 at 1735502424989
+12-29 17:00:29.168 30724 30774 I flutter : saving-image-pre-processing-score: index 185 in 68
+12-29 17:00:29.168 30724 30774 I flutter : calling-plugin-processing-score: index 185 calculate scored was called
+12-29 17:00:29.168 30724 30774 I flutter : completed-processing-score: index 185 in 4243 ms
+12-29 17:00:29.182 30724 30724 D MainActivity: in-plugin-processing-score: index 187 at 1735502429182
+12-29 17:00:29.817 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 187 in 327
+12-29 17:00:29.817 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 187 in 306
+12-29 17:00:29.817 30724 30724 D CowBodyConditionScore: job-processing-score: index 187 in 635
+12-29 17:00:29.818 30724 30724 D MainActivity: in-plugin-processing-score: index 189 at 1735502429818
+12-29 17:00:30.463 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 189 in 312
+12-29 17:00:30.463 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 189 in 333
+12-29 17:00:30.463 30724 30724 D CowBodyConditionScore: job-processing-score: index 189 in 645
+12-29 17:00:34.506 30724 30774 I flutter : before-plugin-processing-score: index 187 at 1735502429179
+12-29 17:00:34.506 30724 30774 I flutter : saving-image-pre-processing-score: index 187 in 123
+12-29 17:00:34.506 30724 30774 I flutter : calling-plugin-processing-score: index 187 calculate scored was called
+12-29 17:00:34.506 30724 30774 I flutter : completed-processing-score: index 187 in 5442 ms
+12-29 17:00:34.509 30724 30774 I flutter : before-plugin-processing-score: index 189 at 1735502429181
+12-29 17:00:34.509 30724 30774 I flutter : saving-image-pre-processing-score: index 189 in 74
+12-29 17:00:34.509 30724 30774 I flutter : calling-plugin-processing-score: index 189 calculate scored was called
+12-29 17:00:34.509 30724 30774 I flutter : completed-processing-score: index 189 in 5399 ms
+12-29 17:00:36.538 30724 30724 D MainActivity: in-plugin-processing-score: index 191 at 1735502436538
+12-29 17:00:37.186 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 191 in 332
+12-29 17:00:37.186 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 191 in 313
+12-29 17:00:37.186 30724 30724 D CowBodyConditionScore: job-processing-score: index 191 in 647
+12-29 17:00:37.591 30724 30774 I flutter : before-plugin-processing-score: index 191 at 1735502436535
+12-29 17:00:37.591 30724 30774 I flutter : saving-image-pre-processing-score: index 191 in 2074
+12-29 17:00:37.591 30724 30774 I flutter : calling-plugin-processing-score: index 191 calculate scored was called
+12-29 17:00:37.591 30724 30774 I flutter : completed-processing-score: index 191 in 3128 ms
+12-29 17:00:37.600 30724 30724 D MainActivity: in-plugin-processing-score: index 193 at 1735502437600
+12-29 17:00:38.229 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 193 in 312
+12-29 17:00:38.230 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 193 in 316
+12-29 17:00:38.230 30724 30724 D CowBodyConditionScore: job-processing-score: index 193 in 630
+12-29 17:00:39.724 30724 30774 I flutter : before-plugin-processing-score: index 193 at 1735502437599
+12-29 17:00:39.724 30724 30774 I flutter : saving-image-pre-processing-score: index 193 in 15
+12-29 17:00:39.724 30724 30774 I flutter : calling-plugin-processing-score: index 193 calculate scored was called
+12-29 17:00:39.724 30724 30774 I flutter : completed-processing-score: index 193 in 2138 ms
+12-29 17:00:39.736 30724 30724 D MainActivity: in-plugin-processing-score: index 195 at 1735502439736
+12-29 17:00:40.455 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 195 in 404
+12-29 17:00:40.455 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 195 in 315
+12-29 17:00:40.455 30724 30724 D CowBodyConditionScore: job-processing-score: index 195 in 719
+12-29 17:00:41.869 30724 30774 I flutter : before-plugin-processing-score: index 195 at 1735502439734
+12-29 17:00:41.869 30724 30774 I flutter : saving-image-pre-processing-score: index 195 in 18
+12-29 17:00:41.869 30724 30774 I flutter : calling-plugin-processing-score: index 195 calculate scored was called
+12-29 17:00:41.869 30724 30774 I flutter : completed-processing-score: index 195 in 2150 ms
+12-29 17:00:43.907 30724 30724 D MainActivity: in-plugin-processing-score: index 197 at 1735502443906
+12-29 17:00:44.592 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 197 in 327
+12-29 17:00:44.592 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 197 in 356
+12-29 17:00:44.593 30724 30724 D CowBodyConditionScore: job-processing-score: index 197 in 685
+12-29 17:00:45.029 30724 30774 I flutter : before-plugin-processing-score: index 197 at 1735502443903
+12-29 17:00:45.029 30724 30774 I flutter : saving-image-pre-processing-score: index 197 in 2047
+12-29 17:00:45.029 30724 30774 I flutter : calling-plugin-processing-score: index 197 calculate scored was called
+12-29 17:00:45.029 30724 30774 I flutter : completed-processing-score: index 197 in 3171 ms
+12-29 17:00:45.049 30724 30724 D MainActivity: in-plugin-processing-score: index 199 at 1735502445049
+12-29 17:00:45.853 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 199 in 317
+12-29 17:00:45.853 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 199 in 487
+12-29 17:00:45.853 30724 30724 D CowBodyConditionScore: job-processing-score: index 199 in 804
+12-29 17:00:49.218 30724 30774 I flutter : before-plugin-processing-score: index 199 at 1735502445047
+12-29 17:00:49.218 30724 30774 I flutter : saving-image-pre-processing-score: index 199 in 62
+12-29 17:00:49.218 30724 30774 I flutter : calling-plugin-processing-score: index 199 calculate scored was called
+12-29 17:00:49.218 30724 30774 I flutter : completed-processing-score: index 199 in 4231 ms
+12-29 17:00:49.283 30724 30724 D MainActivity: in-plugin-processing-score: index 201 at 1735502449283
+12-29 17:00:49.908 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 201 in 318
+12-29 17:00:49.908 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 201 in 307
+12-29 17:00:49.908 30724 30724 D CowBodyConditionScore: job-processing-score: index 201 in 625
+12-29 17:00:49.909 30724 30724 D MainActivity: in-plugin-processing-score: index 203 at 1735502449909
+12-29 17:00:50.531 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 203 in 315
+12-29 17:00:50.531 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 203 in 307
+12-29 17:00:50.532 30724 30724 D CowBodyConditionScore: job-processing-score: index 203 in 622
+12-29 17:00:54.348 30724 30774 I flutter : before-plugin-processing-score: index 201 at 1735502449246
+12-29 17:00:54.348 30724 30774 I flutter : saving-image-pre-processing-score: index 201 in 126
+12-29 17:00:54.348 30724 30774 I flutter : calling-plugin-processing-score: index 201 calculate scored was called
+12-29 17:00:54.348 30724 30774 I flutter : completed-processing-score: index 201 in 5226 ms
+12-29 17:00:54.357 30724 30774 I flutter : before-plugin-processing-score: index 203 at 1735502449283
+12-29 17:00:54.357 30724 30774 I flutter : saving-image-pre-processing-score: index 203 in 111
+12-29 17:00:54.357 30724 30774 I flutter : calling-plugin-processing-score: index 203 calculate scored was called
+12-29 17:00:54.357 30724 30774 I flutter : completed-processing-score: index 203 in 5183 ms
+12-29 17:00:55.443 30724 30724 D MainActivity: in-plugin-processing-score: index 205 at 1735502455443
+12-29 17:00:56.101 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 205 in 310
+12-29 17:00:56.102 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 205 in 348
+12-29 17:00:56.102 30724 30724 D CowBodyConditionScore: job-processing-score: index 205 in 659
+12-29 17:00:57.564 30724 30774 I flutter : before-plugin-processing-score: index 205 at 1735502455441
+12-29 17:00:57.564 30724 30774 I flutter : saving-image-pre-processing-score: index 205 in 12
+12-29 17:00:57.564 30724 30774 I flutter : calling-plugin-processing-score: index 205 calculate scored was called
+12-29 17:00:57.564 30724 30774 I flutter : completed-processing-score: index 205 in 2133 ms
+12-29 17:00:57.570 30724 30724 D MainActivity: in-plugin-processing-score: index 207 at 1735502457569
+12-29 17:00:58.176 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 207 in 312
+12-29 17:00:58.176 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 207 in 294
+12-29 17:00:58.176 30724 30724 D CowBodyConditionScore: job-processing-score: index 207 in 606
+12-29 17:01:00.773 30724 30774 I flutter : before-plugin-processing-score: index 207 at 1735502457568
+12-29 17:01:00.773 30724 30774 I flutter : saving-image-pre-processing-score: index 207 in 15
+12-29 17:01:00.773 30724 30774 I flutter : calling-plugin-processing-score: index 207 calculate scored was called
+12-29 17:01:00.773 30724 30774 I flutter : completed-processing-score: index 207 in 3218 ms
+12-29 17:01:00.790 30724 30724 D MainActivity: in-plugin-processing-score: index 209 at 1735502460790
+12-29 17:01:01.392 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 209 in 298
+12-29 17:01:01.393 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 209 in 304
+12-29 17:01:01.393 30724 30724 D CowBodyConditionScore: job-processing-score: index 209 in 603
+12-29 17:01:05.035 30724 30774 I flutter : before-plugin-processing-score: index 209 at 1735502460788
+12-29 17:01:05.035 30724 30774 I flutter : saving-image-pre-processing-score: index 209 in 65
+12-29 17:01:05.035 30724 30774 I flutter : calling-plugin-processing-score: index 209 calculate scored was called
+12-29 17:01:05.035 30724 30774 I flutter : completed-processing-score: index 209 in 4304 ms
+12-29 17:01:05.107 30724 30724 D MainActivity: in-plugin-processing-score: index 211 at 1735502465107
+12-29 17:01:05.713 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 211 in 320
+12-29 17:01:05.714 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 211 in 285
+12-29 17:01:05.714 30724 30724 D CowBodyConditionScore: job-processing-score: index 211 in 607
+12-29 17:01:05.714 30724 30724 D MainActivity: in-plugin-processing-score: index 213 at 1735502465714
+12-29 17:01:06.345 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 213 in 310
+12-29 17:01:06.346 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 213 in 321
+12-29 17:01:06.346 30724 30724 D CowBodyConditionScore: job-processing-score: index 213 in 632
+12-29 17:01:10.276 30724 30774 I flutter : before-plugin-processing-score: index 211 at 1735502465046
+12-29 17:01:10.276 30724 30774 I flutter : saving-image-pre-processing-score: index 211 in 119
+12-29 17:01:10.276 30724 30774 I flutter : calling-plugin-processing-score: index 211 calculate scored was called
+12-29 17:01:10.276 30724 30774 I flutter : completed-processing-score: index 211 in 5347 ms
+12-29 17:01:10.282 30724 30774 I flutter : before-plugin-processing-score: index 213 at 1735502465107
+12-29 17:01:10.282 30724 30774 I flutter : saving-image-pre-processing-score: index 213 in 123
+12-29 17:01:10.282 30724 30774 I flutter : calling-plugin-processing-score: index 213 calculate scored was called
+12-29 17:01:10.282 30724 30774 I flutter : completed-processing-score: index 213 in 5296 ms
+12-29 17:01:10.287 30724 30724 D MainActivity: in-plugin-processing-score: index 215 at 1735502470286
+12-29 17:01:10.914 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 215 in 301
+12-29 17:01:10.915 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 215 in 326
+12-29 17:01:10.915 30724 30724 D CowBodyConditionScore: job-processing-score: index 215 in 628
+12-29 17:01:12.325 30724 30774 I flutter : before-plugin-processing-score: index 215 at 1735502470285
+12-29 17:01:12.325 30724 30774 I flutter : saving-image-pre-processing-score: index 215 in 4091
+12-29 17:01:12.325 30724 30774 I flutter : calling-plugin-processing-score: index 215 calculate scored was called
+12-29 17:01:12.325 30724 30774 I flutter : completed-processing-score: index 215 in 6128 ms
+12-29 17:01:13.440 30724 30724 D MainActivity: in-plugin-processing-score: index 217 at 1735502473440
+12-29 17:01:14.154 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 217 in 314
+12-29 17:01:14.154 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 217 in 400
+12-29 17:01:14.154 30724 30724 D CowBodyConditionScore: job-processing-score: index 217 in 714
+12-29 17:01:14.497 30724 30774 I flutter : before-plugin-processing-score: index 217 at 1735502473437
+12-29 17:01:14.497 30724 30774 I flutter : saving-image-pre-processing-score: index 217 in 28
+12-29 17:01:14.497 30724 30774 I flutter : calling-plugin-processing-score: index 217 calculate scored was called
+12-29 17:01:14.497 30724 30774 I flutter : completed-processing-score: index 217 in 1086 ms
+12-29 17:01:16.633 30724 30724 D MainActivity: in-plugin-processing-score: index 219 at 1735502476633
+12-29 17:01:17.255 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 219 in 314
+12-29 17:01:17.256 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 219 in 308
+12-29 17:01:17.256 30724 30724 D CowBodyConditionScore: job-processing-score: index 219 in 623
+12-29 17:01:19.775 30724 30774 I flutter : before-plugin-processing-score: index 219 at 1735502476631
+12-29 17:01:19.775 30724 30774 I flutter : saving-image-pre-processing-score: index 219 in 53
+12-29 17:01:19.775 30724 30774 I flutter : calling-plugin-processing-score: index 219 calculate scored was called
+12-29 17:01:19.775 30724 30774 I flutter : completed-processing-score: index 219 in 3194 ms
+12-29 17:01:19.890 30724 30724 D MainActivity: in-plugin-processing-score: index 221 at 1735502479890
+12-29 17:01:20.494 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 221 in 298
+12-29 17:01:20.494 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 221 in 304
+12-29 17:01:20.494 30724 30724 D CowBodyConditionScore: job-processing-score: index 221 in 603
+12-29 17:01:20.495 30724 30724 D MainActivity: in-plugin-processing-score: index 223 at 1735502480495
+12-29 17:01:21.238 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 223 in 436
+12-29 17:01:21.238 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 223 in 307
+12-29 17:01:21.238 30724 30724 D CowBodyConditionScore: job-processing-score: index 223 in 743
+12-29 17:01:23.945 30724 30774 I flutter : before-plugin-processing-score: index 221 at 1735502479888
+12-29 17:01:23.945 30724 30774 I flutter : saving-image-pre-processing-score: index 221 in 80
+12-29 17:01:23.945 30724 30774 I flutter : calling-plugin-processing-score: index 221 calculate scored was called
+12-29 17:01:23.945 30724 30774 I flutter : completed-processing-score: index 221 in 4134 ms
+12-29 17:01:24.081 30724 30774 I flutter : before-plugin-processing-score: index 223 at 1735502479890
+12-29 17:01:24.081 30724 30774 I flutter : saving-image-pre-processing-score: index 223 in 28
+12-29 17:01:24.081 30724 30774 I flutter : calling-plugin-processing-score: index 223 calculate scored was called
+12-29 17:01:24.081 30724 30774 I flutter : completed-processing-score: index 223 in 4217 ms
+12-29 17:01:28.137 30724 30724 D MainActivity: in-plugin-processing-score: index 225 at 1735502488137
+12-29 17:01:28.787 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 225 in 333
+12-29 17:01:28.788 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 225 in 315
+12-29 17:01:28.788 30724 30724 D CowBodyConditionScore: job-processing-score: index 225 in 650
+12-29 17:01:29.160 30724 30724 D MainActivity: in-plugin-processing-score: index 227 at 1735502489160
+12-29 17:01:29.200 30724 30774 I flutter : before-plugin-processing-score: index 225 at 1735502488134
+12-29 17:01:29.200 30724 30774 I flutter : saving-image-pre-processing-score: index 225 in 4132
+12-29 17:01:29.200 30724 30774 I flutter : calling-plugin-processing-score: index 225 calculate scored was called
+12-29 17:01:29.200 30724 30774 I flutter : completed-processing-score: index 225 in 5195 ms
+12-29 17:01:29.768 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 227 in 307
+12-29 17:01:29.768 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 227 in 301
+12-29 17:01:29.768 30724 30724 D CowBodyConditionScore: job-processing-score: index 227 in 608
+12-29 17:01:31.273 30724 30774 I flutter : before-plugin-processing-score: index 227 at 1735502489157
+12-29 17:01:31.273 30724 30774 I flutter : saving-image-pre-processing-score: index 227 in 5085
+12-29 17:01:31.273 30724 30774 I flutter : calling-plugin-processing-score: index 227 calculate scored was called
+12-29 17:01:31.273 30724 30774 I flutter : completed-processing-score: index 227 in 7199 ms
+12-29 17:01:32.319 30724 30724 D MainActivity: in-plugin-processing-score: index 229 at 1735502492319
+12-29 17:01:32.615 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 229 in 107
+12-29 17:01:32.615 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 229 in 189
+12-29 17:01:32.615 30724 30724 D CowBodyConditionScore: job-processing-score: index 229 in 296
+12-29 17:01:33.394 30724 30774 I flutter : before-plugin-processing-score: index 229 at 1735502492318
+12-29 17:01:33.394 30724 30774 I flutter : saving-image-pre-processing-score: index 229 in 1023
+12-29 17:01:33.394 30724 30774 I flutter : calling-plugin-processing-score: index 229 calculate scored was called
+12-29 17:01:33.394 30724 30774 I flutter : completed-processing-score: index 229 in 2097 ms
+12-29 17:01:34.504 30724 30724 D MainActivity: in-plugin-processing-score: index 231 at 1735502494504
+12-29 17:01:34.787 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 231 in 112
+12-29 17:01:34.787 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 231 in 171
+12-29 17:01:34.787 30724 30724 D CowBodyConditionScore: job-processing-score: index 231 in 283
+12-29 17:01:36.554 30724 30774 I flutter : before-plugin-processing-score: index 231 at 1735502494503
+12-29 17:01:36.554 30724 30774 I flutter : saving-image-pre-processing-score: index 231 in 6
+12-29 17:01:36.554 30724 30774 I flutter : calling-plugin-processing-score: index 231 calculate scored was called
+12-29 17:01:36.554 30724 30774 I flutter : completed-processing-score: index 231 in 2050 ms
+12-29 17:01:36.604 30724 30724 D MainActivity: in-plugin-processing-score: index 233 at 1735502496604
+12-29 17:01:36.888 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 233 in 116
+12-29 17:01:36.888 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 233 in 168
+12-29 17:01:36.888 30724 30724 D CowBodyConditionScore: job-processing-score: index 233 in 284
+12-29 17:01:38.661 30724 30774 I flutter : before-plugin-processing-score: index 233 at 1735502496603
+12-29 17:01:38.661 30724 30774 I flutter : saving-image-pre-processing-score: index 233 in 9
+12-29 17:01:38.661 30724 30774 I flutter : calling-plugin-processing-score: index 233 calculate scored was called
+12-29 17:01:38.661 30724 30774 I flutter : completed-processing-score: index 233 in 2065 ms
+12-29 17:01:38.691 30724 30724 D MainActivity: in-plugin-processing-score: index 235 at 1735502498691
+12-29 17:01:38.972 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 235 in 113
+12-29 17:01:38.972 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 235 in 168
+12-29 17:01:38.972 30724 30724 D CowBodyConditionScore: job-processing-score: index 235 in 281
+12-29 17:01:40.807 30724 30774 I flutter : before-plugin-processing-score: index 235 at 1735502498690
+12-29 17:01:40.807 30724 30774 I flutter : saving-image-pre-processing-score: index 235 in 5
+12-29 17:01:40.807 30724 30774 I flutter : calling-plugin-processing-score: index 235 calculate scored was called
+12-29 17:01:40.807 30724 30774 I flutter : completed-processing-score: index 235 in 2119 ms
+12-29 17:01:40.843 30724 30724 D MainActivity: in-plugin-processing-score: index 237 at 1735502500843
+12-29 17:01:41.127 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 237 in 115
+12-29 17:01:41.127 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 237 in 169
+12-29 17:01:41.127 30724 30724 D CowBodyConditionScore: job-processing-score: index 237 in 284
+12-29 17:01:44.001 30724 30774 I flutter : before-plugin-processing-score: index 237 at 1735502500842
+12-29 17:01:44.001 30724 30774 I flutter : saving-image-pre-processing-score: index 237 in 7
+12-29 17:01:44.001 30724 30774 I flutter : calling-plugin-processing-score: index 237 calculate scored was called
+12-29 17:01:44.001 30724 30774 I flutter : completed-processing-score: index 237 in 3164 ms
+12-29 17:01:44.005 30724 30724 D MainActivity: in-plugin-processing-score: index 239 at 1735502504005
+12-29 17:01:44.281 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 239 in 107
+12-29 17:01:44.281 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 239 in 168
+12-29 17:01:44.281 30724 30724 D CowBodyConditionScore: job-processing-score: index 239 in 276
+12-29 17:01:48.082 30724 30774 I flutter : before-plugin-processing-score: index 239 at 1735502504005
+12-29 17:01:48.082 30724 30774 I flutter : saving-image-pre-processing-score: index 239 in 21
+12-29 17:01:48.082 30724 30774 I flutter : calling-plugin-processing-score: index 239 calculate scored was called
+12-29 17:01:48.082 30724 30774 I flutter : completed-processing-score: index 239 in 4097 ms
+12-29 17:01:50.294 30724 30724 D MainActivity: in-plugin-processing-score: index 241 at 1735502510294
+12-29 17:01:50.575 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 241 in 113
+12-29 17:01:50.575 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 241 in 168
+12-29 17:01:50.575 30724 30724 D CowBodyConditionScore: job-processing-score: index 241 in 281
+12-29 17:01:51.367 30724 30774 I flutter : before-plugin-processing-score: index 241 at 1735502510293
+12-29 17:01:51.367 30724 30774 I flutter : saving-image-pre-processing-score: index 241 in 6
+12-29 17:01:51.367 30724 30774 I flutter : calling-plugin-processing-score: index 241 calculate scored was called
+12-29 17:01:51.367 30724 30774 I flutter : completed-processing-score: index 241 in 1071 ms
+12-29 17:01:52.532 30724 30724 D MainActivity: in-plugin-processing-score: index 243 at 1735502512532
+12-29 17:01:52.820 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 243 in 119
+12-29 17:01:52.820 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 243 in 168
+12-29 17:01:52.820 30724 30724 D CowBodyConditionScore: job-processing-score: index 243 in 288
+12-29 17:01:53.636 30724 30774 I flutter : before-plugin-processing-score: index 243 at 1735502512531
+12-29 17:01:53.636 30724 30774 I flutter : saving-image-pre-processing-score: index 243 in 4
+12-29 17:01:53.636 30724 30774 I flutter : calling-plugin-processing-score: index 243 calculate scored was called
+12-29 17:01:53.636 30724 30774 I flutter : completed-processing-score: index 243 in 1100 ms
+12-29 17:01:54.690 30724 30724 D MainActivity: in-plugin-processing-score: index 245 at 1735502514690
+12-29 17:01:54.967 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 245 in 109
+12-29 17:01:54.967 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 245 in 168
+12-29 17:01:54.968 30724 30724 D CowBodyConditionScore: job-processing-score: index 245 in 278
+12-29 17:01:56.711 30724 30774 I flutter : before-plugin-processing-score: index 245 at 1735502514689
+12-29 17:01:56.711 30724 30774 I flutter : saving-image-pre-processing-score: index 245 in 6
+12-29 17:01:56.711 30724 30774 I flutter : calling-plugin-processing-score: index 245 calculate scored was called
+12-29 17:01:56.711 30724 30774 I flutter : completed-processing-score: index 245 in 2027 ms
+12-29 17:01:56.756 30724 30724 D MainActivity: in-plugin-processing-score: index 247 at 1735502516756
+12-29 17:01:57.030 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 247 in 106
+12-29 17:01:57.030 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 247 in 168
+12-29 17:01:57.030 30724 30724 D CowBodyConditionScore: job-processing-score: index 247 in 274
+12-29 17:01:58.775 30724 30774 I flutter : before-plugin-processing-score: index 247 at 1735502516756
+12-29 17:01:58.775 30724 30774 I flutter : saving-image-pre-processing-score: index 247 in 6
+12-29 17:01:58.775 30724 30774 I flutter : calling-plugin-processing-score: index 247 calculate scored was called
+12-29 17:01:58.775 30724 30774 I flutter : completed-processing-score: index 247 in 2023 ms
+12-29 17:01:59.840 30724 30724 D MainActivity: in-plugin-processing-score: index 249 at 1735502519840
+12-29 17:02:00.129 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 249 in 110
+12-29 17:02:00.129 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 249 in 178
+12-29 17:02:00.129 30724 30724 D CowBodyConditionScore: job-processing-score: index 249 in 289
+12-29 17:02:01.933 30724 30774 I flutter : before-plugin-processing-score: index 249 at 1735502519839
+12-29 17:02:01.933 30724 30774 I flutter : saving-image-pre-processing-score: index 249 in 12
+12-29 17:02:01.933 30724 30774 I flutter : calling-plugin-processing-score: index 249 calculate scored was called
+12-29 17:02:01.933 30724 30774 I flutter : completed-processing-score: index 249 in 2104 ms
+12-29 17:02:01.938 30724 30724 D MainActivity: in-plugin-processing-score: index 251 at 1735502521938
+12-29 17:02:02.272 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 251 in 114
+12-29 17:02:02.272 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 251 in 219
+12-29 17:02:02.272 30724 30724 D CowBodyConditionScore: job-processing-score: index 251 in 334
+12-29 17:02:05.032 30724 30774 I flutter : before-plugin-processing-score: index 251 at 1735502521938
+12-29 17:02:05.032 30724 30774 I flutter : saving-image-pre-processing-score: index 251 in 10
+12-29 17:02:05.032 30724 30774 I flutter : calling-plugin-processing-score: index 251 calculate scored was called
+12-29 17:02:05.032 30724 30774 I flutter : completed-processing-score: index 251 in 3101 ms
+12-29 17:02:08.351 30724 30724 D MainActivity: in-plugin-processing-score: index 253 at 1735502528351
+12-29 17:02:08.636 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 253 in 108
+12-29 17:02:08.636 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 253 in 176
+12-29 17:02:08.636 30724 30724 D CowBodyConditionScore: job-processing-score: index 253 in 284
+12-29 17:02:09.366 30724 30774 I flutter : before-plugin-processing-score: index 253 at 1735502528351
+12-29 17:02:09.366 30724 30774 I flutter : saving-image-pre-processing-score: index 253 in 9
+12-29 17:02:09.366 30724 30774 I flutter : calling-plugin-processing-score: index 253 calculate scored was called
+12-29 17:02:09.366 30724 30774 I flutter : completed-processing-score: index 253 in 1021 ms
+12-29 17:02:11.555 30724 30724 D MainActivity: in-plugin-processing-score: index 255 at 1735502531555
+12-29 17:02:11.834 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 255 in 107
+12-29 17:02:11.834 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 255 in 172
+12-29 17:02:11.834 30724 30724 D CowBodyConditionScore: job-processing-score: index 255 in 279
+12-29 17:02:11.861 30724 30774 I flutter : before-plugin-processing-score: index 255 at 1735502531554
+12-29 17:02:11.861 30724 30774 I flutter : saving-image-pre-processing-score: index 255 in 3
+12-29 17:02:11.861 30724 30774 I flutter : calling-plugin-processing-score: index 255 calculate scored was called
+12-29 17:02:11.861 30724 30774 I flutter : completed-processing-score: index 255 in 303 ms
+12-29 17:02:13.958 30724 30724 D MainActivity: in-plugin-processing-score: index 257 at 1735502533958
+12-29 17:02:14.235 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 257 in 108
+12-29 17:02:14.235 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 257 in 168
+12-29 17:02:14.235 30724 30724 D CowBodyConditionScore: job-processing-score: index 257 in 277
+12-29 17:02:16.068 30724 30774 I flutter : before-plugin-processing-score: index 257 at 1735502533958
+12-29 17:02:16.068 30724 30774 I flutter : saving-image-pre-processing-score: index 257 in 7
+12-29 17:02:16.068 30724 30774 I flutter : calling-plugin-processing-score: index 257 calculate scored was called
+12-29 17:02:16.068 30724 30774 I flutter : completed-processing-score: index 257 in 2116 ms
+12-29 17:02:16.072 30724 30724 D MainActivity: in-plugin-processing-score: index 259 at 1735502536072
+12-29 17:02:16.357 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 259 in 117
+12-29 17:02:16.357 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 259 in 168
+12-29 17:02:16.357 30724 30724 D CowBodyConditionScore: job-processing-score: index 259 in 285
+12-29 17:02:18.271 30724 30774 I flutter : before-plugin-processing-score: index 259 at 1735502536071
+12-29 17:02:18.271 30724 30774 I flutter : saving-image-pre-processing-score: index 259 in 8
+12-29 17:02:18.271 30724 30774 I flutter : calling-plugin-processing-score: index 259 calculate scored was called
+12-29 17:02:18.271 30724 30774 I flutter : completed-processing-score: index 259 in 2205 ms
+12-29 17:02:18.276 30724 30724 D MainActivity: in-plugin-processing-score: index 261 at 1735502538276
+12-29 17:02:18.557 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 261 in 113
+12-29 17:02:18.557 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 261 in 168
+12-29 17:02:18.557 30724 30724 D CowBodyConditionScore: job-processing-score: index 261 in 281
+12-29 17:02:21.404 30724 30774 I flutter : before-plugin-processing-score: index 261 at 1735502538275
+12-29 17:02:21.404 30724 30774 I flutter : saving-image-pre-processing-score: index 261 in 10
+12-29 17:02:21.404 30724 30774 I flutter : calling-plugin-processing-score: index 261 calculate scored was called
+12-29 17:02:21.404 30724 30774 I flutter : completed-processing-score: index 261 in 3136 ms
+12-29 17:02:21.406 30724 30724 D MainActivity: in-plugin-processing-score: index 263 at 1735502541406
+12-29 17:02:21.709 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 263 in 116
+12-29 17:02:21.709 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 263 in 187
+12-29 17:02:21.709 30724 30724 D CowBodyConditionScore: job-processing-score: index 263 in 303
+12-29 17:02:25.524 30724 30774 I flutter : before-plugin-processing-score: index 263 at 1735502541405
+12-29 17:02:25.524 30724 30774 I flutter : saving-image-pre-processing-score: index 263 in 20
+12-29 17:02:25.524 30724 30774 I flutter : calling-plugin-processing-score: index 263 calculate scored was called
+12-29 17:02:25.524 30724 30774 I flutter : completed-processing-score: index 263 in 4135 ms
+12-29 17:02:26.848 30724 30724 D MainActivity: in-plugin-processing-score: index 265 at 1735502546848
+12-29 17:02:27.125 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 265 in 109
+12-29 17:02:27.125 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 265 in 168
+12-29 17:02:27.125 30724 30724 D CowBodyConditionScore: job-processing-score: index 265 in 277
+12-29 17:02:27.868 30724 30774 I flutter : before-plugin-processing-score: index 265 at 1735502546847
+12-29 17:02:27.868 30724 30774 I flutter : saving-image-pre-processing-score: index 265 in 4
+12-29 17:02:27.868 30724 30774 I flutter : calling-plugin-processing-score: index 265 calculate scored was called
+12-29 17:02:27.868 30724 30774 I flutter : completed-processing-score: index 265 in 1024 ms
+12-29 17:02:29.991 30724 30724 D MainActivity: in-plugin-processing-score: index 267 at 1735502549991
+12-29 17:02:30.298 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 267 in 105
+12-29 17:02:30.298 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 267 in 201
+12-29 17:02:30.298 30724 30724 D CowBodyConditionScore: job-processing-score: index 267 in 307
+12-29 17:02:31.055 30724 30774 I flutter : before-plugin-processing-score: index 267 at 1735502549991
+12-29 17:02:31.055 30724 30774 I flutter : saving-image-pre-processing-score: index 267 in 13
+12-29 17:02:31.055 30724 30774 I flutter : calling-plugin-processing-score: index 267 calculate scored was called
+12-29 17:02:31.055 30724 30774 I flutter : completed-processing-score: index 267 in 1074 ms
+12-29 17:02:32.183 30724 30724 D MainActivity: in-plugin-processing-score: index 269 at 1735502552183
+12-29 17:02:32.482 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 269 in 111
+12-29 17:02:32.482 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 269 in 187
+12-29 17:02:32.482 30724 30724 D CowBodyConditionScore: job-processing-score: index 269 in 298
+12-29 17:02:34.317 30724 30774 I flutter : before-plugin-processing-score: index 269 at 1735502552183
+12-29 17:02:34.317 30724 30774 I flutter : saving-image-pre-processing-score: index 269 in 4
+12-29 17:02:34.317 30724 30774 I flutter : calling-plugin-processing-score: index 269 calculate scored was called
+12-29 17:02:34.317 30724 30774 I flutter : completed-processing-score: index 269 in 2136 ms
+12-29 17:02:34.319 30724 30724 D MainActivity: in-plugin-processing-score: index 271 at 1735502554319
+12-29 17:02:34.601 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 271 in 108
+12-29 17:02:34.601 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 271 in 174
+12-29 17:02:34.601 30724 30724 D CowBodyConditionScore: job-processing-score: index 271 in 282
+12-29 17:02:37.463 30724 30774 I flutter : before-plugin-processing-score: index 271 at 1735502554318
+12-29 17:02:37.463 30724 30774 I flutter : saving-image-pre-processing-score: index 271 in 7
+12-29 17:02:37.463 30724 30774 I flutter : calling-plugin-processing-score: index 271 calculate scored was called
+12-29 17:02:37.463 30724 30774 I flutter : completed-processing-score: index 271 in 3149 ms
+12-29 17:02:37.466 30724 30724 D MainActivity: in-plugin-processing-score: index 273 at 1735502557466
+12-29 17:02:37.753 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 273 in 108
+12-29 17:02:37.753 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 273 in 179
+12-29 17:02:37.753 30724 30724 D CowBodyConditionScore: job-processing-score: index 273 in 287
+12-29 17:02:40.664 30724 30774 I flutter : before-plugin-processing-score: index 273 at 1735502557465
+12-29 17:02:40.664 30724 30774 I flutter : saving-image-pre-processing-score: index 273 in 21
+12-29 17:02:40.664 30724 30774 I flutter : calling-plugin-processing-score: index 273 calculate scored was called
+12-29 17:02:40.664 30724 30774 I flutter : completed-processing-score: index 273 in 3216 ms
+12-29 17:02:40.699 30724 30724 D MainActivity: in-plugin-processing-score: index 275 at 1735502560699
+12-29 17:02:40.996 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 275 in 123
+12-29 17:02:40.996 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 275 in 174
+12-29 17:02:40.996 30724 30724 D CowBodyConditionScore: job-processing-score: index 275 in 297
+12-29 17:02:43.820 30724 30774 I flutter : before-plugin-processing-score: index 275 at 1735502560699
+12-29 17:02:43.820 30724 30774 I flutter : saving-image-pre-processing-score: index 275 in 20
+12-29 17:02:43.820 30724 30774 I flutter : calling-plugin-processing-score: index 275 calculate scored was called
+12-29 17:02:43.820 30724 30774 I flutter : completed-processing-score: index 275 in 3136 ms
+12-29 17:02:45.020 30724 30724 D MainActivity: in-plugin-processing-score: index 277 at 1735502565020
+12-29 17:02:45.294 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 277 in 107
+12-29 17:02:45.294 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 277 in 167
+12-29 17:02:45.294 30724 30724 D CowBodyConditionScore: job-processing-score: index 277 in 274
+12-29 17:02:47.033 30724 30774 I flutter : before-plugin-processing-score: index 277 at 1735502565019
+12-29 17:02:47.033 30724 30774 I flutter : saving-image-pre-processing-score: index 277 in 6
+12-29 17:02:47.033 30724 30774 I flutter : calling-plugin-processing-score: index 277 calculate scored was called
+12-29 17:02:47.033 30724 30774 I flutter : completed-processing-score: index 277 in 2019 ms
+12-29 17:02:48.160 30724 30724 D MainActivity: in-plugin-processing-score: index 279 at 1735502568160
+12-29 17:02:48.434 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 279 in 105
+12-29 17:02:48.434 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 279 in 168
+12-29 17:02:48.435 30724 30724 D CowBodyConditionScore: job-processing-score: index 279 in 273
+12-29 17:02:50.217 30724 30774 I flutter : before-plugin-processing-score: index 279 at 1735502568160
+12-29 17:02:50.217 30724 30774 I flutter : saving-image-pre-processing-score: index 279 in 6
+12-29 17:02:50.217 30724 30774 I flutter : calling-plugin-processing-score: index 279 calculate scored was called
+12-29 17:02:50.217 30724 30774 I flutter : completed-processing-score: index 279 in 2060 ms
+12-29 17:02:50.226 30724 30724 D MainActivity: in-plugin-processing-score: index 281 at 1735502570226
+12-29 17:02:50.504 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 281 in 108
+12-29 17:02:50.504 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 281 in 170
+12-29 17:02:50.504 30724 30724 D CowBodyConditionScore: job-processing-score: index 281 in 278
+12-29 17:02:53.293 30724 30774 I flutter : before-plugin-processing-score: index 281 at 1735502570225
+12-29 17:02:53.293 30724 30774 I flutter : saving-image-pre-processing-score: index 281 in 13
+12-29 17:02:53.293 30724 30774 I flutter : calling-plugin-processing-score: index 281 calculate scored was called
+12-29 17:02:53.293 30724 30774 I flutter : completed-processing-score: index 281 in 3080 ms
+12-29 17:02:53.303 30724 30724 D MainActivity: in-plugin-processing-score: index 283 at 1735502573303
+12-29 17:02:53.584 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 283 in 106
+12-29 17:02:53.584 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 283 in 175
+12-29 17:02:53.585 30724 30724 D CowBodyConditionScore: job-processing-score: index 283 in 282
+12-29 17:02:54.323 30724 30774 I flutter : before-plugin-processing-score: index 283 at 1735502573302
+12-29 17:02:54.323 30724 30774 I flutter : saving-image-pre-processing-score: index 283 in 25
+12-29 17:02:54.323 30724 30774 I flutter : calling-plugin-processing-score: index 283 calculate scored was called
+12-29 17:02:54.323 30724 30774 I flutter : completed-processing-score: index 283 in 1043 ms
+12-29 17:02:57.394 30724 30724 D MainActivity: in-plugin-processing-score: index 285 at 1735502577394
+12-29 17:02:57.670 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 285 in 107
+12-29 17:02:57.670 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 285 in 168
+12-29 17:02:57.670 30724 30724 D CowBodyConditionScore: job-processing-score: index 285 in 276
+12-29 17:02:57.670 30724 30724 D MainActivity: in-plugin-processing-score: index 287 at 1735502577670
+12-29 17:02:57.945 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 287 in 101
+12-29 17:02:57.945 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 287 in 172
+12-29 17:02:57.945 30724 30724 D CowBodyConditionScore: job-processing-score: index 287 in 275
+12-29 17:03:02.451 30724 30774 I flutter : before-plugin-processing-score: index 285 at 1735502577394
+12-29 17:03:02.451 30724 30774 I flutter : saving-image-pre-processing-score: index 285 in 39
+12-29 17:03:02.451 30724 30774 I flutter : calling-plugin-processing-score: index 285 calculate scored was called
+12-29 17:03:02.451 30724 30774 I flutter : completed-processing-score: index 285 in 5094 ms
+12-29 17:03:02.452 30724 30774 I flutter : before-plugin-processing-score: index 287 at 1735502577394
+12-29 17:03:02.452 30724 30774 I flutter : saving-image-pre-processing-score: index 287 in 17
+12-29 17:03:02.452 30724 30774 I flutter : calling-plugin-processing-score: index 287 calculate scored was called
+12-29 17:03:02.452 30724 30774 I flutter : completed-processing-score: index 287 in 5074 ms
+12-29 17:03:03.513 30724 30724 D MainActivity: in-plugin-processing-score: index 289 at 1735502583513
+12-29 17:03:03.795 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 289 in 114
+12-29 17:03:03.795 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 289 in 167
+12-29 17:03:03.795 30724 30724 D CowBodyConditionScore: job-processing-score: index 289 in 282
+12-29 17:03:05.587 30724 30774 I flutter : before-plugin-processing-score: index 289 at 1735502583512
+12-29 17:03:05.587 30724 30774 I flutter : saving-image-pre-processing-score: index 289 in 5
+12-29 17:03:05.587 30724 30774 I flutter : calling-plugin-processing-score: index 289 calculate scored was called
+12-29 17:03:05.587 30724 30774 I flutter : completed-processing-score: index 289 in 2075 ms
+12-29 17:03:05.621 30724 30724 D MainActivity: in-plugin-processing-score: index 291 at 1735502585621
+12-29 17:03:05.901 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 291 in 112
+12-29 17:03:05.901 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 291 in 168
+12-29 17:03:05.901 30724 30724 D CowBodyConditionScore: job-processing-score: index 291 in 280
+12-29 17:03:08.741 30724 30774 I flutter : before-plugin-processing-score: index 291 at 1735502585621
+12-29 17:03:08.741 30724 30774 I flutter : saving-image-pre-processing-score: index 291 in 6
+12-29 17:03:08.741 30724 30774 I flutter : calling-plugin-processing-score: index 291 calculate scored was called
+12-29 17:03:08.741 30724 30774 I flutter : completed-processing-score: index 291 in 3121 ms
+12-29 17:03:08.787 30724 30724 D MainActivity: in-plugin-processing-score: index 293 at 1735502588786
+12-29 17:03:09.084 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 293 in 110
+12-29 17:03:09.084 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 293 in 186
+12-29 17:03:09.084 30724 30724 D CowBodyConditionScore: job-processing-score: index 293 in 297
+12-29 17:03:11.941 30724 30774 I flutter : before-plugin-processing-score: index 293 at 1735502588786
+12-29 17:03:11.941 30724 30774 I flutter : saving-image-pre-processing-score: index 293 in 18
+12-29 17:03:11.941 30724 30774 I flutter : calling-plugin-processing-score: index 293 calculate scored was called
+12-29 17:03:11.941 30724 30774 I flutter : completed-processing-score: index 293 in 3169 ms
+12-29 17:03:11.988 30724 30724 D MainActivity: in-plugin-processing-score: index 295 at 1735502591988
+12-29 17:03:12.262 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 295 in 107
+12-29 17:03:12.262 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 295 in 167
+12-29 17:03:12.262 30724 30724 D CowBodyConditionScore: job-processing-score: index 295 in 274
+12-29 17:03:12.263 30724 30724 D MainActivity: in-plugin-processing-score: index 297 at 1735502592263
+12-29 17:03:12.531 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 297 in 102
+12-29 17:03:12.531 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 297 in 166
+12-29 17:03:12.531 30724 30724 D CowBodyConditionScore: job-processing-score: index 297 in 268
+12-29 17:03:16.014 30724 30774 I flutter : before-plugin-processing-score: index 295 at 1735502591987
+12-29 17:03:16.014 30724 30774 I flutter : saving-image-pre-processing-score: index 295 in 30
+12-29 17:03:16.014 30724 30774 I flutter : calling-plugin-processing-score: index 295 calculate scored was called
+12-29 17:03:16.014 30724 30774 I flutter : completed-processing-score: index 295 in 4056 ms
+12-29 17:03:16.015 30724 30774 I flutter : before-plugin-processing-score: index 297 at 1735502591988
+12-29 17:03:16.015 30724 30774 I flutter : saving-image-pre-processing-score: index 297 in 8
+12-29 17:03:16.015 30724 30774 I flutter : calling-plugin-processing-score: index 297 calculate scored was called
+12-29 17:03:16.015 30724 30774 I flutter : completed-processing-score: index 297 in 4033 ms
+12-29 17:03:16.057 30724 30724 D MainActivity: in-plugin-processing-score: index 299 at 1735502596057
+12-29 17:03:16.331 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 299 in 105
+12-29 17:03:16.331 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 299 in 169
+12-29 17:03:16.331 30724 30724 D CowBodyConditionScore: job-processing-score: index 299 in 274
+12-29 17:03:19.097 30724 30774 I flutter : before-plugin-processing-score: index 299 at 1735502596056
+12-29 17:03:19.097 30724 30774 I flutter : saving-image-pre-processing-score: index 299 in 17
+12-29 17:03:19.097 30724 30774 I flutter : calling-plugin-processing-score: index 299 calculate scored was called
+12-29 17:03:19.097 30724 30774 I flutter : completed-processing-score: index 299 in 3055 ms
+12-29 17:03:21.481 30724 30724 D MainActivity: in-plugin-processing-score: index 301 at 1735502601481
+12-29 17:03:21.769 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 301 in 110
+12-29 17:03:21.769 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 301 in 178
+12-29 17:03:21.769 30724 30724 D CowBodyConditionScore: job-processing-score: index 301 in 288
+12-29 17:03:22.648 30724 30774 I flutter : before-plugin-processing-score: index 301 at 1735502601480
+12-29 17:03:22.648 30724 30774 I flutter : saving-image-pre-processing-score: index 301 in 10
+12-29 17:03:22.648 30724 30774 I flutter : calling-plugin-processing-score: index 301 calculate scored was called
+12-29 17:03:22.648 30724 30774 I flutter : completed-processing-score: index 301 in 1173 ms
+12-29 17:03:23.781 30724 30724 D MainActivity: in-plugin-processing-score: index 303 at 1735502603781
+12-29 17:03:24.076 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 303 in 113
+12-29 17:03:24.076 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 303 in 182
+12-29 17:03:24.076 30724 30724 D CowBodyConditionScore: job-processing-score: index 303 in 295
+12-29 17:03:25.861 30724 30774 I flutter : before-plugin-processing-score: index 303 at 1735502603781
+12-29 17:03:25.861 30724 30774 I flutter : saving-image-pre-processing-score: index 303 in 4
+12-29 17:03:25.861 30724 30774 I flutter : calling-plugin-processing-score: index 303 calculate scored was called
+12-29 17:03:25.861 30724 30774 I flutter : completed-processing-score: index 303 in 2079 ms
+12-29 17:03:25.897 30724 30724 D MainActivity: in-plugin-processing-score: index 305 at 1735502605897
+12-29 17:03:26.173 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 305 in 104
+12-29 17:03:26.173 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 305 in 172
+12-29 17:03:26.173 30724 30724 D CowBodyConditionScore: job-processing-score: index 305 in 276
+12-29 17:03:27.931 30724 30774 I flutter : before-plugin-processing-score: index 305 at 1735502605897
+12-29 17:03:27.931 30724 30774 I flutter : saving-image-pre-processing-score: index 305 in 9
+12-29 17:03:27.931 30724 30774 I flutter : calling-plugin-processing-score: index 305 calculate scored was called
+12-29 17:03:27.931 30724 30774 I flutter : completed-processing-score: index 305 in 2042 ms
+12-29 17:03:29.133 30724 30724 D MainActivity: in-plugin-processing-score: index 307 at 1735502609133
+12-29 17:03:29.418 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 307 in 116
+12-29 17:03:29.418 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 307 in 169
+12-29 17:03:29.418 30724 30724 D CowBodyConditionScore: job-processing-score: index 307 in 285
+12-29 17:03:30.255 30724 30774 I flutter : before-plugin-processing-score: index 307 at 1735502609132
+12-29 17:03:30.255 30724 30774 I flutter : saving-image-pre-processing-score: index 307 in 1010
+12-29 17:03:30.255 30724 30774 I flutter : calling-plugin-processing-score: index 307 calculate scored was called
+12-29 17:03:30.255 30724 30774 I flutter : completed-processing-score: index 307 in 2130 ms
+12-29 17:03:35.804 30724 30724 D MainActivity: in-plugin-processing-score: index 309 at 1735502615804
+12-29 17:03:36.456 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 309 in 334
+12-29 17:03:36.456 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 309 in 318
+12-29 17:03:36.456 30724 30724 D CowBodyConditionScore: job-processing-score: index 309 in 652
+12-29 17:03:36.457 30724 30724 D MainActivity: in-plugin-processing-score: index 311 at 1735502616457
+12-29 17:03:37.047 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 311 in 304
+12-29 17:03:37.047 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 311 in 286
+12-29 17:03:37.047 30724 30724 D CowBodyConditionScore: job-processing-score: index 311 in 590
+12-29 17:03:37.869 30724 30774 I flutter : before-plugin-processing-score: index 309 at 1735502615802
+12-29 17:03:37.869 30724 30774 I flutter : saving-image-pre-processing-score: index 309 in 3496
+12-29 17:03:37.869 30724 30774 I flutter : calling-plugin-processing-score: index 309 calculate scored was called
+12-29 17:03:37.869 30724 30774 I flutter : completed-processing-score: index 309 in 5552 ms
+12-29 17:03:37.873 30724 30774 I flutter : before-plugin-processing-score: index 311 at 1735502615816
+12-29 17:03:37.873 30724 30774 I flutter : saving-image-pre-processing-score: index 311 in 2094
+12-29 17:03:37.873 30724 30774 I flutter : calling-plugin-processing-score: index 311 calculate scored was called
+12-29 17:03:37.873 30724 30774 I flutter : completed-processing-score: index 311 in 4148 ms
+12-29 17:03:39.781 30724 30724 D MainActivity: in-plugin-processing-score: index 313 at 1735502619781
+12-29 17:03:40.398 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 313 in 301
+12-29 17:03:40.398 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 313 in 316
+12-29 17:03:40.398 30724 30724 D CowBodyConditionScore: job-processing-score: index 313 in 617
+12-29 17:03:40.812 30724 30774 I flutter : before-plugin-processing-score: index 313 at 1735502619780
+12-29 17:03:40.812 30724 30774 I flutter : saving-image-pre-processing-score: index 313 in 10
+12-29 17:03:40.812 30724 30774 I flutter : calling-plugin-processing-score: index 313 calculate scored was called
+12-29 17:03:40.812 30724 30774 I flutter : completed-processing-score: index 313 in 1038 ms
+12-29 17:03:41.997 30724 30724 D MainActivity: in-plugin-processing-score: index 315 at 1735502621997
+12-29 17:03:42.624 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 315 in 309
+12-29 17:03:42.624 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 315 in 317
+12-29 17:03:42.624 30724 30724 D CowBodyConditionScore: job-processing-score: index 315 in 627
+12-29 17:03:44.012 30724 30774 I flutter : before-plugin-processing-score: index 315 at 1735502621995
+12-29 17:03:44.012 30724 30774 I flutter : saving-image-pre-processing-score: index 315 in 20
+12-29 17:03:44.012 30724 30774 I flutter : calling-plugin-processing-score: index 315 calculate scored was called
+12-29 17:03:44.012 30724 30774 I flutter : completed-processing-score: index 315 in 2036 ms
+12-29 17:03:45.090 30724 30724 D MainActivity: in-plugin-processing-score: index 317 at 1735502625090
+12-29 17:03:45.367 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 317 in 106
+12-29 17:03:45.367 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 317 in 171
+12-29 17:03:45.367 30724 30724 D CowBodyConditionScore: job-processing-score: index 317 in 277
+12-29 17:03:47.148 30724 30774 I flutter : before-plugin-processing-score: index 317 at 1735502625089
+12-29 17:03:47.148 30724 30774 I flutter : saving-image-pre-processing-score: index 317 in 4
+12-29 17:03:47.148 30724 30774 I flutter : calling-plugin-processing-score: index 317 calculate scored was called
+12-29 17:03:47.148 30724 30774 I flutter : completed-processing-score: index 317 in 2062 ms
+12-29 17:03:47.165 30724 30724 D MainActivity: in-plugin-processing-score: index 319 at 1735502627165
+12-29 17:03:47.457 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 319 in 112
+12-29 17:03:47.457 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 319 in 180
+12-29 17:03:47.457 30724 30724 D CowBodyConditionScore: job-processing-score: index 319 in 292
+12-29 17:03:49.205 30724 30774 I flutter : before-plugin-processing-score: index 319 at 1735502627164
+12-29 17:03:49.205 30724 30774 I flutter : saving-image-pre-processing-score: index 319 in 21
+12-29 17:03:49.205 30724 30774 I flutter : calling-plugin-processing-score: index 319 calculate scored was called
+12-29 17:03:49.205 30724 30774 I flutter : completed-processing-score: index 319 in 2061 ms
+12-29 17:03:49.217 30724 30724 D MainActivity: in-plugin-processing-score: index 321 at 1735502629217
+12-29 17:03:49.508 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 321 in 123
+12-29 17:03:49.508 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 321 in 168
+12-29 17:03:49.508 30724 30724 D CowBodyConditionScore: job-processing-score: index 321 in 291
+12-29 17:03:52.355 30724 30774 I flutter : before-plugin-processing-score: index 321 at 1735502629216
+12-29 17:03:52.355 30724 30774 I flutter : saving-image-pre-processing-score: index 321 in 15
+12-29 17:03:52.355 30724 30774 I flutter : calling-plugin-processing-score: index 321 calculate scored was called
+12-29 17:03:52.355 30724 30774 I flutter : completed-processing-score: index 321 in 3152 ms
+12-29 17:03:52.358 30724 30724 D MainActivity: in-plugin-processing-score: index 323 at 1735502632358
+12-29 17:03:52.652 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 323 in 114
+12-29 17:03:52.652 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 323 in 179
+12-29 17:03:52.652 30724 30724 D CowBodyConditionScore: job-processing-score: index 323 in 294
+12-29 17:03:55.468 30724 30774 I flutter : before-plugin-processing-score: index 323 at 1735502632358
+12-29 17:03:55.468 30724 30774 I flutter : saving-image-pre-processing-score: index 323 in 19
+12-29 17:03:55.468 30724 30774 I flutter : calling-plugin-processing-score: index 323 calculate scored was called
+12-29 17:03:55.468 30724 30774 I flutter : completed-processing-score: index 323 in 3126 ms
+12-29 17:03:57.903 30724 30724 D MainActivity: in-plugin-processing-score: index 325 at 1735502637903
+12-29 17:03:58.184 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 325 in 111
+12-29 17:03:58.184 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 325 in 170
+12-29 17:03:58.184 30724 30724 D CowBodyConditionScore: job-processing-score: index 325 in 281
+12-29 17:03:58.971 30724 30774 I flutter : before-plugin-processing-score: index 325 at 1735502637902
+12-29 17:03:58.971 30724 30774 I flutter : saving-image-pre-processing-score: index 325 in 3
+12-29 17:03:58.971 30724 30774 I flutter : calling-plugin-processing-score: index 325 calculate scored was called
+12-29 17:03:58.971 30724 30774 I flutter : completed-processing-score: index 325 in 1064 ms
+12-29 17:04:01.137 30724 30724 D MainActivity: in-plugin-processing-score: index 327 at 1735502641136
+12-29 17:04:01.422 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 327 in 112
+12-29 17:04:01.422 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 327 in 173
+12-29 17:04:01.422 30724 30724 D CowBodyConditionScore: job-processing-score: index 327 in 285
+12-29 17:04:03.184 30724 30774 I flutter : before-plugin-processing-score: index 327 at 1735502641136
+12-29 17:04:03.184 30724 30774 I flutter : saving-image-pre-processing-score: index 327 in 4
+12-29 17:04:03.184 30724 30774 I flutter : calling-plugin-processing-score: index 327 calculate scored was called
+12-29 17:04:03.184 30724 30774 I flutter : completed-processing-score: index 327 in 2049 ms
+12-29 17:04:03.196 30724 30724 D MainActivity: in-plugin-processing-score: index 329 at 1735502643196
+12-29 17:04:03.480 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 329 in 104
+12-29 17:04:03.480 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 329 in 179
+12-29 17:04:03.480 30724 30724 D CowBodyConditionScore: job-processing-score: index 329 in 284
+12-29 17:04:05.273 30724 30774 I flutter : before-plugin-processing-score: index 329 at 1735502643195
+12-29 17:04:05.273 30724 30774 I flutter : saving-image-pre-processing-score: index 329 in 16
+12-29 17:04:05.273 30724 30774 I flutter : calling-plugin-processing-score: index 329 calculate scored was called
+12-29 17:04:05.273 30724 30774 I flutter : completed-processing-score: index 329 in 2092 ms
+12-29 17:04:05.278 30724 30724 D MainActivity: in-plugin-processing-score: index 331 at 1735502645278
+12-29 17:04:05.567 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 331 in 112
+12-29 17:04:05.567 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 331 in 177
+12-29 17:04:05.567 30724 30724 D CowBodyConditionScore: job-processing-score: index 331 in 289
+12-29 17:04:08.351 30724 30774 I flutter : before-plugin-processing-score: index 331 at 1735502645277
+12-29 17:04:08.351 30724 30774 I flutter : saving-image-pre-processing-score: index 331 in 10
+12-29 17:04:08.351 30724 30774 I flutter : calling-plugin-processing-score: index 331 calculate scored was called
+12-29 17:04:08.351 30724 30774 I flutter : completed-processing-score: index 331 in 3079 ms
+12-29 17:04:08.397 30724 30724 D MainActivity: in-plugin-processing-score: index 333 at 1735502648397
+12-29 17:04:08.684 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 333 in 111
+12-29 17:04:08.684 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 333 in 175
+12-29 17:04:08.684 30724 30724 D CowBodyConditionScore: job-processing-score: index 333 in 287
+12-29 17:04:12.539 30724 30774 I flutter : before-plugin-processing-score: index 333 at 1735502648397
+12-29 17:04:12.539 30724 30774 I flutter : saving-image-pre-processing-score: index 333 in 18
+12-29 17:04:12.539 30724 30774 I flutter : calling-plugin-processing-score: index 333 calculate scored was called
+12-29 17:04:12.539 30724 30774 I flutter : completed-processing-score: index 333 in 4156 ms
+12-29 17:04:12.572 30724 30724 D MainActivity: in-plugin-processing-score: index 335 at 1735502652572
+12-29 17:04:12.851 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 335 in 108
+12-29 17:04:12.851 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 335 in 171
+12-29 17:04:12.851 30724 30724 D CowBodyConditionScore: job-processing-score: index 335 in 279
+12-29 17:04:15.633 30724 30774 I flutter : before-plugin-processing-score: index 335 at 1735502652571
+12-29 17:04:15.633 30724 30774 I flutter : saving-image-pre-processing-score: index 335 in 17
+12-29 17:04:15.633 30724 30774 I flutter : calling-plugin-processing-score: index 335 calculate scored was called
+12-29 17:04:15.633 30724 30774 I flutter : completed-processing-score: index 335 in 3077 ms
+12-29 17:04:16.109 30724 30724 D MainActivity: in-plugin-processing-score: index 337 at 1735502656109
+12-29 17:04:16.393 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 337 in 108
+12-29 17:04:16.393 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 337 in 176
+12-29 17:04:16.393 30724 30724 D CowBodyConditionScore: job-processing-score: index 337 in 284
+12-29 17:04:17.142 30724 30774 I flutter : before-plugin-processing-score: index 337 at 1735502656108
+12-29 17:04:17.142 30724 30774 I flutter : saving-image-pre-processing-score: index 337 in 3
+12-29 17:04:17.142 30724 30774 I flutter : calling-plugin-processing-score: index 337 calculate scored was called
+12-29 17:04:17.142 30724 30774 I flutter : completed-processing-score: index 337 in 1034 ms
+12-29 17:04:19.258 30724 30724 D MainActivity: in-plugin-processing-score: index 339 at 1735502659258
+12-29 17:04:19.534 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 339 in 107
+12-29 17:04:19.534 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 339 in 169
+12-29 17:04:19.534 30724 30724 D CowBodyConditionScore: job-processing-score: index 339 in 276
+12-29 17:04:20.349 30724 30774 I flutter : before-plugin-processing-score: index 339 at 1735502659257
+12-29 17:04:20.349 30724 30774 I flutter : saving-image-pre-processing-score: index 339 in 4
+12-29 17:04:20.349 30724 30774 I flutter : calling-plugin-processing-score: index 339 calculate scored was called
+12-29 17:04:20.349 30724 30774 I flutter : completed-processing-score: index 339 in 1095 ms
+12-29 17:04:22.442 30724 30724 D MainActivity: in-plugin-processing-score: index 341 at 1735502662442
+12-29 17:04:22.731 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 341 in 108
+12-29 17:04:22.731 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 341 in 181
+12-29 17:04:22.731 30724 30724 D CowBodyConditionScore: job-processing-score: index 341 in 289
+12-29 17:04:24.684 30724 30774 I flutter : before-plugin-processing-score: index 341 at 1735502662442
+12-29 17:04:24.684 30724 30774 I flutter : saving-image-pre-processing-score: index 341 in 18
+12-29 17:04:24.684 30724 30774 I flutter : calling-plugin-processing-score: index 341 calculate scored was called
+12-29 17:04:24.684 30724 30774 I flutter : completed-processing-score: index 341 in 2257 ms
+12-29 17:04:24.687 30724 30724 D MainActivity: in-plugin-processing-score: index 343 at 1735502664687
+12-29 17:04:24.979 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 343 in 110
+12-29 17:04:24.979 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 343 in 182
+12-29 17:04:24.979 30724 30724 D CowBodyConditionScore: job-processing-score: index 343 in 292
+12-29 17:04:27.933 30724 30774 I flutter : before-plugin-processing-score: index 343 at 1735502664687
+12-29 17:04:27.933 30724 30774 I flutter : saving-image-pre-processing-score: index 343 in 21
+12-29 17:04:27.933 30724 30774 I flutter : calling-plugin-processing-score: index 343 calculate scored was called
+12-29 17:04:27.933 30724 30774 I flutter : completed-processing-score: index 343 in 3264 ms
+12-29 17:04:27.936 30724 30724 D MainActivity: in-plugin-processing-score: index 345 at 1735502667936
+12-29 17:04:28.214 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 345 in 109
+12-29 17:04:28.214 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 345 in 169
+12-29 17:04:28.215 30724 30724 D CowBodyConditionScore: job-processing-score: index 345 in 278
+12-29 17:04:28.215 30724 30724 D MainActivity: in-plugin-processing-score: index 347 at 1735502668215
+12-29 17:04:28.492 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 347 in 102
+12-29 17:04:28.492 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 347 in 175
+12-29 17:04:28.492 30724 30724 D CowBodyConditionScore: job-processing-score: index 347 in 277
+12-29 17:04:31.032 30724 30774 I flutter : before-plugin-processing-score: index 345 at 1735502667935
+12-29 17:04:31.032 30724 30774 I flutter : saving-image-pre-processing-score: index 345 in 33
+12-29 17:04:31.032 30724 30774 I flutter : calling-plugin-processing-score: index 345 calculate scored was called
+12-29 17:04:31.032 30724 30774 I flutter : completed-processing-score: index 345 in 3129 ms
+12-29 17:04:31.033 30724 30774 I flutter : before-plugin-processing-score: index 347 at 1735502667936
+12-29 17:04:31.033 30724 30774 I flutter : saving-image-pre-processing-score: index 347 in 9
+12-29 17:04:31.033 30724 30774 I flutter : calling-plugin-processing-score: index 347 calculate scored was called
+12-29 17:04:31.033 30724 30774 I flutter : completed-processing-score: index 347 in 3106 ms
+12-29 17:04:34.349 30724 30724 D MainActivity: in-plugin-processing-score: index 349 at 1735502674348
+12-29 17:04:34.628 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 349 in 110
+12-29 17:04:34.628 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 349 in 169
+12-29 17:04:34.628 30724 30724 D CowBodyConditionScore: job-processing-score: index 349 in 279
+12-29 17:04:35.382 30724 30774 I flutter : before-plugin-processing-score: index 349 at 1735502674348
+12-29 17:04:35.382 30724 30774 I flutter : saving-image-pre-processing-score: index 349 in 5
+12-29 17:04:35.382 30724 30774 I flutter : calling-plugin-processing-score: index 349 calculate scored was called
+12-29 17:04:35.382 30724 30774 I flutter : completed-processing-score: index 349 in 1034 ms
+12-29 17:04:37.541 30724 30724 D MainActivity: in-plugin-processing-score: index 351 at 1735502677541
+12-29 17:04:37.825 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 351 in 115
+12-29 17:04:37.825 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 351 in 168
+12-29 17:04:37.825 30724 30724 D CowBodyConditionScore: job-processing-score: index 351 in 284
+12-29 17:04:38.649 30724 30774 I flutter : before-plugin-processing-score: index 351 at 1735502677541
+12-29 17:04:38.649 30724 30774 I flutter : saving-image-pre-processing-score: index 351 in 4
+12-29 17:04:38.649 30724 30774 I flutter : calling-plugin-processing-score: index 351 calculate scored was called
+12-29 17:04:38.649 30724 30774 I flutter : completed-processing-score: index 351 in 1110 ms
+12-29 17:04:40.750 30724 30724 D MainActivity: in-plugin-processing-score: index 353 at 1735502680750
+12-29 17:04:41.046 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 353 in 109
+12-29 17:04:41.046 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 353 in 187
+12-29 17:04:41.046 30724 30724 D CowBodyConditionScore: job-processing-score: index 353 in 296
+12-29 17:04:43.857 30724 30774 I flutter : before-plugin-processing-score: index 353 at 1735502680749
+12-29 17:04:43.857 30724 30774 I flutter : saving-image-pre-processing-score: index 353 in 26
+12-29 17:04:43.857 30724 30774 I flutter : calling-plugin-processing-score: index 353 calculate scored was called
+12-29 17:04:43.857 30724 30774 I flutter : completed-processing-score: index 353 in 3132 ms
+12-29 17:04:43.863 30724 30724 D MainActivity: in-plugin-processing-score: index 355 at 1735502683863
+12-29 17:04:44.140 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 355 in 108
+12-29 17:04:44.140 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 355 in 169
+12-29 17:04:44.140 30724 30724 D CowBodyConditionScore: job-processing-score: index 355 in 277
+12-29 17:04:44.140 30724 30724 D MainActivity: in-plugin-processing-score: index 357 at 1735502684140
+12-29 17:04:44.419 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 357 in 102
+12-29 17:04:44.419 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 357 in 177
+12-29 17:04:44.419 30724 30724 D CowBodyConditionScore: job-processing-score: index 357 in 279
+12-29 17:04:47.920 30724 30774 I flutter : before-plugin-processing-score: index 355 at 1735502683862
+12-29 17:04:47.920 30724 30774 I flutter : saving-image-pre-processing-score: index 355 in 71
+12-29 17:04:47.920 30724 30774 I flutter : calling-plugin-processing-score: index 355 calculate scored was called
+12-29 17:04:47.920 30724 30774 I flutter : completed-processing-score: index 355 in 4128 ms
+12-29 17:04:47.921 30724 30774 I flutter : before-plugin-processing-score: index 357 at 1735502683863
+12-29 17:04:47.921 30724 30774 I flutter : saving-image-pre-processing-score: index 357 in 15
+12-29 17:04:47.921 30724 30774 I flutter : calling-plugin-processing-score: index 357 calculate scored was called
+12-29 17:04:47.921 30724 30774 I flutter : completed-processing-score: index 357 in 4072 ms
+12-29 17:04:47.928 30724 30724 D MainActivity: in-plugin-processing-score: index 359 at 1735502687928
+12-29 17:04:48.211 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 359 in 112
+12-29 17:04:48.211 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 359 in 171
+12-29 17:04:48.211 30724 30724 D CowBodyConditionScore: job-processing-score: index 359 in 283
+12-29 17:04:48.242 30724 30774 I flutter : before-plugin-processing-score: index 359 at 1735502687928
+12-29 17:04:48.242 30724 30774 I flutter : saving-image-pre-processing-score: index 359 in 24
+12-29 17:04:48.242 30724 30774 I flutter : calling-plugin-processing-score: index 359 calculate scored was called
+12-29 17:04:48.242 30724 30774 I flutter : completed-processing-score: index 359 in 330 ms
+12-29 17:04:52.458 30724 30724 D MainActivity: in-plugin-processing-score: index 361 at 1735502692458
+12-29 17:04:52.734 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 361 in 107
+12-29 17:04:52.734 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 361 in 169
+12-29 17:04:52.734 30724 30724 D CowBodyConditionScore: job-processing-score: index 361 in 276
+12-29 17:04:53.496 30724 30774 I flutter : before-plugin-processing-score: index 361 at 1735502692457
+12-29 17:04:53.496 30724 30774 I flutter : saving-image-pre-processing-score: index 361 in 4
+12-29 17:04:53.496 30724 30774 I flutter : calling-plugin-processing-score: index 361 calculate scored was called
+12-29 17:04:53.496 30724 30774 I flutter : completed-processing-score: index 361 in 1041 ms
+12-29 17:04:54.623 30724 30724 D MainActivity: in-plugin-processing-score: index 363 at 1735502694622
+12-29 17:04:54.903 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 363 in 110
+12-29 17:04:54.903 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 363 in 169
+12-29 17:04:54.903 30724 30724 D CowBodyConditionScore: job-processing-score: index 363 in 280
+12-29 17:04:56.679 30724 30774 I flutter : before-plugin-processing-score: index 363 at 1735502694622
+12-29 17:04:56.679 30724 30774 I flutter : saving-image-pre-processing-score: index 363 in 6
+12-29 17:04:56.679 30724 30774 I flutter : calling-plugin-processing-score: index 363 calculate scored was called
+12-29 17:04:56.679 30724 30774 I flutter : completed-processing-score: index 363 in 2059 ms
+12-29 17:04:57.788 30724 30724 D MainActivity: in-plugin-processing-score: index 365 at 1735502697788
+12-29 17:04:58.071 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 365 in 106
+12-29 17:04:58.071 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 365 in 177
+12-29 17:04:58.071 30724 30724 D CowBodyConditionScore: job-processing-score: index 365 in 283
+12-29 17:04:59.833 30724 30774 I flutter : before-plugin-processing-score: index 365 at 1735502697788
+12-29 17:04:59.833 30724 30774 I flutter : saving-image-pre-processing-score: index 365 in 11
+12-29 17:04:59.833 30724 30774 I flutter : calling-plugin-processing-score: index 365 calculate scored was called
+12-29 17:04:59.833 30724 30774 I flutter : completed-processing-score: index 365 in 2053 ms
+12-29 17:04:59.836 30724 30724 D MainActivity: in-plugin-processing-score: index 367 at 1735502699836
+12-29 17:05:00.116 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 367 in 107
+12-29 17:05:00.116 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 367 in 172
+12-29 17:05:00.116 30724 30724 D CowBodyConditionScore: job-processing-score: index 367 in 280
+12-29 17:05:02.898 30724 30774 I flutter : before-plugin-processing-score: index 367 at 1735502699836
+12-29 17:05:02.898 30724 30774 I flutter : saving-image-pre-processing-score: index 367 in 10
+12-29 17:05:02.898 30724 30774 I flutter : calling-plugin-processing-score: index 367 calculate scored was called
+12-29 17:05:02.898 30724 30774 I flutter : completed-processing-score: index 367 in 3071 ms
+12-29 17:05:02.907 30724 30724 D MainActivity: in-plugin-processing-score: index 369 at 1735502702907
+12-29 17:05:03.217 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 369 in 133
+12-29 17:05:03.217 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 369 in 177
+12-29 17:05:03.217 30724 30724 D CowBodyConditionScore: job-processing-score: index 369 in 310
+12-29 17:05:06.166 30724 30774 I flutter : before-plugin-processing-score: index 369 at 1735502702906
+12-29 17:05:06.166 30724 30774 I flutter : saving-image-pre-processing-score: index 369 in 24
+12-29 17:05:06.166 30724 30774 I flutter : calling-plugin-processing-score: index 369 calculate scored was called
+12-29 17:05:06.166 30724 30774 I flutter : completed-processing-score: index 369 in 3280 ms
+12-29 17:05:06.197 30724 30724 D MainActivity: in-plugin-processing-score: index 371 at 1735502706197
+12-29 17:05:06.476 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 371 in 109
+12-29 17:05:06.476 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 371 in 170
+12-29 17:05:06.476 30724 30724 D CowBodyConditionScore: job-processing-score: index 371 in 279
+12-29 17:05:09.285 30724 30774 I flutter : before-plugin-processing-score: index 371 at 1735502706196
+12-29 17:05:09.285 30724 30774 I flutter : saving-image-pre-processing-score: index 371 in 17
+12-29 17:05:09.285 30724 30774 I flutter : calling-plugin-processing-score: index 371 calculate scored was called
+12-29 17:05:09.285 30724 30774 I flutter : completed-processing-score: index 371 in 3102 ms
+12-29 17:05:10.901 30724 30724 D MainActivity: in-plugin-processing-score: index 373 at 1735502710900
+12-29 17:05:11.177 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 373 in 107
+12-29 17:05:11.178 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 373 in 169
+12-29 17:05:11.178 30724 30724 D CowBodyConditionScore: job-processing-score: index 373 in 277
+12-29 17:05:11.919 30724 30774 I flutter : before-plugin-processing-score: index 373 at 1735502710900
+12-29 17:05:11.919 30724 30774 I flutter : saving-image-pre-processing-score: index 373 in 4
+12-29 17:05:11.919 30724 30774 I flutter : calling-plugin-processing-score: index 373 calculate scored was called
+12-29 17:05:11.919 30724 30774 I flutter : completed-processing-score: index 373 in 1021 ms
+12-29 17:05:13.365 30724 30724 D MainActivity: in-plugin-processing-score: index 375 at 1735502713365
+12-29 17:05:13.642 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 375 in 108
+12-29 17:05:13.642 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 375 in 169
+12-29 17:05:13.643 30724 30724 D CowBodyConditionScore: job-processing-score: index 375 in 278
+12-29 17:05:14.379 30724 30774 I flutter : before-plugin-processing-score: index 375 at 1735502713365
+12-29 17:05:14.379 30724 30774 I flutter : saving-image-pre-processing-score: index 375 in 13
+12-29 17:05:14.379 30724 30774 I flutter : calling-plugin-processing-score: index 375 calculate scored was called
+12-29 17:05:14.379 30724 30774 I flutter : completed-processing-score: index 375 in 1022 ms
+12-29 17:05:16.526 30724 30724 D MainActivity: in-plugin-processing-score: index 377 at 1735502716526
+12-29 17:05:16.848 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 377 in 132
+12-29 17:05:16.848 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 377 in 190
+12-29 17:05:16.848 30724 30724 D CowBodyConditionScore: job-processing-score: index 377 in 322
+12-29 17:05:18.791 30724 30774 I flutter : before-plugin-processing-score: index 377 at 1735502716525
+12-29 17:05:18.791 30724 30774 I flutter : saving-image-pre-processing-score: index 377 in 3
+12-29 17:05:18.791 30724 30774 I flutter : calling-plugin-processing-score: index 377 calculate scored was called
+12-29 17:05:18.791 30724 30774 I flutter : completed-processing-score: index 377 in 2266 ms
+12-29 17:05:18.823 30724 30724 D MainActivity: in-plugin-processing-score: index 379 at 1735502718823
+12-29 17:05:19.144 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 379 in 150
+12-29 17:05:19.144 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 379 in 171
+12-29 17:05:19.144 30724 30724 D CowBodyConditionScore: job-processing-score: index 379 in 321
+12-29 17:05:20.925 30724 30774 I flutter : before-plugin-processing-score: index 379 at 1735502718823
+12-29 17:05:20.925 30724 30774 I flutter : saving-image-pre-processing-score: index 379 in 5
+12-29 17:05:20.925 30724 30774 I flutter : calling-plugin-processing-score: index 379 calculate scored was called
+12-29 17:05:20.925 30724 30774 I flutter : completed-processing-score: index 379 in 2105 ms
+12-29 17:05:20.928 30724 30724 D MainActivity: in-plugin-processing-score: index 381 at 1735502720928
+12-29 17:05:21.265 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 381 in 167
+12-29 17:05:21.265 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 381 in 170
+12-29 17:05:21.265 30724 30724 D CowBodyConditionScore: job-processing-score: index 381 in 337
+12-29 17:05:23.129 30724 30774 I flutter : before-plugin-processing-score: index 381 at 1735502720927
+12-29 17:05:23.129 30724 30774 I flutter : saving-image-pre-processing-score: index 381 in 8
+12-29 17:05:23.129 30724 30774 I flutter : calling-plugin-processing-score: index 381 calculate scored was called
+12-29 17:05:23.129 30724 30774 I flutter : completed-processing-score: index 381 in 2207 ms
+12-29 17:05:23.132 30724 30724 D MainActivity: in-plugin-processing-score: index 383 at 1735502723132
+12-29 17:05:23.461 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 383 in 152
+12-29 17:05:23.461 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 383 in 177
+12-29 17:05:23.461 30724 30724 D CowBodyConditionScore: job-processing-score: index 383 in 329
+12-29 17:05:25.196 30724 30774 I flutter : before-plugin-processing-score: index 383 at 1735502723131
+12-29 17:05:25.196 30724 30774 I flutter : saving-image-pre-processing-score: index 383 in 10
+12-29 17:05:25.196 30724 30774 I flutter : calling-plugin-processing-score: index 383 calculate scored was called
+12-29 17:05:25.196 30724 30774 I flutter : completed-processing-score: index 383 in 2073 ms
+12-29 17:05:29.432 30724 30724 D MainActivity: in-plugin-processing-score: index 385 at 1735502729432
+12-29 17:05:29.745 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 385 in 109
+12-29 17:05:29.745 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 385 in 204
+12-29 17:05:29.745 30724 30724 D CowBodyConditionScore: job-processing-score: index 385 in 313
+12-29 17:05:30.456 30724 30774 I flutter : before-plugin-processing-score: index 385 at 1735502729431
+12-29 17:05:30.456 30724 30774 I flutter : saving-image-pre-processing-score: index 385 in 5
+12-29 17:05:30.456 30724 30774 I flutter : calling-plugin-processing-score: index 385 calculate scored was called
+12-29 17:05:30.456 30724 30774 I flutter : completed-processing-score: index 385 in 1025 ms
+12-29 17:05:32.647 30724 30724 D MainActivity: in-plugin-processing-score: index 387 at 1735502732647
+12-29 17:05:32.928 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 387 in 112
+12-29 17:05:32.928 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 387 in 169
+12-29 17:05:32.928 30724 30724 D CowBodyConditionScore: job-processing-score: index 387 in 281
+12-29 17:05:33.749 30724 30774 I flutter : before-plugin-processing-score: index 387 at 1735502732646
+12-29 17:05:33.749 30724 30774 I flutter : saving-image-pre-processing-score: index 387 in 6
+12-29 17:05:33.749 30724 30774 I flutter : calling-plugin-processing-score: index 387 calculate scored was called
+12-29 17:05:33.749 30724 30774 I flutter : completed-processing-score: index 387 in 1107 ms
+12-29 17:05:35.920 30724 30724 D MainActivity: in-plugin-processing-score: index 389 at 1735502735920
+12-29 17:05:36.253 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 389 in 114
+12-29 17:05:36.253 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 389 in 219
+12-29 17:05:36.253 30724 30724 D CowBodyConditionScore: job-processing-score: index 389 in 333
+12-29 17:05:38.213 30724 30774 I flutter : before-plugin-processing-score: index 389 at 1735502735919
+12-29 17:05:38.213 30724 30774 I flutter : saving-image-pre-processing-score: index 389 in 1033
+12-29 17:05:38.213 30724 30774 I flutter : calling-plugin-processing-score: index 389 calculate scored was called
+12-29 17:05:38.213 30724 30774 I flutter : completed-processing-score: index 389 in 3323 ms
+12-29 17:05:39.257 30724 30724 D MainActivity: in-plugin-processing-score: index 391 at 1735502739257
+12-29 17:05:39.535 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 391 in 109
+12-29 17:05:39.535 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 391 in 169
+12-29 17:05:39.536 30724 30724 D CowBodyConditionScore: job-processing-score: index 391 in 278
+12-29 17:05:39.536 30724 30724 D MainActivity: in-plugin-processing-score: index 393 at 1735502739536
+12-29 17:05:39.809 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 393 in 103
+12-29 17:05:39.809 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 393 in 170
+12-29 17:05:39.809 30724 30724 D CowBodyConditionScore: job-processing-score: index 393 in 273
+12-29 17:05:42.320 30724 30774 I flutter : before-plugin-processing-score: index 391 at 1735502739255
+12-29 17:05:42.320 30724 30774 I flutter : saving-image-pre-processing-score: index 391 in 3058
+12-29 17:05:42.320 30724 30774 I flutter : calling-plugin-processing-score: index 391 calculate scored was called
+12-29 17:05:42.320 30724 30774 I flutter : completed-processing-score: index 391 in 6123 ms
+12-29 17:05:42.321 30724 30774 I flutter : before-plugin-processing-score: index 393 at 1735502739261
+12-29 17:05:42.321 30724 30774 I flutter : saving-image-pre-processing-score: index 393 in 15
+12-29 17:05:42.321 30724 30774 I flutter : calling-plugin-processing-score: index 393 calculate scored was called
+12-29 17:05:42.321 30724 30774 I flutter : completed-processing-score: index 393 in 3074 ms
+12-29 17:05:42.328 30724 30724 D MainActivity: in-plugin-processing-score: index 395 at 1735502742328
+12-29 17:05:42.613 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 395 in 108
+12-29 17:05:42.613 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 395 in 177
+12-29 17:05:42.613 30724 30724 D CowBodyConditionScore: job-processing-score: index 395 in 285
+12-29 17:05:42.626 30724 30774 I flutter : before-plugin-processing-score: index 395 at 1735502742328
+12-29 17:05:42.626 30724 30774 I flutter : saving-image-pre-processing-score: index 395 in 25
+12-29 17:05:42.626 30724 30774 I flutter : calling-plugin-processing-score: index 395 calculate scored was called
+12-29 17:05:42.626 30724 30774 I flutter : completed-processing-score: index 395 in 316 ms
+12-29 17:05:47.749 30724 30724 D MainActivity: in-plugin-processing-score: index 397 at 1735502747749
+12-29 17:05:48.027 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 397 in 108
+12-29 17:05:48.027 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 397 in 170
+12-29 17:05:48.027 30724 30724 D CowBodyConditionScore: job-processing-score: index 397 in 278
+12-29 17:05:48.764 30724 30774 I flutter : before-plugin-processing-score: index 397 at 1735502747748
+12-29 17:05:48.764 30724 30774 I flutter : saving-image-pre-processing-score: index 397 in 4
+12-29 17:05:48.764 30724 30774 I flutter : calling-plugin-processing-score: index 397 calculate scored was called
+12-29 17:05:48.764 30724 30774 I flutter : completed-processing-score: index 397 in 1018 ms
+12-29 17:05:50.907 30724 30724 D MainActivity: in-plugin-processing-score: index 399 at 1735502750906
+12-29 17:05:51.193 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 399 in 112
+12-29 17:05:51.194 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 399 in 174
+12-29 17:05:51.194 30724 30724 D CowBodyConditionScore: job-processing-score: index 399 in 287
+12-29 17:05:53.125 30724 30774 I flutter : before-plugin-processing-score: index 399 at 1735502750906
+12-29 17:05:53.125 30724 30774 I flutter : saving-image-pre-processing-score: index 399 in 4
+12-29 17:05:53.125 30724 30774 I flutter : calling-plugin-processing-score: index 399 calculate scored was called
+12-29 17:05:53.125 30724 30774 I flutter : completed-processing-score: index 399 in 2220 ms
+12-29 17:05:53.128 30724 30724 D MainActivity: in-plugin-processing-score: index 401 at 1735502753128
+12-29 17:05:53.410 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 401 in 105
+12-29 17:05:53.410 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 401 in 176
+12-29 17:05:53.410 30724 30724 D CowBodyConditionScore: job-processing-score: index 401 in 282
+12-29 17:05:56.204 30724 30774 I flutter : before-plugin-processing-score: index 401 at 1735502753127
+12-29 17:05:56.204 30724 30774 I flutter : saving-image-pre-processing-score: index 401 in 8
+12-29 17:05:56.204 30724 30774 I flutter : calling-plugin-processing-score: index 401 calculate scored was called
+12-29 17:05:56.204 30724 30774 I flutter : completed-processing-score: index 401 in 3084 ms
+12-29 17:05:56.207 30724 30724 D MainActivity: in-plugin-processing-score: index 403 at 1735502756207
+12-29 17:05:56.482 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 403 in 107
+12-29 17:05:56.482 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 403 in 168
+12-29 17:05:56.482 30724 30724 D CowBodyConditionScore: job-processing-score: index 403 in 275
+12-29 17:06:00.379 30724 30774 I flutter : before-plugin-processing-score: index 403 at 1735502756207
+12-29 17:06:00.379 30724 30774 I flutter : saving-image-pre-processing-score: index 403 in 19
+12-29 17:06:00.379 30724 30774 I flutter : calling-plugin-processing-score: index 403 calculate scored was called
+12-29 17:06:00.379 30724 30774 I flutter : completed-processing-score: index 403 in 4188 ms
+12-29 17:06:00.389 30724 30724 D MainActivity: in-plugin-processing-score: index 407 at 1735502760389
+12-29 17:06:00.676 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 407 in 117
+12-29 17:06:00.676 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 407 in 170
+12-29 17:06:00.676 30724 30724 D CowBodyConditionScore: job-processing-score: index 407 in 287
+12-29 17:06:00.677 30724 30724 D MainActivity: in-plugin-processing-score: index 405 at 1735502760677
+12-29 17:06:00.948 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 405 in 102
+12-29 17:06:00.948 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 405 in 169
+12-29 17:06:00.948 30724 30724 D CowBodyConditionScore: job-processing-score: index 405 in 271
+12-29 17:06:05.451 30724 30774 I flutter : before-plugin-processing-score: index 407 at 1735502760388
+12-29 17:06:05.451 30724 30774 I flutter : saving-image-pre-processing-score: index 407 in 57
+12-29 17:06:05.451 30724 30774 I flutter : calling-plugin-processing-score: index 407 calculate scored was called
+12-29 17:06:05.451 30724 30774 I flutter : completed-processing-score: index 407 in 5116 ms
+12-29 17:06:05.452 30724 30774 I flutter : before-plugin-processing-score: index 405 at 1735502760389
+12-29 17:06:05.452 30724 30774 I flutter : saving-image-pre-processing-score: index 405 in 94
+12-29 17:06:05.452 30724 30774 I flutter : calling-plugin-processing-score: index 405 calculate scored was called
+12-29 17:06:05.452 30724 30774 I flutter : completed-processing-score: index 405 in 5156 ms
+12-29 17:06:06.552 30724 30724 D MainActivity: in-plugin-processing-score: index 409 at 1735502766552
+12-29 17:06:06.857 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 409 in 121
+12-29 17:06:06.857 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 409 in 184
+12-29 17:06:06.857 30724 30724 D CowBodyConditionScore: job-processing-score: index 409 in 305
+12-29 17:06:07.735 30724 30774 I flutter : before-plugin-processing-score: index 409 at 1735502766551
+12-29 17:06:07.735 30724 30774 I flutter : saving-image-pre-processing-score: index 409 in 5
+12-29 17:06:07.735 30724 30774 I flutter : calling-plugin-processing-score: index 409 calculate scored was called
+12-29 17:06:07.735 30724 30774 I flutter : completed-processing-score: index 409 in 1184 ms
+12-29 17:06:09.882 30724 30724 D MainActivity: in-plugin-processing-score: index 411 at 1735502769881
+12-29 17:06:10.157 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 411 in 106
+12-29 17:06:10.157 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 411 in 169
+12-29 17:06:10.157 30724 30724 D CowBodyConditionScore: job-processing-score: index 411 in 275
+12-29 17:06:11.984 30724 30774 I flutter : before-plugin-processing-score: index 411 at 1735502769881
+12-29 17:06:11.984 30724 30774 I flutter : saving-image-pre-processing-score: index 411 in 19
+12-29 17:06:11.984 30724 30774 I flutter : calling-plugin-processing-score: index 411 calculate scored was called
+12-29 17:06:11.984 30724 30774 I flutter : completed-processing-score: index 411 in 2115 ms
+12-29 17:06:14.384 30724 30724 D MainActivity: in-plugin-processing-score: index 413 at 1735502774384
+12-29 17:06:15.003 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 413 in 305
+12-29 17:06:15.004 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 413 in 313
+12-29 17:06:15.004 30724 30724 D CowBodyConditionScore: job-processing-score: index 413 in 619
+12-29 17:06:15.004 30724 30724 D MainActivity: in-plugin-processing-score: index 415 at 1735502775004
+12-29 17:06:15.737 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 415 in 352
+12-29 17:06:15.737 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 415 in 381
+12-29 17:06:15.737 30724 30724 D CowBodyConditionScore: job-processing-score: index 415 in 733
+12-29 17:06:17.562 30724 30774 I flutter : before-plugin-processing-score: index 413 at 1735502774382
+12-29 17:06:17.562 30724 30774 I flutter : saving-image-pre-processing-score: index 413 in 2442
+12-29 17:06:17.562 30724 30774 I flutter : calling-plugin-processing-score: index 413 calculate scored was called
+12-29 17:06:17.562 30724 30774 I flutter : completed-processing-score: index 413 in 5610 ms
+12-29 17:06:17.673 30724 30724 D MainActivity: in-plugin-processing-score: index 417 at 1735502777673
+12-29 17:06:17.677 30724 30774 I flutter : before-plugin-processing-score: index 415 at 1735502774465
+12-29 17:06:17.677 30724 30774 I flutter : saving-image-pre-processing-score: index 415 in 2134
+12-29 17:06:17.677 30724 30774 I flutter : calling-plugin-processing-score: index 415 calculate scored was called
+12-29 17:06:17.677 30724 30774 I flutter : completed-processing-score: index 415 in 5342 ms
+12-29 17:06:18.303 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 417 in 311
+12-29 17:06:18.303 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 417 in 317
+12-29 17:06:18.303 30724 30724 D CowBodyConditionScore: job-processing-score: index 417 in 629
+12-29 17:06:19.707 30724 30724 D MainActivity: in-plugin-processing-score: index 419 at 1735502779707
+12-29 17:06:20.345 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 419 in 326
+12-29 17:06:20.345 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 419 in 311
+12-29 17:06:20.345 30724 30724 D CowBodyConditionScore: job-processing-score: index 419 in 637
+12-29 17:06:21.730 30724 30774 I flutter : before-plugin-processing-score: index 417 at 1735502777672
+12-29 17:06:21.730 30724 30774 I flutter : saving-image-pre-processing-score: index 417 in 3231
+12-29 17:06:21.730 30724 30774 I flutter : calling-plugin-processing-score: index 417 calculate scored was called
+12-29 17:06:21.730 30724 30774 I flutter : completed-processing-score: index 417 in 7285 ms
+12-29 17:06:21.736 30724 30774 I flutter : before-plugin-processing-score: index 419 at 1735502779705
+12-29 17:06:21.736 30724 30774 I flutter : saving-image-pre-processing-score: index 419 in 2076
+12-29 17:06:21.736 30724 30774 I flutter : calling-plugin-processing-score: index 419 calculate scored was called
+12-29 17:06:21.736 30724 30774 I flutter : completed-processing-score: index 419 in 4105 ms
+12-29 17:06:24.409 30724 30724 D MainActivity: in-plugin-processing-score: index 421 at 1735502784409
+12-29 17:06:25.030 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 421 in 314
+12-29 17:06:25.031 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 421 in 307
+12-29 17:06:25.031 30724 30724 D CowBodyConditionScore: job-processing-score: index 421 in 622
+12-29 17:06:25.540 30724 30774 I flutter : before-plugin-processing-score: index 421 at 1735502784407
+12-29 17:06:25.540 30724 30774 I flutter : saving-image-pre-processing-score: index 421 in 17
+12-29 17:06:25.540 30724 30774 I flutter : calling-plugin-processing-score: index 421 calculate scored was called
+12-29 17:06:25.540 30724 30774 I flutter : completed-processing-score: index 421 in 1147 ms
+12-29 17:06:27.716 30724 30724 D MainActivity: in-plugin-processing-score: index 423 at 1735502787716
+12-29 17:06:28.343 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 423 in 322
+12-29 17:06:28.343 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 423 in 304
+12-29 17:06:28.343 30724 30724 D CowBodyConditionScore: job-processing-score: index 423 in 627
+12-29 17:06:30.875 30724 30774 I flutter : before-plugin-processing-score: index 423 at 1735502787715
+12-29 17:06:30.875 30724 30774 I flutter : saving-image-pre-processing-score: index 423 in 47
+12-29 17:06:30.875 30724 30774 I flutter : calling-plugin-processing-score: index 423 calculate scored was called
+12-29 17:06:30.875 30724 30774 I flutter : completed-processing-score: index 423 in 3204 ms
+12-29 17:06:32.902 30724 30724 D MainActivity: in-plugin-processing-score: index 425 at 1735502792902
+12-29 17:06:33.582 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 425 in 394
+12-29 17:06:33.583 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 425 in 285
+12-29 17:06:33.583 30724 30724 D CowBodyConditionScore: job-processing-score: index 425 in 681
+12-29 17:06:33.583 30724 30724 D MainActivity: in-plugin-processing-score: index 427 at 1735502793583
+12-29 17:06:34.158 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 427 in 296
+12-29 17:06:34.158 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 427 in 279
+12-29 17:06:34.158 30724 30724 D CowBodyConditionScore: job-processing-score: index 427 in 575
+12-29 17:06:35.061 30724 30774 I flutter : before-plugin-processing-score: index 425 at 1735502792900
+12-29 17:06:35.061 30724 30774 I flutter : saving-image-pre-processing-score: index 425 in 2091
+12-29 17:06:35.061 30724 30774 I flutter : calling-plugin-processing-score: index 425 calculate scored was called
+12-29 17:06:35.061 30724 30774 I flutter : completed-processing-score: index 425 in 4249 ms
+12-29 17:06:35.064 30724 30774 I flutter : before-plugin-processing-score: index 427 at 1735502792902
+12-29 17:06:35.064 30724 30774 I flutter : saving-image-pre-processing-score: index 427 in 2039
+12-29 17:06:35.064 30724 30774 I flutter : calling-plugin-processing-score: index 427 calculate scored was called
+12-29 17:06:35.064 30724 30774 I flutter : completed-processing-score: index 427 in 4198 ms
+12-29 17:06:35.071 30724 30724 D MainActivity: in-plugin-processing-score: index 429 at 1735502795071
+12-29 17:06:35.784 30724 30724 D CowBodyConditionScore: python-preprocessing-time-processing-score: index 429 in 406
+12-29 17:06:35.785 30724 30724 D CowBodyConditionScore: detection-time-processing-score: index 429 in 306
+12-29 17:06:35.785 30724 30724 D CowBodyConditionScore: job-processing-score: index 429 in 714
+12-29 17:06:35.785 30724 30724 D MainActivity: in-plugin-processing-score: index 431 at 1735502795785
+12-29 17:06:36.380 30724 30724 D CowBodyConditionScore: pyth

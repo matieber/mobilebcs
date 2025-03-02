@@ -20,7 +20,6 @@ class DeviationDiagramClientHttp  {
         return DispersionResponse.fromJson(responseBody);
       }else{
         if(response.statusCode == 204){
-          print("no hay diagramas");
           return null;
         }
       }

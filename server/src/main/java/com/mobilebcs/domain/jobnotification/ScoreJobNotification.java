@@ -5,6 +5,7 @@ import java.util.UUID;
 
 public class ScoreJobNotification {
 
+    private String identification;
     private UUID setCode;
     private String location;
     private Integer position;
@@ -16,7 +17,8 @@ public class ScoreJobNotification {
     private ScoreJobNotification() {
     }
 
-    public ScoreJobNotification(UUID setCode, Integer position, String location, Double score, String predictor) {
+    public ScoreJobNotification(String identification,UUID setCode, Integer position, String location, Double score, String predictor) {
+        this.identification = identification;
         this.setCode = setCode;
         this.location=location;
         this.position = position;
@@ -60,6 +62,15 @@ public class ScoreJobNotification {
         return setCode;
     }
 
+
+    public String getIdentification() {
+        return identification;
+    }
+
+    public void setIdentification(String identification) {
+        this.identification = identification;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("ScoreJobNotification{");
@@ -68,6 +79,7 @@ public class ScoreJobNotification {
         sb.append(", position=").append(position);
         sb.append(", score=").append(score);
         sb.append(", predictor='").append(predictor).append('\'');
+        sb.append(", identification='").append(identification).append('\'');
         sb.append('}');
         return sb.toString();
     }

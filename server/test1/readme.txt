@@ -1,0 +1,1 @@
+((tcp.port == 8080 and tcp.dstport == 39862 ) or (tcp.port == 39862 and tcp.dstport == 8080 )) and ((ip.src == 192.168.0.215 and ip.dst == 192.168.0.134) or (ip.src == 192.168.0.134 and ip.dst == 192.168.0.215)) and ip.proto == TCP

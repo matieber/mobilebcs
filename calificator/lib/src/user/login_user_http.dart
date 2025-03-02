@@ -19,7 +19,6 @@ class LoginUserHttp  {
     final response = await http.post(uri);
     if (response.statusCode == 201) {
       final responseBody=json.decode(response.body);
-      print(responseBody);
       return User.fromJson(responseBody);
     }else{
       if (response.statusCode == 404) {

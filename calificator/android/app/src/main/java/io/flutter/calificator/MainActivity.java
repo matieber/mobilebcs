@@ -8,9 +8,12 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
+
+import java.util.Map;
 
 import io.flutter.calificator.benchmark.CowBodyConditionScore;
 import io.flutter.calificator.services.BenchmarkExecutor;
@@ -32,8 +35,9 @@ public class MainActivity extends FlutterActivity {
     public static final String SET_KEEP_SCREEN_ON = "SET_KEEP_SCREEN_ON";
     public static final String INFORM_SERVICE_JOB_FINISHED = "JOB_FINISHED";
     private Intent execServiceIntent;
+    private static final String TAG = "MainActivity";
 
-    private static Context context;
+    private CowBodyConditionScore cowBodyConditionScore;
 
     private static final String CHANNEL = "io.flutter.calificator/calificator";
 
@@ -45,9 +49,12 @@ public class MainActivity extends FlutterActivity {
         methodChannel
                 .setMethodCallHandler(
                 (call,result)->{
+
                     if(call.method.equals("calculateScore")){
-                        byte[] content=call.arguments();
-                        float score=calculateScore(content);
+                        Map<String,Object> arguments=call.arguments();
+                        int position = (int) arguments.get("position");
+                        Log.d(TAG, "in-plugin-processing-score: index "+position+" at "+System.currentTimeMillis());
+                        float score=calculateScore( position);
                         result.success(score);
                     }else {
                         result.notImplemented();
@@ -57,9 +64,8 @@ public class MainActivity extends FlutterActivity {
                 );
     }
 
-    private float calculateScore(byte[] content) {
-        CowBodyConditionScore cowBodyConditionScore = new CowBodyConditionScore(context);
-        return cowBodyConditionScore.runBenchmark(content);
+    private float calculateScore(int position) {
+        return cowBodyConditionScore.runBenchmark(position);
     }
 
     private void initiateBenchmarksExecutionSet() {
@@ -78,9 +84,11 @@ public class MainActivity extends FlutterActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        context = getApplicationContext();
+        Context context = getApplicationContext();
         requestStoragePermissions();
         initiateBenchmarksExecutionSet();
+        cowBodyConditionScore = new CowBodyConditionScore(context);
+
 
     }
 

@@ -1,10 +1,13 @@
-#LyX 2.4 created this file. For more info see https://www.lyx.org/
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
 \textclass book
+\begin_preamble
+\usepackage{a4wide}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language spanish-mexico
@@ -88,10 +91,11 @@ Importancia y avances de la IA para calcular BCS
 \end_layout
 
 \begin_layout Standard
-El procesamiento de imágenes es un paso clave para extraer características relevantes para la evaluación del BCS.
- Tradicionalmente,
- la extracción de características visuales se ha realizado mediante métodos manuales,
- en combinación con técnicas estadísticas como el Análisis de Componentes Principales (PCA) 
+El procesamiento de imágenes es un paso clave para extraer características
+ relevantes para la evaluación del BCS.
+ Tradicionalmente, la extracción de características visuales se ha realizado
+ mediante métodos manuales, en combinación con técnicas estadísticas como
+ el Análisis de Componentes Principales (PCA) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "kurita2019principal"
@@ -100,15 +104,14 @@ literal "false"
 \end_inset
 
 .
- El PCA es un método que transforma un conjunto de características originales en un nuevo conjunto de variables no correlacionadas llamadas componentes principales,
- reduciendo así la dimensionalidad de los datos.
- Sin embargo,
- el uso del PCA en este contexto,
- al igual que otros enfoques lineales,
- tiene limitaciones importantes.
+ El PCA es un método que transforma un conjunto de características originales
+ en un nuevo conjunto de variables no correlacionadas llamadas componentes
+ principales, reduciendo así la dimensionalidad de los datos.
+ Sin embargo, el uso del PCA en este contexto, al igual que otros enfoques
+ lineales, tiene limitaciones importantes.
  Al depender de un número limitado de puntos de características y muestras,
- el PCA puede perder información crucial en escenarios más complejos,
- lo que resulta en modelos predictivos menos eficientes y precisos 
+ el PCA puede perder información crucial en escenarios más complejos, lo
+ que resulta en modelos predictivos menos eficientes y precisos 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "fischer2015rear"
@@ -117,10 +120,12 @@ literal "false"
 \end_inset
 
 .
- Para abordar estos desafíos,
- el aprendizaje profundo basado en redes neuronales artificiales ha demostrado ser una herramienta poderosa para la modelización predictiva;
- las técnicas populares utilizadas para analizar imágenes incluyen las redes neuronales convolucionales (CNN).
- La estructura de CNN imita una red neuronal biológica y se aplica fácilmente a la identificación de imágenes visuales 
+ Para abordar estos desafíos, el aprendizaje profundo basado en redes neuronales
+ artificiales ha demostrado ser una herramienta poderosa para la modelización
+ predictiva; las técnicas populares utilizadas para analizar imágenes incluyen
+ las redes neuronales convolucionales (CNN).
+ La estructura de CNN imita una red neuronal biológica y se aplica fácilmente
+ a la identificación de imágenes visuales 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "singh2016machine"
@@ -129,9 +134,10 @@ literal "false"
 \end_inset
 
 .
- En la agricultura ganadera,
- las CNN se han aplicado ampliamente a la clasificación e identificación de imágenes en áreas como el reconocimiento de comportamientos animales,
- la monitorización del estado de salud y la identificación de individuos 
+ En la agricultura ganadera, las CNN se han aplicado ampliamente a la clasificac
+ión e identificación de imágenes en áreas como el reconocimiento de comportamien
+tos animales, la monitorización del estado de salud y la identificación
+ de individuos 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "kamilaris2018deep"
@@ -140,9 +146,9 @@ literal "false"
 \end_inset
 
 .
- En este sentido,
- las CNN también han sido empleadas para la estimación del BCS de vacas a partir de imágenes de profundidad,
- como se demuestra en 
+ En este sentido, las CNN también han sido empleadas para la estimación
+ del BCS de vacas a partir de imágenes de profundidad, como se demuestra
+ en 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "rodriguez2018revision"
@@ -151,15 +157,18 @@ literal "false"
 \end_inset
 
 .
- Este trabajo destaca el uso de imágenes tridimensionales y técnicas de aprendizaje profundo para lograr evaluaciones precisas del BCS,
- mejorando así el proceso de monitoreo del bienestar animal.
+ Este trabajo destaca el uso de imágenes tridimensionales y técnicas de
+ aprendizaje profundo para lograr evaluaciones precisas del BCS, mejorando
+ así el proceso de monitoreo del bienestar animal.
 \end_layout
 
 \begin_layout Standard
-Además de los avances en inteligencia artificial para la evaluación del BCS,
- es crucial considerar el papel de las tecnologías de soporte que facilitan el procesamiento de datos en entornos distribuidos y con recursos limitados,
- como es el caso de Dew Computing,
- un paradigma que se presenta como una alternativa sustentable para la ejecución de aplicaciones IoT en áreas rurales y de conectividad limitada.
+Además de los avances en inteligencia artificial para la evaluación del
+ BCS, es crucial considerar el papel de las tecnologías de soporte que facilitan
+ el procesamiento de datos en entornos distribuidos y con recursos limitados,
+ como es el caso de Dew Computing, un paradigma que se presenta como una
+ alternativa sustentable para la ejecución de aplicaciones IoT en áreas
+ rurales y de conectividad limitada.
 \end_layout
 
 \begin_layout Section
@@ -183,8 +192,11 @@ literal "false"
 
 \end_inset
 
- nace como un paradigma de computación posterior a Edge/Fog Computing que se presenta como una alternativa sustentable para soportar aplicaciones IoT.
- Puede operar acoplada o desacopladamente de los servicios de ejecución que ofrece el Cloud 
+ nace como un paradigma de computación posterior a Edge/Fog Computing que
+ se presenta como una alternativa sustentable para soportar aplicaciones
+ IoT.
+ Puede operar acoplada o desacopladamente de los servicios de ejecución
+ que ofrece el Cloud 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "gusev2018formal"
@@ -193,16 +205,18 @@ literal "false"
 \end_inset
 
 .
- En el segundo caso,
- asociado a lo que puede ser una falta de conectividad,
- se explotan recursos presentes en el contexto local al usuario,
- también denominados “on premises resources” dentro de los cuales se encuentran dispositivos de usuario como smartphones o single board computers (SBC).
- Las capacidades de cómputo no despreciables que ofrecen hoy en día estos dispositivos posibilitan la ejecución de software recurso-intensivo.
+ En el segundo caso, asociado a lo que puede ser una falta de conectividad,
+ se explotan recursos presentes en el contexto local al usuario, también
+ denominados “on premises resources” dentro de los cuales se encuentran
+ dispositivos de usuario como smartphones o single board computers (SBC).
+ Las capacidades de cómputo no despreciables que ofrecen hoy en día estos
+ dispositivos posibilitan la ejecución de software recurso-intensivo.
  Existen ejemplos donde estos dispositivos consitu
 \change_deleted -997162125 1724420532
 t
 \change_unchanged
-yen el principal soporte de ejecución de software complejo en ámbitos profesionales 
+yen el principal soporte de ejecución de software complejo en ámbitos profesiona
+les 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "prego2018mobile"
@@ -227,9 +241,11 @@ literal "false"
 \end_inset
 
 .
- Incluso cuando un único de estos dispositivo carezca de los recursos necesarios para cumplir con la ejecución de una tarea en el tiempos que se espera,
- aparecen trabajos en la literatura que plantean enfoques de ejecución colaborativos,
- donde una tarea se paraleliza y ejecuta en grupos de dispositivos 
+ Incluso cuando un único de estos dispositivo carezca de los recursos necesarios
+ para cumplir con la ejecución de una tarea en el tiempos que se espera,
+ aparecen trabajos en la literatura que plantean enfoques de ejecución colaborat
+ivos, donde una tarea se paraleliza y ejecuta en grupos de dispositivos
+ 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "hirsch2018augmenting"
@@ -238,9 +254,11 @@ literal "false"
 \end_inset
 
 .
- La eficiente utilización de un grupo de dispositivos en un contexto local plantea desafíos a nivel plataforma,
- tal como el estudio de componente de planificación de tareas,
- que es necesario seguir estudiando dada la heterogeneidad en términos de eficiencia energética y prestaciones que puede encontrarse de los dispositivos de usuario 
+ La eficiente utilización de un grupo de dispositivos en un contexto local
+ plantea desafíos a nivel plataforma, tal como el estudio de componente
+ de planificación de tareas, que es necesario seguir estudiando dada la
+ heterogeneidad en términos de eficiencia energética y prestaciones que
+ puede encontrarse de los dispositivos de usuario 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "hirsch2017two"
@@ -257,7 +275,8 @@ literal "false"
 \end_inset
 
 .
- Es una práctica común y aceptada en el estudio de sistemas distribuidos la experimentación mediante simulación 
+ Es una práctica común y aceptada en el estudio de sistemas distribuidos
+ la experimentación mediante simulación 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "hirsch2018augmenting"
@@ -282,10 +301,10 @@ literal "false"
 \end_inset
 
 .
- Esto es dada la inherente complejidad de configuración,
- costos monetarios y tiempo que conlleva estudiar estrategias de planificación en sistemas distribuidos montados sobre ambientes de ejecución reales.
- En relación a esto,
- DewSim 
+ Esto es dada la inherente complejidad de configuración, costos monetarios
+ y tiempo que conlleva estudiar estrategias de planificación en sistemas
+ distribuidos montados sobre ambientes de ejecución reales.
+ En relación a esto, DewSim 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "hirsch2020dewsim"
@@ -293,10 +312,14 @@ literal "false"
 
 \end_inset
 
- permite modelar clusters de dispositivos móviles y evaluar estrategias de planificación de tareas teniendo en cuenta aspectos que tienen que ver con el consumo de energía de las baterías y uso de CPU de los dispositivos.
- Si bien la simulación resulta de suma utilidad para estudiar de forma exploratoria nuevas estrategias de planificación de tareas en ambientes Dew,
- es relevante contar con datos extraídos de la ejecución de aplicaciones Dew reales,
- ya se sea para validar los resultados obtenidos mediante simulación como para retroalimentar el modelo de entidades que forman parte de DewSim.
+ permite modelar clusters de dispositivos móviles y evaluar estrategias
+ de planificación de tareas teniendo en cuenta aspectos que tienen que ver
+ con el consumo de energía de las baterías y uso de CPU de los dispositivos.
+ Si bien la simulación resulta de suma utilidad para estudiar de forma explorato
+ria nuevas estrategias de planificación de tareas en ambientes Dew, es relevante
+ contar con datos extraídos de la ejecución de aplicaciones Dew reales,
+ ya se sea para validar los resultados obtenidos mediante simulación como
+ para retroalimentar el modelo de entidades que forman parte de DewSim.
 \end_layout
 
 \begin_layout Section
@@ -304,10 +327,9 @@ Comparaciones
 \end_layout
 
 \begin_layout Standard
-En el campo de la gestión ganadera,
- varios estudios recientes han abordado la automatización y optimización de procesos clave en áreas como la alimentación,
- bienestar animal,
- salud y reproducción del ganado.
+En el campo de la gestión ganadera, varios estudios recientes han abordado
+ la automatización y optimización de procesos clave en áreas como la alimentació
+n, bienestar animal, salud y reproducción del ganado.
 \end_layout
 
 \begin_layout Itemize
@@ -319,13 +341,19 @@ literal "false"
 
 \end_inset
 
- se usa BCS para agrupar y mejorar las tareas de cuidado y alimentación de los animales en determinados momentos.
- El objetivo es proporcionar una herramienta de fácil acceso a los productores de lácteos con la ayuda del software móvil diseñado.
- Se desarrolló un software para estimar los valores de BCS utilizando imágenes en tiempo real en dispositivos móviles Android llevándose a cabo con la ayuda de arquitecturas CNN que fueron entrenadas con imágenes tomadas por un software y evaluadas por un experto de manera offline.
- La red entrenada se transfirió al software móvil para utilizar el modelo entrenado y realizar predicciones en tiempo real.
- El software posee el modelo entrenado para realizar la toma de la foto y predecir el valor de BCS.
- De esta manera,
- no necesita acceso a cloud.
+ se usa BCS para agrupar y mejorar las tareas de cuidado y alimentación
+ de los animales en determinados momentos.
+ El objetivo es proporcionar una herramienta de fácil acceso a los productores
+ de lácteos con la ayuda del software móvil diseñado.
+ Se desarrolló un software para estimar los valores de BCS utilizando imágenes
+ en tiempo real en dispositivos móviles Android llevándose a cabo con la
+ ayuda de arquitecturas CNN que fueron entrenadas con imágenes tomadas por
+ un software y evaluadas por un experto de manera offline.
+ La red entrenada se transfirió al software móvil para utilizar el modelo
+ entrenado y realizar predicciones en tiempo real.
+ El software posee el modelo entrenado para realizar la toma de la foto
+ y predecir el valor de BCS.
+ De esta manera, no necesita acceso a cloud.
 \end_layout
 
 \begin_layout Itemize
@@ -336,17 +364,13 @@ literal "false"
 
 \end_inset
 
-:
- Desarrollo de una plataforma diseñada para monitorear,
- rastrear y optimizar las tareas de gestión de explotaciones mixtas de cultivo y ganadería.
- La tecnología integra visualización de datos,
- un sistema de alertas,
- un mapa interactivo de dispositivos IoT y una interfaz para configurar sensores.
- Además,
- registra y almacena datos biométricos del ganado lechero,
- mostrando su actividad y un historial de fiebre,
- combinando temperatura,
- ritmo respiratorio y frecuencia cardíaca.
+: Desarrollo de una plataforma diseñada para monitorear, rastrear y optimizar
+ las tareas de gestión de explotaciones mixtas de cultivo y ganadería.
+ La tecnología integra visualización de datos, un sistema de alertas, un
+ mapa interactivo de dispositivos IoT y una interfaz para configurar sensores.
+ Además, registra y almacena datos biométricos del ganado lechero, mostrando
+ su actividad y un historial de fiebre, combinando temperatura, ritmo respirator
+io y frecuencia cardíaca.
 \end_layout
 
 \begin_layout Itemize
@@ -358,16 +382,18 @@ literal "false"
 
 \end_inset
 
- se propone una red de sensores inalámbricos (WSN) con nodos LoRa,
- MongoDB y comunicaciones de largo alcance para monitorear la salud del ganado en hatos lecheros.
+ se propone una red de sensores inalámbricos (WSN) con nodos LoRa, MongoDB
+ y comunicaciones de largo alcance para monitorear la salud del ganado en
+ hatos lecheros.
  Los nodos LoRa recopilan datos y los transmiten a través de un LoRa Gateway,
  validando la viabilidad del sistema.
- Este enfoque permite generar alertas sobre la salud del ganado,
- detectar estro y prevenir robos.
- El sistema convierte los datos recibidos por el gateway a JSON y los almacena en MongoDB.
- Luego,
- los datos procesados se publican a través de un broker MQTT,
- permitiendo que aplicaciones móviles accedan y presenten los resultados en un dashboard externo.
+ Este enfoque permite generar alertas sobre la salud del ganado, detectar
+ estro y prevenir robos.
+ El sistema convierte los datos recibidos por el gateway a JSON y los almacena
+ en MongoDB.
+ Luego, los datos procesados se publican a través de un broker MQTT, permitiendo
+ que aplicaciones móviles accedan y presenten los resultados en un dashboard
+ externo.
 \end_layout
 
 \begin_layout Itemize
@@ -379,35 +405,40 @@ literal "false"
 
 \end_inset
 
- se desarrolló un sistema de monitoreo usando cámaras infrarrojas para registrar imágenes nocturnas de vacas lecheras.
- El procesamiento de imágenes identifica comportamientos de celo,
- facilitando que los propietarios tomen decisiones sobre la inseminación artificial.
- Utilizando análisis de energía dinámica de imágenes y procesamiento de imágenes binarias,
- pueden identificar cambios en la longitud de las vacas durante el comportamiento de montaje específico del estro.
- Los eventos que se ajusten a nuestra regla se grabarán como videos y se guardarán en la computadora.
- El prototipo se realizo con una sola cámara pero sugiere utilizar una cámara nocturna de ojo de pez a futuro para registrar actividades en un área más amplia de la granja lechera,
- superando la limitación de cobertura de una sola cámara.
- Esto evitaría la necesidad de combinar imágenes de múltiples cámaras y supera los problemas de los sensores de contacto directo utilizados en otras propuestas,
- que pueden ser perjudiciales para las vacas.
- Los eventos que se ajusten a la regla establecida se grabarán como videos y se guardarán en la computadora.
+ se desarrolló un sistema de monitoreo usando cámaras infrarrojas para registrar
+ imágenes nocturnas de vacas lecheras.
+ El procesamiento de imágenes identifica comportamientos de celo, facilitando
+ que los propietarios tomen decisiones sobre la inseminación artificial.
+ Utilizando análisis de energía dinámica de imágenes y procesamiento de
+ imágenes binarias, pueden identificar cambios en la longitud de las vacas
+ durante el comportamiento de montaje específico del estro.
+ Los eventos que se ajusten a nuestra regla se grabarán como videos y se
+ guardarán en la computadora.
+ El prototipo se realizo con una sola cámara pero sugiere utilizar una cámara
+ nocturna de ojo de pez a futuro para registrar actividades en un área más
+ amplia de la granja lechera, superando la limitación de cobertura de una
+ sola cámara.
+ Esto evitaría la necesidad de combinar imágenes de múltiples cámaras y
+ supera los problemas de los sensores de contacto directo utilizados en
+ otras propuestas, que pueden ser perjudiciales para las vacas.
+ Los eventos que se ajusten a la regla establecida se grabarán como videos
+ y se guardarán en la computadora.
  Estos eventos serán evaluados más adelante por los propietarios.
- Por lo tanto,
- no es necesario acceso a internet.
+ Por lo tanto, no es necesario acceso a internet.
 \change_inserted -1783815582 1727537432
 
 \end_layout
 
 \begin_layout Standard
-Estos trabajos han explorado diversas tecnologías para mejorar la captura de datos,
- el análisis y la toma de decisiones,
- utilizando aplicaciones móviles,
- inteligencia artificial y diferentes contextos y modos de ejecución.
- A continuación,
- se presenta una comparación que sintetiza estos aspectos en los principales trabajos relacionados,
- destacando no solo el uso de inteligencia artificial para la evaluación de la Condición Corporal (BCS),
- sino también su aplicación en otras áreas críticas de la ganadería,
- así como el uso de distintos dispositivos,
- técnicas de sensado y contextos de ejecución.
+Estos trabajos han explorado diversas tecnologías para mejorar la captura
+ de datos, el análisis y la toma de decisiones, utilizando aplicaciones
+ móviles, inteligencia artificial y diferentes contextos y modos de ejecución.
+ A continuación, se presenta una comparación que sintetiza estos aspectos
+ en los principales trabajos relacionados, destacando no solo el uso de
+ inteligencia artificial para la evaluación de la Condición Corporal (BCS),
+ sino también su aplicación en otras áreas críticas de la ganadería, así
+ como el uso de distintos dispositivos, técnicas de sensado y contextos
+ de ejecución.
 \end_layout
 
 \begin_layout Standard
@@ -523,8 +554,7 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Alimentación,
- Bienestar animal
+Alimentación, Bienestar animal
 \end_layout
 
 \end_inset
@@ -586,8 +616,7 @@ Si
 \begin_inset Text
 
 \begin_layout Plain Layout
-Cámara del móvil,
- Cualquier lugar
+Cámara del móvil, Cualquier lugar
 \end_layout
 
 \end_inset
@@ -614,8 +643,7 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Salud Animal,
- Reproducción
+Salud Animal, Reproducción
 \end_layout
 
 \end_inset
@@ -664,8 +692,7 @@ no
 \begin_inset Text
 
 \begin_layout Plain Layout
-Red de Sensores (Collar con nodo ESP32),
- Campo abierto
+Red de Sensores (Collar con nodo ESP32), Campo abierto
 \end_layout
 
 \end_inset
@@ -692,8 +719,7 @@ literal "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bienestar animal,
- Alimentación
+Bienestar animal, Alimentación
 \end_layout
 
 \end_inset
@@ -742,12 +768,8 @@ Si
 \begin_inset Text
 
 \begin_layout Plain Layout
-Red de Sensores (Collar,
- Sensores de ambiente (termómetro,
- higrómetro,
- gas),
- Estaciones meterológicas),
- Campo abierto/Corral
+Red de Sensores (Collar, Sensores de ambiente (termómetro, higrómetro, gas),
+ Estaciones meterológicas), Campo abierto/Corral
 \end_layout
 
 \end_inset
@@ -823,8 +845,7 @@ Si
 \begin_inset Text
 
 \begin_layout Plain Layout
-Cámara infrarroja,
- Corral
+Cámara infrarroja, Corral
 \end_layout
 
 \end_inset
@@ -846,19 +867,19 @@ status collapsed
 \begin_layout Plain Layout
 
 \change_inserted -997162125 1724452760
-Acomodé las dimensiones de la tabla para facilitar la lectura y que entren todas las columnas en el ancho de una página cuando se genera un pdf.
+Acomodé las dimensiones de la tabla para facilitar la lectura y que entren
+ todas las columnas en el ancho de una página cuando se genera un pdf.
  Veo que seguiste las columnas planteadas en uno de los mails.
- No sé qué te parece,
- pero me da la sensación que el contenido de las columnas está muy largo,
- y en varias no se condice con el nombre de la columna.
+ No sé qué te parece, pero me da la sensación que el contenido de las columnas
+ está muy largo, y en varias no se condice con el nombre de la columna.
  Eso NO implica que haya que tirar por completo lo que tiene la tabla.
- Lo que propongo es hacer que lo que está descrito para un trabajo en una fila pase a transformarse en un sólo párrafo.
- Las columnas tendrían que popularse con palabras claves,
- no con párrafos.
+ Lo que propongo es hacer que lo que está descrito para un trabajo en una
+ fila pase a transformarse en un sólo párrafo.
+ Las columnas tendrían que popularse con palabras claves, no con párrafos.
  De esa manera la tabla va a quedar más compacta y fácil de leer.
- Si adoptamos esta forma que te digo,
- la columna resumen pasaría a estar representada por el párrafo descriptivo del trabajo entonces la sacaría de la tabla,
- o en su lugar pondría que sea 
+ Si adoptamos esta forma que te digo, la columna resumen pasaría a estar
+ representada por el párrafo descriptivo del trabajo entonces la sacaría
+ de la tabla, o en su lugar pondría que sea 
 \begin_inset Quotes fld
 \end_inset
 
@@ -873,10 +894,10 @@ objetivo del sistema
 \begin_layout Plain Layout
 
 \change_inserted -997162125 1724693235
-Va un ejemplo de cómo quedarían estas transformaciones (a su vez,
- le cambié un poco el orden y el nombre a las columnas).
- La idea es darle alguna vuelta más,
- agregando un trabajo bien relacionado al primero pero no mucho más:
+Va un ejemplo de cómo quedarían estas transformaciones (a su vez, le cambié
+ un poco el orden y el nombre a las columnas).
+ La idea es darle alguna vuelta más, agregando un trabajo bien relacionado
+ al primero pero no mucho más:
 \end_layout
 
 \begin_layout Plain Layout
@@ -890,13 +911,19 @@ literal "false"
 
 \end_inset
 
- se usa BCS para agrupar y mejorar las tareas de cuidado y alimentación de los animales en determinados momentos.
- El objetivo es proporcionar una herramienta de fácil acceso a los productores de lácteos con la ayuda del software móvil diseñado.
- Se desarrolló un software para estimar los valores de BCS utilizando imágenes en tiempo real en dispositivos móviles Android llevándose a cabo con la ayuda de arquitecturas CNN que fueron entrenadas con imágenes tomadas por un software y evaluadas por un experto de manera offline.
- La red entrenada se transfirió al software móvil para utilizar el modelo entrenado y realizar predicciones en tiempo real.
- El software posee el modelo entrenado para realizar la toma de la foto y predecir el valor de BCS.
- De esta manera,
- no necesita acceso a cloud.
+ se usa BCS para agrupar y mejorar las tareas de cuidado y alimentación
+ de los animales en determinados momentos.
+ El objetivo es proporcionar una herramienta de fácil acceso a los productores
+ de lácteos con la ayuda del software móvil diseñado.
+ Se desarrolló un software para estimar los valores de BCS utilizando imágenes
+ en tiempo real en dispositivos móviles Android llevándose a cabo con la
+ ayuda de arquitecturas CNN que fueron entrenadas con imágenes tomadas por
+ un software y evaluadas por un experto de manera offline.
+ La red entrenada se transfirió al software móvil para utilizar el modelo
+ entrenado y realizar predicciones en tiempo real.
+ El software posee el modelo entrenado para realizar la toma de la foto
+ y predecir el valor de BCS.
+ De esta manera, no necesita acceso a cloud.
 \end_layout
 
 \begin_layout Plain Layout
@@ -909,17 +936,13 @@ literal "false"
 
 \end_inset
 
-:
- Desarrollo de una plataforma diseñada para monitorear,
- rastrear y optimizar las tareas de gestión de explotaciones mixtas de cultivo y ganaderia.
- La tecnología integra visualización de datos,
- un sistema de alertas,
- un mapa interactivo de dispositivos IoT y una interfaz para configurar sensores.
- Además,
- registra y almacena datos biométricos del ganado lechero,
- mostrando su actividad y un historial de fiebre,
- combinando temperatura,
- ritmo respiratorio y frecuencia cardíaca.
+: Desarrollo de una plataforma diseñada para monitorear, rastrear y optimizar
+ las tareas de gestión de explotaciones mixtas de cultivo y ganaderia.
+ La tecnología integra visualización de datos, un sistema de alertas, un
+ mapa interactivo de dispositivos IoT y una interfaz para configurar sensores.
+ Además, registra y almacena datos biométricos del ganado lechero, mostrando
+ su actividad y un historial de fiebre, combinando temperatura, ritmo respirator
+io y frecuencia cardíaca.
 \change_unchanged
 
 \end_layout
@@ -935,16 +958,18 @@ literal "false"
 
 \end_inset
 
- se propone una red de sensores inalámbricos (WSN) con nodos LoRa,
- MongoDB y comunicaciones de largo alcance para monitorear la salud del ganado en hatos lecheros.
+ se propone una red de sensores inalámbricos (WSN) con nodos LoRa, MongoDB
+ y comunicaciones de largo alcance para monitorear la salud del ganado en
+ hatos lecheros.
  Los nodos LoRa recopilan datos y los transmiten a través de un LoRa Gateway,
  validando la viabilidad del sistema.
- Este enfoque permite generar alertas sobre la salud del ganado,
- detectar estro y prevenir robos.
- El sistema convierte los datos recibidos por el gateway a JSON y los almacena en MongoDB.
- Luego,
- los datos procesados se publican a través de un broker MQTT,
- permitiendo que aplicaciones móviles accedan y presenten los resultados en un dashboard externo.
+ Este enfoque permite generar alertas sobre la salud del ganado, detectar
+ estro y prevenir robos.
+ El sistema convierte los datos recibidos por el gateway a JSON y los almacena
+ en MongoDB.
+ Luego, los datos procesados se publican a través de un broker MQTT, permitiendo
+ que aplicaciones móviles accedan y presenten los resultados en un dashboard
+ externo.
 \change_unchanged
 
 \end_layout
@@ -960,20 +985,26 @@ literal "false"
 
 \end_inset
 
- se desarrolló un sistema de monitoreo usando cámaras infrarrojas para registrar imágenes nocturnas de vacas lecheras.
- El procesamiento de imágenes identifica comportamientos de celo,
- facilitando que los propietarios tomen decisiones sobre la inseminación artificial.
- Utilizando análisis de energía dinámica de imágenes y procesamiento de imágenes binarias,
- pueden identificar cambios en la longitud de las vacas durante el comportamiento de montaje específico del estro.
- Los eventos que se ajusten a nuestra regla se grabarán como videos y se guardarán en la computadora.
- El prototipo se realizo con una sola cámara pero sugiere utilizar una cámara nocturna de ojo de pez a futuro para registrar actividades en un área más amplia de la granja lechera,
- superando la limitación de cobertura de una sola cámara.
- Esto evitaría la necesidad de combinar imágenes de múltiples cámaras y supera los problemas de los sensores de contacto directo utilizados en otras propuestas,
- que pueden ser perjudiciales para las vacas.
- Los eventos que se ajusten a la regla establecida se grabarán como videos y se guardarán en la computadora.
+ se desarrolló un sistema de monitoreo usando cámaras infrarrojas para registrar
+ imágenes nocturnas de vacas lecheras.
+ El procesamiento de imágenes identifica comportamientos de celo, facilitando
+ que los propietarios tomen decisiones sobre la inseminación artificial.
+ Utilizando análisis de energía dinámica de imágenes y procesamiento de
+ imágenes binarias, pueden identificar cambios en la longitud de las vacas
+ durante el comportamiento de montaje específico del estro.
+ Los eventos que se ajusten a nuestra regla se grabarán como videos y se
+ guardarán en la computadora.
+ El prototipo se realizo con una sola cámara pero sugiere utilizar una cámara
+ nocturna de ojo de pez a futuro para registrar actividades en un área más
+ amplia de la granja lechera, superando la limitación de cobertura de una
+ sola cámara.
+ Esto evitaría la necesidad de combinar imágenes de múltiples cámaras y
+ supera los problemas de los sensores de contacto directo utilizados en
+ otras propuestas, que pueden ser perjudiciales para las vacas.
+ Los eventos que se ajusten a la regla establecida se grabarán como videos
+ y se guardarán en la computadora.
  Estos eventos serán evaluados más adelante por los propietarios.
- Por lo tanto,
- no es necesario acceso a internet.
+ Por lo tanto, no es necesario acceso a internet.
 \change_unchanged
 
 \end_layout
@@ -1113,8 +1144,7 @@ literal "false"
 \begin_layout Plain Layout
 
 \change_inserted -997162125 1724451494
-Alimentación,
- Bienestar animal
+Alimentación, Bienestar animal
 \change_unchanged
 
 \end_layout
@@ -1186,8 +1216,7 @@ Si
 \begin_layout Plain Layout
 
 \change_inserted -997162125 1725276137
-Cámara del móvil,
- Campo abierto
+Cámara del móvil, Campo abierto
 \change_unchanged
 
 \end_layout
@@ -1220,8 +1249,7 @@ literal "false"
 \begin_layout Plain Layout
 
 \change_inserted -997162125 1724438449
-Salud Animal,
- Reproducción
+Salud Animal, Reproducción
 \end_layout
 
 \end_inset
@@ -1291,8 +1319,7 @@ no
 \begin_layout Plain Layout
 
 \change_inserted -997162125 1724438449
-Red de Sensores (Collar con nodo ESP32),
- Campo abierto
+Red de Sensores (Collar con nodo ESP32), Campo abierto
 \end_layout
 
 \end_inset
@@ -1323,8 +1350,7 @@ literal "false"
 \begin_layout Plain Layout
 
 \change_inserted -997162125 1724438449
-Bienestar animal,
- Alimentación
+Bienestar animal, Alimentación
 \end_layout
 
 \end_inset
@@ -1381,12 +1407,8 @@ Completamente
 \begin_layout Plain Layout
 
 \change_inserted -997162125 1724438449
-Red de Sensores (Collar,
- Sensores de ambiente (termómetro,
- higrómetro,
- gas),
- Estaciones meterológicas),
- Campo abierto/Corral
+Red de Sensores (Collar, Sensores de ambiente (termómetro, higrómetro, gas),
+ Estaciones meterológicas), Campo abierto/Corral
 \end_layout
 
 \end_inset
@@ -1474,8 +1496,7 @@ Completamente
 \begin_layout Plain Layout
 
 \change_inserted -997162125 1724438449
-Cámara infrarroja,
- Corral
+Cámara infrarroja, Corral
 \end_layout
 
 \end_inset
@@ -1491,15 +1512,14 @@ Cámara infrarroja,
 \begin_layout Plain Layout
 
 \change_inserted -997162125 1724693126
-De esta tabla surge que hay esfuerzos diversos en relación a tecnologizar tareas de monitoreo en tambos para incrementar al productividad,
- algunas relacionadas con mejorar la alimentación,
- otras con detectar momentos en los cuales la productividad de un animal disminuye,
- etc.
- Se ven,
- a su vez,
- soluciones que emplean dispositivos específicos para recolección de datos como por ej.
- collares,
- mientras que otros emplean imágenes o videos tomados mediante cámaras fijas estrategicamente ubicadas o cámaras móviles.
+De esta tabla surge que hay esfuerzos diversos en relación a tecnologizar
+ tareas de monitoreo en tambos para incrementar al productividad, algunas
+ relacionadas con mejorar la alimentación, otras con detectar momentos en
+ los cuales la productividad de un animal disminuye, etc.
+ Se ven, a su vez, soluciones que emplean dispositivos específicos para
+ recolección de datos como por ej.
+ collares, mientras que otros emplean imágenes o videos tomados mediante
+ cámaras fijas estrategicamente ubicadas o cámaras móviles.
 \end_layout
 
 \end_inset
@@ -1514,10 +1534,11 @@ Limitaciones halladas en trabajos relacionados
 \end_layout
 
 \begin_layout Standard
-Si bien los trabajos revisados ofrecen soluciones tecnológicas interesantes para el sector agro-ganadero,
- presentan algunas limitaciones importantes.
- En primer lugar,
- no se observa un sistema que proporcione asistencia en tiempo real para el apartamiento o agrupamiento de vacas utilizando el cómputo del BCS y cámaras estratégicamente colocadas.
+Si bien los trabajos revisados ofrecen soluciones tecnológicas interesantes
+ para el sector agro-ganadero, presentan algunas limitaciones importantes.
+ En primer lugar, no se observa un sistema que proporcione asistencia en
+ tiempo real para el apartamiento o agrupamiento de vacas utilizando el
+ cómputo del BCS y cámaras estratégicamente colocadas.
  La dependencia de la captura manual de imágenes en 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1526,13 +1547,12 @@ literal "false"
 
 \end_inset
 
- por parte del usuario introduce márgenes de error que pueden afectar la precisión de las predicciones,
- además de aumentar la carga de trabajo.
+ por parte del usuario introduce márgenes de error que pueden afectar la
+ precisión de las predicciones, además de aumentar la carga de trabajo.
 \end_layout
 
 \begin_layout Standard
-En segundo lugar,
- aunque algunos trabajos como 
+En segundo lugar, aunque algunos trabajos como 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ccevik2020deep"
@@ -1540,9 +1560,7 @@ literal "false"
 
 \end_inset
 
- calculan el BCS en tiempo real sin depender de la nube,
- otros,
- como
+ calculan el BCS en tiempo real sin depender de la nube, otros, como
 \begin_inset CommandInset citation
 LatexCommand cite
 key "alonso2020intelligent"
@@ -1550,8 +1568,8 @@ literal "false"
 
 \end_inset
 
-,
- utilizan técnicas de inteligencia artificial que requieren procesamiento en la nube para obtener resultados avanzados.
+, utilizan técnicas de inteligencia artificial que requieren procesamiento
+ en la nube para obtener resultados avanzados.
  Aunque 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1560,16 +1578,17 @@ literal "false"
 
 \end_inset
 
- almacena estadísticas y datos brutos en el edge,
- el procesamiento avanzado de IA y la visualización de resultados dependen de la nube.
+ almacena estadísticas y datos brutos en el edge, el procesamiento avanzado
+ de IA y la visualización de resultados dependen de la nube.
  Esto puede ser una limitación en entornos rurales con conectividad inestable,
- ya que las funcionalidades más complejas del sistema no estarán disponibles sin conexión a internet.
+ ya que las funcionalidades más complejas del sistema no estarán disponibles
+ sin conexión a internet.
 \end_layout
 
 \begin_layout Standard
-En cuanto al historial del BCS,
- ninguno de los trabajos revisados ofrece un sistema que almacene y mantenga registros continuos de las predicciones de BCS,
- ni en el edge ni en la nube.
+En cuanto al historial del BCS, ninguno de los trabajos revisados ofrece
+ un sistema que almacene y mantenga registros continuos de las predicciones
+ de BCS, ni en el edge ni en la nube.
  Aunque 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1578,15 +1597,13 @@ literal "false"
 
 \end_inset
 
-mantiene algunas estadísticas en el edge,
- los cálculos y resultados avanzados de IA solo están disponibles a través de la nube,
- lo que restringe el análisis profundo en el edge,
- dónde solo se puede acceder a datos no procesados.
+mantiene algunas estadísticas en el edge, los cálculos y resultados avanzados
+ de IA solo están disponibles a través de la nube, lo que restringe el análisis
+ profundo en el edge, dónde solo se puede acceder a datos no procesados.
 \end_layout
 
 \begin_layout Standard
-Además,
- tanto en el trabajo de 
+Además, tanto en el trabajo de 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "piedadedesign"
@@ -1602,13 +1619,13 @@ literal "false"
 
 \end_inset
 
-,
- la interpretación de los datos y el análisis de las imágenes capturadas dependen totalmente del usuario,
- ya que no se emplean técnicas de inteligencia artificial para automatizar estos procesos.
- Esto introduce una mayor carga de trabajo y puede ralentizar la toma de decisiones,
- aumentando el riesgo de interpretaciones subjetivas y potencialmente erróneas.
- Asimismo,
- en el caso de 
+, la interpretación de los datos y el análisis de las imágenes capturadas
+ dependen totalmente del usuario, ya que no se emplean técnicas de inteligencia
+ artificial para automatizar estos procesos.
+ Esto introduce una mayor carga de trabajo y puede ralentizar la toma de
+ decisiones, aumentando el riesgo de interpretaciones subjetivas y potencialment
+e erróneas.
+ Asimismo, en el caso de 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "piedadedesign"
@@ -1616,26 +1633,28 @@ literal "false"
 
 \end_inset
 
-,
- el uso de collares en las vacas añade costos adicionales y posibles inconvenientes para los animales.
+, el uso de collares en las vacas añade costos adicionales y posibles inconvenie
+ntes para los animales.
 \end_layout
 
 \begin_layout Standard
-Por último,
- no se ha abordado en los trabajos revisados la posibilidad de mejorar de forma continua los modelos predictivos del BCS.
- La falta de un mecanismo que permita la retroalimentación del modelo mediante el etiquetado de imágenes y la actualización del sistema de predicción limita la personalización y ajuste del sistema a las características particulares de cada rodeo,
- algo fundamental para mejorar la precisión y eficiencia de las soluciones en el largo plazo.
+Por último, no se ha abordado en los trabajos revisados la posibilidad de
+ mejorar de forma continua los modelos predictivos del BCS.
+ La falta de un mecanismo que permita la retroalimentación del modelo mediante
+ el etiquetado de imágenes y la actualización del sistema de predicción
+ limita la personalización y ajuste del sistema a las características particular
+es de cada rodeo, algo fundamental para mejorar la precisión y eficiencia
+ de las soluciones en el largo plazo.
 \end_layout
 
 \begin_layout Standard
-A pesar de que existen propuestas que utilizan computación en el edge,
- aplicaciones móviles,
- cálculo del BCS,
- visualización de datos o automatización,
- no se observa ninguna que reúna todas estas características de forma integrada.
- Esta falta de integración limita la adaptabilidad de las soluciones a diferentes entornos y necesidades,
- lo que resalta la relevancia a la propuesta de este trabajo,
- que busca ofrecer una solución completa y robusta para abordar estas limitaciones en el sector agro-ganadero.
+A pesar de que existen propuestas que utilizan computación en el edge, aplicacio
+nes móviles, cálculo del BCS, visualización de datos o automatización, no
+ se observa ninguna que reúna todas estas características de forma integrada.
+ Esta falta de integración limita la adaptabilidad de las soluciones a diferente
+s entornos y necesidades, lo que resalta la relevancia a la propuesta de
+ este trabajo, que busca ofrecer una solución completa y robusta para abordar
+ estas limitaciones en el sector agro-ganadero.
 \end_layout
 
 \begin_layout Subsection
@@ -1643,11 +1662,19 @@ Mejoras de mi propuesta
 \end_layout
 
 \begin_layout Standard
-El objetivo general de este proyecto es el de desarrollar un prototipo de ambiente de computación Dew que aproveche capacidad de cómputo presente en la cercanía de un usuario para ejecutar tareas de clasificación y etiquetado.
- Desde el punto de vista práctico,
- la capacidad de cómputo estará representada por dispositivos de bajo costo tipo SBC (Single Board Computers) y/o dispositivos móviles (smartphones) que podrán asumirse ya presentes en el contexto de utilización (tambo lechero) o en su defecto factibles de ser desplegados con mínimos requerimientos para llevar a cabo tareas de clasificación de ganado en tiempo real.
- Las tareas de clasificación propiamente dichas,
- emplearán un modelo tensorflow previamente desarrollado en el marco de un trabajo publicado en una revista internacional de alto impacto en el área de tecnologías aplicadas al agro 
+El objetivo general de este proyecto es el de desarrollar un prototipo de
+ ambiente de computación Dew que aproveche capacidad de cómputo presente
+ en la cercanía de un usuario para ejecutar tareas de clasificación y etiquetado.
+ Desde el punto de vista práctico, la capacidad de cómputo estará representada
+ por dispositivos de bajo costo tipo SBC (Single Board Computers) y/o dispositiv
+os móviles (smartphones) que podrán asumirse ya presentes en el contexto
+ de utilización (tambo lechero) o en su defecto factibles de ser desplegados
+ con mínimos requerimientos para llevar a cabo tareas de clasificación de
+ ganado en tiempo real.
+ Las tareas de clasificación propiamente dichas, emplearán un modelo tensorflow
+ previamente desarrollado en el marco de un trabajo publicado en una revista
+ internacional de alto impacto en el área de tecnologías aplicadas al agro
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "alvarez2018body"
@@ -1656,19 +1683,27 @@ literal "false"
 \end_inset
 
 .
- El prototipo a desarrollar tiene múltiples propósitos que pueden resumirse en:
+ El prototipo a desarrollar tiene múltiples propósitos que pueden resumirse
+ en:
 \end_layout
 
 \begin_layout Enumerate
-Contribuir a mejorar el modelo tensorflow a partir de un reentrenamiento que se será posible gracias a la agilización del proceso de etiquetado de imágenes en las que interviene un profesional veterinario experto en el dominio.
+Contribuir a mejorar el modelo tensorflow a partir de un reentrenamiento
+ que se será posible gracias a la agilización del proceso de etiquetado
+ de imágenes en las que interviene un profesional veterinario experto en
+ el dominio.
 \end_layout
 
 \begin_layout Enumerate
-Permitir que conocimiento experto en el dominio y encapsulado en una red de aprendizaje profundo pueda ser utilizado para automatizar la clasificación de ganado empleando dispositivos de usuario como plataforma de ejecución.
+Permitir que conocimiento experto en el dominio y encapsulado en una red
+ de aprendizaje profundo pueda ser utilizado para automatizar la clasificación
+ de ganado empleando dispositivos de usuario como plataforma de ejecución.
 \end_layout
 
 \begin_layout Enumerate
-Permitir la validación de resultados de estrategias de planificación de tareas en grupos de dispositivos móviles estudiados con anterioridad en el grupo de trabajo y empleando simulación.
+Permitir la validación de resultados de estrategias de planificación de
+ tareas en grupos de dispositivos móviles estudiados con anterioridad en
+ el grupo de trabajo y empleando simulación.
 \end_layout
 
 \begin_layout Standard
@@ -1676,21 +1711,31 @@ De este objetivo general se desprenden los siguientes objetivos específicos:
 \end_layout
 
 \begin_layout Itemize
-Diseño y desarrollo de una app móvil Android Evaluador que oficia de cliente y permite al profesional veterinario experto en el dominio etiquetar imágenes de ganado vacuno tomadas con una cámara de profundidad en tiempo real en el contexto de labores realizados en una manga,
- sin requerir de conexión a Internet.
+Diseño y desarrollo de una app móvil Android Evaluador que oficia de cliente
+ y permite al profesional veterinario experto en el dominio etiquetar imágenes
+ de ganado vacuno tomadas con una cámara de profundidad en tiempo real en
+ el contexto de labores realizados en una manga, sin requerir de conexión
+ a Internet.
 \end_layout
 
 \begin_layout Itemize
-Diseño y desarrollo de una app móvil Android Visualizador que permite a un usuario no experto en el dominio conocer la condición corporal del ganado vacuno a medida que se obtienen imágenes de este en tiempo real y en el contexto de labores realizadas en una manga,
- sin requerir de conexión a Internet.
+Diseño y desarrollo de una app móvil Android Visualizador que permite a
+ un usuario no experto en el dominio conocer la condición corporal del ganado
+ vacuno a medida que se obtienen imágenes de este en tiempo real y en el
+ contexto de labores realizadas en una manga, sin requerir de conexión a
+ Internet.
 \end_layout
 
 \begin_layout Itemize
-Diseño y desarrollo de un componente servidor encargado de la gestión de tareas que pueden ser de etiquetado o clasificación automática diferenciando la app cliente de la cual provenga una petición.
+Diseño y desarrollo de un componente servidor encargado de la gestión de
+ tareas que pueden ser de etiquetado o clasificación automática diferenciando
+ la app cliente de la cual provenga una petición.
 \end_layout
 
 \begin_layout Itemize
-Diseño y desarrollo de un módulo de generación de reportes que permitirá tanto a observadores como a calificadores visualizar reportes gráficos del BCS calculada por el algoritmo de predicción.
+Diseño y desarrollo de un módulo de generación de reportes que permitirá
+ tanto a observadores como a calificadores visualizar reportes gráficos
+ del BCS calculada por el algoritmo de predicción.
 \end_layout
 
 \end_body

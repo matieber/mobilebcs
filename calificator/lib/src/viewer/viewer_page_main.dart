@@ -62,6 +62,15 @@ class ViewerPageMainState extends State<ViewerPageMain> {
 
   ViewerStompClient? viewerStompClient;
 
+  void clean(){
+    identification="";
+    score="";
+    setCode="";
+    caravans=null;
+    qualifications=[];
+    imageProvider=null;
+  }
+
   @override
   Widget build(BuildContext context) {
 

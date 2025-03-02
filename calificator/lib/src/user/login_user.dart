@@ -27,7 +27,6 @@ class LoginUser extends MaterialPageRoute {
     }else{
       Future<User> future=loginUserHttp.login(userName);
       future.then((user) {
-      print('Usuario Ingresado: ${user}');
       return user;})
           .then((user) {
       Navigator.of(context).pop();
