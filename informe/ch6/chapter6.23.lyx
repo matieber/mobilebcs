@@ -1,4 +1,4 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
 \lyxformat 544
 \begin_document
 \begin_header
@@ -83,7 +83,8 @@
 \begin_body
 
 \begin_layout Chapter
-Conclusiones, Limitaciones y Trabajos Futuros
+Conclusiones,
+ Limitaciones y Trabajos Futuros
 \end_layout
 
 \begin_layout Section
@@ -91,50 +92,46 @@ Conclusión
 \end_layout
 
 \begin_layout Standard
-En este proyecto se desarrolló un sistema funcional y extensible diseñado
- para su implementación en entornos ganaderos, logrando mejorar la precisión
- y eficiencia en la predicción del BCS.
- Este desarrollo supuso enfrentar diferentes niveles de desafío según el
- componente en cuestión.
- En el caso del servidor, mi experiencia de más de 10 años como desarrollador
- backend fue determinante para diseñar e implementar este componente de
- manera ágil, utilizando tecnologías como Java, Spring Boot, JMS Template
- y STOMP.
- Además, esta experiencia facilitó la comprensión del dominio y los requerimient
-os funcionales, permitiendo una interacción efectiva con el modelo de negocio
- y sus particularidades.
+En este proyecto se desarrolló un sistema funcional y extensible diseñado para su implementación en entornos ganaderos,
+ logrando mejorar la precisión y eficiencia en la predicción del BCS.
+ Este desarrollo supuso enfrentar diferentes niveles de desafío según el componente en cuestión.
+ En el caso del servidor,
+ mi experiencia de más de 10 años como desarrollador backend fue determinante para diseñar e implementar este componente de manera ágil,
+ utilizando tecnologías como Java,
+ Spring Boot,
+ JMS Template y STOMP.
+ Además,
+ esta experiencia facilitó la comprensión del dominio y los requerimientos funcionales,
+ permitiendo una interacción efectiva con el modelo de negocio y sus particularidades.
 \end_layout
 
 \begin_layout Standard
-Por otro lado, el desarrollo de la aplicación móvil representó un desafío
- mayor, debido a mi falta de experiencia con Flutter, Dart y el desarrollo
- de interfaces visuales.
- Esta situación implicó una curva de aprendizaje significativa, que demandó
- más tiempo y esfuerzo en comparación con el desarrollo del servidor.
- Sin embargo, esta experiencia se convirtió en una oportunidad valiosa para
- ampliar mis habilidades en áreas complementarias y explorar nuevos enfoques
- en el desarrollo de software.
+Por otro lado,
+ el desarrollo de la aplicación móvil representó un desafío mayor,
+ debido a mi falta de experiencia con Flutter,
+ Dart y el desarrollo de interfaces visuales.
+ Esta situación implicó una curva de aprendizaje significativa,
+ que demandó más tiempo y esfuerzo en comparación con el desarrollo del servidor.
+ Sin embargo,
+ esta experiencia se convirtió en una oportunidad valiosa para ampliar mis habilidades en áreas complementarias y explorar nuevos enfoques en el desarrollo de software.
 \end_layout
 
 \begin_layout Standard
-En total, el proyecto involucró el desarrollo de 113 clases java y 4748
- lineas de código en el servidor y 52 archivos dart y 37 clases java y 6006
- lineas de código en la aplicación móvil, alcanzando un total de 10754 líneas
- de código, reflejando su complejidad técnica y su alcance.
+En total,
+ el proyecto involucró el desarrollo de 113 clases java y 4748 lineas de código en el servidor y 52 archivos dart y 37 clases java y 6006 lineas de código en la aplicación móvil,
+ alcanzando un total de 10754 líneas de código,
+ reflejando su complejidad técnica y su alcance.
 \end_layout
 
 \begin_layout Standard
-La modularidad y escalabilidad del sistema abren puertas para futuras ampliacion
-es, como la integración con dispositivos IoT, la optimización de modelos
- predictivos según distintas razas bovinas y el desarrollo de estrategias
- avanzadas de tolerancia a fallos.
- En conjunto, este proyecto no solo cumplió con los objetivos iniciales,
- sino que también sienta las bases para nuevas innovaciones en la automatización
- y gestión del sector ganadero.
- Además, representa un avance significativo tanto en términos técnicos como
- en el aprendizaje y adaptación a tecnologías y dominios desconocidos.
-\change_inserted -1783815582 1732591232
-
+La modularidad y escalabilidad del sistema abren puertas para futuras ampliaciones,
+ como la integración con dispositivos IoT,
+ la optimización de modelos predictivos según distintas razas bovinas y el desarrollo de estrategias avanzadas de tolerancia a fallos.
+ En conjunto,
+ este proyecto no solo cumplió con los objetivos iniciales,
+ sino que también sienta las bases para nuevas innovaciones en la automatización y gestión del sector ganadero.
+ Además,
+ representa un avance significativo tanto en términos técnicos como en el aprendizaje y adaptación a tecnologías y dominios desconocidos.
 \end_layout
 
 \begin_layout Subsection
@@ -142,40 +139,32 @@ Rendimientos en dispositivos móviles
 \end_layout
 
 \begin_layout Standard
-Para evaluar la eficiencia del sistema, se midieron los tiempos de predicción
- del BCS en dispositivos móviles, un aspecto crítico para asegurar una experienc
-ia fluida al obtener los resultados de la predicción.
- Antes de la implementación del prototipo, el algoritmo fue probado mediante
- una versión preliminar diseñada para Android.
- Estas pruebas se llevaron a cabo en diversos dispositivos móviles, variando
- tanto la cantidad de dispositivos como el tamaño de los lotes de procesamiento
- ("jobs").
+Para evaluar la eficiencia del sistema,
+ se midieron los tiempos de predicción del BCS en dispositivos móviles,
+ un aspecto crítico para asegurar una experiencia fluida al obtener los resultados de la predicción.
+ Antes de la implementación del prototipo,
+ el algoritmo fue probado mediante una versión preliminar diseñada para Android.
+ Estas pruebas se llevaron a cabo en diversos dispositivos móviles,
+ variando tanto la cantidad de dispositivos como el tamaño de los lotes de procesamiento ("jobs").
 \end_layout
 
 \begin_layout Standard
-En la versión preliminar, los datos se transmitían de forma continua desde
- un servidor a los dispositivos móviles
-\change_inserted -1783815582 1740942656
- usando round-robin
-\change_unchanged
-, operando dentro de la misma red local.
- En el prototipo final, el flujo de datos comenzó con una máquina que simulaba
- el sistema de envíos hacia el servidor.
- Posteriormente, el servidor redistribuía los trabajos a los dispositivos
- móviles
-\change_inserted -1783815582 1740849490
- usando round robin
-\change_unchanged
-, permitiendo evaluar el rendimiento en condiciones más representativas
- del entorno real en una red local.
+En la versión preliminar,
+ los datos se transmitían de forma continua desde un servidor a los dispositivos móviles usando round-robin,
+ operando dentro de la misma red local.
+ En el prototipo final,
+ el flujo de datos comenzó con una máquina que simulaba el sistema de envíos hacia el servidor.
+ Posteriormente,
+ el servidor redistribuía los trabajos a los dispositivos móviles usando round robin,
+ permitiendo evaluar el rendimiento en condiciones más representativas del entorno real en una red local.
+
+\change_deleted -997162125 1741373966
  
 \change_inserted -1783815582 1740849499
 
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1740864303
 En 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -186,45 +175,27 @@ noprefix "false"
 
 \end_inset
 
- 
-\change_deleted -1783815582 1740864275
-A continuación, 
-\change_unchanged
-se
-\change_inserted -1783815582 1740942742
- puede ver una comparación de la versión preliminar y el prototipo con respecto
- a la transferencia de datos.
- La tabla muestra que, a medida que aumenta la cantidad de imágenes por
- job, el tiempo de transferencia de datos disminuye en la versión preliminar.
- Esto se debe a que el cliente obtenía cada imagen a procesar mediante una
- llamada HTTP, lo que generaba mayores tiempos de transferencia.
- Sin embargo, al cambiar el mecanismo de transferencia a una conexión WebSocket,
+ se puede ver una comparación de la versión preliminar y el prototipo con respecto a la transferencia de datos.
+ La tabla muestra que,
+ a medida que aumenta la cantidad de imágenes por job,
+ el tiempo de transferencia de datos disminuye en la versión preliminar.
+ Esto se debe a que el cliente obtenía cada imagen a procesar mediante una llamada HTTP,
+ lo que generaba mayores tiempos de transferencia.
+ Sin embargo,
+ al cambiar el mecanismo de transferencia a una conexión WebSocket,
  se logra una reducción significativa en el tiempo de transferencia.
- Además, la menor variabilidad en la versión del prototipo sugiere una gestión
- más eficiente de la transferencia de imágenes.
-\change_unchanged
-
+ Además,
+ la menor variabilidad en la versión del prototipo sugiere una gestión más eficiente de la transferencia de imágenes.
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -1783815582 1740849507
- presenta un resumen de los resultados obtenidos en estas evaluaciones:
-\change_inserted -1783815582 1740849528
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1740849538
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849592
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="4">
 <features tabularvalignment="middle">
@@ -237,11 +208,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849599
 Job por imágenes
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -250,11 +217,7 @@ Job por imágenes
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849634
 versión
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -263,11 +226,7 @@ versión
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849640
 Dispositivo
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -276,11 +235,7 @@ Dispositivo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740863495
 tiempo de tranferencia por imagen (ms)
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -291,11 +246,7 @@ tiempo de tranferencia por imagen (ms)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849682
 2
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -304,11 +255,7 @@ tiempo de tranferencia por imagen (ms)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849713
 Preliminar
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -317,11 +264,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849739
 Note 7
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -330,11 +273,7 @@ Note 7
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849735
 697 ± 610
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -363,11 +302,7 @@ Note 7
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849743
 Moto g9 play
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -376,11 +311,7 @@ Moto g9 play
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849753
 746 ± 447
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -391,11 +322,7 @@ Moto g9 play
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849763
 2
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -404,11 +331,7 @@ Moto g9 play
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849768
 Preliminar
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -417,11 +340,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849773
 Note 7
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -430,11 +349,7 @@ Note 7
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849793
-983 ± 910 
-\change_unchanged
-
+983 ± 910
 \end_layout
 
 \end_inset
@@ -463,11 +378,7 @@ Note 7
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849781
 Moto g6 play
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -476,11 +387,7 @@ Moto g6 play
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849802
 807 ± 265
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -509,11 +416,7 @@ Moto g6 play
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849779
 Moto g9 play
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -522,11 +425,7 @@ Moto g9 play
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849810
 1065 ± 3092
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -537,11 +436,7 @@ Moto g9 play
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849824
 15
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -550,11 +445,7 @@ Moto g9 play
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849829
 Preliminar
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -563,8 +454,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849835
 Note 7
 \end_layout
 
@@ -574,11 +463,7 @@ Note 7
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849846
 57 ± 13
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -607,8 +492,6 @@ Note 7
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849835
 Moto g6 play
 \end_layout
 
@@ -618,11 +501,7 @@ Moto g6 play
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849853
 58 ± 11
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -651,8 +530,6 @@ Moto g6 play
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849835
 Moto g9 play
 \end_layout
 
@@ -662,11 +539,7 @@ Moto g9 play
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849857
 64 ± 14
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -677,8 +550,6 @@ Moto g9 play
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849874
 1
 \end_layout
 
@@ -688,8 +559,6 @@ Moto g9 play
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849881
 Prototipo
 \end_layout
 
@@ -699,8 +568,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849892
 g9 plus
 \end_layout
 
@@ -710,11 +577,7 @@ g9 plus
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849917
 34 ± 92
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -743,8 +606,6 @@ g9 plus
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849900
 moto g32
 \end_layout
 
@@ -754,11 +615,7 @@ moto g32
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849924
 41 ± 99
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -769,18 +626,12 @@ moto g32
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740849538
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740864289
 Transferencia de datos
 \begin_inset CommandInset label
 LatexCommand label
@@ -789,18 +640,10 @@ name "tab:Transferencia-de-datos"
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -810,8 +653,6 @@ name "tab:Transferencia-de-datos"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1740942881
 En 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -832,52 +673,24 @@ noprefix "false"
 
 \end_inset
 
-se puede ver un análisis comparativo entre las diferentes pruebas en términos
- del tiempo de detección por imágen.
- En la comparación se puede ver que Note 7 y el Moto G9 Play obtuvieron
- un mejor tiempo promedio de detección de imágenes y una menor variabilidad
- en la versión preliminar, en comparación con la versión prototipo, que
- incorpora dispositivos más modernos.
- Esta diferencia se debe a que, en la versión preliminar, el dispositivo
- se centraba exclusivamente en la ejecución del algoritmo, mientras que
- en el prototipo se realizaron tareas adicionales, como la visualización
- de todas las imágenes procesadas (no solo las utilizadas para la predicción)
- y el envío de los resultados al servidor.
- A pesar de estas diferencias en la carga de procesamiento, es un aspecto
- clave a evaluar con el objetivo de optimizar tanto el tiempo de detección
- como la desviación estándar en futuras iteraciones.
+se puede ver un análisis comparativo entre las diferentes pruebas en términos del tiempo de detección por imágen.
+ En la comparación se puede ver que Note 7 y el Moto G9 Play obtuvieron un mejor tiempo promedio de detección de imágenes y una menor variabilidad en la versión preliminar,
+ en comparación con la versión prototipo,
+ que incorpora dispositivos más modernos.
+ Esta diferencia se debe a que,
+ en la versión preliminar,
+ el dispositivo se centraba exclusivamente en la ejecución del algoritmo,
+ mientras que en el prototipo se realizaron tareas adicionales,
+ como la visualización de todas las imágenes procesadas (no solo las utilizadas para la predicción) y el envío de los resultados al servidor.
+ A pesar de estas diferencias en la carga de procesamiento,
+ es un aspecto clave a evaluar con el objetivo de optimizar tanto el tiempo de detección como la desviación estándar en futuras iteraciones.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1740849523
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1783815582 1732591233
-Estos resultados falta formatearlos/compatibilizarlos con lo que vos estás
- corriendo.
- Es decir, en estos experimentos de la tabla hay un scheduler round robin
- que no se estaría mencionando y que es el que se usó para distribuir los
- jobs.
- En tu experimento, al parecer va a haber un sólo móvil con lo cual el scheduler
- no tendría sentido, a menos que incluyas otro móvil en el cálculo.
- La tabla muestra 3 experimentos donde varían los streams y la composición
- del cluster pero contiene resultados discriminados por móvil de lo que
- resultó la inferencia de una imágen.
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -894,13 +707,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_deleted -1783815582 1740857106
-Ejecuciones
-\change_inserted -1783815582 1740857109
 Imágenes por job
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -918,8 +725,6 @@ Versión
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740857103
 Stream
 \end_layout
 
@@ -938,19 +743,7 @@ Cluster de smartphones marca-modelo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_deleted -1783815582 1735404090
-Tiempo Promedio por imagen
-\change_inserted -1783815582 1735406968
-Tiempo de detección por imágen
-\change_unchanged
- (
-\change_deleted -1783815582 1734826899
-milisegundos
-\change_inserted -1783815582 1734826899
-ms
-\change_unchanged
-)
+Tiempo de detección por imágen (ms)
 \end_layout
 
 \end_inset
@@ -979,8 +772,6 @@ preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740862018
 10 segundos entre ráfagas de 12 job
 \end_layout
 
@@ -991,16 +782,10 @@ preliminar
 
 \begin_layout Plain Layout
 
-\change_deleted -1783815582 1740863288
-Xiaomi Redmi_
-\change_inserted -1783815582 1734827468
+\change_deleted -997162125 1741374303
  
 \change_unchanged
-Note
-\change_deleted -1783815582 1734827468
-_
-\change_unchanged
-7
+Note7
 \end_layout
 
 \end_inset
@@ -1009,11 +794,7 @@ _
 \begin_inset Text
 
 \begin_layout Plain Layout
-235
-\change_inserted -1783815582 1734826802
- ± 24
-\change_unchanged
-
+235 ± 24
 \end_layout
 
 \end_inset
@@ -1052,22 +833,10 @@ _
 
 \begin_layout Plain Layout
 
-\change_deleted -1783815582 1740863284
-Motorola
-\change_unchanged
- moto
-\change_inserted -1783815582 1734827473
+\change_deleted -997162125 1741374303
  
-\change_deleted -1783815582 1734827471
-_
 \change_unchanged
-g9
-\change_inserted -1783815582 1734827475
- 
-\change_deleted -1783815582 1734827475
-_
-\change_unchanged
-play
+moto g9 play
 \end_layout
 
 \end_inset
@@ -1076,11 +845,7 @@ play
 \begin_inset Text
 
 \begin_layout Plain Layout
-243
-\change_inserted -1783815582 1734826804
- ±15
-\change_unchanged
-
+243 ±15
 \end_layout
 
 \end_inset
@@ -1109,8 +874,6 @@ preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740862020
 10 segundos entre ráfagas de 12 job
 \end_layout
 
@@ -1121,20 +884,10 @@ preliminar
 
 \begin_layout Plain Layout
 
-\change_deleted -1783815582 1740863286
-Xiaomi Redmi
-\change_inserted -1783815582 1734827477
+\change_deleted -997162125 1741374303
  
-\change_deleted -1783815582 1734827477
-_
 \change_unchanged
-Note
-\change_inserted -1783815582 1734827478
- 
-\change_deleted -1783815582 1734827478
-_
-\change_unchanged
-7
+Note 7
 \end_layout
 
 \end_inset
@@ -1143,11 +896,7 @@ _
 \begin_inset Text
 
 \begin_layout Plain Layout
-233
-\change_inserted -1783815582 1734826808
- ± 23
-\change_unchanged
-
+233 ± 23
 \end_layout
 
 \end_inset
@@ -1186,16 +935,10 @@ _
 
 \begin_layout Plain Layout
 
-\change_deleted -1783815582 1740863282
-Motorola
-\change_unchanged
- moto
-\change_inserted -1783815582 1734827480
+\change_deleted -997162125 1741374303
  
-\change_deleted -1783815582 1734827479
-_
 \change_unchanged
-g6
+moto g6
 \end_layout
 
 \end_inset
@@ -1204,11 +947,7 @@ g6
 \begin_inset Text
 
 \begin_layout Plain Layout
-300
-\change_inserted -1783815582 1734826811
- ± 54
-\change_unchanged
-
+300 ± 54
 \end_layout
 
 \end_inset
@@ -1247,22 +986,10 @@ g6
 
 \begin_layout Plain Layout
 
-\change_deleted -1783815582 1740863293
-Motorola
-\change_unchanged
- moto
-\change_inserted -1783815582 1734827481
+\change_deleted -997162125 1741374303
  
-\change_deleted -1783815582 1734827481
-_
 \change_unchanged
-g9
-\change_inserted -1783815582 1734827484
- 
-\change_deleted -1783815582 1734827484
-_
-\change_unchanged
-play
+moto g9 play
 \end_layout
 
 \end_inset
@@ -1271,11 +998,7 @@ play
 \begin_inset Text
 
 \begin_layout Plain Layout
-244
-\change_inserted -1783815582 1734826813
- ± 30
-\change_unchanged
-
+244 ± 30
 \end_layout
 
 \end_inset
@@ -1304,11 +1027,7 @@ preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740862022
 10 segundos entre ráfagas de 12 job
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1318,20 +1037,10 @@ preliminar
 
 \begin_layout Plain Layout
 
-\change_deleted -1783815582 1740863292
-Xiaomi Redmi
-\change_inserted -1783815582 1734827486
+\change_deleted -997162125 1741374303
  
-\change_deleted -1783815582 1734827485
-_
 \change_unchanged
-Note
-\change_inserted -1783815582 1734827487
- 
-\change_deleted -1783815582 1734827487
-_
-\change_unchanged
-7
+Note 7
 \end_layout
 
 \end_inset
@@ -1340,11 +1049,7 @@ _
 \begin_inset Text
 
 \begin_layout Plain Layout
-217
-\change_inserted -1783815582 1734826816
- ± 3
-\change_unchanged
-
+217 ± 3
 \end_layout
 
 \end_inset
@@ -1383,16 +1088,10 @@ _
 
 \begin_layout Plain Layout
 
-\change_deleted -1783815582 1740863295
-Motorola
-\change_unchanged
- moto
-\change_inserted -1783815582 1734827488
+\change_deleted -997162125 1741374303
  
-\change_deleted -1783815582 1734827488
-_
 \change_unchanged
-g6
+moto g6
 \end_layout
 
 \end_inset
@@ -1401,11 +1100,7 @@ g6
 \begin_inset Text
 
 \begin_layout Plain Layout
-355
-\change_inserted -1783815582 1734826818
- ± 14
-\change_unchanged
-
+355 ± 14
 \end_layout
 
 \end_inset
@@ -1444,22 +1139,10 @@ g6
 
 \begin_layout Plain Layout
 
-\change_deleted -1783815582 1740863296
-Motorola
-\change_unchanged
- moto
-\change_inserted -1783815582 1734827489
+\change_deleted -997162125 1741374303
  
-\change_deleted -1783815582 1734827489
-_
 \change_unchanged
-g9
-\change_inserted -1783815582 1734827491
- 
-\change_deleted -1783815582 1734827490
-_
-\change_unchanged
-play
+moto g9 play
 \end_layout
 
 \end_inset
@@ -1468,11 +1151,7 @@ play
 \begin_inset Text
 
 \begin_layout Plain Layout
-215
-\change_inserted -1783815582 1734826821
- ± 13
-\change_unchanged
-
+215 ± 13
 \end_layout
 
 \end_inset
@@ -1501,8 +1180,6 @@ prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740862026
 10 segundos entre ráfagas de 12 job
 \end_layout
 
@@ -1513,22 +1190,10 @@ prototipo
 
 \begin_layout Plain Layout
 
-\change_deleted -1783815582 1740863297
-Motorala
-\change_unchanged
- moto
-\change_inserted -1783815582 1734827492
+\change_deleted -997162125 1741374303
  
-\change_deleted -1783815582 1734827492
-_
 \change_unchanged
-g9
-\change_inserted -1783815582 1734827494
- 
-\change_deleted -1783815582 1734827493
-_
-\change_unchanged
-plus
+moto g9 plus
 \end_layout
 
 \end_inset
@@ -1537,13 +1202,7 @@ plus
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_deleted -1783815582 1734825435
-660
-\change_inserted -1783815582 1734827137
 336 ± 161
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1581,13 +1240,7 @@ plus
 \begin_inset Text
 
 \begin_layout Plain Layout
-Motorola moto
-\change_inserted -1783815582 1734827530
- 
-\change_deleted -1783815582 1734827529
-_
-\change_unchanged
-g32
+Motorola moto g32
 \end_layout
 
 \end_inset
@@ -1596,13 +1249,7 @@ g32
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_deleted -1783815582 1734826827
-528
-\change_inserted -1783815582 1734827145
 255 ± 78
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1613,8 +1260,6 @@ g32
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740857007
 Stream de 1 imagen por job
 \end_layout
 
@@ -1624,11 +1269,7 @@ Stream de 1 imagen por job
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740864104
 prototipo
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1637,11 +1278,7 @@ prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740863994
 10 segundos entre ráfagas de 12 job
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1650,8 +1287,6 @@ prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740856904
 moto g9 plus
 \end_layout
 
@@ -1661,11 +1296,7 @@ moto g9 plus
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740857699
 249 ± 48
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1703,8 +1334,6 @@ moto g9 plus
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740856904
 moto g32
 \end_layout
 
@@ -1714,11 +1343,7 @@ moto g32
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740856962
 298 ± 47
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1729,11 +1354,7 @@ moto g32
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740862031
 Stream de 1 imagen por job
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1742,11 +1363,7 @@ Stream de 1 imagen por job
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740857413
 prototipo
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1755,11 +1372,7 @@ prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740862034
 5 segundos entre ráfagas de 12 job
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1768,8 +1381,6 @@ prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740850284
 Motorala moto g9 plus
 \end_layout
 
@@ -1779,8 +1390,6 @@ Motorala moto g9 plus
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740850284
 241 ± 35
 \end_layout
 
@@ -1819,11 +1428,7 @@ Motorala moto g9 plus
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740863318
 Motorola moto g32
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1832,11 +1437,7 @@ Motorola moto g32
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740264350
 256 ± 73
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1854,16 +1455,12 @@ Motorola moto g32
 
 \begin_layout Plain Layout
 Tiempos de ejecución móvil
-\change_inserted -1783815582 1740864254
-
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Tiempos-de-ejecución"
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -1878,16 +1475,13 @@ name "tab:Tiempos-de-ejecución"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1740859651
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740859720
+\align center
 \begin_inset Graphics
 	filename detección.png
 	scale 50
@@ -1895,18 +1489,12 @@ status open
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740859651
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740942824
 Tiempo de detección 
 \begin_inset CommandInset label
 LatexCommand label
@@ -1915,18 +1503,10 @@ name "fig:Tiempo-de-detección"
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1936,22 +1516,17 @@ name "fig:Tiempo-de-detección"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1740942970
-A continuación, se presenta la comparación del tiempo total de procesamiento.
+A continuación,
+ se presenta la comparación del tiempo total de procesamiento.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1740942999
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943032
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="6">
 <features tabularvalignment="middle">
@@ -1966,11 +1541,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943155
 Cantidad de dispositivos
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1979,11 +1550,7 @@ Cantidad de dispositivos
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943171
 Imágenes por job
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1992,8 +1559,6 @@ Imágenes por job
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943166
 Versión
 \end_layout
 
@@ -2003,11 +1568,7 @@ Versión
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943238
 Imágenes procesadas
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2016,11 +1577,7 @@ Imágenes procesadas
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943234
 Job Recibidos
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2029,11 +1586,7 @@ Job Recibidos
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943229
 Tiempo total
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2044,11 +1597,7 @@ Tiempo total
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943175
 2
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2057,11 +1606,7 @@ Tiempo total
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943179
 2
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2070,8 +1615,6 @@ Tiempo total
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943206
 Preliminar
 \end_layout
 
@@ -2081,11 +1624,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943241
 1752
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2094,11 +1633,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943293
 876
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2107,11 +1642,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943322
 26:43
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2122,11 +1653,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943181
 3
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2135,11 +1662,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943182
 2
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2148,8 +1671,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943210
 Preliminar
 \end_layout
 
@@ -2159,11 +1680,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943270
 1752
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2172,11 +1689,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943300
 876
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2185,11 +1698,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943328
 26:44
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2200,11 +1709,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943186
 3
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2213,11 +1718,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943187
 3
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2226,8 +1727,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943210
 Preliminar
 \end_layout
 
@@ -2237,11 +1736,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943276
 1740
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2250,11 +1745,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943306
 116
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2263,11 +1754,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943332
 3:47
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2278,11 +1765,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943191
 2
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2291,11 +1774,7 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943194
 1
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2304,8 +1783,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943213
 Prototipo
 \end_layout
 
@@ -2315,11 +1792,7 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943282
 876
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2328,11 +1801,7 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943310
 876
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2341,11 +1810,7 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943350
 876
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2356,11 +1821,7 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943197
 2
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2369,11 +1830,7 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943198
 1
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2382,8 +1839,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943217
 Prototipo
 \end_layout
 
@@ -2393,11 +1848,7 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943286
 432
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2406,11 +1857,7 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943315
 432
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2419,11 +1866,7 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943353
 432
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2434,11 +1877,7 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943200
 2
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2447,11 +1886,7 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943202
 2
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2460,8 +1895,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943218
 Prototipo
 \end_layout
 
@@ -2471,11 +1904,7 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943289
 432
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2484,11 +1913,7 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943318
 432
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2497,11 +1922,7 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943356
 432
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2512,31 +1933,17 @@ Prototipo
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740942999
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1740943006
 Tiempo de procesamiento total
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2546,54 +1953,47 @@ Tiempo de procesamiento total
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1740862877
-Se observa que la versión preliminar logra un procesamiento más rápido a
- medida que los jobs contienen un mayor número de imágenes, lo cual se debe
- a que, como se analizó anteriormente, la transferencia de datos representaba
- el mayor costo en términos de tiempo.
- En la versión prototipo, este aspecto se optimizó mediante el uso de una
- conexión WebSocket, reduciendo significativamente los tiempos de transferencia.
- Sin embargo, dado que cada job en el prototipo contiene una única imagen
- y es necesario visualizarla en el dispositivo del observador, el tiempo
- de procesamiento por imagen es mayor.
+Se observa que la versión preliminar logra un procesamiento más rápido a medida que los jobs contienen un mayor número de imágenes,
+ lo cual se debe a que,
+ como se analizó anteriormente,
+ la transferencia de datos representaba el mayor costo en términos de tiempo.
+ En la versión prototipo,
+ este aspecto se optimizó mediante el uso de una conexión WebSocket,
+ reduciendo significativamente los tiempos de transferencia.
+ Sin embargo,
+ dado que cada job en el prototipo contiene una única imagen y es necesario visualizarla en el dispositivo del observador,
+ el tiempo de procesamiento por imagen es mayor.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1740944609
-A lo largo de las pruebas, se redujo progresivamente el tiempo de espera
- entre ráfagas, como se observa en la prueba 3 del prototipo, sin afectar
- la eficiencia del sistema.
- En futuras evaluaciones, sería recomendable continuar disminuyendo este
- tiempo de espera y mejorar el prototipo para permitir el procesamiento
- de múltiples imágenes por job.
- Asimismo, sería útil incorporar la opción de deshabilitar la visualización
- de las imágenes, mostrando únicamente los resultados de la predicción,
- con el objetivo de realizar comparaciones más precisas y optimizar el rendimien
-to.
+A lo largo de las pruebas,
+ se redujo progresivamente el tiempo de espera entre ráfagas,
+ como se observa en la prueba 3 del prototipo,
+ sin afectar la eficiencia del sistema.
+ En futuras evaluaciones,
+ sería recomendable continuar disminuyendo este tiempo de espera y mejorar el prototipo para permitir el procesamiento de múltiples imágenes por job.
+ Asimismo,
+ sería útil incorporar la opción de deshabilitar la visualización de las imágenes,
+ mostrando únicamente los resultados de la predicción,
+ con el objetivo de realizar comparaciones más precisas y optimizar el rendimiento.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1740945450
-Adicionalmente, las pruebas realizadas con el prototipo permitieron evaluar
- el consumo de memoria en los dispositivos utilizados.
+Adicionalmente,
+ las pruebas realizadas con el prototipo permitieron evaluar el consumo de memoria en los dispositivos utilizados.
  Los resultados obtenidos fueron los siguientes:
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1740945459
-En la primera prueba, el Moto G32 alcanzó un consumo máximo de 663.2 MB,
+En la primera prueba,
+ el Moto G32 alcanzó un consumo máximo de 663.2 MB,
  mientras que el G9 Plus registró un pico de 445.49 MB.
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1740945558
-En la segunda prueba, el consumo máximo del Moto G32 fue de 558.29 MB, mientras
- que el G9 Plus redujo su uso de memoria a 425.64 MB.
+En la segunda prueba,
+ el consumo máximo del Moto G32 fue de 558.29 MB,
+ mientras que el G9 Plus redujo su uso de memoria a 425.64 MB.
 \end_layout
 
 \begin_layout Subsection
@@ -2601,53 +2001,24 @@ Rendimientos en el servidor
 \end_layout
 
 \begin_layout Standard
-Como se mencionó anteriormente el sistema fue probado en un entorno con
- dos observadores, sin calificadores para verificar el consum
-\change_inserted -1783815582 1740943876
-o
-\change_unchanged
- de recursos durante la ejecución del algoritmo de predicción, y demostró
- los siguientes consumos de memoria:
+Como se mencionó anteriormente el sistema fue probado en un entorno con dos observadores,
+ sin calificadores para verificar el consumo de recursos durante la ejecución del algoritmo de predicción,
+ y demostró los siguientes consumos de memoria:
 \end_layout
 
 \begin_layout Itemize
-ActiveMQ: fue incrementando desde 277 MB de memoria hasta 
-\change_deleted -1783815582 1740944384
-554
-\change_inserted -1783815582 1740944384
-490
-\change_unchanged
- MB de memoria
-\change_inserted -1783815582 1740944399
-.
-\change_deleted -1783815582 1740944386
-.
-\change_unchanged
-
+ActiveMQ:
+ fue incrementando desde 277 MB de memoria hasta 490 MB de memoria.
 \end_layout
 
 \begin_layout Itemize
-MySQL: fue incrementando desde 395 MB de memoria hasta 40
-\change_inserted -1783815582 1740944446
-3
-\change_deleted -1783815582 1740944446
-1
-\change_unchanged
- MB de memoria.
+MySQL:
+ fue incrementando desde 395 MB de memoria hasta 403 MB de memoria.
 \end_layout
 
 \begin_layout Itemize
 Servidor (API principal):
-\change_inserted -1783815582 1740944298
  no superaron los 500 MB de memoria las pruebas realizadas.
-
-\change_deleted -1783815582 1740944285
- tuvo un máximo de 464 MB.
-
-\change_deleted -997162125 1732883357
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Section
@@ -2660,20 +2031,17 @@ Seguridad
 
 \begin_layout Standard
 El sistema de inicio de sesión presenta una limitación en términos de seguridad.
- Actualmente, este componente únicamente permite identificar el tipo de
- usuario y asociar calificaciones a un experto específico, pero no incluye
- mecanismos de autenticación robustos ni validaciones avanzadas para garantizar
- la protección del acceso.
+ Actualmente,
+ este componente únicamente permite identificar el tipo de usuario y asociar calificaciones a un experto específico,
+ pero no incluye mecanismos de autenticación robustos ni validaciones avanzadas para garantizar la protección del acceso.
 \end_layout
 
 \begin_layout Standard
-Asimismo, no se han implementado restricciones para controlar quiénes pueden
- registrarse como calificadores.
- Esto permite que cualquier usuario pueda asumir este rol, lo que podría
- comprometer la calidad de las evaluaciones realizadas.
- La falta de validación previa de las credenciales o experiencia de los
- calificadores representa una limitación para la confiabilidad del sistema
- en entornos reales.
+Asimismo,
+ no se han implementado restricciones para controlar quiénes pueden registrarse como calificadores.
+ Esto permite que cualquier usuario pueda asumir este rol,
+ lo que podría comprometer la calidad de las evaluaciones realizadas.
+ La falta de validación previa de las credenciales o experiencia de los calificadores representa una limitación para la confiabilidad del sistema en entornos reales.
 \end_layout
 
 \begin_layout Subsection
@@ -2681,18 +2049,16 @@ Tolerencia a fallos
 \end_layout
 
 \begin_layout Standard
-El sistema actual presenta limitaciones en su capacidad de tolerancia a
- fallos.
- Ante interrupciones en la conexión WebSocket o errores relacionados, no
- existen mecanismos implementados para realizar reintentos automáticos o
- redirigir los trabajos ("jobs"), lo que puede resultar en predicciones
- no realizadas por el modelo.
+El sistema actual presenta limitaciones en su capacidad de tolerancia a fallos.
+ Ante interrupciones en la conexión WebSocket o errores relacionados,
+ no existen mecanismos implementados para realizar reintentos automáticos o redirigir los trabajos ("jobs"),
+ lo que puede resultar en predicciones no realizadas por el modelo.
 \end_layout
 
 \begin_layout Standard
-Asimismo, el proceso de calificación carece de estrategias que manejen fallos
- en llamadas REST, lo que puede ocasionar la pérdida de evaluaciones realizadas
- por los expertos y comprometer la integridad de los datos almacenados.
+Asimismo,
+ el proceso de calificación carece de estrategias que manejen fallos en llamadas REST,
+ lo que puede ocasionar la pérdida de evaluaciones realizadas por los expertos y comprometer la integridad de los datos almacenados.
 \end_layout
 
 \begin_layout Subsection
@@ -2700,18 +2066,15 @@ Mejora en la Gestión de Jobs para Calificadores
 \end_layout
 
 \begin_layout Standard
-Una limitación en la implementación actual es que los calificadores no pueden
- procesar los trabajos ("jobs") generados antes de su ingreso a una sesión
- de calificación.
- Esto significa que los trabajos existentes antes del inicio de la sesión
- quedan sin calificar, lo que afecta la completitud del proceso de calificación.
+Una limitación en la implementación actual es que los calificadores no pueden procesar los trabajos ("jobs") generados antes de su ingreso a una sesión de calificación.
+ Esto significa que los trabajos existentes antes del inicio de la sesión quedan sin calificar,
+ lo que afecta la completitud del proceso de calificación.
 \end_layout
 
 \begin_layout Standard
-Además, no se contempla la carga automática de trabajos previos desde la
- base de datos hacia la cola JMS del usuario al momento de iniciar sesión,
- lo que limita la capacidad de los calificadores para abordar tareas pendientes
- acumuladas antes de su participación activa en la sesión.
+Además,
+ no se contempla la carga automática de trabajos previos desde la base de datos hacia la cola JMS del usuario al momento de iniciar sesión,
+ lo que limita la capacidad de los calificadores para abordar tareas pendientes acumuladas antes de su participación activa en la sesión.
 \end_layout
 
 \begin_layout Subsection
@@ -2719,87 +2082,21 @@ Observadores y Algoritmo de Predicción
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -997162125 1732884039
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -997162125 1732884116
-Esta la voy a contextualizar un poco mejor para suavizarla.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-En la implementación actual, la predicción del puntaje de condición corporal
- (BCS) está limitada a ser ejecutada exclusivamente en la aplicación móvil
- por 
-\change_inserted -997162125 1732883874
-usuarios con logueados con el rol 
-\change_deleted -997162125 1732883875
-los
-\change_inserted -997162125 1732883875
-de
-\change_unchanged
- observador
-\change_deleted -997162125 1732883877
-es
-\change_unchanged
-.
- Esto implica que, en ausencia de observadores, el sistema no 
-\change_deleted -997162125 1732883895
-tiene la capacidad de 
-\change_unchanged
-genera
-\change_deleted -997162125 1732883897
-r
-\change_unchanged
- predicciones
-\change_inserted -997162125 1732884706
-.
- En etapas de prueba preliminares del prototipo en entornos reales en los
- que el apartamiento de animales según condición corporal se realice de
- forma manual, sin mecanización automática, es decir, por humanos, esto
- puede no verse como una limitación ya que se puede asumir que el sistema
- contará con el poder de cómputo de los dispositivos de quienes realizan
- dicha labor.
- Sin embargo, 
-\change_deleted -997162125 1732883998
-,
-\change_inserted -997162125 1732884810
-en un entorno que cuenta con apartamiento automático, es deseable que el
- sistema cuente con una forma alternativa de generar la predi
-\change_inserted -1783815582 1740945701
-c
-\change_inserted -997162125 1732884810
-ción.
- Para esto, se prevee que en el futuro el componente servidor 
-\change_deleted -1783815582 1740945722
-actue
-\change_inserted -1783815582 1740945722
-actúe
-\change_inserted -997162125 1732884810
- como un observador por defecto.
-
-\change_deleted -997162125 1732883998
- dejando trabajos sin evaluar y afectando la continuidad del flujo de trabajo.
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -997162125 1732884033
-La falta de una alternativa para realizar las predicciones, ya sea en los
- dispositivos de los calificadores o directamente en el servidor, representa
- una limitación del sistema.
-\change_inserted -1783815582 1732392834
-
+En la implementación actual,
+ la predicción del puntaje de condición corporal (BCS) está limitada a ser ejecutada exclusivamente en la aplicación móvil por usuarios con logueados con el rol de observador.
+ Esto implica que,
+ en ausencia de observadores,
+ el sistema no genera predicciones.
+ En etapas de prueba preliminares del prototipo en entornos reales en los que el apartamiento de animales según condición corporal se realice de forma manual,
+ sin mecanización automática,
+ es decir,
+ por humanos,
+ esto puede no verse como una limitación ya que se puede asumir que el sistema contará con el poder de cómputo de los dispositivos de quienes realizan dicha labor.
+ Sin embargo,
+ en un entorno que cuenta con apartamiento automático,
+ es deseable que el sistema cuente con una forma alternativa de generar la predicción.
+ Para esto,
+ se prevee que en el futuro el componente servidor actúe como un observador por defecto.
 \end_layout
 
 \begin_layout Section
@@ -2811,24 +2108,22 @@ Múltiples calificadores
 \end_layout
 
 \begin_layout Standard
-En futuras versiones del servidor, se planea implementar mejoras que permitan
- a los calificadores compartir una única cola JMS, facilitando la distribución
- equitativa de las tareas de calificación.
- Esto incluiría la opción de dividir un grupo de vacas (rodeo) entre calificador
-es o mantener la funcionalidad actual, donde todos los calificadores evalúan
- todas las vacas.
- Además, esta mejora permitiría que los calificadores puedan abandonar una
- sesión y unirse a otra según sea necesario, ofreciendo mayor flexibilidad
- en la gestión de las sesiones.
+En futuras versiones del servidor,
+ se planea implementar mejoras que permitan a los calificadores compartir una única cola JMS,
+ facilitando la distribución equitativa de las tareas de calificación.
+ Esto incluiría la opción de dividir un grupo de vacas (rodeo) entre calificadores o mantener la funcionalidad actual,
+ donde todos los calificadores evalúan todas las vacas.
+ Además,
+ esta mejora permitiría que los calificadores puedan abandonar una sesión y unirse a otra según sea necesario,
+ ofreciendo mayor flexibilidad en la gestión de las sesiones.
 \end_layout
 
 \begin_layout Standard
-Actualmente, aunque la aplicación móvil no permite que dos calificadores
- trabajen simultáneamente, el servidor ha sido diseñado para admitir múltiples
- calificadores en una misma sesión.
- Cada calificador dispone de su propia cola JMS y tiene la capacidad de
- calificar todas las vacas, lo que sienta las bases para la implementación
- de las mejoras mencionadas.
+Actualmente,
+ aunque la aplicación móvil no permite que dos calificadores trabajen simultáneamente,
+ el servidor ha sido diseñado para admitir múltiples calificadores en una misma sesión.
+ Cada calificador dispone de su propia cola JMS y tiene la capacidad de calificar todas las vacas,
+ lo que sienta las bases para la implementación de las mejoras mencionadas.
 \end_layout
 
 \begin_layout Subsection
@@ -2836,22 +2131,23 @@ Sistema generador de Jobs
 \end_layout
 
 \begin_layout Standard
-En las pruebas de rendimiento realizadas, fue necesario la creación de dicho
- componente para simular un escenario de ejecución.
- Sin embargo, la implementación real de un sistema de generación de jobs
- quedó fuera del alcance de este proyecto.Este sistema debiera configurarse
- para notificar al servidor sobre la existencia de una secuencia de imágenes
- capturadas por una cámara y asociadas
+En las pruebas de rendimiento realizadas,
+ fue necesario la creación de dicho componente para simular un escenario de ejecución.
+ Sin embargo,
+ la implementación real de un sistema de generación de jobs quedó fuera del alcance de este proyecto.Este sistema debiera configurarse para notificar al servidor sobre la existencia de una secuencia de imágenes capturadas por una cámara y asociadas
 \change_deleted -997162125 1732887064
  
 \change_unchanged
- unívocamente a una vaca, lo que da lugar a la creación de un "job" que
- deberá ser tratado por el componente servidor desarrollado en este proyecto.
- El generador de jobs deberá permitir, además, configurar la cantidad de
- imágenes por vaca a ser capturadas, teniendo en cuenta calidad de las mismas,
- por ejemplo, mediante la aplicación de filtros para determinar borrosidad
- de la imágen, presencia total o parcial de la parte del cuerpo que se emplea
- en el cálculo del BCS, etc..
+ unívocamente a una vaca,
+ lo que da lugar a la creación de un "job" que deberá ser tratado por el componente servidor desarrollado en este proyecto.
+ El generador de jobs deberá permitir,
+ además,
+ configurar la cantidad de imágenes por vaca a ser capturadas,
+ teniendo en cuenta calidad de las mismas,
+ por ejemplo,
+ mediante la aplicación de filtros para determinar borrosidad de la imágen,
+ presencia total o parcial de la parte del cuerpo que se emplea en el cálculo del BCS,
+ etc..
 \end_layout
 
 \begin_layout Subsection
@@ -2859,15 +2155,15 @@ Procesamiento de imágenes
 \end_layout
 
 \begin_layout Standard
-Actualmente, el sistema está diseñado para recibir y almacenar múltiples
- imágenes asociadas a cada vaca; sin embargo, sólo la primera imagen es
- enviada a los usuarios calificadores y observadores.
- Una posible mejora futura sería habilitar la capacidad de enviar todas
- las imágenes relacionadas con cada vaca, permitiendo un análisis más exhaustivo
- por parte de los calificadores y observadores.
- Además, esto abriría la posibilidad de optimizar el algoritmo de predicción
- para procesar múltiples imágenes dentro de un mismo job, lo que podría
- mejorar la precisión de los resultados generados.
+Actualmente,
+ el sistema está diseñado para recibir y almacenar múltiples imágenes asociadas a cada vaca;
+ sin embargo,
+ sólo la primera imagen es enviada a los usuarios calificadores y observadores.
+ Una posible mejora futura sería habilitar la capacidad de enviar todas las imágenes relacionadas con cada vaca,
+ permitiendo un análisis más exhaustivo por parte de los calificadores y observadores.
+ Además,
+ esto abriría la posibilidad de optimizar el algoritmo de predicción para procesar múltiples imágenes dentro de un mismo job,
+ lo que podría mejorar la precisión de los resultados generados.
 \end_layout
 
 \begin_layout Subsection
@@ -2875,13 +2171,13 @@ Integración con IoT
 \end_layout
 
 \begin_layout Standard
-El sistema tiene el potencial de integrarse en un entorno IoT, permitiendo
- la conexión con dispositivos y elementos del entorno ganadero, como mangas,
+El sistema tiene el potencial de integrarse en un entorno IoT,
+ permitiendo la conexión con dispositivos y elementos del entorno ganadero,
+ como mangas,
  corrales y comederos.
- Esto requerirá desarrollar una capa de comunicación que facilite la captura
- automatizada de datos y acciones de contingencia, estructurando el sistema
- como un Sistema Integral de Gestión de la Información (SIGI) para apoyar
- el monitoreo, la planificación y la toma de decisiones.
+ Esto requerirá desarrollar una capa de comunicación que facilite la captura automatizada de datos y acciones de contingencia,
+ estructurando el sistema como un Sistema Integral de Gestión de la Información (SIGI) para apoyar el monitoreo,
+ la planificación y la toma de decisiones.
 \end_layout
 
 \begin_layout Subsection
@@ -2889,11 +2185,10 @@ Múltiples modelos
 \end_layout
 
 \begin_layout Standard
-La aplicación móvil está diseñada con una arquitectura flexible que puede
- permtir la integración de diferentes modelos de predicción.
- A través de una configuración sencilla, se posible seleccionar y definir
- qué modelo utilizar en cada caso específico, adaptándose así a diversas
- necesidades y escenarios.
+La aplicación móvil está diseñada con una arquitectura flexible que puede permtir la integración de diferentes modelos de predicción.
+ A través de una configuración sencilla,
+ se posible seleccionar y definir qué modelo utilizar en cada caso específico,
+ adaptándose así a diversas necesidades y escenarios.
 \change_inserted -997162125 1732887233
 
 \begin_inset Note Note
@@ -2902,9 +2197,9 @@ status open
 \begin_layout Plain Layout
 
 \change_inserted -997162125 1732887274
-Esto está contado como una conclusión más que como algo a realizar en el
- futuro.
- Si es así, pasalo a la sección de conclusiones.
+Esto está contado como una conclusión más que como algo a realizar en el futuro.
+ Si es así,
+ pasalo a la sección de conclusiones.
 \change_unchanged
 
 \end_layout
@@ -2921,91 +2216,31 @@ Multiples plataformas
 \end_layout
 
 \begin_layout Standard
-Al desarrollar la aplicación móvil en Flutter, la portabilidad a iOS se
- facilita significativamente debido a la naturaleza multiplataforma del
- framework.
- Sin embargo, para lograr esta transición, es necesario analizar y ajustar
- el modelo predictivo, ya que actualmente está diseñado y probado específicament
-e dispositivos Android.
+Al desarrollar la aplicación móvil en Flutter,
+ la portabilidad a iOS se facilita significativamente debido a la naturaleza multiplataforma del framework.
+ Sin embargo,
+ para lograr esta transición,
+ es necesario analizar y ajustar el modelo predictivo,
+ ya que actualmente está diseñado y probado específicamente dispositivos Android.
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted -997162125 1732887725
 Configuración de la participación de observadores en el cálculo de BCS
-\change_deleted -997162125 1732887487
-Medir consumo de batería
-\change_inserted -1783815582 1732392436
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1732392436
-En futuras implementaciones, se planea incorporar a la aplicación móvil
- un interruptor (switch) junto con un campo de configuración 
-\change_inserted -997162125 1732887593
-que permita a un usuario observador decidir si aportar o no recursos de
- cómputo para el cálculo del BCS, o incluso que dicha opción pueda ser habilitad
-a dependiendo 
-\change_deleted -997162125 1732887599
-para establecer un
-\change_inserted -997162125 1732887599
-del
-\change_inserted -1783815582 1732392436
- nivel 
-\change_deleted -997162125 1732887602
-mínimo 
-\change_inserted -1783815582 1732392436
-de batería
-\change_inserted -997162125 1732887612
- con el que cuenta el dispositivo
-\change_inserted -1783815582 1732392436
-.
- Este mecanismo permitirá al dispositivo móvil notificar al servidor si
- puede ofrecer recursos de procesamiento para el cálculo del BCS
-\change_inserted -997162125 1732887667
- como así también fijar cuotas de uso de batería
-\change_inserted -1783815582 1732392436
-.
-
-\change_deleted -997162125 1732887396
- 
-\change_inserted -1783815582 1732392436
-
+En futuras implementaciones,
+ se planea incorporar a la aplicación móvil un interruptor (switch) junto con un campo de configuración que permita a un usuario observador decidir si aportar o no recursos de cómputo para el cálculo del BCS,
+ o incluso que dicha opción pueda ser habilitada dependiendo del nivel de batería con el que cuenta el dispositivo.
+ Este mecanismo permitirá al dispositivo móvil notificar al servidor si puede ofrecer recursos de procesamiento para el cálculo del BCS como así también fijar cuotas de uso de batería.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1732392436
-Al activar este interruptor, se deberá iniciar un servicio en segundo plano
- encargado de gestionar un protocolo de intercambio de mensajes entre la
- aplicación y el servidor, asegurando una coordinación eficiente para el
- uso compartido de recursos.
- Aunque esta funcionalidad estaba contemplada desde el inicio, no se logró
- implementar debido a las dificultades encontradas durante el desarrollo
- de la aplicación móvil
-\change_deleted -997162125 1732887696
- y las limitaciones de tiempo
-\change_inserted -1783815582 1732392436
-.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1732392411
-\begin_inset Separator plain
-\end_inset
-
-
-\change_inserted -1783815582 1731876859
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731878420
-
+Al activar este interruptor,
+ se deberá iniciar un servicio en segundo plano encargado de gestionar un protocolo de intercambio de mensajes entre la aplicación y el servidor,
+ asegurando una coordinación eficiente para el uso compartido de recursos.
+ Aunque esta funcionalidad estaba contemplada desde el inicio,
+ no se logró implementar debido a las dificultades encontradas durante el desarrollo de la aplicación móvil.
 \end_layout
 
 \end_body

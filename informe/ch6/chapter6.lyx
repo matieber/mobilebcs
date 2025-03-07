@@ -33,8 +33,6 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement class
-\float_alignment class
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -143,8 +141,6 @@ La modularidad y escalabilidad del sistema abren puertas para futuras ampliacion
  sino que también sienta las bases para nuevas innovaciones en la automatización y gestión del sector ganadero.
  Además,
  representa un avance significativo tanto en términos técnicos como en el aprendizaje y adaptación a tecnologías y dominios desconocidos.
-\change_inserted -1783815582 1732591232
-
 \end_layout
 
 \begin_layout Subsection
@@ -163,37 +159,46 @@ Para evaluar la eficiencia del sistema,
 
 \begin_layout Standard
 En la versión preliminar,
- los datos se transmitían de forma continua desde un servidor a los dispositivos móviles,
+ los datos se transmitían de forma continua desde un servidor a los dispositivos móviles usando round-robin,
  operando dentro de la misma red local.
  En el prototipo final,
  el flujo de datos comenzó con una máquina que simulaba el sistema de envíos hacia el servidor.
  Posteriormente,
- el servidor redistribuía los trabajos a los dispositivos móviles,
+ el servidor redistribuía los trabajos a los dispositivos móviles usando round robin,
  permitiendo evaluar el rendimiento en condiciones más representativas del entorno real en una red local.
- A continuación,
- se presenta un resumen de los resultados obtenidos en estas evaluaciones:
-\change_inserted -1783815582 1732592768
 
-\begin_inset Note Note
-status collapsed
+\change_deleted -997162125 1741373966
+ 
+\change_inserted -1783815582 1740849499
 
-\begin_layout Plain Layout
-
-\change_inserted -1783815582 1732591233
-Estos resultados falta formatearlos/compatibilizarlos con lo que vos estás corriendo.
- Es decir,
- en estos experimentos de la tabla hay un scheduler round robin que no se estaría mencionando y que es el que se usó para distribuir los jobs.
- En tu experimento,
- al parecer va a haber un sólo móvil con lo cual el scheduler no tendría sentido,
- a menos que incluyas otro móvil en el cálculo.
- La tabla muestra 3 experimentos donde varían los streams y la composición del cluster pero contiene resultados discriminados por móvil de lo que resultó la inferencia de una imágen.
 \end_layout
+
+\begin_layout Standard
+En 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Transferencia-de-datos"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
 
 \end_inset
 
+ se puede ver una comparación de la versión preliminar y el prototipo con respecto a la transferencia de datos.
+ La tabla muestra que,
+ a medida que aumenta la cantidad de imágenes por job,
+ el tiempo de transferencia de datos disminuye en la versión preliminar.
+ Esto se debe a que el cliente obtenía cada imagen a procesar mediante una llamada HTTP,
+ lo que generaba mayores tiempos de transferencia.
+ Sin embargo,
+ al cambiar el mecanismo de transferencia a una conexión WebSocket,
+ se logra una reducción significativa en el tiempo de transferencia.
+ Además,
+ la menor variabilidad en la versión del prototipo sugiere una gestión más eficiente de la transferencia de imágenes.
+\end_layout
 
-\change_unchanged
-
+\begin_layout Standard
 \begin_inset Float table
 placement document
 alignment document
@@ -204,21 +209,18 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="11" columns="7">
+<lyxtabular version="3" rows="11" columns="4">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="2.5cm">
-<column alignment="center" valignment="top" width="1.5cm">
-<column alignment="center" valignment="top" width="2.5cm">
-<column alignment="center" valignment="top" width="1.5cm">
-<column alignment="center" valignment="top" width="1.5cm">
-<column alignment="center" valignment="top" width="1.5cm">
-<column alignment="center" valignment="top" width="1.5cm">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="2cm">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ejecuciones
+Job por imágenes
 \end_layout
 
 \end_inset
@@ -227,7 +229,519 @@ Ejecuciones
 \begin_inset Text
 
 \begin_layout Plain Layout
+versión
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dispositivo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tiempo de tranferencia por imagen (ms)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Preliminar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Note 7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+697 ± 610
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Moto g9 play
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+746 ± 447
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Preliminar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Note 7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+983 ± 910
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Moto g6 play
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+807 ± 265
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Moto g9 play
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1065 ± 3092
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Preliminar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Note 7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+57 ± 13
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Moto g6 play
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+58 ± 11
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Moto g9 play
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+64 ± 14
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prototipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+g9 plus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+34 ± 92
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+moto g32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+41 ± 99
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Transferencia de datos
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Transferencia-de-datos"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Tiempos-de-ejecución"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Tiempo-de-detección"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+se puede ver un análisis comparativo entre las diferentes pruebas en términos del tiempo de detección por imágen.
+ En la comparación se puede ver que Note 7 y el Moto G9 Play obtuvieron un mejor tiempo promedio de detección de imágenes y una menor variabilidad en la versión preliminar,
+ en comparación con la versión prototipo,
+ que incorpora dispositivos más modernos.
+ Esta diferencia se debe a que,
+ en la versión preliminar,
+ el dispositivo se centraba exclusivamente en la ejecución del algoritmo,
+ mientras que en el prototipo se realizaron tareas adicionales,
+ como la visualización de todas las imágenes procesadas (no solo las utilizadas para la predicción) y el envío de los resultados al servidor.
+ A pesar de estas diferencias en la carga de procesamiento,
+ es un aspecto clave a evaluar con el objetivo de optimizar tanto el tiempo de detección como la desviación estándar en futuras iteraciones.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement document
+alignment document
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="15" columns="5">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="4cm">
+<column alignment="left" valignment="middle" width="2.5cm">
+<column alignment="center" valignment="top" width="4cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="1.5cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Imágenes por job
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 Versión
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stream
 \end_layout
 
 \end_inset
@@ -241,45 +755,18 @@ Cluster de smartphones marca-modelo
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Tiempo Promedio por imagen (milisegundos)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Desviación estandar
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Total de imágenes procesadas
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Total de jobs procesados
+Tiempo de detección por imágen (ms)
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -297,11 +784,11 @@ preliminar
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Xiaomi Redmi_Note_7
+10 segundos entre ráfagas de 12 job
 \end_layout
 
 \end_inset
@@ -310,25 +797,11 @@ Xiaomi Redmi_Note_7
 \begin_inset Text
 
 \begin_layout Plain Layout
-235
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-24
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-876
+\change_deleted -997162125 1741374303
+ 
+\change_unchanged
+Note7
 \end_layout
 
 \end_inset
@@ -337,7 +810,7 @@ Xiaomi Redmi_Note_7
 \begin_inset Text
 
 \begin_layout Plain Layout
-438
+235 ± 24
 \end_layout
 
 \end_inset
@@ -362,11 +835,11 @@ Xiaomi Redmi_Note_7
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Motorola moto_g9_play
+
 \end_layout
 
 \end_inset
@@ -375,25 +848,11 @@ Motorola moto_g9_play
 \begin_inset Text
 
 \begin_layout Plain Layout
-243
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-15
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-876
+\change_deleted -997162125 1741374303
+ 
+\change_unchanged
+moto g9 play
 \end_layout
 
 \end_inset
@@ -402,7 +861,7 @@ Motorola moto_g9_play
 \begin_inset Text
 
 \begin_layout Plain Layout
-438
+243 ±15
 \end_layout
 
 \end_inset
@@ -427,11 +886,11 @@ preliminar
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Xiaomi Redmi_Note_7
+10 segundos entre ráfagas de 12 job
 \end_layout
 
 \end_inset
@@ -440,25 +899,11 @@ Xiaomi Redmi_Note_7
 \begin_inset Text
 
 \begin_layout Plain Layout
-233
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-23
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-584
+\change_deleted -997162125 1741374303
+ 
+\change_unchanged
+Note 7
 \end_layout
 
 \end_inset
@@ -467,7 +912,7 @@ Xiaomi Redmi_Note_7
 \begin_inset Text
 
 \begin_layout Plain Layout
-292
+233 ± 23
 \end_layout
 
 \end_inset
@@ -492,11 +937,11 @@ Xiaomi Redmi_Note_7
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Motorola moto_g6
+
 \end_layout
 
 \end_inset
@@ -505,25 +950,11 @@ Motorola moto_g6
 \begin_inset Text
 
 \begin_layout Plain Layout
-300
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-54
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-584
+\change_deleted -997162125 1741374303
+ 
+\change_unchanged
+moto g6
 \end_layout
 
 \end_inset
@@ -532,7 +963,7 @@ Motorola moto_g6
 \begin_inset Text
 
 \begin_layout Plain Layout
-292
+300 ± 54
 \end_layout
 
 \end_inset
@@ -557,11 +988,11 @@ Motorola moto_g6
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Motorola moto_g9_play
+
 \end_layout
 
 \end_inset
@@ -570,25 +1001,11 @@ Motorola moto_g9_play
 \begin_inset Text
 
 \begin_layout Plain Layout
-244
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-30
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-584
+\change_deleted -997162125 1741374303
+ 
+\change_unchanged
+moto g9 play
 \end_layout
 
 \end_inset
@@ -597,14 +1014,14 @@ Motorola moto_g9_play
 \begin_inset Text
 
 \begin_layout Plain Layout
-292
+244 ± 30
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="left" valignment="middle" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -613,7 +1030,7 @@ Stream de 15 imágenes por job
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="left" valignment="middle" bottomline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -622,11 +1039,11 @@ preliminar
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Xiaomi Redmi_Note_7
+10 segundos entre ráfagas de 12 job
 \end_layout
 
 \end_inset
@@ -635,25 +1052,11 @@ Xiaomi Redmi_Note_7
 \begin_inset Text
 
 \begin_layout Plain Layout
-217
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-13
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-580
+\change_deleted -997162125 1741374303
+ 
+\change_unchanged
+Note 7
 \end_layout
 
 \end_inset
@@ -662,7 +1065,7 @@ Xiaomi Redmi_Note_7
 \begin_inset Text
 
 \begin_layout Plain Layout
-116
+217 ± 3
 \end_layout
 
 \end_inset
@@ -687,11 +1090,11 @@ Xiaomi Redmi_Note_7
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Motorola moto_g6
+
 \end_layout
 
 \end_inset
@@ -700,25 +1103,11 @@ Motorola moto_g6
 \begin_inset Text
 
 \begin_layout Plain Layout
-355
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-14
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5840
+\change_deleted -997162125 1741374303
+ 
+\change_unchanged
+moto g6
 \end_layout
 
 \end_inset
@@ -727,7 +1116,7 @@ Motorola moto_g6
 \begin_inset Text
 
 \begin_layout Plain Layout
-116
+355 ± 14
 \end_layout
 
 \end_inset
@@ -752,11 +1141,11 @@ Motorola moto_g6
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Motorola moto_g9_play
+
 \end_layout
 
 \end_inset
@@ -765,25 +1154,11 @@ Motorola moto_g9_play
 \begin_inset Text
 
 \begin_layout Plain Layout
-215
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-13
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-580
+\change_deleted -997162125 1741374303
+ 
+\change_unchanged
+moto g9 play
 \end_layout
 
 \end_inset
@@ -792,14 +1167,14 @@ Motorola moto_g9_play
 \begin_inset Text
 
 \begin_layout Plain Layout
-116
+215 ± 13
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="left" valignment="middle" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -808,7 +1183,7 @@ Stream de 1 imágen por job
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="left" valignment="middle" bottomline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -817,47 +1192,33 @@ prototipo
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Motorala moto_g9_plus
+10 segundos entre ráfagas de 12 job
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-660
+
+\change_deleted -997162125 1741374303
+ 
+\change_unchanged
+moto g9 plus
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-184
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-870
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-870
+336 ± 161
 \end_layout
 
 \end_inset
@@ -882,11 +1243,11 @@ Motorala moto_g9_plus
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Motorola moto_g32
+
 \end_layout
 
 \end_inset
@@ -895,25 +1256,7 @@ Motorola moto_g32
 \begin_inset Text
 
 \begin_layout Plain Layout
-528
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-216
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-870
+Motorola moto g32
 \end_layout
 
 \end_inset
@@ -922,7 +1265,195 @@ Motorola moto_g32
 \begin_inset Text
 
 \begin_layout Plain Layout
-870
+255 ± 78
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stream de 1 imagen por job
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+prototipo
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10 segundos entre ráfagas de 12 job
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+moto g9 plus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+249 ± 48
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+moto g32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+298 ± 47
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stream de 1 imagen por job
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+prototipo
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5 segundos entre ráfagas de 12 job
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Motorala moto g9 plus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+241 ± 35
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Motorola moto g32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+256 ± 73
 \end_layout
 
 \end_inset
@@ -940,7 +1471,9 @@ Motorola moto_g32
 
 \begin_layout Plain Layout
 Tiempos de ejecución móvil
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Tiempos-de-ejecución"
 
 \end_inset
 
@@ -952,43 +1485,535 @@ Tiempos de ejecución móvil
 
 \end_layout
 
-\begin_layout Itemize
-En el primer experimento,
- se emplearon dos dispositivos móviles (Xiaomi Redmi Note 7 y Motorola Moto G9 Play),
- con lotes de 2 imágenes por job.
- El flujo de datos fue de un total de 1752 imágenes cuyo BCS asociado se calculó en un total de 26 minutos y 43 segundos.
-\end_layout
+\end_inset
 
-\begin_layout Itemize
-En el segundo experimento,
- se incorporó un tercer dispositivo (Motorola Moto G6),
- manteniendo el tamaño de los jobs en 2 imágenes.
- Nuevamente,
- se procesaron 1752 imágenes,
- pero en 26 minutos y 44 segundos,
- mostrando una variación mínima en el tiempo total.
-\end_layout
 
-\begin_layout Itemize
-En el tercer experimento,
- utilizando los mismos tres dispositivos móviles,
- se incrementó el tamaño de los jobs a 15 imágenes por lote.
- En esta configuración,
- se procesaron 1740 imágenes en 3 minutos y 47,114 segundos,
- demostrando una notable mejora en el tiempo de procesamiento gracias al tamaño optimizado de los jobs.
-\end_layout
-
-\begin_layout Itemize
-En el cuarto experimento,
- se emplearon dos dispositivos móviles (utilizando un motorola g9 plus y un moto g 32),
- con lotes de 1 imágen por job.
- El flujo de datos fue de un total de 1740 imágenes cuyo BCS asociado se calculo en un total de 25 minutos y 5 segundos.
 \end_layout
 
 \begin_layout Standard
-Es importante destacar que todos los experimentos se llevaron a cabo utilizando un programador (scheduler) con política round robin para la distribución de los trabajos (jobs).
- En el prototipo,
- cada trabajo asociado a una imagen se envió al servidor con un intervalo fijo de 750 milisegundos entre cada envío.
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename detección.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tiempo de detección 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Tiempo-de-detección"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuación,
+ se presenta la comparación del tiempo total de procesamiento.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement document
+alignment document
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="2.5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cantidad de dispositivos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Imágenes por job
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Versión
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Imágenes procesadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Job Recibidos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tiempo total
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Preliminar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1752
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+876
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+26:43
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Preliminar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1752
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+876
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+26:44
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Preliminar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1740
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+116
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3:47
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prototipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+876
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+876
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+876
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prototipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+432
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+432
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+432
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prototipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+432
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+432
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+432
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tiempo de procesamiento total
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se observa que la versión preliminar logra un procesamiento más rápido a medida que los jobs contienen un mayor número de imágenes,
+ lo cual se debe a que,
+ como se analizó anteriormente,
+ la transferencia de datos representaba el mayor costo en términos de tiempo.
+ En la versión prototipo,
+ este aspecto se optimizó mediante el uso de una conexión WebSocket,
+ reduciendo significativamente los tiempos de transferencia.
+ Sin embargo,
+ dado que cada job en el prototipo contiene una única imagen y es necesario visualizarla en el dispositivo del observador,
+ el tiempo de procesamiento por imagen es mayor.
+\end_layout
+
+\begin_layout Standard
+A lo largo de las pruebas,
+ se redujo progresivamente el tiempo de espera entre ráfagas,
+ como se observa en la prueba 3 del prototipo,
+ sin afectar la eficiencia del sistema.
+ En futuras evaluaciones,
+ sería recomendable continuar disminuyendo este tiempo de espera y mejorar el prototipo para permitir el procesamiento de múltiples imágenes por job.
+ Asimismo,
+ sería útil incorporar la opción de deshabilitar la visualización de las imágenes,
+ mostrando únicamente los resultados de la predicción,
+ con el objetivo de realizar comparaciones más precisas y optimizar el rendimiento.
+\end_layout
+
+\begin_layout Standard
+Adicionalmente,
+ las pruebas realizadas con el prototipo permitieron evaluar el consumo de memoria en los dispositivos utilizados.
+ Los resultados obtenidos fueron los siguientes:
+\end_layout
+
+\begin_layout Itemize
+En la primera prueba,
+ el Moto G32 alcanzó un consumo máximo de 663.2 MB,
+ mientras que el G9 Plus registró un pico de 445.49 MB.
+\end_layout
+
+\begin_layout Itemize
+En la segunda prueba,
+ el consumo máximo del Moto G32 fue de 558.29 MB,
+ mientras que el G9 Plus redujo su uso de memoria a 425.64 MB.
 \end_layout
 
 \begin_layout Subsection
@@ -997,28 +2022,23 @@ Rendimientos en el servidor
 
 \begin_layout Standard
 Como se mencionó anteriormente el sistema fue probado en un entorno con dos observadores,
- sin calificadores para verificar el consum de recursos durante la ejecución del algoritmo de predicción,
+ sin calificadores para verificar el consumo de recursos durante la ejecución del algoritmo de predicción,
  y demostró los siguientes consumos de memoria:
 \end_layout
 
 \begin_layout Itemize
 ActiveMQ:
- fue incrementando desde 277 MB de memoria hasta 554 MB de memoria.
+ fue incrementando desde 277 MB de memoria hasta 490 MB de memoria.
 \end_layout
 
 \begin_layout Itemize
 MySQL:
- fue incrementando desde 395 MB de memoria hasta 401 MB de memoria.
+ fue incrementando desde 395 MB de memoria hasta 403 MB de memoria.
 \end_layout
 
 \begin_layout Itemize
 Servidor (API principal):
- tuvo un máximo de 464 MB.
-
-\change_deleted -997162125 1732883357
- 
-\change_unchanged
-
+ no superaron los 500 MB de memoria las pruebas realizadas.
 \end_layout
 
 \begin_layout Section
@@ -1082,79 +2102,21 @@ Observadores y Algoritmo de Predicción
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -997162125 1732884039
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -997162125 1732884116
-Esta la voy a contextualizar un poco mejor para suavizarla.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 En la implementación actual,
- la predicción del puntaje de condición corporal (BCS) está limitada a ser ejecutada exclusivamente en la aplicación móvil por 
-\change_inserted -997162125 1732883874
-usuarios con logueados con el rol 
-\change_deleted -997162125 1732883875
-los
-\change_inserted -997162125 1732883875
-de
-\change_unchanged
- observador
-\change_deleted -997162125 1732883877
-es
-\change_unchanged
-.
+ la predicción del puntaje de condición corporal (BCS) está limitada a ser ejecutada exclusivamente en la aplicación móvil por usuarios con logueados con el rol de observador.
  Esto implica que,
  en ausencia de observadores,
- el sistema no 
-\change_deleted -997162125 1732883895
-tiene la capacidad de 
-\change_unchanged
-genera
-\change_deleted -997162125 1732883897
-r
-\change_unchanged
- predicciones
-\change_inserted -997162125 1732884706
-.
+ el sistema no genera predicciones.
  En etapas de prueba preliminares del prototipo en entornos reales en los que el apartamiento de animales según condición corporal se realice de forma manual,
  sin mecanización automática,
  es decir,
  por humanos,
  esto puede no verse como una limitación ya que se puede asumir que el sistema contará con el poder de cómputo de los dispositivos de quienes realizan dicha labor.
  Sin embargo,
- 
-\change_deleted -997162125 1732883998
-,
-\change_inserted -997162125 1732884810
-en un entorno que cuenta con apartamiento automático,
- es deseable que el sistema cuente con una forma alternativa de generar la predición.
+ en un entorno que cuenta con apartamiento automático,
+ es deseable que el sistema cuente con una forma alternativa de generar la predicción.
  Para esto,
- se prevee que en el futuro el componente servidor actue como un observador por defecto.
-
-\change_deleted -997162125 1732883998
- dejando trabajos sin evaluar y afectando la continuidad del flujo de trabajo.
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -997162125 1732884033
-La falta de una alternativa para realizar las predicciones,
- ya sea en los dispositivos de los calificadores o directamente en el servidor,
- representa una limitación del sistema.
-\change_inserted -1783815582 1732392834
-
+ se prevee que en el futuro el componente servidor actúe como un observador por defecto.
 \end_layout
 
 \begin_layout Section
@@ -1283,78 +2245,22 @@ Al desarrollar la aplicación móvil en Flutter,
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted -997162125 1732887725
 Configuración de la participación de observadores en el cálculo de BCS
-\change_deleted -997162125 1732887487
-Medir consumo de batería
-\change_inserted -1783815582 1732392436
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1732392436
 En futuras implementaciones,
- se planea incorporar a la aplicación móvil un interruptor (switch) junto con un campo de configuración 
-\change_inserted -997162125 1732887593
-que permita a un usuario observador decidir si aportar o no recursos de cómputo para el cálculo del BCS,
- o incluso que dicha opción pueda ser habilitada dependiendo 
-\change_deleted -997162125 1732887599
-para establecer un
-\change_inserted -997162125 1732887599
-del
-\change_inserted -1783815582 1732392436
- nivel 
-\change_deleted -997162125 1732887602
-mínimo 
-\change_inserted -1783815582 1732392436
-de batería
-\change_inserted -997162125 1732887612
- con el que cuenta el dispositivo
-\change_inserted -1783815582 1732392436
-.
- Este mecanismo permitirá al dispositivo móvil notificar al servidor si puede ofrecer recursos de procesamiento para el cálculo del BCS
-\change_inserted -997162125 1732887667
- como así también fijar cuotas de uso de batería
-\change_inserted -1783815582 1732392436
-.
-
-\change_deleted -997162125 1732887396
- 
-\change_inserted -1783815582 1732392436
-
+ se planea incorporar a la aplicación móvil un interruptor (switch) junto con un campo de configuración que permita a un usuario observador decidir si aportar o no recursos de cómputo para el cálculo del BCS,
+ o incluso que dicha opción pueda ser habilitada dependiendo del nivel de batería con el que cuenta el dispositivo.
+ Este mecanismo permitirá al dispositivo móvil notificar al servidor si puede ofrecer recursos de procesamiento para el cálculo del BCS como así también fijar cuotas de uso de batería.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1732392436
 Al activar este interruptor,
  se deberá iniciar un servicio en segundo plano encargado de gestionar un protocolo de intercambio de mensajes entre la aplicación y el servidor,
  asegurando una coordinación eficiente para el uso compartido de recursos.
  Aunque esta funcionalidad estaba contemplada desde el inicio,
- no se logró implementar debido a las dificultades encontradas durante el desarrollo de la aplicación móvil
-\change_deleted -997162125 1732887696
- y las limitaciones de tiempo
-\change_inserted -1783815582 1732392436
-.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1732392411
-\begin_inset Separator plain
-\end_inset
-
-
-\change_inserted -1783815582 1731876859
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1783815582 1731878420
-
+ no se logró implementar debido a las dificultades encontradas durante el desarrollo de la aplicación móvil.
 \end_layout
 
 \end_body
