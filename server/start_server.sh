@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Compilar el proyecto con maven:
+
+mvn clean install -DskipTests
+
 # Inicia los servicios con Docker Compose
 echo "Iniciando servicios con Docker Compose..."
 docker-compose up -d

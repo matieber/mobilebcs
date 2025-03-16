@@ -1,4 +1,4 @@
-#LyX 2.4 created this file. For more info see https://www.lyx.org/
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 544
 \begin_document
 \begin_header
@@ -83,8 +83,7 @@
 \begin_body
 
 \begin_layout Chapter
-Conclusiones,
- Limitaciones y Trabajos Futuros
+Conclusiones, Limitaciones y Trabajos Futuros
 \end_layout
 
 \begin_layout Section
@@ -92,79 +91,90 @@ Conclusión
 \end_layout
 
 \begin_layout Standard
-En este proyecto se desarrolló un sistema funcional y extensible diseñado para su implementación en entornos ganaderos,
- logrando mejorar la precisión y eficiencia en la predicción del BCS.
- Este desarrollo supuso enfrentar diferentes niveles de desafío según el componente en cuestión.
- En el caso del servidor,
- mi experiencia de más de 10 años como desarrollador backend fue determinante para diseñar e implementar este componente de manera ágil,
- utilizando tecnologías como Java,
- Spring Boot,
- JMS Template y STOMP.
- Además,
- esta experiencia facilitó la comprensión del dominio y los requerimientos funcionales,
- permitiendo una interacción efectiva con el modelo de negocio y sus particularidades.
+En este proyecto se desarrolló un sistema funcional y extensible diseñado
+ para su implementación en entornos ganaderos, logrando mejorar la precisión
+ y eficiencia en la predicción del BCS.
+ Este desarrollo supuso enfrentar diferentes niveles de desafío según el
+ componente en cuestión.
+ En el caso del servidor, mi experiencia de más de 10 años como desarrollador
+ backend fue determinante para diseñar e implementar este componente de
+ manera ágil, utilizando tecnologías como Java, Spring Boot, JMS Template
+ y STOMP.
+ Además, esta experiencia facilitó la comprensión del dominio y los requerimient
+os funcionales, permitiendo una interacción efectiva con el modelo de negocio
+ y sus particularidades.
 \end_layout
 
 \begin_layout Standard
-Por otro lado,
- el desarrollo de la aplicación móvil representó un desafío mayor,
- debido a mi falta de experiencia con Flutter,
- Dart y el desarrollo de interfaces visuales.
- Esta situación implicó una curva de aprendizaje significativa,
- que demandó más tiempo y esfuerzo en comparación con el desarrollo del servidor.
- Sin embargo,
- esta experiencia se convirtió en una oportunidad valiosa para ampliar mis habilidades en áreas complementarias y explorar nuevos enfoques en el desarrollo de software.
+Por otro lado, el desarrollo de la aplicación móvil representó un desafío
+ mayor, debido a mi falta de experiencia con Flutter, Dart y el desarrollo
+ de interfaces visuales.
+ Esta situación implicó una curva de aprendizaje significativa, que demandó
+ más tiempo y esfuerzo en comparación con el desarrollo del servidor.
+ Sin embargo, esta experiencia se convirtió en una oportunidad valiosa para
+ ampliar mis habilidades en áreas complementarias y explorar nuevos enfoques
+ en el desarrollo de software.
 \end_layout
 
 \begin_layout Standard
-En total,
- el proyecto involucró el desarrollo de 113 clases java y 4748 lineas de código en el servidor y 52 archivos dart y 37 clases java y 6006 lineas de código en la aplicación móvil,
- alcanzando un total de 10754 líneas de código,
- reflejando su complejidad técnica y su alcance.
+En total, el proyecto involucró el desarrollo de 113 clases java y 4748
+ lineas de código en el servidor y 52 archivos dart y 37 clases java y 6006
+ lineas de código en la aplicación móvil, alcanzando un total de 10754 líneas
+ de código, reflejando su complejidad técnica y su alcance.
 \end_layout
 
 \begin_layout Standard
-La modularidad y escalabilidad del sistema abren puertas para futuras ampliaciones,
- como la integración con dispositivos IoT,
- la optimización de modelos predictivos según distintas razas bovinas y el desarrollo de estrategias avanzadas de tolerancia a fallos.
- En conjunto,
- este proyecto no solo cumplió con los objetivos iniciales,
- sino que también sienta las bases para nuevas innovaciones en la automatización y gestión del sector ganadero.
- Además,
- representa un avance significativo tanto en términos técnicos como en el aprendizaje y adaptación a tecnologías y dominios desconocidos.
+La modularidad y escalabilidad del sistema abren puertas para futuras ampliacion
+es, como la integración con dispositivos IoT, la optimización de modelos
+ predictivos según distintas razas bovinas y el desarrollo de estrategias
+ avanzadas de tolerancia a fallos.
+
+\change_deleted -1783815582 1742138537
+ 
+\change_inserted -1783815582 1742138248
+ 
+\change_unchanged
+En conjunto, este proyecto no solo cumplió con los objetivos iniciales,
+ sino que también sienta las bases para nuevas innovaciones en la automatización
+ y gestión del sector ganadero.
+ Además, representa un avance significativo tanto en términos técnicos como
+ en el aprendizaje y adaptación a tecnologías y dominios desconocidos.
 \end_layout
 
 \begin_layout Subsection
+
+\change_deleted -1783815582 1742137202
 Rendimientos en dispositivos móviles
 \end_layout
 
 \begin_layout Standard
-Para evaluar la eficiencia del sistema,
- se midieron los tiempos de predicción del BCS en dispositivos móviles,
- un aspecto crítico para asegurar una experiencia fluida al obtener los resultados de la predicción.
- Antes de la implementación del prototipo,
- el algoritmo fue probado mediante una versión preliminar diseñada para Android.
- Estas pruebas se llevaron a cabo en diversos dispositivos móviles,
- variando tanto la cantidad de dispositivos como el tamaño de los lotes de procesamiento ("jobs").
+
+\change_deleted -1783815582 1742137202
+Para evaluar la eficiencia del sistema, se midieron los tiempos de predicción
+ del BCS en dispositivos móviles, un aspecto crítico para asegurar una experienc
+ia fluida al obtener los resultados de la predicción.
+ Antes de la implementación del prototipo, el algoritmo fue probado mediante
+ una versión preliminar diseñada para Android.
+ Estas pruebas se llevaron a cabo en diversos dispositivos móviles, variando
+ tanto la cantidad de dispositivos como el tamaño de los lotes de procesamiento
+ ("jobs").
 \end_layout
 
 \begin_layout Standard
-En la versión preliminar,
- los datos se transmitían de forma continua desde un servidor a los dispositivos móviles usando round-robin,
- operando dentro de la misma red local.
- En el prototipo final,
- el flujo de datos comenzó con una máquina que simulaba el sistema de envíos hacia el servidor.
- Posteriormente,
- el servidor redistribuía los trabajos a los dispositivos móviles usando round robin,
- permitiendo evaluar el rendimiento en condiciones más representativas del entorno real en una red local.
+
+\change_deleted -1783815582 1742137202
+En la versión preliminar, los datos se transmitían de forma continua desde
+ un servidor a los dispositivos móviles usando round-robin, operando dentro
+ de la misma red local.
+ En el prototipo final, el flujo de datos comenzó con una máquina que simulaba
+ el sistema de envíos hacia el servidor.
+ Posteriormente, el servidor redistribuía los trabajos a los dispositivos
+ móviles usando round robin, permitiendo evaluar el rendimiento en condiciones
+ más representativas del entorno real en una red local.
 
 \change_deleted -997162125 1741373966
  
-\change_inserted -1783815582 1740849499
-
-\end_layout
-
-\begin_layout Standard
+\change_deleted -1783815582 1742137202
 En 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -175,20 +185,21 @@ noprefix "false"
 
 \end_inset
 
- se puede ver una comparación de la versión preliminar y el prototipo con respecto a la transferencia de datos.
- La tabla muestra que,
- a medida que aumenta la cantidad de imágenes por job,
- el tiempo de transferencia de datos disminuye en la versión preliminar.
- Esto se debe a que el cliente obtenía cada imagen a procesar mediante una llamada HTTP,
- lo que generaba mayores tiempos de transferencia.
- Sin embargo,
- al cambiar el mecanismo de transferencia a una conexión WebSocket,
+ se puede ver una comparación de la versión preliminar y el prototipo con
+ respecto a la transferencia de datos.
+ La tabla muestra que, a medida que aumenta la cantidad de imágenes por
+ job, el tiempo de transferencia de datos disminuye en la versión preliminar.
+ Esto se debe a que el cliente obtenía cada imagen a procesar mediante una
+ llamada HTTP, lo que generaba mayores tiempos de transferencia.
+ Sin embargo, al cambiar el mecanismo de transferencia a una conexión WebSocket,
  se logra una reducción significativa en el tiempo de transferencia.
- Además,
- la menor variabilidad en la versión del prototipo sugiere una gestión más eficiente de la transferencia de imágenes.
+ Además, la menor variabilidad en la versión del prototipo sugiere una gestión
+ más eficiente de la transferencia de imágenes.
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1783815582 1742137202
 \begin_inset Float table
 wide false
 sideways false
@@ -653,6 +664,8 @@ name "tab:Transferencia-de-datos"
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1783815582 1742137202
 En 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -673,20 +686,25 @@ noprefix "false"
 
 \end_inset
 
-se puede ver un análisis comparativo entre las diferentes pruebas en términos del tiempo de detección por imágen.
- En la comparación se puede ver que Note 7 y el Moto G9 Play obtuvieron un mejor tiempo promedio de detección de imágenes y una menor variabilidad en la versión preliminar,
- en comparación con la versión prototipo,
- que incorpora dispositivos más modernos.
- Esta diferencia se debe a que,
- en la versión preliminar,
- el dispositivo se centraba exclusivamente en la ejecución del algoritmo,
- mientras que en el prototipo se realizaron tareas adicionales,
- como la visualización de todas las imágenes procesadas (no solo las utilizadas para la predicción) y el envío de los resultados al servidor.
- A pesar de estas diferencias en la carga de procesamiento,
- es un aspecto clave a evaluar con el objetivo de optimizar tanto el tiempo de detección como la desviación estándar en futuras iteraciones.
+se puede ver un análisis comparativo entre las diferentes pruebas en términos
+ del tiempo de detección por imágen.
+ En la comparación se puede ver que Note 7 y el Moto G9 Play obtuvieron
+ un mejor tiempo promedio de detección de imágenes y una menor variabilidad
+ en la versión preliminar, en comparación con la versión prototipo, que
+ incorpora dispositivos más modernos.
+ Esta diferencia se debe a que, en la versión preliminar, el dispositivo
+ se centraba exclusivamente en la ejecución del algoritmo, mientras que
+ en el prototipo se realizaron tareas adicionales, como la visualización
+ de todas las imágenes procesadas (no solo las utilizadas para la predicción)
+ y el envío de los resultados al servidor.
+ A pesar de estas diferencias en la carga de procesamiento, es un aspecto
+ clave a evaluar con el objetivo de optimizar tanto el tiempo de detección
+ como la desviación estándar en futuras iteraciones.
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1783815582 1742137202
 \begin_inset Float table
 wide false
 sideways false
@@ -1475,6 +1493,8 @@ name "tab:Tiempos-de-ejecución"
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1783815582 1742137202
 \begin_inset Float figure
 wide false
 sideways false
@@ -1516,11 +1536,14 @@ name "fig:Tiempo-de-detección"
 \end_layout
 
 \begin_layout Standard
-A continuación,
- se presenta la comparación del tiempo total de procesamiento.
+
+\change_deleted -1783815582 1742137202
+A continuación, se presenta la comparación del tiempo total de procesamiento.
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1783815582 1742137202
 \begin_inset Float table
 wide false
 sideways false
@@ -1953,72 +1976,90 @@ Tiempo de procesamiento total
 \end_layout
 
 \begin_layout Standard
-Se observa que la versión preliminar logra un procesamiento más rápido a medida que los jobs contienen un mayor número de imágenes,
- lo cual se debe a que,
- como se analizó anteriormente,
- la transferencia de datos representaba el mayor costo en términos de tiempo.
- En la versión prototipo,
- este aspecto se optimizó mediante el uso de una conexión WebSocket,
- reduciendo significativamente los tiempos de transferencia.
- Sin embargo,
- dado que cada job en el prototipo contiene una única imagen y es necesario visualizarla en el dispositivo del observador,
- el tiempo de procesamiento por imagen es mayor.
+
+\change_deleted -1783815582 1742137202
+Se observa que la versión preliminar logra un procesamiento más rápido a
+ medida que los jobs contienen un mayor número de imágenes, lo cual se debe
+ a que, como se analizó anteriormente, la transferencia de datos representaba
+ el mayor costo en términos de tiempo.
+ En la versión prototipo, este aspecto se optimizó mediante el uso de una
+ conexión WebSocket, reduciendo significativamente los tiempos de transferencia.
+ Sin embargo, dado que cada job en el prototipo contiene una única imagen
+ y es necesario visualizarla en el dispositivo del observador, el tiempo
+ de procesamiento por imagen es mayor.
 \end_layout
 
 \begin_layout Standard
-A lo largo de las pruebas,
- se redujo progresivamente el tiempo de espera entre ráfagas,
- como se observa en la prueba 3 del prototipo,
- sin afectar la eficiencia del sistema.
- En futuras evaluaciones,
- sería recomendable continuar disminuyendo este tiempo de espera y mejorar el prototipo para permitir el procesamiento de múltiples imágenes por job.
- Asimismo,
- sería útil incorporar la opción de deshabilitar la visualización de las imágenes,
- mostrando únicamente los resultados de la predicción,
- con el objetivo de realizar comparaciones más precisas y optimizar el rendimiento.
+
+\change_deleted -1783815582 1742137202
+A lo largo de las pruebas, se redujo progresivamente el tiempo de espera
+ entre ráfagas, como se observa en la prueba 3 del prototipo, sin afectar
+ la eficiencia del sistema.
+ En futuras evaluaciones, sería recomendable continuar disminuyendo este
+ tiempo de espera y mejorar el prototipo para permitir el procesamiento
+ de múltiples imágenes por job.
+ Asimismo, sería útil incorporar la opción de deshabilitar la visualización
+ de las imágenes, mostrando únicamente los resultados de la predicción,
+ con el objetivo de realizar comparaciones más precisas y optimizar el rendimien
+to.
 \end_layout
 
 \begin_layout Standard
-Adicionalmente,
- las pruebas realizadas con el prototipo permitieron evaluar el consumo de memoria en los dispositivos utilizados.
+
+\change_deleted -1783815582 1742137202
+Adicionalmente, las pruebas realizadas con el prototipo permitieron evaluar
+ el consumo de memoria en los dispositivos utilizados.
  Los resultados obtenidos fueron los siguientes:
 \end_layout
 
 \begin_layout Itemize
-En la primera prueba,
- el Moto G32 alcanzó un consumo máximo de 663.2 MB,
+
+\change_deleted -1783815582 1742137202
+En la primera prueba, el Moto G32 alcanzó un consumo máximo de 663.2 MB,
  mientras que el G9 Plus registró un pico de 445.49 MB.
 \end_layout
 
 \begin_layout Itemize
-En la segunda prueba,
- el consumo máximo del Moto G32 fue de 558.29 MB,
- mientras que el G9 Plus redujo su uso de memoria a 425.64 MB.
+
+\change_deleted -1783815582 1742137202
+En la segunda prueba, el consumo máximo del Moto G32 fue de 558.29 MB, mientras
+ que el G9 Plus redujo su uso de memoria a 425.64 MB.
 \end_layout
 
 \begin_layout Subsection
+
+\change_deleted -1783815582 1742137202
 Rendimientos en el servidor
 \end_layout
 
 \begin_layout Standard
-Como se mencionó anteriormente el sistema fue probado en un entorno con dos observadores,
- sin calificadores para verificar el consumo de recursos durante la ejecución del algoritmo de predicción,
- y demostró los siguientes consumos de memoria:
+
+\change_deleted -1783815582 1742137202
+Como se mencionó anteriormente el sistema fue probado en un entorno con
+ dos observadores, sin calificadores para verificar el consumo de recursos
+ durante la ejecución del algoritmo de predicción, y demostró los siguientes
+ consumos de memoria:
 \end_layout
 
 \begin_layout Itemize
-ActiveMQ:
- fue incrementando desde 277 MB de memoria hasta 490 MB de memoria.
+
+\change_deleted -1783815582 1742137202
+ActiveMQ: fue incrementando desde 277 MB de memoria hasta 490 MB de memoria.
 \end_layout
 
 \begin_layout Itemize
-MySQL:
- fue incrementando desde 395 MB de memoria hasta 403 MB de memoria.
+
+\change_deleted -1783815582 1742137202
+MySQL: fue incrementando desde 395 MB de memoria hasta 403 MB de memoria.
 \end_layout
 
 \begin_layout Itemize
-Servidor (API principal):
- no superaron los 500 MB de memoria las pruebas realizadas.
+
+\change_deleted -1783815582 1742137202
+Servidor (API principal): no superaron los 500 MB de memoria las pruebas
+ realizadas.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section
@@ -2031,17 +2072,20 @@ Seguridad
 
 \begin_layout Standard
 El sistema de inicio de sesión presenta una limitación en términos de seguridad.
- Actualmente,
- este componente únicamente permite identificar el tipo de usuario y asociar calificaciones a un experto específico,
- pero no incluye mecanismos de autenticación robustos ni validaciones avanzadas para garantizar la protección del acceso.
+ Actualmente, este componente únicamente permite identificar el tipo de
+ usuario y asociar calificaciones a un experto específico, pero no incluye
+ mecanismos de autenticación robustos ni validaciones avanzadas para garantizar
+ la protección del acceso.
 \end_layout
 
 \begin_layout Standard
-Asimismo,
- no se han implementado restricciones para controlar quiénes pueden registrarse como calificadores.
- Esto permite que cualquier usuario pueda asumir este rol,
- lo que podría comprometer la calidad de las evaluaciones realizadas.
- La falta de validación previa de las credenciales o experiencia de los calificadores representa una limitación para la confiabilidad del sistema en entornos reales.
+Asimismo, no se han implementado restricciones para controlar quiénes pueden
+ registrarse como calificadores.
+ Esto permite que cualquier usuario pueda asumir este rol, lo que podría
+ comprometer la calidad de las evaluaciones realizadas.
+ La falta de validación previa de las credenciales o experiencia de los
+ calificadores representa una limitación para la confiabilidad del sistema
+ en entornos reales.
 \end_layout
 
 \begin_layout Subsection
@@ -2049,16 +2093,18 @@ Tolerencia a fallos
 \end_layout
 
 \begin_layout Standard
-El sistema actual presenta limitaciones en su capacidad de tolerancia a fallos.
- Ante interrupciones en la conexión WebSocket o errores relacionados,
- no existen mecanismos implementados para realizar reintentos automáticos o redirigir los trabajos ("jobs"),
- lo que puede resultar en predicciones no realizadas por el modelo.
+El sistema actual presenta limitaciones en su capacidad de tolerancia a
+ fallos.
+ Ante interrupciones en la conexión WebSocket o errores relacionados, no
+ existen mecanismos implementados para realizar reintentos automáticos o
+ redirigir los trabajos ("jobs"), lo que puede resultar en predicciones
+ no realizadas por el modelo.
 \end_layout
 
 \begin_layout Standard
-Asimismo,
- el proceso de calificación carece de estrategias que manejen fallos en llamadas REST,
- lo que puede ocasionar la pérdida de evaluaciones realizadas por los expertos y comprometer la integridad de los datos almacenados.
+Asimismo, el proceso de calificación carece de estrategias que manejen fallos
+ en llamadas REST, lo que puede ocasionar la pérdida de evaluaciones realizadas
+ por los expertos y comprometer la integridad de los datos almacenados.
 \end_layout
 
 \begin_layout Subsection
@@ -2066,15 +2112,18 @@ Mejora en la Gestión de Jobs para Calificadores
 \end_layout
 
 \begin_layout Standard
-Una limitación en la implementación actual es que los calificadores no pueden procesar los trabajos ("jobs") generados antes de su ingreso a una sesión de calificación.
- Esto significa que los trabajos existentes antes del inicio de la sesión quedan sin calificar,
- lo que afecta la completitud del proceso de calificación.
+Una limitación en la implementación actual es que los calificadores no pueden
+ procesar los trabajos ("jobs") generados antes de su ingreso a una sesión
+ de calificación.
+ Esto significa que los trabajos existentes antes del inicio de la sesión
+ quedan sin calificar, lo que afecta la completitud del proceso de calificación.
 \end_layout
 
 \begin_layout Standard
-Además,
- no se contempla la carga automática de trabajos previos desde la base de datos hacia la cola JMS del usuario al momento de iniciar sesión,
- lo que limita la capacidad de los calificadores para abordar tareas pendientes acumuladas antes de su participación activa en la sesión.
+Además, no se contempla la carga automática de trabajos previos desde la
+ base de datos hacia la cola JMS del usuario al momento de iniciar sesión,
+ lo que limita la capacidad de los calificadores para abordar tareas pendientes
+ acumuladas antes de su participación activa en la sesión.
 \end_layout
 
 \begin_layout Subsection
@@ -2082,21 +2131,21 @@ Observadores y Algoritmo de Predicción
 \end_layout
 
 \begin_layout Standard
-En la implementación actual,
- la predicción del puntaje de condición corporal (BCS) está limitada a ser ejecutada exclusivamente en la aplicación móvil por usuarios con logueados con el rol de observador.
- Esto implica que,
- en ausencia de observadores,
- el sistema no genera predicciones.
- En etapas de prueba preliminares del prototipo en entornos reales en los que el apartamiento de animales según condición corporal se realice de forma manual,
- sin mecanización automática,
- es decir,
- por humanos,
- esto puede no verse como una limitación ya que se puede asumir que el sistema contará con el poder de cómputo de los dispositivos de quienes realizan dicha labor.
- Sin embargo,
- en un entorno que cuenta con apartamiento automático,
- es deseable que el sistema cuente con una forma alternativa de generar la predicción.
- Para esto,
- se prevee que en el futuro el componente servidor actúe como un observador por defecto.
+En la implementación actual, la predicción del puntaje de condición corporal
+ (BCS) está limitada a ser ejecutada exclusivamente en la aplicación móvil
+ por usuarios con logueados con el rol de observador.
+ Esto implica que, en ausencia de observadores, el sistema no genera prediccione
+s.
+ En etapas de prueba preliminares del prototipo en entornos reales en los
+ que el apartamiento de animales según condición corporal se realice de
+ forma manual, sin mecanización automática, es decir, por humanos, esto
+ puede no verse como una limitación ya que se puede asumir que el sistema
+ contará con el poder de cómputo de los dispositivos de quienes realizan
+ dicha labor.
+ Sin embargo, en un entorno que cuenta con apartamiento automático, es deseable
+ que el sistema cuente con una forma alternativa de generar la predicción.
+ Para esto, se prevee que en el futuro el componente servidor actúe como
+ un observador por defecto.
 \end_layout
 
 \begin_layout Section
@@ -2108,22 +2157,24 @@ Múltiples calificadores
 \end_layout
 
 \begin_layout Standard
-En futuras versiones del servidor,
- se planea implementar mejoras que permitan a los calificadores compartir una única cola JMS,
- facilitando la distribución equitativa de las tareas de calificación.
- Esto incluiría la opción de dividir un grupo de vacas (rodeo) entre calificadores o mantener la funcionalidad actual,
- donde todos los calificadores evalúan todas las vacas.
- Además,
- esta mejora permitiría que los calificadores puedan abandonar una sesión y unirse a otra según sea necesario,
- ofreciendo mayor flexibilidad en la gestión de las sesiones.
+En futuras versiones del servidor, se planea implementar mejoras que permitan
+ a los calificadores compartir una única cola JMS, facilitando la distribución
+ equitativa de las tareas de calificación.
+ Esto incluiría la opción de dividir un grupo de vacas (rodeo) entre calificador
+es o mantener la funcionalidad actual, donde todos los calificadores evalúan
+ todas las vacas.
+ Además, esta mejora permitiría que los calificadores puedan abandonar una
+ sesión y unirse a otra según sea necesario, ofreciendo mayor flexibilidad
+ en la gestión de las sesiones.
 \end_layout
 
 \begin_layout Standard
-Actualmente,
- aunque la aplicación móvil no permite que dos calificadores trabajen simultáneamente,
- el servidor ha sido diseñado para admitir múltiples calificadores en una misma sesión.
- Cada calificador dispone de su propia cola JMS y tiene la capacidad de calificar todas las vacas,
- lo que sienta las bases para la implementación de las mejoras mencionadas.
+Actualmente, aunque la aplicación móvil no permite que dos calificadores
+ trabajen simultáneamente, el servidor ha sido diseñado para admitir múltiples
+ calificadores en una misma sesión.
+ Cada calificador dispone de su propia cola JMS y tiene la capacidad de
+ calificar todas las vacas, lo que sienta las bases para la implementación
+ de las mejoras mencionadas.
 \end_layout
 
 \begin_layout Subsection
@@ -2131,23 +2182,22 @@ Sistema generador de Jobs
 \end_layout
 
 \begin_layout Standard
-En las pruebas de rendimiento realizadas,
- fue necesario la creación de dicho componente para simular un escenario de ejecución.
- Sin embargo,
- la implementación real de un sistema de generación de jobs quedó fuera del alcance de este proyecto.Este sistema debiera configurarse para notificar al servidor sobre la existencia de una secuencia de imágenes capturadas por una cámara y asociadas
+En las pruebas de rendimiento realizadas, fue necesario la creación de dicho
+ componente para simular un escenario de ejecución.
+ Sin embargo, la implementación real de un sistema de generación de jobs
+ quedó fuera del alcance de este proyecto.Este sistema debiera configurarse
+ para notificar al servidor sobre la existencia de una secuencia de imágenes
+ capturadas por una cámara y asociadas
 \change_deleted -997162125 1732887064
  
 \change_unchanged
- unívocamente a una vaca,
- lo que da lugar a la creación de un "job" que deberá ser tratado por el componente servidor desarrollado en este proyecto.
- El generador de jobs deberá permitir,
- además,
- configurar la cantidad de imágenes por vaca a ser capturadas,
- teniendo en cuenta calidad de las mismas,
- por ejemplo,
- mediante la aplicación de filtros para determinar borrosidad de la imágen,
- presencia total o parcial de la parte del cuerpo que se emplea en el cálculo del BCS,
- etc..
+ unívocamente a una vaca, lo que da lugar a la creación de un "job" que
+ deberá ser tratado por el componente servidor desarrollado en este proyecto.
+ El generador de jobs deberá permitir, además, configurar la cantidad de
+ imágenes por vaca a ser capturadas, teniendo en cuenta calidad de las mismas,
+ por ejemplo, mediante la aplicación de filtros para determinar borrosidad
+ de la imágen, presencia total o parcial de la parte del cuerpo que se emplea
+ en el cálculo del BCS, etc..
 \end_layout
 
 \begin_layout Subsection
@@ -2155,15 +2205,15 @@ Procesamiento de imágenes
 \end_layout
 
 \begin_layout Standard
-Actualmente,
- el sistema está diseñado para recibir y almacenar múltiples imágenes asociadas a cada vaca;
- sin embargo,
- sólo la primera imagen es enviada a los usuarios calificadores y observadores.
- Una posible mejora futura sería habilitar la capacidad de enviar todas las imágenes relacionadas con cada vaca,
- permitiendo un análisis más exhaustivo por parte de los calificadores y observadores.
- Además,
- esto abriría la posibilidad de optimizar el algoritmo de predicción para procesar múltiples imágenes dentro de un mismo job,
- lo que podría mejorar la precisión de los resultados generados.
+Actualmente, el sistema está diseñado para recibir y almacenar múltiples
+ imágenes asociadas a cada vaca; sin embargo, sólo la primera imagen es
+ enviada a los usuarios calificadores y observadores.
+ Una posible mejora futura sería habilitar la capacidad de enviar todas
+ las imágenes relacionadas con cada vaca, permitiendo un análisis más exhaustivo
+ por parte de los calificadores y observadores.
+ Además, esto abriría la posibilidad de optimizar el algoritmo de predicción
+ para procesar múltiples imágenes dentro de un mismo job, lo que podría
+ mejorar la precisión de los resultados generados.
 \end_layout
 
 \begin_layout Subsection
@@ -2171,13 +2221,13 @@ Integración con IoT
 \end_layout
 
 \begin_layout Standard
-El sistema tiene el potencial de integrarse en un entorno IoT,
- permitiendo la conexión con dispositivos y elementos del entorno ganadero,
- como mangas,
+El sistema tiene el potencial de integrarse en un entorno IoT, permitiendo
+ la conexión con dispositivos y elementos del entorno ganadero, como mangas,
  corrales y comederos.
- Esto requerirá desarrollar una capa de comunicación que facilite la captura automatizada de datos y acciones de contingencia,
- estructurando el sistema como un Sistema Integral de Gestión de la Información (SIGI) para apoyar el monitoreo,
- la planificación y la toma de decisiones.
+ Esto requerirá desarrollar una capa de comunicación que facilite la captura
+ automatizada de datos y acciones de contingencia, estructurando el sistema
+ como un Sistema Integral de Gestión de la Información (SIGI) para apoyar
+ el monitoreo, la planificación y la toma de decisiones.
 \end_layout
 
 \begin_layout Subsection
@@ -2185,21 +2235,44 @@ Múltiples modelos
 \end_layout
 
 \begin_layout Standard
-La aplicación móvil está diseñada con una arquitectura flexible que puede permtir la integración de diferentes modelos de predicción.
- A través de una configuración sencilla,
- se posible seleccionar y definir qué modelo utilizar en cada caso específico,
- adaptándose así a diversas necesidades y escenarios.
-\change_inserted -997162125 1732887233
 
+\change_deleted -1783815582 1742138792
+La aplicación móvil está diseñada con una arquitectura flexible que puede
+ permtir la integración de diferentes modelos de predicción.
+ A través de una configuración sencilla, se posible seleccionar y definir
+ qué modelo utilizar en cada caso específico, adaptándose así a diversas
+ necesidades y escenarios
+\change_inserted -1783815582 1742139974
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1742140265
+.
+\change_inserted -1783815582 1742140410
+Actualmente, la aplicación móvil está diseñada de manera modular, lo que
+ permite delegar la ejecución del algoritmo de predicción a un plugin específico
+ de Android.
+ Esta estructura facilita la integración de nuevos modelos de predicción
+ mediante ajustes en el código.
+ Sin embargo, para aprovechar esta flexibilidad, es necesario desarrollar
+ una funcionalidad adicional en la aplicación que permita seleccionar el
+ modelo de predicción deseado, lo que representa una posible mejora a futuro.
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1783815582 1742140265
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
 
 \change_inserted -997162125 1732887274
-Esto está contado como una conclusión más que como algo a realizar en el futuro.
- Si es así,
- pasalo a la sección de conclusiones.
+Esto está contado como una conclusión más que como algo a realizar en el
+ futuro.
+ Si es así, pasalo a la sección de conclusiones.
 \change_unchanged
 
 \end_layout
@@ -2216,12 +2289,12 @@ Multiples plataformas
 \end_layout
 
 \begin_layout Standard
-Al desarrollar la aplicación móvil en Flutter,
- la portabilidad a iOS se facilita significativamente debido a la naturaleza multiplataforma del framework.
- Sin embargo,
- para lograr esta transición,
- es necesario analizar y ajustar el modelo predictivo,
- ya que actualmente está diseñado y probado específicamente dispositivos Android.
+Al desarrollar la aplicación móvil en Flutter, la portabilidad a iOS se
+ facilita significativamente debido a la naturaleza multiplataforma del
+ framework.
+ Sin embargo, para lograr esta transición, es necesario analizar y ajustar
+ el modelo predictivo, ya que actualmente está diseñado y probado específicament
+e dispositivos Android.
 \end_layout
 
 \begin_layout Subsection
@@ -2229,18 +2302,24 @@ Configuración de la participación de observadores en el cálculo de BCS
 \end_layout
 
 \begin_layout Standard
-En futuras implementaciones,
- se planea incorporar a la aplicación móvil un interruptor (switch) junto con un campo de configuración que permita a un usuario observador decidir si aportar o no recursos de cómputo para el cálculo del BCS,
- o incluso que dicha opción pueda ser habilitada dependiendo del nivel de batería con el que cuenta el dispositivo.
- Este mecanismo permitirá al dispositivo móvil notificar al servidor si puede ofrecer recursos de procesamiento para el cálculo del BCS como así también fijar cuotas de uso de batería.
+En futuras implementaciones, se planea incorporar a la aplicación móvil
+ un interruptor (switch) junto con un campo de configuración que permita
+ a un usuario observador decidir si aportar o no recursos de cómputo para
+ el cálculo del BCS, o incluso que dicha opción pueda ser habilitada dependiendo
+ del nivel de batería con el que cuenta el dispositivo.
+ Este mecanismo permitirá al dispositivo móvil notificar al servidor si
+ puede ofrecer recursos de procesamiento para el cálculo del BCS como así
+ también fijar cuotas de uso de batería.
 \end_layout
 
 \begin_layout Standard
-Al activar este interruptor,
- se deberá iniciar un servicio en segundo plano encargado de gestionar un protocolo de intercambio de mensajes entre la aplicación y el servidor,
- asegurando una coordinación eficiente para el uso compartido de recursos.
- Aunque esta funcionalidad estaba contemplada desde el inicio,
- no se logró implementar debido a las dificultades encontradas durante el desarrollo de la aplicación móvil.
+Al activar este interruptor, se deberá iniciar un servicio en segundo plano
+ encargado de gestionar un protocolo de intercambio de mensajes entre la
+ aplicación y el servidor, asegurando una coordinación eficiente para el
+ uso compartido de recursos.
+ Aunque esta funcionalidad estaba contemplada desde el inicio, no se logró
+ implementar debido a las dificultades encontradas durante el desarrollo
+ de la aplicación móvil.
 \end_layout
 
 \end_body

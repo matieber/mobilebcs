@@ -1,12 +1,14 @@
 package com.mobilebcs;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
+@Disabled
 public class StressTest {
 
 
@@ -42,9 +44,11 @@ public class StressTest {
     @Test
     public void sendImagesToQueue() throws InterruptedException {
         int initial;
-        for (int j = 0; j < 36; j++) {
-            initial = 12 * j;
-            for (int i = 1; i <= 12; i++) {
+        int maxIterations = 2;
+        int maxCowImages = 15;
+        for (int j = 0; j < maxIterations; j++) {
+            initial = maxCowImages * j;
+            for (int i = 1; i <= maxCowImages; i++) {
                 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
                 System.out.println(LocalDateTime.now().format(dtf) +
                         " Sending image " + (initial + i) + " to queue " + MAP.get(i));

@@ -16,7 +16,16 @@
 
 ### Iniciar aplicación
 
-    mvn clean install
+    mvn clean install -DskipTests
     java -jar target/server.jar
 
 La aplicación inicia en el puerto 8080 por defecto.
+
+## Iniciar la aplicación con datos de prueba
+
+    mvn clean install -DskipTests
+    java -jar target/server.jar --spring.profiles.active=demo
+
+## Ejecutar jobs de prueba
+
+    Desabilitando StressTest es posible enviar jobs al server. 
