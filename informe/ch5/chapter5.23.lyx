@@ -1,4 +1,4 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
 \lyxformat 544
 \begin_document
 \begin_header
@@ -10,9 +10,9 @@
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
-\language spanish-mexico
+\language spanish
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -76,8 +76,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -1783815582 "Cristian"
-\author -997162125 "mhirsch"
 \end_header
 
 \begin_body
@@ -87,13 +85,12 @@ Resultados
 \end_layout
 
 \begin_layout Standard
-En este capítulo, se presentan las capturas de pantalla y el análisis de
- las principales interfaces de usuario de cada caso de uso, proporcionando
- una evaluación del funcionamiento y la usabilidad de cada módulo en la
- aplicación.
- Adicionalmente, se proporciona información sobre el rendimiento del sistema,
- incluyendo métricas específicas relacionadas con el consumo de memoria
- y su impacto en la eficiencia operativa.
+En este capítulo,
+ se presentan las capturas de pantalla y el análisis de las principales interfaces de usuario de cada caso de uso,
+ proporcionando una evaluación del funcionamiento y la usabilidad de cada módulo en la aplicación.
+ Adicionalmente,
+ se proporciona información sobre el rendimiento del sistema,
+ incluyendo métricas específicas relacionadas con el consumo de memoria y su impacto en la eficiencia operativa.
 \end_layout
 
 \begin_layout Section
@@ -101,12 +98,12 @@ Pantalla de Inicio de Sesión (Login)
 \end_layout
 
 \begin_layout Standard
-El módulo de inicio de sesión permite a los usuarios acceder al sistema
- con distintos roles, con diferentes permisos y funciones dentro de la aplicació
-n.
- La pantalla principal de acceso ofrece dos opciones: "Iniciar sesión" y
- "Registrar usuario", de modo que el usuario puede elegir entre ingresar
- al sistema o registrarse como nuevo usuario, según sea necesario.
+El módulo de inicio de sesión permite a los usuarios acceder al sistema con distintos roles,
+ con diferentes permisos y funciones dentro de la aplicación.
+ La pantalla principal de acceso ofrece dos opciones:
+ "Iniciar sesión" y "Registrar usuario",
+ de modo que el usuario puede elegir entre ingresar al sistema o registrarse como nuevo usuario,
+ según sea necesario.
 \begin_inset Float figure
 wide false
 sideways false
@@ -225,7 +222,8 @@ name "fig:Pantalla-de-nuevo-usuario"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil: caso de uso de login
+App móvil:
+ caso de uso de login
 \end_layout
 
 \end_inset
@@ -253,8 +251,9 @@ noprefix "false"
 
 \end_inset
 
-, si el usuario selecciona "Iniciar sesión", es dirigido a una pantalla
- donde puede introducir su nombre de usuario (Figura
+,
+ si el usuario selecciona "Iniciar sesión",
+ es dirigido a una pantalla donde puede introducir su nombre de usuario (Figura
 \begin_inset space ~
 \end_inset
 
@@ -269,14 +268,15 @@ noprefix "false"
 \end_inset
 
 ).
- En caso de un ingreso correcto, el sistema autentica el perfil y redirige
- al usuario a su módulo correspondiente, ya sea como calificador o como
- observador.
+ En caso de un ingreso correcto,
+ el sistema autentica el perfil y redirige al usuario a su módulo correspondiente,
+ ya sea como calificador o como observador.
 \end_layout
 
 \begin_layout Standard
-En cambio, si el usuario selecciona "Registrar usuario", el sistema muestra
- la pantalla que está en la Figura
+En cambio,
+ si el usuario selecciona "Registrar usuario",
+ el sistema muestra la pantalla que está en la Figura
 \begin_inset space ~
 \end_inset
 
@@ -290,20 +290,16 @@ noprefix "false"
 
 \end_inset
 
- donde el usuario puede introducir su nombre y seleccionar su rol (calificador
- u observador).
- Esta pantalla permite que los nuevos usuarios definan adecuadamente su
- perfil dentro de la aplicación.
- Una vez completado el registro, el sistema redirige automáticamente al
- usuario a la pantalla de inicio de sesión para facilitar el acceso.
+ donde el usuario puede introducir su nombre y seleccionar su rol (calificador u observador).
+ Esta pantalla permite que los nuevos usuarios definan adecuadamente su perfil dentro de la aplicación.
+ Una vez completado el registro,
+ el sistema redirige automáticamente al usuario a la pantalla de inicio de sesión para facilitar el acceso.
 \end_layout
 
 \begin_layout Standard
-La interfaz de inicio de sesión presenta mensajes de error en caso de datos
- incorrectos o problemas de conexión con el servidor.
+La interfaz de inicio de sesión presenta mensajes de error en caso de datos incorrectos o problemas de conexión con el servidor.
  El sistema está configurado para gestionar el acceso según el rol del usuario,
- asegurando que cada perfil (calificador u observador) acceda exclusivamente
- a las funciones asignadas.
+ asegurando que cada perfil (calificador u observador) acceda exclusivamente a las funciones asignadas.
 \end_layout
 
 \begin_layout Section
@@ -311,8 +307,7 @@ Calificador
 \end_layout
 
 \begin_layout Standard
-El módulo de calificación permite al usuario con rol de calificador gestionar
- sus sesiones de calificación de manera eficiente como muestra
+El módulo de calificación permite al usuario con rol de calificador gestionar sus sesiones de calificación de manera eficiente como muestra
 \begin_inset space ~
 \end_inset
 
@@ -327,9 +322,9 @@ noprefix "false"
 \end_inset
 
 .
- Desde esta pantalla, el calificador puede iniciar una nueva sesión de calificac
-ión o finalizar una sesión previamente activa, asegurando que solo una sesión
- esté abierta a la vez.
+ Desde esta pantalla,
+ el calificador puede iniciar una nueva sesión de calificación o finalizar una sesión previamente activa,
+ asegurando que solo una sesión esté abierta a la vez.
 \begin_inset Float figure
 wide false
 sideways false
@@ -395,7 +390,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil: pantalla calificador
+App móvil:
+ pantalla calificador
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:pantalla-calificador"
@@ -419,7 +415,8 @@ name "fig:pantalla-calificador"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil: caso de uso calificación
+App móvil:
+ caso de uso calificación
 \end_layout
 
 \end_inset
@@ -434,15 +431,15 @@ App móvil: caso de uso calificación
 
 \begin_layout Standard
 Si el calificador intenta iniciar una nueva sesión mientras otra está activa,
- el sistema muestra mensajes de error claros e informativos, indicando la
- necesidad de finalizar la sesión actual antes de comenzar una nueva.
- Esta funcionalidad garantiza el control adecuado del flujo de trabajo del
- calificador, evitando conflictos o superposición de datos.
+ el sistema muestra mensajes de error claros e informativos,
+ indicando la necesidad de finalizar la sesión actual antes de comenzar una nueva.
+ Esta funcionalidad garantiza el control adecuado del flujo de trabajo del calificador,
+ evitando conflictos o superposición de datos.
 \end_layout
 
 \begin_layout Standard
-En el caso de iniciar sesión, la aplicación los redirige a la pantalla principar
- del calificador como se muestra en 
+En el caso de iniciar sesión,
+ la aplicación los redirige a la pantalla principar del calificador como se muestra en 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:pantalla-calificador"
@@ -456,12 +453,11 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Durante la sesión de calificación, los usuarios calificadores tienen la
- capacidad de asignar puntajes BCS a las vacas, una funcionalidad clave
- para garantizar la recopilación y el almacenamiento de datos de evaluación.
- Estos datos no solo respaldan el proceso de calificación actual, sino que
- también son esenciales para el entrenamiento y la mejora continua de futuros
- modelos predictivos.
+Durante la sesión de calificación,
+ los usuarios calificadores tienen la capacidad de asignar puntajes BCS a las vacas,
+ una funcionalidad clave para garantizar la recopilación y el almacenamiento de datos de evaluación.
+ Estos datos no solo respaldan el proceso de calificación actual,
+ sino que también son esenciales para el entrenamiento y la mejora continua de futuros modelos predictivos.
 \end_layout
 
 \begin_layout Section
@@ -496,7 +492,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil: Notificación de observador
+App móvil:
+ Notificación de observador
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Notificación-observador"
@@ -534,7 +531,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil: arribo de imágen de calificador
+App móvil:
+ arribo de imágen de calificador
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:arribo-calificador"
@@ -558,7 +556,8 @@ name "fig:arribo-calificador"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil: Arribo de imágenes
+App móvil:
+ Arribo de imágenes
 \end_layout
 
 \end_inset
@@ -572,21 +571,19 @@ App móvil: Arribo de imágenes
 \end_layout
 
 \begin_layout Standard
-El módulo del observador, tras iniciar sesión, redirige automáticamente
- al usuario a la pantalla principal, diseñada para recibir y mostrar las
- imágenes a medida que son enviadas al sistema.
- Este módulo permite a los usuarios con el rol de observador visualizar
- las imágenes capturadas de las caravanas junto con su identificación asociada
- y un historial detallado de los puntajes de condición corporal (BCS) asignados
- en sesiones anteriores para cada caravana.
+El módulo del observador,
+ tras iniciar sesión,
+ redirige automáticamente al usuario a la pantalla principal,
+ diseñada para recibir y mostrar las imágenes a medida que son enviadas al sistema.
+ Este módulo permite a los usuarios con el rol de observador visualizar las imágenes capturadas de las caravanas junto con su identificación asociada y un historial detallado de los puntajes de condición corporal (BCS) asignados en sesiones anteriores para cada caravana.
 \end_layout
 
 \begin_layout Standard
-Además, una vez que se calcula el puntaje de condición corporal (BCS) predicho,
- ya sea por el dispositivo móvil de este observador u otro, el resultado
- se muestra en la misma pantalla.
- Luego de este cálculo se actualiza en tiempo real el gráfico del historial
- como se muestra en 
+Además,
+ una vez que se calcula el puntaje de condición corporal (BCS) predicho,
+ ya sea por el dispositivo móvil de este observador u otro,
+ el resultado se muestra en la misma pantalla.
+ Luego de este cálculo se actualiza en tiempo real el gráfico del historial como se muestra en 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Notificación-observador"
@@ -600,20 +597,18 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-La interfaz del observador es completamente de solo lectura, sin opciones
- para interactuar o realizar modificaciones.
- Las imágenes se actualizan de manera automática conforme las vacas pasan
- por debajo de la cámara, ofreciendo una experiencia fluida y enfocada en
- la visualización y monitoreo en tiempo real.
+La interfaz del observador es completamente de solo lectura,
+ sin opciones para interactuar o realizar modificaciones.
+ Las imágenes se actualizan de manera automática conforme las vacas pasan por debajo de la cámara,
+ ofreciendo una experiencia fluida y enfocada en la visualización y monitoreo en tiempo real.
 \end_layout
 
 \begin_layout Standard
-Por otro lado, el módulo del calificador redirige automáticamente al usuario,
- tras iniciar sesión de calificación, a su pantalla principal.
- Esta interfaz está diseñada para permitir que el calificador avance manualmente
- a la siguiente imagen de una vaca haciendo clic en el botón con el simbolo
- de > (Siguiente) a la espera de la llegada de una imágen como se ve en
- 
+Por otro lado,
+ el módulo del calificador redirige automáticamente al usuario,
+ tras iniciar sesión de calificación,
+ a su pantalla principal.
+ Esta interfaz está diseñada para permitir que el calificador avance manualmente a la siguiente imagen de una vaca haciendo clic en el botón con el simbolo de > (Siguiente) a la espera de la llegada de una imágen como se ve en 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:arribo-calificador"
@@ -624,10 +619,8 @@ noprefix "false"
 \end_inset
 
 .
- Esto le da al calificador el control de cuándo visualizar la próxima imagen
- para asignar el valor BCS correspondiente.
- Es importante destacar que el calificador debe interactuar activamente
- con la aplicación para avanzar o esperar la llegada de una nueva imagen.
+ Esto le da al calificador el control de cuándo visualizar la próxima imagen para asignar el valor BCS correspondiente.
+ Es importante destacar que el calificador debe interactuar activamente con la aplicación para avanzar o esperar la llegada de una nueva imagen.
 \end_layout
 
 \begin_layout Standard
@@ -659,7 +652,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil: menú de calificador 
+App móvil:
+ menú de calificador 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:menú-calificador"
@@ -696,7 +690,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil: menú de observador 
+App móvil:
+ menú de observador 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:menú-observador"
@@ -720,7 +715,8 @@ name "fig:menú-observador"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil: menú
+App móvil:
+ menú
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:App-móvil:-menú"
@@ -741,8 +737,8 @@ name "fig:App-móvil:-menú"
 \end_layout
 
 \begin_layout Standard
-En la pantalla principal, ambos usuarios tienen acceso a un menú que les
- permite cerrar la sesión como se ve en 
+En la pantalla principal,
+ ambos usuarios tienen acceso a un menú que les permite cerrar la sesión como se ve en 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:App-móvil:-menú"
@@ -753,8 +749,9 @@ noprefix "false"
 \end_inset
 
 .
- Además, para los calificadores, este menú incluye la opción adicional de
- finalizar una sesión de calificación en curso.
+ Además,
+ para los calificadores,
+ este menú incluye la opción adicional de finalizar una sesión de calificación en curso.
 \end_layout
 
 \begin_layout Section
@@ -762,24 +759,19 @@ Reportes Generados
 \end_layout
 
 \begin_layout Standard
-Tanto los calificadores como los observadores cuentan con herramientas visuales
- que facilitan el análisis de los datos generados durante las sesiones de
- calificación.
- Entre estas herramientas destaca un gráfico de tipo torta, que proporciona
- una representación clara y organizada de las sesiones en curso y las completada
-s.
- Este gráfico agrupa los valores predichos del puntaje de condición corporal
- (BCS) en categorías enteras del 1 al 5, basándose en la parte entera del
- valor incluso cuando la predicción incluye decimales.
- Esta metodología asegura una visualización uniforme, intuitiva y de fácil
- interpretación para todos los usuarios.
+Tanto los calificadores como los observadores cuentan con herramientas visuales que facilitan el análisis de los datos generados durante las sesiones de calificación.
+ Entre estas herramientas destaca un gráfico de tipo torta,
+ que proporciona una representación clara y organizada de las sesiones en curso y las completadas.
+ Este gráfico agrupa los valores predichos del puntaje de condición corporal (BCS) en categorías enteras del 1 al 5,
+ basándose en la parte entera del valor incluso cuando la predicción incluye decimales.
+ Esta metodología asegura una visualización uniforme,
+ intuitiva y de fácil interpretación para todos los usuarios.
 \end_layout
 
 \begin_layout Standard
-Adicionalmente, se incluye un diagrama de dispersión que muestra el promedio
- del puntaje de condición corporal (BCS) de las sesiones anteriores, ofreciendo
- una perspectiva comparativa y útil para evaluar tendencias a lo largo del
- tiempo.
+Adicionalmente,
+ se incluye un diagrama de dispersión que muestra el promedio del puntaje de condición corporal (BCS) de las sesiones anteriores,
+ ofreciendo una perspectiva comparativa y útil para evaluar tendencias a lo largo del tiempo.
 \end_layout
 
 \begin_layout Standard
@@ -803,7 +795,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-App móvil: reportes
+App móvil:
+ reportes
 \end_layout
 
 \end_inset
@@ -813,46 +806,35 @@ App móvil: reportes
 
 \end_inset
 
-
-\change_inserted -1783815582 1742137225
 
 \end_layout
 
 \begin_layout Section
-
-\change_inserted -1783815582 1742137226
 Rendimientos en dispositivos móviles
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1742137226
-Para evaluar la eficiencia del sistema, se midieron los tiempos de predicción
- del BCS en dispositivos móviles, un aspecto crítico para asegurar una experienc
-ia fluida al obtener los resultados de la predicción.
- Antes de la implementación del prototipo, el algoritmo fue probado mediante
- una versión preliminar diseñada para Android.
- Estas pruebas se llevaron a cabo en diversos dispositivos móviles, variando
- tanto la cantidad de dispositivos como el tamaño de los lotes de procesamiento
- ("jobs").
+Para evaluar la eficiencia del sistema,
+ se midieron los tiempos de predicción del BCS en dispositivos móviles,
+ un aspecto crítico para asegurar una experiencia fluida al obtener los resultados de la predicción.
+ Antes de la implementación del prototipo,
+ el algoritmo fue probado mediante una versión preliminar diseñada para Android.
+ Estas pruebas se llevaron a cabo en diversos dispositivos móviles,
+ variando tanto la cantidad de dispositivos como el tamaño de los lotes de procesamiento ("jobs").
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1742137226
-En la versión preliminar, los datos se transmitían de forma continua desde
- un servidor a los dispositivos móviles usando round-robin, operando dentro
- de la misma red local.
- En el prototipo final, el flujo de datos comenzó con una máquina que simulaba
- el sistema de envíos hacia el servidor.
- Posteriormente, el servidor redistribuía los trabajos a los dispositivos
- móviles usando round robin, permitiendo evaluar el rendimiento en condiciones
- más representativas del entorno real en una red local.
+En la versión preliminar,
+ los datos se transmitían de forma continua desde un servidor a los dispositivos móviles usando round-robin,
+ operando dentro de la misma red local.
+ En el prototipo final,
+ el flujo de datos comenzó con una máquina que simulaba el sistema de envíos hacia el servidor.
+ Posteriormente,
+ el servidor redistribuía los trabajos a los dispositivos móviles usando round robin,
+ permitiendo evaluar el rendimiento en condiciones más representativas del entorno real en una red local.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1742137226
 En 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -863,44 +845,43 @@ noprefix "false"
 
 \end_inset
 
- se puede ver una comparación de la versión preliminar y el prototipo con
- respecto a la transferencia de datos.
- La tabla muestra que, a medida que aumenta la cantidad de imágenes por
- job, el tiempo de transferencia de datos disminuye en la versión preliminar.
- Esto se debe a que el cliente obtenía cada imagen a procesar mediante una
- llamada HTTP, lo que generaba mayores tiempos de transferencia.
- Sin embargo, al cambiar el mecanismo de transferencia a una conexión WebSocket,
+ se puede ver una comparación de la versión preliminar y el prototipo con respecto a la transferencia de datos.
+ La tabla muestra que,
+ a medida que aumenta la cantidad de imágenes por job,
+ el tiempo de transferencia de datos disminuye en la versión preliminar.
+ Esto se debe a que el cliente obtenía cada imagen a procesar mediante una llamada HTTP,
+ lo que generaba mayores tiempos de transferencia.
+ Sin embargo,
+ al cambiar el mecanismo de transferencia a una conexión WebSocket,
  se logra una reducción significativa en el tiempo de transferencia.
- Además, la menor variabilidad en la versión del prototipo sugiere una gestión
- más eficiente de la transferencia de imágenes.
+ Además,
+ la menor variabilidad en la versión del prototipo sugiere una gestión más eficiente de la transferencia de imágenes.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1742137226
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 
-\change_inserted -1783815582 1742137226
+\size small
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="4">
-<features tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="3cm">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Job por imágenes
 \end_layout
 
@@ -911,7 +892,7 @@ Job por imágenes
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 versión
 \end_layout
 
@@ -922,7 +903,7 @@ versión
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Dispositivo
 \end_layout
 
@@ -933,7 +914,7 @@ Dispositivo
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 tiempo de tranferencia por imagen (ms)
 \end_layout
 
@@ -946,7 +927,7 @@ tiempo de tranferencia por imagen (ms)
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 2
 \end_layout
 
@@ -957,7 +938,7 @@ tiempo de tranferencia por imagen (ms)
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Preliminar
 \end_layout
 
@@ -968,7 +949,7 @@ Preliminar
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Note 7
 \end_layout
 
@@ -979,7 +960,7 @@ Note 7
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 697 ± 610
 \end_layout
 
@@ -1010,7 +991,7 @@ Note 7
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Moto g9 play
 \end_layout
 
@@ -1021,7 +1002,7 @@ Moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 746 ± 447
 \end_layout
 
@@ -1034,7 +1015,7 @@ Moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 2
 \end_layout
 
@@ -1045,7 +1026,7 @@ Moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Preliminar
 \end_layout
 
@@ -1056,7 +1037,7 @@ Preliminar
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Note 7
 \end_layout
 
@@ -1067,7 +1048,7 @@ Note 7
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 983 ± 910
 \end_layout
 
@@ -1098,7 +1079,7 @@ Note 7
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Moto g6 play
 \end_layout
 
@@ -1109,7 +1090,7 @@ Moto g6 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 807 ± 265
 \end_layout
 
@@ -1140,7 +1121,7 @@ Moto g6 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Moto g9 play
 \end_layout
 
@@ -1151,7 +1132,7 @@ Moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 1065 ± 3092
 \end_layout
 
@@ -1164,7 +1145,7 @@ Moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 15
 \end_layout
 
@@ -1175,7 +1156,7 @@ Moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Preliminar
 \end_layout
 
@@ -1186,7 +1167,7 @@ Preliminar
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Note 7
 \end_layout
 
@@ -1197,7 +1178,7 @@ Note 7
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 57 ± 13
 \end_layout
 
@@ -1228,7 +1209,7 @@ Note 7
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Moto g6 play
 \end_layout
 
@@ -1239,7 +1220,7 @@ Moto g6 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 58 ± 11
 \end_layout
 
@@ -1270,7 +1251,7 @@ Moto g6 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Moto g9 play
 \end_layout
 
@@ -1281,7 +1262,7 @@ Moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 64 ± 14
 \end_layout
 
@@ -1294,7 +1275,7 @@ Moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 1
 \end_layout
 
@@ -1305,7 +1286,7 @@ Moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Prototipo
 \end_layout
 
@@ -1316,7 +1297,7 @@ Prototipo
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 g9 plus
 \end_layout
 
@@ -1327,7 +1308,7 @@ g9 plus
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 34 ± 92
 \end_layout
 
@@ -1358,7 +1339,7 @@ g9 plus
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 moto g32
 \end_layout
 
@@ -1369,7 +1350,7 @@ moto g32
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 41 ± 99
 \end_layout
 
@@ -1384,13 +1365,9 @@ moto g32
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Transferencia de datos
 \begin_inset CommandInset label
 LatexCommand label
@@ -1412,8 +1389,6 @@ name "tab:Transferencia-de-datos"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1742137226
 En 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1434,25 +1409,20 @@ noprefix "false"
 
 \end_inset
 
-se puede ver un análisis comparativo entre las diferentes pruebas en términos
- del tiempo de detección por imágen.
- En la comparación se puede ver que Note 7 y el Moto G9 Play obtuvieron
- un mejor tiempo promedio de detección de imágenes y una menor variabilidad
- en la versión preliminar, en comparación con la versión prototipo, que
- incorpora dispositivos más modernos.
- Esta diferencia se debe a que, en la versión preliminar, el dispositivo
- se centraba exclusivamente en la ejecución del algoritmo, mientras que
- en el prototipo se realizaron tareas adicionales, como la visualización
- de todas las imágenes procesadas (no solo las utilizadas para la predicción)
- y el envío de los resultados al servidor.
- A pesar de estas diferencias en la carga de procesamiento, es un aspecto
- clave a evaluar con el objetivo de optimizar tanto el tiempo de detección
- como la desviación estándar en futuras iteraciones.
+se puede ver un análisis comparativo entre las diferentes pruebas en términos del tiempo de detección por imágen.
+ En la comparación se puede ver que Note 7 y el Moto G9 Play obtuvieron un mejor tiempo promedio de detección de imágenes y una menor variabilidad en la versión preliminar,
+ en comparación con la versión prototipo,
+ que incorpora dispositivos más modernos.
+ Esta diferencia se debe a que,
+ en la versión preliminar,
+ el dispositivo se centraba exclusivamente en la ejecución del algoritmo,
+ mientras que en el prototipo se realizaron tareas adicionales,
+ como la visualización de todas las imágenes procesadas (no solo las utilizadas para la predicción) y el envío de los resultados al servidor.
+ A pesar de estas diferencias en la carga de procesamiento,
+ es un aspecto clave a evaluar con el objetivo de optimizar tanto el tiempo de detección como la desviación estándar en futuras iteraciones.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1742137226
 \begin_inset Float table
 wide false
 sideways false
@@ -1461,10 +1431,10 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 
-\change_inserted -1783815582 1742137226
+\size small
 \begin_inset Tabular
 <lyxtabular version="3" rows="15" columns="5">
-<features tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="left" valignment="middle" width="4cm">
 <column alignment="left" valignment="middle" width="2.5cm">
 <column alignment="center" valignment="top" width="4cm">
@@ -1476,7 +1446,7 @@ status collapsed
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Imágenes por job
 \end_layout
 
@@ -1487,7 +1457,7 @@ Imágenes por job
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Versión
 \end_layout
 
@@ -1498,7 +1468,7 @@ Versión
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Stream
 \end_layout
 
@@ -1509,7 +1479,7 @@ Stream
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Cluster de smartphones marca-modelo
 \end_layout
 
@@ -1520,7 +1490,7 @@ Cluster de smartphones marca-modelo
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Tiempo de detección por imágen (ms)
 \end_layout
 
@@ -1533,7 +1503,7 @@ Tiempo de detección por imágen (ms)
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Stream de dos imágenes por job
 \end_layout
 
@@ -1544,7 +1514,7 @@ Stream de dos imágenes por job
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 preliminar
 \end_layout
 
@@ -1555,7 +1525,7 @@ preliminar
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 10 segundos entre ráfagas de 12 job
 \end_layout
 
@@ -1566,7 +1536,7 @@ preliminar
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Note7
 \end_layout
 
@@ -1577,7 +1547,7 @@ Note7
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 235 ± 24
 \end_layout
 
@@ -1617,7 +1587,7 @@ Note7
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 moto g9 play
 \end_layout
 
@@ -1628,7 +1598,7 @@ moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 243 ±15
 \end_layout
 
@@ -1641,7 +1611,7 @@ moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Stream de dos imágenes por job
 \end_layout
 
@@ -1652,7 +1622,7 @@ Stream de dos imágenes por job
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 preliminar
 \end_layout
 
@@ -1663,7 +1633,7 @@ preliminar
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 10 segundos entre ráfagas de 12 job
 \end_layout
 
@@ -1674,7 +1644,7 @@ preliminar
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Note 7
 \end_layout
 
@@ -1685,7 +1655,7 @@ Note 7
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 233 ± 23
 \end_layout
 
@@ -1725,7 +1695,7 @@ Note 7
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 moto g6
 \end_layout
 
@@ -1736,7 +1706,7 @@ moto g6
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 300 ± 54
 \end_layout
 
@@ -1776,7 +1746,7 @@ moto g6
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 moto g9 play
 \end_layout
 
@@ -1787,7 +1757,7 @@ moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 244 ± 30
 \end_layout
 
@@ -1800,7 +1770,7 @@ moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Stream de 15 imágenes por job
 \end_layout
 
@@ -1811,7 +1781,7 @@ Stream de 15 imágenes por job
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 preliminar
 \end_layout
 
@@ -1822,7 +1792,7 @@ preliminar
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 10 segundos entre ráfagas de 12 job
 \end_layout
 
@@ -1833,7 +1803,7 @@ preliminar
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Note 7
 \end_layout
 
@@ -1844,7 +1814,7 @@ Note 7
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 217 ± 3
 \end_layout
 
@@ -1884,7 +1854,7 @@ Note 7
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 moto g6
 \end_layout
 
@@ -1895,7 +1865,7 @@ moto g6
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 355 ± 14
 \end_layout
 
@@ -1935,7 +1905,7 @@ moto g6
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 moto g9 play
 \end_layout
 
@@ -1946,7 +1916,7 @@ moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 215 ± 13
 \end_layout
 
@@ -1959,7 +1929,7 @@ moto g9 play
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Stream de 1 imágen por job
 \end_layout
 
@@ -1970,7 +1940,7 @@ Stream de 1 imágen por job
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 prototipo
 \end_layout
 
@@ -1981,7 +1951,7 @@ prototipo
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 10 segundos entre ráfagas de 12 job
 \end_layout
 
@@ -1992,7 +1962,7 @@ prototipo
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 moto g9 plus
 \end_layout
 
@@ -2003,7 +1973,7 @@ moto g9 plus
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 336 ± 161
 \end_layout
 
@@ -2043,7 +2013,7 @@ moto g9 plus
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Motorola moto g32
 \end_layout
 
@@ -2054,7 +2024,7 @@ Motorola moto g32
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 255 ± 78
 \end_layout
 
@@ -2067,7 +2037,7 @@ Motorola moto g32
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Stream de 1 imagen por job
 \end_layout
 
@@ -2078,7 +2048,7 @@ Stream de 1 imagen por job
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 prototipo
 \end_layout
 
@@ -2089,7 +2059,7 @@ prototipo
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 10 segundos entre ráfagas de 12 job
 \end_layout
 
@@ -2100,7 +2070,7 @@ prototipo
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 moto g9 plus
 \end_layout
 
@@ -2111,7 +2081,7 @@ moto g9 plus
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 249 ± 48
 \end_layout
 
@@ -2151,7 +2121,7 @@ moto g9 plus
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 moto g32
 \end_layout
 
@@ -2162,7 +2132,7 @@ moto g32
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 298 ± 47
 \end_layout
 
@@ -2175,7 +2145,7 @@ moto g32
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Stream de 1 imagen por job
 \end_layout
 
@@ -2186,7 +2156,7 @@ Stream de 1 imagen por job
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 prototipo
 \end_layout
 
@@ -2197,7 +2167,7 @@ prototipo
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 5 segundos entre ráfagas de 12 job
 \end_layout
 
@@ -2208,7 +2178,7 @@ prototipo
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Motorala moto g9 plus
 \end_layout
 
@@ -2219,7 +2189,7 @@ Motorala moto g9 plus
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 241 ± 35
 \end_layout
 
@@ -2259,7 +2229,7 @@ Motorala moto g9 plus
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 Motorola moto g32
 \end_layout
 
@@ -2270,7 +2240,7 @@ Motorola moto g32
 
 \begin_layout Plain Layout
 
-\change_inserted -1783815582 1742137226
+\size small
 256 ± 73
 \end_layout
 
@@ -2285,13 +2255,9 @@ Motorola moto g32
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Tiempos de ejecución móvil
 \begin_inset CommandInset label
 LatexCommand label
@@ -2313,8 +2279,6 @@ name "tab:Tiempos-de-ejecución"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1742137226
 \begin_inset Float figure
 wide false
 sideways false
@@ -2322,8 +2286,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\change_inserted -1783815582 1742137226
 \begin_inset Graphics
 	filename ../ch6/detección.png
 	scale 50
@@ -2334,13 +2296,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Tiempo de detección 
 \begin_inset CommandInset label
 LatexCommand label
@@ -2362,38 +2320,32 @@ name "fig:Tiempo-de-detección"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1742137226
-A continuación, se presenta la comparación del tiempo total de procesamiento.
+A continuación,
+ se presenta la comparación del tiempo total de procesamiento.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1742137226
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="6">
-<features tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="2.5cm">
-<column alignment="center" valignment="top" width="2.5cm">
-<column alignment="center" valignment="top" width="2.5cm">
-<column alignment="center" valignment="top" width="2.5cm">
-<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Cantidad de dispositivos
 \end_layout
 
@@ -2403,8 +2355,6 @@ Cantidad de dispositivos
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Imágenes por job
 \end_layout
 
@@ -2414,8 +2364,6 @@ Imágenes por job
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Versión
 \end_layout
 
@@ -2425,8 +2373,6 @@ Versión
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Imágenes procesadas
 \end_layout
 
@@ -2436,8 +2382,6 @@ Imágenes procesadas
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Job Recibidos
 \end_layout
 
@@ -2447,8 +2391,6 @@ Job Recibidos
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Tiempo total
 \end_layout
 
@@ -2460,8 +2402,6 @@ Tiempo total
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 2
 \end_layout
 
@@ -2471,8 +2411,6 @@ Tiempo total
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 2
 \end_layout
 
@@ -2482,8 +2420,6 @@ Tiempo total
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Preliminar
 \end_layout
 
@@ -2493,8 +2429,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 1752
 \end_layout
 
@@ -2504,8 +2438,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 876
 \end_layout
 
@@ -2515,8 +2447,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 26:43
 \end_layout
 
@@ -2528,8 +2458,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 3
 \end_layout
 
@@ -2539,8 +2467,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 2
 \end_layout
 
@@ -2550,8 +2476,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Preliminar
 \end_layout
 
@@ -2561,8 +2485,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 1752
 \end_layout
 
@@ -2572,8 +2494,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 876
 \end_layout
 
@@ -2583,8 +2503,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 26:44
 \end_layout
 
@@ -2596,8 +2514,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 3
 \end_layout
 
@@ -2607,8 +2523,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 3
 \end_layout
 
@@ -2618,8 +2532,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Preliminar
 \end_layout
 
@@ -2629,8 +2541,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 1740
 \end_layout
 
@@ -2640,8 +2550,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 116
 \end_layout
 
@@ -2651,8 +2559,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 3:47
 \end_layout
 
@@ -2664,8 +2570,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 2
 \end_layout
 
@@ -2675,8 +2579,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 1
 \end_layout
 
@@ -2686,8 +2588,6 @@ Preliminar
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Prototipo
 \end_layout
 
@@ -2697,8 +2597,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 876
 \end_layout
 
@@ -2708,8 +2606,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 876
 \end_layout
 
@@ -2719,8 +2615,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 876
 \end_layout
 
@@ -2732,8 +2626,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 2
 \end_layout
 
@@ -2743,8 +2635,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 1
 \end_layout
 
@@ -2754,8 +2644,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Prototipo
 \end_layout
 
@@ -2765,8 +2653,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 432
 \end_layout
 
@@ -2776,8 +2662,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 432
 \end_layout
 
@@ -2787,8 +2671,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 432
 \end_layout
 
@@ -2800,8 +2682,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 2
 \end_layout
 
@@ -2811,8 +2691,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 2
 \end_layout
 
@@ -2822,8 +2700,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Prototipo
 \end_layout
 
@@ -2833,8 +2709,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 432
 \end_layout
 
@@ -2844,8 +2718,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 432
 \end_layout
 
@@ -2855,8 +2727,6 @@ Prototipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 432
 \end_layout
 
@@ -2871,13 +2741,9 @@ Prototipo
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -1783815582 1742137226
 Tiempo de procesamiento total
 \end_layout
 
@@ -2892,178 +2758,72 @@ Tiempo de procesamiento total
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1742137226
-Se observa que la versión preliminar logra un procesamiento más rápido a
- medida que los jobs contienen un mayor número de imágenes, lo cual se debe
- a que, como se analizó anteriormente, la transferencia de datos representaba
- el mayor costo en términos de tiempo.
- En la versión prototipo, este aspecto se optimizó mediante el uso de una
- conexión WebSocket, reduciendo significativamente los tiempos de transferencia.
- Sin embargo, dado que cada job en el prototipo contiene una única imagen
- y es necesario visualizarla en el dispositivo del observador, el tiempo
- de procesamiento por imagen es mayor.
+Se observa que la versión preliminar logra un procesamiento más rápido a medida que los jobs contienen un mayor número de imágenes,
+ lo cual se debe a que,
+ como se analizó anteriormente,
+ la transferencia de datos representaba el mayor costo en términos de tiempo.
+ En la versión prototipo,
+ este aspecto se optimizó mediante el uso de una conexión WebSocket,
+ reduciendo significativamente los tiempos de transferencia.
+ Sin embargo,
+ dado que cada job en el prototipo contiene una única imagen y es necesario visualizarla en el dispositivo del observador,
+ el tiempo de procesamiento por imagen es mayor.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1742137226
-A lo largo de las pruebas, se redujo progresivamente el tiempo de espera
- entre ráfagas, como se observa en la prueba 3 del prototipo, sin afectar
- la eficiencia del sistema.
- En futuras evaluaciones, sería recomendable continuar disminuyendo este
- tiempo de espera y mejorar el prototipo para permitir el procesamiento
- de múltiples imágenes por job.
- Asimismo, sería útil incorporar la opción de deshabilitar la visualización
- de las imágenes, mostrando únicamente los resultados de la predicción,
- con el objetivo de realizar comparaciones más precisas y optimizar el rendimien
-to.
+A lo largo de las pruebas,
+ se redujo progresivamente el tiempo de espera entre ráfagas,
+ como se observa en la prueba 3 del prototipo,
+ sin afectar la eficiencia del sistema.
+ En futuras evaluaciones,
+ sería recomendable continuar disminuyendo este tiempo de espera y mejorar el prototipo para permitir el procesamiento de múltiples imágenes por job.
+ Asimismo,
+ sería útil incorporar la opción de deshabilitar la visualización de las imágenes,
+ mostrando únicamente los resultados de la predicción,
+ con el objetivo de realizar comparaciones más precisas y optimizar el rendimiento.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1742137226
-Adicionalmente, las pruebas realizadas con el prototipo permitieron evaluar
- el consumo de memoria en los dispositivos utilizados.
+Adicionalmente,
+ las pruebas realizadas con el prototipo permitieron evaluar el consumo de memoria en los dispositivos utilizados.
  Los resultados obtenidos fueron los siguientes:
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1742137226
-En la primera prueba, el Moto G32 alcanzó un consumo máximo de 663.2 MB,
+En la primera prueba,
+ el Moto G32 alcanzó un consumo máximo de 663.2 MB,
  mientras que el G9 Plus registró un pico de 445.49 MB.
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1742137226
-En la segunda prueba, el consumo máximo del Moto G32 fue de 558.29 MB, mientras
- que el G9 Plus redujo su uso de memoria a 425.64 MB.
+En la segunda prueba,
+ el consumo máximo del Moto G32 fue de 558.29 MB,
+ mientras que el G9 Plus redujo su uso de memoria a 425.64 MB.
 \end_layout
 
 \begin_layout Section
-
-\change_inserted -1783815582 1742137226
 Rendimientos en el servidor
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1783815582 1742137226
-Como se mencionó anteriormente el sistema fue probado en un entorno con
- dos observadores, sin calificadores para verificar el consumo de recursos
- durante la ejecución del algoritmo de predicción, y demostró los siguientes
- consumos de memoria:
+Como se mencionó anteriormente el sistema fue probado en un entorno con dos observadores,
+ sin calificadores para verificar el consumo de recursos durante la ejecución del algoritmo de predicción,
+ y demostró los siguientes consumos de memoria:
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1742137226
-ActiveMQ: fue incrementando desde 277 MB de memoria hasta 490 MB de memoria.
+ActiveMQ:
+ fue incrementando desde 277 MB de memoria hasta 490 MB de memoria.
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1742137226
-MySQL: fue incrementando desde 395 MB de memoria hasta 403 MB de memoria.
+MySQL:
+ fue incrementando desde 395 MB de memoria hasta 403 MB de memoria.
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1783815582 1742137226
-Servidor (API principal): no superaron los 500 MB de memoria las pruebas
- realizadas.
-\change_unchanged
-
-\end_layout
-
-\begin_layout Section
-
-\change_deleted -1783815582 1732591217
-Rendimientos del sistema
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1732591217
-Para evaluar la eficiencia del sistema, se midieron los tiempos de predicción
- del BCS en dispositivos móviles, un aspecto crítico para asegurar una experienc
-ia fluida al obtener los resultados de la predicción.
- Esto permite que el observador visualice los resultados rápidamente y que
- tanto el calificador como el observador accedan a los reportes en tiempo
- real.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1732591217
-Antes de la implementación del prototipo, el algoritmo fue sometido a pruebas
- utilizando una versión preliminar desarrollada para Android.
- Estas pruebas se realizaron en diversos dispositivos móviles, variando
- tanto el número de dispositivos como el tamaño de los lotes de procesamiento
- ("jobs"), dentro de un flujo continuo de datos transmitidos desde un servidor
- hacia los móviles en la misma red local.
- A continuación, se presenta un resumen de los resultados obtenidos en estas
- evaluaciones:
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -997162125 1732117613
-Estos resultados falta formatearlos/compatibilizarlos con lo que vos estás
- corriendo.
- Es decir, en estos experimentos de la tabla hay un scheduler round robin
- que no se estaría mencionando y que es el que se usó para distribuir los
- jobs.
- En tu experimento, al parecer va a haber un sólo móvil con lo cual el scheduler
- no tendría sentido, a menos que incluyas otro móvil en el cálculo.
- La tabla muestra 3 experimentos donde varían los streams y la composición
- del cluster pero contiene resultados discriminados por móvil de lo que
- resultó la inferencia de una imágen.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1732591217
-fue decuyo BCS asociado se calculó un total de 
-\change_deleted -997162125 1732116399
-9
-\change_deleted -1783815582 1732591217
-6
-\change_deleted -997162125 1732116409
- Play adicional
-\change_deleted -1783815582 1732591217
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -1783815582 1732591217
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -997162125 1732118982
-Faltan los screenshots del uso de cpu y memoria de la app móvil y el server.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_inserted -997162125 1732118933
-
+Servidor (API principal):
+ no superaron los 500 MB de memoria las pruebas realizadas.
 \end_layout
 
 \end_body

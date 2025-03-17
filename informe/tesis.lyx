@@ -1,4 +1,4 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
 \lyxformat 544
 \begin_document
 \begin_header
@@ -6,18 +6,26 @@
 \origin unavailable
 \textclass book
 \begin_preamble
-\usepackage{a4wide}
+%\usepackage{a4wide}
 %\usepackage[small]{titlesec}
-
+\usepackage[paperheight=29.7cm,paperwidth=21cm]{geometry}
+\geometry{
+lmargin=25mm,
+rmargin=25mm,
+tmargin=\dimexpr25mm+1.5\baselineskip,
+bmargin=\dimexpr25mm+1.5\baselineskip,,
+headheight=\baselineskip,
+headsep=.5\baselineskip,
+footskip=1.5\baselineskip}
 \usepackage{multirow}
 \usepackage{colortbl}
-\usepackage[latin1]{inputenc}
+%\usepackage[latin1]{inputenc}
 \usepackage{pslatex}
 \usepackage{txfonts}
 \usepackage[small,bf]{caption}
 \usepackage{acronym}
 \usepackage{mathpazo}
-%\usepackage{txfonts}
+\usepackage{txfonts}
 \usepackage{algorithm}
 %\usepackage{algorithmic}
 \usepackage{listings}
@@ -32,15 +40,18 @@
 %\usepackage[Conny]{fncychap}
 %\usepackage[Rejne]{fncychap}
 %\bibpunct{(}{)}{;}{a}{,}{,}
-\usepackage[english,conditional,bottom,none]{draftcopy}
+%\usepackage[english,conditional,bottom,none]{draftcopy}
 \definecolor{gray}{gray}{0.8}
+% Added by lyx2lyx
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
 \end_preamble
-\options plain, english, final
+\options plain, spanish, final
 \use_default_options false
 \maintain_unincluded_children false
-\language spanish-mexico
+\language spanish
 \language_package default
-\inputencoding default
+\inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -73,7 +84,7 @@
 \pdf_backref false
 \pdf_pdfusetitle true
 \papersize a4paper
-\use_geometry true
+\use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -104,12 +115,12 @@
 \bottommargin 3.5cm
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation skip
-\defskip medskip
+\paragraph_separation indent
+\paragraph_indentation default
 \is_math_indent 1
 \math_indentation default
 \math_numbering_side default
-\quotes_style french
+\quotes_style english
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 2
@@ -145,19 +156,35 @@ thispagestyle{empty}
 
 \begin_layout Standard
 \align center
-Universidad Nacional del Centro de la Provincia De Buenos Aires
+
+\size larger
+Universidad Nacional
 \begin_inset Newline newline
 \end_inset
 
-Facultad de Ciencias Exactas - Departamento de Computación y Sistemas
-\begin_inset Newline newline
+ del Centro de la Provincia De Buenos Aires
+\size default
+
+\begin_inset VSpace 1cm
 \end_inset
 
-Ingeniería de Sistemas
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace 5.2cm
+\align center
+\begin_inset Graphics
+	filename isologo-unicen-azul-fondo-transparente.png
+	lyxscale 10
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
 \end_inset
 
 
@@ -166,7 +193,25 @@ Ingeniería de Sistemas
 \begin_layout Standard
 \align center
 
-\size huge
+\size larger
+Facultad de Ciencias Exactas
+\begin_inset Newline newline
+\end_inset
+
+Carrera de Ingeniería de Sistemas
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size largest
 Un prototipo de ambiente Dew para etiquetado y clasificación de ganado
 \size default
 
@@ -190,7 +235,7 @@ por
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace 2cm
+\begin_inset VSpace 1.5cm
 \end_inset
 
 
@@ -199,24 +244,34 @@ por
 \begin_layout Standard
 \align center
 
-\size larger
-Director: Dr.
+\size large
+Director:
+ Dr.
  Matías Hirsch
 \end_layout
 
 \begin_layout Standard
 \align center
 
-\size larger
-Co-Director: Dr.
- Juan Toloza 
+\size large
+Co-Director:
+ Dr.
+ Juan Manuel Toloza 
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace 2cm
+\begin_inset VSpace 1.5cm
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+Tandil,
+ Buenos Aires,
+ Argentina
 \end_layout
 
 \begin_layout Standard
@@ -231,20 +286,6 @@ para optar por el título de
 \end_inset
 
 Ingeniero de Sistemas
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace 1.5cm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\size large
-Tandil, Buenos Aires, Argentina
 \end_layout
 
 \begin_layout Standard
@@ -270,7 +311,20 @@ thispagestyle{empty}
 
 \end_layout
 
+\begin_layout Section*
+Agradecimientos
+\end_layout
+
 \begin_layout Standard
+<Completar con agradecimientos a familiares,
+ amigos,
+ directores de proyecto>
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
 
 \end_layout
 
@@ -310,14 +364,14 @@ tableofcontents
 
 
 \backslash
-listoffigures
+listoftables
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-listoftables
+listoffigures
 \end_layout
 
 \begin_layout Plain Layout
