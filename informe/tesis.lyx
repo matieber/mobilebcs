@@ -1,4 +1,4 @@
-#LyX 2.4 created this file. For more info see https://www.lyx.org/
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 544
 \begin_document
 \begin_header
@@ -316,9 +316,80 @@ Agradecimientos
 \end_layout
 
 \begin_layout Standard
-<Completar con agradecimientos a familiares,
- amigos,
- directores de proyecto>
+A mis padres, cuyo apoyo incondicional me permitió mudarme de ciudad y dedicarme
+ a mis estudios, brindándome siempre la seguridad y el respaldo necesarios
+ para alcanzar esta meta.
+ 
+\end_layout
+
+\begin_layout Standard
+A mi mujer, por su paciencia, aliento y apoyo moral en los momentos más
+ desafiantes, impulsándome a finalizar esta tesis después de tantos años.
+ 
+\end_layout
+
+\begin_layout Standard
+A mi director, por su guía y acompañamiento a lo largo de todo el proceso
+ de desarrollo.
+ 
+\end_layout
+
+\begin_layout Standard
+A todos ellos, mi más sincero y profundo agradecimiento.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Resumen
+\end_layout
+
+\begin_layout Standard
+El objetivo fue desarrollar un prototipo de computación Dew que aproveche
+ capacidad de cómputo presente en la cercanía de un usuario para ejecutar
+ tareas de clasificación y etiquetado en tiempo real sin necesidad de conexión
+ a internet.
+ Las tareas de clasificación emplearán un modelo tensorflow previamente
+ desarrollado en el marco de un trabajo publicado en una revista científica
+ de alto impacto en el área de las tecnologías aplicadas al agro 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "alvarez2018body"
+literal "false"
+
+\end_inset
+
+.
+ El prototipo a desarrollar tiene múltiples propósitos que pueden resumirse
+ en:
+\end_layout
+
+\begin_layout Standard
+El prototipo busca mejorar el modelo mediante un reentrenamiento optimizado
+ gracias a un proceso ágil de etiquetado de imágenes.
+ Además, automatiza la clasificación del ganado con dispositivos móviles
+ a través de una aplicación Android, que permite a expertos etiquetar imágenes
+ y a usuarios no expertos visualizar el BCS.
+ Esta aplicación se comunica con un servidor que gestiona tareas de etiquetado
+ y clasificación, diferenciando roles de usuario.
+ También se implementó un módulo de reportes para visualizar el BCS calculado
+ por el algoritmo.
+\end_layout
+
+\begin_layout Standard
+El sistema desarrollado es funcional y escalable, mejorando la precisión
+ y eficiencia en la predicción del BCS en entornos ganaderos y permitiendo
+ futuras ampliaciones, como la integración con IoT y la optimización de
+ modelos predictivos.
+ Su eficiencia se evaluó midiendo tiempos de predicción en dispositivos
+ móviles comparándola con una versión preliminar, optimizando el flujo de
+ datos entre servidor y dispositivos en un entorno realista.
+ 
 \end_layout
 
 \begin_layout Standard

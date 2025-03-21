@@ -1,4 +1,4 @@
-#LyX 2.4 created this file. For more info see https://www.lyx.org/
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 544
 \begin_document
 \begin_header
@@ -76,6 +76,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -1783815582 "Cristian"
 \author -997162125 "mhirsch"
 \end_header
 
@@ -88,24 +89,27 @@ Diseño e implementación
 \begin_layout Standard
 El sistema permite el procesamiento en tiempo real de imágenes de vacas,
  facilitando tanto la observación como la calificación de su condición corporal.
- La interfaz de usuario comienza con una pantalla de inicio de sesión,
- donde los usuarios se autentican.
- Dependiendo del rol asignado (calificador u observador),
- el sistema presenta diferentes funcionalidades:
- los calificadores se enfocan primero en iniciar o finalizar una sesión de calificador y luego en evaluar el BCS de las vacas mediante un proceso de etiquetado manual,
- mientras que los observadores visualizan las imágenes en tiempo real y ejecutan el modelo predictivo de BCS de forma automática con un modelo pre-entrenado.
- El sistema utiliza un esquema distribuido,
- donde el procesamiento de las imágenes se gestiona a través de una cola de mensajes (JMS),
- permitiendo un flujo de imágenes capturadas en tiempo real de las vacas que estan pasando por la manga.
- Estas imágenes se envían al servidor y se asocian a una vaca y a una locación específica.
- La cola de mensajes asegura el orden adecuado de las imágenes,
- mientras que el componete receptor almacena las imágenes en función de su metadata asociada.
- Además,
- el servidor gestiona las interacciones de calificadores y observadores,
- facilitando la creación de sesiones y el registro de calificaciones para los calificadores,
- así como la transmisión de datos de predicción para los observadores y,
- asimismo,
- provee reportes accesibles para ambos roles.
+ La interfaz de usuario comienza con una pantalla de inicio de sesión, donde
+ los usuarios se autentican.
+ Dependiendo del rol asignado (calificador u observador), el sistema presenta
+ diferentes funcionalidades: los calificadores se enfocan primero en iniciar
+ o finalizar una sesión de calificador y luego en evaluar el BCS de las
+ vacas mediante un proceso de etiquetado manual, mientras que los observadores
+ visualizan las imágenes en tiempo real y ejecutan el modelo predictivo
+ de BCS de forma automática con un modelo pre-entrenado.
+ El sistema utiliza un esquema distribuido, donde el procesamiento de las
+ imágenes se gestiona a través de una cola de mensajes (JMS), permitiendo
+ un flujo de imágenes capturadas en tiempo real de las vacas que estan pasando
+ por la manga.
+ Estas imágenes se envían al servidor y se asocian a una vaca y a una locación
+ específica.
+ La cola de mensajes asegura el orden adecuado de las imágenes, mientras
+ que el componete receptor almacena las imágenes en función de su metadata
+ asociada.
+ Además, el servidor gestiona las interacciones de calificadores y observadores,
+ facilitando la creación de sesiones y el registro de calificaciones para
+ los calificadores, así como la transmisión de datos de predicción para
+ los observadores y, asimismo, provee reportes accesibles para ambos roles.
 \end_layout
 
 \begin_layout Standard
@@ -113,46 +117,51 @@ El sistema permite el procesamiento en tiempo real de imágenes de vacas,
 status collapsed
 
 \begin_layout Plain Layout
-Faltan uno o dos párrafos introductorios:
- antes de entrar de lleno a explicar las distintos componentes del sistema es necesario dar un overview del sistema.
- Por ejemplo anticipar que el diseño contempla una pantalla de log in a partir de la cual,
- dependiendo del rol del usuario que se haya logeado (observador o calificador),
- se muestra una u otra interfaz.
- Luego,
- por más que haya sido mencionado en el capítulo anterior,
- decir que la característica de sistema distribuido que procesa imágenes en tiempo real se modelará con una cola de mensajes,
- donde esos mensajes serán,
- en parte,
- imágenes tomadas en tiempo real de vacas que están pasando por una manga,
- donde dichas imágenes se encolan y son identificadas y almacenadas en el orden que se suceden por un componente receptor que forma parte del sistema a diseñar.
- Otro tipo de mensaje es aquel producido por otras entidades como los calificadores,
- o también los observadores cuando tienen habilitado la participación en el cómputo del BCS.
+Faltan uno o dos párrafos introductorios: antes de entrar de lleno a explicar
+ las distintos componentes del sistema es necesario dar un overview del
+ sistema.
+ Por ejemplo anticipar que el diseño contempla una pantalla de log in a
+ partir de la cual, dependiendo del rol del usuario que se haya logeado
+ (observador o calificador), se muestra una u otra interfaz.
+ Luego, por más que haya sido mencionado en el capítulo anterior, decir
+ que la característica de sistema distribuido que procesa imágenes en tiempo
+ real se modelará con una cola de mensajes, donde esos mensajes serán, en
+ parte, imágenes tomadas en tiempo real de vacas que están pasando por una
+ manga, donde dichas imágenes se encolan y son identificadas y almacenadas
+ en el orden que se suceden por un componente receptor que forma parte del
+ sistema a diseñar.
+ Otro tipo de mensaje es aquel producido por otras entidades como los calificado
+res, o también los observadores cuando tienen habilitado la participación
+ en el cómputo del BCS.
  También dar algún detalle del flujo de interacción entre componentes.
- Acá se puede dividir entre lo que serían mensajes entre el server y un usuario logueado como calificador y otro grupo de mensajes entre lo que serían server y usuario logueado como observador.
- No sé cómo finalmente quedó esto,
- pero no estáría demás aclarar que los dos roles,
- rara vez,
- estarían presentes en una misma sesión,
- es decir,
- habría sesiones de calificación en las que no se podrían unir observadores para ver en tiempo real las calificaciones que otorga el calificador humano.
- También habría sessiones de observación o evaluación automática en las que sólo habría observadores y la calificación se determinaría por el uso del modelo de deep learning.
+ Acá se puede dividir entre lo que serían mensajes entre el server y un
+ usuario logueado como calificador y otro grupo de mensajes entre lo que
+ serían server y usuario logueado como observador.
+ No sé cómo finalmente quedó esto, pero no estáría demás aclarar que los
+ dos roles, rara vez, estarían presentes en una misma sesión, es decir,
+ habría sesiones de calificación en las que no se podrían unir observadores
+ para ver en tiempo real las calificaciones que otorga el calificador humano.
+ También habría sessiones de observación o evaluación automática en las
+ que sólo habría observadores y la calificación se determinaría por el uso
+ del modelo de deep learning.
  Esto ultimo no es como lo hice.
  Los calificadores son los que inician y finalizan la sesiones.
- Las imágenes que reciben los observadores están asociadas a las sesiones iniciadas por los calificadores.
- Si los calificadores no inician la sesion,
- los observadores pueden recibir las imagenes y predecirlas,
- pero necesitan que el calificador inicie sesion para que quede asociadas y ademas poder finalizar la sesion (los calificadores).
- Si se inicia tarde la sesion,
- los observadores van a poder ver y predecir pero los calificadores se pierden y no pueden realizar las calificadores de las vacas que pasaron por la manga previo al inicio de sesion.
+ Las imágenes que reciben los observadores están asociadas a las sesiones
+ iniciadas por los calificadores.
+ Si los calificadores no inician la sesion, los observadores pueden recibir
+ las imagenes y predecirlas, pero necesitan que el calificador inicie sesion
+ para que quede asociadas y ademas poder finalizar la sesion (los calificadores).
+ Si se inicia tarde la sesion, los observadores van a poder ver y predecir
+ pero los calificadores se pierden y no pueden realizar las calificadores
+ de las vacas que pasaron por la manga previo al inicio de sesion.
 \end_layout
 
 \begin_layout Plain Layout
-Lo que me contás impone una fuerte restricción a que existan calificadores y observadores siempre,
- cuando en realidad,
- cada rol debiera poder hacer uso del sistema independientemente del otro.
+Lo que me contás impone una fuerte restricción a que existan calificadores
+ y observadores siempre, cuando en realidad, cada rol debiera poder hacer
+ uso del sistema independientemente del otro.
  Es probable que haya faltado aclarar eso en la toma de requerimientos,
- pero bueno,
- no es tiempo ahora de acomodar la implementación.
+ pero bueno, no es tiempo ahora de acomodar la implementación.
  Sí se puede dejar un readme en el proyecto con esta advertencia de uso.
 \end_layout
 
@@ -197,29 +206,30 @@ Login
 \end_layout
 
 \begin_layout Standard
-El flujo de creación de usuario en la aplicación móvil se implementa mediante el envío de una solicitud POST al servidor .
- El módulo de creación de usuario del servidor procesa esta solicitud,
- generando el nuevo usuario en el sistema y asegurando que el nombre sea único a través de una validación.
+El flujo de creación de usuario en la aplicación móvil se implementa mediante
+ el envío de una solicitud POST al servidor .
+ El módulo de creación de usuario del servidor procesa esta solicitud, generando
+ el nuevo usuario en el sistema y asegurando que el nombre sea único a través
+ de una validación.
 \end_layout
 
 \begin_layout Standard
-Para la autenticación,
- cuando un usuario ingresa su nombre en la aplicación,
- se envía una solicitud POST,
- la cual es manejada por el módulo de login del servidor.
- El sistema verifica la identidad del usuario únicamente a través de su nombre,
- sin necesidad de una contraseña.
- Una vez identificado,
- el sistema clasifica al usuario como calificador u observador,
- habilitando o restringiendo funciones según su rol.
+Para la autenticación, cuando un usuario ingresa su nombre en la aplicación,
+ se envía una solicitud POST, la cual es manejada por el módulo de login
+ del servidor.
+ El sistema verifica la identidad del usuario únicamente a través de su
+ nombre, sin necesidad de una contraseña.
+ Una vez identificado, el sistema clasifica al usuario como calificador
+ u observador, habilitando o restringiendo funciones según su rol.
 \end_layout
 
 \begin_layout Standard
-Este diseño del módulo de login,
- junto con la funcionalidad de creación de usuarios y la validación de nombres únicos,
- se alinea con los objetivos del prototipo.
- Se prioriza la simplicidad y la funcionalidad básica,
- dejando de lado la implementación de medidas de seguridad avanzadas que podrían ser consideradas en versiones futuras.
+Este diseño del módulo de login, junto con la funcionalidad de creación
+ de usuarios y la validación de nombres únicos, se alinea con los objetivos
+ del prototipo.
+ Se prioriza la simplicidad y la funcionalidad básica, dejando de lado la
+ implementación de medidas de seguridad avanzadas que podrían ser consideradas
+ en versiones futuras.
 \end_layout
 
 \begin_layout Standard
@@ -293,71 +303,76 @@ Diagrama de componentes - sesión de calificación
 \end_layout
 
 \begin_layout Standard
-Cada sesión de calificación está vinculada a una locación específica,
- predefinida en los scripts de inicialización del sistema.
- Este prototipo establece una sesión de calificación por defecto para simplificar la operación,
- pero el diseño del servidor permite la posibilidad de múltiples sesiones simultáneas en distintas locaciones.
+Cada sesión de calificación está vinculada a una locación específica, predefinid
+a en los scripts de inicialización del sistema.
+ Este prototipo establece una sesión de calificación por defecto para simplifica
+r la operación, pero el diseño del servidor permite la posibilidad de múltiples
+ sesiones simultáneas en distintas locaciones.
  Esto significa que diferentes calificadores pueden trabajar en paralelo,
  ya sea en diferentes locaciones o en la misma.
- El hecho de permitir sesiones en diferentes locaciones en paralelo,
- abre la posibilidad a que el componente servidor de servicio desde nodos a los que se accede mediante internet.
+ El hecho de permitir sesiones en diferentes locaciones en paralelo, abre
+ la posibilidad a que el componente servidor de servicio desde nodos a los
+ que se accede mediante internet.
 \end_layout
 
 \begin_layout Standard
-El servidor genera automáticamente un identificador único para cada sesión de calificación,
- junto con las marcas de fecha y hora de inicio y finalización al comenzar o concluir la sesión.
- Aunque la aplicación móvil actualmente está limitada a la gestión de la sesión por defecto,
- el sistema permite que varios calificadores trabajen simultáneamente en diferentes locaciones o en la misma locación,
- aunque esta funcionalidad no está completamente implementada en la aplicación móvil en esta etapa.
+El servidor genera automáticamente un identificador único para cada sesión
+ de calificación, junto con las marcas de fecha y hora de inicio y finalización
+ al comenzar o concluir la sesión.
+ Aunque la aplicación móvil actualmente está limitada a la gestión de la
+ sesión por defecto, el sistema permite que varios calificadores trabajen
+ simultáneamente en diferentes locaciones o en la misma locación, aunque
+ esta funcionalidad no está completamente implementada en la aplicación
+ móvil en esta etapa.
 \end_layout
 
 \begin_layout Standard
-En su estado actual,
- solo el calificador tiene la capacidad de iniciar y finalizar una sesión,
- lo que implica que no puede haber una sesión sin la intervención del calificador.
- No obstante,
- es posible iniciar una sesión de calificación sin la presencia física de un calificador mediante la invocación directa de la misma llamada REST que este utilizaría para gestionar la sesión.
- Esto permite que el sistema mantenga sesiones de calificación sin requerir la intervención directa del calificador en todo momento.
- En el futuro,
- el sistema podría adaptarse para que los observadores también tengan la capacidad de iniciar y finalizar sesiones,
- lo que ofrecería mayor flexibilidad,
- permitiendo que tanto observadores como calificadores trabajen de manera independiente,
- sin depender necesariamente de la presencia del otro.
+En su estado actual, solo el calificador tiene la capacidad de iniciar y
+ finalizar una sesión, lo que implica que no puede haber una sesión sin
+ la intervención del calificador.
+ No obstante, es posible iniciar una sesión de calificación sin la presencia
+ física de un calificador mediante la invocación directa de la misma llamada
+ REST que este utilizaría para gestionar la sesión.
+ Esto permite que el sistema mantenga sesiones de calificación sin requerir
+ la intervención directa del calificador en todo momento.
+ En el futuro, el sistema podría adaptarse para que los observadores también
+ tengan la capacidad de iniciar y finalizar sesiones, lo que ofrecería mayor
+ flexibilidad, permitiendo que tanto observadores como calificadores trabajen
+ de manera independiente, sin depender necesariamente de la presencia del
+ otro.
 \end_layout
 
 \begin_layout Standard
-La base de datos registra cada sesión de calificación,
- lo que es esencial para el módulo de reportes que genera informes basados en estas sesiones.
+La base de datos registra cada sesión de calificación, lo que es esencial
+ para el módulo de reportes que genera informes basados en estas sesiones.
  Los componentes claves incluyen:
 \end_layout
 
 \begin_layout Itemize
-Inicio de Sesión de Calificación:
- El servidor gestiona el inicio de las sesiones de calificación,
- garantizando que solo exista una sesión activa por locación.
- Además,
- se encarga de asociar a la nueva sesión todas las imágenes previamente almacenadas que aún no estén vinculadas a una sesión.
- De este modo,
- se asegura que ninguna imagen quede sin procesar si no hay una sesión de calificación activa en el momento de su recepción.
+Inicio de Sesión de Calificación: El servidor gestiona el inicio de las
+ sesiones de calificación, garantizando que solo exista una sesión activa
+ por locación.
+ Además, se encarga de asociar a la nueva sesión todas las imágenes previamente
+ almacenadas que aún no estén vinculadas a una sesión.
+ De este modo, se asegura que ninguna imagen quede sin procesar si no hay
+ una sesión de calificación activa en el momento de su recepción.
 \end_layout
 
 \begin_layout Itemize
-Finalización de Sesión de Calificación:
- El servidor cierra la sesión,
- permitiendo el uso de datos en reportes.
+Finalización de Sesión de Calificación: El servidor cierra la sesión, permitiend
+o el uso de datos en reportes.
 \end_layout
 
 \begin_layout Itemize
-Unirse a una Sesión de Calificación:
- Aunque el servidor soporta esta funcionalidad,
- la aplicación móvil actual no permite que un calificador se una a una sesión iniciada por otro.
+Unirse a una Sesión de Calificación: Aunque el servidor soporta esta funcionalid
+ad, la aplicación móvil actual no permite que un calificador se una a una
+ sesión iniciada por otro.
 \end_layout
 
 \begin_layout Itemize
-Locación de la Sesión de Calificación:
- Actualmente,
- sólo permite iniciar o finalizar sesiones en la locación por defecto,
- pero es extensible para permitir más funcionalidades en futuras versiones.
+Locación de la Sesión de Calificación: Actualmente, sólo permite iniciar
+ o finalizar sesiones en la locación por defecto, pero es extensible para
+ permitir más funcionalidades en futuras versiones.
 \end_layout
 
 \begin_layout Section
@@ -365,11 +380,13 @@ Sistema de notificación de imágenes
 \end_layout
 
 \begin_layout Standard
-El diseño del sistema para notificar las imágenes de las vacas se centra en varios componentes clave que interactúan para garantizar el procesamiento adecuado de las imágenes y su integración con el flujo de calificación y observación.
- A continuación,
- se detalla el proceso de recepción y almacenamiento de imágenes,
- la gestión de mensajes,
- y el rol específico de los calificadores y observadores en la transmisión y visualización de estos datos.
+El diseño del sistema para notificar las imágenes de las vacas se centra
+ en varios componentes clave que interactúan para garantizar el procesamiento
+ adecuado de las imágenes y su integración con el flujo de calificación
+ y observación.
+ A continuación, se detalla el proceso de recepción y almacenamiento de
+ imágenes, la gestión de mensajes, y el rol específico de los calificadores
+ y observadores en la transmisión y visualización de estos datos.
 \end_layout
 
 \begin_layout Standard
@@ -415,25 +432,31 @@ Recepción y Almacenamiento de Imágenes
 \end_layout
 
 \begin_layout Standard
-El sistema cuenta con una interfaz REST que recibe las imágenes capturadas junto con la identificación de la vaca,
- la locación de la manga y la posición de la vaca.
- Este último dato corresponde al orden en el que los animales se registran al pasar por la manga.
- Este mecanismo asegura que las imágenes estén asociadas a la vaca correcta y a la locación específica desde donde se envían.
- La metadata relacionada (identificación de la vaca,
- locación,
- posición,
- etc.) se almacena en la base de datos,
- mientras que las imágenes tomadas se guardan en el sistema de archivos.
+El sistema cuenta con una interfaz REST que recibe las imágenes capturadas
+ junto con la identificación de la vaca, la locación de la manga y la posición
+ de la vaca.
+ Este último dato corresponde al orden en el que los animales se registran
+ al pasar por la manga.
+ Este mecanismo asegura que las imágenes estén asociadas a la vaca correcta
+ y a la locación específica desde donde se envían.
+ La metadata relacionada (identificación de la vaca, locación, posición,
+ etc.) se almacena en la base de datos, mientras que las imágenes tomadas
+ se guardan en el sistema de archivos.
 \end_layout
 
 \begin_layout Standard
-Este proceso ocurre de manera independiente a la activación de una sesión de calificación,
- ya que las imágenes se almacenan de inmediato y se asocian a la sesión correspondiente cuando esta se inicia.
- Dado que no puede haber más de una sesión de calificación por locación y que las imágenes están asociadas tanto a una vaca como a una locación,
- es sencillo determinar qué imágenes deben ser utilizadas por los observadores para realizar la predicción de BCS.
- Cada conjunto de imágenes genera un mensaje JMS (Java Message Service) que es enviado a una cola de procesamiento.
- Cada conjunto se asocia a un único animal,
- asegurando que la información enviada para su procesamiento corresponda exclusivamente a una vaca en particular.
+Este proceso ocurre de manera independiente a la activación de una sesión
+ de calificación, ya que las imágenes se almacenan de inmediato y se asocian
+ a la sesión correspondiente cuando esta se inicia.
+ Dado que no puede haber más de una sesión de calificación por locación
+ y que las imágenes están asociadas tanto a una vaca como a una locación,
+ es sencillo determinar qué imágenes deben ser utilizadas por los observadores
+ para realizar la predicción de BCS.
+ Cada conjunto de imágenes genera un mensaje JMS (Java Message Service)
+ que es enviado a una cola de procesamiento.
+ Cada conjunto se asocia a un único animal, asegurando que la información
+ enviada para su procesamiento corresponda exclusivamente a una vaca en
+ particular.
 \end_layout
 
 \begin_layout Subsection
@@ -441,30 +464,35 @@ Gestor de mensajes de imágenes
 \end_layout
 
 \begin_layout Standard
-El Gestor de Mensajes de Imágenes distribuye los mensajes generados por la llegada de imágenes a los componentes correspondientes que incluyen tanto la gestión de las imágenes que serán calificadas por expertos como las que se visualizarán en tiempo real por los observadores.
+El Gestor de Mensajes de Imágenes distribuye los mensajes generados por
+ la llegada de imágenes a los componentes correspondientes que incluyen
+ tanto la gestión de las imágenes que serán calificadas por expertos como
+ las que se visualizarán en tiempo real por los observadores.
  Este proceso se realiza mediante dos rutas principales:
 \end_layout
 
 \begin_layout Itemize
-Mensajes a calificadores:
- El sistema verifica la locación de las imágenes para determinar si hay una sesión de calificación activa.
- Si es así,
- los mensajes JMS se envían a las colas de los calificadores asociados a esa sesión,
- permitiendo que puedan realizar la evaluación.
- Es imprescindible que exista una sesión activa para que los calificadores accedan a las imágenes.
+Mensajes a calificadores: El sistema verifica la locación de las imágenes
+ para determinar si hay una sesión de calificación activa.
+ Si es así, los mensajes JMS se envían a las colas de los calificadores
+ asociados a esa sesión, permitiendo que puedan realizar la evaluación.
+ Es imprescindible que exista una sesión activa para que los calificadores
+ accedan a las imágenes.
 \end_layout
 
 \begin_layout Itemize
-Mensajes a observadores:
- Los observadores reciben las imágenes a través de una conexión websocket,
- independientemente de la existencia de una sesión de calificación.
- Las imágenes son transmitidas en tiempo real para que los observadores las visualicen.
+Mensajes a observadores: Los observadores reciben las imágenes a través
+ de una conexión websocket, independientemente de la existencia de una sesión
+ de calificación.
+ Las imágenes son transmitidas en tiempo real para que los observadores
+ las visualicen.
 \end_layout
 
 \begin_layout Standard
-Esta arquitectura asegura una distribución eficiente de las imágenes:
- los calificadores trabajan en sus respectivas sesiones y los observadores pueden ver las imágenes y ejecutar el algoritmo predictivo de BCS de manera simultánea,
- incluso sin una sesión de calificación en curso.
+Esta arquitectura asegura una distribución eficiente de las imágenes: los
+ calificadores trabajan en sus respectivas sesiones y los observadores pueden
+ ver las imágenes y ejecutar el algoritmo predictivo de BCS de manera simultánea
+, incluso sin una sesión de calificación en curso.
 \end_layout
 
 \begin_layout Subsection
@@ -489,8 +517,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diagrama de componentes:
- calificador
+Diagrama de componentes: calificador
 \end_layout
 
 \end_inset
@@ -506,23 +533,24 @@ Diagrama de componentes:
 \begin_layout Standard
 Los calificadores reciben las imágenes mediante un sistema de colas JMS,
  que les permite acceder a los trabajos de calificación pendientes.
- El sistema gestiona estos trabajos de manera robusta,
- asegurando que no se pierdan datos en caso de interrupciones del sistema.
+ El sistema gestiona estos trabajos de manera robusta, asegurando que no
+ se pierdan datos en caso de interrupciones del sistema.
 \end_layout
 
 \begin_layout Standard
-Para evaluar,
- los calificadores deben estar asociados a una sesión de calificación activa.
+Para evaluar, los calificadores deben estar asociados a una sesión de calificaci
+ón activa.
  Las imágenes de las vacas se envían únicamente si hay calificadores disponibles.
- El calificador accede a las imágenes mediante solicitudes GET a su cola asignada.
- Una vez evaluada una imagen,
- el puntaje BCS es enviado al servidor mediante una solicitud PUT,
- y el trabajo queda registrado en el sistema.
+ El calificador accede a las imágenes mediante solicitudes GET a su cola
+ asignada.
+ Una vez evaluada una imagen, el puntaje BCS es enviado al servidor mediante
+ una solicitud PUT, y el trabajo queda registrado en el sistema.
 \end_layout
 
 \begin_layout Standard
-Este proceso asegura que las evaluaciones de los calificadores estén organizadas y almacenadas correctamente para su uso posterior,
- como el entrenamiento o mejoramiento de modelos predictivos de BCS.
+Este proceso asegura que las evaluaciones de los calificadores estén organizadas
+ y almacenadas correctamente para su uso posterior, como el entrenamiento
+ o mejoramiento de modelos predictivos de BCS.
 \end_layout
 
 \begin_layout Subsection
@@ -530,11 +558,12 @@ Observador
 \end_layout
 
 \begin_layout Standard
-En el diseño actual del prototipo,
- los observadores reciben las imágenes en tiempo real a través de websockets,
- conectados por defecto a una locación específica.
- A diferencia de los calificadores,
- los observadores no necesitan estar asociados a una sesión de calificación para visualizar las imágenes y ejecutar de forma automática el algoritmo predictivo BCS.
+En el diseño actual del prototipo, los observadores reciben las imágenes
+ en tiempo real a través de websockets, conectados por defecto a una locación
+ específica.
+ A diferencia de los calificadores, los observadores no necesitan estar
+ asociados a una sesión de calificación para visualizar las imágenes y ejecutar
+ de forma automática el algoritmo predictivo BCS.
 
 \change_deleted -997162125 1742215492
  
@@ -574,67 +603,68 @@ Diagrama de componentes - Observadores
 \end_layout
 
 \begin_layout Standard
-Actualmente,
- el cálculo del puntaje BCS se lleva a cabo exclusivamente en los dispositivos móviles de los observadores.
- Esto es debido a que el servidor no está diseñado para realizar este procesamiento.
- El sistema utiliza un enfoque de round-robin para seleccionar un observador de la lista de aquellos que tienen conexiones websocket abiertas,
- permitiendo que el dispositivo seleccionado realice la predicción del puntaje BCS.
- El resultado de esta predicción se envía al servidor y se distribuye a otros observadores en la misma locación a través de websocket,
- lo que permite que el puntaje BCS calculado sea visualizado en tiempo real en los dispositivos de todos los observadores activos.
+Actualmente, el cálculo del puntaje BCS se lleva a cabo exclusivamente en
+ los dispositivos móviles de los observadores.
+ Esto es debido a que el servidor no está diseñado para realizar este procesamie
+nto.
+ El sistema utiliza un enfoque de round-robin para seleccionar un observador
+ de la lista de aquellos que tienen conexiones websocket abiertas, permitiendo
+ que el dispositivo seleccionado realice la predicción del puntaje BCS.
+ El resultado de esta predicción se envía al servidor y se distribuye a
+ otros observadores en la misma locación a través de websocket, lo que permite
+ que el puntaje BCS calculado sea visualizado en tiempo real en los dispositivos
+ de todos los observadores activos.
 \end_layout
 
 \begin_layout Standard
-Sin embargo,
- el diseño del sistema podría ser adaptado para que,
- en futuras versiones,
- el servidor pueda realizar estos cálculos,
- siempre y cuando se cuente con un hardware adecuado para el procesamiento en tiempo real.
+Sin embargo, el diseño del sistema podría ser adaptado para que, en futuras
+ versiones, el servidor pueda realizar estos cálculos, siempre y cuando
+ se cuente con un hardware adecuado para el procesamiento en tiempo real.
  En escenarios donde el servidor sea de bajo costo y con capacidades limitadas,
- se seguiría dependiendo de los dispositivos móviles para la ejecución del algoritmo.
- En cambio,
- si el servidor fuera actualizado a un hardware más potente,
- todo el procesamiento podría centralizarse allí,
- eliminando la necesidad de utilizar los dispositivos de los observadores.
+ se seguiría dependiendo de los dispositivos móviles para la ejecución del
+ algoritmo.
+ En cambio, si el servidor fuera actualizado a un hardware más potente,
+ todo el procesamiento podría centralizarse allí, eliminando la necesidad
+ de utilizar los dispositivos de los observadores.
 \end_layout
 
 \begin_layout Standard
-En la versión actual,
- el puntaje calculado en los dispositivos móviles se envía al servidor y se distribuye a otros observadores en la misma locación a través de websocket.
- Así,
- el puntaje BCS se visualiza en tiempo real en los dispositivos de todos los observadores activos.
+En la versión actual, el puntaje calculado en los dispositivos móviles se
+ envía al servidor y se distribuye a otros observadores en la misma locación
+ a través de websocket.
+ Así, el puntaje BCS se visualiza en tiempo real en los dispositivos de
+ todos los observadores activos.
  Si no hay observadores disponibles al momento de capturar las imágenes,
- la vaca no obtendrá un puntaje predictivo,
- ya que el algoritmo de predicción debe ejecutarse en los dispositivos de los observadores.
+ la vaca no obtendrá un puntaje predictivo, ya que el algoritmo de predicción
+ debe ejecutarse en los dispositivos de los observadores.
 \end_layout
 
 \begin_layout Standard
-Los observadores asignados ejecutan el algoritmo de predicción en sus dispositivos,
- y el puntaje calculado se envía a:
+Los observadores asignados ejecutan el algoritmo de predicción en sus dispositiv
+os, y el puntaje calculado se envía a:
 \end_layout
 
 \begin_layout Itemize
-Su pantalla:
- Para que puedan visualizar el resultado de inmediato.
+Su pantalla: Para que puedan visualizar el resultado de inmediato.
 \end_layout
 
 \begin_layout Itemize
-El servidor:
- Donde se almacena en la base de datos para su posterior análisis.
+El servidor: Donde se almacena en la base de datos para su posterior análisis.
 \end_layout
 
 \begin_layout Itemize
-Los demás observadores conectados:
- Para que también puedan ver el puntaje obtenido.
+Los demás observadores conectados: Para que también puedan ver el puntaje
+ obtenido.
 \end_layout
 
 \begin_layout Standard
-Si el planificador designa la tarea de predicción a otro observador,
- el dispositivo del observador inicial espera el resultado del puntaje BCS.
- Una vez que llega,
- el puntaje se muestra automáticamente en su pantalla,
- actualizando simultáneamente los reportes y visualizaciones.Esta estructura garantiza que el flujo de imágenes,
- la predicción de BCS y la visualización por parte de los observadores se lleven a cabo de manera eficiente y sin interrupciones,
- independientemente de si hay sesiones activas.
+Si el planificador designa la tarea de predicción a otro observador, el
+ dispositivo del observador inicial espera el resultado del puntaje BCS.
+ Una vez que llega, el puntaje se muestra automáticamente en su pantalla,
+ actualizando simultáneamente los reportes y visualizaciones.Esta estructura
+ garantiza que el flujo de imágenes, la predicción de BCS y la visualización
+ por parte de los observadores se lleven a cabo de manera eficiente y sin
+ interrupciones, independientemente de si hay sesiones activas.
 \end_layout
 
 \begin_layout Standard
@@ -673,40 +703,44 @@ Reportes
 \end_layout
 
 \begin_layout Standard
-Cada opción de visualización de reportes,
- ya sea para sesiones actuales o reportes de sesiones anteriores,
- se accede mediante llamadas REST a la base de datos.
- Esta estructura permite que tanto observadores como calificadores obtengan la información necesaria cuando lo deseen.
- Es importante alcarar que los reportes contienen los valores de las predicciones generadas por el sistema.
- Los calificadores no tienen acceso a los valores que ellos mismos u otros calificadores asignan a las vacas durante el proceso de calificación.
+Cada opción de visualización de reportes, ya sea para sesiones actuales
+ o reportes de sesiones anteriores, se accede mediante llamadas REST a la
+ base de datos.
+ Esta estructura permite que tanto observadores como calificadores obtengan
+ la información necesaria cuando lo deseen.
+ Es importante alcarar que los reportes contienen los valores de las prediccione
+s generadas por el sistema.
+ Los calificadores no tienen acceso a los valores que ellos mismos u otros
+ calificadores asignan a las vacas durante el proceso de calificación.
 \end_layout
 
 \begin_layout Itemize
-Actualización de estado en Tiempo Real:
- En las sesiones actuales,
- sólo los observadores reciben actualizaciones de las predicciones en tiempo real,
+Actualización de estado en Tiempo Real: En las sesiones actuales, sólo los
+ observadores reciben actualizaciones de las predicciones en tiempo real,
  lo que les permite actualizar el diagrama de torta automáticamente.
- Por otro lado,
- los calificadores no reciben estas actualizaciones en tiempo real,
- ya que su función principal es calificar las vacas.
- Sin embargo,
- pueden acceder a los datos en cualquier momento,
- ingresando a la sección de la aplicación donde se visualizan los reportes.
+ Por otro lado, los calificadores no reciben estas actualizaciones en tiempo
+ real, ya que su función principal es calificar las vacas.
+ Sin embargo, pueden acceder a los datos en cualquier momento, ingresando
+ a la sección de la aplicación donde se visualizan los reportes.
 \end_layout
 
 \begin_layout Itemize
-Historial de BCS:
- Exclusivo para los observadores,
- el historial de BCS se obtiene mediante una llamada REST a la base de datos.
- Este diagrama se actualiza automáticamente con el valor predicho una vez que el cálculo del BCS para la sesión actual finaliza,
- garantizando que los observadores tengan acceso a la información más precisa y actualizada.
+Historial de BCS: Exclusivo para los observadores, el historial de BCS se
+ obtiene mediante una llamada REST a la base de datos.
+ Este diagrama se actualiza automáticamente con el valor predicho una vez
+ que el cálculo del BCS para la sesión actual finaliza, garantizando que
+ los observadores tengan acceso a la información más precisa y actualizada.
 \end_layout
 
 \begin_layout Standard
 Esta arquitectura no solo facilita la visualización y el acceso a los reportes,
- sino que también asegura que tanto los observadores como los calificadores tengan la información necesaria para tomar decisiones informadas sobre la condición corporal de las vacas.
- En el futuro,
- la implementación de un apartador automático podría jugar el rol de observador y actuar habilitando diferentes puertas para apartar a las vacas de un rodeo que requieren una dieta o tratamiento especial basado en su valor de BCS.
+ sino que también asegura que tanto los observadores como los calificadores
+ tengan la información necesaria para tomar decisiones informadas sobre
+ la condición corporal de las vacas.
+ En el futuro, la implementación de un apartador automático podría jugar
+ el rol de observador y actuar habilitando diferentes puertas para apartar
+ a las vacas de un rodeo que requieren una dieta o tratamiento especial
+ basado en su valor de BCS.
 \end_layout
 
 \begin_layout Subsection
@@ -714,9 +748,11 @@ Observador
 \end_layout
 
 \begin_layout Standard
-En el caso de los observadores,
- como se mencionó anteriormente,
- dado que es posible que los observadores estén mirando la pantalla de diagramas y dado que siempre recibe el BCS calculado (o por él mismo o por otro observador) se actualiza el diagrama automáticamente utilizando websocket y el protocolo STOMP.
+En el caso de los observadores, como se mencionó anteriormente, dado que
+ es posible que los observadores estén mirando la pantalla de diagramas
+ y dado que siempre recibe el BCS calculado (o por él mismo o por otro observado
+r) se actualiza el diagrama automáticamente utilizando websocket y el protocolo
+ STOMP.
 \end_layout
 
 \begin_layout Standard
@@ -758,11 +794,12 @@ Diagrama de componentes - reporte de observadores
 \end_layout
 
 \begin_layout Standard
-Los observadores pueden ver los diagramas de torta que se actualizan automáticamente en tiempo real al recibir nuevas predicciones de BCS,
- ya sea realizadas por ellos mismos o por otros observadores.
- Además,
- pueden consultar el historial de BCS de vacas en sesiones anteriores cuando reciben una nueva imagen,
- lo que les permite comparar los datos actuales con los registros previos.
+Los observadores pueden ver los diagramas de torta que se actualizan automáticam
+ente en tiempo real al recibir nuevas predicciones de BCS, ya sea realizadas
+ por ellos mismos o por otros observadores.
+ Además, pueden consultar el historial de BCS de vacas en sesiones anteriores
+ cuando reciben una nueva imagen, lo que les permite comparar los datos
+ actuales con los registros previos.
 \end_layout
 
 \begin_layout Subsection
@@ -770,11 +807,12 @@ Calificador
 \end_layout
 
 \begin_layout Standard
-En el caso de los calificadores,
- su función principal es evaluar las vacas,
- por lo que los diagramas se actualizan únicamente cuando deciden consultar los reportes a través de una llamada REST.
- Este enfoque permite que realicen las solicitudes cuando lo consideren necesario,
- evitando la necesidad de mantener una conexión websocket abierta para recibir notificaciones sobre las predicciones.
+En el caso de los calificadores, su función principal es evaluar las vacas,
+ por lo que los diagramas se actualizan únicamente cuando deciden consultar
+ los reportes a través de una llamada REST.
+ Este enfoque permite que realicen las solicitudes cuando lo consideren
+ necesario, evitando la necesidad de mantener una conexión websocket abierta
+ para recibir notificaciones sobre las predicciones.
 \begin_inset Float figure
 wide false
 sideways false
@@ -810,11 +848,10 @@ Implementación
 \end_layout
 
 \begin_layout Standard
-Esta sección describe las tecnologías,
- bibliotecas y configuraciones empleadas para desarrollar el prototipo.
- A continuación,
- se detallan los componentes principales,
- la configuración del sistema y el modelo de base de datos.
+Esta sección describe las tecnologías, bibliotecas y configuraciones empleadas
+ para desarrollar el prototipo.
+ A continuación, se detallan los componentes principales, la configuración
+ del sistema y el modelo de base de datos.
 \end_layout
 
 \begin_layout Subsection
@@ -822,26 +859,27 @@ Tecnologías y Bibliotecas Utilizadas
 \end_layout
 
 \begin_layout Itemize
-Servidor:
- El backend está desarrollado con Spring Boot para la creación del servidor,
- aprovechando Spring Web para implementar los servicios REST y el protocolo STOMP para la comunicación a través de WebSockets.
+Servidor: El backend está desarrollado con Spring Boot para la creación
+ del servidor, aprovechando Spring Web para implementar los servicios REST
+ y el protocolo STOMP para la comunicación a través de WebSockets.
 \end_layout
 
 \begin_layout Itemize
-Base de Datos:
- Se utiliza MySQL como base de datos relacional y JDBC para interactuar con ella.
+Base de Datos: Se utiliza MySQL como base de datos relacional y JDBC para
+ interactuar con ella.
 \end_layout
 
 \begin_layout Itemize
-Mensajería:
- La integración de ActiveMQ con JMS facilita la comunicación asincrónica y garantiza la disponibilidad de los mensajes entre los distintos componentes.
+Mensajería: La integración de ActiveMQ con JMS facilita la comunicación
+ asincrónica y garantiza la disponibilidad de los mensajes entre los distintos
+ componentes.
 \end_layout
 
 \begin_layout Itemize
-Aplicación Móvil:
- La aplicación está desarrollada en Flutter para Android,
+Aplicación Móvil: La aplicación está desarrollada en Flutter para Android,
  con capacidad de expansión hacia iOS.
- Esto permite la posibilidad de adaptaciones para dispositivos iOS en el futuro.
+ Esto permite la posibilidad de adaptaciones para dispositivos iOS en el
+ futuro.
 \end_layout
 
 \begin_layout Subsection
@@ -850,8 +888,8 @@ Pasos para la configuración del sistema
 
 \begin_layout Standard
 Este apartado explica cómo se configuran los diversos componentes del sistema,
- incluidos el servidor,
- base de datos y las dependencias necesarias para que el sistema pueda ser desplegado correctamente.
+ incluidos el servidor, base de datos y las dependencias necesarias para
+ que el sistema pueda ser desplegado correctamente.
 \end_layout
 
 \begin_layout Subsubsection
@@ -864,25 +902,20 @@ Antes de proceder es necesario de tener instalado:
 
 \begin_deeper
 \begin_layout Enumerate
-Java 11:
- Es mandatorio para ejecutar la aplicación.
- La versión de Java instalada puede ser verificada ejecutando el siguiente comando:
- java -version 
+Java 11: Es mandatorio para ejecutar la aplicación.
+ La versión de Java instalada puede ser verificada ejecutando el siguiente
+ comando: java -version 
 \begin_inset Newline newline
 \end_inset
 
-Parea instalarlo se puede hacer desde el sitio oficial de Oracle o mediante un gestor de paquetes como apt,
- brew,
- o sdkman.
+Parea instalarlo se puede hacer desde el sitio oficial de Oracle o mediante
+ un gestor de paquetes como apt, brew, o sdkman.
 \end_layout
 
 \begin_layout Enumerate
-Maven:
- Sólo en caso de necesitar compilar usando el código fuente del proyecto.
- En ubuntu/Debian:
- sudo apt install maven.
- En macOS con Homebrew:
- brew install maven
+Maven: Sólo en caso de necesitar compilar usando el código fuente del proyecto.
+ En ubuntu/Debian: sudo apt install maven.
+ En macOS con Homebrew: brew install maven
 \end_layout
 
 \end_deeper
@@ -896,8 +929,8 @@ Descargar e instalar MySQL 8.0 siguiendo las instrucciones del asistente.
 \end_layout
 
 \begin_layout Enumerate
-Iniciar el servidor MySQL:
- Desde consola en macOS o Linux ingresando el comando 
+Iniciar el servidor MySQL: Desde consola en macOS o Linux ingresando el
+ comando 
 \family typewriter
 mysql.server start
 \family default
@@ -936,8 +969,8 @@ Ingresar la contraseña de root
 
 \end_deeper
 \begin_layout Enumerate
-Crear la base de datos:
- Desde consola ejecutar el siguiente comando para crear el esquema necesario 
+Crear la base de datos: Desde consola ejecutar el siguiente comando para
+ crear el esquema necesario 
 \family typewriter
 CREATE SCHEMA server
 \end_layout
@@ -949,7 +982,8 @@ Instalación y configuración de mensajería mediante ActiveMQ Artemis
 
 \begin_deeper
 \begin_layout Enumerate
-Descargar e instalar desde el sitio oficial de ActiveMQ Artemis la última versión del broker
+Descargar e instalar desde el sitio oficial de ActiveMQ Artemis la última
+ versión del broker
 \end_layout
 
 \begin_layout Enumerate
@@ -957,7 +991,9 @@ Descomprir el archivo descargado en un directorio cualquiera.
 \end_layout
 
 \begin_layout Enumerate
-Desde consola posicionado en el subdirectorio bin/ dentro de la carpeta de ActiveMQ Artemis ejecutar el siguiente comando para crear una nueva instancia del broker:
+Desde consola posicionado en el subdirectorio bin/ dentro de la carpeta
+ de ActiveMQ Artemis ejecutar el siguiente comando para crear una nueva
+ instancia del broker:
 \family typewriter
 
 \begin_inset listings
@@ -977,8 +1013,7 @@ Esto creará una instancia de ActiveMQ con el nombre mybroker
 \end_layout
 
 \begin_layout Enumerate
-Iniciar el broker desde el directorio mybroker/bin,
- ejecutando 
+Iniciar el broker desde el directorio mybroker/bin, ejecutando 
 \family typewriter
 
 \begin_inset listings
@@ -994,12 +1029,28 @@ status open
 
 
 \family default
-El broker correrá por defecto en el puerto 6161Configuración de la aplicación móvil.
+El broker correrá por defecto en el puerto 6161
+\change_inserted -1783815582 1742560362
+
 \end_layout
 
 \end_deeper
 \begin_layout Standard
-En esta sección se detallará cómo configurar la aplicación móvil desarrollada con Flutter para interactuar con el sistema.
+
+\change_inserted -1783815582 1742560364
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Configuración de la aplicación móvil.
+\end_layout
+
+\begin_layout Standard
+En esta sección se detallará cómo configurar la aplicación móvil desarrollada
+ con Flutter para interactuar con el sistema.
 \end_layout
 
 \begin_layout Enumerate
@@ -1018,8 +1069,7 @@ Definir la ruta de Python 3.8 en el sistema:
 
 \begin_deeper
 \begin_layout Enumerate
-Para sistemas Linux:
- 
+Para sistemas Linux: 
 \begin_inset listings
 lstparams "breaklines=true,tabsize=4"
 inline false
@@ -1064,8 +1114,7 @@ python3.8 --version
 \end_layout
 
 \begin_layout Enumerate
-Esto debe devolver algo como:
- 
+Esto debe devolver algo como: 
 \begin_inset listings
 inline false
 status open
@@ -1088,8 +1137,8 @@ Construcción del APK
 
 \begin_deeper
 \begin_layout Enumerate
-Una vez configurado Python,
- ejecuta el siguiente comando desde la raíz del proyecto Flutter:
+Una vez configurado Python, ejecuta el siguiente comando desde la raíz del
+ proyecto Flutter:
 \begin_inset Newline newline
 \end_inset
 
@@ -1126,8 +1175,8 @@ build/app/outputs/flutter-apk/
 \end_layout
 
 \begin_layout Enumerate
-Host y Puerto del Servidor:
- La configuración del host y puerto de servidor se ajusta en las variables serverHost y serverPort.
+Host y Puerto del Servidor: La configuración del host y puerto de servidor
+ se ajusta en las variables serverHost y serverPort.
  Por defecto:
 \end_layout
 
@@ -1142,8 +1191,7 @@ Puerto 8080 si no se especifica otro.
 
 \end_deeper
 \begin_layout Enumerate
-Configuración de escritura:
- 
+Configuración de escritura: 
 \begin_inset Newline newline
 \end_inset
 
@@ -1153,13 +1201,15 @@ Para que la aplicación pueda acceder y escribir en el sistema de archivos,
 
 \begin_deeper
 \begin_layout Enumerate
-Copiar archivo de imagen utilizado por el detector automático:
- assets/empty_image.png al directorio sdcard/Download/ del emulador o dispositivo Android.
+Copiar archivo de imagen utilizado por el detector automático: assets/empty_imag
+e.png al directorio sdcard/Download/ del emulador o dispositivo Android.
 \end_layout
 
 \begin_layout Enumerate
-Asegurarse de que la aplicación tenga permisos de escritura en el sistema de archivos del dispositivo.
- Esto se puede configurar desde los ajustes del emulador o del dispositivo Android en la opción de permisos de la aplicación calificator
+Asegurarse de que la aplicación tenga permisos de escritura en el sistema
+ de archivos del dispositivo.
+ Esto se puede configurar desde los ajustes del emulador o del dispositivo
+ Android en la opción de permisos de la aplicación calificator
 \end_layout
 
 \end_deeper
@@ -1168,14 +1218,16 @@ Configuración de docker
 \end_layout
 
 \begin_layout Standard
-Opcionalmente,
- puedes configurar todos los servicios a través de contenedores Docker para simplificar la instalación y configuración (recomendado para ambientes de desarrollo).
+Opcionalmente, puedes configurar todos los servicios a través de contenedores
+ Docker para simplificar la instalación y configuración (recomendado para
+ ambientes de desarrollo).
  
 \begin_inset Newline newline
 \end_inset
 
-Para iniciar el servicio de mensajería en un contenedor Docker con ActiveMQ Artemis,
- ejecuta el siguiente comando que configura el broker de mensajería en el puerto 61616:
+Para iniciar el servicio de mensajería en un contenedor Docker con ActiveMQ
+ Artemis, ejecuta el siguiente comando que configura el broker de mensajería
+ en el puerto 61616:
 \end_layout
 
 \begin_layout Standard
@@ -1186,13 +1238,14 @@ status open
 
 \begin_layout Plain Layout
 
-docker run --name=activemq -p 61616:61616 -e AMQ_USER=admin -e AMQ_PASSWORD=admin quay.io/artemiscloud/activemq-artemis-broker
+docker run --name=activemq -p 61616:61616 -e AMQ_USER=admin -e AMQ_PASSWORD=admi
+n quay.io/artemiscloud/activemq-artemis-broker
 \end_layout
 
 \end_inset
 
-Luego,
- inicia la base de datos MySQL en un contenedor Docker con el siguiente comando:
+Luego, inicia la base de datos MySQL en un contenedor Docker con el siguiente
+ comando:
 \end_layout
 
 \begin_layout Standard
@@ -1208,8 +1261,8 @@ docker run --name=mysql-db -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 mysql:8.0
 
 \end_inset
 
-Una vez que el contenedor esté en funcionamiento,
- accede a MySQL y crea el esquema necesario para el sistema ingresando:
+Una vez que el contenedor esté en funcionamiento, accede a MySQL y crea
+ el esquema necesario para el sistema ingresando:
 \end_layout
 
 \begin_layout Standard
@@ -1228,8 +1281,8 @@ docker exec -it mysql-db mysql -p
 \end_layout
 
 \begin_layout Standard
-Cuando se te solicite la contraseña,
- introduce root y luego ejecuta el siguiente comando para crear el esquema:
+Cuando se te solicite la contraseña, introduce root y luego ejecuta el siguiente
+ comando para crear el esquema:
 \end_layout
 
 \begin_layout Standard
@@ -1252,8 +1305,9 @@ Modelo de base de datos
 \end_layout
 
 \begin_layout Standard
-La base de datos utiliza el siguiente modelo relacional,
- implementado en MySQL para gestionar los datos de las sesiones de calificación y sus componentes.
+La base de datos utiliza el siguiente modelo relacional, implementado en
+ MySQL para gestionar los datos de las sesiones de calificación y sus componente
+s.
 \end_layout
 
 \begin_layout Standard
@@ -1274,9 +1328,8 @@ status open
 
 \begin_layout Plain Layout
 
-CREATE TABLE server.LOCATION ( ID INT AUTO_INCREMENT PRIMARY KEY,
- CODE VARCHAR(20),
- NAME VARCHAR(100) );
+CREATE TABLE server.LOCATION ( ID INT AUTO_INCREMENT PRIMARY KEY, CODE VARCHAR(20
+), NAME VARCHAR(100) );
 \end_layout
 
 \end_inset
@@ -1323,11 +1376,10 @@ CREATE TABLE server.QUALIFICATION_SESSION (
 
 \begin_layout Plain Layout
 
- ID BIGINT AUTO_INCREMENT PRIMARY KEY,
- LOCATION_ID INT NOT NULL,
- START_DATE TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
- END_DATE TIMESTAMP NULL,
- CONSTRAINT fk_QUALIFICATION_SESSION_LOCATION_ID FOREIGN KEY (LOCATION_ID) REFERENCES LOCATION (ID) );
+ ID BIGINT AUTO_INCREMENT PRIMARY KEY, LOCATION_ID INT NOT NULL, START_DATE
+ TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, END_DATE TIMESTAMP NULL,
+ CONSTRAINT fk_QUALIFICATION_SESSION_LOCATION_ID FOREIGN KEY (LOCATION_ID)
+ REFERENCES LOCATION (ID) );
 \end_layout
 
 \end_inset
@@ -1370,10 +1422,12 @@ status open
 
 \begin_layout Plain Layout
 
-CREATE TABLE server.LOCATION_QUALIFICATION_SESSION( QUALIFICATION_SESSION_ID BIGINT,
- LOCATION_ID INT,
- CONSTRAINT pk_LOCATION_QUALIFICATION_SESSION PRIMARY KEY(LOCATION_ID),CONSTRAINT `fk_LOCATION_QUALIFICATION_SESSION_LOCATION_ID` FOREIGN KEY(`LOCATION_ID`) REFERENCES `LOCATION`(`ID`),
- CONSTRAINT `fk_LOCATION_QUALIFICATION_SESSION_QUALIFICATION_SESSION_ID` FOREIGN KEY(`QUALIFICATION_SESSION_ID`) REFERENCES `QUALIFICATION_SESSION`(`ID`) );
+CREATE TABLE server.LOCATION_QUALIFICATION_SESSION( QUALIFICATION_SESSION_ID
+ BIGINT, LOCATION_ID INT, CONSTRAINT pk_LOCATION_QUALIFICATION_SESSION PRIMARY
+ KEY(LOCATION_ID),CONSTRAINT `fk_LOCATION_QUALIFICATION_SESSION_LOCATION_ID`
+ FOREIGN KEY(`LOCATION_ID`) REFERENCES `LOCATION`(`ID`), CONSTRAINT `fk_LOCATION
+_QUALIFICATION_SESSION_QUALIFICATION_SESSION_ID` FOREIGN KEY(`QUALIFICATION_SESS
+ION_ID`) REFERENCES `QUALIFICATION_SESSION`(`ID`) );
 \end_layout
 
 \end_inset
@@ -1405,7 +1459,8 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-Almacena la información de los usuarios registrados en el sistema y asegura nombres de usuario únicos.
+Almacena la información de los usuarios registrados en el sistema y asegura
+ nombres de usuario únicos.
 \begin_inset Newline newline
 \end_inset
 
@@ -1422,9 +1477,7 @@ CREATE TABLE server.USER (
 
 \begin_layout Plain Layout
 
- ID INT AUTO_INCREMENT PRIMARY KEY,
- USER_NAME VARCHAR(100),
- TYPE VARCHAR(20),
+ ID INT AUTO_INCREMENT PRIMARY KEY, USER_NAME VARCHAR(100), TYPE VARCHAR(20),
  CONSTRAINT uk_USER_USER_NAME UNIQUE (USER_NAME) );
 \end_layout
 
@@ -1469,11 +1522,11 @@ status open
 
 \begin_layout Plain Layout
 
-CREATE TABLE server.USER_QUALIFICATION_SESSION( USER_ID INT,
- QUALIFICATION_SESSION_ID BIGINT,
- PRIMARY KEY(USER_ID,QUALIFICATION_SESSION_ID),
- CONSTRAINT `fk_USER_QUALIFICATION_SESSION_QUALIFICATION_SESSION_ID` FOREIGN KEY(`QUALIFICATION_SESSION_ID`) REFERENCES `QUALIFICATION_SESSION`(`ID`),
- CONSTRAINT `fk_USER_QUALIFICATION_SESSION_USER_ID` FOREIGN KEY(`USER_ID`) REFERENCES `USER`(`ID`) 
+CREATE TABLE server.USER_QUALIFICATION_SESSION( USER_ID INT, QUALIFICATION_SESSIO
+N_ID BIGINT, PRIMARY KEY(USER_ID,QUALIFICATION_SESSION_ID), CONSTRAINT `fk_USER_
+QUALIFICATION_SESSION_QUALIFICATION_SESSION_ID` FOREIGN KEY(`QUALIFICATION_SESSI
+ON_ID`) REFERENCES `QUALIFICATION_SESSION`(`ID`), CONSTRAINT `fk_USER_QUALIFICAT
+ION_SESSION_USER_ID` FOREIGN KEY(`USER_ID`) REFERENCES `USER`(`ID`) 
 \end_layout
 
 \begin_layout Plain Layout
@@ -1527,12 +1580,14 @@ CREATE TABLE server.USER_LOCATION_QUALIFICATION_SESSION(
 
 \begin_layout Plain Layout
 
-USER_ID INT PRIMARY KEY,
- QUALIFICATION_SESSION_ID BIGINT,
- CONSTRAINT UNIQUE (USER_ID),
- CONSTRAINT `fk_USER_LOCATION_QUALIF_SESSION_USER_QUALIF_SESSION` FOREIGN KEY(`USER_ID`,`QUALIFICATION_SESSION_ID`) REFERENCES `USER_QUALIFICATION_SESSION`(`USER_ID`,`QUALIFICATION_SESSION_ID`),
- CONSTRAINT `fk_USER_LOCATION_QUALIFICATION_SESSION_QUALIFICATION_SESSION_ID` FOREIGN KEY(`QUALIFICATION_SESSION_ID`) REFERENCES `LOCATION_QUALIFICATION_SESSION`(`QUALIFICATION_SESSION_ID`),
- CONSTRAINT `fk_USER_LOCATION_QUALIFICATION_SESSION_USER_ID` FOREIGN KEY(`USER_ID`) REFERENCES `USER`(`ID`) );
+USER_ID INT PRIMARY KEY, QUALIFICATION_SESSION_ID BIGINT, CONSTRAINT UNIQUE
+ (USER_ID), CONSTRAINT `fk_USER_LOCATION_QUALIF_SESSION_USER_QUALIF_SESSION`
+ FOREIGN KEY(`USER_ID`,`QUALIFICATION_SESSION_ID`) REFERENCES `USER_QUALIFICATIO
+N_SESSION`(`USER_ID`,`QUALIFICATION_SESSION_ID`), CONSTRAINT `fk_USER_LOCATION_Q
+UALIFICATION_SESSION_QUALIFICATION_SESSION_ID` FOREIGN KEY(`QUALIFICATION_SESSIO
+N_ID`) REFERENCES `LOCATION_QUALIFICATION_SESSION`(`QUALIFICATION_SESSION_ID`),
+ CONSTRAINT `fk_USER_LOCATION_QUALIFICATION_SESSION_USER_ID` FOREIGN KEY(`USER_I
+D`) REFERENCES `USER`(`ID`) );
 \end_layout
 
 \end_inset
@@ -1564,9 +1619,11 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-Representa conjuntos de imágenes relacionados a una sesión de calificación en una locación.
- Esta tabla contiene un identificador único (SET_CODE) que agrupa las imágenes realizadas para una caravana específica,
- permitiendo su agrupamiento y trazabilidad.
+Representa conjuntos de imágenes relacionados a una sesión de calificación
+ en una locación.
+ Esta tabla contiene un identificador único (SET_CODE) que agrupa las imágenes
+ realizadas para una caravana específica, permitiendo su agrupamiento y
+ trazabilidad.
 \begin_inset Newline newline
 \end_inset
 
@@ -1582,8 +1639,7 @@ CREATE TABLE IMAGE_SET (
 
 \begin_layout Plain Layout
 
- ID BIGINT AUTO_INCREMENT PRIMARY KEY,
- SET_CODE VARCHAR(36) UNIQUE,);
+ ID BIGINT AUTO_INCREMENT PRIMARY KEY, SET_CODE VARCHAR(36) UNIQUE,);
 \end_layout
 
 \end_inset
@@ -1632,14 +1688,13 @@ CREATE TABLE server.IMAGE_SET_LOCATION(
 
 \begin_layout Plain Layout
 
-IMAGE_SET_ID BIGINT PRIMARY KEY,
- LOCATION_ID INT,
- CREATION_DATE TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
- `POSITION` SMALLINT NOT NULL,
- CONSTRAINT uk_IMAGE_SET_LOCATION_POSITION UNIQUE(`LOCATION_ID`,`POSITION`),
- CONSTRAINT fk_IMAGE_SET_LOCATION_LOCATION_ID FOREIGN KEY(`LOCATION_ID`) REFERENCES `LOCATION`(`ID`),
- CONSTRAINT fk_IMAGE_SET_LOCATION_SET_ID FOREIGN KEY(`IMAGE_SET_ID`) REFERENCES `IMAGE_SET`(`ID`),
- CONSTRAINT nn_IMAGE_SET_LOCATION_LOCATION_ID CHECK( `LOCATION_ID` is NOT NULL) );
+IMAGE_SET_ID BIGINT PRIMARY KEY, LOCATION_ID INT, CREATION_DATE TIMESTAMP
+ NOT NULL DEFAULT CURRENT_TIMESTAMP, `POSITION` SMALLINT NOT NULL, CONSTRAINT
+ uk_IMAGE_SET_LOCATION_POSITION UNIQUE(`LOCATION_ID`,`POSITION`), CONSTRAINT
+ fk_IMAGE_SET_LOCATION_LOCATION_ID FOREIGN KEY(`LOCATION_ID`) REFERENCES
+ `LOCATION`(`ID`), CONSTRAINT fk_IMAGE_SET_LOCATION_SET_ID FOREIGN KEY(`IMAGE_SE
+T_ID`) REFERENCES `IMAGE_SET`(`ID`), CONSTRAINT nn_IMAGE_SET_LOCATION_LOCATION_I
+D CHECK( `LOCATION_ID` is NOT NULL) );
 \end_layout
 
 \end_inset
@@ -1688,10 +1743,11 @@ CREATE TABLE server.IMAGE_SET_QUALIFICATION_SESSION(
 
 \begin_layout Plain Layout
 
- IMAGE_SET_ID BIGINT PRIMARY KEY,
- QUALIFICATION_SESSION_ID BIGINT NOT NULL,
- CONSTRAINT fk_IMAGE_SET_QUALIFICATION_SESSION_SET_ID FOREIGN KEY(`IMAGE_SET_ID`) REFERENCES `IMAGE_SET`(`ID`),
- CONSTRAINT `fk_IMAGE_SET_QUALIFICATION_SESSION_ID` FOREIGN KEY(`QUALIFICATION_SESSION_ID`) REFERENCES `QUALIFICATION_SESSION`(`ID`) );
+ IMAGE_SET_ID BIGINT PRIMARY KEY, QUALIFICATION_SESSION_ID BIGINT NOT NULL,
+ CONSTRAINT fk_IMAGE_SET_QUALIFICATION_SESSION_SET_ID FOREIGN KEY(`IMAGE_SET_ID`
+) REFERENCES `IMAGE_SET`(`ID`), CONSTRAINT `fk_IMAGE_SET_QUALIFICATION_SESSION_I
+D` FOREIGN KEY(`QUALIFICATION_SESSION_ID`) REFERENCES `QUALIFICATION_SESSION`(`I
+D`) );
 \end_layout
 
 \end_inset
@@ -1723,7 +1779,8 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-Contiene una columna llamada prioridad que será enviada al calificador y al observador y el path se construye con el Directorio mas nombre del archivo.
+Contiene una columna llamada prioridad que será enviada al calificador y
+ al observador y el path se construye con el Directorio mas nombre del archivo.
 \begin_inset Newline newline
 \end_inset
 
@@ -1740,11 +1797,10 @@ CREATE TABLE server.IMAGE(
 
 \begin_layout Plain Layout
 
-ID BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- IMAGE_SET_ID BIGINT NOT NULL,
- PRIORITY INT NULL COMMENT ,
- `PATH` VARCHAR(500) NULL UNIQUE COMMENT,
- CONSTRAINT `fk_IMAGE_SET_ID` FOREIGN KEY (`IMAGE_SET_ID`) REFERENCES IMAGE_SET (`ID`) );
+ID BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY, IMAGE_SET_ID BIGINT NOT NULL,
+ PRIORITY INT NULL COMMENT , `PATH` VARCHAR(500) NULL UNIQUE COMMENT, CONSTRAINT
+ `fk_IMAGE_SET_ID` FOREIGN KEY (`IMAGE_SET_ID`) REFERENCES IMAGE_SET (`ID`)
+ );
 \end_layout
 
 \end_inset
@@ -1776,7 +1832,8 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-Puntaje para una caravana en una sesión dada definido por el algoritmo de predicción.
+Puntaje para una caravana en una sesión dada definido por el algoritmo de
+ predicción.
 \begin_inset Newline newline
 \end_inset
 
@@ -1793,12 +1850,11 @@ CREATE TABLE server.PREDICTED_SCORE(
 
 \begin_layout Plain Layout
 
-IMAGE_SET_ID BIGINT NOT NULL PRIMARY KEY ,
- SCORE DECIMAL(5,
- 4) NOT NULL,
- QUALIFICATION_SESSION_ID BIGINT NULL,
- CONSTRAINT `fk_PREDICTED_SCORE_SET_ID` FOREIGN KEY (`IMAGE_SET_ID`) REFERENCES `IMAGE_SET` (`ID`),
- CONSTRAINT `fk_PREDICTED_SCORE_QUALIFICATION_SESSION_ID` FOREIGN KEY(`QUALIFICATION_SESSION_ID`) REFERENCES `QUALIFICATION_SESSION`(`ID`));
+IMAGE_SET_ID BIGINT NOT NULL PRIMARY KEY , SCORE DECIMAL(5, 4) NOT NULL,
+ QUALIFICATION_SESSION_ID BIGINT NULL, CONSTRAINT `fk_PREDICTED_SCORE_SET_ID`
+ FOREIGN KEY (`IMAGE_SET_ID`) REFERENCES `IMAGE_SET` (`ID`), CONSTRAINT
+ `fk_PREDICTED_SCORE_QUALIFICATION_SESSION_ID` FOREIGN KEY(`QUALIFICATION_SESSIO
+N_ID`) REFERENCES `QUALIFICATION_SESSION`(`ID`));
 \end_layout
 
 \end_inset
@@ -1830,10 +1886,13 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-Guarda las puntuaciones otorgadas a los conjuntos de imágenes en cada sesión de calificación.
- La tabla QUALIFIED_SCORE almacena el puntaje definido por el calificador para una caravana en una sesión específica.
+Guarda las puntuaciones otorgadas a los conjuntos de imágenes en cada sesión
+ de calificación.
+ La tabla QUALIFIED_SCORE almacena el puntaje definido por el calificador
+ para una caravana en una sesión específica.
  La puntuación va de 1 a 5.
- Los valores de puntaje están restringidos para asegurar que se mantengan dentro de un rango de calificación válido.
+ Los valores de puntaje están restringidos para asegurar que se mantengan
+ dentro de un rango de calificación válido.
 \begin_inset Newline newline
 \end_inset
 
@@ -1850,19 +1909,14 @@ CREATE TABLE server.QUALIFIED_SCORE (
 
 \begin_layout Plain Layout
 
- USER_ID INT,
- QUALIFICATION_SESSION_ID BIGINT,
- IMAGE_SET_ID BIGINT NOT NULL,
- SCORE SMALLINT NOT NULL,
- PRIMARY KEY (USER_ID,
- QUALIFICATION_SESSION_ID,
- IMAGE_SET_ID),
- CONSTRAINT fk_QUALIFIED_SCORE_USER_QUALIFICATION_SESSION FOREIGN KEY (USER_ID,
- QUALIFICATION_SESSION_ID) REFERENCES USER_QUALIFICATION_SESSION (USER_ID,
- QUALIFICATION_SESSION_ID),
- CONSTRAINT fk_QUALIFIED_SCORE_SET_ID FOREIGN KEY (IMAGE_SET_ID) REFERENCES IMAGE_SET (ID),
- CONSTRAINT CHK_QUALIFIED_SCORE_SCORE_MIN CHECK (SCORE > 0),
- CONSTRAINT CHK_QUALIFIED_SCORE_SCORE_MAX CHECK (SCORE <= 5) );
+ USER_ID INT, QUALIFICATION_SESSION_ID BIGINT, IMAGE_SET_ID BIGINT NOT NULL,
+ SCORE SMALLINT NOT NULL, PRIMARY KEY (USER_ID, QUALIFICATION_SESSION_ID,
+ IMAGE_SET_ID), CONSTRAINT fk_QUALIFIED_SCORE_USER_QUALIFICATION_SESSION
+ FOREIGN KEY (USER_ID, QUALIFICATION_SESSION_ID) REFERENCES USER_QUALIFICATION_S
+ESSION (USER_ID, QUALIFICATION_SESSION_ID), CONSTRAINT fk_QUALIFIED_SCORE_SET_ID
+ FOREIGN KEY (IMAGE_SET_ID) REFERENCES IMAGE_SET (ID), CONSTRAINT CHK_QUALIFIED_
+SCORE_SCORE_MIN CHECK (SCORE > 0), CONSTRAINT CHK_QUALIFIED_SCORE_SCORE_MAX
+ CHECK (SCORE <= 5) );
 \end_layout
 
 \end_inset
